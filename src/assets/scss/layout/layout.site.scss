@@ -1,0 +1,130 @@
+// stylesheet :: site content container styles
+
+    // settings:
+    $content_width  : 100vw;
+    $content_width_ex  : calc( 100vw + 4rem );
+    $content_height : 100vh;
+    $content_height_ex : calc( 100vh + 4rem );
+
+    // styles
+    #site-layout {
+
+        position: relative;
+
+        z-index: 20;
+
+        width: $content_width;
+        height: $content_height;
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+
+        visibility: hidden;
+
+        background: {
+
+            color:
+
+                adjust-color(
+
+                    $app05,
+                    $hue          : 0%,
+                    $saturation : -20%,
+                    $lightness  : -1%,
+                    $alpha         : -0.000
+
+                )
+
+            ;
+
+            image:
+
+                linear-gradient(
+
+                    168deg,
+                    transparent 50%,
+                    transparentize( $bg-base, 0.245 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    189deg,
+                    transparent 20%,
+                    transparentize( $g140, 0.345 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    45deg,
+                    transparent 0%,
+                    transparentize( $dark, 0.215 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    90deg,
+                    transparent 0%,
+                    transparentize( $dark, 0.415 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    155deg,
+                    transparentize( $gold, 0.995 ) 0%,
+                    transparentize( $gold, 0.725 ) 100%
+
+                )
+
+            ;
+
+        }
+
+        @include scrolls( true, $body-scroll, $body-thumb, $body-track );
+
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 0ms;
+
+        // secondary
+        &.secondary {
+
+            height: auto;
+            // margin: 4.0625rem 0 0 0;
+
+            overflow: visible;
+
+        }
+
+        // scroll
+        &.scrollable {
+
+            overflow-y: scroll;
+            // overflow: hidden;
+
+        }
+
+        // menu open class
+        &.site-menu-open {
+
+            @include fill( $nite, 0.000 );
+
+            background: {
+
+                image: none;
+
+            }
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+    }

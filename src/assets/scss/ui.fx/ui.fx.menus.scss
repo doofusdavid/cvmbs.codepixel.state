@@ -1,0 +1,36 @@
+// stylesheet :: menu UI animation FX
+
+    // settings
+    $global-ease : $outex;
+
+    // styles
+
+        // main site content
+        #site-content {
+
+            &.site-menu-open {
+
+                // fake news
+
+            }
+
+        }
+
+        // off-canvas overlay
+        .js-off-canvas-overlay {
+
+            transition: all 120ms $outex 180ms;
+
+            &.is-visible {
+
+                transition: all 60ms $outex 0ms;
+
+                &.is-closable {
+
+                    cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNy40MTQsMTZsNy43NzgsNy43NzhsLTEuNDE0LDEuNDE0TDE2LDE3LjQxNGwtNy43NzgsNy43NzhsLTEuNDE0LTEuNDE0TDE0LjU4NiwxNkw2LjgwOCw4LjIyMiBsMS40MTQtMS40MTRMMTYsMTQuNTg2bDcuNzc4LTcuNzc4bDEuNDE0LDEuNDE0TDE3LjQxNCwxNnoiPjwvcGF0aD48L3N2Zz4=) 16 16, auto;
+
+                }
+
+            }
+
+        }

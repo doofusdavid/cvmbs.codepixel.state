@@ -1,0 +1,107 @@
+// stylesheet :: brand.state styles
+
+    // settings
+        $brand_height : 4rem;
+
+    // styles
+    #brand-state {
+
+        position: relative;
+
+        z-index: 10;
+
+        @include flex-h-s-v-c( false );
+
+        height: 4rem;
+
+        padding: 1rem 0 1rem 0;
+
+        color: white;
+
+        #brand-state-text {
+
+            @include flex-h-s-v-c( true );
+
+            height: 2rem;
+            margin: 0;
+            padding: 0 0.75rem 0 0;
+
+            font: {
+
+                family: $industry;
+                weight: 700;
+
+            }
+
+            letter-spacing: 0.015em;
+
+            text: {
+
+                align: left;
+                transform: $up;
+
+            }
+
+            // color: $g135;
+
+            .brand-desktop {
+
+                height: 2rem;
+
+                font: {
+
+                    size: 1.125rem;
+
+                }
+
+                line-height: 2rem;
+
+                @include breakpoint ( small only ) {
+
+                    @include hide;
+
+                }
+
+            }
+
+            .brand-mobile {
+
+                @include hide;
+
+                font: {
+
+                    size: 0.875rem;
+
+                }
+
+                letter-spacing: 0.035em;
+
+                @include breakpoint ( small only ) {
+
+                    @include flex-h-s-v-c( true );
+
+                }
+
+                .acronym {
+
+                    // @include hide;
+
+                    font: {
+
+                        size: 1.75rem;
+
+                    }
+
+                }
+
+                .stack {
+
+                    @include hide;
+
+                }
+
+            }
+
+        }
+
+    }

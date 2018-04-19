@@ -1,0 +1,242 @@
+// stylesheet :: background video stage styles
+
+    // styles
+    #video-stage {
+
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+
+        background: {
+
+            color: transparent;
+
+        }
+
+        opacity: 0.000;
+
+        &.in-theater-mode {
+
+            .video-background {
+
+                -webkit-filter: opacity( 1.000 );
+
+                filter: opacity( 1.000 );
+
+                -webkit-mask-image:
+
+                    linear-gradient(
+
+                        180deg,
+                        rgba(0, 0, 0, 1.0) 0%,
+                        rgba(0, 0, 0, 1.0) 100%
+
+                    )
+
+                ;
+
+                mask-image:
+
+                    linear-gradient(
+
+                        180deg,
+                        rgba(0, 0, 0, 1.0) 0%,
+                        rgba(0, 0, 0, 1.0) 100%
+
+                    )
+
+                ;
+
+                transition: all 1600ms $outex 800ms;
+
+            }
+
+            .video-foreground {
+
+                -webkit-mask-image:
+
+                    linear-gradient(
+
+                        180deg,
+                        rgba(0, 0, 0, 1.0) 0%,
+                        rgba(0, 0, 0, 1.0) 100%
+
+                    )
+
+                ;
+
+                mask-image:
+
+                    linear-gradient(
+
+                        180deg,
+                        rgba(0, 0, 0, 1.0) 0%,
+                        rgba(0, 0, 0, 1.0) 100%
+
+                    )
+
+                ;
+
+                transition: all 1600ms $outex 800ms;
+
+            }
+
+            #theater-overlay {
+
+                visibility: visible;
+
+                opacity: 1.000;
+
+                transition: all 2400ms $outex 0ms;
+
+            }
+
+        }
+
+        #theater-overlay {
+
+            position: fixed;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 0;
+
+            visibility: hidden;
+
+            background: {
+
+                color: transparentize( $dark-nite, 0.215 );
+
+            }
+
+            opacity: 0.000;
+
+            transition: all 2400ms $outex 0ms;
+
+        }
+
+        .video-background {
+
+            position: absolute;
+
+            top: -6rem;
+            right: -6rem;
+            bottom: -6rem;
+            left: -6rem;
+
+            z-index: 1;
+
+            overflow: hidden;
+
+            -webkit-filter: opacity( 0.285 );
+
+            filter: opacity( 0.285 );
+
+            -webkit-mask-image:
+
+                linear-gradient(
+
+                    90deg,
+                    rgba(0, 0, 0, 0.0) 0%,
+                    rgba(0, 0, 0, 0.0) 5%,
+                    rgba(0, 0, 0, 1.0) 50%,
+                    rgba(0, 0, 0, 0.0) 95%,
+                    rgba(0, 0, 0, 0.0) 100%
+
+                )
+
+            ;
+
+            mask-image:
+
+                linear-gradient(
+
+                    90deg,
+                    rgba(0, 0, 0, 0.0) 0%,
+                    rgba(0, 0, 0, 0.0) 5%,
+                    rgba(0, 0, 0, 1.0) 50%,
+                    rgba(0, 0, 0, 0.0) 95%,
+                    rgba(0, 0, 0, 0.0) 100%
+
+                )
+
+            ;
+
+            transition: all 800ms $outex 0ms;
+
+        }
+
+        .video-foreground,
+        .video-background iframe {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+
+        }
+
+        .video-foreground {
+
+            -webkit-mask-image:
+
+                linear-gradient(
+
+                    180deg,
+                    rgba(0, 0, 0, 0.0) 0%,
+                    rgba(0, 0, 0, 0.0) 5%,
+                    rgba(0, 0, 0, 1.0) 45%,
+                    rgba(0, 0, 0, 1.0) 100%
+
+                )
+
+            ;
+
+            mask-image:
+
+                linear-gradient(
+
+                    180deg,
+                    rgba(0, 0, 0, 0.0) 0%,
+                    rgba(0, 0, 0, 0.0) 5%,
+                    rgba(0, 0, 0, 1.0) 45%,
+                    rgba(0, 0, 0, 1.0) 100%
+
+                )
+
+            ;
+
+            transition: all 800ms $outex 0ms;
+
+        }
+
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .video-foreground { height: 300% !important; top: -100% !important; }
+    }
+    @media (max-aspect-ratio: 16/9) {
+      .video-foreground { width: 300% !important; left: -100% !important; }
+    }
+    @media all and (max-width: 600px) {
+    .vid-info { width: 50% !important; padding: .5rem !important; }
+    .vid-info h1 { margin-bottom: .2rem !important; }
+    }
+    @media all and (max-width: 500px) {
+    .vid-info .acronym { display: none !important; }
+    }

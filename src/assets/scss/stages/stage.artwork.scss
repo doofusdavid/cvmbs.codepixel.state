@@ -1,0 +1,177 @@
+// stylesheet :: page base styles
+
+    // settings
+        $page-base : $app45;
+
+    // styles
+        #artwork-stage {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 20;
+
+            @include flex-v-b-h-c( false );
+
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            background: {
+
+                color: darken( $app05, 3.5% );
+
+                image:
+
+                    linear-gradient(
+
+                        180deg,
+                        transparent 50%,
+                        transparentize( $app90, 0.515 ) 100%
+
+                    )
+
+                ;
+
+                repeat: no-repeat;
+                size: cover;
+                position: top center;
+
+            }
+
+            @include shadowbox( 2.5rem, 6rem, $app10, 0.235 );
+
+            transition: all 160ms $outex 720ms;
+
+            &.blur-layer {
+
+                .poster-standard {
+
+                    opacity: 0.000;
+
+                    transition: all 240ms $outex 160ms;
+
+                }
+
+            }
+
+            @include breakpoint ( small only ) {
+
+                background: {
+
+                    image:
+
+                        // linear-gradient(
+                        //
+                        //     180deg,
+                        //     transparent 50%,
+                        //     transparentize( $app90, 0.515 ) 100%
+                        //
+                        // ),
+
+                        url(../img/billboards/billboard.poster.stylized.00.png)
+
+                    ;
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: top center;
+
+                }
+
+            }
+
+            .backstretch {
+
+                width: 100% !important;
+                height: 100% !important;
+
+            }
+
+            .poster-base {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: top center;
+
+                }
+
+                opacity: 1.000;
+
+                transition: all 720ms $outex 0ms;
+
+            }
+
+            .blur {
+
+                z-index: 10;
+
+                visibility: hidden;
+
+                background: {
+
+                    // image:
+                    //
+                    //     linear-gradient(
+                    //
+                    //         180deg,
+                    //         transparentize( $app05, 0.215 ) 0%,
+                    //         transparentize( $app05, 0.415 ) 100%
+                    //
+                    //     ),
+                    //
+                    //     url(../img/billboards/billboard.poster.04.blur.jpg)
+                    //
+                    // ;
+
+                }
+
+            }
+
+            .standard {
+
+                z-index: 20;
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparentize( $app05, 0.105 ) 0%,
+                            transparentize( $app90, 0.345 ) 100%
+
+                        ),
+
+                        url(../img/billboards/billboard.placeholder.nevada.jpg)
+                        // url(../img/billboards/billboard.poster.stylized.00.png)
+
+                    ;
+
+                }
+
+                opacity: 0.075;
+
+            }
+
+        }

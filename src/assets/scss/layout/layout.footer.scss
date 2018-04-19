@@ -1,0 +1,459 @@
+// stylesheet :: site footer styles
+
+    // settings
+    $footer_width  : 100vw;
+    $footer_width_ex : calc( 100vw + 4rem );
+
+    $footer_height : 26rem;
+
+    $footer_padding    : 4rem 6rem 6rem 6rem;
+    $footer_padding_ex : 4rem 8rem 6rem 8rem;
+
+    // styles
+    #site-footer {
+
+        position: fixed;
+
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: -1;
+
+        @include flex-h-j-v-t( false );
+
+        width: $footer_width;
+        min-height: $footer_height;
+        margin: 0;
+        padding: $footer_padding;
+
+        @include fill( $dark, 0.000 );
+
+        // common
+        .footer-row-top,
+        .footer-row-bottom {
+
+            // link list
+            .link-list {
+
+                margin: 0;
+
+                list-style: none;
+
+                // link
+                .menu-item {
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        cursor: pointer;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // secondary page
+        .secondary & {
+
+            position: relative;
+
+        }
+
+        // visible
+        &.visible {
+
+            z-index: 10;
+
+        }
+
+        // top row
+        .footer-row-top {
+
+            @include flex-h-j-v-s( false );
+
+            width: 100%;
+
+
+        }
+
+        // columns
+        .footer-column {
+
+            width: 25%;
+            height: 100%;
+            min-height: 14rem;
+            margin: 0;
+
+            &.content {
+
+                @include flex-v-t-h-s( false );
+
+                // width: 18.5rem;
+                width: 18rem;
+                // padding: 0 1rem 0 0;
+                padding: 0 0 0 1rem;
+
+                // @include fill( white, 0.965 );
+
+                // border-left: 1px solid transparentize( white, 0.645 );
+
+                .links-header {
+
+                    @include flex-h-s-v-c( false );
+
+                    padding: 0 0 0 0;
+
+                }
+
+            }
+
+            &.links {
+
+                width: 15rem;
+                padding: 0 0 0 0;
+
+                &.default {
+
+                    width: 15rem;
+
+                }
+
+                &.narrow {
+
+                    width: 14rem;
+
+                    .link {
+
+                        //
+
+                    }
+
+                }
+
+                &.wide {
+
+                    width: 17rem;
+
+                }
+
+            }
+
+            .links-header {
+
+                @include flex-h-s-v-c( false );
+
+                height: 2rem;
+                // padding: 0 0 0 0.75rem;
+                // padding: 0 0 0 1rem;
+                padding: 0;
+
+                @include typo(
+
+                    $klavislim,
+                    1rem,
+                    400,
+                    normal,
+                    2rem,
+                    0.135em,
+                    inherit,
+                    $up,
+                    $gold
+
+                );
+
+            }
+
+            // menu item
+            .menu-item {
+
+                // link
+                a {
+
+                    @include flex-h-s-v-c( false );
+
+                    height: auto;
+                    min-height: 2rem;
+                    margin: 0;
+                    padding: 0.25rem 0 0.25rem 0;
+
+                    @include typo(
+
+                        $industry,
+                        0.625rem,
+                        600,
+                        normal,
+                        0.75rem,
+                        0.075em,
+                        inherit,
+                        $up,
+                        transparentize( white, 0.385 )
+
+                    );
+
+                    // color: white;
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        color: $gold;
+
+                    }
+
+                }
+
+
+
+                .break {
+
+                    @include hide;
+
+                }
+
+            }
+
+        }
+
+        // left
+        #footer-left {
+
+            order: 2;
+
+        }
+
+        // center
+        #footer-center {
+
+            order: 1;
+
+        }
+
+        // right
+        #footer-right {
+
+            order: 3;
+
+        }
+
+        // drawer
+        #footer-drawer {
+
+            order: 4;
+
+            #contact-info {
+
+                @include flex-v-t-h-s( false );
+
+                flex-grow: 1;
+
+                width: 100%;
+                margin: 0 0 0.5rem 0;
+
+                .contact-label {
+
+                    @include flex-h-s-v-c( false );
+
+                    height: 1rem;
+                    margin: 0 0 0.25rem 0;
+
+                    @include typo(
+
+                        $industry,
+                        0.5625rem,
+                        700,
+                        normal,
+                        0.625rem,
+                        0.115em,
+                        inherit,
+                        $up,
+                        transparentize( white, 0.185 )
+
+                    );
+
+                }
+
+                .contact-text {
+
+                    @include flex-h-s-v-c( false );
+
+                    // height: 1rem;
+                    margin: 0 0 0.75rem 0;
+
+                    @include typo(
+
+                        $industry,
+                        0.6875rem,
+                        600,
+                        normal,
+                        0.875rem,
+                        0.065em,
+                        inherit,
+                        none,
+                        transparentize( white, 0.485 )
+
+                    );
+
+                }
+
+            }
+
+        }
+
+        // bottom row
+        .footer-row-bottom {
+
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            @include flex-h-j-v-c( false );
+
+            width: $footer_width;
+            height: 6rem;
+            margin: 0;
+            padding: 0 6rem 0 6rem;
+
+            @include fill( $nite, 0.445 );
+
+            .link-list {
+
+                @include flex-h-s-v-c( false );
+
+                height: 1rem;
+
+                .link {
+
+                    height: 0.625rem;
+                    margin: 0 0 0.375rem 0;
+                    padding: 0 0.75rem 0 0.75rem;
+
+                    border-right: 1px solid transparentize( white, 0.615 );
+
+                    @include typo(
+
+                        $industry,
+                        0.625rem,
+                        600,
+                        normal,
+                        0.625rem,
+                        0.065em,
+                        inherit,
+                        none,
+                        transparentize( white, 0.245 )
+
+                    );
+
+                    &:hover {
+
+                        color: $gold;
+
+                        @include fill( white, 1.000 );
+
+                    }
+
+                    &:first-child {
+
+                        padding-left: 0;
+
+                    }
+
+                    &:last-child {
+
+                        border-right: none;
+
+                    }
+
+                }
+
+            }
+
+            // copyright text
+            .copyright {
+
+                @include flex-h-s-v-b( false );
+
+                height: 1rem;
+
+                @include typo(
+
+                    $industry,
+                    0.625rem,
+                    600,
+                    normal,
+                    0.875rem,
+                    0.065em,
+                    inherit,
+                    none,
+                    transparentize( white, 0.245 )
+
+                );
+
+                em {
+
+                    @include flex-h-c-v-c( true );
+
+                    margin: 0 0.125rem 0 0.125rem;
+
+                    font: {
+
+                        size: 0.6875rem;
+                        weight: 700;
+                        style: normal;
+
+                    }
+
+                }
+
+            }
+
+            // required logo
+            #brand-legacy {
+
+                width: 16rem;
+                height: 2rem;
+                margin: 0;
+                padding: 0;
+
+                &:hover {
+
+                    svg {
+
+                        path {
+
+                            fill-opacity: 1.000;
+
+                        }
+
+                    }
+
+                }
+
+                svg {
+
+                    path {
+
+                        fill: white;
+                        fill-opacity: 0.825;
+
+                        transition: $all220;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

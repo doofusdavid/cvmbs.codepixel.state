@@ -1,0 +1,122 @@
+// stylesheet :: overlay layers UI FX styles
+
+    // settings
+    $layer_width  : 100vw;
+    $layer_height : 100vh;
+
+    // mixin.layer
+    @mixin layer( $dye, $haze ) {
+
+        @include fullscreen( absolute, 10, true, hidden );
+
+        background: {
+
+            color: transparentize( $dye, $haze );
+
+        }
+
+    }
+
+    // styles
+    #overlay-interface {
+
+        @include fullscreen( fixed, 1, true, hidden );
+
+        background: {
+
+            color: transparent;
+
+        }
+
+        .layer {
+
+            transition: $themeUI;
+
+            &.gradient {
+
+                z-index: 10;
+
+                @include layer( transparent, 0.000 );
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            168deg,
+                            transparent 50%,
+                            transparentize( $bg-base, 0.245 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            189deg,
+                            transparent 20%,
+                            transparentize( $g140, 0.345 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            45deg,
+                            transparent 0%,
+                            transparentize( $dark, 0.215 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            90deg,
+                            transparent 0%,
+                            transparentize( $dark, 0.415 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            155deg,
+                            transparentize( $gold, 0.995 ) 0%,
+                            transparentize( $gold, 0.725 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+            &.solid {
+
+                z-index: 20;
+
+                @include layer( $brite, 1.000 );
+
+            }
+
+            &.pattern {
+
+                z-index: 30;
+
+                @include layer( transparent, 0.000 );
+
+                @include hide;
+
+                background: {
+
+                    image: url(../img/billboards/billboard.06.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center bottom;
+
+                }
+
+                opacity: 0.645;
+
+            }
+
+        }
+
+    }

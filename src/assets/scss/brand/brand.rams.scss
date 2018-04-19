@@ -1,0 +1,93 @@
+// stylesheet :: brand.rams styles
+
+    // settings
+    $brand_width  : 4rem;
+    $brand_height : 4rem;
+
+    // styles
+    #brand-rams {
+
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 10;
+
+        width: $brand_width;
+        height: $brand_height;
+        margin: 0;
+        padding: 0;
+
+        transition: all 320ms $outex 0ms;
+
+        // border
+        &:after {
+
+            // @include border( false, 0, -1px, 0, auto );
+
+        }
+
+        // hover state
+        &:hover {
+
+            .brand-icon {
+
+                .path {
+
+                    fill-opacity: 1.000;
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+                .brand-fill {
+
+                    fill: $g135;
+
+                }
+
+            }
+
+        }
+
+        // svg
+        .brand-icon {
+
+            .path {
+
+                transition: all 220ms linear 0ms;
+
+            }
+
+            .brand-fill {
+
+                fill: $dark;
+                fill-opacity: 0.345;
+                // fill-opacity: 0.745;
+
+            }
+
+            .brand-stroke {
+
+                fill: $gold;
+                fill-opacity: 0.785;
+                // fill-opacity: 0.985;
+
+                // transform: scale3d( 1.0625, 1.0625, 1.0625 );
+                // transform-origin: center center;
+
+            }
+
+            .brand-shapes {
+
+                fill: white;
+                fill-opacity: 0.925;
+                // fill-opacity: 0.385;
+
+            }
+
+        }
+
+    }

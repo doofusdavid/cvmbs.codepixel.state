@@ -1,0 +1,532 @@
+// stylesheet :: alumni section layout + content styles
+
+    // settings
+    $alumni_fx : all 320ms $oquin 0ms;
+    $section_color : transparentize( $orange, 0.325 );
+
+    // slides
+    $slide_view_w : 100vw;
+    $slide_view_h : 100vh;
+
+    // styles
+    #alumni {
+
+        // load state
+        &[data-load='loaded'] {
+
+            //
+
+        }
+
+        // image
+        .section-image {
+
+            opacity: 0.000;
+
+            // load state
+            &[data-load='loaded'] {
+
+                filter: blur( 2px ) grayscale( 0.000 );
+
+            }
+
+        }
+
+        // color base
+        .section-base {
+
+            @include fill( $section_color, 0.000 );
+
+            opacity: 1.000;
+
+            // load state
+            &.reveal-content {
+
+                @include fill( $section_color, 1.000 );
+
+                transition: all 2400ms linear 2400ms;
+
+            }
+
+        }
+
+        // title
+        .section-title {
+
+            @include font( $klavislim, 2.5rem, 400 );
+
+            line-height: 2.5rem;
+
+            @include text( $up, center );
+
+            color: white;
+
+        }
+
+        // content
+        .section-content {
+
+            padding: 1rem 1rem 1rem 1rem;
+
+            opacity: 0.000;
+
+            transform: translate3d( 0, 25%, 0 );
+
+            transition: background 360ms linear 0ms;
+
+            // design
+            .design-layer {
+
+                // fx.layers
+                .fx-layer {
+
+                    @include fullscreen( absolute, 1, false, hidden );
+
+                }
+
+                // color + gradient
+                .color-layer {
+
+                    background: {
+
+                        image:
+
+                            linear-gradient(
+
+                                123deg,
+                                transparentize( $nite, 0.215 ) 0%,
+                                transparentize( $dark, 0.765 ) 60%,
+                                transparentize( $orange, 0.345 ) 100%
+
+                            )
+
+                        ;
+
+                    }
+
+                }
+
+            }
+
+            // container
+            .slider-layer {
+
+                position: relative;
+
+                width: 100%;
+                height: 16rem;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            // slider base
+            .slider-base {
+
+                position: absolute;
+
+                // right: 0;
+                bottom: 0;
+                left: 24rem;
+
+                @include flex-h-j-v-s( false );
+
+                width: 28rem;
+                height: 22rem;
+                margin: 0;
+                padding: 3rem;
+
+                @include fill( $nite, 0.765 );
+
+                transform: translate3d( 0, 100%, 0 );
+
+                // layer
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    left: -12rem;
+                    bottom: 6rem;
+
+                    z-index: 1;
+
+                    width: 18rem;
+                    height: 20rem;
+
+                    @include fill( white, 0.925 );
+
+                }
+
+                // layer
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    left: -14rem;
+                    bottom: 0rem;
+
+                    z-index: -1;
+
+                    width: 28rem;
+                    height: 18rem;
+
+                    @include fill( $orange, 0.425 );
+
+                }
+
+            }
+
+            // slider
+            .slider {
+
+                position: absolute;
+
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                @include flex-v-b-h-e( false );
+
+                width: 48rem;
+                height: 16rem;
+                margin: 0;
+                padding: 4rem 3rem 3rem 3rem;
+
+                @include fill( $lights, 0.000 );
+
+                transform: translate3d( -100%, 0, 0 );
+
+                // quote
+                &:before {
+
+                    // content: '\201c';
+
+                    position: absolute;
+
+                    top: 1.75rem;
+                    left: 1rem;
+
+                    z-index: 1;
+
+                    @include flex-v-c-h-c( false );
+
+                    width: 4rem;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 2rem 0 0 0;
+
+                    @include font( $industry, 9rem, 700, italic );
+
+                    line-height: 3rem;
+
+                    // color: transparentize( $orange, 0.565 );
+                    color: transparentize( $orange, 0.645 );
+
+                }
+
+                // text
+                .slide-text {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include flex-h-s-v-t( false );
+
+                    padding: 0 3rem 0 0;
+
+                    @include font( $klavislim, 1.375rem, 500, italic );
+
+                    line-height: 1.75rem;
+
+                    // letter-spacing: 0.065em;
+
+                    @include text( none );
+
+                    color: $oil;
+
+                    // quote
+                    &:before {
+
+                        content: '\201c';
+
+                        position: absolute;
+
+                        top: -1.75rem;
+                        left: -2rem;
+
+                        z-index: -1;
+
+                        @include flex-v-c-h-c( false );
+
+                        width: 4rem;
+                        height: 4rem;
+                        margin: 0;
+                        padding: 2rem 0 0 0;
+
+                        @include font( $industry, 10rem, 700, italic );
+
+                        line-height: 3rem;
+
+                        // color: transparentize( $orange, 0.565 );
+                        color: transparentize( $orange, 0.645 );
+
+                    }
+
+                }
+
+                // attribution
+                .slide-citation {
+
+                    @include flex-v-c-h-e( false );
+
+                    @include font( $industry, 0.875rem, normal, normal );
+
+                    letter-spacing: 0.035em;
+
+                    // name
+                    strong {
+
+                        @include flex-h-e-v-b( false );
+
+                        height: 2rem;
+
+                        font: {
+
+                            weight: 900;
+
+                        }
+
+                        line-height: 1rem;
+
+                        color: $g140;
+
+                    }
+
+                    // title
+                    em {
+
+                        @include flex-h-e-v-c( false );
+
+                        @include font( $industry, 0.5625rem, 700, normal );
+
+                        line-height: 0.75rem;
+
+                        text: {
+
+                            align: right;
+
+                        }
+
+                        color: $steel;
+
+                    }
+
+                }
+
+            }
+
+            // meta
+            .slide-meta {
+
+                position: absolute;
+
+                bottom: 0;
+                left: 46.5rem;
+
+                z-index: 20;
+
+                @include flex-h-e-v-c( false );
+
+                min-width: 18rem;
+                height: 8rem;
+                margin: 0;
+                padding: 3rem 3rem 1.5rem 3rem;
+
+                transform: translate3d( 100%, 0, 0 );
+
+                // button
+                .slide-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    min-width: 14rem;
+                    width: auto;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                    @include font( $klavislim, 0.875rem, 500, normal );
+
+                    line-height: 1rem;
+
+                    letter-spacing: 0.125rem;
+
+                    @include text( $up, center );
+
+                    color: white;
+
+                    @include fill( white, 0.925 );
+
+                    @include fill( $dark, 0.285 );
+
+                    transition: $all220;
+
+                    // hover state
+                    &:hover {
+
+                        // color: $gold;
+
+                        @include fill( $orange, 0.075 );
+
+                    }
+
+                }
+
+            }
+
+            // controls
+            .arrow-controls {
+
+                position: absolute;
+
+                // top: 3rem;
+                // right: -3rem;
+                bottom: 12rem;
+                left: 46rem;
+
+                z-index: 20;
+
+                @include flex-h-j-v-c( false );
+
+                width: 6rem;
+                height: 3rem;
+                margin: 0;
+                padding: 0;
+
+                opacity: 0.000;
+
+                transform: translate3d( -6rem, 0, 0 );
+                transform-origin: center center;
+
+                // class hook
+                .billboard-control {
+
+                    width: 3rem;
+                    height: 3rem;
+                    margin: 0;
+                    padding: 0;
+
+                    transition: $all220;
+
+                    // focus state
+                    &:focus {
+
+                        outline: none;
+
+                    }
+
+                    // hover state
+                    &.prev-arrow,
+                    &.next-arrow {
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $g140, 0.000 );
+
+                        }
+
+                    }
+
+                    // prev.arrow
+                    &.prev-arrow {
+
+                        @include fill( $orange, 0.000 );
+
+                    }
+
+                    // next.arrow
+                    &.next-arrow {
+
+                        @include fill( $g135, 0.000 );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // slider
+        #alumni-slides {
+
+            width: auto;
+            height: 100vh;
+
+            // slides list
+            .slick-list {
+
+                width: $slide_view_w;
+                height: $slide_view_h;
+
+            }
+
+            // slide class
+            .slick-slide {
+
+                position: relative;
+
+                z-index: 0;
+
+                height: $slide_view_h;
+
+                // active
+                &.slick-active {
+
+                    z-index: 1;
+
+                    // custom slide class
+                    .ui-slide-article {
+
+                        // content
+                        .slide-content {
+
+                            //
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // slide
+            .ui-slide-article {
+
+                position: relative;
+
+                @include flex-v-c-h-c( false );
+
+                width: $slide_view_w;
+                height: $slide_view_h;
+
+                // focus state
+                &:focus {
+
+                    outline: none;
+
+                }
+
+            }
+
+        }
+
+    }

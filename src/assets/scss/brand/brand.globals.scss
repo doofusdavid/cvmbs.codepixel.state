@@ -1,0 +1,15 @@
+// stylesheet :: global brand styles
+
+    // settings
+    $brand_hover : all 220ms linear 0ms;
+
+    // styles
+    .brand-link {
+
+        &:focus {
+
+            outline: none;
+
+        }
+
+    }

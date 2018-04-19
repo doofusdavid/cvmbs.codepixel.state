@@ -1,0 +1,23 @@
+// stylesheet :: events section layout + content styles
+
+    // settings
+    $events_fx : all 320ms $oquin 0ms;
+    // $section_color : transparentize( $nite, 0.385 );
+    $section_color : transparentize( $beige, 0.245 );
+
+    // styles
+    #events {
+
+        .section-base {
+
+            @include fill( $section_color, 0.000 );
+
+        }
+
+        .section-title {
+
+            color: $g135;
+
+        }
+
+    }

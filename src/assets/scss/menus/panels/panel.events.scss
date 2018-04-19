@@ -1,0 +1,907 @@
+// stylesheet :: panel.events component styles
+
+    // settings
+    $panel_size : calc( 100% - 4rem );
+
+    // styles
+    #menu-panel-events {
+
+        @include gradient( 0deg, $blue, 0.565, 0%, red, 1.000, 50% );
+
+        // header
+        .panel-header {
+
+            @include fill( $blue, 0.565 );
+
+        }
+
+        #calendar-links-container {
+
+			position: absolute;
+
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			z-index: 10;
+
+			width: 100%;
+			height: 64px;
+			margin: 0;
+			padding: 16px 16px 16px 16px;
+
+			box-sizing: border-box;
+
+			background: {
+
+				color:
+
+					adjust-color(
+
+						$navy,
+						$hue 	 	: -5%,
+						$saturation : -10%,
+						$lightness  : -8.5%,
+						$alpha 		: -0.525
+
+					)
+
+				;
+
+			}
+
+			.calendar-links {
+
+				display: flex;
+
+				flex-direction: row;
+				justify-content: center;
+				align-items: stretch;
+
+				width: 100%;
+				height: 32px;
+				margin: 0;
+				padding: 0;
+
+				.calendar-link {
+
+					display: inline-flex;
+
+					height: 32px;
+					margin: 0;
+					padding-top: 1px;
+
+					font: {
+
+						family: $industry;
+						size: 10px;
+						weight: 700;
+
+					}
+
+					line-height: 32px;
+
+					letter-spacing: 0.015em;
+
+					text: {
+
+						transform: $up;
+						rendering: $pixper;
+
+					}
+
+					transition: $all220;
+
+					@include breakpoint(medium down) {
+
+						font: {
+
+							size: 9px;
+
+						}
+
+					}
+
+					&:focus {
+
+						@include disable-mouse-outline;
+
+						// outline: none;
+
+						// box-shadow: $access;
+
+					}
+
+					&.local-link {
+
+						position: relative;
+
+						flex-grow: 1;
+
+						padding-left: 40px;
+
+						color:
+
+							transparentize(white, 0.105)
+
+						;
+
+						background-color:
+
+							transparentize(white, 0.945)
+
+						;
+
+						&:hover {
+
+							// color: white;
+							color: $gold;
+
+							background-color:
+
+								transparentize(white, 0.885)
+
+							;
+
+							&:before {
+
+								background-color:
+
+									adjust-color(
+
+										$green,
+										$hue 	 	: 0%,
+										$saturation : 3.5%,
+										$lightness  : -5%,
+										$alpha 		: -0.745
+
+									)
+
+								;
+
+								opacity: 1.000;
+
+								transition: $all220;
+
+							}
+
+						}
+
+						&:before {
+
+							content: '';
+
+							position: absolute;
+
+							top: 0;
+							bottom: 0;
+							left: 0;
+
+							z-index: 1;
+
+							width: 31px;
+							height: 32px;
+							margin: 0;
+							padding: 0;
+
+							background: {
+
+								color:
+
+									transparentize(white, 0.945)
+
+								;
+
+								image: url(../img/icons/UI/icon_department_events.svg);
+								repeat: no-repeat;
+								size: 32px 32px;
+								position: 0px 0px;
+
+							}
+
+							opacity: 0.735;
+
+							transition: $all220;
+
+						}
+
+					}
+
+					&.global-link {
+
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+
+						flex-grow: 0;
+
+						width: 132px;
+
+						text: {
+
+							align: center;
+
+						}
+
+						color:
+
+							transparentize($gold, 0.105)
+
+						;
+
+						background-color:
+
+							adjust-color(
+
+								$green,
+								$hue 	 	: 0%,
+								$saturation : 3.5%,
+								$lightness  : -5%,
+								$alpha 		: -0.745
+
+							)
+
+						;
+
+						&:hover {
+
+							color: white;
+
+							background-color:
+
+								transparentize($green, 0.525)
+
+							;
+
+						}
+
+						@include breakpoint(medium down) {
+
+							width: auto;
+							padding: 1px 12px 0 12px;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+        .panel-interior {
+
+            overflow-y: scroll;
+
+        }
+
+		#calendar-panel {
+
+			position: absolute;
+
+			top: 64px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			z-index: 10;
+
+			width: 100%;
+			height: calc(100% - 64px);
+			margin: 0;
+			padding: 0 0 0 0;
+
+			.calendar-fail {
+
+				display: flex;
+
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				width: 100%;
+				height: calc(100% - 64px);
+				margin: 0;
+				padding: 0 48px 0 48px;
+
+				box-sizing: border-box;
+
+				.container {
+
+					display: flex;
+
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					width: 100%;
+					padding: 24px 16px 24px 16px;
+
+					border: 1px solid transparentize(white, 0.925);
+
+					background: {
+
+						color: transparentize(white, 0.965);
+
+					}
+
+					svg {
+
+						width: 32px;
+						height: 32px;
+
+						opacity: 0.725;
+
+					}
+
+					span {
+
+						display: block;
+
+						font: {
+
+							family: $industry;
+							size: 12px;
+							weight: 600;
+
+						}
+
+						letter-spacing: 0.045em;
+
+						text: {
+
+							align: center;
+							rendering: $pixper;
+
+						}
+
+						color: transparentize(white, 0.115);
+
+					}
+
+				}
+
+			}
+
+			.events-list {
+
+				height: 100%;
+				margin: 0;
+				padding: 0;
+
+				list-style: none;
+
+				background: transparent;
+
+			}
+
+			.event {
+
+				display: flex;
+
+				flex-direction: column;
+
+				// padding: 16px;
+
+				border-bottom: 1px solid transparentize(white, 0.865);
+
+				background-color: transparentize(white, 1.000);
+
+				transition: $all220;
+
+				&:nth-child(odd) {
+
+					background-color:
+
+						// adjust-color(
+
+						// 	$red,
+						// 	$lightness  : -10%,
+						// 	$saturation : 0%,
+						// 	$alpha 		: -0.885
+
+						// )
+
+						transparentize(white, 1.000)
+
+					;
+
+				}
+
+				&:nth-child(even) {
+
+					background-color:
+
+						// adjust-color(
+
+						// 	$navy,
+						// 	$lightness  : -15%,
+						// 	$saturation : 0%,
+						// 	$alpha 		: -0.875
+
+						// )
+
+						transparentize(white, 1.000)
+
+					;
+
+				}
+
+				&:last-child {
+
+					border-bottom: none;
+
+				}
+
+				&:hover {
+
+					background-color:
+
+						adjust-color(
+
+							$navy,
+							$lightness  : -12%,
+							$saturation : 0%,
+							$alpha 		: -0.765
+
+						)
+
+					;
+
+				}
+
+				.event-toggle {
+
+					display: block;
+
+					padding: 16px;
+
+					border: none;
+
+					background-color: transparentize(white, 1.000);
+
+					&:before {
+
+						content: '';
+
+					}
+
+					&:focus {
+
+						@include disable-mouse-outline;
+
+						// outline: none;
+
+						// box-shadow: $access;
+
+					}
+
+				}
+
+				.calendar-entry {
+
+					display: flex;
+
+					flex-direction: row;
+
+					justify-content: flex-start;
+
+					width: 100%;
+					// margin-bottom: 12px;
+					padding: 0;
+
+					// background-color: transparentize(white, 0.955);
+
+					.calendar-icon {
+
+						display: inline-flex;
+
+						flex-direction: column;
+
+						width: 64px;
+						height: 64px;
+
+						span {
+
+							box-sizing: border-box;
+
+							text: {
+
+								align: center;
+								transform: $up;
+								rendering: $pixper;
+
+							}
+
+						}
+
+						.calendar-month {
+
+							height: 24px;
+							padding: 1px 0 0 0;
+
+							font: {
+
+								family: $klavislim;
+								size: 11px;
+								weight: normal;
+
+							}
+
+							line-height: 24px;
+
+							letter-spacing: 0.065em;
+
+							text: {
+
+								rendering: $pixper;
+
+							}
+
+							color: $gold;
+							background-color:
+
+								adjust-color(
+
+									$green,
+									$lightness  : -5%,
+									$saturation : 5%,
+									$alpha 		: -0.725
+
+								)
+
+								// transparentize($dark, 0.115)
+
+							;
+
+						}
+
+						.calendar-day {
+
+							font: {
+
+								family: $industry;
+								size: 24px;
+								weight: 700;
+
+							}
+
+							line-height: 40px;
+
+							color: white;
+							background-color: transparentize(white, 0.945);
+
+						}
+
+					}
+
+					.entry-info {
+
+						display: flex;
+
+						flex-direction: column;
+
+						justify-content: center;
+
+						width: calc(100% - 64px);
+						padding: 0 0 0 16px;
+
+						span {
+
+							display: block;
+
+							text: {
+
+								rendering: $pixper;
+
+							}
+
+							&.event-title {
+
+								font: {
+
+									family: $industry;
+									size: 13px;
+                                    weight: 600;
+
+								}
+
+								line-height: 18px;
+
+								letter-spacing: 0.025em;
+
+								color: $gold;
+
+							}
+
+							&.event-date {
+
+								font: {
+
+									family: $industry;
+									size: 10px;
+                                    weight: 600;
+
+								}
+
+								line-height: 18px;
+
+								letter-spacing: 0.025em;
+
+								text: {
+
+									transform: $up;
+
+								}
+
+								color: $white;
+
+							}
+
+						}
+
+					}
+
+				}
+
+				.content {
+
+					padding: 0 16px 16px 16px;
+
+					border: none;
+
+					background-color: transparentize(white, 1.000);
+
+					span {
+
+						display: inline-block;
+
+						text: {
+
+							rendering: $pixper;
+
+						}
+
+					}
+
+					.entry-description {
+
+						margin-bottom: 16px;
+
+						font: {
+
+							family: $industry;
+							size: 11px;
+
+						}
+
+						line-height: 18px;
+
+						letter-spacing: 0.025em;
+
+						text: {
+
+							transform: none;
+
+						}
+
+						color: $white;
+
+						&:focus {
+
+							@include disable-mouse-outline;
+
+							// outline: none;
+
+							// box-shadow: $access;
+
+						}
+
+						a {
+
+							color: $gold;
+
+						}
+
+					}
+
+				}
+
+				.calendar-footer {
+
+					display: flex;
+					// display: none;
+
+					flex-direction: row;
+
+					justify-content: space-between;
+
+					width: 100%;
+					// margin-top: 8px;
+
+					background-color: transparentize(white, 0.925);
+
+					transition: $all220;
+
+					span {
+
+						text-rendering: $pixper;
+
+					}
+
+					.event-location {
+
+						position: relative;
+
+						display: inline-flex;
+
+						flex-grow: 1;
+
+						height: 32px;
+						padding: 1px 12px 0 40px;
+
+						box-sizing: border-box;
+
+						font: {
+
+							family: $industry;
+							size: 10px;
+                            weight: 600;
+
+						}
+
+						line-height: 32px;
+
+						letter-spacing: 0.045em;
+
+						text: {
+
+							transform: $up;
+
+						}
+
+						color: transparentize(white, 0.065);
+
+						&:focus {
+
+							@include disable-mouse-outline;
+
+							// outline: none;
+
+							// box-shadow: $access;
+
+						}
+
+						&:before {
+
+							position: absolute;
+
+							top: 0;
+							left: 0;
+
+							content: '';
+
+							width: 32px;
+							height: 32px;
+
+							background: {
+
+								image: url(../img/icons/UI/icon_direction_arrow.svg);
+								repeat: no-repeat;
+								size: 32px 32px;
+								position: 0 0;
+
+								color:
+
+									adjust-color(
+
+										$green,
+										$hue 		: 0%,
+										$saturation : 10%,
+										$lightness  : -15%,
+										$alpha 		: -0.865
+
+									)
+
+								;
+
+							}
+
+						}
+
+					}
+
+					.event-link {
+
+						align-self: flex-end;
+
+						a {
+
+							display: inline-flex;
+
+							align-self: flex-end;
+
+							height: 32px;
+							padding: 1px 12px 0 12px;
+
+							box-sizing: border-box;
+
+							font: {
+
+								// family: $klav-nemi;
+								family: $industry;
+								size: 10px;
+								weight: 600;
+
+							}
+
+							line-height: 32px;
+
+							letter-spacing: 0.065em;
+
+							text: {
+
+								transform: $up;
+								rendering: $pixper;
+
+							}
+
+							color: white;
+
+							background-color:
+
+								adjust-color(
+
+									$green,
+									$hue 		: 0%,
+									$saturation : 10%,
+									$lightness  : -15%,
+									$alpha 		: -0.745
+
+								)
+
+							;
+
+							transition: $all220;
+
+							&:hover {
+
+								background-color:
+
+									// adjust-color(
+
+									// 	$navy,
+									// 	$lightness  : 4%,
+									// 	$saturation : 0%,
+									// 	$alpha 		: -0.225
+
+									// )
+
+									transparentize($gold, 0.565)
+
+								;
+
+							}
+
+							&:focus {
+
+								@include disable-mouse-outline;
+
+								// outline: none;
+
+								// box-shadow: $access;
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+    }

@@ -1,0 +1,31 @@
+// stylesheet :: menu panels compiler
+
+    // globals
+    @import 'panel.globals';
+
+    // panel.main
+    @import 'panel.site.menu';
+
+    // panel.base
+    @import 'panel.base.menu';
+
+    // panel.search
+    @import 'panel.search';
+
+    // panel.events
+    @import 'panel.events';
+
+    // panel.resources
+    @import 'panel.resources';
+
+    // panel.about
+    @import 'panel.about';
+
+    // panel.social.media
+    @import 'panel.social.media';
+
+    // panel.contact
+    @import 'panel.contact';
+
+    // panel.news
+    @import 'panel.news';

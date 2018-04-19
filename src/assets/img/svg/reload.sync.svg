@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#arrow_x5F_L_1_);}
+	.st1{fill:url(#arrow_x5F_R_1_);}
+</style>
+<linearGradient id="arrow_x5F_L_1_" gradientUnits="userSpaceOnUse" x1="29.6169" y1="59.0108" x2="8.3541" y2="33.6709">
+	<stop  offset="0" style="stop-color:#D7D392"/>
+	<stop  offset="0.95" style="stop-color:#D7D392;stop-opacity:0"/>
+</linearGradient>
+<path id="arrow_x5F_L_2_" class="st0" d="M23,50.9l2.7-2.6l7.6,7.6L32,56C19.4,56,9,46.2,8,34h3C11.8,41.5,16.4,47.8,23,50.9
+	L23,50.9z"/>
+<linearGradient id="arrow_x5F_R_1_" gradientUnits="userSpaceOnUse" x1="55.6142" y1="30.2617" x2="34.3977" y2="4.9769">
+	<stop  offset="5.000000e-02" style="stop-color:#D7D392;stop-opacity:0"/>
+	<stop  offset="1" style="stop-color:#D7D392"/>
+</linearGradient>
+<path id="arrow_x5F_R_2_" class="st1" d="M32,8c12.6,0,23,9.7,24,21.9h-3c-0.7-7.5-5.4-13.8-12-16.9l-2.7,2.6l-7.6-7.6L32,8z"/>
+</svg>

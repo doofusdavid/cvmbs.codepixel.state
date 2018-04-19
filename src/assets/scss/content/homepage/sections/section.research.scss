@@ -1,0 +1,123 @@
+// stylesheet :: academics section layout + content styles
+
+    // settings
+    $research_fx : all 320ms $oquin 0ms;
+    $section_color : transparentize( $cvnavy, 0.145 );
+
+    $billboard : '../img/billboards/sections/research/research.map.01.svg';
+
+    // styles
+    #research {
+
+        // color base
+        .section-base {
+
+            @include fill( $section_color, 0.000 );
+
+        }
+
+        // title
+        .section-title {
+
+            // @include font( $klavislim, 2rem, 400 );
+
+            color: $gold;
+
+        }
+
+        // content
+        .section-content {
+
+            padding: 1rem 1rem 1rem 1rem;
+
+        }
+
+        // design
+        .design-layer {
+
+            // fx.layers
+            .fx-layer {
+
+                @include fullscreen( absolute, 1, false, hidden );
+
+                opacity: 0.000;
+
+            }
+
+            // color + gradient
+            .color-layer {
+
+
+
+            }
+
+            // pattern + artwork
+            .pattern-layer {
+
+                @include background( '', false, cover, center center );
+
+            }
+
+        }
+
+        // map
+        #research-map {
+
+            position: absolute;
+
+            top: -3rem;
+            right: -3rem;
+            bottom: -3rem;
+            left: -3rem;
+
+            z-index: 20;
+
+            width: calc( 100vw + 6rem );
+            height: calc( 100vh + 6rem );
+
+            @include fill( red, 0.725 );
+
+        }
+
+        // map toolbar
+        #research-map-toolbar {
+
+            position: absolute;
+
+            right: 2rem;
+            bottom: 2rem;
+            left: 2rem;
+
+            z-index: 50;
+
+            @include flex-h-j-v-c( false );
+
+            width: calc( 100% - 4rem );
+            height: 4rem;
+            margin: 0;
+            padding: 1.125rem 1rem 1rem 1.25rem;
+
+            @include fill( white, 0.945 );
+
+            opacity: 0.000;
+
+            transform: translate3d( 0, 100%, 0 );
+
+            @include hide;
+
+        }
+
+        // toolbar title
+        .toolbar-title {
+
+            @include font( $klavislim, 1rem, 400 );
+
+            line-height: 1rem;
+
+            letter-spacing: 0.105em;
+
+            color: $gold;
+
+        }
+
+    }

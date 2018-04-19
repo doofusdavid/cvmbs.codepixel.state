@@ -1,0 +1,143 @@
+// stylesheet :: body element styles
+
+    // settings
+    $body-height : 100%;
+    $body-scroll : transparent;
+    $body-thumb  : transparentize( $brite, 0.385 );
+    $body-track  : transparentize( white, 1.000 );
+
+    // styles
+    body {
+
+        position: relative;
+
+        width: 100%;
+        height: $body-height;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+
+        font: {
+
+            family: $industry;
+            size: 0.75rem;
+            weight: 500;
+
+        }
+
+        color: $rite-lite;
+
+        background: {
+
+            color:
+
+                adjust-color(
+
+                    $app45,
+                    $hue          : 0%,
+                    $saturation : 5%,
+                    $lightness  : -5%,
+                    $alpha         : -0.000
+
+                )
+
+            ;
+
+        }
+
+        @include scrolls( true, $body-scroll, $body-thumb, $body-track );
+
+        // secondary
+        &.page-template-secondary {
+
+            padding: 4.0625rem 0 0 0;
+
+        }
+
+    }
+
+    // browser.sync
+    #__bs_notify__ {
+
+        position: fixed;
+
+        top: 50% !important;
+        right: auto !important;
+        left: 50% !important;
+
+        @include flex-h-c-v-c( false );
+
+        display: flex !important;
+
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: -2.25rem 0 0 -2.25rem !important;
+
+        border: none !important;
+        border-radius: 4rem !important;
+
+        overflow: hidden !important;
+
+        font: {
+
+            family: $industry !important;
+            size: 0.6875rem;
+            weight: 600;
+
+        }
+
+        line-height: 0.75rem;
+
+        letter-spacing: 0.035em;
+
+        text: {
+
+            transform: $up;
+            indent: -9999px !important;
+
+        }
+
+        background: {
+
+            // color: transparentize( $nite, 0.365 ) !important;
+            color: transparent !important;
+
+            image: url(../img/svg/reload.sync.svg);
+            repeat: no-repeat;
+            size: 4rem 4rem;
+            position: 0.25rem 0.25rem;
+
+
+        }
+
+        animation: sync-spinner 720ms $ioquin infinite;
+
+        &:before {
+
+            // content: '';
+
+            position: absolute;
+
+            top: 2rem;
+            right: 2rem;
+            bottom: 2rem;
+            left: 2rem;
+
+            width: 2rem;
+            height: 2rem;
+
+            @include boxmodel( $px-green, 0.585 );
+
+        }
+
+    }
+
+    // focus state
+    * {
+
+        &:focus {
+
+            outline: none;
+
+        }
+
+    }

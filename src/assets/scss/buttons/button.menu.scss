@@ -1,0 +1,512 @@
+// stylesheet :: menu.site button styles
+
+    // settings
+    $site_menu : 1rem;
+
+    // styles
+    #site-menu-button {
+
+        position: absolute;
+
+        z-index: 10;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+        padding: 0;
+
+        transform: translate3d( 0, 0, 0 );
+
+        transition: all 320ms $outex 0ms;
+
+        -webkit-backface-visibility: visible;
+
+        // line
+        &:after {
+
+            // @include border( false, 0, auto, 0, -1px );
+
+            -webkit-backface-visibility: visible;
+
+        }
+
+        // hover state
+        &:hover {
+
+            @include fill( white, 0.945 );
+
+            // icon
+            .button-icon {
+
+                // open
+                &.open-menu {
+
+                    transition: all 220ms linear 0ms;
+
+                    // lines
+                    .line {
+
+                        width: 1.625rem;
+
+                        fill-opacity: 1.000;
+
+                        transform: translate3d( -0.25rem, 0, 0 );
+
+                        transition: all 480ms $oquin 0ms;
+
+                    }
+
+                    // dots
+                    .dot {
+
+                        width: 0.25rem;
+
+                        fill-opacity: 1.000;
+
+                        transform: translate3d( -0.125rem, 0, 0 );
+
+                        transition: all 480ms $oquin 0ms;
+
+                    }
+
+                    // open group
+                    .open {
+
+                        // line 1
+                        .l1 {
+
+                            transition-delay: 0ms;
+
+                        }
+
+                        // line 2
+                        .l2 {
+
+                            transition-delay: 10ms;
+
+                        }
+
+                        // line 3
+                        .l3 {
+
+                            transition-delay: 25ms;
+
+                        }
+
+                        // line 4
+                        .l4 {
+
+                            transition-delay: 45ms;
+
+                        }
+
+                        // line 5
+                        .l5 {
+
+                            transition-delay: 70ms;
+
+                        }
+
+                        // line 6
+                        .l6 {
+
+                            transition-delay: 100ms;
+
+                        }
+
+                        // dot 1
+                        .d1 {
+
+                            transition-delay: 0ms;
+
+                        }
+
+                        // dot 2
+                        .d2 {
+
+                            transition-delay: 10ms;
+
+                        }
+
+                        // dot 3
+                        .d3 {
+
+                            transition-delay: 25ms;
+
+                        }
+
+                        // dot 4
+                        .d4 {
+
+                            transition-delay: 45ms;
+
+                        }
+
+                        // dot 5
+                        .d5 {
+
+                            transition-delay: 70ms;
+
+                        }
+
+                        // dot 6
+                        .d6 {
+
+                            transition-delay: 100ms;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // label
+            .button-label {
+
+                color: $gold;
+
+            }
+
+        }
+
+        // menu open state
+        &.site-menu-open {
+
+            @include fill( $px-orange, 0.485 );
+
+            // transform: translate3d( 2.75rem, 0, 0 );
+
+            // hover state
+            &:hover {
+
+                @include fill( $px-orange, 0.185 );
+
+                .close-menu {
+
+                    // @include fill( $px-orange, 0.000 );
+
+                    transition: background-color 480ms $outex 480ms;
+
+                }
+
+            }
+
+            // icon
+            .button-icon {
+
+                // open menu
+                &.open-menu {
+
+                    opacity: 0.000;
+
+                    transform: rotateY( 180deg );
+
+                    transition:
+
+                        background-color 220ms linear 0ms,
+                               transform 420ms $outex 0ms,
+                                 opacity 420ms $outex 0ms
+
+                    ;
+
+                }
+
+                // close menu
+                &.close-menu {
+
+                    opacity: 1.000;
+
+                    transform: rotateY( 0deg );
+
+                    transition:
+
+                        background-color 220ms linear 0ms,
+                               transform 420ms $outex 0ms,
+                                 opacity 420ms $outex 0ms
+
+                    ;
+
+                }
+
+            }
+
+            // label
+            .button-label {
+
+                // open label
+                &.open-label {
+
+                    opacity: 0.000;
+
+                    transform: translate3d( 100%, 0, 0 );
+
+                }
+
+                // close label
+                &.close-label {
+
+                    opacity: 1.000;
+
+                    transform: translate3d( -0.125rem, 0, 0 );
+
+                }
+
+            }
+
+        }
+
+        // icon
+        .button-icon {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            width: 4rem;
+            height: 4rem;
+
+            overflow: visible;
+
+            // base
+            &.open-menu {
+
+                z-index: 20;
+
+                opacity: 1.000;
+
+                // placement
+                .box {
+
+                    fill: white;
+                    fill-opacity: 0.085;
+
+                    @include hide;
+
+                }
+
+                // lines
+                .line {
+
+                    fill: white;
+                    fill-opacity: 0.485;
+
+                    opacity: 1.000;
+
+                    transform: translate3d( 0, 0, 0 );
+                    transform-origin: center right;
+
+                    transition: all 480ms $oquin 0ms;
+
+                }
+
+                // dots
+                .dot {
+
+                    fill: $gold;
+                    fill-opacity: 0.000;
+
+                    transform: translate3d( 0.75rem, 0, 0 );
+                    transform-origin: center left;
+
+                    transition: all 480ms $oquin 0ms;
+
+                }
+
+                // dot 1
+                .d1 {
+
+                    transition-delay: 100ms;
+
+                }
+
+                // dot 2
+                .d2 {
+
+                    transition-delay: 70ms;
+
+                }
+
+                // dot 3
+                .d3 {
+
+                    transition-delay: 45ms;
+
+                }
+
+                // dot 4
+                .d4 {
+
+                    transition-delay: 25ms;
+
+                }
+
+                // dot 5
+                .d5 {
+
+                    transition-delay: 10ms;
+
+                }
+
+                // dot 6
+                .d6 {
+
+                    transition-delay: 0ms;
+
+                }
+
+                // line 1
+                .l1 {
+
+                    transition-delay: 100ms;
+
+                }
+
+                // line 2
+                .l2 {
+
+                    transition-delay: 70ms;
+
+                }
+
+                // line 3
+                .l3 {
+
+                    transition-delay: 45ms;
+
+                }
+
+                // line 4
+                .l4 {
+
+                    transition-delay: 25ms;
+
+                }
+
+                // line 5
+                .l5 {
+
+                    transition-delay: 10ms;
+
+                }
+
+                // line 6
+                .l6 {
+
+                    transition-delay: 0ms;
+
+                }
+
+            }
+
+            // animation
+            &.open-menu {
+
+                @include fill( white, 1.000 );
+
+                transform: rotateY( 0deg );
+
+                transition:
+
+                    background-color 220ms linear 0ms,
+                           transform 420ms $outex 0ms,
+                             opacity 420ms $outex 0ms
+
+                ;
+
+            }
+
+            // base
+            &.close-menu {
+
+                z-index: 10;
+
+                padding: 1.25rem;
+
+            }
+
+            // animation
+            &.close-menu {
+
+                opacity: 0.000;
+
+                transform: rotateY( -180deg );
+
+                transition:
+
+                    background-color 220ms linear 0ms,
+                           transform 420ms $outex 0ms,
+                             opacity 420ms $outex 0ms
+
+                ;
+
+            }
+
+        }
+
+        // label
+        .button-label {
+
+            position: absolute;
+
+            top: 0;
+            left: 3.5rem;
+
+            z-index: 20;
+
+            @include flex-h-s-v-c( true );
+
+            width: 3.25rem;
+            height: 4rem;
+            padding: 0 0 0.0625rem 0;
+
+            @include font( $industry, 0.6875rem, 700, normal );
+
+            line-height: 0.5rem;
+
+            letter-spacing: 0.065em;
+
+            @include text( $up );
+
+            color: white;
+
+            transition:
+
+                transform 320ms $outex 0ms,
+                    color 220ms linear 0ms
+
+            ;
+
+            // open label
+            &.open-label {
+
+                opacity: 1.000;
+
+                transform: translate3d( 0, 0, 0 );
+
+            }
+
+            // close label
+            &.close-label {
+
+                @include hide;
+
+                opacity: 0.000;
+
+                transform: translate3d( 100%, 0, 0 );
+
+            }
+
+        }
+
+    }

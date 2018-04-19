@@ -1,0 +1,397 @@
+// stylesheet :: global homepage section styles
+
+    // settings
+    $section_width  : 100vw;
+    $section_height : 100vh;
+
+    $section_width_ex  : calc( 100vw + 2rem );
+    $section_height_ex : calc( 100vh + 2rem );
+
+    // styles
+    .ui-article {
+
+        position: relative;
+
+        z-index: 20;
+
+        @include flex-v-c-h-c( false );
+
+        width: $section_width;
+        height: $section_height;
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+
+        background: {
+
+            color:
+
+                adjust-color(
+
+                    $app05,
+                    $hue          : 0%,
+                    $saturation : -20%,
+                    $lightness  : -1%,
+                    $alpha         : -0.000
+
+                )
+
+            ;
+
+        }
+
+        // focus state
+        &:focus {
+
+            outline: none;
+
+        }
+
+        // menu open state
+        .site-menu-open & {
+
+            // top level class
+            .article-container {
+
+                -webkit-filter: blur( 8px );
+                        filter: blur( 8px );
+
+                transition: all 0ms linear 0ms;
+
+            }
+
+            // content + color
+            .section-content {
+
+                opacity: 0.000 !important;
+
+                transition: all 40ms linear 0ms;
+
+            }
+
+        }
+
+        // container
+        .article-container {
+
+            position: absolute;
+
+            top: -1rem;
+            right: -1rem;
+            bottom: -1rem;
+            left: -1rem;
+
+            z-index: 10;
+
+            @include flex-v-c-h-c( false );
+
+            width: $section_width_ex;
+            height: $section_height_ex;
+            margin: 0;
+            padding: 0;
+
+            -webkit-filter: blur( 0px );
+                    filter: blur( 0px );
+
+            transition: all 0ms linear 0ms;
+
+            &.has-content-layer {
+
+                @include flex-h-j-v-t( false );
+
+                .section-title {
+
+                    position: absolute;
+
+                    top: 6rem;
+                    left: 2rem;
+
+                    z-index: 40;
+
+                    @include flex-h-s-v-c( false );
+
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0 0 0 1rem;
+
+                }
+
+                .content-layer {
+
+                    @include flex-h-j-v-s( false );
+
+                }
+
+            }
+
+            &.content-bottom {
+
+                @include flex-v-b-h-st( false );
+
+            }
+
+        }
+
+        // image
+        .section-image {
+
+            @include fullscreen( absolute, 10, false, hidden );
+
+            // @include hide;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+        }
+
+        // base
+        .section-base {
+
+            @include fullscreen( absolute, 20, false, hidden );
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            padding: 1rem 1rem 1rem 1rem;
+
+            opacity: 1.000;
+
+            // transition: all 240ms linear 360ms;
+
+        }
+
+        // title
+        .section-title {
+
+            position: relative;
+
+            z-index: 100;
+
+            @include font( $klavislim, 2.5rem, 400 );
+
+            letter-spacing: 0.135em;
+
+            line-height: 2.5rem;
+
+            @include text( $up, center );
+
+            color: white;
+
+            &.bottom {
+
+                @include flex-h-s-v-c( false );
+
+                margin: 0;
+                padding: 0 0 1rem 1rem;
+
+                @include typo(
+
+                    $klavislim,
+                    2.5rem,
+                    400,
+                    normal,
+                    1.75rem,
+                    0.135em,
+                    inherit,
+                    $up,
+                    $gold
+
+                );
+
+            }
+
+        }
+
+        // foo bar you
+        .content-strip {
+
+            position: relative;
+
+            z-index: 50;
+
+            width: 100%;
+            height: 16rem;
+
+            &.white {
+
+                @include fill( white, 0.105 );
+
+            }
+
+        }
+
+        // main content
+        .section-content {
+
+            @include fullscreen( absolute, 50, false, hidden );
+
+            width: 100%;
+            // height: calc( 100% - 1px );
+            height: 100%;
+            margin: 0;
+            padding: 5rem 1rem 1rem 1rem;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center bottom;
+
+            }
+
+            // opacity: 1.000;
+
+            // transition: all 480ms linear 160ms;
+
+            span {
+
+                @include typo(
+
+                    $industry,
+                    0.6875rem,
+                    600,
+                    normal,
+                    0.5rem,
+                    0.085em,
+                    inherit,
+                    $up,
+                    transparentize( white, 0.425 )
+
+                );
+
+                transition: all 220ms linear 0ms;
+
+            }
+
+            .content {
+
+                @include fill( white, 0.945 );
+
+                transition: all 220ms linear 0ms;
+
+                &:hover {
+
+                    @include fill( $dark, 0.425 );
+
+                    span {
+
+                        color: $gold;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                }
+
+            }
+
+            .main {
+
+                @include flex-v-j-h-s( false );
+
+                width: 47rem;
+
+                .content {
+
+                    @include flex-v-c-h-c( false );
+
+                }
+
+                .feature {
+
+                    height: 21rem;
+
+                }
+
+                .cards {
+
+                    @include flex-v-b-h-s( false );
+
+                    width: 100%;
+                    height: 13rem;
+
+                    overflow: scroll;
+
+                    .card-array {
+
+                        @include flex-h-s-v-st( false );
+
+                        width: auto;
+                        height: 100%;
+
+                    }
+
+                    .card {
+
+                        @include flex-v-c-h-c( true );
+
+                        width: 16rem;
+                        height: 100%;
+                        margin: 0 1rem 0 0;
+
+                        &:last-child {
+
+                            margin-right: 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .sidebar {
+
+                @include flex-v-c-h-c( false );
+
+                width: 19rem;
+                height: 100%;
+
+            }
+
+        }
+
+        // content layers
+        .content-layers {
+
+            position: relative;
+
+            @include flex-v-b-h-st( false );
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        // layer class
+        .layer {
+
+            opacity: 0.000;
+
+        }
+
+        // slider
+        .slider-layer {
+
+
+
+            .slider-base {
+
+
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,325 @@
+// stylesheet :: background media stage styles
+
+    // top-level hook
+    #background-stage,
+    #kickoff-stage {
+
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        background: {
+
+            // color:
+            //
+            //     adjust-color(
+            //
+            //         $app05,
+            //         $hue          : 0%,
+            //         $saturation : 0%,
+            //         $lightness  : -4.5%,
+            //         $alpha         : -0.515
+            //
+            //     )
+            //
+            // ;
+
+        }
+
+        // opacity: 0.000;
+
+        transition: opacity 720ms linear 720ms;
+
+        &:after {
+
+            // content: '';
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        // oregon state $oregon
+        &[data-opponent='oregon_state'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $oregon, 0.325 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        // abilene christian $abilene
+        &[data-opponent='abilene_christian'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $abilene, 0.415 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        // nevada $nevada
+        &[data-opponent='nevada'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $nevada, 0.125 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        // air force $airforce
+        &[data-opponent='air_force'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $airforce, 0.525 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        // boise state $boise
+        &[data-opponent='boise_state'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $boise_s, 0.525 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        // san jose state $sanjose
+        &[data-opponent='sanjose_state'] {
+
+            &:after {
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 30%,
+                            transparentize( $app05, 0.125 ) 100%
+
+                        ),
+
+                        linear-gradient(
+
+                            180deg,
+                            transparent 0%,
+                            transparentize( $sanjose_t, 0.525 ) 100%
+
+                        )
+
+                    ;
+
+                }
+
+            }
+
+        }
+
+        .sub-stage {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 100;
+
+            width: 100%;
+            height: 100%;
+
+            opacity: 0.000;
+
+            // transition: all 360ms $outex 0ms;
+
+            &.collapsed {
+
+                top: 4rem;
+                right: 3rem;
+                bottom: auto;
+                left: 3rem;
+
+                width: calc( 100% - 6rem );
+                height: calc( 75% - 6rem );
+
+                opacity: 0.000;
+
+                &.reloaded {
+
+                    opacity: 1.000;
+
+                    transition: opacity 3600ms $outex 4800ms;
+
+                }
+
+            }
+
+            &.activated {
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0.000;
+
+                transition: opacity 720ms $outex 0ms;
+
+                &.reloaded {
+
+                    opacity: 1.000;
+
+                    transition: opacity 3600ms $outex 4800ms;
+
+                }
+
+            }
+
+        }
+
+    }

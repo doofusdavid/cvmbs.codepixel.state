@@ -1,0 +1,210 @@
+// stylesheet :: homepage billboard styles
+
+    // settings
+    $billboard_width  : calc( 100vw + 2rem );
+    $billboard_height : calc( 100vh + 2rem );
+    $billboard_fx : all 720ms $oquin 0ms;
+
+    // styles
+    #billboard-homepage {
+
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 200;
+
+        @include flex-v-c-h-c( false );
+
+        width: 100vw;
+        height: 100vh;
+        margin: 0 0 0 0;
+        padding: 0;
+
+        overflow: hidden;
+
+        background: {
+
+            color:
+
+                adjust-color(
+
+                    $app05,
+                    $hue          : 0%,
+                    $saturation : -20%,
+                    $lightness  : -1%,
+                    $alpha         : -0.000
+
+                )
+
+            ;
+
+            image:
+
+                linear-gradient(
+
+                    168deg,
+                    transparent 50%,
+                    transparentize( $bg-base, 0.245 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    189deg,
+                    transparent 20%,
+                    transparentize( $g140, 0.345 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    45deg,
+                    transparent 0%,
+                    transparentize( $dark, 0.215 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    90deg,
+                    transparent 0%,
+                    transparentize( $cvnavy, 0.215 ) 100%
+
+                ),
+
+                linear-gradient(
+
+                    155deg,
+                    transparentize( $gold, 0.995 ) 0%,
+                    transparentize( $gold, 0.725 ) 100%
+
+                )
+
+            ;
+
+        }
+
+        // focus state
+        &:focus {
+
+            outline: none;
+
+        }
+
+        // image class
+        &.image {
+
+            // artwork
+            &:before {
+
+                background: {
+
+                    // image: url(../img/billboards/billboard.17.jpg);
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // opacity: 0.500;
+
+            }
+
+        }
+
+        // pattern class
+        &.pattern {
+
+            // artwork
+            &:before {
+
+                background: {
+
+                    // image: url(../img/patterns/pattern.triangles.svg);
+
+                    repeat: repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                -webkit-filter: blur( 0px ) opacity( 0.085 );
+                        filter: blur( 0px ) opacity( 0.085 );
+
+            }
+
+        }
+
+        // menu open class
+        &.site-menu-open {
+
+            // artwork -> blur
+            &:before {
+
+                -webkit-filter: blur( 8px );
+                        filter: blur( 8px );
+
+                transition: all 0ms linear 0ms;
+
+            }
+
+        }
+
+        // layers
+        &:before {
+
+            content: '';
+
+            @include fullscreen( absolute, 1, false, hidden );
+
+            top: -1rem;
+            right: -1rem;
+            bottom: -1rem;
+            left: -1rem;
+
+            width: calc( 100% + 2rem );
+            height: calc( 100% + 2rem );
+
+            // -webkit-filter: blur( 0px );
+                    // filter: blur( 0px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // text
+        .text {
+
+            @include font( $industry, 0.6875rem, 600 );
+
+            letter-spacing: 0.085em;
+
+            @include text( $up );
+
+            .gold {
+
+                font: {
+
+                    style: normal;
+                    // weight: 700;
+
+                }
+
+                color: $gold;
+
+            }
+
+            .dot {
+
+                @include color( white, 0.385 );
+
+            }
+
+        }
+
+    }

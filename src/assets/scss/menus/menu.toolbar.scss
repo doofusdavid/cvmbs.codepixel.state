@@ -1,0 +1,146 @@
+// stylesheet :: site menu component styles
+
+    // settings
+    $toolbar_width  : 4rem;
+    $toolbar_height : calc( 100vh - 4rem );
+
+    // styles
+    #site-menu-toolbar {
+
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 20;
+
+        @include flex-v-c-h-c( false );
+
+        width: $toolbar_width;
+        height: $toolbar_height;
+        margin: 0;
+        padding: 0;
+
+        @include fill( white, 0.845 );
+
+        transition: all 320ms $outex 0ms;
+
+        // hover state
+        &:hover {
+
+            // @include fill( $dark, 0.515 );
+            @include fill( white, 0.915 );
+
+        }
+
+        // menu open state
+        .is-open & {
+
+            @include fill( $nite, 0.325 );
+
+            // hover state
+            &:hover {
+
+                //
+
+            }
+
+        }
+
+        // toolbar menu
+        #toolbar-menu {
+
+            @include flex-v-c-h-c( false );
+
+            width: 4rem;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            // list
+            ul {
+
+                width: 4rem;
+                height: 32rem;
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+
+                // list item
+                .menu-item {
+
+                    width: 4rem;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0;
+
+                }
+
+            }
+
+            // common
+            .site-menu-button {
+
+                display: block;
+
+                width: 4rem;
+                height: 4rem;
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( white, 0.875 );
+
+                    // svg
+                    .icon {
+
+                        // path
+                        .path {
+
+                            opacity: 1.000;
+
+                            transition: all 220ms linear 0ms;
+
+                        }
+
+                    }
+
+                }
+
+                // focus state
+                &:focus {
+
+                    outline: none;
+
+                    @include fill( white, 0.925 );
+
+                }
+
+                // svg
+                .icon {
+
+                    width: 4rem;
+                    height: 4rem;
+
+                    // path
+                    .path {
+
+                        fill: white;
+
+                        opacity: 0.565;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

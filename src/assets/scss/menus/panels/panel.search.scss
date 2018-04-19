@@ -1,0 +1,18 @@
+// stylesheet :: panel.search component styles
+
+    // settings
+    $panel_size : calc( 100% - 4rem );
+
+    // styles
+    #menu-panel-search {
+
+        @include gradient( 0deg, $cvnavy, 0.325, 0%, red, 1.000, 50% );
+
+        // header
+        .panel-header {
+
+            @include fill( $cvnavy, 0.345 );
+
+        }
+
+    }

@@ -1,0 +1,1701 @@
+// stylesheet :: academics section layout + content styles
+
+    // settings
+    $academics_fx : all 320ms $oquin 0ms;
+    $section_color : transparentize( $nite, 0.385 );
+
+    $billboard : '../img/billboards/billboard.09.jpg';
+
+    // styles
+    #academics {
+
+        @include shadowbox( 2rem, 7rem, black, 0.625 );
+
+        // hide contact form
+        &.hide-form {
+
+            transform: translate3d( 0, 0, 0 );
+
+            transition: all 480ms $ocirc 0ms;
+
+        }
+
+        // reveal contact form
+        &.reveal-form {
+
+            transform: translate3d( 0, -80vh, 0 );
+
+            transition: all 480ms $ocirc 0ms;
+
+        }
+
+        // menu open state
+        &.site-menu-open {
+
+            // content
+            .section-content {
+
+                opacity: 0.000;
+
+                transition: all 40ms linear 0ms;
+
+            }
+
+        }
+
+        // container
+        .article-container {
+
+            // @include flex-v-b-h-c( false );
+
+            // padding: 0 0 1rem 0;
+            padding: 0 0 0 0;
+
+            // border
+            &:after {
+
+                // @include border( false, auto, auto, 4rem, auto );
+
+                height: 36rem;
+                margin: 0 0 0 -1px;
+
+            }
+
+        }
+
+        // image
+        .section-image {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            // loaded state
+            &[data-load='loaded'] {
+
+                //
+
+            }
+
+        }
+
+        // color base
+        .section-base {
+
+            @include fill( $section_color, 0.000 );
+
+        }
+
+        // content
+        .section-content {
+
+            padding: 5rem 1rem 1rem 1rem;
+
+            opacity: 1.000;
+
+            transition: all 40ms linear 160ms;
+
+        }
+
+        // section title
+        #degree-programs-title {
+
+            position: absolute;
+
+            top: 8rem;
+
+            z-index: 10;
+
+            @include flex-h-c-v-c( false );
+
+            width: 100%;
+            height: 4rem;
+            margin: 0 0 1rem 0;
+            padding: 0 0 0 0;
+
+            @include font( $klavislim, 2rem, 400 );
+
+            line-height: 2rem;
+
+            letter-spacing: 0.135em;
+
+            @include text( $up, center );
+
+            @include color( white, 0.000 );
+
+            opacity: 0.000;
+
+            transform: translate3d( 0, -200%, 0 );
+
+            // load class
+            &.loaded {
+
+                // vertical line
+                &:before {
+
+                    height: 24rem;
+
+                    transition:
+
+                        opacity 240ms $ocirc 240ms,
+                         height 240ms $ocirc 0ms
+
+                    ;
+
+                }
+
+                // horizontal line
+                &:after {
+
+                    width: 16rem;
+
+                    transition:
+
+                        opacity 240ms $ocirc 240ms,
+                          width 240ms $ocirc 0ms
+
+                    ;
+
+                }
+
+                // UI sequence class
+                &.sequenced {
+
+                    // vertical line
+                    &:before {
+
+                        height: 0;
+
+                        opacity: 0.000;
+
+                        transition: opacity 240ms $ocirc 0ms;
+
+                    }
+
+                }
+
+            }
+
+            // vertical line
+            &:before {
+
+                @include border( false, 8rem, 50%, auto, auto );
+
+                height: 0;
+                margin: 0 0 0 -1px;
+
+                @include fill( white, 0.865 );
+
+                transition: all 360ms $ocirc 0ms;
+
+            }
+
+            // horizontal line
+            &:after {
+
+                // @include border( false, 13rem, 50%, auto, auto );
+
+                width: 0;
+                height: 1px;
+                margin: 0 -8rem 0 0;
+
+                transition: all 360ms $ocirc 0ms;
+
+            }
+
+        }
+
+        // content titles
+        .panel-title {
+
+            position: relative;
+
+            z-index: 20;
+
+            margin: 0 0 1rem 0;
+            padding: 0.125rem 0 0 0;
+
+            @include font( $klavislim, 2.5rem, 400 );
+
+            line-height: 2rem;
+
+            letter-spacing: 0.135em;
+
+            @include text( $up, center );
+
+        }
+
+        // text
+        .section-text {
+
+            margin: 0 0 1rem 0;
+
+            @include font( $industry, 0.8125rem, 600 );
+
+            line-height: 1rem;
+
+            letter-spacing: 0.035em;
+
+            @include text( lowercase, center );
+
+            @include color( white, 0.315 );
+
+        }
+
+        // content
+        .content-layers {
+
+            @include flex-h-j-v-s( false );
+
+        }
+
+        // commons
+        .programs-panel {
+
+            position: absolute;
+
+            top: 1px !important;
+
+            width: 50%;
+            height: calc( 100% - 1px );
+
+            opacity: 0.000;
+
+            // active state
+            &[data-active='true'] {
+
+                visibility: visible;
+
+            }
+
+            // inactive state
+            &[data-active='false'] {
+
+                visibility: hidden;
+
+            }
+
+            // intro
+            .programs-panel-intro {
+
+                @include flex-v-c-h-c( false );
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+            // title
+            .panel-title {
+
+                // highlight
+                em {
+
+                    font-style: normal;
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+            }
+
+            // explore button
+            .explore-button {
+
+                height: 4rem;
+                margin: 1rem 0 0 0;
+                padding: 0 1.5rem 0 1.5rem;
+
+                // hover state
+                &:hover {
+
+                    @include fill( white, 0.935 );
+
+                    // corners
+                    .corners {
+
+                        // common
+                        &.right,
+                        &.left {
+
+                            // lines
+                            &:before,
+                            &:after {
+
+                                transition: all 120ms $ocirc 0ms;
+
+                            }
+
+                        }
+
+                        // left
+                        &.left {
+
+                            // top
+                            &:before {
+
+                                width: 100%;
+                                height: 100%;
+
+                                transition-delay: 0ms;
+
+                            }
+
+                            // bottom
+                            &:after {
+
+                                width: 100%;
+                                height: 100%;
+
+                                transition-delay: 30ms;
+
+                            }
+
+                        }
+
+                        // right
+                        &.right {
+
+                            // top
+                            &:before {
+
+                                width: 100%;
+                                height: 100%;
+
+                                transition-delay: 0ms;
+
+                            }
+
+                            // bottom
+                            &:after {
+
+                                width: 100%;
+                                height: 100%;
+
+                                transition-delay: 30ms;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                // active state
+                &.active {
+
+                    opacity: 0.000;
+
+                    transform: translate3d( 0, -20%, 0 );
+
+                    transition: all 480ms $ocirc 0ms;
+
+                }
+
+                // corners
+                .corners {
+
+                    position: absolute;
+
+                    top: 0;
+                    bottom: 0;
+
+                    z-index: 0;
+
+                    width: 50%;
+                    height: 4rem;
+
+                    // common
+                    &.left,
+                    &.right {
+
+
+
+                    }
+
+                    // left
+                    &.left {
+
+                        left: 0;
+
+                        // common
+                        &:before,
+                        &:after {
+
+                            left: 0;
+
+                            border-right: none;
+
+                        }
+
+                        // top
+                        &:before {
+
+                            top: 0;
+
+                            width: 0.5rem;
+
+                            border-bottom: none;
+
+                            transition-delay: 0ms;
+
+                        }
+
+                        // bottom
+                        &:after {
+
+                            bottom: 0;
+
+                            width: 0.5rem;
+
+                            border-top: none;
+
+                            transition-delay: 30ms;
+
+                        }
+
+                    }
+
+                    // right
+                    &.right {
+
+                        right: 0;
+
+                        // common
+                        &:before,
+                        &:after {
+
+                            right: 0;
+
+                            border-left: none;
+
+                        }
+
+                        // top
+                        &:before {
+
+                            top: 0;
+
+                            width: 0.5rem;
+
+                            border-bottom: none;
+
+                            transition-delay: 0ms;
+
+                        }
+
+                        // bottom
+                        &:after {
+
+                            bottom: 0;
+
+                            width: 0.5rem;
+
+                            border-top: none;
+
+                            transition-delay: 30ms;
+
+                        }
+
+                    }
+
+                    // lines
+                    &:before,
+                    &:after {
+
+                        content: '';
+
+                        position: absolute;
+
+                        width: 0.5rem;
+                        height: 0.5rem;
+
+                        border: 1px solid $gold;
+
+                        transition: all 240ms $ocirc 0ms;
+
+                    }
+
+                }
+
+            }
+
+            // close button
+            .close-button {
+
+                position: absolute;
+
+                top: 4rem;
+                right: 4rem;
+
+                z-index: 100;
+
+                width: 3rem;
+                height: 3rem;
+                margin: 0;
+                padding: 1rem 1rem 1rem 1rem;
+
+                @include fill( white, 0.965 );
+
+                transition: background-color 220ms linear 0ms;
+
+                // default state
+                &.inactive {
+
+                    visibility: hidden;
+
+                    opacity: 0.000;
+
+                    transform: rotateY( 180deg );
+
+                    transition: all 480ms $outex 0ms;
+
+                }
+
+                // active state
+                &.active {
+
+                    visibility: visible;
+
+                    opacity: 1.000;
+
+                    transform: rotateY( 0deg );
+
+                    transition: all 480ms $outex 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $px-orange, 0.225 );
+
+                    }
+
+                }
+
+                // svg
+                .icon {
+
+                    width: 1rem;
+                    height: 1rem;
+
+                }
+
+            }
+
+        }
+
+        // degrees
+        #explore-degrees {
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            @include flex-v-c-h-c( false );
+
+            margin: 0 0 0 0;
+            padding: 0;
+
+            @include fill( white, 0.965 );
+
+            transform: translate3d( -10%, 0, 0 );
+
+            // panel active state
+            &[data-active='true'] {
+
+                // content
+                #explore-degrees-content {
+
+                    visibility: visible;
+
+                }
+
+            }
+
+        }
+
+        // degrees content
+        #explore-degrees-content {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 20;
+
+            @include flex-h-c-v-b( false );
+
+            flex-grow: 0;
+
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 16rem 0 0 0;
+
+            visibility: hidden;
+
+            opacity: 0.000;
+
+            transform: translate3d( 0, 6rem, 0 );
+
+        }
+
+        // panels
+        .degree-program-panel {
+
+            @include flex-v-b-h-s( true );
+
+            width: 25vw;
+            height: 24rem;
+            margin: 0;
+            padding: 2rem 2rem 2rem 2rem;
+
+            overflow: hidden;
+
+            transition: all 220ms linear 0ms;
+
+            // hover state
+            &:hover {
+
+                @include fill( white, 0.965 );
+
+                // title
+                .panel-title {
+
+                    transform: translate3d( 0, 0, 0 );
+
+                    transition: all 540ms $outex 360ms;
+
+                }
+
+                // text
+                .panel-text {
+
+                    @include color( white, 0.000 );
+
+                    opacity: 1.000;
+
+                    transform: translate3d( 0, 0, 0 );
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+                // button
+                .panel-button {
+
+                    opacity: 1.000;
+
+                    transform: translate3d( 0, 0, 0 );
+
+                    transition:
+
+                        background-color 220ms linear 0ms,
+                               transform 540ms $outex 0ms,
+                                 opacity 540ms $outex 0ms,
+                                  border 220ms linear 0ms,
+                                   color 220ms linear 0ms
+
+                    ;
+
+                }
+
+            }
+
+            // one
+            &[data-degree-program='one'] {
+
+                // @include fill( $roarange, 0.625 );
+
+                // hover state
+                &:hover {
+
+                    // @include fill( $roarange, 0.345 );
+
+                }
+
+            }
+
+            // two
+            &[data-degree-program='two'] {
+
+                // @include fill( $blue, 0.625 );
+
+                // hover state
+                &:hover {
+
+                    // @include fill( $blue, 0.385 );
+
+                }
+
+            }
+
+            // three
+            &[data-degree-program='three'] {
+
+                // @include fill( $cvnavy, 0.725 );
+
+                // hover state
+                &:hover {
+
+                    // @include fill( $cvnavy, 0.325 );
+
+                }
+
+            }
+
+            // four
+            &[data-degree-program='four'] {
+
+                // @include fill( $cvellow, 0.785 );
+
+                // hover state
+                &:hover {
+
+                    // @include fill( $cvellow, 0.515 );
+
+                }
+
+            }
+
+            // common
+            span {
+
+                display: block;
+
+            }
+
+            // panel title
+            .panel-title {
+
+                margin: 0 0 0.5rem 0;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                line-height: 1.5rem;
+
+                letter-spacing: 0.105em;
+
+                @include text( $up );
+
+                color: $gold;
+
+                // transform: translate3d( 0, 1.5rem, 0 );
+
+                transition: all 360ms $outex 0ms;
+
+            }
+
+            // panel text
+            .panel-text {
+
+                @include font( $industry, 0.6875rem, 600 );
+
+                line-height: 1.125rem;
+
+                letter-spacing: 0.045em;
+
+                @include text( none );
+
+                @include color( white, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+            }
+
+            // panel button
+            .panel-button {
+
+                @include flex-h-c-v-c( false );
+
+                min-width: 10rem;
+                height: 3rem;
+                margin: 1.5rem 0 0 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 0.75rem, 500 );
+
+                line-height: 0.75rem;
+
+                letter-spacing: 0.085rem;
+
+                @include text( $up );
+
+                color: white;
+
+                @include fill( white, 0.945 );
+
+                transition:
+
+                    background-color 220ms linear 0ms,
+                           transform 360ms $outex 0ms,
+                             opacity 360ms $outex 0ms,
+                              border 220ms linear 0ms,
+                               color 220ms linear 0ms
+
+                ;
+
+                // hover state
+                &:hover {
+
+                    border-color: $gold;
+
+                    color: white;
+
+                    @include fill( $gold, 0.345 );
+
+                }
+
+                // focus state
+                &:focus {
+
+                    outline: none;
+
+                }
+
+            }
+
+        }
+
+        // careers
+        #explore-careers {
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+
+            z-index: 10;
+
+            @include fill( white, 0.965 );
+
+            transform: translate3d( 10%, 0, 0 );
+
+            // border
+            &:after {
+
+                // @include border( false, 0, auto, auto, -1px );
+
+                height: calc( 100% - 8rem );
+
+            }
+
+            // panel active state
+            &[data-active='true'] {
+
+                // content
+                #explore-careers-content {
+
+                    visibility: visible;
+
+                }
+
+            }
+
+        }
+
+        // careers content
+        #explore-careers-content {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 20;
+
+            @include flex-v-c-h-c( false );
+
+            width: 100%;
+            height: calc( 100vh - 2.5rem );
+            margin: 0;
+            padding: 6rem 12rem 8rem 12rem;
+
+            visibility: hidden;
+
+            opacity: 0.000;
+
+            transform: translate3d( 0, 10%, 0 );
+
+            // tag list
+            #careers-tag-list {
+
+                position: relative;
+
+                z-index: 30;
+
+                @include flex-h-c-v-c( false );
+
+                flex-wrap: wrap;
+
+                width: 50rem;
+                margin: 0;
+                padding: 8rem 0 0 0;
+
+                list-style: none;
+
+                // list item
+                .tag-item {
+
+                    @include flex-h-c-v-c( true );
+
+                    height: 2rem;
+                    margin: 0 0.25rem 0.5rem 0.25rem;
+
+                    // tag
+                    .tag {
+
+                        width: 100%;
+                        height: 2rem;
+                        margin: 0;
+                        padding: 0.0625rem 0.75rem 0 0.75rem;
+
+                        @include font( $industry, 0.5625rem, 700 );
+
+                        line-height: 0.625rem;
+
+                        letter-spacing: 0.045em;
+
+                        @include text( $up );
+
+                        color: white;
+
+                        @include fill( white, 0.965 );
+
+                        transition: all 220ms linear 0ms;
+
+                        // hover state
+                        &:hover {
+
+                            // color: $gold;
+
+                            @include fill( white, 0.815 );
+
+                        }
+
+                        // selected state
+                        &.selected {
+
+                            color: white;
+
+                            @include fill( $gold, 0.245 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // degree cards
+            #careers-degree-cards {
+
+                position: absolute;
+
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 20;
+
+                @include flex-h-j-v-t( false );
+
+                width: 100%;
+                height: 16rem;
+                margin: 0;
+                padding: 0 4rem 0 4rem;
+
+                // card
+                .degree-card {
+
+                    @include flex-v-b-h-s( false );
+
+                    display: flex !important;
+
+                    width: 20rem;
+                    // height: 16rem;
+                    height: auto;
+                    margin: 0 1rem 0 0;
+                    padding: 1.5rem;
+
+                    visibility: hidden;
+
+                    @include fill( white, 0.945 );
+
+                    opacity: 0.000;
+
+                    transform: translate3d( 0, 8rem, 0 );
+
+                    transition: background-color 220ms linear 0ms;
+
+                    // last child
+                    &:last-child {
+
+                        margin-right: 0;
+
+                    }
+
+                    // card title
+                    .card-title {
+
+                        margin: 0 0 0.5rem 0;
+
+                        @include font( $klavislim, 0.875rem, 400 );
+
+                        line-height: 1.25rem;
+
+                        letter-spacing: 0.105em;
+
+                        @include text( $up );
+
+                        color: $gold;
+
+                        // transform: translate3d( 0, 1.5rem, 0 );
+
+                        transition: all 360ms $outex 0ms;
+
+                    }
+
+                    // card text
+                    .card-text {
+
+                        @include font( $industry, 0.6875rem, 600 );
+
+                        line-height: 1rem;
+
+                        letter-spacing: 0.045em;
+
+                        @include text( none );
+
+                        @include color( white, 0.385 );
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    // card button
+                    .card-button {
+
+                        position: relative;
+
+                        @include flex-h-c-v-c( false );
+
+                        width: 100%;
+                        height: 2rem;
+                        margin: 1rem 0 0 0;
+                        padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                        @include font( $klavislim, 0.75rem, 500 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.085rem;
+
+                        @include text( $up );
+
+                        color: white;
+
+                        @include fill( white, 1.000 );
+
+                        transition:
+
+                            background-color 220ms linear 0ms,
+                                   transform 360ms $outex 0ms,
+                                     opacity 360ms $outex 0ms,
+                                      border 220ms linear 0ms,
+                                       color 220ms linear 0ms
+
+                        ;
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( white, 0.945 );
+
+                            // corners
+                            .corners {
+
+                                // common
+                                &.right,
+                                &.left {
+
+                                    // lines
+                                    &:before,
+                                    &:after {
+
+                                        transition: all 120ms $ocirc 0ms;
+
+                                    }
+
+                                }
+
+                                // left
+                                &.left {
+
+                                    // top
+                                    &:before {
+
+                                        width: 100%;
+                                        height: 100%;
+
+                                        transition-delay: 0ms;
+
+                                    }
+
+                                    // bottom
+                                    &:after {
+
+                                        width: 100%;
+                                        height: 100%;
+
+                                        transition-delay: 30ms;
+
+                                    }
+
+                                }
+
+                                // right
+                                &.right {
+
+                                    // top
+                                    &:before {
+
+                                        width: 100%;
+                                        height: 100%;
+
+                                        transition-delay: 0ms;
+
+                                    }
+
+                                    // bottom
+                                    &:after {
+
+                                        width: 100%;
+                                        height: 100%;
+
+                                        transition-delay: 30ms;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        // focus state
+                        &:focus {
+
+                            outline: none;
+
+                        }
+
+                        // corners
+                        .corners {
+
+                            position: absolute;
+
+                            top: 0;
+                            bottom: 0;
+
+                            z-index: 0;
+
+                            width: 50%;
+                            height: 2rem;
+
+                            // common
+                            &.left,
+                            &.right {
+
+
+
+                            }
+
+                            // left
+                            &.left {
+
+                                left: 0;
+
+                                // common
+                                &:before,
+                                &:after {
+
+                                    left: 0;
+
+                                    border-right: none;
+
+                                }
+
+                                // top
+                                &:before {
+
+                                    top: 0;
+
+                                    width: 0.25rem;
+
+                                    border-bottom: none;
+
+                                    transition-delay: 0ms;
+
+                                }
+
+                                // bottom
+                                &:after {
+
+                                    bottom: 0;
+
+                                    width: 0.25rem;
+
+                                    border-top: none;
+
+                                    transition-delay: 30ms;
+
+                                }
+
+                            }
+
+                            // right
+                            &.right {
+
+                                right: 0;
+
+                                // common
+                                &:before,
+                                &:after {
+
+                                    right: 0;
+
+                                    border-left: none;
+
+                                }
+
+                                // top
+                                &:before {
+
+                                    top: 0;
+
+                                    width: 0.25rem;
+
+                                    border-bottom: none;
+
+                                    transition-delay: 0ms;
+
+                                }
+
+                                // bottom
+                                &:after {
+
+                                    bottom: 0;
+
+                                    width: 0.25rem;
+
+                                    border-top: none;
+
+                                    transition-delay: 30ms;
+
+                                }
+
+                            }
+
+                            // lines
+                            &:before,
+                            &:after {
+
+                                content: '';
+
+                                position: absolute;
+
+                                width: 0.25rem;
+                                height: 0.25rem;
+
+                                border: 1px solid $gold;
+
+                                transition: all 240ms $ocirc 0ms;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // toolbar
+        #academics-toolbar {
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            @include flex-h-c-v-c( false );
+
+            @include hide;
+
+            width: 4rem;
+            height: calc( 100vh - 4rem );
+            margin: 0;
+            padding: 0;
+
+            @include fill( white, 0.845 );
+
+            // hover state
+            &:hover {
+
+                border-color: $gold;
+
+                color: white;
+
+                @include fill( black, 0.725 );
+
+            }
+
+            // focus state
+            &:focus {
+
+                outline: none;
+
+            }
+
+        }
+
+    }
+
+    // form button
+    #degree-programs-form-button {
+
+        position: relative;
+
+        z-index: 100;
+
+        @include flex-h-c-v-c( false );
+
+        min-width: 8rem;
+        height: 3rem;
+        margin: 0;
+        padding: 0.0625rem 1.5rem 0 1.5rem;
+
+        @include font( $klavislim, 0.6875rem, 500 );
+
+        line-height: 0.5rem;
+
+        letter-spacing: 0.175em;
+
+        @include text( $up );
+
+        color: transparentize( white, 0.325 );
+
+        opacity: 0.000;
+
+        transform: translate3d( 0, 100%, 0 );
+
+        transition:
+
+            background-color 220ms linear 0ms,
+                       color 220ms linear 0ms
+
+        ;
+
+        // hover state
+        &:hover {
+
+            color: $gold;
+
+            @include fill( white, 0.965 );
+
+            // hover fill
+            &:after {
+
+                opacity: 1.000;
+
+                transition: all 220ms linear 0ms;
+
+            }
+
+        }
+
+        // gap fill
+        &:before {
+
+            // content: '';
+
+            position: absolute;
+
+            top: -1px;
+            bottom: -1px;
+            left: 0;
+
+            z-index: -2;
+
+            width: 50%;
+            height: 4rem;
+
+            @include fill( white, 0.915 );
+
+        }
+
+        // hover fill
+        &:after {
+
+            // content: '';
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: -1;
+
+            width: 100%;
+            height: 100%;
+
+            @include fill( $nite, 0.315 );
+
+            opacity: 0.000;
+
+            transition: all 220ms linear 0ms;
+
+        }
+
+    }
+
+    // contact form
+    #degree-programs-form {
+
+        position: fixed;
+
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 0;
+
+        @include flex-v-c-h-c( false );
+
+        width: 100vw;
+        height: 80vh;
+        margin: 0;
+        padding: 4rem 10vw 4rem 10vw;
+
+        visibility: hidden;
+
+        @include fill( $bg-dark, 0.645 );
+
+        // visibility
+        &.visible {
+
+            visibility: visible;
+
+        }
+
+        // icon
+        .icon {
+
+            width: 5.125rem;
+            height: 5.125rem;
+            margin: 0 0 2rem 0;
+            padding: 0;
+
+            border-radius: 4rem;
+
+            border: $borders;
+
+            // icon
+            &:before {
+
+                @include codicon( 5rem, 5rem, 1.5rem, 2rem, transparentize( white, 0.765 ), '\ee7d' );
+
+                @include flex-v-c-h-c( true );
+
+            }
+
+        }
+
+        // text
+        .text {
+
+            display: inline-block;
+
+            margin: 0 0 3rem 0;
+
+            @include font( $klavislim, 1rem, 400 );
+
+            letter-spacing: 0.245em;
+
+            @include text( $up, center );
+
+            color: white;
+
+            em {
+
+                font-style: normal;
+
+                color: $gold;
+
+            }
+
+        }
+
+        // form content
+        #form-content {
+
+            // @include flex-h-c-v-c( false );
+
+            // text line
+            .text-line {
+
+                @include flex-h-c-v-c( false );
+
+                height: 3rem;
+                margin: 0 0 3rem 0;
+
+                line-height: 3rem;
+
+            }
+
+            // list
+            .select-list {
+
+                position: absolute;
+
+                right: 0;
+                bottom: -50%;
+                left: 0;
+
+                z-index: 20;
+
+                width: 100%;
+                margin: 0;
+
+                visibility: hidden;
+
+                list-style: none;
+
+                @include fill( $app05, 0.000 );
+
+                opacity: 0.000;
+
+                transition: all 360ms linear 0ms;
+
+                @include shadowbox( 1.5rem, 4rem, black, 0.385 );
+
+                // visibility class
+                &.visible {
+
+                    visibility: visible;
+
+                }
+
+                // visibility class
+                &.showtime {
+
+                    opacity: 1.000;
+
+                    transition: all 360ms $outex 0ms;
+
+                }
+
+                li {
+
+                    // @include hide;
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 4rem;
+                    padding: 0 1rem 0 1rem;
+
+                    @include font( $industry, 1.5rem, 400 );
+
+                    line-height: 1rem;
+
+                    @include color( white, 0.485 );
+
+                    @include fill( $bg-dark, 0.645 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        color: white;
+
+                        @include fill( white, 0.965 );
+
+                    }
+
+                }
+
+            }
+
+            // text
+            .text-inline,
+            .select-inline {
+
+                position: relative;
+
+                @include flex-h-c-v-c( true );
+
+                width: auto;
+                height: 4rem;
+                margin: 0 1rem 0 0;
+                // padding: 0 1rem 0 1rem;
+
+                @include font( $industry, 3rem, 400 );
+
+                color: transparentize( white, 0.665 );
+
+                // @include fill( white, 0.935 );
+
+            }
+
+            // text
+            .text-inline {
+
+                margin: 0 1rem 0 0;
+
+            }
+
+            // labels
+            .select-label {
+
+                @include flex-h-c-v-c( true );
+
+                width: auto;
+                height: 4rem;
+                margin: 0;
+                padding: 0.0625rem 1rem 0 1rem;
+
+                border: 1px solid white;
+
+                @include font( $industry, 2rem, 200 );
+
+                color: transparentize( white, 1.000 );
+
+                // visibility
+                &.visible {
+
+                    border-color: $gold;
+
+                    color: white;
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,41 @@
+// stylesheet :: homepage layout + content styles
+
+    // settings
+    $content_width  : 100vw;
+    $content_width_ex : calc( 100vw + 4rem );
+    $content_height : 100vh;
+
+    // styles
+    #content-homepage {
+
+        width: $content_width;
+        height: auto;
+        margin: 0;
+        padding: 0 0 0 0;
+
+        background: {
+
+            color:
+
+                adjust-color(
+
+                    $app05,
+                    $hue          : 0%,
+                    $saturation : -20%,
+                    $lightness  : -1%,
+                    $alpha         : -0.000
+
+                )
+
+            ;
+
+        }
+
+        // focus state
+        &:focus {
+
+            outline: none;
+
+        }
+
+    }
