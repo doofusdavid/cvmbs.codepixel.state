@@ -86,6 +86,10 @@
         // slides list
         .slick-list {
 
+            position: relative;
+
+            z-index: 20;
+
             width: $slide_view_w;
             height: $slide_view_h;
 
@@ -111,7 +115,16 @@
                     // content
                     .slide-content {
 
-                        //
+                        // headline
+                        .headline {
+
+                            opacity: 1.000;
+
+                            transform: translate3d( 0, 0, 0 );
+
+                            transition: all 720ms $oquin 480ms;
+
+                        }
 
                     }
 
@@ -269,9 +282,10 @@
 
                     z-index: 20;
 
-                    @include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
+                    // @include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
+                    @include gradient( 52deg, $beige, 0.025, 0%, $beige, 1.000, 70% );
 
-                    mix-blend-mode: overlay;
+                    mix-blend-mode: multiply;
 
                 }
 
@@ -280,7 +294,41 @@
 
                     z-index: 10;
 
-                    @include gradient( 65deg, $dark, 0.415, 0%, $g135, 0.965, 70% );
+                    // @include gradient( 65deg, $dark, 0.415, 0%, $g135, 0.965, 70% );
+
+                    // @include gradient( 65deg, $beige, 0.165, 0%, $beige, 0.965, 70% );
+
+                    background: {
+
+                        image:
+
+                            linear-gradient(
+
+                                90deg,
+                                adjust-color(
+
+                                    $beige,
+                                    $hue          : 0%,
+                                    $saturation : 0%,
+                                    $lightness  : 20%,
+                                    $alpha         : -0.065
+
+                                ) 0%,
+                                transparent 40%
+
+                            ),
+
+                            linear-gradient(
+
+                                65deg,
+                                transparentize( $beige, 0.165 ) 0%,
+                                transparentize( $beige, 0.845 ) 70%
+
+                            )
+
+                        ;
+
+                    }
 
                 }
 
@@ -361,19 +409,17 @@
                     bottom: 0;
                     left: 0;
 
-                    z-index: 30;
+                    z-index: 10;
 
                     width: 100%;
                     height: 100%;
-
-                    mix-blend-mode: overlay;
 
                     // vertical
                     &.vertical {
 
                         background: {
 
-                            image: url(../img/patterns/pattern.vertical.svg);
+                            image: url(../img/patterns/pattern.vertical.dark.svg);
 
                             repeat: no-repeat;
                             size: 42rem 64rem;
@@ -381,8 +427,11 @@
 
                         }
 
-                        -webkit-filter: opacity( 0.725 );
-                                filter: opacity( 0.725 );
+                        // -webkit-filter: opacity( 0.725 );
+                        //         filter: opacity( 0.725 );
+
+                        -webkit-filter: opacity( 0.215 );
+                                filter: opacity( 0.215 );
 
                         -webkit-mask-image:
 
@@ -410,8 +459,11 @@
 
                         }
 
-                        -webkit-filter: opacity( 0.485 );
-                                filter: opacity( 0.485 );
+                        // -webkit-filter: opacity( 0.485 );
+                        //         filter: opacity( 0.485 );
+
+                        -webkit-filter: opacity( 0.325 );
+                                filter: opacity( 0.325 );
 
                         -webkit-mask-image:
 
@@ -495,6 +547,8 @@
 
                 }
 
+                @include hide;
+
             }
 
             // text.headline
@@ -502,16 +556,23 @@
 
                 position: relative;
 
-                min-height: 4rem;
-                margin: 1rem 0 0 0;
-                padding: 0.25rem 0 0 0;
+                @include flex-h-s-v-b( false );
 
-                // @include font( $klavislim, 3.75rem, 400 );
-                @include font( $klavislim, 4.25rem, 400 );
+                height: 4rem;
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
 
-                line-height: 4.25rem;
+                @include font( $klavislim, 3rem, 400 );
 
-                letter-spacing: 0.075em;
+                line-height: 1.875rem;
+
+                letter-spacing: 0.245em;
+
+                opacity: 0.000;
+
+                transform: translate3d( 0, 100%, 0 );
+
+                transition: all 480ms $oquin 120ms;
 
                 // line highlight
                 &:before {
@@ -534,6 +595,15 @@
 
                 }
 
+                // gold highlight
+                em {
+
+                    font-style: normal;
+
+                    color: $gold;
+
+                }
+
             }
 
             // text.body
@@ -551,6 +621,8 @@
                 @include text( none );
 
                 color: transparentize( white, 0.125 );
+
+                @include hide;
 
             }
 
@@ -578,6 +650,8 @@
                 @include fill( white, 1.000 );
 
                 transition: all 220ms linear 0ms;
+
+                @include hide;
 
                 // hover state
                 &:hover {

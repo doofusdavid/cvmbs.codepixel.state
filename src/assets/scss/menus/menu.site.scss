@@ -1,9 +1,23 @@
 // stylesheet :: site menu component styles
 
     // settings
-    $menu_width  : 28rem;
+    $menu_width  : 24rem;
     $menu_height : calc( 100vh - 4rem );
-    // $menu_height : 100vh;
+
+    // colors
+    $menu_fill:
+
+        adjust-color(
+
+            $midnite,
+            $hue          : 0%,
+            $saturation : -50%,
+            $lightness  : 15%,
+            $alpha         : -0.000
+
+        )
+
+    ;
 
     // styles
     #site-menu {
@@ -13,7 +27,7 @@
         top: 4rem;
         bottom: 0;
 
-        z-index: 200;
+        z-index: 80;
 
         @include flex-v-c-h-c( false );
 
@@ -22,24 +36,26 @@
         margin: 0;
         padding: 0;
 
-        // border-left: $borders;
-
         overflow: visible;
 
         visibility: visible;
 
-        @include fill( $dark-nite, 0.415 );
+        @include fill( $menu_fill, 1.000 );
 
         box-shadow: none;
 
-        transform: translate3d( $menu_width, 0, 0 );
+        transform: translate3d( -24rem, 0, 0 );
 
         transition: none;
 
         // open state
         &.is-open {
 
-            // the emptiness
+            // @include fill( $menu_fill, 0.000 );
+
+            box-shadow: 6rem 0 8rem 0 transparentize( black, 0.515 );
+
+            // transition:
 
         }
 

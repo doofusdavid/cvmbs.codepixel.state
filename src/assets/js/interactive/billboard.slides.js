@@ -118,7 +118,7 @@ export var slides = {
             prevArrow : arrows.prev,
             nextArrow : arrows.next,
 
-            // autoplay       : true,
+            autoplay       : false,
             // autoplaySpeed  : 10000,
 
             initialSlide   : 0,

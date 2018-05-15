@@ -3,18 +3,34 @@
     // settings
     $panel_size : calc( 100% - 4rem );
 
+    // colors
+    $submenu_fill:
+
+        adjust-color(
+
+            $beige,
+            $hue          : 0%,
+            $saturation : -10%,
+            $lightness  : -5%,
+            $alpha         : -0.000
+
+        )
+
+    ;
+
     // styles
     #site-menu-panels {
 
         position: absolute;
 
         top: 0;
-        right: 0;
+        // right: 0;
         bottom: 0;
+        left: 0;
 
         z-index: 10;
 
-        width: calc( 100% - 4rem );
+        width: 100%;
         height: calc( 100vh - 4rem );
         margin: 0;
         padding: 0;
@@ -35,12 +51,19 @@
 
             padding: 4rem 0 8rem 0;
 
+            @include fill( $nite, 0.785 );
+
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
+            // @include gradient( 0deg, $beige, 0.045, 0%, $beige, 0.045, 100% );
 
             // header
             .panel-header {
 
-                @include fill( $g135, 0.445 );
+                @include fill( $g140, 0.265 );
+                // @include fill( $beige, 0.000 );
+
+                color: $beige;
+                // color: $g140;
 
             }
 
@@ -84,10 +107,10 @@
 
                             > a {
 
-                                color: $gold;
+                                // color: $g140;
+                                color: $beige;
 
-                                // @include fill( white, 0.865 );
-                                @include fill( $nite, 0.445 );
+                                @include fill( $g140, 0.000 );
 
                                 // arrow
                                 &:after {
@@ -163,7 +186,42 @@
                         // submenu
                         .submenu {
 
-                            @include fill( $dark-nite, 0.565 );
+                            @include fill( white, 0.000 );
+
+                            background: {
+
+                                color:
+
+                                    adjust-color(
+
+                                        $midnite,
+                                        $hue          : 0%,
+                                        $saturation : -10%,
+                                        $lightness  : 0%,
+                                        $alpha         : -0.215
+
+                                    )
+
+                                ;
+
+                            }
+
+                            @include fill( $g135, 0.000 );
+
+                            a {
+
+                                color: white;
+
+                                // hover state
+                                &:hover {
+
+                                    @include color( $beige, 0.000 );
+
+                                    @include fill( $nite, 0.665 );
+
+                                }
+
+                            }
 
                         }
 
@@ -183,9 +241,7 @@
                         margin: 0 0 0 0;
                         padding: 0 1rem 0 1rem;
 
-                        border-bottom: 1px solid transparentize( white, 0.925 );
-
-                        @include font( $klavislim, 0.875rem, 400 );
+                        @include font( $klavislim, 0.875rem, 500 );
 
                         line-height: 0.75rem;
 
@@ -202,9 +258,9 @@
                         // hover state
                         &:hover {
 
-                            color: $gold;
+                            color: $beige;
 
-                            @include fill( white, 0.925);
+                            @include fill( $g135, 0.000 );
 
                         }
 
@@ -244,6 +300,7 @@
                     .path {
 
                         fill: white;
+                        // fill: $g140;
 
                     }
 
@@ -280,6 +337,9 @@
                 @include font( $industry, 0.5625rem, 600 );
 
                 @include text( auto, center );
+
+                // @include color( $midnite, 0.325 );
+                @include color( white, 0.325 );
 
             }
 

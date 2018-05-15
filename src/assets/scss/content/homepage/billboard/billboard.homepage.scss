@@ -207,4 +207,31 @@
 
         }
 
+        // tagline
+        #billboard-tagline {
+
+            position: absolute;
+
+            bottom: 2rem;
+            left: 2rem;
+
+            z-index: 200;
+
+            @include flex-h-s-v-b( false );
+
+            width: 13.25rem;
+            height: 2rem;
+
+            @include font( $klavislim, 1rem, 400 );
+
+            line-height: 0.5625rem;
+
+            letter-spacing: 0.275em;
+
+            @include text( $up );
+
+            color: $g140;
+
+        }
+
     }

@@ -1,15 +1,15 @@
 // stylesheet :: brand.rams styles
 
     // settings
-    $brand_width  : 4rem;
-    $brand_height : 4rem;
+    $brand_width  : 4.5rem;
+    $brand_height : 4.5rem;
 
     // styles
     #brand-rams {
 
         position: absolute;
 
-        top: 0;
+        top: -0.25rem;
         bottom: 0;
         left: 0;
 
@@ -63,16 +63,16 @@
 
             .brand-fill {
 
-                fill: $dark;
-                fill-opacity: 0.345;
-                // fill-opacity: 0.745;
+                fill: $g140;
+                // fill-opacity: 0.345;
+                fill-opacity: 0.945;
 
             }
 
             .brand-stroke {
 
                 fill: $gold;
-                fill-opacity: 0.785;
+                // fill-opacity: 0.785;
                 // fill-opacity: 0.985;
 
                 // transform: scale3d( 1.0625, 1.0625, 1.0625 );

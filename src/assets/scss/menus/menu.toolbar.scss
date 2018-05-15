@@ -10,8 +10,9 @@
         position: absolute;
 
         top: 0;
+        right: -4rem;
         bottom: 0;
-        left: 0;
+        // left: 0;
 
         z-index: 20;
 
@@ -22,7 +23,7 @@
         margin: 0;
         padding: 0;
 
-        @include fill( white, 0.845 );
+        // @include fill( white, 0.845 );
 
         transition: all 320ms $outex 0ms;
 
@@ -30,14 +31,18 @@
         &:hover {
 
             // @include fill( $dark, 0.515 );
-            @include fill( white, 0.915 );
+            // @include fill( white, 0.915 );
 
         }
 
         // menu open state
         .is-open & {
 
-            @include fill( $nite, 0.325 );
+            // @include fill( $nite, 0.325 );
+            // @include fill( $beige, 0.000 );
+            @include fill( white, 0.000 );
+
+            @include gradient( 90deg, $beige, 0.195, 0%, $beige, 0.195, 100% );
 
             // hover state
             &:hover {
@@ -56,13 +61,13 @@
             width: 4rem;
             height: 100%;
             margin: 0;
-            padding: 0;
+            padding: 0 0 2rem 0;
 
             // list
             ul {
 
                 width: 4rem;
-                height: 32rem;
+                height: 24rem;
                 margin: 0;
                 padding: 0;
 
@@ -75,6 +80,13 @@
                     height: 4rem;
                     margin: 0;
                     padding: 0;
+
+                    // hidden state
+                    &.hidden {
+
+                        display: none;
+
+                    }
 
                 }
 
@@ -93,13 +105,16 @@
                 // hover state
                 &:hover {
 
-                    @include fill( white, 0.875 );
+                    // @include fill( white, 0.875 );
+                    @include fill( $g135, 0.145 );
 
                     // svg
                     .icon {
 
                         // path
                         .path {
+
+                            fill: white;
 
                             opacity: 1.000;
 
@@ -126,12 +141,21 @@
                     width: 4rem;
                     height: 4rem;
 
+                    // hidden class
+                    &.hidden {
+
+                        display: none;
+
+                    }
+
                     // path
                     .path {
 
-                        fill: white;
+                        // fill: white;
+                        fill: $g135;
 
-                        opacity: 0.565;
+                        // opacity: 0.565;
+                        opacity: 0.765;
 
                         transition: all 220ms linear 0ms;
 

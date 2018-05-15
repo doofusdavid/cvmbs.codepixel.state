@@ -11,56 +11,88 @@
             <!-- main menu -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.main.menu' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.main.menu' );
+
+                ?>
 
             </li>
 
             <!-- search -->
-            <li class="menu-item">
+            <li class="menu-item  hidden">
 
-                <?php get_template_part( 'elements/menus/buttons/button.search' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.search' );
+
+                ?>
 
             </li>
 
             <!-- events -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.events' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.events' );
+
+                ?>
 
             </li>
 
             <!-- resources -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.resources' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.resources' );
+
+                ?>
 
             </li>
 
             <!-- about -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.about' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.about' );
+
+                ?>
 
             </li>
 
             <!-- social media -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.social' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.social' );
+
+                ?>
 
             </li>
 
             <!-- contact -->
             <li class="menu-item">
 
-                <?php get_template_part( 'elements/menus/buttons/button.contact' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.contact' );
+
+                ?>
 
             </li>
 
             <!-- news -->
-            <li class="menu-item">
+            <li class="menu-item hidden">
 
-                <?php get_template_part( 'elements/menus/buttons/button.news' ); ?>
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.news' );
+
+                ?>
 
             </li>
 

@@ -16,7 +16,21 @@
 
         padding: 1rem 0 1rem 0;
 
-        color: white;
+        color: $g140;
+
+        // menu open state
+        .site-menu-open &,
+        .ui-contrast & {
+
+            color: white;
+
+            #brand-cvmbs-text {
+
+                border-left: 1px solid transparentize( white, 0.245 );
+
+            }
+
+        }
 
         #brand-cvmbs-text {
 
@@ -26,8 +40,7 @@
             margin: 0;
             padding: 0 0 0 0.75rem;
 
-            border-left: 1px solid transparentize( white, 0.615 );
-            // border-left: 1px solid transparentize( $g135, 0.000 );
+            border-left: 1px solid transparentize( $g140, 0.000 );
 
             letter-spacing: 0.015em;
 
@@ -48,7 +61,7 @@
 
                     family: $proxima;
                     size: 0.75rem;
-                    weight: 500;
+                    weight: 600;
 
                 }
 
