@@ -11,8 +11,8 @@
 
             $midnite,
             $hue          : 0%,
-            $saturation : -50%,
-            $lightness  : 15%,
+            $saturation : -10%,
+            $lightness  : 0%,
             $alpha         : -0.000
 
         )
@@ -40,7 +40,7 @@
 
         visibility: visible;
 
-        @include fill( $menu_fill, 1.000 );
+        @include fill( $menu_fill, 0.535 );
 
         box-shadow: none;
 
@@ -51,11 +51,7 @@
         // open state
         &.is-open {
 
-            // @include fill( $menu_fill, 0.000 );
-
             box-shadow: 6rem 0 8rem 0 transparentize( black, 0.515 );
-
-            // transition:
 
         }
 

@@ -9,6 +9,9 @@
     // menus
     require_once( 'library/menus/menus.php' );
 
+    // menus
+    require_once( 'library/post.types.php' );
+
     // sidebars
     require_once( 'library/sidebars/sidebars.php' );
 

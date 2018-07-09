@@ -1,0 +1,74 @@
+// stylesheet :: developer box styles
+
+    // settings
+    $developer_box : 1rem;
+
+    // styles
+    .developer-box {
+
+        width: 16rem;
+        // min-height: 24rem;
+        margin: 0;
+        padding: 1rem 1rem 1rem 1rem;
+
+        // positional classes
+        &.overlay {
+
+            position: absolute;
+
+            z-index: 1000;
+
+            // right
+            &.right {
+
+                right: 2rem;
+                bottom: 2rem
+
+            }
+
+            // color
+            &.fill {
+
+                // red
+                &.red {
+
+                    @include fill( red, 0.145 );
+
+                    // title
+                    .box-title {
+
+                        color: white;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // title
+        .box-title {
+
+            margin: 0 0 1rem 0;
+
+            @include flex-h-c-v-c( false );
+
+            @include font( $klavislim, 0.75rem, 500 );
+
+            letter-spacing: 0.125em;
+
+            @include text( $up );
+
+        }
+
+        // line
+        .output-line {
+
+            @include flex-h-s-v-c( false );
+
+            @include font( $industry, 0.75rem, 700 );
+
+        }
+
+    }

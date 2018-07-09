@@ -126,7 +126,7 @@ export var menusFX = {
 
                 },
                 duration : 240,
-    			delay 	 : 120,
+    			delay 	 : 0,
     			easing   : [0.23, 1, 0.32, 1],
     			complete : function() {
 

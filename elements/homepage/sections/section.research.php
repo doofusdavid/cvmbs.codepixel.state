@@ -3,7 +3,7 @@
 <div class="article-container">
 
     <!-- background.image -->
-    <div class="section-image" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.03.jpg">
+    <div class="section-image" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/sections/research/research.billboard.00.jpg">
 
         <!-- empty -->
 

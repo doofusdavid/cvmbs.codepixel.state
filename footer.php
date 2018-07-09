@@ -181,11 +181,13 @@
 
                     center : {
 
-                        lat : 40.58526,
-                        lng : -105.084423
+                        // lat : 40.58526,
+                        lat : 20.58526,
+                        // lng : -105.084423
+                        lng : -75.084423
 
                     },
-                    zoom            : 3,
+                    zoom            : 5,
                     // gestureHandling : 'cooperative',
                     styles          : [
 

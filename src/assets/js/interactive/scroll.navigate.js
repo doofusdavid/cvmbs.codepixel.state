@@ -77,8 +77,17 @@ export var scrollUI = {
         var viewport  = $(window);
         var billboard = site.ui.billboard;
         var content   = site.ui.content;
+        var control   = $('#billboard-tagline');
 
-        viewport.on( 'keydown scroll wheel', function( e, views ) {
+        control.on( 'click', function( e ) {
+
+            console.log( 'ball so hard' );
+
+            scrollUI.curtain( billboard, 'raise', views );
+
+        });
+
+        viewport.on( 'keydown scroll wheel', function( e, views, stopwheel ) {
 
             slides = site.ui.slides;
 
@@ -88,14 +97,22 @@ export var scrollUI = {
             // directional cue
             scrollcue = e.originalEvent.wheelDelta / 120;
 
+            // console.log( scrollcue );
+
             // eval scroll threshold
-            if ( e.originalEvent.deltaY > 10 ) {
+            if ( e.originalEvent.deltaY > 20 ) {
 
                 // scrollUI.curtain( billboard, 'raise', views );
+                console.log( 'positive' );
 
             } else if ( e.originalEvent.deltaY < 0 ) {
 
                 // scrollUI.curtain( billboard, 'lower', views );
+                console.log( 'negative' );
+
+            } else {
+
+                console.log( 'neutral' );
 
             }
 
@@ -122,7 +139,7 @@ export var scrollUI = {
             }
 
             // debug
-            scrollUI.record( e, trigger, scrollcue, offset );
+            // scrollUI.record( e, trigger, scrollcue, offset );
 
         });
 
