@@ -120,6 +120,7 @@ export var slides = {
 
             autoplay       : false,
             // autoplaySpeed  : 10000,
+            fade           : true,
 
             initialSlide   : 0,
             infinite       : false,
@@ -382,11 +383,11 @@ export var slides = {
         // pause + start billboard
         billboard.on( 'pause.homepage.feature', function( e, menu ) {
 
-            billboard.slick( 'slickPause' );
+            // billboard.slick( 'slickPause' );
 
         }).on( 'start.homepage.feature', function( e, menu ) {
 
-            billboard.slick( 'slickPlay' );
+            // billboard.slick( 'slickPlay' );
 
         });
 

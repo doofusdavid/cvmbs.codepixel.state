@@ -23,26 +23,23 @@
         margin: 0;
         padding: 0;
 
-        // @include fill( white, 0.845 );
-
-        transition: all 320ms $outex 0ms;
+        transition: all 320ms linear 0ms;
 
         // hover state
         &:hover {
 
-            // @include fill( $dark, 0.515 );
-            // @include fill( white, 0.915 );
+            // the emptiness
 
         }
 
         // menu open state
         .is-open & {
 
-            // @include fill( $nite, 0.325 );
-            // @include fill( $beige, 0.000 );
             @include fill( white, 0.000 );
 
             @include gradient( 90deg, $beige, 0.195, 0%, $beige, 0.195, 100% );
+
+            transition: all 320ms linear 0ms;
 
             // hover state
             &:hover {

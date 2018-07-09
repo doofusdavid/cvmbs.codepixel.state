@@ -76,7 +76,7 @@
                         linear-gradient(
 
                             270deg,
-                            transparentize( $dark, 0.685 ) 0%,
+                            transparentize( $g140, 0.685 ) 0%,
                             transparent 40%,
                             transparentize( $dark, 0.485 ) 60%,
                             transparentize( $nite, 0.325 ) 100%
@@ -93,7 +93,7 @@
 
                     ;
 
-                    image: none;
+                    // image: none;
 
                 }
 

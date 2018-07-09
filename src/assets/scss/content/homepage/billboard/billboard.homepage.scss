@@ -232,6 +232,93 @@
 
             color: $g140;
 
+            // hover state
+            &:hover {
+
+                cursor: pointer;
+
+            }
+
+        }
+
+    }
+
+    // dots
+    #billboard-scroll {
+
+        position: absolute;
+
+        right: 50%;
+        bottom: 2rem;
+        left: 50%;
+
+        z-index: 200;
+
+        width: 0.125rem;
+        height: 4.5rem;
+        margin: 0;
+        padding: 0;
+
+        // dot
+        .dot {
+
+            display: block;
+
+            width: 0.125rem;
+            height: 0.0625rem;
+            margin: 0.5rem 0 0 0;
+            padding: 0;
+
+            @include fill( $g140, 0.000 );
+
+        }
+
+        #dot1 {
+
+            @include fill( $g140, 0.800 );
+
+        }
+
+        #dot2 {
+
+            @include fill( $g140, 0.700 );
+
+        }
+
+        #dot3 {
+
+            @include fill( $g140, 0.600 );
+
+        }
+
+        #dot4 {
+
+            @include fill( $g140, 0.500 );
+
+        }
+
+        #dot5 {
+
+            @include fill( $g140, 0.400 );
+
+        }
+
+        #dot6 {
+
+            @include fill( $g140, 0.300 );
+
+        }
+
+        #dot7 {
+
+            @include fill( $g140, 0.200 );
+
+        }
+
+        #dot8 {
+
+            @include fill( $g140, 0.100 );
+
         }
 
     }

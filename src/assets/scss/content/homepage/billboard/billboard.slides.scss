@@ -118,11 +118,11 @@
                         // headline
                         .headline {
 
-                            opacity: 1.000;
+                            // opacity: 1.000;
 
-                            transform: translate3d( 0, 0, 0 );
+                            // transform: translate3d( 0, 0, 0 );
 
-                            transition: all 720ms $oquin 480ms;
+                            // transition: all 720ms $oquin 480ms;
 
                         }
 
@@ -192,7 +192,7 @@
                 // subheadline
                 .subheadline {
 
-                    @include fill( $gold, 0.215 );
+                    // @include fill( $gold, 0.215 );
 
                 }
 
@@ -494,7 +494,7 @@
 
                 width: 100vw;
                 height: 100vh;
-                padding: 4rem 4rem 4rem 4rem;
+                padding: 4rem 4rem 13rem 15rem;
 
                 @include fill( white, 1.000 );
 
@@ -523,18 +523,16 @@
             // text.subheadline
             .subheadline {
 
-                height: 2rem;
-                padding: 0 1rem 0 1rem;
+                margin: 0 0 1rem 0;
+                padding: 0 0 0 0;
 
-                @include font( $industry, 0.6875rem, 600 );
+                @include font( $industry, 0.75rem, 600 );
 
-                line-height: 2rem;
+                line-height: 1rem;
 
                 letter-spacing: 0.125em;
 
-                color: white;
-
-                @include fill( white, 0.945 );
+                @include color( $dark-nite, 0.245 );
 
                 @include breakpoint ( small only ) {
 
@@ -547,8 +545,6 @@
 
                 }
 
-                @include hide;
-
             }
 
             // text.headline
@@ -558,19 +554,22 @@
 
                 @include flex-h-s-v-b( false );
 
-                height: 4rem;
-                margin: 0 0 0 0;
+                width: 32rem;
+                // height: 4rem;
+                margin: 0 0 1.5rem 0;
                 padding: 0 0 0 0;
 
-                @include font( $klavislim, 3rem, 400 );
+                @include font( $klavislim, 4rem, 400 );
 
-                line-height: 1.875rem;
+                line-height: 4rem;
 
-                letter-spacing: 0.245em;
+                letter-spacing: 0.105em;
 
-                opacity: 0.000;
+                // opacity: 0.000;
 
-                transform: translate3d( 0, 100%, 0 );
+                // transform: translate3d( 0, 100%, 0 );
+
+                @include color( $g135, 0.000 );
 
                 transition: all 480ms $oquin 120ms;
 
@@ -633,11 +632,14 @@
 
                 @include flex-h-c-v-c( false );
 
+                min-width: 14rem;
                 height: 4rem;
                 margin: 1.5rem 0 0 0;
                 padding: 0 1.5rem 0 1.5rem;
 
-                @include font( $klavislim, 0.875rem, 500 );
+                border: none;
+
+                @include font( $klavislim, 1rem, 400 );
 
                 line-height: 0.6875rem;
 
@@ -647,16 +649,14 @@
 
                 color: white;
 
-                @include fill( white, 1.000 );
+                @include fill( $blue, 0.000 );
 
                 transition: all 220ms linear 0ms;
-
-                @include hide;
 
                 // hover state
                 &:hover {
 
-                    @include fill( white, 0.935 );
+                    @include fill( $cvellow, 0.000 );
 
                     // corners
                     .corners {
