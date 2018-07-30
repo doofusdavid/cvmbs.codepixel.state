@@ -1,0 +1,106 @@
+// stylesheet :: elementor button styles
+
+    // settings
+    $radius : 0px;
+
+    // styles :: top-level hook
+    #secondary-content {
+
+        // button class
+        .elementor-widget-button {
+
+            // buttons
+            .elementor-button {
+
+                @include flex-h-c-v-c( true );
+
+                height: 2.5rem;
+                padding: 0.875rem 1rem 0.75rem 1rem;
+
+                border-radius: $radius;
+
+                @include font( $klavislim, 0.875rem, 500 );
+
+                line-height: 0.875rem;
+
+                letter-spacing: 0.065em;
+
+                @include text( $up );
+
+                @include fill( $g140, 0.000 );
+
+                transition: $all220;
+
+                // hover state
+                &:hover {
+
+                    // the emptiness
+
+                }
+
+                // icon
+                .elementor-button-icon {
+
+                    // element
+                    i {
+
+                        @include flex-v-c-h-c( true );
+
+                        width: 0.875rem;
+                        height: 0.875rem;
+                        margin: 0 0.125rem 0 0;
+                        padding: 0 0 0.125rem 0;
+
+                    }
+
+                }
+
+            }
+
+            // info
+            &.elementor-button-info {
+
+                .elementor-button {
+
+                    @include fill( $blue, 0.000 );
+
+                }
+
+            }
+
+            // info
+            &.elementor-button-success {
+
+                .elementor-button {
+
+                    background-color: lighten( $g140, 5% );
+
+                }
+
+            }
+
+            // warning
+            &.elementor-button-warning {
+
+                .elementor-button {
+
+                    @include fill( $cvellow, 0.000 );
+
+                }
+
+            }
+
+            // danger
+            &.elementor-button-danger {
+
+                .elementor-button {
+
+                    @include fill( $roarange, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

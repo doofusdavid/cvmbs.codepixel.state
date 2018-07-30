@@ -1,0 +1,93 @@
+// stylesheet :: elementor heading styles
+
+    // settings
+    $h1 : 2rem;
+
+    // styles :: top-level hook
+    #secondary-content {
+
+        // common
+        h2, h3, h4, h5, h6 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, inherit, 400 );
+
+                letter-spacing: 0.085em;
+
+            }
+
+        }
+
+        // h2
+        h2 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, 2rem, 400 );
+
+                color: $g140;
+
+            }
+
+        }
+
+        // h3
+        h3 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, 1.75rem, 400 );
+
+                color: $blue;
+
+            }
+
+        }
+
+        // h4
+        h4 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                color: $roarange;
+
+            }
+
+        }
+
+        // h5
+        h5 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, 1.25rem, 500 );
+
+                color: $navy-h;
+
+            }
+
+        }
+
+        // h6
+        h6 {
+
+            // class hook
+            &.elementor-heading-title {
+
+                @include font( $klavislim, 1rem, 500 );
+
+                color: $cvellow;
+
+            }
+
+        }
+
+    }

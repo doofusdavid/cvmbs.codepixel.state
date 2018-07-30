@@ -85,14 +85,88 @@
 
         }
 
+        // title
+        .section-title {
+
+            position: absolute;
+
+            top: 12rem;
+
+            @include color( $gold, 0.000 );
+
+        }
+
         // content
         .section-content {
 
-            padding: 5rem 1rem 1rem 1rem;
+            padding: 17rem 13rem 9rem 13rem;
 
             opacity: 1.000;
 
             transition: all 40ms linear 160ms;
+
+        }
+
+        // cards
+        #programs-list {
+
+            @include flex-h-s-v-t( false );
+
+            flex-wrap: wrap;
+
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            // card
+            .degree-program {
+
+                @include flex-v-t-h-s( true );
+
+                max-width: 16rem;
+                min-height: 16rem;
+                margin: 0 2rem 0 0;
+                padding: 2rem 2rem 2rem 2rem;
+
+                @include fill( white, 0.935 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( white, 0.865 );
+
+                    cursor: pointer;
+
+                }
+
+                // title
+                .name {
+
+                    margin: 0 0 1rem 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // text
+                .text {
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    line-height: 1rem;
+
+                    @include text( none );
+
+                    @include color( white, 0.000 );
+
+                }
+
+            }
 
         }
 

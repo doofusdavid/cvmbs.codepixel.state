@@ -1,0 +1,81 @@
+// stylesheet :: global elementor styles
+
+    // settings
+    $h1 : 2rem;
+
+    // styles :: top-level hook
+    #secondary-content {
+
+        // structural + layout
+        .elementor-column {
+
+            &:nth-child( 1 ) {
+
+                // padding: 0 1rem 0 0;
+
+            }
+
+            &:nth-child( 2 ) {
+
+                // padding: 0 0 0 1rem;
+
+            }
+
+        }
+
+        .elementor-column-wrap {
+
+            padding: 1rem 0 1rem 0;
+
+        }
+
+        // two column
+        .elementor-col-50 {
+
+            padding: 0 0 0 1rem;
+
+            // first column
+            &:first-child {
+
+                padding: 0 1rem 0 0;
+
+            }
+
+        }
+
+        // three column
+        .elementor-col-33 {
+
+            padding: 0 0 0 1rem;
+
+            // first column
+            &:first-child {
+
+                padding: 0 1rem 0 0;
+
+            }
+
+            // first column
+            &:nth-child( 2 ) {
+
+                padding: 0 1rem 0 0;
+
+            }
+
+            // first column
+            &:last-child {
+
+                padding: 0 0 0 1rem;
+
+            }
+
+        }
+
+        // sections
+        .intro {
+
+            max-width: 100%;
+
+        }
+
+    }

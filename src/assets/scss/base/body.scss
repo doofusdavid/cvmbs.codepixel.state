@@ -47,9 +47,10 @@
         @include scrolls( true, $body-scroll, $body-thumb, $body-track );
 
         // secondary
-        &.page-template-secondary {
+        &.page-template-secondary,
+        &.single-degree-program {
 
-            padding: 4.0625rem 0 0 0;
+            padding: 4rem 0 0 0;
 
         }
 

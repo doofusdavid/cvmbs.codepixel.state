@@ -201,7 +201,8 @@
 
         pageURL = $(this).attr( 'data-url' );
 
-        window.open( pageURL, '_self' );
+        // window.open( pageURL, '_self' );
+        window.open( pageURL );
 
     });
 

@@ -114,9 +114,8 @@ export var menusFX = {
 
             // show menu
             menu.velocity({
-
-                // translateX : [ 0, '100%' ]
-                translateX : [ 0, '-100%' ]
+                
+                translateX : [ 0, '100%' ]
 
             }, {
 
@@ -171,8 +170,7 @@ export var menusFX = {
             // hide menu
             menu.velocity({
 
-                // translateX : [ '100%', 0 ]
-                translateX : [ '-100%', 0 ]
+                translateX : [ '100%', 0 ]
 
             }, {
 
