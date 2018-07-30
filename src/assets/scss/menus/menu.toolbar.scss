@@ -10,9 +10,9 @@
         position: absolute;
 
         top: 0;
-        right: -4rem;
+        // right: -4rem;
         bottom: 0;
-        // left: 0;
+        left: -4rem;
 
         z-index: 20;
 
@@ -28,7 +28,7 @@
         // hover state
         &:hover {
 
-            // the emptiness
+            @include fill( $dark, 0.565 );
 
         }
 

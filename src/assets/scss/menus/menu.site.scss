@@ -44,21 +44,23 @@
 
         box-shadow: none;
 
-        transform: translate3d( -24rem, 0, 0 );
+        transform: translate3d( 24rem, 0, 0 );
 
         transition: none;
 
         // open state
         &.is-open {
 
-            box-shadow: 6rem 0 8rem 0 transparentize( black, 0.515 );
+            box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
 
         }
 
         // remove !!!
-        &.site-menu-open {
+        &.scrollable {
 
-            //
+            transform: translate3d( 28rem, 0, 0 );
+
+            transition: all 240ms $outex 60ms;
 
         }
 

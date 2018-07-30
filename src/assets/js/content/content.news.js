@@ -134,7 +134,7 @@ export var newsFX = {
     init: function( render ) {
 
         // load news method
-        // newsFX.collect();
+        newsFX.collect();
 
     },
 

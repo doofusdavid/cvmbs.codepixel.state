@@ -1,0 +1,47 @@
+// stylesheet :: elementor tabs styles
+
+    // settings
+    $tabs : 1rem;
+
+    // styles :: top-level hook
+    #secondary-content {
+
+        // tabs
+        .elementor-tabs {
+
+            // title
+            .elementor-tab-title {
+
+                padding: 1.125rem 1rem 0.875rem 1rem;
+
+                @include font( $klavislim, 1rem, 500 );
+
+                line-height: 0.875rem;
+
+                letter-spacing: 0.045em;
+
+                @include text( $up );
+
+                @include color( $g140, 0.000 );
+
+                // active state
+                &.elementor-active {
+
+                    @include color( $blue, 0.000 );
+
+                }
+
+            }
+
+            // content
+            .elementor-tab-content {
+
+                @include font( $industry, 0.8125rem, 500 );
+
+                line-height: 1.375rem;
+
+            }
+
+        }
+
+    }

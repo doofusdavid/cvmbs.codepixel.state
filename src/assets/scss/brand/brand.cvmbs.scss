@@ -18,9 +18,11 @@
 
         color: $g140;
 
-        // menu open state
+        // menu open state + page templates
         .site-menu-open &,
-        .ui-contrast & {
+        .ui-contrast &,
+        .single-degree-program &,
+        .page-template-secondary & {
 
             color: white;
 

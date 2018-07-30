@@ -346,6 +346,7 @@ export var scrollUI = {
         var academics = site.ui.sections.academics;
 
         layout.toggleClass( 'scrollable' );
+        site.ui.menus.navigation.component.toggleClass( 'scrollable' );
 
         site.ui.header.toggleClass( 'ui-contrast' );
 

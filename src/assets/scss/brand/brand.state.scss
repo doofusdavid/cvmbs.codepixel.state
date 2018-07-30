@@ -20,7 +20,9 @@
 
         // menu open state
         .site-menu-open &,
-        .ui-contrast & {
+        .ui-contrast &,
+        .single-degree-program &,
+        .page-template-secondary & {
 
             color: white;
 

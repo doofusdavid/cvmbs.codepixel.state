@@ -1,28 +1,28 @@
 <?php
 
     // call the custom post type function on WP init
-	add_action( 'init', 'homepage_billboard_post_type' );
+	add_action( 'init', 'alumni_profile_post_type' );
 
     // define custom post type function and properties
-	function homepage_billboard_post_type() {
+	function alumni_profile_post_type() {
 
 	    // register post type + pass properties array to function
-		register_post_type( 'billboard',
+		register_post_type( 'alumni-profile',
 
 		    // define post type options and properties
 			array(
 
 				'labels' => array(
 
-					'name' 				=> __( 'Billboards', 'cvmbsPress' ),
-					'singular_name' 	=> __( 'Homepage Billboard', 'cvmbsPress' ),
-					'all_items' 		=> __( 'All Homepage Billboards', 'cvmbsPress' ),
-					'add_new' 			=> __( 'Add Homepage Billboard', 'cvmbsPress' ),
-					'add_new_item' 		=> __( 'Add New Homepage Billboard', 'cvmbsPress' ),
+					'name' 				=> __( 'Alumni Profiles', 'cvmbsPress' ),
+					'singular_name' 	=> __( 'Alumni Profile', 'cvmbsPress' ),
+					'all_items' 		=> __( 'All Alumni Profiles', 'cvmbsPress' ),
+					'add_new' 			=> __( 'Add Alumni Profile', 'cvmbsPress' ),
+					'add_new_item' 		=> __( 'Add New Alumni Profile', 'cvmbsPress' ),
 					'edit' 				=> __( 'Edit', 'cvmbsPress' ),
-					'edit_item' 		=> __( 'Edit Homepage Billboard', 'cvmbsPress' ),
-					'new_item' 			=> __( 'New Homepage Billboard', 'cvmbsPress' ),
-					'search_items' 		=> __( 'Search Homepage Billboards', 'cvmbsPress' ),
+					'edit_item' 		=> __( 'Edit Alumni Profile', 'cvmbsPress' ),
+					'new_item' 			=> __( 'New Alumni Profile', 'cvmbsPress' ),
+					'search_items' 		=> __( 'Search Alumni Profiles', 'cvmbsPress' ),
 					'not_found' 		=> __( 'Nothing to see here, which is bad, because billboards are meant to be seen.', 'cvmbsPress' ),
 					'parent_item_colon' => ''
 
@@ -41,7 +41,7 @@
 				'capability_type' 		=> 'post',
 				'hierarchical' 			=> false,
 				'menu_position' 		=> 4,
-				'menu_icon' 			=> 'dashicons-layout',
+				'menu_icon' 			=> 'dashicons-groups',
 				'supports' 				=> array( 'title' )
 
 			)

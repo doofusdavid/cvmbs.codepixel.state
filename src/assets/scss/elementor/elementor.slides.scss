@@ -1,0 +1,63 @@
+// stylesheet :: elementor slides styles
+
+    // settings
+    $slides : 0.875rem;
+
+    // styles :: top-level hook
+    #secondary-content {
+
+        // slider
+        .elementor-slick-slider {
+
+            // slides
+            .elementor-slide-content {
+
+                @include font( $industry, 0.75rem, 500 );
+
+                // title
+                .elementor-slide-heading {
+
+                    @include font( $klavislim, 2rem, 500 );
+
+                    letter-spacing: 0.085em;
+
+                    @include text( $up );
+
+                }
+
+                // text
+                .elementor-slide-description {
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    line-height: 1.25rem;
+
+                }
+
+                // button
+                .elementor-slide-button {
+
+                    @include flex-v-c-h-c( true );
+
+                    height: 2.5rem;
+                    margin: 0;
+                    padding: 0 1.5rem 0 1.5rem;
+
+                    border: 1px solid white;
+                    border-radius: 0px;
+
+                    @include font( $klavislim, 0.875rem, 500 );
+
+                    line-height: 0.75rem;
+
+                    letter-spacing: 0.065em;
+
+                    @include text( $up );
+
+                }
+
+            }
+
+        }
+
+    }

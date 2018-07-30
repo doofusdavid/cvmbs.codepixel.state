@@ -87,7 +87,7 @@ export var researchUI = {
                         // translateY : [ '-50%', 0 ],
                         translateY : [ 0, 0 ],
                         // opacity    : [ 0, 1 ]
-                        opacity    : [ 1, 1 ]
+                        opacity    : [ 0, 1 ]
 
     				},
 
@@ -105,7 +105,7 @@ export var researchUI = {
     					sequenceQueue : false,
     					complete 	  : function() {
 
-                            //
+                            $(this).css( 'z-index', 1 );
 
     					}
 
@@ -148,7 +148,7 @@ export var researchUI = {
 
                     p : {
 
-                        opacity          : [ 0.5, 0 ],
+                        opacity          : [ 1, 0 ],
                         transformOriginX : [ '50%', '50%' ],
                         transformOriginY : [ '50%', '50%' ],
                         scaleX           : [ 1, 1.5 ],

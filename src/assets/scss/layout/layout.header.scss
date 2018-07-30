@@ -33,17 +33,17 @@
 
                 linear-gradient(
 
-                    270deg,
+                    90deg,
                     transparentize( $dark, 1.000 ) 0%,
-                    transparent 20%,
-                    transparentize( $dark, 0.485 ) 60%,
+                    transparent 40%,
+                    transparentize( $dark, 0.485 ) 70%,
                     transparentize( $nite, 0.325 ) 100%
 
                 )
 
             ;
 
-            image: none;
+            // image: none;
 
             repeat: no-repeat;
             position: 0 0;
@@ -55,7 +55,8 @@
         -webkit-app-region: drag;
 
         // secondary
-        .page-template-secondary & {
+        .page-template-secondary &,
+        .single-degree-program & {
 
             @include fill( $g135, 0.000 );
 
