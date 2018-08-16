@@ -6,6 +6,35 @@
     // styles :: top-level hook
     #secondary-content {
 
+        // elementor
+        .elementor {
+
+            min-width: 100%;
+
+        }
+
+        // section class
+        .elementor-element {
+
+            // last element
+            &:last-child {
+
+                // last element
+                .elementor-element {
+
+                    // column wrap
+                    .elementor-column-wrap {
+
+                        padding-bottom: 0;
+
+                    }
+
+                }
+
+            }
+
+        }
+
         // structural + layout
         .elementor-column {
 
@@ -23,6 +52,7 @@
 
         }
 
+        // column wrap
         .elementor-column-wrap {
 
             padding: 1rem 0 1rem 0;
@@ -74,6 +104,7 @@
         // sections
         .intro {
 
+            min-width: 100%;
             max-width: 100%;
 
         }

@@ -48,6 +48,14 @@
 
             color: $admin;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                padding: 0;
+
+            }
+
             // title
             .page-title {
 
@@ -76,6 +84,13 @@
             color: $admin;
 
             @include fill( $beige, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include hide;
+
+            }
 
             // title
             .sidebar-title {
@@ -129,6 +144,20 @@
                         height: 2rem;
                         margin: 0;
                         padding: 0;
+
+                        // current state
+                        &.current-menu-item {
+
+                            // link
+                            a {
+
+                                @include color( white, 0.000 );
+
+                                @include fill( $blue, 0.000 );
+
+                            }
+
+                        }
 
                         // link
                         a {
