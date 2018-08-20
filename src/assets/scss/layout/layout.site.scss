@@ -127,4 +127,13 @@
 
         }
 
+        // single post
+        .single-degree-program & {
+
+            background-image: none;
+
+            @include fill( $neutral, 0.000 );
+
+        }
+
     }

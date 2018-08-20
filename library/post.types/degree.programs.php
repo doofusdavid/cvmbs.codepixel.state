@@ -37,7 +37,7 @@
 				'query_var' 			=> true,
 				'can_export' 			=> true,
 				'rewrite' 				=> array( 'slug' => 'degree-programs', 'with_front' => false ),
-				'has_archive' 			=> false,
+				'has_archive' 			=> true,
 				'capability_type' 		=> 'post',
 				'hierarchical' 			=> false,
 				'menu_position' 		=> 4,

@@ -56,9 +56,35 @@
 
         // secondary
         .page-template-secondary &,
-        .single-degree-program & {
+        .single-degree-program &,
+        .archive & {
 
             @include fill( $g135, 0.000 );
+
+        }
+
+        // degree programs
+        .single-degree-program & {
+
+            @include fill( $dark, 0.465 );
+
+            background: {
+
+                image:
+
+                    linear-gradient(
+
+                        90deg,
+                        transparentize( $g140, 0.645 ) 0%,
+                        transparent 50%,
+                        transparent 70%,
+                        transparentize( $g140, 0.365 ) 100%
+
+                    )
+
+                ;
+
+            }
 
         }
 

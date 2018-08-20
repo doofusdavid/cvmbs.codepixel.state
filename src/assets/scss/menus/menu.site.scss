@@ -55,12 +55,12 @@
 
         }
 
-        // remove !!!
-        &.scrollable {
+        // parent class
+        .page-template-secondary &,
+        .single-degree-program &,
+        .archive & {
 
             transform: translate3d( 28rem, 0, 0 );
-
-            transition: all 240ms $outex 60ms;
 
         }
 

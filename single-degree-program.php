@@ -3,67 +3,105 @@
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content secondary" data-off-canvas-content>
 
-	<!-- content -->
-	<div id="secondary-content">
+	<!-- content container -->
+	<div class="degree-program-container">
 
-	    <!-- container -->
-	    <div class="secondary-container">
+		<?php if ( have_posts() ) : ?>
 
-	        <!-- main content -->
-	        <div class="main-content-area">
+		<?php while ( have_posts() ) : the_post(); ?>
 
-                <?php if ( have_posts() ) : ?>
+		<?php
 
-				<?php
+			// fields
+			$description   = get_field( 'program_description' );
+			$degree_type   = get_field( 'degree_type' );
+			$program_img   = get_field( 'program_image' );
+			$header_url    = $program_img[ 'url' ];
+			$program_video = get_field( 'program_video' );
 
-                    while ( have_posts() ) : the_post();
+		?>
 
-                    // fields
-                    $description = get_field( 'program_description' );
+		<!-- header -->
+		<header class="degree-program-header" style="background-image:url(<?php echo $header_url; ?>);">
 
-                ?>
+			<!-- title -->
+			<h2 class="program-title">
 
-				<!-- title -->
-		        <h2 class="page-title">
+				<?php the_title(); ?>
 
-					<?php the_title(); ?>
+			</h2>
+			<!-- END title -->
 
-				</h2>
-		        <!-- END title -->
+			<!-- subtitle -->
+			<span class="program-subtitle">
 
-				<section class="intro" role="main">
+				<!-- get a degree you can use to become filthy rich some day -->
 
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+			</span>
+			<!-- END subtitle -->
 
-						<div class="entry-content">
+		</header>
+		<!-- END header -->
 
-							<?php echo $description; ?>
+		<!-- content -->
+		<div class="degree-program-content">
 
-						</div>
+			<div class="program-content">
 
-					</div>
+				<span class="content-label">
 
-				</section>
+					program description
 
-				<?php endwhile; ?>
+				</span>
 
-                <?php endif; ?>
+				<span class="content-output">
+
+					<?php echo $description; ?>
+
+				</span>
 
 			</div>
-        	<!-- END main content -->
 
-			<!-- sidebar -->
-	        <div class="main-content-sidebar">
+			<div class="program-content">
 
-	            <?php dynamic_sidebar( 'default-sidebar' ); ?>
+				<span class="content-label">
 
-	        </div>
-	        <!-- END sidebar -->
+					degree type
 
-	    </div>
-	    <!-- END container -->
+				</span>
+
+				<span class="content-output">
+
+					<?php echo $degree_type; ?>
+
+				</span>
+
+			</div>
+
+			<div class="program-content">
+
+				<span class="content-label">
+
+					program video
+
+				</span>
+
+				<span class="content-output">
+
+					<?php echo $program_video; ?>
+
+				</span>
+
+			</div>
+
+		</div>
+		<!-- END content -->
+
+		<?php endwhile; ?>
+
+		<?php endif; ?>
 
 	</div>
-	<!-- END content -->
+	<!-- END content container -->
 
 	<?php get_footer(); ?>

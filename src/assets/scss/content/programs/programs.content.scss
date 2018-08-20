@@ -1,0 +1,139 @@
+// stylesheet :: degree program post content styles
+
+    // settings
+    $degree : 1rem;
+
+    // styles
+    .degree-program-container {
+
+        // header
+        .degree-program-header {
+
+            position: relative;
+
+            @include flex-v-c-h-c( false );
+
+            width: 100vw;
+            height: 28rem;
+            margin: 0;
+            padding: 4rem 0 0 0;
+
+            @include fill( white, 0.965 );
+
+            background: {
+
+                size: cover;
+                position: center center;
+                repeat: no-repeat;
+
+            }
+
+            // overlay
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                @include fill( $cvnavy, 0.565 );
+
+            }
+
+            // title
+            .program-title {
+
+                position: relative;
+
+                z-index: 20;
+
+                margin: 0 0 0 0;
+                padding: 0 3rem 0 3rem;
+
+                @include font( $klavislim, 2rem, 400 );
+
+                line-height: 4rem;
+
+                letter-spacing: 0.285em;
+
+                @include color( $cvellow, 0.000 );
+
+                @include shadowtext( 0.75rem, 1.5rem, black, 0.465 );
+
+            }
+
+            // subtitle
+            .program-subtitle {
+
+                position: relative;
+
+                z-index: 20;
+
+                @include font( $industry, 0.75rem, 700 );
+
+                line-height: 1rem;
+
+                letter-spacing: 0.265em;
+
+                @include text( $up );
+
+                // @include color( $cvellow, 0.000 );
+                @include color( white, 0.000 );
+
+                @include shadowtext( 0.5rem, 1.5rem, black, 0.645 );
+
+            }
+
+        }
+
+        // content
+        .degree-program-content {
+
+            width: $content_width;
+            height: auto;
+            min-height: calc( 100vh - 28rem );
+            margin: 0 10vw 0 10vw;
+            padding: 2rem 2rem 2rem 2rem;
+
+            @include color( $app10, 0.000 );
+
+            @include fill( white, 0.000 );
+
+        }
+
+        // label
+        .content-label {
+
+            display: block;
+
+            margin: 0 0 0.5rem 0;
+
+            @include font( $klavislim, 0.875rem, 500 );
+
+            @include text( $up );
+
+        }
+
+        // output
+        .content-output {
+
+            display: block;
+
+            margin: 0 0 1.5rem 0;
+
+            // p
+            p {
+
+                margin: 0 0 0 0;
+
+            }
+
+        }
+
+    }
