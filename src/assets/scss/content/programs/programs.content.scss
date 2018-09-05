@@ -64,8 +64,6 @@
 
                 @include color( $cvellow, 0.000 );
 
-                // @include shadowtext( 0.75rem, 1.5rem, black, 0.465 );
-
             }
 
             // navigation
@@ -136,13 +134,14 @@
 
                 @include flex-h-j-v-s( false );
 
+                padding: 0 0 0 0;
+
                 // text
                 .description-text {
 
-                    @include flex-h-s-v-c( true );
+                    @include flex-h-e-v-c( true );
 
-                    width: calc( 100% - 16rem );
-                    padding: 0 2rem 0 0;
+                    padding: 8rem 4rem 8rem 8rem;
 
                     @include font( $klavika, 1.25rem, 400 );
 
@@ -157,10 +156,7 @@
 
                     @include flex-v-t-h-s( true );
 
-                    width: 16rem;
-                    padding: 2rem 2rem 2rem 2rem;
-
-                    @include fill( $cvnavy, 0.125 );
+                    padding: 8rem 8rem 8rem 4rem;
 
                     // title
                     .degree-type-label {
@@ -170,7 +166,7 @@
                         height: 0.75rem;
                         margin: 0 0 0.5rem 0;
 
-                        @include font( $klavislim, 0.875rem, 500 );
+                        @include font( $industry, 0.6875rem, 600 );
 
                         line-height: 0.75rem;
 
@@ -178,7 +174,7 @@
 
                         @include text( $up );
 
-                        @include color( $cvellow, 0.000 );
+                        @include color( $blue, 0.000 );
 
                     }
 
@@ -187,30 +183,10 @@
 
                         @include flex-h-s-v-c( true );
 
-                        height: 0.75rem;
+                        height: 1rem;
                         margin: 0 0 1rem 0;
 
-                        @include font( $klavika, 0.875rem, 500 );
-
-                        line-height: 0.75rem;
-
-                        letter-spacing: 0.065em;
-
-                        @include color( white, 0.000 );
-
-                    }
-
-                    // button
-                    .degree-document-button {
-
-                        @include flex-h-c-v-c( true );
-
-                        width: 100%;
-                        height: 3rem;
-                        margin: 0 0 1rem 0;
-                        padding: 0 1.25rem 0 1.25rem;
-
-                        @include font( $klavislim, 0.875rem, 400 );
+                        @include font( $klavislim, 1rem, 400 );
 
                         line-height: 0.75rem;
 
@@ -218,23 +194,64 @@
 
                         @include text( $up );
 
-                        @include fill( white, 0.905 );
+                        @include color( $cvnavy, 0.225 );
+
+                    }
+
+                    // button
+                    .degree-document-button {
+
+                        position: relative;
+
+                        @include flex-h-s-v-c( true );
+
+                        min-width: 16rem;
+                        height: 3rem;
+                        margin: 0 1rem 1rem 0;
+                        padding: 0.1875rem 3rem 0 1.25rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.265em;
+
+                        @include text( $up );
 
                         @include color( white, 0.000 );
 
+                        @include fill( $cvnavy, 0.095 );
+
                         transition: $all220;
+
+                        // last child
+                        &:last-child {
+
+                            margin: 0 0 0 0;
+
+                        }
 
                         // hover state
                         &:hover {
 
-                            @include fill( $blue, 0.000 );
+                            @include fill( $roarange, 0.000 );
 
                         }
 
-                        // last button
-                        &:last-child {
+                        // after
+                        &:after {
 
-                            margin: 0 0 0 0;
+                            @include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
+
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+
+                            z-index: 10;
+
+                            @include color( white, 0.375 );
 
                         }
 
@@ -258,10 +275,89 @@
 
                 }
 
+                // video container
+                .video-container {
+
+                    width: 60%;
+
+                    // video
+                    .program-video {
+
+                        position: relative;
+
+                        padding: 56.25% 0 0 0;
+
+                        // iframe
+                        iframe {
+
+                            position: absolute;
+
+                            top: 0;
+                            left: 0;
+
+                            width: 100%;
+                            height: 100%;
+
+                        }
+
+                    }
+
+                }
+
+                // text
+                .video-text {
+
+                    @include flex-v-b-h-s( true );
+
+                    width: 40%;
+                    padding: 0 0 0 3rem;
+
+                    letter-spacing: 0.035em;
+
+                    @include text( $up );
+
+                    @include color( $app90, 0.000 );
+
+                    // type
+                    .program-type {
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 2rem;
+
+                        letter-spacing: 0.265em;
+
+                    }
+
+                    // name
+                    .program-name {
+
+                        margin: 0 0 0 -0.125rem;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        line-height: 3rem;
+
+                    }
+
+                    // subtext
+                    .program-subtext {
+
+                        @include font( $vitesse, 0.75rem, 600 );
+
+                        line-height: 1rem;
+
+                    }
+
+                }
+
+
             }
 
             // facts
             &.facts {
+
+                position: relative;
 
                 @include flex-h-j-v-s( false );
 
@@ -269,17 +365,41 @@
 
                 @include fill( $cvnavy, 0.00 );
 
-                background: {
+                // after
+                &:after {
 
-                    image: url(../img/content/content.background.01.jpg);
-                    repeat: no-repeat;
-                    size: cover;
-                    position: bottom right;
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 0;
+
+                    background: {
+
+                        image: url(../img/patterns/pattern.horizontal.svg);
+                        repeat: no-repeat;
+                        size: 120%;
+                        position: 0 -8rem;
+
+                    }
+
+                    opacity: 0.275;
+
+                    mix-blend-mode: overlay;
 
                 }
 
                 // title
                 .facts-title {
+
+                    position: relative;
+
+                    z-index: 10;
 
                     @include flex-h-e-v-t( true );
 
@@ -294,7 +414,7 @@
 
                         @include font( $klavislim, 3rem, 400 );
 
-                        line-height: 3rem;
+                        line-height: 2.5rem;
 
                         letter-spacing: 0.075em;
 
@@ -307,6 +427,10 @@
                 // title
                 .facts-content {
 
+                    position: relative;
+
+                    z-index: 10;
+
                     @include flex-h-s-v-t( true );
 
                     width: 60%;
@@ -316,20 +440,48 @@
                     // list
                     .list {
 
-                        margin: 1.5rem 0 0 0;
+                        margin: 0 0 0 0;
 
                         list-style: none;
 
                         // item
                         li {
 
-                            margin: 0 0 1.5rem 0;
+                            margin: 0 0 2rem 0;
 
-                            @include font( $industry, 0.875rem, 600 );
+                            @include font( $industry, 0.875rem, 500 );
 
-                            line-height: 1rem;
+                            line-height: 1.25rem;
+
+                            letter-spacing: 0.035em;
 
                             @include color( white, 0.000 );
+
+                            // last child
+                            &:last-child {
+
+                                margin-bottom: 0;
+
+                            }
+
+                            // highlight
+                            .highlight {
+
+                                @include flex-h-s-v-c( false );
+
+                                margin: 0 0 0.5rem 0;
+
+                                @include font( $klavislim, 1.25rem, 400 );
+
+                                line-height: 1rem;
+
+                                letter-spacing: 0.075em;
+
+                                @include text( $up );
+
+                                @include color( $cvellow, 0.000 );
+
+                            }
 
                         }
 
@@ -342,14 +494,20 @@
             // documents
             &.documents {
 
+                @include flex-h-s-v-c( false );
+                @include flex-v-t-h-s( true );
+
                 // button
                 .document-button {
 
-                    @include flex-h-c-v-c( true );
+                    position: relative;
 
+                    @include flex-h-s-v-c( true );
+
+                    min-width: 16rem;
                     height: 3rem;
-                    margin: 0 0 0 0;
-                    padding: 0 1.25rem 0 1.25rem;
+                    margin: 0 1rem 1rem 0;
+                    padding: 0.1875rem 3rem 0 1.25rem;
 
                     @include font( $klavislim, 1rem, 400 );
 
@@ -362,6 +520,615 @@
                     @include fill( $roarange, 0.000 );
 
                     @include color( white, 0.000 );
+
+                    transition: $all220;
+
+                    // last child
+                    &:last-child {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $gold, 0.000 );
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        z-index: 10;
+
+                        // margin: 0 0.5rem 0.125rem 0;
+
+                    }
+
+                }
+
+            }
+
+            // concentrations
+            &.concentrations {
+
+                @include flex-v-c-h-st( false );
+
+                // title
+                .title {
+
+                    @include flex-h-c-v-c( false );
+
+                    margin: 0 0 4rem 0;
+
+                    @include font( $klavislim, 2.5rem, 400 );
+
+                    letter-spacing: 0.075em;
+
+                    @include color( $blue, 0.000 );
+
+                }
+
+                // content
+                .concentrations-content {
+
+                    @include flex-h-j-v-s( false );
+
+                    // button
+                    .concentration-button {
+
+                        position: relative;
+
+                        @include flex-v-c-h-st( false );
+
+                        // flex-grow: -1;
+                        flex-basis: calc( 50% - 2rem );
+
+                        min-height: 18rem;
+                        margin: 0 0 0 0;
+                        padding: 6rem 2rem 4rem 2rem;
+
+                        border-bottom: 2px solid $cvellow;
+
+                        @include color( $g140, 0.000 );
+
+                        @include fill( $neutral, 0.665 );
+                        // @include fill( $cvellow, 0.865 );
+
+                        // common
+                        .button-title,
+                        .button-text {
+
+                            position: relative;
+
+                            z-index: 10;
+
+                        }
+
+                        // title
+                        .button-title {
+
+                            @include flex-h-s-v-b( false );
+
+                            margin: 0 0 1rem 0;
+
+                            @include font( $klavislim, 1.25rem, 400 );
+
+                            line-height: 1rem;
+
+                            letter-spacing: 0.075em;
+
+                            @include text( $up, left );
+
+                            @include color( $g140, 0.000 );
+
+                        }
+
+                        // text
+                        .button-text {
+
+                            @include flex-h-s-v-b( false );
+
+                            @include font( $industry, 0.75rem, 600 );
+
+                            line-height: 1rem;
+
+                            @include text( inherit, left);
+
+                            @include color( $app05, 0.185 );
+
+                        }
+
+                        // button
+                        .button-button {
+
+                            position: absolute;
+
+                            right: 0;
+                            bottom: 0;
+
+                            z-index: 10;
+
+                            @include flex-h-e-v-c( false );
+
+                            height: 3rem;
+                            margin: 1.5rem 0 0 0;
+                            padding: 0.125rem 2.5rem 0 1.25rem;
+
+                            @include font( $klavislim, 0.75rem, 500 );
+
+                            line-height: 0.875rem;
+
+                            letter-spacing: 0.265em;
+
+                            @include text( $up );
+
+                            @include color( $g140, 0.000 );
+
+                            transition: $all220;
+
+                            // hover state
+                            &:hover {
+
+                                // @include fill( $g140, 0.000 );
+
+                            }
+
+                            // after
+                            &:after {
+
+                                @include codicon( 2.75rem, 3rem, 1rem 0.75rem 1rem 1rem, 0.75rem, $cvellow, '\EDD6' );
+
+                                position: absolute;
+
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+
+                                z-index: 10;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // careers
+            &.careers {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include fill( $neutral, 0.000 );
+
+                // text
+                .careers-text {
+
+                    @include flex-v-t-h-e( false );
+
+                    flex-basis: 40%;
+
+                    margin: 0;
+                    padding: 8rem 4rem 16rem 10vw;
+
+                    @include fill( $blue, 0.000 );
+
+                    // title
+                    .careers-title {
+
+                        @include font( $klavislim, 2.5rem, 400 );
+
+                        line-height: 3rem;
+
+                        letter-spacing: 0.075em;
+
+                        @include text( $up, right );
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                    // text
+                    .careers-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include text( inherit, right );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                }
+
+                // list
+                .careers-list {
+
+                    @include flex-h-s-v-t( false );
+
+                    align-content: flex-start;
+                    flex-wrap: wrap;
+                    flex-basis: 60%;
+
+                    padding: 8rem 10vw 8rem 4rem;
+
+                    @include fill( $blue, 0.385 );
+
+                    // item
+                    .item {
+
+                        @include flex-h-s-v-c( true );
+
+                        flex-basis: 50%;
+
+                        height: 2rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0 1rem 0 0;
+
+                        @include font( $industry, 1rem, 600 );
+
+                        line-height: 0.75rem;
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+            }
+
+            // employers
+            &.employers {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include fill( $neutral, 0.000 );
+
+                // text
+                .employers-text {
+
+                    @include flex-v-t-h-s( false );
+
+                    flex-basis: 40%;
+
+                    margin: 0;
+                    padding: 8rem 10vw 16rem 4rem;
+
+                    @include fill( $neutral, 0.000 );
+
+                    // title
+                    .employers-title {
+
+                        @include font( $klavislim, 2.5rem, 400 );
+
+                        line-height: 3rem;
+
+                        letter-spacing: 0.075em;
+
+                        @include text( $up, left );
+
+                        @include color( $g140, 0.000 );
+
+                    }
+
+                    // text
+                    .employers-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include text( inherit, left );
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+                // list
+                .employers-list {
+
+                    @include flex-h-e-v-t( true );
+
+                    align-content: flex-start;
+                    flex-wrap: wrap;
+                    flex-basis: 60%;
+
+                    padding: 8rem 10vw 8rem 4rem;
+
+                    @include fill( white, 0.265 );
+
+                    // item
+                    .item {
+
+                        @include flex-h-e-v-c( true );
+
+                        flex-basis: 50%;
+
+                        height: 2rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0 1rem 0 0;
+
+                        @include font( $industry, 1rem, 600 );
+
+                        line-height: 0.75rem;
+
+                        @include text( inherit, right );
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+            }
+
+            // organziations
+            &.organizations {
+
+                @include flex-v-c-h-c( false );
+
+                // title
+                .title {
+
+                    @include font( $klavislim, 2.5rem, 400 );
+
+                    line-height: 4rem;
+
+                    letter-spacing: 0.075em;
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // row
+                .buttons {
+
+                    @include flex-h-c-v-c( false );
+
+                    width: 100%;
+
+                }
+
+                // button
+                .organization-button {
+
+                    @include flex-h-c-v-c( true );
+
+                    height: 3rem;
+                    margin: 0 1rem 0 0;
+                    padding: 0.125rem 1.25rem 0 1.25rem;
+
+                    border: 1px solid white;
+
+                    @include font( $klavislim, 0.875rem, 400 );
+
+                    line-height: 0.75rem;
+
+                    letter-spacing: 0.135em;
+
+                    @include text( $up );
+
+                    @include color( white, 0.000 );
+
+                    transition: $all220;
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $roarange, 0.000 );
+
+                    }
+
+                    // last child
+                    &:last-child {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                }
+
+            }
+
+            // minors
+            &.minors {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include color( $app05, 0.185 );
+
+                @include fill( $neutral, 0.000 );
+
+                // content
+                .content {
+
+                    @include flex-v-c-h-s( true );
+
+                    flex-basis: 50%;
+
+                    margin: 8rem 0 8rem 0;
+                    padding: 8rem 10vw 8rem 6rem;
+
+                    // text
+                    .minor-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include color( $app05, 0.215 );
+
+                    }
+
+                    // button
+                    .minor-link-button {
+
+                        @include flex-h-c-v-c( false );
+
+                        height: 4rem;
+                        margin: 2rem 0 0 0;
+                        padding: 0.125rem 1.5rem 0 1.5rem;
+
+                        // border: 1px solid transparentize( $app05, 0.125 );
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.265em;
+
+                        @include text( $up );
+
+                        // @include color( $app05, 0.125 );
+                        @include color( white, 0.000 );
+
+                        @include fill( $roarange, 0.000 );
+
+                        transition: $all220;
+
+                    }
+
+                }
+
+                // design
+                .design-block {
+
+                    @include flex-h-c-v-c( true );
+
+                    flex-basis: 50%;
+
+                    @include fill( $blue, 0.000 );
+
+                    // image
+                    .artwork {
+
+                        width: 100%;
+                        height: 100%;
+
+                        background: {
+
+                            repeat: no-repeat;
+                            size: cover;
+                            position: center center;
+
+                        }
+
+                        opacity: 0.365;
+
+                    }
+
+                }
+
+            }
+
+            // similar majors
+            &.similar {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 10vw;
+
+                @include color( white, 0.000 );
+
+                @include fill( $cvnavy, 0.000 );
+
+                // title
+                .title {
+
+                    @include flex-v-c-h-e( true );
+
+                    flex-basis: 30%;
+
+                    margin: 12rem 0 12rem 0;
+                    padding: 0 4rem 0 0;
+
+                    @include color( $cvellow, 0.000 );
+
+                }
+
+                // button
+                .buttons {
+
+                    @include flex-h-j-v-s( true );
+
+                    flex-basis: 70%;
+
+                    // button
+                    .similar-major-link {
+
+                        @include flex-h-c-v-c( true );
+
+                        flex-grow: 1;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        letter-spacing: 0.235em;
+
+                        @include text( $up );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( white, 0.965 );
+
+                        transition: $all220;
+
+                        // 01
+                        &:nth-of-type( 1 ) {
+
+                            @include fill( white, 0.985 );
+
+                        }
+
+                        // 02
+                        &:nth-of-type( 2 ) {
+
+                            @include fill( white, 0.955 );
+
+                        }
+
+                        // 03
+                        &:nth-of-type( 3 ) {
+
+                            @include fill( white, 0.925 );
+
+                        }
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $roarange, 0.000 );
+
+                        }
+
+                    }
 
                 }
 
@@ -379,119 +1146,16 @@
 
             }
 
-            // video container
-            .video-container {
+            // title
+            .title {
 
-                width: 60%;
+                @include font( $klavislim, 2.5rem, 400 );
 
-                // @include shadowbox( 1rem, 4rem, black, 0.465 );
+                line-height: 4rem;
 
-                // video
-                .program-video {
+                letter-spacing: 0.075em;
 
-                    position: relative;
-
-                    padding: 56.25% 0 0 0;
-
-                    // iframe
-                    iframe {
-
-                        position: absolute;
-
-                        top: 0;
-                        left: 0;
-
-                        width: 100%;
-                        height: 100%;
-
-                    }
-
-                }
-
-            }
-
-            // text
-            .video-text {
-
-                @include flex-v-b-h-s( true );
-
-                width: 40%;
-                padding: 0 0 0 3rem;
-
-                letter-spacing: 0.035em;
-
-                @include text( $up );
-
-                @include color( $app90, 0.000 );
-
-                // type
-                .program-type {
-
-                    @include font( $klavislim, 1rem, 400 );
-
-                    line-height: 2rem;
-
-                    letter-spacing: 0.265em;
-
-                }
-
-                // name
-                .program-name {
-
-                    margin: 0 0 0 -0.125rem;
-
-                    @include font( $klavislim, 3rem, 400 );
-
-                    line-height: 3rem;
-
-                }
-
-                // subtext
-                .program-subtext {
-
-                    @include font( $vitesse, 0.75rem, 600 );
-
-                    line-height: 1rem;
-
-                }
-
-            }
-
-            // lists
-            ul {
-
-                margin: 0 0 0 1rem;
-
-            }
-
-        }
-
-        // label
-        .content-label {
-
-            display: block;
-
-            margin: 0 0 0.5rem 0;
-
-            @include font( $klavislim, 1.25rem, 400 );
-
-            @include text( none );
-
-            @include color( $blue, 0.000 );
-
-        }
-
-        // output
-        .content-output {
-
-            display: block;
-
-            margin: 0 0 1.5rem 0;
-
-            // p
-            p {
-
-                margin: 0 0 0 0;
+                @include color( $blue, 0.000 );
 
             }
 

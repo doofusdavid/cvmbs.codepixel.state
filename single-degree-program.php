@@ -14,7 +14,7 @@
 
 			// fields
 			$description   = get_field( 'program_description' );
-			$degree_type   = get_field( 'degree_type' );
+			$degree_type   = get_field( 'program_degree_type' );
 			$program_img   = get_field( 'program_image' );
 			$header_url    = $program_img[ 'url' ];
 			$program_video = get_field( 'program_video' );
@@ -153,39 +153,6 @@
 			</div>
 			<!-- END video -->
 
-			<!-- degree type -->
-			<div class="program-content program-row three-columns documents lite">
-
-				<span class="column-label">
-
-					degree type
-
-				</span>
-
-				<?php echo $degree_type; ?>
-
-				<?php if ( have_rows( 'program_docs' ) ): ?>
-
-					<?php while ( have_rows( 'program_docs' ) ): the_row();
-
-						$document_title = get_sub_field( 'document_button' );
-						$document_file = get_sub_field( 'document_pdf' );
-
-					?>
-
-					<button class="document-button" data-file="<?php echo $document_file[ 'filename' ]; ?>">
-
-						<?php echo $document_title; ?>
-
-					</button>
-
-					<?php endwhile; ?>
-
-				<?php endif; ?>
-
-			</div>
-			<!-- END degree type -->
-
 			<!-- facts -->
 			<div class="program-content program-row facts dark">
 
@@ -210,13 +177,20 @@
 
 							<?php while ( have_rows( 'program_facts' ) ): the_row();
 
-								$program_fact = get_sub_field( 'program_fact' );
+								$program_fact_title = get_sub_field( 'program_fact_title' );
+								$program_fact_text  = get_sub_field( 'program_fact_text' );
 
 							?>
 
 							<li>
 
-								<?php echo $program_fact; ?>
+								<em class="highlight">
+
+									<?php echo $program_fact_title; ?>
+
+								</em>
+
+								<?php echo $program_fact_text; ?>
 
 							</li>
 
@@ -233,240 +207,61 @@
 			<!-- END facts -->
 
 			<!-- concentrations -->
-			<div class="program-content">
+			<div class="program-content program-row concentrations lite">
 
-				<h3 class="content-label">
+				<!-- title -->
+				<h3 class="title">
 
-					program concentrations
+					concentrations
 
 				</h3>
+				<!-- END title -->
 
-				<span class="content-output">
+				<div class="concentrations-content">
 
 					<?php if ( have_rows( 'program_concentrations' ) ): ?>
 
-						<ul class="content-output-list">
+						<?php while ( have_rows( 'program_concentrations' ) ): the_row();
 
-							<?php while ( have_rows( 'program_concentrations' ) ): the_row();
+							$concentration_name = get_sub_field( 'concentration_title' );
+							$concentration_text = get_sub_field( 'concentration_description' );
+							$concentration_file = get_sub_field( 'concentration_curriculum' );
 
-								$concentration_name = get_sub_field( 'concentration_title' );
-								$concentration_text = get_sub_field( 'concentration_description' );
-								$concentration_file = get_sub_field( 'concentration_curriculum' );
+						?>
 
-							?>
+						<button class="concentration-button" data-file="<?php echo $concentration_file[ 'filename' ]; ?>">
 
-							<li>
+							<span class="button-title">
 
-								<?php echo $concentration_name; ?><br />
-								<?php echo $concentration_text; ?><br />
-								<?php echo $concentration_file[ 'filename' ]; ?>
+								<?php echo $concentration_name; ?>
 
-							</li>
+							</span>
 
-							<?php endwhile; ?>
+							<span class="button-text">
 
-						</ul>
+								<?php echo $concentration_text; ?>
+
+							</span>
+
+							<span class="button-button">
+
+								explore concentration
+
+							</span>
+
+						</button>
+
+						<?php endwhile; ?>
 
 					<?php endif; ?>
 
-				</span>
+				</div>
 
 			</div>
 			<!-- END concentrations -->
 
-			<!-- minors -->
-			<div class="program-content">
-
-				<h3 class="content-label">
-
-					program minors
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php if ( have_rows( 'program_minors' ) ): ?>
-
-						<ul class="content-output-list">
-
-							<?php while ( have_rows( 'program_minors' ) ): the_row();
-
-								$minor_name = get_sub_field( 'minor_name' );
-								$minor_type = get_sub_field( 'minor_link_type' );
-								$minor_file = get_sub_field( 'minor_link_file' );
-								$minor_link = get_sub_field( 'minor_link_page' );
-
-							?>
-
-							<li>
-
-								<?php echo $minor_name; ?><br />
-
-								<?php if ( $minor_type === 'page' ): ?>
-
-									<?php echo $minor_link; ?>
-
-								<?php elseif ( $minor_type === 'file' ): ?>
-
-									<?php echo $minor_file[ 'filename' ]; ?>
-
-								<?php endif; ?>
-
-							</li>
-
-							<?php endwhile; ?>
-
-						</ul>
-
-					<?php endif; ?>
-
-				</span>
-
-			</div>
-			<!-- END minors -->
-
-			<!-- similar majors -->
-			<div class="program-content">
-
-				<h3 class="content-label">
-
-					program similar majors
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php if ( have_rows( 'program_similar_majors' ) ): ?>
-
-						<ul class="content-output-list">
-
-							<?php while ( have_rows( 'program_similar_majors' ) ): the_row();
-
-								$similar_major = get_sub_field( 'similar_major_link' );
-
-							?>
-
-							<li>
-
-								<?php echo $similar_major; ?>
-
-							</li>
-
-							<?php endwhile; ?>
-
-						</ul>
-
-					<?php endif; ?>
-
-				</span>
-
-			</div>
-			<!-- END similar majors -->
-
-			<!-- student organizations -->
-			<div class="program-content">
-
-				<h3 class="content-label">
-
-					program student organizations
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php if ( have_rows( 'program_student_organizations' ) ): ?>
-
-						<ul class="content-output-list">
-
-							<?php while ( have_rows( 'program_student_organizations' ) ): the_row();
-
-								$organization_name = get_sub_field( 'organization_name' );
-								$organization_link = get_sub_field( 'organization_link' );
-
-							?>
-
-							<li>
-
-								<?php echo $organization_name; ?><br />
-								<?php echo $organization_link; ?>
-
-							</li>
-
-							<?php endwhile; ?>
-
-						</ul>
-
-					<?php endif; ?>
-
-				</span>
-
-			</div>
-			<!-- END student organizations -->
-
-			<!-- potential employers description -->
-			<div class="program-content">
-
-				<?php
-
-					$program_employer_text = get_field( 'program_employers_description' );
-
-				?>
-
-				<h3 class="content-label">
-
-					potential employers description
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php echo $program_employer_text; ?>
-
-				</span>
-
-			</div>
-			<!-- END description -->
-
-			<!-- potential employers list -->
-			<div class="program-content">
-
-				<h3 class="content-label">
-
-					list of potential employers
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php if ( have_rows( 'program_employers_list' ) ): ?>
-
-						<ul class="content-output-list">
-
-							<?php while ( have_rows( 'program_employers_list' ) ): the_row();
-
-								$potential_employer = get_sub_field( 'potential_employer' );
-
-							?>
-
-							<li>
-
-								<?php echo $potential_employer; ?>
-
-							</li>
-
-							<?php endwhile; ?>
-
-						</ul>
-
-					<?php endif; ?>
-
-				</span>
-
-			</div>
-			<!-- END potential employers list -->
-
-			<!-- potential careers description -->
-			<div class="program-content">
+			<!-- potential careers -->
+			<div class="program-content program-row careers">
 
 				<?php
 
@@ -474,63 +269,268 @@
 
 				?>
 
-				<h3 class="content-label">
+				<!-- text -->
+				<div class="careers-text">
 
-					potential careers description
+					<!-- title -->
+					<h3 class="careers-title">
 
-				</h3>
+						career opportunties
 
-				<span class="content-output">
+					</h3>
+					<!-- END title -->
 
-					<?php echo $program_careers_text; ?>
+					<!-- text -->
+					<span class="careers-description">
 
-				</span>
+						<?php echo $program_careers_text; ?>
 
-			</div>
-			<!-- END description -->
+					</span>
+					<!-- END text -->
 
-			<!-- potential careers list -->
-			<div class="program-content">
+				</div>
+				<!-- END text -->
 
-				<h3 class="content-label">
-
-					list of potential careers
-
-				</h3>
-
-				<span class="content-output">
+				<!-- list -->
+				<div class="careers-list">
 
 					<?php if ( have_rows( 'program_careers_list' ) ): ?>
 
-						<ul class="content-output-list">
+						<?php while ( have_rows( 'program_careers_list' ) ): the_row();
 
-							<?php while ( have_rows( 'program_careers_list' ) ): the_row();
+							$potential_career = get_sub_field( 'potential_career' );
 
-								$potential_career = get_sub_field( 'potential_career' );
+						?>
 
-							?>
+						<span class="item">
 
-							<li>
+							<?php echo $potential_career; ?>
 
-								<?php echo $potential_career; ?>
+						</span>
 
-							</li>
-
-							<?php endwhile; ?>
-
-						</ul>
+						<?php endwhile; ?>
 
 					<?php endif; ?>
 
-				</span>
+				</div>
+				<!-- END list -->
 
 			</div>
-			<!-- END potential careers list -->
+			<!-- END potential careers -->
+
+			<!-- potential employers -->
+			<div class="program-content program-row employers">
+
+				<?php
+
+					$program_employer_text = get_field( 'program_employers_description' );
+
+				?>
+
+				<!-- list -->
+				<div class="employers-list">
+
+					<?php if ( have_rows( 'program_employers_list' ) ): ?>
+
+						<?php while ( have_rows( 'program_employers_list' ) ): the_row();
+
+							$potential_employer = get_sub_field( 'potential_employer' );
+
+						?>
+
+							<span class="item">
+
+								<?php echo $potential_employer; ?>
+
+							</span>
+
+						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+				</div>
+				<!-- END list -->
+
+				<!-- text -->
+				<div class="employers-text">
+
+					<!-- title -->
+					<h3 class="employers-title">
+
+						potential employers
+
+					</h3>
+					<!-- END title -->
+
+					<!-- text -->
+					<span class="employers-description">
+
+						<?php echo $program_employer_text; ?>
+
+					</span>
+					<!-- END text -->
+
+				</div>
+				<!-- END text -->
+
+			</div>
+			<!-- END potential employers -->
+
+			<!-- student organizations -->
+			<div class="program-content program-row organizations dark">
+
+				<!-- title -->
+				<h3 class="title">
+
+					connect with other students
+
+				</h3>
+				<!-- END title -->
+
+				<!-- buttons -->
+				<div class="buttons">
+
+					<?php if ( have_rows( 'program_student_organizations' ) ): ?>
+
+						<?php while ( have_rows( 'program_student_organizations' ) ): the_row();
+
+							$organization_name = get_sub_field( 'organization_name' );
+							$organization_link = get_sub_field( 'organization_link' );
+
+						?>
+
+							<button class="organization-button" data-url="<?php echo $organization_link; ?>">
+
+								<?php echo $organization_name; ?>
+
+							</button>
+
+						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+				</div>
+				<!-- END buttons -->
+
+			</div>
+			<!-- END student organizations -->
+
+			<!-- minors -->
+			<div class="program-content program-row minors">
+
+				<?php if ( have_rows( 'program_minors' ) ): ?>
+
+					<?php while ( have_rows( 'program_minors' ) ): the_row();
+
+						$minor_name = get_sub_field( 'minor_name' );
+						$minor_type = get_sub_field( 'minor_link_type' );
+						$minor_file = get_sub_field( 'minor_link_file' );
+						$minor_link = get_sub_field( 'minor_link_page' );
+						$minor_text = get_sub_field( 'minor_description' );
+						$minor_img  = get_sub_field( 'minor_image' );
+
+					?>
+
+					<!-- image -->
+					<div class="design-block">
+
+						<div class="artwork" style="background-image:url(<?php echo $minor_img; ?>);">
+
+						</div>
+
+					</div>
+					<!-- END image -->
+
+					<!-- text -->
+					<div class="content">
+
+						<h3 class="title">
+
+							<?php echo $minor_name; ?>
+
+						</h3>
+
+						<span class="minor-description">
+
+							<?php echo $minor_text; ?>
+
+						</span>
+
+						<button class="minor-link-button" data-link="<?php
+
+						if ( $minor_type === 'page' ) {
+
+							echo $minor_link;
+
+						} elseif ( $minor_type === 'file' ) {
+
+							echo $minor_file[ 'filename' ];
+
+						}?>">
+
+							<span class="button-text">
+
+								explore minor
+
+							</span>
+
+						</button>
+
+					</div>
+					<!-- END text -->
+
+					<?php endwhile; ?>
+
+				<?php endif; ?>
+
+			</div>
+			<!-- END minors -->
+
+			<!-- similar majors -->
+			<div class="program-content program-row similar dark blue">
+
+				<h3 class="title">
+
+					similar majors
+
+				</h3>
+
+				<!-- buttons -->
+				<div class="buttons">
+
+					<?php if ( have_rows( 'program_similar_majors' ) ): ?>
+
+						<?php while ( have_rows( 'program_similar_majors' ) ): the_row();
+
+							$similar_major_name = get_sub_field( 'similar_major_name' );
+							$similar_major_link = get_sub_field( 'similar_major_link' );
+
+						?>
+
+						<button class="similar-major-link" data-link="<?php echo $similar_major_link; ?>">
+
+							<span class="button-title">
+
+								<?php echo $similar_major_name; ?>
+
+							</span>
+
+						</button>
+
+						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+				</div>
+				<!-- END buttons -->
+
+			</div>
+			<!-- END similar majors -->
 
 			<!-- research opportunities -->
-			<div class="program-content">
+			<div class="program-content program-row empty lite">
 
-				<h3 class="content-label">
+				<h3 class="title">
 
 					research opportunities
 
@@ -564,6 +564,10 @@
 
 						</ul>
 
+					<?php else: ?>
+
+						example content pending
+
 					<?php endif; ?>
 
 				</span>
@@ -572,9 +576,9 @@
 			<!-- END research opportunities -->
 
 			<!-- program contacts -->
-			<div class="program-content">
+			<div class="program-content program-row empty dark">
 
-				<h3 class="content-label">
+				<h3 class="title">
 
 					program contacts
 
@@ -616,7 +620,7 @@
 			<!-- END program contacts -->
 
 			<!-- honor program information -->
-			<div class="program-content">
+			<div class="program-content program-row empty lite">
 
 				<?php
 
@@ -624,7 +628,7 @@
 
 				?>
 
-				<h3 class="content-label">
+				<h3 class="title">
 
 					honor program information
 
@@ -632,7 +636,7 @@
 
 				<span class="content-output">
 
-					<?php echo $program_careers_text; ?>
+					<?php echo $program_honors_info; ?>
 
 				</span>
 
@@ -640,7 +644,7 @@
 			<!-- END honor program information -->
 
 			<!-- tuition + financial aid -->
-			<div class="program-content">
+			<div class="program-content program-row empty dark">
 
 				<?php
 
@@ -648,7 +652,7 @@
 
 				?>
 
-				<h3 class="content-label">
+				<h3 class="title">
 
 					Tuition + Financial Aid
 
@@ -673,4 +677,4 @@
 	</div>
 	<!-- END content container -->
 
-	<?php get_footer(); ?>
+<?php get_footer(); ?>
