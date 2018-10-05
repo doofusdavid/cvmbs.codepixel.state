@@ -63,6 +63,7 @@
     site.ui = {
 
         header    : $('#site-header'),
+        toolbar   : $('#site-menu-toolbar'),
         layout    : $('#site-layout'),
         billboard : $('#billboard-homepage'),
         slides    : $('#billboard-slides'),

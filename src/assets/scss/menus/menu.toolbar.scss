@@ -1,43 +1,48 @@
 // stylesheet :: site menu component styles
 
     // settings
-    $toolbar_width  : 4rem;
-    $toolbar_height : calc( 100vh - 4rem );
+    $toolbar_width  : 5rem;
+    $toolbar_height : calc( 100vh - 5rem );
 
     // styles
     #site-menu-toolbar {
 
-        position: absolute;
+        position: fixed;
 
-        top: 0;
-        // right: -4rem;
+        top: 5rem;
+        right: 0;
         bottom: 0;
-        left: -4rem;
 
-        z-index: 20;
+        z-index: 100;
 
-        @include flex-v-c-h-c( false );
+        @include flex-v-t-h-c( false );
 
         width: $toolbar_width;
         height: $toolbar_height;
         margin: 0;
         padding: 0;
 
-        transition: all 320ms linear 0ms;
+        @include fill( white, 0.965 );
+
+        @include gradient( 0deg, $nite, 0.565, 0%, $nite, 0.325, 100% );
+
+        transform: translate3d( 5rem, 0, 0 );
+
+        transition: background-color 360ms linear 0ms;
 
         // hover state
         &:hover {
 
-            @include fill( $dark, 0.565 );
+            @include fill( white, 0.895 );
 
         }
 
         // menu open state
-        .is-open & {
+        &.site-menu-open {
 
-            @include fill( white, 0.000 );
+            @include fill( $nite, 0.615 );
 
-            @include gradient( 90deg, $beige, 0.195, 0%, $beige, 0.195, 100% );
+            // @include gradient( 90deg, $nite, 0.695, 0%, $dark, 0.565, 100% );
 
             transition: all 320ms linear 0ms;
 
@@ -55,16 +60,15 @@
 
             @include flex-v-c-h-c( false );
 
-            width: 4rem;
-            height: 100%;
+            width: 5rem;
+            height: auto;
             margin: 0;
-            padding: 0 0 2rem 0;
+            padding: 0;
 
             // list
             ul {
 
-                width: 4rem;
-                height: 24rem;
+                width: 5rem;
                 margin: 0;
                 padding: 0;
 
@@ -73,8 +77,8 @@
                 // list item
                 .menu-item {
 
-                    width: 4rem;
-                    height: 4rem;
+                    width: 5rem;
+                    height: 5rem;
                     margin: 0;
                     padding: 0;
 
@@ -94,16 +98,17 @@
 
                 display: block;
 
-                width: 4rem;
-                height: 4rem;
+                width: 5rem;
+                height: 5rem;
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
                 transition: all 220ms linear 0ms;
 
                 // hover state
                 &:hover {
 
-                    // @include fill( white, 0.875 );
-                    @include fill( $g135, 0.145 );
+                    @include fill( white, 0.945 );
+                    // @include fill( $g135, 0.145 );
 
                     // svg
                     .icon {
@@ -148,8 +153,8 @@
                     // path
                     .path {
 
-                        // fill: white;
-                        fill: $g135;
+                        fill: white;
+                        // fill: $g135;
 
                         // opacity: 0.565;
                         opacity: 0.765;
