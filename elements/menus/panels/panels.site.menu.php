@@ -8,7 +8,7 @@
         <!-- panel.header -->
         <header id="menu-panel-main-header" class="panel-header">
 
-            college navigation menu
+            site navigation
 
         </header>
         <!-- END panel.header -->
@@ -53,8 +53,6 @@
         </header>
         <!-- END panel.header -->
 
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
     </panel>
     <!-- END panel.search -->
 
@@ -68,8 +66,6 @@
 
         </header>
         <!-- END panel.header -->
-
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
 
     </panel>
     <!-- END panel.events -->
@@ -85,8 +81,6 @@
         </header>
         <!-- END panel.header -->
 
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
     </panel>
     <!-- END panel.resources -->
 
@@ -96,18 +90,10 @@
         <!-- panel.header -->
         <header id="menu-panel-about-header" class="panel-header">
 
-            college navigation menu
+            about the college
 
         </header>
         <!-- END panel.header -->
-
-        <!-- menu -->
-        <nav id="menu-panel-global-menu" class="panel-content menu">
-
-            <?php get_template_part( 'elements/menus/panels/panels.global.menu' ); ?>
-
-        </nav>
-        <!-- END menu -->
 
     </panel>
     <!-- END panel.about -->
@@ -123,8 +109,6 @@
         </header>
         <!-- END panel.header -->
 
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
     </panel>
     <!-- END panel.social -->
 
@@ -138,8 +122,6 @@
 
         </header>
         <!-- END panel.header -->
-
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
 
     </panel>
     <!-- END panel.contact -->

@@ -1,8 +1,8 @@
 // stylesheet :: site menu component styles
 
     // settings
-    $menu_width  : 28rem;
-    $menu_height : calc( 100vh - 5rem );
+    $menu_width  : 24rem;
+    $menu_height : calc( 100vh - 4rem );
 
     // colors
     $menu_fill:
@@ -24,8 +24,7 @@
 
         position: fixed;
 
-        top: 5rem;
-        right: 0;
+        top: 4rem;
         bottom: 0;
 
         z-index: 80;
@@ -39,22 +38,20 @@
 
         overflow: visible;
 
-        visibility: hidden;
+        visibility: visible;
 
-        @include fill( $menu_fill, 1.000 );
+        @include fill( $menu_fill, 0.535 );
 
         box-shadow: none;
 
-        transform: translate3d( 28rem, 0, 0 );
+        transform: translate3d( 24rem, 0, 0 );
 
         transition: none;
 
         // open state
         &.is-open {
 
-            visibility: visible;
-
-            // box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
+            box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
 
         }
 
@@ -63,7 +60,7 @@
         .single-degree-program &,
         .archive & {
 
-            transform: translate3d( -28rem, 0, 0 );
+            transform: translate3d( 28rem, 0, 0 );
 
         }
 

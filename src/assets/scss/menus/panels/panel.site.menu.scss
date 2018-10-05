@@ -1,7 +1,7 @@
 // stylesheet :: panel.site.menu component styles
 
     // settings
-    $panel_size : calc( 100% - 5rem );
+    $panel_size : calc( 100% - 4rem );
 
     // colors
     $submenu_fill:
@@ -31,11 +31,9 @@
         z-index: 10;
 
         width: 100%;
-        height: calc( 100vh - 5rem );
+        height: calc( 100vh - 4rem );
         margin: 0;
         padding: 0;
-
-        overflow: hidden;
 
         @include fill( white, 1.000 );
 
@@ -51,16 +49,21 @@
 
             position: relative;
 
-            padding: 5rem 0 8rem 0;
+            padding: 4rem 0 8rem 0;
+
+            @include fill( $nite, 0.785 );
 
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
+            // @include gradient( 0deg, $beige, 0.045, 0%, $beige, 0.045, 100% );
 
             // header
             .panel-header {
 
-                @include fill( $g140, 0.465 );
+                @include fill( $g140, 0.265 );
+                // @include fill( $beige, 0.000 );
 
-                color: $gold;
+                color: $beige;
+                // color: $g140;
 
             }
 
@@ -90,11 +93,9 @@
                     flex-wrap: wrap;
 
                     width: 100%;
-                    min-height: 3.0625rem;
+                    min-height: 3rem;
                     margin: 0 0 0 0;
                     padding: 0 0 0 0;
-
-                    border-bottom: 1px solid transparentize( white, 0.865 );
 
                     // parent item
                     &.menu-item-has-children {
@@ -161,7 +162,7 @@
                             // arrow
                             &:after {
 
-                                @include codicon( 1rem, 1rem, 0, 1rem, $faux-gold, '\edc9' );
+                                @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\edc9' );
 
                                 position: absolute;
 
@@ -240,15 +241,15 @@
                         margin: 0 0 0 0;
                         padding: 0 1rem 0 1rem;
 
-                        @include font( $industry, 0.875rem, 600 );
+                        @include font( $klavislim, 0.875rem, 500 );
 
                         line-height: 0.75rem;
 
-                        letter-spacing: 0.055em;
+                        letter-spacing: 0.065em;
 
-                        // @include text( $up );
+                        @include text( $up );
 
-                        @include color( white, 0.215 );
+                        @include color( white, 0.000 );
 
                         @include fill( white, 1.000 );
 
@@ -259,7 +260,7 @@
 
                             color: $beige;
 
-                            @include fill( $g135, 0.325 );
+                            @include fill( $g135, 0.000 );
 
                         }
 
@@ -289,11 +290,9 @@
 
                 z-index: 20;
 
-                @include flex-h-c-v-c( false );
-
                 width: 100%;
                 height: 4rem;
-                // margin: 0 4rem 0 4rem;
+                margin: 0 4rem 0 4rem;
 
                 // svg
                 svg {

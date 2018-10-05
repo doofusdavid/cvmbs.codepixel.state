@@ -91,9 +91,6 @@ export var scrollUI = {
 
             slides = site.ui.slides;
 
-            // prevent quick keyboard scroll + jump (REMOVE/FIX)
-            e.preventDefault;
-
             // event trigger
             trigger = e.which;
 

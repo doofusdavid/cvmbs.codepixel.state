@@ -20,7 +20,7 @@
             </li>
 
             <!-- search -->
-            <li class="menu-item">
+            <li class="menu-item  hidden">
 
                 <?php
 
@@ -52,6 +52,17 @@
 
             </li>
 
+            <!-- about -->
+            <li class="menu-item">
+
+                <?php
+
+                    get_template_part( 'elements/menus/buttons/button.about' );
+
+                ?>
+
+            </li>
+
             <!-- social media -->
             <li class="menu-item">
 
@@ -75,22 +86,11 @@
             </li>
 
             <!-- news -->
-            <li class="menu-item">
+            <li class="menu-item hidden">
 
                 <?php
 
                     get_template_part( 'elements/menus/buttons/button.news' );
-
-                ?>
-
-            </li>
-
-            <!-- home -->
-            <li class="menu-item">
-
-                <?php
-
-                    get_template_part( 'elements/menus/buttons/button.about' );
 
                 ?>
 

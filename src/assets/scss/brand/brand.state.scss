@@ -16,7 +16,7 @@
 
         padding: 1rem 0 1rem 0;
 
-        color: white;
+        color: $g140;
 
         // menu open state
         .site-menu-open &,
@@ -37,7 +37,7 @@
             margin: 0;
             padding: 0 0.75rem 0 0;
 
-            @include font( $industry, 1.125rem, 700 );
+            @include font( $industry, 1.25rem, 700 );
 
             letter-spacing: 0.015em;
 

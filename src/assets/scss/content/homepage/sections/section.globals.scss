@@ -194,13 +194,19 @@
                 margin: 0;
                 padding: 0 0 1rem 1rem;
 
-                @include font( $klavislim, 2.5rem, 400 );
+                @include typo(
 
-                @include typo( 1.75rem, 0.135em );
+                    $klavislim,
+                    2.5rem,
+                    400,
+                    normal,
+                    1.75rem,
+                    0.135em,
+                    inherit,
+                    $up,
+                    $gold
 
-                @include text( $up );
-
-                @include color( $gold, 0.000 );
+                );
 
             }
 
@@ -243,15 +249,25 @@
 
             }
 
+            // opacity: 1.000;
+
+            // transition: all 480ms linear 160ms;
+
             span {
 
-                @include font( $industry, 0.6875rem, 600 );
+                @include typo(
 
-                @include typo( 0.5rem, 0.085em );
+                    $industry,
+                    0.6875rem,
+                    600,
+                    normal,
+                    0.5rem,
+                    0.085em,
+                    inherit,
+                    $up,
+                    transparentize( white, 0.425 )
 
-                @include text( $up );
-
-                @include color( white, 0.000 );
+                );
 
                 transition: all 220ms linear 0ms;
 

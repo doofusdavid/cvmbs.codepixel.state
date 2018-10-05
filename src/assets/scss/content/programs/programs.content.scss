@@ -6,29 +6,6 @@
     // styles
     .degree-program-container {
 
-        position: relative;
-
-        top: -1rem;
-        right: -1rem;
-        left: -1rem;
-
-        width: calc( 100vw + 2rem );
-
-        -webkit-filter: blur( 0px );
-                filter: blur( 0px );
-
-        transition: all 0ms linear 0ms;
-
-        // menu open class
-        .site-menu-open & {
-
-            -webkit-filter: blur( 8px );
-                    filter: blur( 8px );
-
-            transition: all 0ms linear 0ms;
-
-        }
-
         // header
         .degree-program-header {
 
@@ -36,10 +13,10 @@
 
             @include flex-v-b-h-s( false );
 
-            width: calc( 100vw + 2rem );
+            width: 100vw;
             height: 28rem;
-            margin: 0 4rem 0 0;
-            padding: 4rem calc( 10vw + 4rem ) 2rem 10vw;
+            margin: 0;
+            padding: 4rem 10vw 2rem 10vw;
 
             @include fill( white, 0.965 );
 
@@ -113,10 +90,9 @@
         // content
         .degree-program-content {
 
-            width: calc( 100vw + 2rem );
+            width: 100vw;
             height: auto;
             min-height: calc( 100vh - 28rem );
-            // margin: 0 4rem 0 0;
 
             @include color( $app10, 0.000 );
 
@@ -125,8 +101,8 @@
         // content
         .program-content {
 
-            width: 100%;
-            padding: 8rem calc( 10vw + 5rem ) 8rem calc( 10vw + 1rem );
+            width: 100vw;
+            padding: 8rem 10vw 8rem 10vw;
 
             // row
             &.program-row {
@@ -158,7 +134,7 @@
 
                 @include flex-h-j-v-s( false );
 
-                padding: 0 4rem 0 0;
+                padding: 0 0 0 0;
 
                 // text
                 .description-text {

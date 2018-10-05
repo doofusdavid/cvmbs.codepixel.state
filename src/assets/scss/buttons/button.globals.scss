@@ -98,13 +98,19 @@
 
         }
 
-        @include font( $industry, 0.6875rem, 600 );
+        @include typo(
 
-        @include typo( 0.75rem, 0.085em );
+            $industry,
+            0.6875rem,
+            600,
+            normal,
+            0.75rem,
+            0.085em,
+            inherit,
+            $up,
+            white
 
-        @include text( $up );
-
-        @include color( white, 0.000 );
+        );
 
         em,
         strong {

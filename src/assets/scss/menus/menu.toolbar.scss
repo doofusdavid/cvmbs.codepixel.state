@@ -1,50 +1,45 @@
 // stylesheet :: site menu component styles
 
     // settings
-    $toolbar_width  : 5rem;
-    $toolbar_height : calc( 100vh - 5rem );
+    $toolbar_width  : 4rem;
+    $toolbar_height : calc( 100vh - 4rem );
 
     // styles
     #site-menu-toolbar {
 
-        position: fixed;
+        position: absolute;
 
-        top: 5rem;
-        right: 0;
+        top: 0;
+        // right: -4rem;
         bottom: 0;
+        left: -4rem;
 
-        z-index: 100;
+        z-index: 20;
 
-        @include flex-v-t-h-c( false );
+        @include flex-v-c-h-c( false );
 
         width: $toolbar_width;
         height: $toolbar_height;
         margin: 0;
         padding: 0;
 
-        @include fill( white, 0.965 );
-
-        @include gradient( 0deg, $nite, 0.565, 0%, $nite, 0.325, 100% );
-
-        transform: translate3d( 5rem, 0, 0 );
-
-        transition: background-color 360ms linear 0ms;
+        transition: all 320ms linear 0ms;
 
         // hover state
         &:hover {
 
-            @include fill( white, 0.895 );
+            @include fill( $dark, 0.565 );
 
         }
 
         // menu open state
-        &.site-menu-open {
+        .is-open & {
 
-            @include fill( $nite, 0.615 );
+            @include fill( white, 0.000 );
 
-            // @include gradient( 90deg, $nite, 0.695, 0%, $dark, 0.565, 100% );
+            @include gradient( 90deg, $beige, 0.195, 0%, $beige, 0.195, 100% );
 
-            transition: background-color 320ms linear 0ms;
+            transition: all 320ms linear 0ms;
 
             // hover state
             &:hover {
@@ -60,15 +55,16 @@
 
             @include flex-v-c-h-c( false );
 
-            width: 5rem;
-            height: auto;
+            width: 4rem;
+            height: 100%;
             margin: 0;
-            padding: 0;
+            padding: 0 0 2rem 0;
 
             // list
             ul {
 
-                width: 5rem;
+                width: 4rem;
+                height: 24rem;
                 margin: 0;
                 padding: 0;
 
@@ -77,8 +73,8 @@
                 // list item
                 .menu-item {
 
-                    width: 5rem;
-                    height: 5rem;
+                    width: 4rem;
+                    height: 4rem;
                     margin: 0;
                     padding: 0;
 
@@ -98,17 +94,16 @@
 
                 display: block;
 
-                width: 5rem;
-                height: 5rem;
-                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                width: 4rem;
+                height: 4rem;
 
                 transition: all 220ms linear 0ms;
 
                 // hover state
                 &:hover {
 
-                    @include fill( white, 0.945 );
-                    // @include fill( $g135, 0.145 );
+                    // @include fill( white, 0.875 );
+                    @include fill( $g135, 0.145 );
 
                     // svg
                     .icon {
@@ -153,8 +148,8 @@
                     // path
                     .path {
 
-                        fill: white;
-                        // fill: $g135;
+                        // fill: white;
+                        fill: $g135;
 
                         // opacity: 0.565;
                         opacity: 0.765;

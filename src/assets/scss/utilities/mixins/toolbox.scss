@@ -299,14 +299,32 @@
     }
 
     // typography
-    @mixin typo( $height: 1rem, $space: 0.025em ) {
+    @mixin typo( $font: $industry, $size: 1rem, $weight: normal, $style: normal, $line: inherit, $space: inherit, $align: inherit, $case: $up, $dye: white ) {
 
-        line-height: $height;
+        font: {
+
+            family: $font;
+            size: $size;
+            weight: $weight;
+            style: $style;
+
+        }
+
+        line-height: $line;
 
         letter-spacing: $space;
 
+        text: {
+
+            align: $align;
+            transform: $case;
+
+        }
+
+        color: $dye;
+
     }
-    
+
     // transparentize
     @mixin fade( $type, $dye, $haze ) {
 

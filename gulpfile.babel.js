@@ -117,7 +117,9 @@
 
                 includePaths : PATHS.sass
 
-            } ).on( 'error', $.sass.logError ) )
+            } )
+
+                .on( 'error', $.sass.logError ) )
 
             .pipe( $.autoprefixer( {
 
@@ -131,9 +133,11 @@
 
             ) )
 
-            .pipe( $.sourcemaps.write() )
+            .pipe( $.if( !PRODUCTION,
 
+                $.sourcemaps.write()
 
+            ) )
 
             .pipe( gulp.dest( PATHS.site + '/assets/css' ) )
 
