@@ -2,8 +2,7 @@
 
     // settings
     $header_width  : 100vw;
-    $header_height : 4rem;
-    // $header_height : 4.0625rem;
+    $header_height : 5rem;
 
     $site_menu_mirror : 24rem;
 
@@ -23,21 +22,21 @@
         width: $header_width;
         height: $header_height;
         margin: 0;
-        padding: 0 4rem 0 4.5rem;
+        padding: 0 4rem 0 5rem;
 
         background: {
 
-            // color: transparentize( $nite, 0.885 );
+            color: transparentize( $nite, 0.885 );
 
             image:
 
                 linear-gradient(
 
                     90deg,
-                    transparentize( $dark, 1.000 ) 0%,
-                    transparent 40%,
-                    transparentize( $dark, 0.485 ) 70%,
-                    transparentize( $nite, 0.325 ) 100%
+                    transparentize( $g135, 0.385 ) 0%,
+                    // transparent 40%,
+                    // transparentize( $dark, 0.485 ) 70%,
+                    transparentize( $nite, 0.525 ) 100%
 
                 )
 
@@ -66,7 +65,7 @@
         // degree programs
         .single-degree-program & {
 
-            @include fill( $dark, 0.165 );
+            @include fill( $dark, 0.365 );
 
         }
 
@@ -142,7 +141,7 @@
         // contrast layer
         &:after {
 
-            content: '';
+            // content: '';
 
             position: absolute;
 
@@ -192,7 +191,7 @@
         &.site-menu-open {
 
             @include fill( white, 0.000 );
-            @include fill( $g135, 0.000 );
+            @include fill( $g135, 0.515 );
 
         }
 

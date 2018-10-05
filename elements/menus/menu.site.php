@@ -4,7 +4,7 @@
 
     <?php get_template_part( 'elements/menus/panels/panels.site.menu' ); ?>
 
-    <?php get_template_part( 'elements/menus/toolbars/toolbar.site.menu' ); ?>
-
 </menu>
 <!-- END menu.site -->
+
+<?php get_template_part( 'elements/menus/toolbars/toolbar.site.menu' ); ?>

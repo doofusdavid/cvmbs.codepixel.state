@@ -8,6 +8,14 @@
     // styles
     #content-homepage {
 
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        z-index: 100;
+
         width: $content_width;
         height: auto;
         margin: 0;

@@ -21,7 +21,7 @@
 
     var views = [];
     var menu;
-    var foobar;
+    var toolbar;
     var button;
 
 // ================================================================================
@@ -80,6 +80,9 @@ export var menusFX = {
             // slide content
             var slidecontent = $('#billboard-slides .slick-current.slick-active .ui-slide-article .slide-content');
 
+            // toolbar
+            toolbar = site.ui.toolbar;
+
             $.each( views, function( index, view ) {
 
                 view.toggleClass( 'site-menu-open' );
@@ -114,7 +117,30 @@ export var menusFX = {
 
             // show menu
             menu.velocity({
-                
+
+                translateX : [ '-5rem', '28rem' ]
+
+            }, {
+
+                begin    : function() {
+
+                    //
+
+                },
+                duration : 380,
+    			delay 	 : 160,
+    			easing   : [0.23, 1, 0.32, 1],
+    			complete : function() {
+
+    				$(this).toggleClass( 'site-menu-open' );
+
+    			}
+
+            });
+
+            // show toolbar
+            toolbar.velocity({
+
                 translateX : [ 0, '100%' ]
 
             }, {
@@ -124,8 +150,8 @@ export var menusFX = {
                     //
 
                 },
-                duration : 240,
-    			delay 	 : 0,
+                duration : 480,
+    			delay 	 : 20,
     			easing   : [0.23, 1, 0.32, 1],
     			complete : function() {
 
@@ -170,7 +196,7 @@ export var menusFX = {
             // hide menu
             menu.velocity({
 
-                translateX : [ '100%', 0 ]
+                translateX : [ '28rem', '-5rem' ]
 
             }, {
 
@@ -185,14 +211,37 @@ export var menusFX = {
                     });
 
                 },
-                duration : 220,
-    			delay 	 : 20,
+                duration : 380,
+    			delay 	 : 40,
     			easing   : [0.23, 1, 0.32, 1],
     			complete : function() {
 
     				$(this).toggleClass( 'site-menu-open' );
 
                     $('section.visible').focus();
+
+    			}
+
+            });
+
+            // hide toolbar
+            toolbar.velocity({
+
+                translateX : [ '100%', 0 ]
+
+            }, {
+
+                begin    : function() {
+
+                    //
+
+                },
+                duration : 480,
+    			delay 	 : 220,
+    			easing   : [0.23, 1, 0.32, 1],
+    			complete : function() {
+
+    				$(this).toggleClass( 'site-menu-open' );
 
     			}
 

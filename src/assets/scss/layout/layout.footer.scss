@@ -149,23 +149,21 @@
                 @include flex-h-s-v-c( false );
 
                 height: 2rem;
-                // padding: 0 0 0 0.75rem;
-                // padding: 0 0 0 1rem;
                 padding: 0;
 
-                @include typo(
-
-                    $klavislim,
-                    1rem,
-                    400,
-                    normal,
-                    2rem,
-                    0.135em,
-                    inherit,
-                    $up,
-                    $gold
-
-                );
+                // @include typo(
+                //
+                //     $klavislim,
+                //     1rem,
+                //     400,
+                //     normal,
+                //     2rem,
+                //     0.135em,
+                //     inherit,
+                //     $up,
+                //     $gold
+                //
+                // );
 
             }
 
@@ -182,19 +180,19 @@
                     margin: 0;
                     padding: 0.25rem 0 0.25rem 0;
 
-                    @include typo(
-
-                        $industry,
-                        0.625rem,
-                        600,
-                        normal,
-                        0.75rem,
-                        0.075em,
-                        inherit,
-                        $up,
-                        transparentize( white, 0.385 )
-
-                    );
+                    // @include typo(
+                    //
+                    //     $industry,
+                    //     0.625rem,
+                    //     600,
+                    //     normal,
+                    //     0.75rem,
+                    //     0.075em,
+                    //     inherit,
+                    //     $up,
+                    //     transparentize( white, 0.385 )
+                    //
+                    // );
 
                     // color: white;
 
@@ -263,19 +261,19 @@
                     height: 1rem;
                     margin: 0 0 0.25rem 0;
 
-                    @include typo(
-
-                        $industry,
-                        0.5625rem,
-                        700,
-                        normal,
-                        0.625rem,
-                        0.115em,
-                        inherit,
-                        $up,
-                        transparentize( white, 0.185 )
-
-                    );
+                    // @include typo(
+                    //
+                    //     $industry,
+                    //     0.5625rem,
+                    //     700,
+                    //     normal,
+                    //     0.625rem,
+                    //     0.115em,
+                    //     inherit,
+                    //     $up,
+                    //     transparentize( white, 0.185 )
+                    //
+                    // );
 
                 }
 
@@ -286,19 +284,19 @@
                     // height: 1rem;
                     margin: 0 0 0.75rem 0;
 
-                    @include typo(
-
-                        $industry,
-                        0.6875rem,
-                        600,
-                        normal,
-                        0.875rem,
-                        0.065em,
-                        inherit,
-                        none,
-                        transparentize( white, 0.485 )
-
-                    );
+                    // @include typo(
+                    //
+                    //     $industry,
+                    //     0.6875rem,
+                    //     600,
+                    //     normal,
+                    //     0.875rem,
+                    //     0.065em,
+                    //     inherit,
+                    //     none,
+                    //     transparentize( white, 0.485 )
+                    //
+                    // );
 
                 }
 
@@ -340,19 +338,19 @@
 
                     border-right: 1px solid transparentize( white, 0.615 );
 
-                    @include typo(
-
-                        $industry,
-                        0.625rem,
-                        600,
-                        normal,
-                        0.625rem,
-                        0.065em,
-                        inherit,
-                        none,
-                        transparentize( white, 0.245 )
-
-                    );
+                    // @include typo(
+                    //
+                    //     $industry,
+                    //     0.625rem,
+                    //     600,
+                    //     normal,
+                    //     0.625rem,
+                    //     0.065em,
+                    //     inherit,
+                    //     none,
+                    //     transparentize( white, 0.245 )
+                    //
+                    // );
 
                     &:hover {
 
@@ -385,19 +383,19 @@
 
                 height: 1rem;
 
-                @include typo(
-
-                    $industry,
-                    0.625rem,
-                    600,
-                    normal,
-                    0.875rem,
-                    0.065em,
-                    inherit,
-                    none,
-                    transparentize( white, 0.245 )
-
-                );
+                // @include typo(
+                //
+                //     $industry,
+                //     0.625rem,
+                //     600,
+                //     normal,
+                //     0.875rem,
+                //     0.065em,
+                //     inherit,
+                //     none,
+                //     transparentize( white, 0.245 )
+                //
+                // );
 
                 em {
 

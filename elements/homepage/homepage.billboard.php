@@ -11,6 +11,44 @@
 
 ?>
 
+<!-- fx -->
+<div id="billboard-fx" class="ui-fx">
+
+    <!-- layer.base -->
+    <div class="layer base">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.base -->
+
+    <!-- layer.blur -->
+    <div class="layer blur">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.blur -->
+
+    <!-- layer.overlay -->
+    <div class="layer overlay vertical">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.overlay -->
+
+    <!-- layer.overlay -->
+    <div class="layer overlay horizontal">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.overlay -->
+
+</div>
+<!-- END fx -->
+
 <!-- headline -->
 <span id="billboard-tagline">
 
