@@ -1,0 +1,39 @@
+// stylesheet :: department billboard styles
+
+    // settings
+    $billboard : 1rem;
+
+    // styles
+    #site-layout.department {
+
+        position: fixed;
+
+        top: -1rem;
+        right: -1rem;
+        bottom: -1rem;
+        left: -1rem;
+
+        width: calc( 100vw + 2rem );
+        height: calc( 100vh + 2rem );
+
+        overflow: scroll;
+
+        background: {
+
+            repeat: no-repeat;
+            size: cover;
+            position: center center;
+
+        }
+
+        // menu open
+        &.site-menu-open {
+
+            -webkit-filter: blur( 16px );
+                    filter: blur( 16px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+    }

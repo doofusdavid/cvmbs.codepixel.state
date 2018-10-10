@@ -9,7 +9,47 @@
 
     $homepage_billboards = new WP_Query( $billboard_query );
 
+    $site_image = get_field( 'site_background', 'options' );
+
 ?>
+
+<!-- fx -->
+<div id="billboard-fx" class="ui-fx">
+
+    <!-- layer.base -->
+    <div class="layer base" style="background-image:url(<?php echo $site_image; ?>);">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.base -->
+
+    <!-- layer.blur -->
+    <div class="layer blur" style="background-image:url(<?php echo $site_image; ?>);">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.blur -->
+
+    <!-- layer.overlay -->
+    <div class="layer overlay vertical">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.overlay -->
+
+    <!-- layer.overlay -->
+    <div class="layer overlay horizontal">
+
+        <!--  -->
+
+    </div>
+    <!-- END layer.overlay -->
+
+</div>
+<!-- END fx -->
 
 <!-- headline -->
 <span id="billboard-tagline">

@@ -8,7 +8,7 @@
         <!-- panel.header -->
         <header id="menu-panel-main-header" class="panel-header">
 
-            site navigation
+            navigation menu
 
         </header>
         <!-- END panel.header -->
@@ -21,26 +21,41 @@
         </nav>
         <!-- END menu -->
 
-        <!-- brand.state -->
-        <span id="brand-state-required">
+        <?php
 
-            <?php get_template_part( 'elements/brand/brand.state.classic' ); ?>
+            $site_type = get_field( 'site_type', 'options' );
 
-        </span>
-        <!-- END brand.state -->
+            if ( $site_type == 'college' ) {
 
-        <!-- copyright -->
-        <span id="copyright-text">
+                //
 
-            Copyright &copy; 2018 by the College of Veterinary Medicine and Biomedical Sciences<br />
-            Colorado State University, Fort Collins, Colorado 80523 USA
+            } elseif ( $site_type == 'department' ) {
 
-        </span>
-        <!-- END copyright -->
+                echo '
+                <!-- global.menu -->
+                <li id="global-menu-link">
+
+                    <!-- link -->
+                    <button class="site-menu-button" data-target="global">
+
+                        College Menu
+
+                    </button>
+                    <!-- END link -->
+
+                </li>
+                <!-- END global.menu -->';
+
+            } elseif ( $site_type == 'special' ) {
+
+                //
+
+            }
+
+        ?>
 
     </panel>
     <!-- END panel.main -->
-
 
     <!-- panel.search -->
     <panel id="menu-panel-search" class="inactive ui-panel menu-panel">
@@ -52,6 +67,8 @@
 
         </header>
         <!-- END panel.header -->
+
+        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
 
     </panel>
     <!-- END panel.search -->
@@ -67,6 +84,8 @@
         </header>
         <!-- END panel.header -->
 
+        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
+
     </panel>
     <!-- END panel.events -->
 
@@ -81,22 +100,42 @@
         </header>
         <!-- END panel.header -->
 
+        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
+
     </panel>
     <!-- END panel.resources -->
 
-    <!-- panel.about -->
-    <panel id="menu-panel-about" class="inactive ui-panel menu-panel">
+    <!-- panel.global -->
+    <panel id="menu-panel-global" class="inactive ui-panel menu-panel">
 
         <!-- panel.header -->
-        <header id="menu-panel-about-header" class="panel-header">
+        <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">
 
-            about the college
+            college menu
+
+            <button id="close-global-menu">
+
+                <span class="label">
+
+                    back
+
+                </span>
+
+            </button>
 
         </header>
         <!-- END panel.header -->
 
+        <!-- menu -->
+        <nav id="menu-panel-global-menu" class="panel-content menu">
+
+            <?php get_template_part( 'elements/menus/panels/panels.global.menu' ); ?>
+
+        </nav>
+        <!-- END menu -->
+
     </panel>
-    <!-- END panel.about -->
+    <!-- END panel.global -->
 
     <!-- panel.social -->
     <panel id="menu-panel-social" class="inactive ui-panel menu-panel">
@@ -108,6 +147,8 @@
 
         </header>
         <!-- END panel.header -->
+
+        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
 
     </panel>
     <!-- END panel.social -->
@@ -122,6 +163,8 @@
 
         </header>
         <!-- END panel.header -->
+
+        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
 
     </panel>
     <!-- END panel.contact -->

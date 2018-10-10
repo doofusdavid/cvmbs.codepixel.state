@@ -9,8 +9,17 @@
     // menus
     require_once( 'library/menus/menus.php' );
 
-    // menus
+    // utilities
+    require_once( 'library/utilities.php' );
+
+    // custom fields
+    require_once( 'library/custom.fields/custom.fields.php' );
+
+    // post types
     require_once( 'library/post.types.php' );
+
+    // options pages
+    require_once( 'library/options.php' );
 
     // sidebars
     require_once( 'library/sidebars/sidebars.php' );
@@ -29,7 +38,7 @@
     require_once( 'library/enqueue-scripts.php' );
 
     // theme support
-    require_once( 'library/theme-support.php' );
+    require_once( 'library/theme.support.php' );
 
     // customizer nav options
     require_once( 'library/custom-nav.php' );

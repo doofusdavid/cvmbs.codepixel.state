@@ -2,24 +2,22 @@
 
 	// template name: home
 
+    $site_type = get_field( 'site_type', 'options' );
+
 ?>
 
-<?php get_header(); ?>
+    <?php get_header(); ?>
 
-<!-- site.layout -->
-<main id="site-layout" class="off-canvas-content" data-off-canvas-content>
+    <?php
 
-    <!-- billboard.homepage -->
-    <section id="billboard-homepage" class="visible ui-billboard pattern" tabindex="-1">
+        if ( $site_type == 'college' ) {
 
-        <?php get_template_part( 'elements/homepage/homepage.billboard' ); ?>
+            get_template_part( 'elements/homepage/college/college.homepage' );
 
-    </section>
-    <!-- END billboard.homepage -->
+        } else if ( $site_type == 'department' ) {
 
-    <!-- content.homepage -->
-    <section id="content-homepage" class="hidden ui-content in-viewport" tabindex="-1">
+            get_template_part( 'elements/homepage/department/department.homepage' );
 
-        <?php get_template_part( 'elements/homepage/homepage.content' ); ?>
+        }
 
-        <?php get_footer(); ?>
+    ?>

@@ -299,29 +299,11 @@
     }
 
     // typography
-    @mixin typo( $font: $industry, $size: 1rem, $weight: normal, $style: normal, $line: inherit, $space: inherit, $align: inherit, $case: $up, $dye: white ) {
+    @mixin typo( $height: 1rem, $space: 0.025em ) {
 
-        font: {
-
-            family: $font;
-            size: $size;
-            weight: $weight;
-            style: $style;
-
-        }
-
-        line-height: $line;
+        line-height: $height;
 
         letter-spacing: $space;
-
-        text: {
-
-            align: $align;
-            transform: $case;
-
-        }
-
-        color: $dye;
 
     }
 
@@ -381,7 +363,6 @@
         text-shadow: 0 $yax $blur transparentize( $dye, $haze );
 
     }
-
 
     // background image
     @mixin background( $src, $repeat, $size, $position ){

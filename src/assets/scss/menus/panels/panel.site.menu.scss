@@ -1,7 +1,7 @@
 // stylesheet :: panel.site.menu component styles
 
     // settings
-    $panel_size : calc( 100% - 4rem );
+    $panel_size : calc( 100% - 5rem );
 
     // colors
     $submenu_fill:
@@ -31,7 +31,7 @@
         z-index: 10;
 
         width: 100%;
-        height: calc( 100vh - 4rem );
+        height: calc( 100vh - 5rem );
         margin: 0;
         padding: 0;
 
@@ -49,9 +49,9 @@
 
             position: relative;
 
-            padding: 4rem 0 8rem 0;
+            padding: 5rem 0 8rem 0;
 
-            @include fill( $nite, 0.785 );
+            // @include fill( $nite, 0.785 );
 
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
             // @include gradient( 0deg, $beige, 0.045, 0%, $beige, 0.045, 100% );
@@ -62,7 +62,7 @@
                 @include fill( $g140, 0.265 );
                 // @include fill( $beige, 0.000 );
 
-                color: $beige;
+                color: $gold;
                 // color: $g140;
 
             }
@@ -76,7 +76,7 @@
                 height: 100%;
 
                 // menu
-                #menu-site-menu {
+                > .menu {
 
                     display: block;
 
@@ -108,9 +108,9 @@
                             > a {
 
                                 // color: $g140;
-                                color: $beige;
+                                color: $gold;
 
-                                @include fill( $g140, 0.000 );
+                                @include fill( $dark, 0.465 );
 
                                 // arrow
                                 &:after {
@@ -206,7 +206,7 @@
 
                             }
 
-                            @include fill( $g135, 0.000 );
+                            @include fill( $dark, 0.465 );
 
                             a {
 
@@ -215,9 +215,9 @@
                                 // hover state
                                 &:hover {
 
-                                    @include color( $beige, 0.000 );
+                                    @include color( $gold, 0.000 );
 
-                                    @include fill( $nite, 0.665 );
+                                    @include fill( white, 0.965 );
 
                                 }
 
@@ -237,17 +237,19 @@
                         @include flex-h-s-v-c( false );
 
                         width: 100%;
-                        height: 3rem;
+                        height: 3.0625rem;
                         margin: 0 0 0 0;
-                        padding: 0 1rem 0 1rem;
+                        padding: 0.0625rem 1rem 0 1rem;
 
-                        @include font( $klavislim, 0.875rem, 500 );
+                        border-bottom: 1px solid transparentize( white, 0.895 );
+
+                        @include font( $industry, 0.875rem, 500 );
 
                         line-height: 0.75rem;
 
                         letter-spacing: 0.065em;
 
-                        @include text( $up );
+                        @include text( none );
 
                         @include color( white, 0.000 );
 
@@ -258,9 +260,9 @@
                         // hover state
                         &:hover {
 
-                            color: $beige;
+                            color: $gold;
 
-                            @include fill( $g135, 0.000 );
+                            @include fill( white, 0.965 );
 
                         }
 
@@ -272,6 +274,80 @@
                         @include flex-v-t-h-s( false );
 
                         width: 100%;
+
+                    }
+
+                }
+
+                // global link
+                #global-menu-link {
+
+                    // link
+                    button {
+
+                        position: relative;
+
+                        z-index: 1;
+
+                        @include flex-h-s-v-c( false );
+
+                        width: 100%;
+                        height: 3.0625rem;
+                        margin: 0 0 0 0;
+                        padding: 0 1rem 0 1rem;
+
+                        border-bottom: 1px solid transparentize( white, 0.895 );
+
+                        @include font( $industry, 0.875rem, 500 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.065em;
+
+                        @include text( none );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( white, 0.965 );
+
+                        transition: all 220ms linear 0ms;
+
+                        cursor: pointer;
+
+                        // hover state
+                        &:hover {
+
+                            // color: $gold;
+
+                            @include fill( white, 0.865 );
+
+                        }
+
+                        // icon
+                        &:before {
+
+                            @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\E904' );
+
+                            margin: 0 0.5rem 0 0;
+
+                        }
+
+                        // arrow
+                        &:after {
+
+                            @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\EDC8' );
+
+                            position: absolute;
+
+                            top: 1rem;
+                            right: 1rem;
+                            bottom: 1rem;
+
+                            z-index: 0;
+
+                            cursor: pointer;
+
+                        }
 
                     }
 

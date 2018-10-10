@@ -1,0 +1,80 @@
+// stylesheet :: department billboard styles
+
+    // settings
+    $billboard : 1rem;
+
+    // styles
+    #department-billboard {
+
+        @include fullscreen( fixed, 10, false, hidden );
+
+        @include flex-v-c-h-c( false );
+
+        @include hide;
+
+        overflow: hidden;
+
+        // @include fill( $app05, 0.000 );
+
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 120ms;
+
+        // menu open
+        .site-menu-open & {
+
+            -webkit-filter: blur( 16px );
+                    filter: blur( 16px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // layers
+        #billboard-artwork-layers {
+
+            @include fullscreen( absolute, 10, true, hidden );
+
+            top: -2rem;
+            right: -2rem;
+            bottom: -2rem;
+            left: -2rem;
+
+            z-index: 200;
+
+            width: calc( 100vw + 4rem );
+            min-height: calc( 100vh + 4rem );
+            margin: 0;
+            padding: 2rem 2rem 2rem 2rem;
+
+            // common
+            .layer {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+            }
+
+        }
+
+        // placeholder
+        #homepage-build {
+
+            @include hide;
+
+        }
+
+    }

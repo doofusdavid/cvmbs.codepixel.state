@@ -1,0 +1,30 @@
+// stylesheet :: brand.cvmbs styles
+
+    // settings
+    $brand_local : 1rem;
+
+    // styles
+    #brand-local {
+
+        position: absolute;
+
+        z-index: 10;
+
+        top: 0;
+        right: 5rem;
+        bottom: 0;
+
+        @include flex-v-c-h-e( false )
+
+        height: 5rem;
+        padding: 0.0625rem 1.5rem 0 0;
+
+        @include font( $industry, 0.75rem, 600 );
+
+        @include typo( 1.375em, 0.065em );
+
+        @include text( inherit, right );
+
+        @include color( white, 0.000 );
+
+    }

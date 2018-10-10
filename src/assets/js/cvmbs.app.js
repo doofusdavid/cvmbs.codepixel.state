@@ -63,6 +63,7 @@
     site.ui = {
 
         header    : $('#site-header'),
+        toolbar   : $('#site-menu-toolbar'),
         layout    : $('#site-layout'),
         billboard : $('#billboard-homepage'),
         slides    : $('#billboard-slides'),
@@ -192,6 +193,12 @@
         });
 
     });
+
+    var globalnav = $('#global-menu-link');
+    var localmenu = $('#menu-department-menu');
+
+    // append global menu link
+    $( globalnav ).appendTo( $( localmenu ) );
 
     var pageURL;
     var pagelink = $('.link');

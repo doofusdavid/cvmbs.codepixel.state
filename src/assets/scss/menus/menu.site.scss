@@ -1,8 +1,8 @@
 // stylesheet :: site menu component styles
 
     // settings
-    $menu_width  : 24rem;
-    $menu_height : calc( 100vh - 4rem );
+    $menu_width  : 28rem;
+    $menu_height : calc( 100vh - 5rem );
 
     // colors
     $menu_fill:
@@ -24,7 +24,7 @@
 
         position: fixed;
 
-        top: 4rem;
+        top: 5rem;
         bottom: 0;
 
         z-index: 80;
@@ -40,18 +40,18 @@
 
         visibility: visible;
 
-        @include fill( $menu_fill, 0.535 );
+        @include fill( $menu_fill, 1.000 );
 
         box-shadow: none;
 
-        transform: translate3d( 24rem, 0, 0 );
+        transform: translate3d( 28rem, 0, 0 );
 
         transition: none;
 
         // open state
         &.is-open {
 
-            box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
+            // box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
 
         }
 
@@ -79,9 +79,9 @@
             margin: 0;
             padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
-            @include fill( $px-orange, 0.345 );
+            @include fill( $roarange, 0.345 );
 
-            transition: all 220ms linear 0ms;
+            // transition: all 220ms linear 0ms;
 
             // hover state
             &:hover {

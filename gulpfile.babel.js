@@ -117,9 +117,9 @@
 
                 includePaths : PATHS.sass
 
-            } )
+            } ).on( 'error', $.sass.logError ) )
 
-                .on( 'error', $.sass.logError ) )
+            .pipe( $.sourcemaps.write() )
 
             .pipe( $.autoprefixer( {
 
@@ -130,12 +130,6 @@
             .pipe( $.if( PRODUCTION,
 
                 $.cleanCss( { compatibility: 'ie9' } )
-
-            ) )
-
-            .pipe( $.if( !PRODUCTION,
-
-                $.sourcemaps.write()
 
             ) )
 
