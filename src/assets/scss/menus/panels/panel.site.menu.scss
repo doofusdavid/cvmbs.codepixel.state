@@ -35,6 +35,8 @@
         margin: 0;
         padding: 0;
 
+        overflow: hidden;
+
         @include fill( white, 1.000 );
 
         // menu open state
@@ -54,13 +56,11 @@
             // @include fill( $nite, 0.785 );
 
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
-            // @include gradient( 0deg, $beige, 0.045, 0%, $beige, 0.045, 100% );
 
             // header
             .panel-header {
 
-                @include fill( $g140, 0.265 );
-                // @include fill( $beige, 0.000 );
+                @include fill( $g140, 0.465 );
 
                 color: $gold;
                 // color: $g140;
@@ -74,6 +74,8 @@
 
                 width: 100%;
                 height: 100%;
+
+                // @include hide;
 
                 // menu
                 > .menu {
@@ -247,7 +249,7 @@
 
                         line-height: 0.75rem;
 
-                        letter-spacing: 0.065em;
+                        letter-spacing: 0.095em;
 
                         @include text( none );
 
@@ -366,9 +368,11 @@
 
                 z-index: 20;
 
+                @include flex-h-c-v-c( false );
+
                 width: 100%;
                 height: 4rem;
-                margin: 0 4rem 0 4rem;
+                // margin: 0 4rem 0 4rem;
 
                 // svg
                 svg {

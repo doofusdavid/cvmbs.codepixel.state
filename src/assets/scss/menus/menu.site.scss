@@ -38,7 +38,7 @@
 
         overflow: visible;
 
-        visibility: visible;
+        visibility: hidden;
 
         @include fill( $menu_fill, 1.000 );
 
@@ -60,7 +60,7 @@
         .single-degree-program &,
         .archive & {
 
-            transform: translate3d( 28rem, 0, 0 );
+            transform: translate3d( -28rem, 0, 0 );
 
         }
 

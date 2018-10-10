@@ -40,7 +40,7 @@
         // menu open state
         &.site-menu-open {
 
-            // @include fill( $nite, 0.615 );
+            @include fill( $nite, 0.615 );
 
             // @include gradient( 90deg, $nite, 0.695, 0%, $dark, 0.565, 100% );
 
