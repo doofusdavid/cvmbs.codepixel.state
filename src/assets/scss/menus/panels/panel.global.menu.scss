@@ -6,6 +6,8 @@
     // styles
     #menu-panel-global {
 
+        @include flex-v-t-h-s( false );
+
         padding: 5rem 0 8rem 0;
 
         // @include gradient( 0deg, $orange, 0.565, 0%, red, 1.000, 50% );

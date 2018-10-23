@@ -1,6 +1,6 @@
 
 <!-- footer.left -->
-<div class="footer-row-left">
+<div id="footer-links">
 
     <!-- link.list -->
     <ul class="link-list">

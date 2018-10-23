@@ -8,9 +8,9 @@
 
         position: relative;
 
-        top: -1rem;
-        right: -1rem;
-        left: -1rem;
+        top: 0;
+        right: 0;
+        left: 0;
 
         width: calc( 100vw + 2rem );
 
@@ -126,7 +126,7 @@
         .program-content {
 
             width: 100%;
-            padding: 8rem calc( 10vw + 5rem ) 8rem calc( 10vw + 1rem );
+            padding: 8rem 8rem 8rem 8rem;
 
             // row
             &.program-row {
@@ -158,14 +158,14 @@
 
                 @include flex-h-j-v-s( false );
 
-                padding: 0 4rem 0 0;
+                padding: 0 0 0 0;
 
                 // text
                 .description-text {
 
                     @include flex-h-e-v-c( true );
 
-                    padding: 8rem 4rem 8rem 8rem;
+                    padding: 8rem 3rem 8rem 8rem;
 
                     @include font( $klavika, 1.25rem, 400 );
 
@@ -180,7 +180,7 @@
 
                     @include flex-v-t-h-s( true );
 
-                    padding: 8rem 8rem 8rem 4rem;
+                    padding: 8rem 8rem 8rem 3rem;
 
                     // title
                     .degree-type-label {
@@ -231,7 +231,7 @@
 
                         min-width: 16rem;
                         height: 3rem;
-                        margin: 0 1rem 1rem 0;
+                        margin: 0 0 1rem 0;
                         padding: 0.1875rem 3rem 0 1.25rem;
 
                         @include font( $klavislim, 1rem, 400 );
@@ -1108,15 +1108,18 @@
                     // button
                     .similar-major-link {
 
-                        @include flex-h-c-v-c( true );
+                        @include flex-v-c-h-c( true );
 
-                        flex-grow: 1;
+                        flex-basis: 33.333333%;
+                        flex-grow: 0;
+
+                        padding: 2rem 2rem 2rem 2rem;
 
                         @include font( $klavislim, 1rem, 400 );
 
                         letter-spacing: 0.235em;
 
-                        @include text( $up );
+                        @include text( $up, center );
 
                         @include color( white, 0.000 );
 
@@ -1153,6 +1156,350 @@
                         }
 
                     }
+
+                }
+
+            }
+
+            // research opportunties
+            &.research {
+
+                padding: 0 0 0 0;
+
+                // wrapper
+                .content-wrapper {
+
+                    @include flex-h-j-v-s( false );
+
+                }
+
+                // title
+                .title {
+
+                    @include typo( 3rem, 0.075em );
+
+                }
+
+                // content
+                .content {
+
+                    // left
+                    &.left {
+
+                        @include flex-v-c-h-s( true );
+
+                        width: 40%;
+                        padding: 8rem 4rem 8rem 8rem;
+
+                        @include fill( $beige, 0.565 );
+
+                        // content
+                        .content {
+
+                            @include font( $industry, 0.875rem, 600 );
+
+                            @include color( $app05, 0.000 );
+
+                        }
+
+                    }
+
+                    // right
+                    &.right {
+
+                        position: relative;
+
+                        @include flex-v-c-h-st( true );
+
+                        width: 60%;
+                        padding: 8rem 8rem 8rem 4rem;
+
+                        // list
+                        .research-opportunity {
+
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            z-index: 10;
+
+                            @include flex-v-b-h-s( false );
+
+                            width: 100%;
+                            height: 100%;
+                            padding: 8rem 8rem 8rem 4rem;
+
+                            background: {
+
+                                repeat: no-repeat;
+                                size: cover;
+                                position: center center;
+
+                            }
+
+                            // contact
+                            .contact-box {
+
+                                position: absolute;
+
+                                bottom: 4rem;
+                                left: 0;
+
+                                z-index: 10;
+
+                                padding: 2rem 2rem 2rem 2rem;
+
+                                @include fill( $blue, 0.125 );
+
+                                @include color( white, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // contacts
+            &.contacts {
+
+                // @include fill( $blue, 0.000 );
+
+                // title
+                .title {
+
+                    @include color( white, 0.000 );
+
+                }
+
+                // list
+                .contact-list {
+
+                    @include flex-h-s-v-st( false );
+
+                    margin: 0;
+
+                    list-style: none;
+
+                    // card
+                    .contact-card {
+
+                        width: 20rem;
+                        padding: 2rem;
+
+                        color: white;
+
+                        @include fill( white, 0.965 );
+
+                        img {
+
+                            width: 16rem;
+                            margin: 0 0 1rem 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // tuition + financail aid
+            &.tuition {
+
+                position: relative;
+
+                @include flex-h-e-v-c( false );
+
+                padding: 12rem 8rem 12rem 8rem;
+
+                @include fill( $beige, 0.000 );
+
+                background: {
+
+                    image: url(../img/content/content.background.06.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include fill( $beige, 0.565 );
+
+                }
+
+                // wrapper
+                .content-wrapper {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include flex-v-j-h-e( false );
+
+                    width: 50%;
+
+                }
+
+                // title
+                .title {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    // @include flex-h-c-v-c( false );
+
+                    // width: 100%;
+
+                    @include color( $g140, 0.000 );
+
+                }
+
+                // content
+                .content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include typo( 1.5rem, 0.045em );
+
+                    @include color( $app05, 0.000 );
+
+                }
+
+                // button
+                .content-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 2rem 0 0 0;
+                    padding: 0.0625rem 1rem 0 1rem;
+
+                    border: 1px solid $g140;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 0.5rem, 0.065em );
+
+                    @include text( $up );
+
+                    @include color( $g140, 0.000 );
+
+                }
+
+            }
+
+            // location
+            &.location {
+
+                position: relative;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include fill( $app05, 0.565 );
+
+                }
+
+                // wrapper
+                .content-wrapper {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include flex-v-j-h-s( false );
+
+                    width: 50%;
+
+                }
+
+                // title
+                .title {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    // @include flex-h-c-v-c( false );
+
+                    width: 100%;
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // content
+                .content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include typo( 1.5rem, 0.045em );
+
+                }
+
+                // button
+                .content-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 2rem 0 0 0;
+                    padding: 0.0625rem 1rem 0 1rem;
+
+                    border: 1px solid $gold;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 0.5rem, 0.065em );
+
+                    @include text( $up );
+
+                    color: white;
 
                 }
 

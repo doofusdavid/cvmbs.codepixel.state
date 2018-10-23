@@ -29,7 +29,7 @@
 
         $site_type = get_field( 'site_type', 'options' );
 
-        // if ( $site_type == 'department' ) {
+        if ( $site_type == 'department' ) {
 
             // degree programs
             acf_add_options_sub_page( array(
@@ -41,7 +41,7 @@
 
     		));
 
-        // }
+        }
 
         $cvmbs_research_map = array(
 

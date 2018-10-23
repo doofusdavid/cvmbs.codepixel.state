@@ -1,0 +1,136 @@
+// stylesheet :: main secondary page template styles
+
+    // settings
+    $page_main : 1rem;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.main {
+
+            // content container
+            .secondary-container {
+
+                @include flex-v-t-h-s( false );
+
+                margin: 33rem 0 0 0;
+
+                @include color( $app05, 0.000 );
+
+            }
+
+            // artwork
+            .secondary-artwork {
+
+                position: absolute;
+
+                top: -33rem;
+                right: 0;
+                left: 0;
+
+                z-index: 10;
+
+                width: 100%;
+                height: 33rem;
+                margin: 0;
+                padding: 0;
+
+                @include gradient( 45deg, $nite, 0.365, 0%, $nite, 1.000, 60% );
+
+            }
+
+            // content
+            .secondary-content {
+
+                position: relative;
+
+                z-index: 20;
+
+                @include flex-h-j-v-t( false );
+
+                // min-height: calc( 100vh + 2rem );
+
+                @include fill( white, 0.000 );
+
+            }
+
+            // content area(s)
+            .content-area {
+
+                // class hook
+                &.main {
+
+                    position: relative;
+
+                    @include flex-v-t-h-s( false );
+
+                    width: calc( 100% - 24rem );
+                    padding: 2rem 2rem 0 0;
+
+                    // title
+                    .page-title {
+
+                        position: absolute;
+
+                        top: -4rem;
+
+                        z-index: 100;
+
+                        @include flex-h-s-v-b( false );
+
+                        height: 2rem;
+                        margin: 0;
+                        padding: 0;
+
+                        border: none;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        @include typo( 1.75rem, 0.085em );
+
+                        @include color( $gold, 0.000 );
+
+                    }
+
+                    // text
+                    .highlight-text {
+
+                        @include flex-h-s-v-t( false );
+
+                        margin: 0 0 2rem 0;
+
+                        @include font( $industry, 1rem, 400 );
+
+                        @include typo( 2rem, 0.045em );
+
+                        @include color( $app05, 0.235 );
+
+                    }
+
+                }
+
+            }
+
+            // content area(s)
+            .sidebar-area {
+
+                // class hook
+                &.main {
+
+                    position: relative;
+
+                    top: -4rem;
+
+                    width: 24rem;
+                    padding: 2rem 2rem 2rem 2rem;
+
+                    @include fill( $beige, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,10 @@
+// stylesheet :: page template styles compiler
+
+    // globals
+    @import 'page.globals';
+
+    // main
+    @import 'page.secondary.main';
+
+    // default
+    @import 'page.secondary.default';

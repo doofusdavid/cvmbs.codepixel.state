@@ -22,7 +22,7 @@
         margin: 0;
         padding: 0;
 
-        @include fill( white, 0.965 );
+        @include fill( $nite, 0.615 );
 
         @include gradient( 0deg, $nite, 0.565, 0%, $nite, 0.325, 100% );
 
@@ -33,18 +33,14 @@
         // hover state
         &:hover {
 
-            @include fill( white, 0.895 );
+            //
 
         }
 
         // menu open state
         &.site-menu-open {
 
-            @include fill( $nite, 0.615 );
-
-            // @include gradient( 90deg, $nite, 0.695, 0%, $dark, 0.565, 100% );
-
-            // transition: all 320ms linear 0ms;
+            // @include gradient( 0deg, $blue, 1.000, 0%, $cvnavy, 0.465, 100% );
 
             // hover state
             &:hover {

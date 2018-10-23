@@ -15,4 +15,9 @@
 
         <?php get_template_part( 'elements/homepage/college/content/content.college' ); ?>
 
-        <?php get_footer(); ?>
+
+    </section>
+    <!-- END content.homepage -->
+
+</main>
+<!-- site.layout -->

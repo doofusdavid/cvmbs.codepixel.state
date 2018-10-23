@@ -1,14 +1,30 @@
+<?php
+
+	// template name: default secondary page
+
+	$show_image = get_field( 'page_image_option' );
+    $page_image = get_field( 'page_image' );
+
+?>
 
 <?php get_header(); ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary main" data-off-canvas-content style="background-image:url(<?php echo $page_image; ?>);">
+<main id="site-layout" class="off-canvas-content secondary default" data-off-canvas-content style="background-image:url(<?php echo $page_image; ?>);">
 
 	<!-- container -->
 	<div id="content-container" class="secondary-container">
 
+		<!-- artwork -->
+        <div class="base-artwork artwork-layer">
+
+            <!--  -->
+
+        </div>
+        <!-- END artwork -->
+
         <!-- artwork -->
-        <div class="secondary-artwork">
+        <div class="image-artwork artwork-layer">
 
             <!--  -->
 
@@ -21,15 +37,15 @@
 	        <!-- main content -->
 	        <div class="content-area main">
 
+				<?php while ( have_posts() ) : the_post(); ?>
+
 				<!-- title -->
 		        <h2 class="page-title">
 
-					degree programs
+					<?php the_title(); ?>
 
 				</h2>
 		        <!-- END title -->
-
-				<?php while ( have_posts() ) : the_post(); ?>
 
 				<section class="intro" role="main">
 
@@ -37,7 +53,7 @@
 
 						<div class="entry-content">
 
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<?php the_content(); ?>
 
 						</div>
 

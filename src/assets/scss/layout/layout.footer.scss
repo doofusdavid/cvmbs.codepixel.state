@@ -4,7 +4,7 @@
     $footer_width  : 100vw;
     $footer_width_ex : calc( 100vw + 4rem );
 
-    $footer_height : 26rem;
+    $footer_height : 27rem;
 
     $footer_padding    : 4rem 6rem 6rem 6rem;
     $footer_padding_ex : 4rem 8rem 6rem 8rem;
@@ -30,8 +30,7 @@
         @include fill( $dark, 0.000 );
 
         // common
-        .footer-row-top,
-        .footer-row-bottom {
+        .footer-row {
 
             // link list
             .link-list {
@@ -59,7 +58,9 @@
         }
 
         // secondary page
-        .secondary & {
+        .secondary &,
+        .secondary.main &,
+        .secondary-default & {
 
             position: relative;
 
@@ -72,231 +73,207 @@
 
         }
 
-        // top row
-        .footer-row-top {
+        // top
+        #footer-top {
 
             @include flex-h-j-v-s( false );
 
             width: 100%;
 
+            // columns
+            .footer-column {
 
-        }
+                width: 25%;
+                height: 100%;
+                min-height: 14rem;
+                margin: 0;
 
-        // columns
-        .footer-column {
+                // content
+                &.content {
 
-            width: 25%;
-            height: 100%;
-            min-height: 14rem;
-            margin: 0;
+                    @include flex-v-t-h-s( false );
 
-            &.content {
+                    width: 18rem;
+                    padding: 0 0 0 1rem;
 
-                @include flex-v-t-h-s( false );
+                    // header
+                    .links-header {
 
-                // width: 18.5rem;
-                width: 18rem;
-                // padding: 0 1rem 0 0;
-                padding: 0 0 0 1rem;
+                        @include flex-h-s-v-c( false );
 
-                // @include fill( white, 0.965 );
+                        padding: 0 0 0 0;
 
-                // border-left: 1px solid transparentize( white, 0.645 );
+                    }
 
+                }
+
+                // links
+                &.links {
+
+                    width: 15rem;
+                    padding: 0 0 0 0;
+
+                    &.default {
+
+                        width: 15rem;
+
+                    }
+
+                    // narrow column
+                    &.narrow {
+
+                        width: 12rem;
+
+                        .link {
+
+                            //
+
+                        }
+
+                    }
+
+                    // wide column
+                    &.wide {
+
+                        width: 20rem;
+
+                    }
+
+                }
+
+                // column headers
                 .links-header {
 
                     @include flex-h-s-v-c( false );
 
-                    padding: 0 0 0 0;
+                    height: 2rem;
+                    padding: 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include typo( 2rem, 0.135em );
+
+                    @include text( $up );
+
+                    @include color( $gold, 0.000 );
 
                 }
 
-            }
+                // menu item
+                .menu-item {
 
-            &.links {
+                    // link
+                    a {
 
-                width: 15rem;
-                padding: 0 0 0 0;
+                        @include flex-h-s-v-c( false );
 
-                &.default {
+                        height: auto;
+                        min-height: 2rem;
+                        margin: 0;
+                        padding: 0.25rem 0 0.25rem 0;
 
-                    width: 15rem;
+                        @include font( $industry, 0.625rem, 600 );
 
-                }
+                        @include typo( 0.75rem, 0.075em );
 
-                &.narrow {
+                        @include text( $up );
 
-                    width: 14rem;
+                        @include color( white, 0.385 );
 
-                    .link {
+                        transition: all 220ms linear 0ms;
 
-                        //
+                        // hover state
+                        &:hover {
+
+                            color: $gold;
+
+                        }
+
+                    }
+
+                    // line break (?)
+                    .break {
+
+                        @include hide;
 
                     }
 
                 }
 
-                &.wide {
+            }
 
-                    width: 17rem;
+            // left
+            #footer-left {
 
-                }
+                @include flex-v-t-h-s( true );
+
+                order: 2;
 
             }
 
-            .links-header {
+            // center
+            #footer-center {
 
-                @include flex-h-s-v-c( false );
-
-                height: 2rem;
-                padding: 0;
-
-                // @include typo(
-                //
-                //     $klavislim,
-                //     1rem,
-                //     400,
-                //     normal,
-                //     2rem,
-                //     0.135em,
-                //     inherit,
-                //     $up,
-                //     $gold
-                //
-                // );
+                order: 1;
 
             }
 
-            // menu item
-            .menu-item {
+            // right
+            #footer-right {
 
-                // link
-                a {
+                order: 3;
 
-                    @include flex-h-s-v-c( false );
+            }
 
-                    height: auto;
-                    min-height: 2rem;
-                    margin: 0;
-                    padding: 0.25rem 0 0.25rem 0;
+            // drawer
+            #footer-drawer {
 
-                    // @include typo(
-                    //
-                    //     $industry,
-                    //     0.625rem,
-                    //     600,
-                    //     normal,
-                    //     0.75rem,
-                    //     0.075em,
-                    //     inherit,
-                    //     $up,
-                    //     transparentize( white, 0.385 )
-                    //
-                    // );
+                order: 4;
 
-                    // color: white;
+                // contact info
+                #contact-info {
 
-                    transition: all 220ms linear 0ms;
+                    @include flex-v-t-h-s( false );
 
-                    // hover state
-                    &:hover {
+                    flex-grow: 1;
 
-                        color: $gold;
+                    width: 100%;
+                    margin: 0 0 0.5rem 0;
+
+                    // labels
+                    .contact-label {
+
+                        @include flex-h-s-v-c( false );
+
+                        height: 1rem;
+                        margin: 0 0 0.25rem 0;
+
+                        @include font( $industry, 0.5625rem, 700 );
+
+                        @include typo( 0.625rem, 0.115em );
+
+                        @include text( $up );
+
+                        @include color( white, 0.185 );
 
                     }
 
-                }
+                    // text
+                    .contact-text {
 
+                        @include flex-h-s-v-c( false );
 
+                        margin: 0 0 0.75rem 0;
 
-                .break {
+                        @include font( $industry, 0.6875rem, 600 );
 
-                    @include hide;
+                        @include typo( 0.875rem, 0.065em );
 
-                }
+                        // @include text( $up );
 
-            }
+                        @include color( white, 0.485 );
 
-        }
-
-        // left
-        #footer-left {
-
-            order: 2;
-
-        }
-
-        // center
-        #footer-center {
-
-            order: 1;
-
-        }
-
-        // right
-        #footer-right {
-
-            order: 3;
-
-        }
-
-        // drawer
-        #footer-drawer {
-
-            order: 4;
-
-            #contact-info {
-
-                @include flex-v-t-h-s( false );
-
-                flex-grow: 1;
-
-                width: 100%;
-                margin: 0 0 0.5rem 0;
-
-                .contact-label {
-
-                    @include flex-h-s-v-c( false );
-
-                    height: 1rem;
-                    margin: 0 0 0.25rem 0;
-
-                    // @include typo(
-                    //
-                    //     $industry,
-                    //     0.5625rem,
-                    //     700,
-                    //     normal,
-                    //     0.625rem,
-                    //     0.115em,
-                    //     inherit,
-                    //     $up,
-                    //     transparentize( white, 0.185 )
-                    //
-                    // );
-
-                }
-
-                .contact-text {
-
-                    @include flex-h-s-v-c( false );
-
-                    // height: 1rem;
-                    margin: 0 0 0.75rem 0;
-
-                    // @include typo(
-                    //
-                    //     $industry,
-                    //     0.6875rem,
-                    //     600,
-                    //     normal,
-                    //     0.875rem,
-                    //     0.065em,
-                    //     inherit,
-                    //     none,
-                    //     transparentize( white, 0.485 )
-                    //
-                    // );
+                    }
 
                 }
 
@@ -305,7 +282,7 @@
         }
 
         // bottom row
-        .footer-row-bottom {
+        #footer-bottom {
 
             position: absolute;
 
@@ -318,18 +295,21 @@
             @include flex-h-j-v-c( false );
 
             width: $footer_width;
-            height: 6rem;
+            height: 7rem;
             margin: 0;
-            padding: 0 6rem 0 6rem;
+            padding: 0 6rem 1rem 6rem;
 
             @include fill( $nite, 0.445 );
 
+            // links
             .link-list {
 
                 @include flex-h-s-v-c( false );
 
                 height: 1rem;
+                margin: 0;
 
+                // link
                 .link {
 
                     height: 0.625rem;
@@ -338,20 +318,17 @@
 
                     border-right: 1px solid transparentize( white, 0.615 );
 
-                    // @include typo(
-                    //
-                    //     $industry,
-                    //     0.625rem,
-                    //     600,
-                    //     normal,
-                    //     0.625rem,
-                    //     0.065em,
-                    //     inherit,
-                    //     none,
-                    //     transparentize( white, 0.245 )
-                    //
-                    // );
+                    @include font( $industry, 0.625rem, 600 );
 
+                    @include typo( 0.625rem, 0.065em );
+
+                    @include color( white, 0.245 );
+
+                    transition: $all220;
+
+                    cursor: pointer;
+
+                    // hover state
                     &:hover {
 
                         color: $gold;
@@ -360,12 +337,14 @@
 
                     }
 
+                    // first child
                     &:first-child {
 
                         padding-left: 0;
 
                     }
 
+                    // last child
                     &:last-child {
 
                         border-right: none;
@@ -383,19 +362,11 @@
 
                 height: 1rem;
 
-                // @include typo(
-                //
-                //     $industry,
-                //     0.625rem,
-                //     600,
-                //     normal,
-                //     0.875rem,
-                //     0.065em,
-                //     inherit,
-                //     none,
-                //     transparentize( white, 0.245 )
-                //
-                // );
+                @include font( $industry, 0.625rem, 600 );
+
+                @include typo( 0.875rem, 0.065em );
+
+                @include color( white, 0.245 );
 
                 em {
 

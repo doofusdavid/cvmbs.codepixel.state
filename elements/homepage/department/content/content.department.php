@@ -1,9 +1,19 @@
 <?php
 
+    // site title
     $site_title  = get_field( 'site_title', 'options' );
     $title_break = get_field( 'site_title_line_break', 'options' );
     $site_line_1 = get_field( 'site_title_line_1', 'options' );
     $site_line_2 = get_field( 'site_title_line_2', 'options' );
+
+    // site description
+    $site_billboard_text = get_field( 'site_billboard_text', 'options' );
+
+    // intro
+    $site_intro_text = get_field( 'site_intro_text', 'options' );
+
+    // degree programs
+    $degree_programs_text = get_field( 'department_degree_programs', 'options' );
 
 ?>
 
@@ -33,13 +43,21 @@
         </span>
         <!-- END site.title -->
 
+        <!-- description -->
+        <span class="site-description">
+
+            <?php echo $site_billboard_text; ?>
+
+        </span>
+        <!-- END description -->
+
     </div>
     <!-- END billboard.title -->
 
     <!-- text -->
     <div id="homepage-intro-text" class="homepage-section">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras.
+        <?php echo $site_intro_text; ?>
 
     </div>
     <!-- END text -->
@@ -47,7 +65,7 @@
     <!-- degree.programs -->
     <div id="degree-programs" class="homepage-section">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras.
+        <?php echo $degree_programs_text; ?>
 
     </div>
     <!-- END degree.programs -->
@@ -55,7 +73,7 @@
     <!-- alumni.spotlight -->
     <div id="alumni-spotlight" class="homepage-section">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras.
+        this is the ALUMNI SPOTLIGHT section of the <?php echo $site_title; ?> site homepage
 
     </div>
     <!-- END alumni.spotlight -->
@@ -63,7 +81,7 @@
     <!-- research.map -->
     <div id="global-research-map" class="homepage-section">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras.
+        this is the RESEARCH MAP section of the <?php echo $site_title; ?> site homepage
 
     </div>
     <!-- END research.map -->
@@ -71,7 +89,7 @@
     <!-- news -->
     <div id="department-news" class="homepage-section">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras.
+        this is the NEWS FEED section of the <?php echo $site_title; ?> site homepage
 
     </div>
     <!-- END news -->

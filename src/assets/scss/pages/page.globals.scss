@@ -1,0 +1,217 @@
+// stylesheet :: secondary page template globals
+
+    // settings
+    $page_global : 1rem;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.secondary {
+
+            position: fixed;
+
+            top: -1rem;
+            right: -1rem;
+            bottom: -1rem;
+            left: -1rem;
+
+            width: calc( 100vw + 2rem );
+            height: calc( 100vh + 2rem );
+
+            overflow: scroll;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+            // menu open
+            &.site-menu-open {
+
+                -webkit-filter: blur( 16px );
+                        filter: blur( 16px );
+
+                transition: all 0ms linear 0ms;
+
+            }
+
+            // content container
+            .secondary-container {
+
+                position: absolute;
+
+                top: 0;
+                left: 0;
+                right: 0;
+
+                z-index: 20;
+
+                @include flex-v-t-h-s( false );
+
+                width: 100%;
+
+                @include color( $app05, 0.000 );
+
+                // menu open
+                .site-menu-open & {
+
+                    // -webkit-filter: blur( 16px );
+                            // filter: blur( 16px );
+
+                    transition: all 0ms linear 0ms;
+
+                }
+
+            }
+
+            // content
+            .secondary-content {
+
+                width: 100%;
+                padding: 0 6rem 5rem 6rem;
+
+            }
+
+            // sidebar
+            .sidebar-area {
+
+                // widget
+                .widget {
+
+                    margin: 0 0 2rem 0;
+
+                    // last child
+                    &:last-child {
+
+                        margin-bottom: 0;
+
+                    }
+
+                    // text widget
+                    &.widget_text {
+
+                        // text
+                        p {
+
+                            @include font( $industry, 0.75rem, 500 );
+
+                            @include color( $app05, 0.115 );
+
+                            // first child
+                            &:first-child {
+
+                                margin-top: 1rem;
+
+                            }
+
+                            // last child
+                            &:last-child {
+
+                                margin-bottom: 0;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                // widget title
+                .sidebar-title {
+
+                    margin: 0 0 0.75rem 0;
+
+                    @include font( $industry, 0.6875rem, 700 );
+
+                    @include typo( 0.5rem, 0.055em );
+
+                    @include text( $up );
+
+                    @include color( $app05, 0.365 );
+
+                }
+
+                // menu
+                .menu {
+
+                    // active
+                    .is-active {
+
+                        // link
+                        a {
+
+                            @include color( $app05, 0.000 );
+
+                            @include fill( white, 1.000 );
+
+                        }
+
+                    }
+
+                    // menu item
+                    .menu-item {
+
+                        width: 100%;
+
+                        // link
+                        a {
+
+                            @include flex-h-s-v-c( false );
+
+                            height: 2rem;
+                            padding: 0 0 0 0;
+
+                            @include font( $industry, 0.875rem, 600 );
+
+                            @include typo( 1rem, 0.035em );
+
+                            @include color( $g140, 0.000 );
+
+                            transition: all 320ms $outex 0ms;
+
+                            // hover state
+                            &:hover {
+
+                                padding: 0 0 0 0.5rem;
+
+                                @include color( $cvnavy, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // footer
+            #site-footer {
+
+                position: relative;
+
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+
+                width: 100%;
+
+                // footer row
+                .footer-row {
+
+                    width: 100%;
+
+                }
+
+            }
+
+        }
+
+    }

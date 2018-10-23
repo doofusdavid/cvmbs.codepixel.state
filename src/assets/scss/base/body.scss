@@ -48,10 +48,12 @@
 
         // secondary
         &.page-template-secondary,
+        &.page-template-secondary-main,
         // &.single-degree-program,
         &.archive {
 
-            padding: 4rem 0 0 0;
+            height: auto;
+            padding: 5rem 0 0 0;
 
         }
 

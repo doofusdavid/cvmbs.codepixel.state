@@ -19,6 +19,20 @@
 			$header_url    = $program_img[ 'url' ];
 			$program_video = get_field( 'program_video' );
 
+			// location
+			$program_location_image = get_field( 'program_location_image' );
+			$program_location_info  = get_field( 'program_location_info' );
+
+			if ( !$program_location_image ) {
+
+				$location_background = get_stylesheet_directory_uri() . '/dist/assets/img/content/content.background.02.jpg';
+
+			} else {
+
+				$location_background = $program_location_image[ 'url' ];
+
+			}
+
 		?>
 
 		<!-- header -->
@@ -71,7 +85,7 @@
 					<!-- type -->
 					<span class="degree-type-text">
 
-						<?php echo $degree_type; ?>
+						<?php echo $degree_type[ 'label' ]; ?>
 
 					</span>
 					<!-- END type -->
@@ -528,144 +542,209 @@
 			<!-- END similar majors -->
 
 			<!-- research opportunities -->
-			<div class="program-content program-row empty lite">
+			<div class="program-content program-row research lite">
 
-				<h3 class="title">
+				<!-- content wrapper -->
+				<div class="content-wrapper">
 
-					research opportunities
+					<!-- content half -->
+					<div class="content left">
 
-				</h3>
+						<!-- title -->
+						<h3 class="title">
 
-				<span class="content-output">
+							research<br />opportunities
 
-					<?php if ( have_rows( 'program_research_opportunities' ) ): ?>
+						</h3>
+						<!-- END title -->
 
-						<ul class="content-output-list">
+						<!-- content  -->
+						<div class="content">
+
+							Research opportunities include lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean commodo ligula eget dolor. Aenean massa sum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+						</div>
+						<!-- END content  -->
+
+					</div>
+					<!-- END content half -->
+
+					<!-- content half -->
+					<div class="content right" style>
+
+						<?php if ( have_rows( 'program_research_opportunities' ) ): ?>
 
 							<?php while ( have_rows( 'program_research_opportunities' ) ): the_row();
 
-								$researcher_name = get_sub_field( 'researcher_name' );
+								$researcher_name  = get_sub_field( 'researcher_name' );
 								$researcher_title = get_sub_field( 'researcher_title' );
 								$researcher_image = get_sub_field( 'researcher_image' );
 								$researcher_email = get_sub_field( 'researcher_email' );
 
 							?>
 
-							<li>
+							<!-- opportunity -->
+							<div class="research-opportunity" style="background-image:url(<?php echo $researcher_image[ 'url' ]; ?>);">
 
-								<?php echo $researcher_name; ?><br/>
-								<?php echo $researcher_title; ?><br/>
-								<img src="<?php echo $researcher_image[ 'url' ]; ?>" width="256" alt="foobar"/><br/>
-								<?php echo $researcher_email; ?>
+								<!-- contact box -->
+								<span class="contact-box">
 
-							</li>
+									<?php echo $researcher_name; ?><br/>
+									<?php echo $researcher_title; ?><br/>
+									<!-- <img src="<?php echo $researcher_image[ 'url' ]; ?>" width="256" alt="foobar"/><br/> -->
+									<?php echo $researcher_email; ?>
+
+								</span>
+								<!-- END contact box -->
+
+							</div>
+							<!-- END opportunity -->
 
 							<?php endwhile; ?>
 
-						</ul>
+						<?php else: ?>
 
-					<?php else: ?>
+							example content pending
 
-						example content pending
+						<?php endif; ?>
 
-					<?php endif; ?>
+					</div>
+					<!-- END content half -->
 
-				</span>
+				</div>
+				<!-- END content wrapper -->
 
 			</div>
 			<!-- END research opportunities -->
 
 			<!-- program contacts -->
-			<div class="program-content program-row empty dark">
+			<div class="program-content program-row contacts dark">
 
-				<h3 class="title">
+				<!-- content wrapper -->
+				<div class="content-wrapper">
 
-					program contacts
+					<!-- title -->
+					<h3 class="title">
 
-				</h3>
+						program contacts
 
-				<span class="content-output">
+					</h3>
+					<!-- END title -->
 
-					<?php if ( have_rows( 'program_contacts' ) ): ?>
+					<!-- content -->
+					<div class="content">
 
-						<ul class="content-output-list">
+						<?php if ( have_rows( 'program_contacts' ) ): ?>
 
-							<?php while ( have_rows( 'program_contacts' ) ): the_row();
+							<!-- list -->
+							<ul class="contact-list">
 
-								$contact_name = get_sub_field( 'contact_name' );
-								$contact_type = get_sub_field( 'contact_type' );
-								$contact_phone = get_sub_field( 'contact_phone' );
-								$contact_email = get_sub_field( 'contact_email' );
+								<?php while ( have_rows( 'program_contacts' ) ): the_row();
 
-							?>
+									$contact_name  = get_sub_field( 'contact_name' );
+									$contact_photo = get_sub_field( 'contact_photo' );
+									$contact_type  = get_sub_field( 'contact_type' );
+									$contact_phone = get_sub_field( 'contact_phone' );
+									$contact_email = get_sub_field( 'contact_email' );
 
-							<li>
+								?>
 
-								<?php echo $contact_name; ?><br/>
-								<?php echo $contact_type; ?><br/>
-								<?php echo $contact_phone; ?><br/>
-								<?php echo $contact_email; ?>
+								<li class="contact-card">
 
-							</li>
+									<img src="<?php echo $contact_photo; ?>" alt="foobar">
+									<?php echo $contact_name; ?><br/>
+									<?php echo $contact_type; ?><br/>
+									<?php echo $contact_phone; ?><br/>
+									<?php echo $contact_email; ?>
 
-							<?php endwhile; ?>
+								</li>
 
-						</ul>
+								<?php endwhile; ?>
 
-					<?php endif; ?>
+							</ul>
+							<!-- END list -->
 
-				</span>
+						<?php endif; ?>
+
+					</div>
+					<!-- END content -->
+
+				</div>
+				<!-- END content wrapper -->
 
 			</div>
 			<!-- END program contacts -->
 
-			<!-- honor program information -->
-			<div class="program-content program-row empty lite">
-
-				<?php
-
-					$program_honors_info = get_field( 'program_honors_info' );
-
-				?>
-
-				<h3 class="title">
-
-					honor program information
-
-				</h3>
-
-				<span class="content-output">
-
-					<?php echo $program_honors_info; ?>
-
-				</span>
-
-			</div>
-			<!-- END honor program information -->
-
 			<!-- tuition + financial aid -->
-			<div class="program-content program-row empty dark">
+			<div class="program-content program-row tuition lite">
 
 				<?php
 
-					$program_financials = get_field( 'program_financials' );
+					$program_financial_text = get_field( 'program_financial_text' );
+					$program_financial_link = get_field( 'program_financial_link' );
 
 				?>
 
-				<h3 class="title">
+				<!-- content wrapper -->
+				<div class="content-wrapper">
 
-					Tuition + Financial Aid
+					<h3 class="title">
 
-				</h3>
+						tuition + financial aid
 
-				<span class="content-output">
+					</h3>
 
-					<?php echo $program_financials; ?>
+					<span class="content">
 
-				</span>
+						<?php echo $program_financial_text; ?>
+
+					</span>
+
+					<!-- button -->
+					<button class="content-button" data-link="<?php echo $program_financial_link; ?>">
+
+						cost of attendance info
+
+					</button>
+					<!-- END button -->
+
+				</div>
+				<!-- END content wrapper -->
 
 			</div>
 			<!-- END tuition + financial aid -->
+
+			<!-- location -->
+			<div class="program-content program-row location dark" style="background-image:url(<?php echo $location_background; ?>);">
+
+				<!-- content wrapper -->
+				<div class="content-wrapper">
+
+					<h3 class="title">
+
+						Fort Collins, Colorado
+
+					</h3>
+
+					<span class="content">
+
+						<?php echo $program_location_info; ?>
+
+					</span>
+
+					<!-- button -->
+					<button class="content-button">
+
+						schedule a tour of campus
+
+					</button>
+					<!-- END button -->
+
+				</div>
+				<!-- END content wrapper -->
+
+			</div>
+			<!-- END location -->
 
 		</div>
 		<!-- END content -->
@@ -674,7 +753,12 @@
 
 		<?php endif; ?>
 
+		<?php get_template_part( 'elements/layout/layout.footer' ); ?>
+
 	</div>
 	<!-- END content container -->
+
+</main>
+<!-- site.layout -->
 
 <?php get_footer(); ?>

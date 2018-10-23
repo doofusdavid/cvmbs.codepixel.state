@@ -1,0 +1,85 @@
+#wpadminbar {
+
+    // @include color( $rite-lite, 0.000 );
+
+    // @include fill( $app05, 0.000 );
+
+}
+
+#collapse-menu {
+
+    @include hide;
+
+}
+
+// top-level hook
+#adminmenu {
+
+    // menu item
+    li {
+
+        // hover state
+        &:hover {
+
+            // link
+            a {
+
+                // after
+                &:after {
+
+                    @include hide;
+
+                }
+
+            }
+
+        }
+
+        // current state
+        &.wp-has-current-submenu {
+
+            // link
+            a {
+
+                // after
+                &:after {
+
+                    @include hide;
+
+                }
+
+            }
+
+        }
+
+        // after
+        &:after {
+
+            @include hide;
+
+        }
+
+    }
+
+    // separator
+    .wp-menu-separator {
+
+        @include hide;
+
+    }
+
+    // menu item
+    .menu-top {
+
+        // submenu
+        .wp-submenu {
+
+            position: static;
+
+            box-shadow: none;
+
+        }
+
+    }
+
+}

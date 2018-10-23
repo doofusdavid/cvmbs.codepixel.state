@@ -51,7 +51,7 @@
         // open state
         &.is-open {
 
-            // box-shadow: -6rem 0 8rem 0 transparentize( black, 0.515 );
+            visibility: visible;
 
         }
 
@@ -60,7 +60,7 @@
         .single-degree-program &,
         .archive & {
 
-            transform: translate3d( -28rem, 0, 0 );
+            transform: translate3d( 28rem, 0, 0 );
 
         }
 

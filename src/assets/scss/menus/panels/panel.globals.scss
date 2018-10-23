@@ -18,12 +18,18 @@
 
         z-index: 10;
 
-        @include flex-v-t-h-s( false );
+        @include flex-v-c-h-c( false );
 
         width: 100%;
         height: calc( 100vh - 5rem );
         margin: 0;
         padding: 7rem 2rem 2rem 2rem;
+
+        @include font( $industry, 0.5625rem, 700 );
+
+        @include typo( 0.5rem, 0.115em );
+
+        @include text( $up );
 
         @include fill( $app05, 0.345 );
 
@@ -36,7 +42,7 @@
 
             opacity: 0.000;
 
-            transform: translate3d( 100%, 0, 0 );
+            transform: translate3d( 28rem, 0, 0 );
 
             transition: all 240ms $ocirc 60ms;
 

@@ -1,3 +1,12 @@
+<?php
+
+    // menu panel placeholder fields
+    $events_panel    = get_field( 'events_menu_panel_content', 'options' );
+    $resources_panel = get_field( 'resources_menu_panel_content', 'options' );
+    $social_panel    = get_field( 'social_menu_panel_content', 'options' );
+    $contact_panel   = get_field( 'contact_menu_panel_content', 'options' );
+
+?>
 
 <!-- menu.panels -->
 <menu id="site-menu-panels" class="ui-panels">
@@ -57,54 +66,6 @@
     </panel>
     <!-- END panel.main -->
 
-    <!-- panel.search -->
-    <panel id="menu-panel-search" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-search-header" class="panel-header">
-
-            search
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
-    </panel>
-    <!-- END panel.search -->
-
-    <!-- panel.events -->
-    <panel id="menu-panel-events" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-events-header" class="panel-header">
-
-            college event calendar
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
-    </panel>
-    <!-- END panel.events -->
-
-    <!-- panel.resources -->
-    <panel id="menu-panel-resources" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-resources-header" class="panel-header">
-
-            college resources
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
-
-    </panel>
-    <!-- END panel.resources -->
-
     <!-- panel.global -->
     <panel id="menu-panel-global" class="inactive ui-panel menu-panel">
 
@@ -137,6 +98,54 @@
     </panel>
     <!-- END panel.global -->
 
+    <!-- panel.search -->
+    <panel id="menu-panel-search" class="inactive ui-panel menu-panel">
+
+        <!-- panel.header -->
+        <header id="menu-panel-search-header" class="panel-header">
+
+            search
+
+        </header>
+        <!-- END panel.header -->
+
+        search
+
+    </panel>
+    <!-- END panel.search -->
+
+    <!-- panel.events -->
+    <panel id="menu-panel-events" class="inactive ui-panel menu-panel">
+
+        <!-- panel.header -->
+        <header id="menu-panel-events-header" class="panel-header">
+
+            college event calendar
+
+        </header>
+        <!-- END panel.header -->
+
+        <?php echo $events_panel; ?>
+
+    </panel>
+    <!-- END panel.events -->
+
+    <!-- panel.resources -->
+    <panel id="menu-panel-resources" class="inactive ui-panel menu-panel">
+
+        <!-- panel.header -->
+        <header id="menu-panel-resources-header" class="panel-header">
+
+            college resources
+
+        </header>
+        <!-- END panel.header -->
+
+        <?php echo $resources_panel; ?>
+
+    </panel>
+    <!-- END panel.resources -->
+
     <!-- panel.social -->
     <panel id="menu-panel-social" class="inactive ui-panel menu-panel">
 
@@ -148,7 +157,7 @@
         </header>
         <!-- END panel.header -->
 
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
+        <?php echo $social_panel; ?>
 
     </panel>
     <!-- END panel.social -->
@@ -164,7 +173,7 @@
         </header>
         <!-- END panel.header -->
 
-        <?php get_template_part( 'elements/menus/panels/panel.text' ); ?>
+        <?php echo $contact_panel; ?>
 
     </panel>
     <!-- END panel.contact -->

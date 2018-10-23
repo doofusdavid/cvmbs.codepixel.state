@@ -106,16 +106,16 @@ export var scrollUI = {
             if ( e.originalEvent.deltaY > 20 ) {
 
                 // scrollUI.curtain( billboard, 'raise', views );
-                console.log( 'positive' );
+                // console.log( 'positive' );
 
             } else if ( e.originalEvent.deltaY < 0 ) {
 
                 // scrollUI.curtain( billboard, 'lower', views );
-                console.log( 'negative' );
+                // console.log( 'negative' );
 
             } else {
 
-                console.log( 'neutral' );
+                // console.log( 'neutral' );
 
             }
 

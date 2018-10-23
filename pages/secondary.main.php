@@ -1,3 +1,11 @@
+<?php
+
+	// template name: top-level secondary page
+
+    $page_image = get_field( 'page_image' );
+    $page_text  = get_field( 'page_text' );
+
+?>
 
 <?php get_header(); ?>
 
@@ -21,15 +29,23 @@
 	        <!-- main content -->
 	        <div class="content-area main">
 
+				<?php while ( have_posts() ) : the_post(); ?>
+
 				<!-- title -->
 		        <h2 class="page-title">
 
-					degree programs
+					<?php the_title(); ?>
 
 				</h2>
 		        <!-- END title -->
 
-				<?php while ( have_posts() ) : the_post(); ?>
+                <!-- highlight text -->
+                <span class="highlight-text">
+
+                    <?php echo $page_text; ?>
+
+                </span>
+                <!-- END highlight text -->
 
 				<section class="intro" role="main">
 
@@ -37,7 +53,7 @@
 
 						<div class="entry-content">
 
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<?php the_content(); ?>
 
 						</div>
 

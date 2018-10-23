@@ -5,32 +5,32 @@
 
 ?>
 
-        <!-- site.layout -->
-        <main id="site-layout" class="off-canvas-content <?php echo $site_type; ?>" data-off-canvas-content style="background-image:url(<?php echo $site_image; ?>);">
+<!-- site.layout -->
+<main id="site-layout" class="off-canvas-content secondary <?php echo $site_type; ?>" data-off-canvas-content style="background-image:url(<?php echo $site_image; ?>);">
 
-            <!-- department.billboard -->
-            <section id="department-billboard" class="ui-billboard pattern" tabindex="-1">
+    <!-- department.billboard -->
+    <section id="department-billboard" class="ui-billboard pattern" tabindex="-1">
 
-                <!-- billboard.layers -->
-                <div id="billboard-artwork-layers">
+        <!-- billboard.layers -->
+        <div id="billboard-artwork-layers">
 
-                    <!-- site.image -->
-                    <div class="layer image">
+            <!-- site.image -->
+            <div class="layer image">
 
-                        <!--  -->
+                <!--  -->
 
-                    </div>
-                    <!-- END site.image -->
+            </div>
+            <!-- END site.image -->
 
-                </div>
-                <!-- END billboard.layers -->
+        </div>
+        <!-- END billboard.layers -->
 
-            </section>
-            <!-- END department.billboard -->
+    </section>
+    <!-- END department.billboard -->
 
-            <?php get_template_part( 'elements/homepage/department/content/content.department' ); ?>
+    <?php get_template_part( 'elements/homepage/department/content/content.department' ); ?>
 
-        </main>
-        <!-- site.layout -->
+    <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
-        <?php get_template_part( 'elements/layout/layout.footer' ); ?>
+</main>
+<!-- site.layout -->

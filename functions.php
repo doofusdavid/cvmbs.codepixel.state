@@ -1,5 +1,8 @@
 <?php
 
+    // custom admin
+    require_once( 'library/admin.php' );
+
     // various clean up functions
     require_once( 'library/cleanup.php' );
 

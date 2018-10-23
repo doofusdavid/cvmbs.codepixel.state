@@ -153,6 +153,53 @@
 
     }
 
+    // compile SCSS
+    function adminscss() {
+
+        return gulp.src( 'src/assets/scss/cvmbs.admin.ui.scss' )
+
+            .pipe( $.sourcemaps.init() )
+
+            .pipe( $.sass( {
+
+                includePaths : PATHS.sass
+
+            } ).on( 'error', $.sass.logError ) )
+
+            .pipe( $.sourcemaps.write() )
+
+            .pipe( $.autoprefixer( {
+
+                browsers : COMPATIBILITY
+
+            } ) )
+
+            .pipe( $.if( PRODUCTION,
+
+                $.cleanCss( { compatibility: 'ie9' } )
+
+            ) )
+
+            .pipe( gulp.dest( PATHS.site + '/assets/css' ) )
+
+            .pipe( notify({
+
+                title: 'compiled',
+                message: '<%= file.relative %> : <%= options.timestamp %>',
+                onLast: true,
+                icon: path.join( __dirname, notifycon_scss ),
+                templateOptions: {
+
+                    timestamp: timestamp
+
+                }
+
+            } ) )
+
+            .pipe( browser.reload( { stream: true } ) );
+
+    }
+
     // webpack
     const webpack = {
 
@@ -464,6 +511,7 @@
             gulp.parallel(
 
                 sass,
+                adminscss,
                 'webpack:build',
                 images,
                 copy,

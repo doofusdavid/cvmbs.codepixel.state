@@ -1,0 +1,157 @@
+// stylesheet :: main secondary page template styles
+
+    // settings
+    $page_main : 1rem;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.default {
+
+            background: {
+
+                // image: none !important;
+
+                size: contain;
+                position: 0 -4rem;
+
+            }
+
+            // content container
+            .secondary-container {
+
+                @include flex-v-t-h-s( false );
+
+                margin: 16rem 0 0 0;
+
+                @include color( $app05, 0.000 );
+
+            }
+
+            // common
+            .artwork-layer {
+
+                position: absolute;
+
+                top: -16rem;
+                right: 0;
+                left: 0;
+
+                width: 100%;
+                height: 16rem;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            // artwork
+            .base-artwork {
+
+                z-index: 10;
+
+                @include fill( $cvnavy, 0.000 );
+
+            }
+
+            // artwork
+            .image-artwork {
+
+                z-index: 20;
+
+                background: {
+
+                    image: url(../img/patterns/pattern.vertical.svg);
+                    repeat: no-repeat;
+                    size: 50%;
+                    position: right bottom;
+
+                }
+
+                opacity: 0.165;
+
+                // mix-blend-mode: overlay;
+
+                // @include gradient( 90deg, $cvellow, 0.465, 0%, $cvellow, 0.465, 100% );
+
+            }
+
+            // content
+            .secondary-content {
+
+                position: relative;
+
+                z-index: 30;
+
+                @include flex-h-j-v-t( false );
+
+                min-height: calc( 100vh + 2rem );
+
+                @include fill( white, 0.000 );
+
+            }
+
+            // content area(s)
+            .content-area {
+
+                // class hook
+                &.main {
+
+                    position: relative;
+
+                    @include flex-v-t-h-s( false );
+
+                    width: calc( 100% - 24rem );
+                    padding: 2rem 2rem 0 0;
+
+                    // title
+                    .page-title {
+
+                        position: absolute;
+
+                        top: -4rem;
+
+                        z-index: 100;
+
+                        @include flex-h-s-v-b( false );
+
+                        height: 2rem;
+                        margin: 0;
+                        padding: 0;
+
+                        border: none;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        @include typo( 1.75rem, 0.085em );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                }
+
+            }
+
+            // content area(s)
+            .sidebar-area {
+
+                // class hook
+                &.main {
+
+                    position: relative;
+
+                    top: -4rem;
+
+                    width: 24rem;
+                    padding: 2rem 2rem 2rem 2rem;
+
+                    @include fill( $beige, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

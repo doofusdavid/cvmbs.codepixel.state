@@ -197,8 +197,17 @@
     var globalnav = $('#global-menu-link');
     var localmenu = $('#menu-department-menu');
 
-    // append global menu link
-    $( globalnav ).appendTo( $( localmenu ) );
+    // test for local menu
+    if ( localmenu.length > 0 ) {
+
+        // append global menu link
+        $( globalnav ).appendTo( $( localmenu ) );
+
+    } else {
+
+        globalnav.remove();
+
+    }
 
     var pageURL;
     var pagelink = $('.link');
