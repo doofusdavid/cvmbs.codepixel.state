@@ -9,58 +9,38 @@
     // styles
     #news {
 
-        margin-bottom: 26rem;
+        height: auto;
+        margin: 0;
 
-        @include shadowbox( 2rem, 7rem, black, 0.625 );
+        @include fill( $section_color, 0.000 );
 
         // color
         .section-base {
 
-            @include fill( $section_color, 0.000 );
+            //
 
         }
 
         // title
         .section-title {
 
-            position: absolute;
-
-            top: 10rem;
-            left: 2rem;
-
-            @include flex-h-s-v-c( false );
-
-            height: 4rem;
-            padding: 0 0 0 1rem;
+            height: 2rem;
+            margin: 0 0 2rem 1rem;
 
             @include font( $klavislim, 2rem, 400 );
 
-            @include color( $g135, 0.000 );
+            @include color( $dark, 0.125 );
 
         }
 
         // container
         .article-container {
 
-            // @include flex-v-t-h-c( false );
+            @include flex-v-j-h-s( false );
 
-            // padding: 5rem 1rem 1rem 1rem;
-
-        }
-
-        // content layers
-        .content-layers {
-
-            position: relative;
-
-            z-index: 20;
-
-            @include flex-h-j-v-s( false );
-
-            height: 39rem;
-            margin: 10rem 0 0 0;
-            padding: 0 1rem 0 3rem;
-            // padding: 0;
+            width: 100vw;
+            height: auto;
+            padding: 5rem 4rem 5rem 4rem;
 
         }
 
@@ -69,15 +49,12 @@
 
             @include flex-v-j-h-st( false );
 
-            width: 64rem;
-            width: 100vw;
-            height: 32rem;
             margin: 0;
             padding: 0;
 
         }
 
-        // source feature
+        // source feature --> REMOVE
         #source-feature {
 
             @include hide;
@@ -151,7 +128,7 @@
 
         }
 
-        // source sidebar
+        // source sidebar --> REMOVE
         #source-sidebar {
 
             @include hide;
@@ -239,65 +216,42 @@
             @include flex-h-s-v-st( false );
 
             flex-wrap: nowrap;
+            flex-wrap: wrap;
 
             width: auto;
             height: 100%;
-            // max-height: 11rem;
             margin: 0;
             padding: 0;
-
-            overflow-x: scroll;
-
-            // -webkit-mask-image:
-            //
-            //     linear-gradient(
-            //
-            //         270deg,
-            //         rgba(0, 0, 0, 0.0) 0%,
-            //         rgba(0, 0, 0, 0.0) 0.75rem,
-            //         rgba(0, 0, 0, 1.0) 4rem,
-            //         rgba(0, 0, 0, 1.0) 100%
-            //
-            //     )
-            //
-            // ;
-            //
-            // mask-image:
-            //
-            //     linear-gradient(
-            //
-            //         90deg,
-            //         rgba(0, 0, 0, 0.0) 0%,
-            //         rgba(0, 0, 0, 0.0) 10%,
-            //         rgba(0, 0, 0, 1.0) 15%,
-            //         rgba(0, 0, 0, 1.0) 100%
-            //
-            //     )
-            //
-            // ;
 
             // article
             .article {
 
                 @include flex-v-t-h-c( true );
 
-                width: 24rem;
-                min-width: 24rem;
+                // flex-basis: 33.3333333%;
+                flex-basis: 25%;
+
                 height: auto;
-                margin: 0 2rem 0 0;
+                margin: 0 1rem 0 1rem;
                 padding: 2rem;
 
-                // @include fill( white, 0.185 );
-                @include fill( $card, 0.000 );
+                @include fill( white, 0.185 );
+                // @include fill( $card, 0.000 );
 
-                transition: all 220ms linear 0ms;
+                @include shadowbox( 1.5rem, 4rem, black, 0.615 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 240ms $outex 0ms;
 
                 // hover state
                 &:hover {
 
                     cursor: pointer;
 
-                    // @include fill( white, 0.000 );
+                    transform: translate3d( 0, -1rem, 0 );
+
+                    @include fill( white, 0.000 );
 
                     // header
                     .header {
@@ -324,13 +278,6 @@
                 &:focus {
 
                     outline: none;
-
-                }
-
-                // hide first story
-                &[data-url='http://source.colostate.edu/president-frank-no-place-hate-colorado-state/'] {
-
-                    @include hide;
 
                 }
 

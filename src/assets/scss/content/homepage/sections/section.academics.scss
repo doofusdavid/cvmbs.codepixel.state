@@ -2,7 +2,7 @@
 
     // settings
     $academics_fx : all 320ms $oquin 0ms;
-    $section_color : transparentize( $nite, 0.385 );
+    $section_color : transparentize( $nite, 0.365 );
 
     $billboard : '../img/billboards/billboard.09.jpg';
 
@@ -48,16 +48,37 @@
 
             // @include flex-v-b-h-c( false );
 
-            // padding: 0 0 1rem 0;
+            height: 100vh;
             padding: 0 0 0 0;
 
             // border
             &:after {
 
-                // @include border( false, auto, auto, 4rem, auto );
+                content: '';
 
-                height: 36rem;
-                margin: 0 0 0 -1px;
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                background: {
+
+                    // image: url($billboard);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                filter:
+
+                    grayscale( 1.000 );
+
+                ;
 
             }
 
@@ -66,8 +87,19 @@
         // image
         .section-image {
 
-            -webkit-filter: blur( 8px );
-                    filter: blur( 8px );
+            @include fullscreen( absolute, 10, true, hidden );
+
+            background: {
+
+                image: url($billboard);
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+            // -webkit-filter: blur( 8px );
+                    // filter: blur( 8px );
 
             // loaded state
             &[data-load='loaded'] {
@@ -81,12 +113,77 @@
         // color base
         .section-base {
 
+            width: 100vw;
+            height: 100vh;
+
             @include fill( $section_color, 0.000 );
+
+            // common
+            &:before,
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                background: {
+
+                    // repeat: no-repeat;
+
+                }
+
+                mix-blend-mode: multiply;
+
+            }
+
+            // before
+            &:before {
+
+                @include hide;
+
+                z-index: 0;
+
+                background: {
+
+                    image: url(../img/patterns/pattern.vertical.svg);
+                    // position: calc( 100% + 10rem ) 10rem;
+
+                }
+
+                opacity: 0.265;
+
+            }
+
+            // after
+            &:after {
+
+                // @include hide;
+
+                z-index: 0;
+
+                background: {
+
+                    // image: url(../img/patterns/pattern.light.00.png);
+                    size: 100px 100px;
+                    // position: left 0rem;
+
+                }
+
+                opacity: 0.365;
+
+            }
 
         }
 
         // title
         .section-title {
+
+            @include hide;
 
             position: absolute;
 
@@ -99,11 +196,19 @@
         // content
         .section-content {
 
-            padding: 17rem 13rem 9rem 13rem;
+            width: 100vw;
+            height: 100vh;
 
             opacity: 1.000;
 
             transition: all 40ms linear 160ms;
+
+        }
+
+        // build
+        #academics-content-build {
+
+
 
         }
 
@@ -112,42 +217,157 @@
 
             @include flex-h-s-v-t( false );
 
-            flex-wrap: wrap;
+            @include hide;
+
+            flex-wrap: nowrap;
 
             width: 100%;
             height: 100%;
             margin: 0;
-            padding: 0;
+            padding: 10rem 4rem 5rem 4rem;
+
+            // output
+            #output {
+
+                @include hide;
+
+            }
 
             // card
             .degree-program {
 
                 @include flex-v-t-h-s( true );
 
-                max-width: 16rem;
-                min-height: 16rem;
-                margin: 0 2rem 0 0;
-                padding: 2rem 2rem 2rem 2rem;
+                flex-basis: 33.3333333%;
+                // flex-basis: 25%;
+
+                margin: 0 1rem 0 1rem;
+                padding: 2rem 0 0 0;
 
                 @include fill( white, 0.935 );
+                // @include fill( $cvnavy, 0.165 );
 
-                transition: all 220ms linear 0ms;
+                @include shadowbox( 1.5rem, 4rem, black, 0.615 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 360ms $outex 0ms;
 
                 // hover state
                 &:hover {
 
-                    @include fill( white, 0.865 );
+                    // @include fill( white, 0.865 );
+
+                    transform: translate3d( 0, -1rem, 0 );
+
+                    transition: all 360ms $outex 0ms;
 
                     cursor: pointer;
+
+                }
+
+                // header
+                header {
+
+                    position: relative;
+
+                    @include flex-v-b-h-s( false );
+
+                    width: 100%;
+                    height: 10rem;
+                    height: auto;
+                    margin: 0;
+                    padding: 0 0 1rem 2rem;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    // before
+                    &:before {
+
+                        // content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 15;
+
+                        @include gradient(
+
+                            0deg,
+                            $cvnavy, 1.000, 0%,
+                            $cvnavy, 0.015, 100%
+
+                        );
+
+                    }
+
+                    // after
+                    &:after {
+
+                        // content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 10;
+
+                        @include fill( $cvnavy, 0.645 );
+
+                    }
+
+                    // title
+                    span {
+
+                        position: relative;
+
+                        z-index: 20;
+
+                        @include font( $klavislim, 1.25rem, 400 );
+
+                        @include typo( 1rem, auto );
+
+                        @include color( $gold, 0.000 );
+
+                    }
+
+                }
+
+                // section
+                section {
+
+                    @include flex-h-s-v-t( false );
+
+                    margin: 0;
+                    padding: 0 2rem 2rem 2rem;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 1.125rem, 0.035em );
 
                 }
 
                 // title
                 .name {
 
+                    @include hide;
+
                     margin: 0 0 1rem 0;
 
-                    @include font( $klavislim, 1rem, 400 );
+                    @include font( $klavislim, 1.25rem, 400 );
 
                     @include color( $gold, 0.000 );
 
@@ -155,6 +375,8 @@
 
                 // text
                 .text {
+
+                    @include hide;
 
                     @include font( $industry, 0.75rem, 600 );
 
@@ -196,9 +418,9 @@
 
             @include color( white, 0.000 );
 
-            opacity: 0.000;
+            // opacity: 0.000;
 
-            transform: translate3d( 0, -200%, 0 );
+            // transform: translate3d( 0, -200%, 0 );
 
             // load class
             &.loaded {
@@ -320,6 +542,8 @@
 
             @include flex-h-j-v-s( false );
 
+            // @include hide;
+
         }
 
         // commons
@@ -332,7 +556,7 @@
             width: 50%;
             height: calc( 100% - 1px );
 
-            opacity: 0.000;
+            // opacity: 0.000;
 
             // active state
             &[data-active='true'] {
@@ -674,7 +898,7 @@
 
             @include fill( white, 0.965 );
 
-            transform: translate3d( -10%, 0, 0 );
+            // transform: translate3d( -10%, 0, 0 );
 
             // panel active state
             &[data-active='true'] {
@@ -947,7 +1171,7 @@
 
             @include fill( white, 0.965 );
 
-            transform: translate3d( 10%, 0, 0 );
+            // transform: translate3d( 10%, 0, 0 );
 
             // border
             &:after {

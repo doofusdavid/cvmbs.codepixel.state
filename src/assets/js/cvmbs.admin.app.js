@@ -38,11 +38,11 @@ document.write(`<script id='__bs_script__'><script async src='//HOST:3000/browse
     var adminMainMenu = $('#adminmenu');
 
     // configure admin menu
-    var adminMainMenu = new Foundation.AccordionMenu( adminMainMenu, {
+    // var adminMainMenu = new Foundation.AccordionMenu( adminMainMenu, {
 
-        multiOpen : false
+        // multiOpen : false
 
-    });
+    // });
 
 // ================================================================================
 // END :: config.objects

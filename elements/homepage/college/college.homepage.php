@@ -15,9 +15,10 @@
 
         <?php get_template_part( 'elements/homepage/college/content/content.college' ); ?>
 
-
     </section>
     <!-- END content.homepage -->
+
+    <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
 </main>
 <!-- site.layout -->

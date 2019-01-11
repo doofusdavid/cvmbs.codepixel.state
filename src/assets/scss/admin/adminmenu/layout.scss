@@ -1,0 +1,87 @@
+// stylesheet: wp_admin_menu layout styles
+
+	// fix sibling container(s)
+		#wpcontent {
+
+			width: calc(100% - 224px) !important;
+
+		}
+
+	// top-level hook
+		#adminmenumains {
+
+			position: absolute;
+
+			top: 48px;
+			bottom: 0;
+			left: 0;
+
+			z-index: 1000;
+
+			// display: none;
+
+			flex-grow: 1;
+
+			width: 224px;
+			// height: 100%;
+
+			// overflow: hidden;
+
+			background: {
+
+				color: darken($admin, 1.5%);
+
+			}
+
+			// opacity: 0.000;
+
+			// transform: translate3d( -100%, 0, 0);
+
+			#adminmenuback {
+
+				width: 224px;
+
+				background: {
+
+					color: darken($admin, 1.5%);
+
+				}
+
+			}
+
+			#adminmenuwrap {
+
+				// position: static;
+
+				width: 224px;
+				height: 100%;
+
+				overflow-y: scroll;
+
+				background: {
+
+					color: transparent;
+
+				}
+
+				.slimScrollDiv {
+
+					// height: auto !important;
+
+				}
+
+				.slimScrollRail {
+
+					background-color: transparentize(white, 0.385) !important;
+
+				}
+
+				.slimScrollBar {
+
+					background-color: transparentize(white, 0.835) !important;
+
+				}
+
+			}
+
+		}

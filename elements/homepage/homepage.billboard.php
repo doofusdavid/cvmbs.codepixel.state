@@ -3,7 +3,7 @@
     $billboard_query = array(
 
         'post_type' => 'billboard',
-        'orderby'   => 'rand',
+        // 'orderby'   => 'rand',
 
     );
 
@@ -69,6 +69,7 @@
         $slide_name      = $post->post_name;
         $slide_image     = get_field( 'billboard_image' );
         $slide_image_url = $slide_image[ 'url' ];
+        $subheadline     = get_field( 'subheadline_text' );
         $headline        = get_field( 'headline_text' );
         $description     = get_field( 'description_text' );
         $button_link     = get_field( 'button_link' );
@@ -131,6 +132,14 @@
             <!-- slide.content -->
             <div class="slide-content">
 
+                <!-- subheadline -->
+                <span class="line subheadline">
+
+                    <?php echo $subheadline; ?>
+
+                </span>
+                <!-- END subheadline -->
+
                 <!-- headline -->
                 <span class="line headline">
 
@@ -140,7 +149,7 @@
                 <!-- END headline -->
 
                 <!-- description -->
-                <span class="line subheadline">
+                <span class="line description">
 
                     <?php echo $description; ?>
 
@@ -148,7 +157,7 @@
                 <!-- END description -->
 
                 <!-- headline -->
-                <button class="button-link" data-link="<?php echo $button_link; ?>">
+                <button class="button-link scroll-trigger" data-link="<?php echo $button_link; ?>" data-section="academics">
 
                     <?php echo $button_text; ?>
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g opacity="0.71">
+	<polygon fill="#276E77" points="20,18 0,18 0,1 7,1 9,3 20,3 	"/>
+</g>
+<g opacity="0.39">
+	<path fill="#FFFFFF" d="M6.6,2l1.7,1.7L8.6,4H9h10v13H1V2H6.6 M7,1H0v17h20V3H9L7,1L7,1z"/>
+</g>
+<g opacity="0.3">
+	<rect y="5" fill="#FFFFFF" width="20" height="13"/>
+</g>
+<g>
+	<path fill="#94D1C4" d="M19,6v11H1V6H19 M20,5H0v13h20V5L20,5z"/>
+</g>
+<rect x="16" y="7" fill="#FFFFFF" width="2" height="1"/>
+<rect x="14" y="7" fill="#E1963E" width="1" height="1"/>
+<g>
+	<circle fill="#FFFFFF" cx="10" cy="11.5" r="3.5"/>
+</g>
+<rect x="2" y="3" fill="#D06143" width="1" height="1"/>
+<g>
+	<circle fill="#276E77" cx="10" cy="11.5" r="2.5"/>
+</g>
+<rect x="3" y="3" opacity="0.4" fill="#FFFFFF" width="3" height="1"/>
+</svg>

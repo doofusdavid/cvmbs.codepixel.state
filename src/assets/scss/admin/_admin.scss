@@ -1,3 +1,14 @@
+// stylesheet :: cvmbs.admin.ui stylesheets compiler
+
+    // menu
+    // @import 'adminmenu/adminmenu';
+
+body {
+
+    @include fill( $app05, 0.000 );
+
+}
+
 #wpadminbar {
 
     // @include color( $rite-lite, 0.000 );

@@ -61,8 +61,13 @@ export var alumniUI = {
 
         );
 
-        // call method
+        // call loader method
         alumniUI.loader();
+
+        spotlights = $('#alumni-slides');
+
+        // init slick
+        alumniUI.slides( spotlights );
 
     },
 
@@ -71,8 +76,6 @@ export var alumniUI = {
 
         // assign globals
         alumni = site.ui.sections.alumni;
-
-        spotlights = $('#alumni-slides');
 
         // event listener
         site.ui.content.on( 'load.article.content', function( e, target ) {
@@ -354,7 +357,7 @@ export var alumniUI = {
 
             } else {
 
-                return;
+                $.Velocity.RunSequence( contentFX.loadtime );
 
             }
 
@@ -427,7 +430,7 @@ export var alumniUI = {
             imageattr  = 'background-image';
             featureimg = artwork;
 
-            billboard.css( imageattr, 'url(' + featureimg + ')' );
+            // billboard.css( imageattr, 'url(' + featureimg + ')' );
 
         });
 

@@ -88,6 +88,9 @@
 
         }
 
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
         // focus state
         &:focus {
 
@@ -142,6 +145,11 @@
 
         // menu open class
         &.site-menu-open {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
 
             // artwork -> blur
             &:before {
@@ -415,55 +423,55 @@
             margin: 0.5rem 0 0 0;
             padding: 0;
 
-            @include fill( $g140, 0.000 );
+            @include fill( white, 0.000 );
 
         }
 
         #dot1 {
 
-            @include fill( $g140, 0.800 );
+            @include fill( white, 0.800 );
 
         }
 
         #dot2 {
 
-            @include fill( $g140, 0.700 );
+            @include fill( white, 0.700 );
 
         }
 
         #dot3 {
 
-            @include fill( $g140, 0.600 );
+            @include fill( white, 0.600 );
 
         }
 
         #dot4 {
 
-            @include fill( $g140, 0.500 );
+            @include fill( white, 0.500 );
 
         }
 
         #dot5 {
 
-            @include fill( $g140, 0.400 );
+            @include fill( white, 0.400 );
 
         }
 
         #dot6 {
 
-            @include fill( $g140, 0.300 );
+            @include fill( white, 0.300 );
 
         }
 
         #dot7 {
 
-            @include fill( $g140, 0.200 );
+            @include fill( white, 0.200 );
 
         }
 
         #dot8 {
 
-            @include fill( $g140, 0.100 );
+            @include fill( white, 0.100 );
 
         }
 

@@ -701,10 +701,13 @@ export var academicsFX = {
         });
 
         // expand careers listener
-        careersFX.expand.on( 'click', function( e, viewport ) {
+        careersFX.expand.on( 'click', function( e, headline, viewport ) {
 
             // viewport width
             viewport = $('body').width();
+
+            // headline
+            headline  = $('#degree-programs-title');
 
             // define sequence
             runtimeFX.expand.careers = [

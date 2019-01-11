@@ -55,7 +55,8 @@ export var menusFX = {
             site.ui.slides,
             site.ui.active,
             site.ui.menus.navigation.component,
-            site.ui.menus.navigation.controller
+            site.ui.menus.navigation.controller,
+            site.ui.footer
             // $('#content-homepage')
 
         ];
@@ -221,7 +222,7 @@ export var menusFX = {
 
     				$(this).toggleClass( 'site-menu-open' );
 
-                    $('section.visible').focus();
+                    // $('section.visible').focus();
 
     			}
 

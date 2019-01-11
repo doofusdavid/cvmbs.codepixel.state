@@ -42,7 +42,14 @@
 				'hierarchical' 			=> false,
 				'menu_position' 		=> 4,
 				'menu_icon' 			=> 'dashicons-welcome-learn-more',
-				'supports' 				=> array( 'title', 'thumbnail' )
+				'supports' 				=> array( 'title', 'thumbnail' ),
+				'taxonomies'			=> array(
+
+												'theme_categories',
+												// 'category',
+												'career_interests'
+
+											)
 
 			)
 

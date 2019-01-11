@@ -1,0 +1,358 @@
+// stylesheet :: special unit layout styles
+
+    // settings
+    $billboard : 1rem;
+
+    // scrollbar
+    ::-webkit-scrollbar {
+
+        display: none !important;
+
+    }
+
+    // styles
+    #site-layout.special {
+
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 100vw;
+        height: auto;
+        padding: 100vh 0 0 0;
+
+        // menu open
+        &.site-menu-open {
+
+            -webkit-filter: blur( 16px );
+                    filter: blur( 16px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // billboard
+        #special-billboard {
+
+            @include fullscreen( absolute, 10, false, hidden );
+
+            @include flex-v-c-h-c( false );
+
+            overflow: hidden;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+            -webkit-filter: blur( 0px );
+                    filter: blur( 0px );
+
+            transition: all 0ms linear 120ms;
+
+            // content
+            #billboard-artwork-layers {
+
+                @include flex-v-b-h-s( false );
+
+                width: calc( 100vw + 2rem );
+                height: calc( 100vh + 2rem );
+                margin: 0;
+                padding: 6rem 6rem 10rem 6rem;
+
+                // headline
+                .headline {
+
+                    @include flex-h-s-v-c( false );
+
+                    height: 4rem;
+                    margin: 0 0 1rem 0;
+
+                    @include font( $klavislim, 5rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 3rem, 0.085em );
+
+                    @include color( white, 0.000 );
+
+                }
+
+                // text
+                .description {
+
+                    @include flex-h-s-v-c( false );
+
+                    margin: 0 0 2rem 0;
+
+                    @include font( $vitesse, 0.875rem, 500 );
+
+                    @include text( $up );
+
+                    @include typo( 1.5rem, 0.085em );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // button
+                button {
+
+                    @include flex-h-c-v-c( false );
+
+                    width: auto;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0 1.5rem 0 1.5rem;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 0.6875rem, 0.085em );
+
+                    @include color( white, 0.000 );
+
+                    @include fill( $blue, 0.000 );
+
+                }
+
+            }
+
+        }
+
+        // sections
+        .homepage-section {
+
+            @include flex-v-c-h-c( false );
+
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        // content
+        .special-section-content {
+
+            @include flex-v-c-h-c( false );
+
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        // title
+        .special-section-title {
+
+            @include font( $klavislim, 2rem, 400 );
+
+            @include text( $up );
+
+            @include typo( 1.5rem, 0.085em );
+
+        }
+
+        // section
+        #overview {
+
+            @include fill( $cvellow, 0.565 );
+
+        }
+
+        // section
+        #admissions {
+
+            @include fill( $roarange, 0.565 );
+
+        }
+
+        // section
+        #experience {
+
+            @include fill( $blue, 0.565 );
+
+        }
+
+        // section
+        #faculty {
+
+            @include fill( $cvnavy, 0.565 );
+
+        }
+
+        // section
+        #learning {
+
+            @include fill( $beige, 0.565 );
+
+        }
+
+        // section
+        #research {
+
+            @include fill( $nite, 0.565 );
+
+        }
+
+        // section
+        #hospital {
+
+            @include fill( $green, 0.565 );
+
+        }
+
+        // section
+        #support {
+
+            @include fill( $cvellow, 0.565 );
+
+        }
+
+        // section
+        #community {
+
+            @include fill( $blue, 0.565 );
+
+        }
+
+        // section
+        #commencement {
+
+            @include fill( $roarange, 0.565 );
+
+        }
+
+    }
+
+    // toolbar
+    #site-toolbar {
+
+        position: fixed;
+
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 60;
+
+        @include flex-h-s-v-c( false );
+
+        width: 100vw;
+        height: 5rem;
+        margin: 0;
+        padding: 0 0 0 5rem;
+
+        @include fill( $cvnavy, 0.165 );
+
+        // button
+        #toolbar-button {
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            width: 5rem;
+            height: 5rem;
+            margin: 0;
+            padding: 0;
+
+            @include fill( $blue, 0.895 );
+
+            transition: all 220ms linear 0ms;
+
+            // hover state
+            &:hover {
+
+                @include fill( white, 0.895 );
+
+            }
+
+        }
+
+        // menu
+        #toolbar-menu {
+
+            width: calc( 100vw - 5rem );
+            height: 5rem;
+
+            overflow-x: scroll;
+
+            // list
+            ul {
+
+                @include flex-h-s-v-st( false );
+
+                flex-wrap: nowrap;
+
+                min-width: 110.5rem;
+                height: 5rem;
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+
+                // menu item
+                .menu-item {
+
+                    @include flex-v-c-h-c( false );
+
+                    width: auto;
+                    height: 5rem;
+                    margin: 0;
+                    padding: 0;
+
+                    // link
+                    .menu-item-link {
+
+                        // @include flex-h-c-v-c( false );
+
+                        width: auto;
+                        height: 5rem;
+                        padding: 0.125rem 1.5rem 0 1.5rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 0.75rem, 0.075em );
+
+                        @include color( white, 0.685 );
+
+                        @include fill( white, 1.000 );
+
+                        transition: all 220ms linear 0ms;
+
+                        // hover state
+                        &:hover {
+
+                            @include color( $blue, 0.000 );
+
+                            @include fill( white, 0.925 );
+
+                        }
+
+                        // active state
+                        &.active {
+
+                            @include color( $cvellow, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

@@ -83,3 +83,10 @@
         color: $oil;
 
     }
+
+    // pre
+    pre {
+
+        @include font( 'Roboto Mono', 0.6875rem, 500 );
+
+    }

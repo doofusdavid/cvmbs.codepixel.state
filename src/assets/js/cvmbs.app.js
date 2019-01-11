@@ -151,7 +151,7 @@
         menusFX.init();
 
         // homepage scroll
-        scrollUI.init();
+        // scrollUI.init();
 
         // section load
         sections.init();
@@ -186,7 +186,7 @@
             easing     : 'easeOutExpo',
             complete   : function() {
 
-                site.ui.billboard.focus();
+                // site.ui.billboard.focus();
 
             }
 
@@ -194,6 +194,34 @@
 
     });
 
+    // scroll section triggers
+    var scroller = $('.scroll-trigger');
+
+    // event handler
+    scroller.on( 'click', function( e ) {
+
+        // data attribute
+        var targetsection = $(this).data( 'section' );
+
+        var scrolltarget = $('#' + targetsection );
+
+        // console.log( scrolltarget );
+
+        scrolltarget.focus();
+
+    });
+
+    // degree programs
+    var degreebutton = $('.button-link');
+
+    // event handler
+    degreebutton.on( 'click', function( e ) {
+
+        site.ui.sections.academics.focus();
+
+    });
+
+    // menu variables
     var globalnav = $('#global-menu-link');
     var localmenu = $('#menu-department-menu');
 
@@ -224,4 +252,50 @@
 
 // ================================================================================
 // END :: initialize
+// ================================================================================
+
+
+
+// ================================================================================
+// START :: prototype DVM build
+// ================================================================================
+
+    // variables
+    var scrollcontrol = $('#site-toolbar .menu-item-link, #special-billboard .explore-button');
+
+    // event handler
+    scrollcontrol.on( 'click', function( e ) {
+
+        // data attribute
+        var scrollsection = $(this).data( 'section-link' );
+        var scrolltarget  = $('#' + scrollsection );
+
+        // test
+        console.log( scrolltarget );
+
+        scrolltarget.velocity( 'scroll', {
+
+            begin     : function() {
+
+                // article.toggleClass( 'active' );
+
+            },
+            container : site.ui.layout,
+            duration  : 640,
+            delay     : 60,
+            easing    : [0.023, 1, 0.32, 1],
+            complete  : function() {
+
+                // $(this).focus().toggleClass( 'active' );
+
+                // site.ui.content.trigger( 'activate.ui.article', [ target ] );
+
+            }
+
+        });
+
+    });
+
+// ================================================================================
+// END :: prototype DVM build
 // ================================================================================

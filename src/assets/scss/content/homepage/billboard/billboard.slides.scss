@@ -282,8 +282,8 @@
 
                     z-index: 20;
 
-                    // @include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
-                    @include gradient( 52deg, $beige, 0.025, 0%, $beige, 1.000, 70% );
+                    @include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
+                    // @include gradient( 52deg, $beige, 0.025, 0%, $beige, 1.000, 70% );
 
                     mix-blend-mode: multiply;
 
@@ -294,41 +294,41 @@
 
                     z-index: 10;
 
-                    // @include gradient( 65deg, $dark, 0.415, 0%, $g135, 0.965, 70% );
+                    @include gradient( 65deg, $dark, 0.415, 0%, $g135, 0.965, 70% );
 
                     // @include gradient( 65deg, $beige, 0.165, 0%, $beige, 0.965, 70% );
 
-                    background: {
+                    // background: {
 
-                        image:
+                        // image:
 
-                            linear-gradient(
+                            // linear-gradient(
 
-                                90deg,
-                                adjust-color(
+                                // 90deg,
+                                // adjust-color(
 
-                                    $beige,
-                                    $hue          : 0%,
-                                    $saturation : 0%,
-                                    $lightness  : 20%,
-                                    $alpha         : -0.065
+                                    // $beige,
+                                    // $hue          : 0%,
+                                    // $saturation : 0%,
+                                    // $lightness  : 20%,
+                                    // $alpha         : -0.065
 
-                                ) 0%,
-                                transparent 40%
+                                // ) 0%,
+                                // transparent 40%
 
-                            ),
+                            // ),
 
-                            linear-gradient(
+                            // linear-gradient(
 
-                                65deg,
-                                transparentize( $beige, 0.165 ) 0%,
-                                transparentize( $beige, 0.845 ) 70%
+                                // 65deg,
+                                // transparentize( $beige, 0.165 ) 0%,
+                                // transparentize( $beige, 0.845 ) 70%
 
-                            )
+                            // )
 
-                        ;
+                        // ;
 
-                    }
+                    // }
 
                 }
 
@@ -414,12 +414,14 @@
                     width: 100%;
                     height: 100%;
 
+                    mix-blend-mode: overlay;
+
                     // vertical
                     &.vertical {
 
                         background: {
 
-                            image: url(../img/patterns/pattern.vertical.dark.svg);
+                            image: url(../img/patterns/pattern.vertical.svg);
 
                             repeat: no-repeat;
                             size: 42rem 64rem;
@@ -427,11 +429,8 @@
 
                         }
 
-                        // -webkit-filter: opacity( 0.725 );
-                        //         filter: opacity( 0.725 );
-
-                        -webkit-filter: opacity( 0.215 );
-                                filter: opacity( 0.215 );
+                        -webkit-filter: opacity( 1.000 );
+                                filter: opacity( 1.000 );
 
                         -webkit-mask-image:
 
@@ -455,15 +454,12 @@
                             image: url(../img/patterns/pattern.horizontal.svg);
 
                             repeat: no-repeat;
-                            position: -8.75rem bottom;
+                            position: left 12rem;
 
                         }
 
-                        // -webkit-filter: opacity( 0.485 );
-                        //         filter: opacity( 0.485 );
-
-                        -webkit-filter: opacity( 0.325 );
-                                filter: opacity( 0.325 );
+                        -webkit-filter: opacity( 0.765 );
+                                filter: opacity( 0.765 );
 
                         -webkit-mask-image:
 
@@ -494,7 +490,7 @@
 
                 width: 100vw;
                 height: 100vh;
-                padding: 4rem 4rem 11rem 10rem;
+                padding: 5rem 5rem 6rem 6rem;
 
                 @include fill( white, 1.000 );
 
@@ -523,16 +519,14 @@
             // text.subheadline
             .subheadline {
 
-                margin: 0 0 1rem 0;
+                margin: 0 0 1.5rem 0;
                 padding: 0 0 0 0;
 
-                @include font( $industry, 0.75rem, 600 );
+                @include font( $klavislim, 1.75rem, 400 );
 
-                line-height: 1rem;
+                @include typo( 1rem, 0.245rem );
 
-                letter-spacing: 0.125em;
-
-                @include color( $dark-nite, 0.245 );
+                @include color( $gold, 0.000 );
 
                 @include breakpoint ( small only ) {
 
@@ -554,22 +548,18 @@
 
                 @include flex-h-s-v-b( false );
 
-                width: 32rem;
+                // width: 32rem;
                 // height: 4rem;
-                margin: 0 0 1.5rem 0;
+                margin: 0 0 0.75rem 0;
                 padding: 0 0 0 0;
 
                 @include font( $klavislim, 4rem, 400 );
 
-                line-height: 4rem;
+                @include typo( 3rem, 0.065em );
 
-                letter-spacing: 0.105em;
+                @include color( white, 0.000 );
 
-                // opacity: 0.000;
-
-                // transform: translate3d( 0, 100%, 0 );
-
-                @include color( $g135, 0.000 );
+                // @include fill( red, 0.565 );
 
                 transition: all 480ms $oquin 120ms;
 
@@ -605,11 +595,11 @@
 
             }
 
-            // text.body
-            .text {
+            // text.description
+            .description {
 
-                max-width: 35%;
-                margin: 1rem 0 0 0;
+                // max-width: 50%;
+                margin: 0.75rem 0 0 0;
 
                 @include font( $industry, 0.75rem, 600 );
 
@@ -621,7 +611,7 @@
 
                 color: transparentize( white, 0.125 );
 
-                @include hide;
+                // @include fill( red, 0.565 );
 
             }
 
@@ -635,9 +625,9 @@
                 min-width: 14rem;
                 height: 4rem;
                 margin: 1.5rem 0 0 0;
-                padding: 0 1.5rem 0 1.5rem;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
 
-                border: none;
+                border: 1px solid $cvellow;
 
                 @include font( $klavislim, 1rem, 400 );
 
@@ -649,14 +639,14 @@
 
                 color: white;
 
-                @include fill( $blue, 0.000 );
+                // @include fill( $blue, 0.000 );
 
                 transition: all 220ms linear 0ms;
 
                 // hover state
                 &:hover {
 
-                    @include fill( $cvellow, 0.000 );
+                    @include fill( $cvellow, 0.465 );
 
                     // corners
                     .corners {

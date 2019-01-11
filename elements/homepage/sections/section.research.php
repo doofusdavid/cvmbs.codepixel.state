@@ -2,6 +2,14 @@
 <!-- container -->
 <div class="article-container">
 
+    <!-- title -->
+    <span class="section-title scroll-trigger" data-section="research">
+
+        global research map
+
+    </span>
+    <!-- END title -->
+
     <!-- background.image -->
     <div class="section-image" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/sections/research/research.billboard.00.jpg">
 
@@ -17,14 +25,6 @@
 
     </div>
     <!-- END background.color -->
-
-    <!-- title -->
-    <span class="section-title">
-
-        global research map
-
-    </span>
-    <!-- END title -->
 
     <!-- section.content -->
     <div class="section-content" data-load="pending">

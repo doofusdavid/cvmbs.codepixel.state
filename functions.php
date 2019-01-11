@@ -18,6 +18,9 @@
     // custom fields
     require_once( 'library/custom.fields/custom.fields.php' );
 
+    // taxonomy pages
+    require_once( 'library/taxonomy.php' );
+
     // post types
     require_once( 'library/post.types.php' );
 

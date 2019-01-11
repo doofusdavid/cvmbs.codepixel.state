@@ -10,7 +10,7 @@
 
     <?php get_template_part( 'elements/brand/brand.cvmbs' ); ?>
 
-    <?php if ( $site_type == 'department' ) {
+    <?php if ( $site_type == 'department' || $site_type == 'special' ) {
 
         get_template_part( 'elements/brand/brand.local' );
 

@@ -36,7 +36,7 @@
 				'show_in_admin_bar' 	=> false,
 				'query_var' 			=> true,
 				'can_export' 			=> true,
-				'rewrite' 				=> array( 'slug' => 'billboards', 'with_front' => false ),
+				'rewrite' 				=> array( 'slug' => 'alumni-profiles', 'with_front' => false ),
 				'has_archive' 			=> false,
 				'capability_type' 		=> 'post',
 				'hierarchical' 			=> false,

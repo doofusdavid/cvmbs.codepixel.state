@@ -12,13 +12,13 @@
     // styles
     #site-footer {
 
-        position: fixed;
+        position: relative;
 
         right: 0;
         bottom: 0;
         left: 0;
 
-        z-index: -1;
+        z-index: 60;
 
         @include flex-h-j-v-t( false );
 
@@ -28,6 +28,11 @@
         padding: $footer_padding;
 
         @include fill( $dark, 0.000 );
+
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 0ms;
 
         // common
         .footer-row {
@@ -63,6 +68,16 @@
         .secondary-default & {
 
             position: relative;
+
+        }
+
+        // menu open state
+        &.site-menu-open {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
 
         }
 
@@ -295,9 +310,9 @@
             @include flex-h-j-v-c( false );
 
             width: $footer_width;
-            height: 7rem;
+            height: 6rem;
             margin: 0;
-            padding: 0 6rem 1rem 6rem;
+            padding: 0 6rem 0 6rem;
 
             @include fill( $nite, 0.445 );
 

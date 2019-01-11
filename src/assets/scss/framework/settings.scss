@@ -510,7 +510,7 @@ $offcanvas-reveal-zindex: 12;
 // $offcanvas-transition-length: 1480ms;
 $offcanvas-transition-timing: cubic-bezier( 0.23, 1, 0.32, 1 );
 $offcanvas-fixed-reveal: true;
-$offcanvas-exit-background: transparentize( $dark-nite, 0.575 );
+$offcanvas-exit-background: transparentize( $dark-nite, 0.375 );
 $maincontent-class: 'off-canvas-content';
 
 // 26. Orbit

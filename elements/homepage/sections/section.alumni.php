@@ -14,14 +14,6 @@
 <!-- container -->
 <div class="article-container">
 
-    <!-- background.image -->
-    <div class="section-image" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.12.jpg">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.image -->
-
     <!-- background.color -->
     <div class="section-base">
 
@@ -31,7 +23,37 @@
     <!-- END background.color -->
 
     <!-- section.content -->
-    <div id="spotlight-billboard" class="section-content" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/sections/alumni/alumni.spotlight.03.jpg">
+    <div id="spotlight-billboard" class="section-content">
+
+        <!-- arrows -->
+        <div id="alumni-slider-controls" class="arrow-controls">
+
+            <!-- previous arrow -->
+            <button id="prev-arrow-control" class="billboard-control prev-arrow billboard-link" role="button" tabindex="-1" title="Previous Slide">
+
+                <svg class="prev-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+
+            		<polygon fill="#FFFFFF" points="26.8,30.4 20.3,24 26.8,17.6 27.7,18.4 22.1,24 27.7,29.6" />
+
+            	</svg>
+
+            </button>
+            <!-- END previous arrow -->
+
+            <!-- next arrow -->
+            <button id="next-arrow-control" class="billboard-control next-arrow billboard-link" role="button" tabindex="-1" title="Next Slide">
+
+                <svg class="next-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+
+                    <polygon fill="#FFFFFF" points="22.2,30.4 21.3,29.6 26.9,24 21.3,18.4 22.2,17.6 28.7,24" />
+
+                </svg>
+
+            </button>
+            <!-- END next arrow -->
+
+        </div>
+        <!-- END arrows -->
 
         <!-- alumni.slides -->
         <section id="alumni-slides" class="ui-slides" data-section="slides" tabindex="-1">
@@ -41,13 +63,18 @@
                 while ( $alumni_profiles->have_posts() ) : $alumni_profiles->the_post();
 
                 $alumni_name      = get_field( 'alumni_name' );
+                $alumni_class     = get_field( 'alumni_class');
+                $alumni_jobtitle  = get_field( 'alumni_occupation');
+                $alumni_employer  = get_field( 'alumni_employer');
                 $alumni_image     = get_field( 'alumni_photo' );
                 $alumni_image_url = $alumni_image[ 'url' ];
+                $alumni_quote     = get_field( 'alumni_quote' );
+                $alumni_link      = get_field( 'alumni_profile_link' );
 
             ?>
 
             <!-- slide -->
-            <article id="{{ id }}-slide" class="ui-slide-article" data-slide="{{ id }}" data-index="{{ index }}" data-theme="{{ theme }}" data-load="false" data-background="<?php echo $slide_image_url; ?>">
+            <article class="ui-slide-article" data-load="false" style="background-image:url(<?php echo $alumni_image_url; ?>);">
 
                 <!-- content.layers -->
                 <div class="content-layers">
@@ -86,51 +113,51 @@
                         <!-- END slider.base -->
 
                         <!-- alumni.slider -->
-                        <div id="alumni-slider" class="slider layer">
+                        <div id="alumni-slider" class="slider layer scroll-trigger" data-section="alumni">
 
                             <!-- slide.text -->
                             <span class="slide-text">
 
-                                {{ quote }}
+                                <?php echo $alumni_quote; ?>&rdquo;
 
                             </span>
                             <!-- END slide.text -->
 
-                            <!-- slide.quote -->
-                            <span class="slide-citation">
+                            <!-- slide.meta -->
+                            <div class="slide-meta">
 
-                                <!-- name -->
-                                <strong>
-                                    <?php echo $alumni_name; ?>, '{{ class }}
-                                </strong>
-                                <!-- END name -->
+                                <!-- slide.quote -->
+                                <span class="slide-citation">
 
-                                <!-- title -->
-                                <em>
-                                    {{ occupation }}<br />
-                                    {{ company }}
-                                </em>
-                                <!-- END title -->
+                                    <!-- name -->
+                                    <strong>
+                                        <?php echo $alumni_name; ?>, '<?php echo $alumni_class; ?>
+                                    </strong>
+                                    <!-- END name -->
 
-                            </span>
-                            <!-- END slide.quote -->
+                                    <!-- title -->
+                                    <em>
+                                        <?php echo $alumni_jobtitle; ?><br />
+                                        <?php echo $alumni_employer; ?>
+                                    </em>
+                                    <!-- END title -->
+
+                                </span>
+                                <!-- END slide.quote -->
+
+                                <!-- button -->
+                                <button class="slide-button">
+
+                                    read <?php echo $alumni_name; ?>'s story
+
+                                </button>
+                                <!-- END button -->
+
+                            </div>
+                            <!-- END slide.meta -->
 
                         </div>
                         <!-- END alumni.slider -->
-
-                        <!-- slide.meta -->
-                        <div class="slide-meta layer">
-
-                            <!-- button -->
-                            <button class="slide-button">
-
-                                read {{ alumni }}'s story
-
-                            </button>
-                            <!-- END button -->
-
-                        </div>
-                        <!-- END slide.meta -->
 
                     </div>
                     <!-- END slider -->

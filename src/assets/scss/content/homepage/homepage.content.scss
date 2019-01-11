@@ -8,8 +8,6 @@
     // styles
     #content-homepage {
 
-        position: fixed;
-
         top: 0;
         right: 0;
         left: 0;
@@ -18,7 +16,7 @@
 
         width: $content_width;
         height: auto;
-        margin: 0;
+        margin: 100vh 0 0 0;
         padding: 0 0 0 0;
 
         background: {
@@ -39,10 +37,25 @@
 
         }
 
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 0ms;
+
         // focus state
         &:focus {
 
             outline: none;
+
+        }
+
+        // menu open state
+        .site-menu-open & {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
 
         }
 

@@ -14,11 +14,13 @@
         z-index: 20;
 
         width: $content_width;
-        height: $content_height;
+        // height: $content_height;
+        min-height: 100vh;
+        margin: 0 0 27rem 0;
         margin: 0;
         padding: 0;
 
-        // overflow: hidden;
+        overflow: hidden;
 
         visibility: hidden;
 
@@ -94,6 +96,7 @@
         // secondary
         &.secondary {
 
+            min-height: 100vh;
             height: auto;
             // margin: 4.0625rem 0 0 0;
 

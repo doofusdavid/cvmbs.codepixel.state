@@ -166,7 +166,7 @@ export var newsFX = {
             dataType: 'json',
 
             // return items -> default = [10]
-            url: 'https://source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=college-of-veterinary-medicine-and-biomedical-sciences&per_page=12',
+            url: 'https://source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=college-of-veterinary-medicine-and-biomedical-sciences&per_page=9',
 
             type: 'GET',
 

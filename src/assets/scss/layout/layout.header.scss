@@ -24,9 +24,11 @@
         margin: 0;
         padding: 0 5rem 0 5rem;
 
+        @include fill( $dark, 0.385 );
+
         background: {
 
-            color: transparentize( $nite, 0.885 );
+            // color: transparentize( $nite, 0.885 );
 
             image:
 
