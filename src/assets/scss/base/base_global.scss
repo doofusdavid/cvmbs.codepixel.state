@@ -17,3 +17,16 @@
             }
 
         }
+
+        // remove browser default
+        * {
+
+            // focus state
+            &:focus {
+
+                // temporary
+                outline: none;
+
+            }
+
+        }

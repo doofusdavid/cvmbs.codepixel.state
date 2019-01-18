@@ -3,11 +3,11 @@
 <div class="article-container">
 
     <!-- title -->
-    <span class="section-title scroll-trigger" data-section="research">
+    <button class="section-title scroll-trigger" data-section="research">
 
         global research map
 
-    </span>
+    </button>
     <!-- END title -->
 
     <!-- background.image -->

@@ -9,4 +9,7 @@
     // alumni profiles
     require_once( 'post.types/alumni.profiles.php' );
 
+    // alumni profiles
+    require_once( 'post.types/places.php' );
+
 ?>

@@ -1,13 +1,21 @@
 
 <!-- container -->
-<div class="article-container">
+<div class="article-container" tabindex="-1">
 
     <!-- title -->
-    <span class="section-title">
+    <button class="section-title scroll-trigger" data-section="news">
 
         news and updates
 
-    </span>
+        <!-- link -->
+        <span href="https://cvmbs.source.colostate.edu/" class="title-link">
+
+            view all
+
+        </span>
+        <!-- END link -->
+
+    </button>
     <!-- END title -->
 
     <!-- feature + sidebar -->

@@ -205,9 +205,28 @@
 
         var scrolltarget = $('#' + targetsection );
 
-        // console.log( scrolltarget );
+        console.log( scrolltarget );
 
         scrolltarget.focus();
+
+        scrolltarget.velocity( 'scroll', {
+
+            begin     : function() {
+
+                //
+
+            },
+            container : site.ui.layout,
+            duration  : 640,
+            delay     : 60,
+            easing    : [0.023, 1, 0.32, 1],
+            complete  : function() {
+
+                //
+
+            }
+
+        });
 
     });
 

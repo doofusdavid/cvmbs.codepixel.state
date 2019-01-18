@@ -95,15 +95,28 @@
 						<?php while ( have_rows( 'program_docs' ) ): the_row();
 
 							$document_title = get_sub_field( 'document_button' );
-							$document_file = get_sub_field( 'document_pdf' );
+							$document_type  = get_sub_field( 'document_type' );
+							$document_link  = get_sub_field( 'document_url' );
+							$document_file  = get_sub_field( 'document_pdf' );
+
+							if ( $document_type == 'link' ) {
+
+								$document_link = get_sub_field( 'document_url' );
+
+							} elseif ( $document_type == 'file' ) {
+
+								$document_file = get_sub_field( 'document_pdf' );
+								$document_link = $document_file[ 'url' ];
+
+							}
 
 						?>
 
-						<button class="degree-document-button" data-file="<?php echo $document_file[ 'filename' ]; ?>">
+						<a href="<?php echo $document_link; ?>" class="degree-document-button">
 
 							<?php echo $document_title; ?>
 
-						</button>
+						</a>
 
 						<?php endwhile; ?>
 
@@ -115,57 +128,15 @@
 			</div>
 			<!-- END description -->
 
-			<!-- video -->
-			<div class="program-content program-row video">
+			<?php
 
-				<!-- container -->
-				<div class="video-container">
+				if( $program_video ) {
 
-					<!-- embed -->
-					<div class="program-video">
+					get_template_part( 'elements/degree.programs/degree.programs.video' );
 
-						<iframe src="https://player.vimeo.com/video/135510388?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				}
 
-					</div>
-					<!-- END embed -->
-
-				</div>
-				<!-- END container -->
-
-				<!-- text -->
-				<div class="video-text">
-
-					<!-- type -->
-					<span class="program-type">
-
-						bachelor of science degree
-
-					</span>
-					<!-- END type -->
-
-					<!-- name -->
-					<span class="program-name">
-
-						<?php the_title(); ?>
-
-					</span>
-					<!-- END name -->
-
-					<!-- subtext -->
-					<span class="program-subtext">
-
-						at colorado state university
-
-					</span>
-					<!-- END subtext -->
-
-				</div>
-				<!-- END text -->
-
-				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/KaHfzj1KbNo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-
-			</div>
-			<!-- END video -->
+			?>
 
 			<!-- facts -->
 			<div class="program-content program-row facts dark">

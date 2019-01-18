@@ -50,7 +50,8 @@
         &.page-template-secondary,
         &.page-template-secondary-main,
         // &.single-degree-program,
-        &.archive {
+        &.archive,
+        &.single-place {
 
             height: auto;
             padding: 5rem 0 0 0;
@@ -140,7 +141,7 @@
 
         &:focus {
 
-            outline: none;
+            // outline: none;
 
         }
 

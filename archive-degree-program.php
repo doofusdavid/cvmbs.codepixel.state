@@ -2,61 +2,35 @@
 <?php get_header(); ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary main" data-off-canvas-content style="background-image:url(<?php echo $page_image; ?>);">
+<main id="site-layout" class="off-canvas-content secondary programs archive" data-off-canvas-content>
 
 	<!-- container -->
-	<div id="content-container" class="secondary-container">
+	<div class="content-container programs">
 
-        <!-- artwork -->
-        <div class="secondary-artwork">
+		<!-- overlay -->
+        <div class="programs-overlay">
 
             <!--  -->
 
         </div>
-        <!-- END artwork -->
+        <!-- END overlay -->
 
 	    <!-- content -->
-	    <section class="secondary-content">
+	    <section class="programs-content">
 
-	        <!-- main content -->
-	        <div class="content-area main">
+			<!-- title -->
+	        <h2 class="page-title">
 
-				<!-- title -->
-		        <h2 class="page-title">
+				degree programs
 
-					degree programs
+			</h2>
+	        <!-- END title -->
 
-				</h2>
-		        <!-- END title -->
+			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-				<section class="intro" role="main">
-
-					<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-						<div class="entry-content">
-
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-
-						</div>
-
-					</div>
-
-				</section>
-
-				<?php endwhile; ?>
-
-			</div>
-        	<!-- END main content -->
-
-			<!-- sidebar -->
-	        <div class="sidebar-area main">
-
-	            <?php get_sidebar(); ?>
-
-	        </div>
-	        <!-- END sidebar -->
+			<?php endwhile; ?>
 
 	    </section>
 	    <!-- END content -->

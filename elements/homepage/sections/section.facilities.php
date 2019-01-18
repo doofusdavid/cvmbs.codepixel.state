@@ -1,3 +1,15 @@
+<?php
+
+    $places_query = array(
+
+        'post_type' => 'place',
+        'orderby'   => 'rand',
+
+    );
+
+    $places = new WP_Query( $places_query );
+
+?>
 
 <!-- container -->
 <div class="article-container">
@@ -11,7 +23,7 @@
     <!-- END background.color -->
 
     <!-- background.image -->
-    <div class="section-image">
+    <div class="section-image scroll-trigger" data-section="facilities">
 
         <!-- empty -->
 
@@ -19,11 +31,19 @@
     <!-- END background.image -->
 
     <!-- title -->
-    <span class="section-title scroll-trigger" data-section="facilities">
+    <a href="/places" class="section-title" data-section="facilities">
 
         centers + institutes
 
-    </span>
+        <!-- link -->
+        <span class="title-link">
+
+            view all
+
+        </span>
+        <!-- END link -->
+
+    </a>
     <!-- END title -->
 
     <!-- feature + sidebar -->
@@ -32,69 +52,61 @@
         <!-- news.feed -->
         <section id="facilities-carousel" class="article-cards ui-news">
 
-            <article id="thumb-01" class="article scroll-trigger" data-section="facilities">
+            <?php
 
-                <span class="thumb-artwork">
+                while ( $places->have_posts() ) : $places->the_post();
+
+                $place_name  = get_the_title();
+                $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+                $place_link  = get_the_permalink();
+
+            ?>
+
+            <!-- post -->
+            <article class="article" data-place="<?php the_permalink(); ?>">
+
+                <!-- artwork -->
+                <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
 
                     <!-- the emptiness -->
 
-                </span>
+                </div>
+                <!-- END artwork -->
 
-                <span class="thumb-overlay">
+                <!-- overlay -->
+                <div class="thumb-overlay">
 
                     <!-- the emptiness -->
 
-                </span>
+                </div>
+                <!-- END overlay -->
+
+                <!-- header -->
+                <header>
+
+                    <!-- title -->
+                    <span class="place-title">
+
+                        <?php echo $place_name; ?>
+
+                    </span>
+                    <!-- END title -->
+
+                    <!-- link -->
+                    <a href="<?php the_permalink(); ?>" class="place-link">
+
+                        view facility
+
+                    </a>
+                    <!-- END link -->
+
+                </header>
+                <!-- END header -->
 
             </article>
+            <!-- END post -->
 
-            <article id="thumb-02" class="article">
-
-                <span class="thumb-artwork">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-                <span class="thumb-overlay">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-            </article>
-
-            <article id="thumb-03" class="article">
-
-                <span class="thumb-artwork">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-                <span class="thumb-overlay">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-            </article>
-
-            <article id="thumb-04" class="article">
-
-                <span class="thumb-artwork">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-                <span class="thumb-overlay">
-
-                    <!-- the emptiness -->
-
-                </span>
-
-            </article>
+            <?php endwhile; ?>
 
         </section>
         <!-- END news.feed -->

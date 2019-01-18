@@ -1,5 +1,8 @@
 <?php
 
+    // test for site type
+    $site_type = get_field( 'site_type', 'options' );
+
     // menu panel placeholder fields
     $events_panel    = get_field( 'events_menu_panel_content', 'options' );
     $resources_panel = get_field( 'resources_menu_panel_content', 'options' );
@@ -25,14 +28,22 @@
         <!-- menu -->
         <nav id="menu-panel-main-menu" class="panel-content menu">
 
-            <?php cvmbs_site_menu(); ?>
+            <?php
+
+                // cvmbs_site_menu();
+
+                if ( $site_type == 'college' ) {
+
+                    get_template_part( 'elements/menus/panels/panel.global.menu' );
+
+                }
+
+            ?>
 
         </nav>
         <!-- END menu -->
 
         <?php
-
-            $site_type = get_field( 'site_type', 'options' );
 
             if ( $site_type == 'college' ) {
 
@@ -62,6 +73,23 @@
             }
 
         ?>
+
+        <!-- brand.state -->
+        <span id="brand-state-required">
+
+            <?php get_template_part( 'elements/brand/brand.state.classic' ); ?>
+
+        </span>
+        <!-- END brand.state -->
+
+        <!-- copyright -->
+        <span id="copyright-text">
+
+            Copyright &copy; 2018 by the College of Veterinary Medicine and Biomedical Sciences<br />
+            Colorado State University, Fort Collins, Colorado 80523 USA
+
+        </span>
+        <!-- END copyright -->
 
     </panel>
     <!-- END panel.main -->

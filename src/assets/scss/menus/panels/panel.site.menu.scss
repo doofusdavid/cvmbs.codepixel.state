@@ -35,8 +35,6 @@
         margin: 0;
         padding: 0;
 
-        // overflow: hidden;
-
         @include fill( white, 1.000 );
 
         // menu open state
@@ -357,6 +355,417 @@
 
             }
 
+            // menu list
+            #global-menu-list {
+
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+
+                // item
+                li {
+
+                    width: 100%;
+                    height: 5rem;
+                    margin: 0;
+                    padding: 0;
+
+                }
+
+                // home
+                #home {
+
+                    @include fill( $g140, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.home.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $midnite, 0.465, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                    }
+
+                }
+
+                // about
+                #about {
+
+                    @include fill( $cvellow, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.about.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $nite, 0.165, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include fill( $cvellow, 0.865 );
+
+                            mix-blend-mode: multiply;
+
+                        }
+
+                    }
+
+                }
+
+                // students
+                #students {
+
+                    @include fill( $blue, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.students.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $midnite, 0.465, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include fill( $blue, 0.785 );
+
+                            mix-blend-mode: multiply;
+
+                        }
+
+                    }
+
+                }
+
+                // research
+                #research {
+
+                    @include fill( $cvnavy, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.research.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $midnite, 0.465, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include fill( $cvnavy, 0.685 );
+
+                            mix-blend-mode: overlay;
+
+                        }
+
+                    }
+
+                }
+
+                // outreach
+                #outreach {
+
+                    @include fill( $roarange, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.service.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $midnite, 0.465, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include fill( $roarange, 0.765 );
+
+                            mix-blend-mode: multiply;
+
+                        }
+
+                    }
+
+                }
+
+                // alumni
+                #alumni {
+
+                    @include fill( $orange, 0.785 );
+
+                    // artwork
+                    .link-artwork {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.alumni.jpg);
+
+                        }
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        // before
+                        &:before {
+
+                            @include gradient(
+
+                                90deg,
+                                $midnite, 0.465, 0%,
+                                $g135, 1.000, 100%
+
+                            );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include fill( $orange, 0.725 );
+
+                            // mix-blend-mode: multiply;
+
+                        }
+
+                    }
+
+                }
+
+                // link
+                .menu-link {
+
+                    position: relative;
+
+                    @include flex-h-s-v-b( false );
+
+                    width: 100%;
+                    height: 5rem;
+                    margin: 0;
+                    padding: 0 1rem 1rem 2rem;
+
+                    transition: all 720ms $ocirc 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        // @include fill( white, 0.965 );
+
+                        // text
+                        .link-text {
+
+                            @include color( white, 0.000 );
+
+                            transform: translate3d( 1rem, 0, 0 );
+
+                            transition: all 360ms $ocirc 0ms;
+
+                        }
+
+                    }
+
+                    // artwork
+                    .link-artwork,
+                    .link-overlay {
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        width: 100%;
+                        height: 100%;
+
+                        background: {
+
+                            repeat: no-repeat;
+                            size: cover;
+                            position: center center;
+
+                        }
+
+                        // layers
+                        &:before,
+                        &:after {
+
+                            content: '';
+
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            width: 100%;
+                            height: 5rem;
+
+                        }
+
+                        // before
+                        &:before {
+
+                            z-index: 50;
+
+                        }
+
+                        // after
+                        &:after {
+
+                            z-index: 40;
+
+                        }
+
+                    }
+
+                    // artwork
+                    .link-artwork {
+
+                        z-index: 10;
+
+                        opacity: 0.215;
+
+                    }
+
+                    // overlay
+                    .link-overlay {
+
+                        z-index: 20;
+
+                    }
+
+                    // text
+                    .link-text {
+
+                        position: relative;
+
+                        z-index: 100;
+
+                        @include flex-h-s-v-c( false );
+
+                        @include font( $industry, 0.875rem, 500 );
+
+                        @include typo( 0.75rem, 0.065em );
+
+                        @include text( $up );
+
+                        @include color( white, 0.285 );
+
+                        transform: translate3d( 0, 0, 0 );
+
+                        transition: all 360ms $ocirc 0ms;
+
+                    }
+
+                }
+
+            }
+
             // brand
             #brand-state-required {
 
@@ -416,7 +825,9 @@
 
                 @include font( $industry, 0.5625rem, 600 );
 
-                @include text( auto, center );
+                @include text( none, center );
+
+                @include typo( 1rem, 0.035em );
 
                 // @include color( $midnite, 0.325 );
                 @include color( white, 0.325 );

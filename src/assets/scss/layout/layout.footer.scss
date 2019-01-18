@@ -6,7 +6,7 @@
 
     $footer_height : 27rem;
 
-    $footer_padding    : 4rem 6rem 6rem 6rem;
+    $footer_padding    : 5rem 5rem 5rem 5rem;
     $footer_padding_ex : 4rem 8rem 6rem 8rem;
 
     // styles
@@ -310,9 +310,9 @@
             @include flex-h-j-v-c( false );
 
             width: $footer_width;
-            height: 6rem;
+            height: 5rem;
             margin: 0;
-            padding: 0 6rem 0 6rem;
+            padding: 0 5rem 0 5rem;
 
             @include fill( $nite, 0.445 );
 

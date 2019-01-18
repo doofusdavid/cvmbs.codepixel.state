@@ -1,237 +1,87 @@
-// stylesheet :: facilities section layout + content styles
+// stylesheet :: places archive layout
 
     // settings
-    $facilities_fx : all 320ms $oquin 0ms;
-    $section_color : transparentize( $roarange, 0.185 );
-    $section_color :
-
-        linear-gradient(
-
-            0deg,
-            transparentize( $roarange, 1.000 ) 0%,
-            transparent 60%
-
-        )
-
-    ;
+    $archive : 1rem;
 
     // styles
-    #facilities {
+    #site-layout {
 
-        height: auto;
-        margin: 0;
+        // class hook
+        &.places {
 
-        @include fill( $roarange, 0.185 );
+            // class hook
+            &.archive {
 
-        // focus state
-        &:focus {
+                background: {
 
-            .section-base {
+                    image: url(../img/billboards/billboard.10.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center -28rem;
 
-                // @include fill( red, 0.625 );
+                }
 
-            }
+                // container
+                .content-container {
 
-        }
+                    margin: 20rem 0 0 0;
 
-        // container
-        .article-container {
+                    // overlay
+                    .places-overlay {
 
-            @include flex-v-j-h-st( false );
+                        height: 20rem;
 
-            width: 100vw;
-            height: auto;
-            padding: 5rem 4rem 4rem 4rem;
+                        @include fill( $roarange, 0.345 );
 
-        }
+                        @include gradient(
 
-        // billboard
-        .section-image {
+                            90deg,
+                            red, 1.000, 0%,
+                            $cvnavy, 0.215, 100%
 
-            position: absolute;
-
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            z-index: 20;
-
-            background: {
-
-                image: url(../img/billboards/billboard.10.jpg);
-                repeat: no-repeat;
-                size: cover;
-                position: center bottom;
-
-            }
-
-            opacity: 0.215;
-
-            mix-blend-mode: multiply;
-
-            transition: all 720ms $ocirc 0ms;
-
-        }
-
-        // color
-        .section-base {
-
-            z-index: 10;
-
-        }
-
-        // title
-        .section-title {
-
-            position: relative;
-
-            @include flex-h-j-v-b( false );
-
-            height: 3rem;
-            margin: 0 0 0 1rem;
-            padding: 0 0 1rem 1rem;
-
-            @include font( $klavislim, 2rem, 400 );
-
-            @include typo( 1.25rem, 0.135em );
-
-            @include color( white, 0.000 );
-
-            // before
-            &:before {
-
-                content: '';
-
-                position: absolute;
-
-                top: 0.5rem;
-                bottom: 0.25rem;
-                left: 0;
-
-                z-index: 10;
-
-                width: 2px;
-                height: 1.5rem;
-
-                @include fill( $roarange, 0.000 );
-
-            }
-
-            // hover state
-            &:hover {
-
-                cursor: pointer;
-
-                // link
-                .title-link {
-
-                    @include color( white, 0.000 );
-
-                    transform: translate3d( -1.5rem, 0, 0 );
-
-                    transition: all 360ms $outex 0ms;
-
-                    // after
-                    &:after {
-
-                        opacity: 1.000;
-
-                        transform: translate3d( 0, 0, 0 );
-
-                        transition: all 360ms $outex 0ms;
+                        );
 
                     }
 
                 }
 
-            }
+                // content
+                .places-content {
 
-            // link
-            .title-link {
+                    @include flex-h-j-v-s( false );
 
-                position: relative;
+                    flex-wrap: wrap;
 
-                @include flex-h-e-v-b( true );
+                    padding: 1.5rem 4rem 4rem 4rem;
 
-                height: 2rem;
-                margin: 0 1rem 0 0;
+                    // title
+                    .page-title {
 
-                @include font( $industry, 0.6875rem, 700 );
+                        width: auto;
+                        padding: 0 0 2.5rem 1rem;
 
-                @include typo( 0.5rem, 0.075em );
+                        @include color( white, 0.000 );
 
-                @include color( white, 0.325 );
-
-                transform: translate3d( 0, 0, 0 );
-
-                transition: all 360ms $outex 0ms;
-
-                // after
-                &:after {
-
-                    @include codicon( 1rem, 2.25rem, 1.25rem 0 0 0, 1rem, white, '\EDC8' );
-
-                    position: absolute;
-
-                    top: 0;
-                    right: -1.5rem;
-                    bottom: 0;
-
-                    opacity: 0.000;
-
-                    transform: translate3d( -2rem, 0, 0 );
-
-                    transition: all 360ms $outex 0ms;
+                    }
 
                 }
 
-            }
-
-        }
-
-        // content
-        #facilities-content {
-
-            position: relative;
-
-            z-index: 100;
-
-            @include flex-v-j-h-st( false );
-
-            margin: 0;
-            padding: 0;
-
-            // carousel
-            #facilities-carousel {
-
-                @include flex-h-s-v-st( false );
-
-                flex-wrap: wrap;
-
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-
-                // article
-                .article {
+                // place card
+                .place-card {
 
                     position: relative;
 
                     @include flex-v-t-h-c( true );
 
-                    flex-basis: calc( 50% - 2rem );
+                    flex-basis: calc( 33.3333333% - 2rem );
 
-                    height: 20rem;
+                    height: 16rem;
                     margin: 1rem 1rem 1rem 1rem;
                     padding: 2rem;
 
                     overflow: hidden;
 
                     @include color( white, 0.000 );
-
-                    // @include fill( $roarange, 0.185 );
 
                     @include shadowbox( 1.5rem, 4rem, black, 0.615 );
 

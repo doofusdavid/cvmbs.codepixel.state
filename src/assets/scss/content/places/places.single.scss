@@ -1,0 +1,125 @@
+// stylesheet :: single places post layout
+
+    // settings
+    $places : 1rem;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.places {
+
+            // class hook --> FIX THIS
+            &.default {
+
+                min-height: 100vh;
+
+                background: {
+
+                    size: 100vw auto;
+                    position: 0 -12rem;
+
+                }
+
+            }
+
+        }
+
+        // content container
+        .content-container {
+
+            // class hook
+            &.places {
+
+                @include flex-v-t-h-s( false );
+
+                margin: 32rem 0 0 0;
+
+                // overlay
+                .places-overlay {
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    width: 100%;
+                    height: 32rem;
+                    margin: 0;
+                    padding: 0;
+
+                    @include fill( $roarange, 0.245 );
+
+                    @include gradient(
+
+                        90deg,
+                        red, 1.000, 0%,
+                        $cvnavy, 0.215, 100%
+
+                    );
+
+                }
+
+                // content
+                .places-content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    width: 100%;
+                    padding: 2.5rem 5rem 5rem 5rem;
+
+                    // min-height: calc( 100vh + 2rem );
+
+                    @include color( $oil, 0.000);
+
+                    @include fill( white, 0.000 );
+
+                    // title
+                    .page-title {
+
+                        position: absolute;
+
+                        top: -5rem;
+
+                        z-index: 10;
+
+                        @include flex-h-s-v-b( false );
+
+                        height: 5rem;
+                        margin: 0 0 0 0;
+                        padding: 0 0 2.5rem 0;
+
+                        border: none;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        @include typo( 1.75rem, 0.085em );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                    // text
+                    p {
+
+                        // last child
+                        &:last-child {
+
+                            margin-bottom: 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

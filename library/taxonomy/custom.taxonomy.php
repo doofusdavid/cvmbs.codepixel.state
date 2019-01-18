@@ -41,4 +41,45 @@
 
     }
 
+    // call the function on WP init
+    add_action( 'init', 'place_taxonomy' );
+
+    // define custom taxonomy
+    function place_taxonomy() {
+
+        // register taxonomy
+		register_taxonomy( 'place_relationships', 'places',
+
+            // labels object
+            array(
+
+                'labels' => array(
+
+                    'name' 				=> __( 'Place Relationships', 'cvmbsPress' ),
+                    'singular_name' 	=> __( 'Place Relationship', 'cvmbsPress' ),
+                    'all_items' 		=> __( 'All Place Relationships', 'cvmbsPress' ),
+                    'add_new' 			=> __( 'Add Place Relationship', 'cvmbsPress' ),
+                    'add_new_item' 		=> __( 'Add New Place Relationship', 'cvmbsPress' ),
+                    'edit' 				=> __( 'Edit', 'cvmbsPress' ),
+                    'edit_item' 		=> __( 'Edit Place Relationship', 'cvmbsPress' ),
+                    'new_item' 			=> __( 'New Place Relationship', 'cvmbsPress' ),
+                    'search_items' 		=> __( 'Search Place Relationships', 'cvmbsPress' ),
+                    'not_found' 		=> __( 'No place relationships found here...', 'cvmbsPress' ),
+                    'parent_item_colon' => ''
+
+                ),
+
+                'hierarchical'      => false,
+                'labels'            => $labels,
+                'show_ui'           => true,
+                'show_admin_column' => true,
+    			'query_var'         => true,
+                'rewrite'           => array( 'slug' => 'place_relationships' ),
+
+            )
+
+        );
+
+    }
+
 ?>

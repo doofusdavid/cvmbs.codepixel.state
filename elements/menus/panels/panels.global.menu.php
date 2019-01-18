@@ -6,7 +6,7 @@
     <ul>
 
         <!-- item -->
-        <li id="home" class="menu-item">
+        <li id="home" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
@@ -34,7 +34,7 @@
         <!-- END item -->
 
         <!-- item -->
-        <li id="about" class="menu-item-link">
+        <li id="about" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
@@ -62,7 +62,7 @@
         <!-- END item -->
 
         <!-- item -->
-        <li id="students" class="menu-item-link">
+        <li id="students" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
@@ -90,7 +90,7 @@
         <!-- END item -->
 
         <!-- item -->
-        <li id="research" class="menu-item-link">
+        <li id="research" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
@@ -118,7 +118,7 @@
         <!-- END item -->
 
         <!-- item -->
-        <li id="outreach" class="menu-item-link">
+        <li id="outreach" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
@@ -146,7 +146,7 @@
         <!-- END item -->
 
         <!-- item -->
-        <li id="alumni" class="menu-item-link">
+        <li id="alumni" class="menu-item-link global-menu-item">
 
             <!-- link -->
             <a href="#" class="menu-link">
