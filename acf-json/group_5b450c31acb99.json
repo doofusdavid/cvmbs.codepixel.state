@@ -1,0 +1,159 @@
+{
+    "key": "group_5b450c31acb99",
+    "title": "Alumni Profiles",
+    "fields": [
+        {
+            "key": "field_5b450c227e85a",
+            "label": "Alumni Name",
+            "name": "alumni_name",
+            "type": "text",
+            "instructions": "enter full name",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c2e904e77c5e",
+            "label": "Class",
+            "name": "alumni_class",
+            "type": "text",
+            "instructions": "graduation year (ex. 94)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 94,
+            "prepend": "",
+            "append": "",
+            "maxlength": 2
+        },
+        {
+            "key": "field_5c2e911917dfd",
+            "label": "Occupation",
+            "name": "alumni_occupation",
+            "type": "text",
+            "instructions": "enter alumnus' occupation",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c2e913017dfe",
+            "label": "Employer",
+            "name": "alumni_employer",
+            "type": "text",
+            "instructions": "enter alumnus' employer",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b450c427e85b",
+            "label": "Alumni Photo",
+            "name": "alumni_photo",
+            "type": "image",
+            "instructions": "upload a photo at least 1920x1200",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c2e915b17dff",
+            "label": "Alumni Quote",
+            "name": "alumni_quote",
+            "type": "textarea",
+            "instructions": "provide a quote",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5b451cc8dc07c",
+            "label": "Profile Link",
+            "name": "alumni_profile_link",
+            "type": "url",
+            "instructions": "enter a URL for the profile to link to",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "alumni-profile"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1548174541
+}

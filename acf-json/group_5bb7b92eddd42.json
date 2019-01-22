@@ -1,0 +1,319 @@
+{
+    "key": "group_5bb7b92eddd42",
+    "title": "General Site Options",
+    "fields": [
+        {
+            "key": "field_5bb7b9496d2a5",
+            "label": "Site Type",
+            "name": "site_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "college": "College",
+                "department": "Department",
+                "special": "Special Unit"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bb7c9e0a4886",
+            "label": "Site Title",
+            "name": "site_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc00fe0dcd24",
+            "label": "Site Billboard Text",
+            "name": "site_billboard_text",
+            "type": "textarea",
+            "instructions": "enter a 20-30 word paragraph to display alongside the site's title in the homepage billboard",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5bb7d1239d4c6",
+            "label": "Site Title Line Break?",
+            "name": "site_title_line_break",
+            "type": "checkbox",
+            "instructions": "check this box if the site's title should include a line break to display properly",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "break": "include site title line break"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5bb7d27b9d4c7",
+            "label": "Site Title (line 1)",
+            "name": "site_title_line_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7d1239d4c6",
+                        "operator": "==",
+                        "value": "break"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7d2a29d4c8",
+            "label": "Site Title (line 2)",
+            "name": "site_title_line_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7d1239d4c6",
+                        "operator": "==",
+                        "value": "break"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7cc14a4887",
+            "label": "Site Background",
+            "name": "site_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5bc00682941e4",
+            "label": "Site Introductory Text",
+            "name": "site_intro_text",
+            "type": "textarea",
+            "instructions": "enter a 1-2 sentence paragraph of snappy, clever, marketing copy for the homepage",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5c3f576f2256e",
+            "label": "Homepage Places",
+            "name": "site_homepage_places",
+            "type": "repeater",
+            "instructions": "select 4 places to feature on the homepage",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "college"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 4,
+            "max": 4,
+            "layout": "row",
+            "button_label": "Add Place",
+            "sub_fields": [
+                {
+                    "key": "field_5c3f57c52256f",
+                    "label": "Homepage Place",
+                    "name": "site_homepage_place",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "place"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "general_options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1548174577
+}

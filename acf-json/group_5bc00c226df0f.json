@@ -1,0 +1,43 @@
+{
+    "key": "group_5bc00c226df0f",
+    "title": "Menu Panel > Resources",
+    "fields": [
+        {
+            "key": "field_5bc00c31c170c",
+            "label": "Menu Panel Content",
+            "name": "resources_menu_panel_content",
+            "type": "textarea",
+            "instructions": "this is a placeholder field for the RESOURCES menu panel",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "menu_panel_resources"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1548174670
+}

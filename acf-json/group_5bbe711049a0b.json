@@ -1,0 +1,43 @@
+{
+    "key": "group_5bbe711049a0b",
+    "title": "Homepage Degree Programs",
+    "fields": [
+        {
+            "key": "field_5bbe711ba0c1c",
+            "label": "Degree Program Description Text",
+            "name": "department_degree_programs",
+            "type": "textarea",
+            "instructions": "text to display in the DEGREE PROGRAMS section of a department's homepage",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "general_options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1548174646
+}

@@ -1,0 +1,58 @@
+# server port
+PORT: 1870
+
+# BrowserSync
+BROWSERSYNC:
+    # local server
+    url: "http://cvmbs.codepixel.state"
+
+# autoprefixer
+COMPATIBILITY:
+    - "last 2 versions"
+    - "ie >= 9"
+    - "ios >= 7"
+
+# static asset revisioning
+REVISIONING: true
+
+# paths for gulp task(s)
+PATHS:
+    # site folder
+    site: "dist"
+    # config folder
+    config: "src/.config/"
+    # docs folder
+    docs: "src/.refs/"
+    # static assets
+    assets:
+        - "src/assets/**/*"
+        - "!src/assets/{img/**/*,js,js/**/*,scss,scss/**/*}"
+        - "src/assets/data/**"
+    # SCSS libraries
+    sass:
+        - "node_modules/foundation-sites/scss"
+        - "node_modules/motion-ui/src"
+    # Javascript
+    entries:
+        - "src/assets/js/cvmbs.app.js"
+        - "src/assets/js/cvmbs.admin.app.js"
+    # package tasks
+    package:
+        - "**/*"
+        - "!**/node_modules/**"
+        - "!**/packaged/**"
+        - "!**/src/**"
+        - "!**/codesniffer.ruleset.xml"
+        - "!**/composer.json"
+        - "!**/composer.lock"
+        - "!**/config.yml"
+        - "!**/config.default.yml"
+        - "!**/gulpfile.babel.js"
+        - "!**/package.json"
+        - "!**/package-lock.json"
+        - "!**/webpack.config.js"
+    # PHP CodeSniffer
+    phpcs:
+        - "**/*.php"
+        - "!wpcs"
+        - "!wpcs/**"
