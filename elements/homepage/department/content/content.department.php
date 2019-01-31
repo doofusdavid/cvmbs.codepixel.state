@@ -65,7 +65,51 @@
     <!-- degree.programs -->
     <div id="degree-programs" class="homepage-section">
 
-        <?php echo $degree_programs_text; ?>
+        <!-- description -->
+        <div id="department-degree-programs-description" class="degree-program-content">
+
+            <!-- title -->
+            <h3 class="section-heading">
+
+                degree programs
+
+            </h3>
+            <!-- END title -->
+
+            <!-- text -->
+            <p>
+
+                Choose from lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Pellentesque dignissim enim sit amet venenatis.
+
+            </p>
+            <!-- END text -->
+
+            <!-- text -->
+            <p>
+
+                Pellentesque dignissim enim sit amet venenatis. Ut labore et dolore magna aliqua. Sit amet cursus sit amet dictum sit amet justo donec. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+            </p>
+            <!-- END text -->
+
+            <!-- button -->
+            <a href="#" class="link-button">
+
+                learn more
+
+            </a>
+            <!-- END button -->
+
+        </div>
+        <!-- END description -->
+
+        <!-- programs -->
+        <div id="department-degree-programs" class="degree-program-content">
+
+            <!-- dynamic degree programs content -->
+
+        </div>
+        <!-- END programs -->
 
     </div>
     <!-- END degree.programs -->

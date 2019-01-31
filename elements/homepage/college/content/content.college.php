@@ -1,6 +1,6 @@
 
 <!-- homepage.section -->
-<article id="academics" class="ui-article hide-form" data-section="academics" data-load="pending" tabindex="-1">
+<article id="academics" class="ui-article collapsed" data-section="academics" data-load="pending" tabindex="-1">
 
     <?php get_template_part( 'elements/homepage/sections/section.academics' ); ?>
 

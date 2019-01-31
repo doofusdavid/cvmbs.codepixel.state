@@ -3,6 +3,32 @@
     "title": "Degree Programs",
     "fields": [
         {
+            "key": "field_5c4b77b8359cb",
+            "label": "Degree Classification",
+            "name": "program_classification",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "undergraduate": "Undergraduate",
+                "graduate": "Graduate",
+                "doctoral": "Doctor of Veterinary Medicine",
+                "certification": "Professional Certification"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5b75f6285c2d2",
             "label": "Degree Type",
             "name": "program_degree_type",
@@ -1122,5 +1148,5 @@
     ],
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1548174985
+    "modified": 1548449898
 }
