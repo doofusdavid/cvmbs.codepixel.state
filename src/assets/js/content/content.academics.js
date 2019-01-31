@@ -1,7 +1,7 @@
 
-// ===============================================================================
+// ================================================================================
 // START :: require + modules + dependencies
-// ===============================================================================
+// ================================================================================
 
     // jQuery
     import $ from 'jquery';
@@ -9,30 +9,30 @@
     // site.object
     import { site, log } from './../cvmbs.app';
 
-// ===============================================================================
+// ================================================================================
 // END :: require + modules + dependencies
-// ===============================================================================
+// ================================================================================
 
 
 
-// ===============================================================================
+// ================================================================================
 // START :: globals
-// ===============================================================================
+// ================================================================================
 
     var academics;
     var targetID;
     var headline;
     var contentFX = {};
 
-// ===============================================================================
+// ================================================================================
 // END :: globals
-// ===============================================================================
+// ================================================================================
 
 
 
-// ===============================================================================
+// ================================================================================
 // START :: load.academics                                        EXPORT
-// ===============================================================================
+// ================================================================================
 
 export var academicsUI = {
 
@@ -62,22 +62,148 @@ export var academicsUI = {
         site.ui.content.on( 'load.article.content', function( e, target ) {
 
             targetID = target.attr( 'id' );
-            headline = $('#degree-programs-title');
 
-            var degrees = $('#explore-degrees');
-            var careers = $('#explore-careers');
-            var options = $('#degree-programs-form-button');
+            // console.log( 'ball so hard' );
 
-            contentFX.loadtime = [
+        });
+
+    }
+
+};
+
+// ================================================================================
+// END :: load.academics
+// ================================================================================
+
+
+
+// ================================================================================
+// START :: run.academics                                        EXPORT
+// ================================================================================
+
+export var academicsFX = {
+
+    // register script + define globals
+    init: function ( render ) {
+
+        // check in
+        console.log(
+
+            '%c[ %cacademicsFX %c] %cscript%c.%cinitialized',
+            log.brack, log.activ, log.brack, log.init, log.brack, log.brite
+
+        );
+
+        // call method
+        academicsFX.interact();
+
+    },
+
+    // event listener
+    launch: function( render ) {
+
+        // the emptiness
+
+    },
+
+    // event listener
+    interact: function( homepage ) {
+
+        // assign globaals
+        var targetID;
+        var viewport;
+
+        // academics global
+        academics = site.ui.sections.academics;
+
+        // sequence storage object
+        var runtimeFX = {
+
+            expand   : {},
+            collapse : {}
+
+        };
+
+        // contact form button
+        var contactFX = $('#degree-programs-form-button');
+        var contactUI = $('#degree-programs-form .select-list');
+
+        // degrees control object
+        var programsFX = {
+
+            expand   : $('#explore-programs-button'),
+            collapse : $('#collapse-programs')
+
+        };
+        // programs content object
+        var programsUI = {
+
+            element : $('#programs-static-panel'),
+            dynamic : $('#programs-dynamic-panel'),
+            content : $('#programs-content'),
+            views   : [
+
+                programsFX.collapse,
+                $('#academics .section-image')
+
+            ]
+
+        };
+
+        // degrees control object
+        var degreesFX = {
+
+            expand   : $('#explore-degrees-button'),
+            collapse : $('#collapse-degrees')
+
+        };
+        // degrees content object
+        var degreesUI = {
+
+            element : $('#degree-programs'),
+            content : $('#degree-programs .degree-programs-content-wrap'),
+            views   : [
+
+                degreesFX.collapse
+
+            ]
+
+        };
+
+        // careers control object
+        var careersFX = {
+
+            expand   : $('#explore-careers-button'),
+            collapse : $('#collapse-careers')
+
+        };
+        // careers content
+        var careersUI = {
+
+            element : $('#career-interests'),
+            content : $('#career-interests .degree-programs-content-wrap'),
+            views   : [
+
+                careersFX.collapse
+
+            ]
+
+        };
+
+        // expand degrees listener
+        programsFX.expand.on( 'click', function( e, viewport, headline ) {
+
+            // define expand sequence
+            runtimeFX.expand.programs = [
 
                 {
 
-                    e : $( degrees ),
+                    e : $( programsUI.content ),
 
     				p : {
 
-                        translateX : [ 0, '-10%' ],
-                        opacity    : [ 1, 0 ]
+                        translateY : [ '100%', 0 ],
+                        opacity    : [ 0, 1 ]
 
     				},
 
@@ -89,41 +215,10 @@ export var academicsUI = {
 
                         },
     					queue 		  : false,
-    					duration 	  : 960,
-    					delay 		  : 960,
-    					easing 		  : 'easeOutQuint',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( careers ),
-
-    				p : {
-
-                        translateX : [ 0, '10%' ],
-                        opacity    : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            //
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 960,
+    					duration 	  : 480,
     					delay 		  : 0,
-    					easing 		  : 'easeOutQuint',
-    					sequenceQueue : false,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : true,
     					complete 	  : function() {
 
                             //
@@ -134,12 +229,46 @@ export var academicsUI = {
 
                 }, {
 
-                    e : $( headline ),
+                    e : $( programsUI.element ),
 
     				p : {
 
-                        translateY : [ 0, '-200%' ],
-                        opacity    : [ 1, 0 ]
+                        width      : [ '100%', '50%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            // toggle class
+                            $(this).toggleClass( 'collapsed expanded' );
+
+                            // toggle class
+                            $(programsUI.views).toggleClass( 'collapsed expanded' );
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : true,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.dynamic ),
+
+    				p : {
+
+                        translateX : [ '100%', 0 ],
+                        opacity    : [ 0, 1 ]
 
     				},
 
@@ -151,13 +280,70 @@ export var academicsUI = {
 
                         },
     					queue 		  : false,
-    					duration 	  : 640,
+    					duration 	  : 480,
     					delay 		  : 0,
-    					easing 		  : 'easeOutQuint',
+    					easing 		  : 'easeOutCirc',
     					sequenceQueue : false,
     					complete 	  : function() {
 
-                            headline.addClass( 'loaded' );
+                            //
+
+    					}
+
+    				}
+
+                }
+
+            ];
+
+            // test for UI state
+            if ( programsUI.element.is( '.collapsed' ) ) {
+
+                // expand sequence
+                $.Velocity.RunSequence( runtimeFX.expand.programs );
+
+            }
+
+        });
+
+        // expand degrees listener
+        degreesFX.expand.on( 'click', function( e, viewport, headline ) {
+
+            // define expand sequence
+            runtimeFX.expand.degrees = [
+
+                {
+
+                    e : $( degreesUI.element ),
+
+    				p : {
+
+                        height     : [ '100%', '50%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            // toggle class
+                            $(this).toggleClass( 'collapsed expanded' );
+
+                            // toggle sibling class
+                            careersUI.element.toggleClass( 'displaced' );
+
+                            // toggle class
+                            $(degreesUI.views).toggleClass( 'collapsed expanded' );
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
 
     					}
 
@@ -165,7 +351,268 @@ export var academicsUI = {
 
                 }, {
 
-                    e : $( options ),
+                    e : $( careersUI.element ),
+
+    				p : {
+
+                        translateY : [ '100%', 0 ],
+                        opacity    : [ 0, 1 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.dynamic ),
+
+    				p : {
+
+                        width      : [ '100%', '50%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : true,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.element ),
+
+    				p : {
+
+                        translateX : [ '-100%', 0 ],
+                        opacity    : [ 0, 1 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }
+
+            ];
+
+            // test for UI state
+            if ( degreesUI.element.is( '.collapsed' ) ) {
+
+                // expand sequence
+                $.Velocity.RunSequence( runtimeFX.expand.degrees );
+
+            }
+
+        });
+
+        // expand careers listener
+        careersFX.expand.on( 'click', function( e, headline, viewport ) {
+
+            // define expand sequence
+            runtimeFX.expand.careers = [
+
+                {
+
+                    e : $( careersUI.element ),
+
+    				p : {
+
+                        height     : [ '100%', '50%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            // toggle element class
+                            $(this).toggleClass( 'collapsed expanded' );
+
+                            // toggle sibling class
+                            degreesUI.element.toggleClass( 'displaced' );
+
+                            // toggle class
+                            $(careersUI.views).toggleClass( 'collapsed expanded' );
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( degreesUI.element ),
+
+    				p : {
+
+                        translateY : [ '-100%', 0 ],
+                        opacity    : [ 0, 1 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.dynamic ),
+
+    				p : {
+
+                        width      : [ '100%', '50%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : true,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.element ),
+
+    				p : {
+
+                        translateX : [ '-100%', 0 ],
+                        opacity    : [ 0, 1 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }
+
+            ];
+
+            // test for UI state
+            if ( careersUI.element.is( '.collapsed' ) ) {
+
+                // expand sequence
+                $.Velocity.RunSequence( runtimeFX.expand.careers );
+
+            }
+
+        });
+
+        // collapse programs listener
+        programsFX.collapse.on( 'click', function( e, viewport, headline ) {
+
+            // define collapse sequence
+            runtimeFX.collapse.programs = [
+
+                {
+
+                    e : $( programsUI.content ),
 
     				p : {
 
@@ -184,194 +631,8 @@ export var academicsUI = {
     					queue 		  : false,
     					duration 	  : 480,
     					delay 		  : 0,
-    					easing 		  : 'easeOutQuint',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }
-
-            ];
-
-            if ( targetID === 'academics' ) {
-
-                // sequence
-                $.Velocity.RunSequence( contentFX.loadtime );
-
-            } else {
-
-                return;
-
-            }
-
-        });
-
-    }
-
-};
-
-// ===============================================================================
-// END :: load.academics
-// ===============================================================================
-
-
-
-// ===============================================================================
-// START :: run.academics                                        EXPORT
-// ===============================================================================
-
-export var academicsFX = {
-
-    // register script + define globals
-    init: function ( render ) {
-
-        // call method
-        academicsFX.interact();
-
-    },
-
-    // event listener
-    interact: function( homepage ) {
-
-        // assign globaals
-        var targetID;
-        var viewport;
-
-        // academics global
-        academics = site.ui.sections.academics;
-
-        // contact form button
-        var contactFX = $('#degree-programs-form-button');
-        var contactUI = $('#degree-programs-form .select-list');
-
-        // sequence storage object
-        var runtimeFX = {
-
-            expand   : {},
-            collapse : {}
-
-        };
-
-        // degrees control object
-        var degreesFX = {
-
-            expand   : $('#explore-degrees-button'),
-            collapse : $('#collapse-degrees')
-
-        };
-        // degrees content object
-        var degreesUI = {
-
-            element : $('#explore-degrees'),
-            initial : $('#explore-degrees-intro'),
-            content : $('#explore-degrees-content')
-
-        };
-
-        // careers control object
-        var careersFX = {
-
-            expand   : $('#explore-careers-button'),
-            collapse : $('#collapse-careers')
-
-        };
-        // careers content
-        var careersUI = {
-
-            element : $('#explore-careers'),
-            initial : $('#explore-careers-intro'),
-            content : $('#explore-careers-content'),
-            tag     : $('#careers-tag-list .tag'),
-            cards   : $('#careers-degree-cards'),
-            degree  : $('#careers-degree-cards .degree-card')
-
-        };
-
-        var tagID = $(this).attr( 'id' );
-
-        // event listener
-        careersUI.tag.on( 'click', function( e ) {
-
-            $(this).toggleClass( 'selected' );
-
-            if ( careersUI.tag.is( '.selected' ) ) {
-
-                console.log( 'showtime' );
-
-                careersUI.degree.velocity( 'transition.slideUpIn', {
-
-                    begin      : function() {
-
-                        //
-
-                    },
-                    visibility : 'visible',
-                    duration   : 360,
-                    delay 	   : 0,
-                    stagger    : 60,
-                    drag       : true,
-                    easing     : 'easeOutCirc',
-                    complete   :  function() {
-
-                        //
-
-                    }
-
-                });
-
-            }
-
-        });
-
-        // event handler
-        careersUI.degree.on( 'cards.load.degrees', function( e ) {
-
-            console.log( e );
-
-            console.log( 'ball so hard' );
-
-        });
-
-        // expand degrees listener
-        degreesFX.expand.on( 'click', function( e, viewport, headline ) {
-
-            // viewport width
-            viewport = $('body').width();
-
-            // headline
-            headline  = $('#degree-programs-title');
-
-            // define sequence
-            runtimeFX.expand.degrees = [
-
-                {
-
-                    e : $( degreesUI.element ),
-
-    				p : {
-
-                        width    : [ viewport, '50%' ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // headline
-                            headline.toggleClass( 'sequenced' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
     					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
+    					sequenceQueue : true,
     					complete 	  : function() {
 
                             //
@@ -382,12 +643,11 @@ export var academicsFX = {
 
                 }, {
 
-                    e : $( careersUI.element ),
+                    e : $( programsUI.element ),
 
     				p : {
 
-                        translateX : [ '100%', 0 ],
-                        opacity    : [ 0, 1 ]
+                        width      : [ '50%', '100%' ]
 
     				},
 
@@ -395,40 +655,11 @@ export var academicsFX = {
 
                         begin         : function() {
 
-                            // toggle states
-                            degreesUI.element.attr( 'data-active', 'true' );
-                            careersUI.element.attr( 'data-active', 'false' );
+                            // toggle class
+                            $(this).toggleClass( 'collapsed expanded' );
 
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( degreesUI.initial ),
-
-    				p : {
-
-                        translateY : [ -96, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toggle expand button
-                            degreesFX.expand.toggleClass( 'active inactive' );
+                            // toggle class
+                            $(programsUI.views).toggleClass( 'collapsed expanded' );
 
                         },
     					queue 		  : false,
@@ -438,38 +669,6 @@ export var academicsFX = {
     					sequenceQueue : true,
     					complete 	  : function() {
 
-                            // toggle close button
-                            degreesFX.collapse.toggleClass( 'active inactive' );
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( headline ),
-
-    				p : {
-
-                        translateY    : [ '-100%', 0 ],
-                        opacity       : [ 0, 1 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 360,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
                             //
 
     					}
@@ -478,124 +677,7 @@ export var academicsFX = {
 
                 }, {
 
-                    e : $( degreesUI.content ),
-
-                    p : {
-
-                        translateY : [ -96, 96 ],
-                        opacity    : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            //
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 120,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }
-
-            ];
-
-            // run sequence
-            $.Velocity.RunSequence( runtimeFX.expand.degrees );
-
-        });
-
-        // collapse degrees listener
-        degreesFX.collapse.on( 'click', function( e, viewport, headline ) {
-
-            // viewport width
-            viewport = $('body').width();
-
-            // headline
-            headline  = $('#degree-programs-title');
-
-            // define sequence
-            runtimeFX.collapse.degrees = [
-
-                {
-
-                    // degrees content
-                    e : $( degreesUI.content ),
-
-                    p : {
-
-                        translateY : [ '10%', '-10%' ],
-                        opacity    : [ 0, 1 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // degrees panel
-                    e : $( degreesUI.element ),
-
-    				p : {
-
-                        width    : [ '50%', viewport ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toggle close button
-                            degreesFX.collapse.toggleClass( 'active inactive' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 240,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // careers panel
-                    e : $( careersUI.element ),
+                    e : $( programsUI.dynamic ),
 
     				p : {
 
@@ -608,74 +690,7 @@ export var academicsFX = {
 
                         begin         : function() {
 
-                            // toggle states
-                            degreesUI.element.attr( 'data-active', 'null' );
-                            careersUI.element.attr( 'data-active', 'null' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
                             //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // intro content
-                    e : $( degreesUI.initial ),
-
-    				p : {
-
-                        translateY : [ 0, '-20%' ]
-                        // opacity    : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toggle expand button
-                            degreesFX.expand.toggleClass( 'active inactive' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 240,
-    					delay 		  : 360,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( headline ),
-
-    				p : {
-
-                        translateY    : [ 0, '-200%' ],
-                        opacity       : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // headline
-                            headline.toggleClass( 'sequenced' );
 
                         },
     					queue 		  : false,
@@ -695,62 +710,29 @@ export var academicsFX = {
 
             ];
 
-            // run sequence
-            $.Velocity.RunSequence( runtimeFX.collapse.degrees );
+            // test for UI state
+            if ( programsUI.element.is( '.expanded' ) ) {
+
+                // collapse sequence
+                $.Velocity.RunSequence( runtimeFX.collapse.programs );
+
+            }
 
         });
 
-        // expand careers listener
-        careersFX.expand.on( 'click', function( e, headline, viewport ) {
+        // collapse degrees listener
+        degreesFX.collapse.on( 'click', function( e, viewport, headline ) {
 
-            // viewport width
-            viewport = $('body').width();
-
-            // headline
-            headline  = $('#degree-programs-title');
-
-            // define sequence
-            runtimeFX.expand.careers = [
+            // define collapse sequence
+            runtimeFX.collapse.degrees = [
 
                 {
-
-                    e : $( careersUI.element ),
-
-    				p : {
-
-                        width    : [ viewport, '50%' ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // headline
-                            headline.toggleClass( 'sequenced' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
 
                     e : $( degreesUI.element ),
 
     				p : {
 
-                        translateX : [ '-100%', 0 ],
-                        opacity    : [ 0, 1 ]
+                        height     : [ '50%', '100%' ]
 
     				},
 
@@ -758,77 +740,18 @@ export var academicsFX = {
 
                         begin         : function() {
 
-                            // toggle states
-                            careersUI.element.attr( 'data-active', 'true' );
-                            degreesUI.element.attr( 'data-active', 'false' );
+                            // toggle class
+                            $(this).toggleClass( 'collapsed expanded' );
+
+                            // toggle sibling class
+                            careersUI.element.toggleClass( 'displaced' );
+
+                            // toggle class
+                            $(degreesUI.views).toggleClass( 'collapsed expanded' );
 
                         },
     					queue 		  : false,
     					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( careersUI.initial ),
-
-    				p : {
-
-                        translateY : [ '-20%', 0 ]
-                        // opacity    : [ 0, 1 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toggle expand button
-                            careersFX.expand.toggleClass( 'active inactive' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : true,
-    					complete 	  : function() {
-
-                            // toggle close button
-                            careersFX.collapse.toggleClass( 'active inactive' );
-
-    					}
-
-    				}
-
-                }, {
-
-                    e : $( headline ),
-
-    				p : {
-
-                        translateY    : [ '-100%', 0 ],
-                        opacity       : [ 0, 1 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 360,
     					delay 		  : 0,
     					easing 		  : 'easeOutCirc',
     					sequenceQueue : false,
@@ -842,11 +765,11 @@ export var academicsFX = {
 
                 }, {
 
-                    e : $( careersUI.content ),
+                    e : $( careersUI.element ),
 
     				p : {
 
-                        translateY : [ '-10%', '10%' ],
+                        translateY : [ 0, '100%' ],
                         opacity    : [ 1, 0 ]
 
     				},
@@ -860,7 +783,7 @@ export var academicsFX = {
                         },
     					queue 		  : false,
     					duration 	  : 480,
-    					delay 		  : 120,
+    					delay 		  : 0,
     					easing 		  : 'easeOutCirc',
     					sequenceQueue : false,
     					complete 	  : function() {
@@ -871,33 +794,13 @@ export var academicsFX = {
 
     				}
 
-                }
+                }, {
 
-            ];
-
-            // run sequence
-            $.Velocity.RunSequence( runtimeFX.expand.careers );
-
-        });
-
-        // collapse careers listener
-        careersFX.collapse.on( 'click', function( e, viewport ) {
-
-            // viewport width
-            viewport = $('body').width();
-
-            // define sequence
-            runtimeFX.collapse.careers = [
-
-                {
-
-                    // career tags
-                    e : $( careersUI.content ),
+                    e : $( programsUI.dynamic ),
 
     				p : {
 
-                        translateY : [ '10%', '-10%' ],
-                        opacity    : [ 0, 1 ]
+                        width      : [ '50%', '100%' ]
 
     				},
 
@@ -912,7 +815,7 @@ export var academicsFX = {
     					duration 	  : 480,
     					delay 		  : 0,
     					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
+    					sequenceQueue : true,
     					complete 	  : function() {
 
                             //
@@ -923,40 +826,7 @@ export var academicsFX = {
 
                 }, {
 
-                    // careers panel
-                    e : $( careersUI.element ),
-
-    				p : {
-
-                        width    : [ '50%', viewport ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toggle close button
-                            careersFX.collapse.toggleClass( 'active inactive' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 240,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // degrees panel
-                    e : $( degreesUI.element ),
+                    e : $( programsUI.element ),
 
     				p : {
 
@@ -969,75 +839,7 @@ export var academicsFX = {
 
                         begin         : function() {
 
-                            // toggle states
-                            degreesUI.element.attr( 'data-active', 'null' );
-                            careersUI.element.attr( 'data-active', 'null' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 480,
-    					delay 		  : 0,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
                             //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // intro content
-                    e : $( careersUI.initial ),
-
-    				p : {
-
-                        translateY : [ 0, '-20%' ]
-                        // opacity    : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // toogle button visibility
-                            careersFX.expand.toggleClass( 'active inactive' );
-
-                        },
-    					queue 		  : false,
-    					duration 	  : 240,
-    					delay 		  : 360,
-    					easing 		  : 'easeOutCirc',
-    					sequenceQueue : false,
-    					complete 	  : function() {
-
-                            //
-
-    					}
-
-    				}
-
-                }, {
-
-                    // headline
-                    e : $( headline ),
-
-    				p : {
-
-                        translateY    : [ 0, '-200%' ],
-                        opacity       : [ 1, 0 ]
-
-    				},
-
-    				o : {
-
-                        begin         : function() {
-
-                            // headline
-                            headline.toggleClass( 'sequenced' );
 
                         },
     					queue 		  : false,
@@ -1057,26 +859,266 @@ export var academicsFX = {
 
             ];
 
-            // run sequence
-            $.Velocity.RunSequence( runtimeFX.collapse.careers );
+            // test for UI state
+            if ( degreesUI.element.is( '.expanded' ) ) {
+
+                // collapse sequence
+                $.Velocity.RunSequence( runtimeFX.collapse.degrees );
+
+            }
 
         });
 
-        // reveal contact form
-        contactFX.on( 'click', function( e ) {
+        // collapse careers listener
+        careersFX.collapse.on( 'click', function( e, viewport ) {
 
-            academics.toggleClass( 'hide-form reveal-form' );
+            // define collapse sequence
+            runtimeFX.collapse.careers = [
 
-            $('#degree-programs-form').toggleClass( 'visible' );
+                {
 
-            contactUI.toggleClass( 'visible' );
+                    e : $( careersUI.element ),
+
+    				p : {
+
+                        height     : [ '50%', '100%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            // toggle class
+                            $(this).toggleClass( 'collapsed expanded' );
+
+                            // toggle sibling class
+                            degreesUI.element.toggleClass( 'displaced' );
+
+                            // toggle class
+                            $(careersUI.views).toggleClass( 'collapsed expanded' );
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( degreesUI.element ),
+
+    				p : {
+
+                        translateY : [ 0, '-100%' ],
+                        opacity    : [ 1, 0 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.dynamic ),
+
+    				p : {
+
+                        width      : [ '50%', '100%' ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : true,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }, {
+
+                    e : $( programsUI.element ),
+
+    				p : {
+
+                        translateX : [ 0, '-100%' ],
+                        opacity    : [ 1, 0 ]
+
+    				},
+
+    				o : {
+
+                        begin         : function() {
+
+                            //
+
+                        },
+    					queue 		  : false,
+    					duration 	  : 480,
+    					delay 		  : 0,
+    					easing 		  : 'easeOutCirc',
+    					sequenceQueue : false,
+    					complete 	  : function() {
+
+                            //
+
+    					}
+
+    				}
+
+                }
+
+            ];
+
+            // test for UI state
+            if ( careersUI.element.is( '.expanded' ) ) {
+
+                // collapse sequence
+                $.Velocity.RunSequence( runtimeFX.collapse.careers );
+
+            }
 
         });
 
-        // toggle select lists
-        contactUI.on( 'click', function( e ) {
+        // interactive tag filter
+        $('#careers-content-UI .tag, #degrees-content-UI .tag').on( 'click', function( e ) {
 
-            $(this).toggleClass( 'showtime' );
+            $(this).toggleClass( 'selected' );
+
+        });
+
+    },
+
+    // department [ BUILD ]
+    department: function( department ) {
+
+        $.ajax({
+
+            dataType: 'json',
+
+            // return items
+            url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?department=32',
+
+            type: 'GET',
+
+            error : function ( jqXHR, exception ) {
+
+                console.log( jqXHR.responseText );
+
+                var emptyPrograms = '';
+                var programsError = '';
+                var signal = null;
+
+                if ( jqXHR.status === 0 ) {
+
+                    programsError = 'There was a problem loading news content.';
+
+                } else if ( jqXHR.status === 404 ) {
+
+                    programsError = 'Resource not found [404]';
+
+                } else if ( jqXHR.status === 500 ) {
+
+                    programsError = 'Internal Server Error [505]';
+
+                } else if ( exception === 'parserror' ) {
+
+                    programsError = 'JSON parse failed';
+
+                } else if ( exception === 'timeout' ) {
+
+                    programsError = 'Request timed out.';
+
+                } else if ( exception === 'abort' ) {
+
+                    programsError = 'Search connection aborted.';
+
+                } else {
+
+                    programsError = 'Configuration error.';
+
+                }
+
+                emptyPrograms += '<span class="message">' + programsError + '<br /><em>please try again later</em></span>';
+
+                $( newsFeedReturnError ).fadeIn( 2400, 'easeInOutExpo', function() {
+
+                    signal = setTimeout( function() {
+
+                        $( newsFeedErrorMessage ).html( emptyPrograms );
+
+                    }, 2400 );
+
+                });
+
+            },
+
+            success: function( response ) {
+
+                // confirm response
+                console.log( '%csuccessfully connected to CVMBS degree programs repository', log.callb );
+
+                // article(s) HTML
+                var program = '';
+
+                $.each( response, function( index ) {
+
+                    // remove HTTPS from article link
+                    var programLink = response[ index ].link;
+                    var programHTTP = programLink.replace(/^https:\/\//i, 'http://');
+
+                    // program link
+                    program += "<span class='program card' data-url='" + programHTTP + "' target='_blank' tabindex='-1'>";
+
+                        // content
+                        program += '<span class="text">' + response[ index ].title.rendered + '</span>';
+
+                    program += "</span>";
+
+                });
+
+                // insert HTML
+                $('#department-degree-programs').append( program );
+
+            }
 
         });
 
@@ -1084,6 +1126,6 @@ export var academicsFX = {
 
 };
 
-// ===============================================================================
+// ================================================================================
 // END :: run.academics
-// ===============================================================================
+// ================================================================================

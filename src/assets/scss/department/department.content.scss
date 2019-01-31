@@ -101,11 +101,77 @@
         // degree programs
         #degree-programs {
 
-            height: 28rem;
+            @include flex-h-j-v-s( false );
 
             @include color( white, 0.000 );
 
             @include fill( $dark, 0.000 );
+
+            // content
+            .degree-program-content {
+
+                @include flex-v-t-h-s( false );
+
+            }
+
+            // description
+            #department-degree-programs-description {
+
+                flex-basis: 40%;
+
+                // title
+                h3 {
+
+                    margin: 0 0 2rem 0;
+
+                    @include font( $klavislim, 3rem, 400 );
+
+                    @include typo( 1.5rem, 0.085em );
+
+                    @include color( #F3F1E0, 0.000 );
+
+                }
+
+                // text
+                p {
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                    @include typo( 1.5rem, 0.035em );
+
+                }
+
+                // button
+                .link-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 1rem 0 0 0;
+                    padding: 0.125rem 3rem 0 3rem;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 0.875rem, 0.085em );
+
+                    @include color( white, 0.000 );
+
+                    @include fill( $px-orange, 0.000 );
+
+                }
+
+            }
+
+            // degrees
+            #department-degree-programs {
+
+                flex-basis: 60%;
+
+                padding: 0 0 0 5rem;
+
+            }
 
         }
 

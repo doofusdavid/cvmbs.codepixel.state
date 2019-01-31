@@ -5,13 +5,14 @@
     $section_color : transparentize( $nite, 0.365 );
 
     $billboard : '../img/billboards/billboard.09.jpg';
+    $billboard : '../img/billboards/sections/academics/academics.background.01.jpg';
 
     // styles
     #academics {
 
         @include shadowbox( 2rem, 7rem, black, 0.625 );
 
-        // hide contact form
+        // hide contact form [REMOVE]
         &.hide-form {
 
             transform: translate3d( 0, 0, 0 );
@@ -20,7 +21,7 @@
 
         }
 
-        // reveal contact form
+        // reveal contact form [REMOVE]
         &.reveal-form {
 
             transform: translate3d( 0, -80vh, 0 );
@@ -46,41 +47,8 @@
         // container
         .article-container {
 
-            // @include flex-v-b-h-c( false );
-
             height: 100vh;
             padding: 0 0 0 0;
-
-            // border
-            &:after {
-
-                content: '';
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                z-index: 10;
-
-                background: {
-
-                    // image: url($billboard);
-                    repeat: no-repeat;
-                    size: cover;
-                    position: center center;
-
-                }
-
-                filter:
-
-                    grayscale( 1.000 );
-
-                ;
-
-            }
 
         }
 
@@ -98,13 +66,19 @@
 
             }
 
-            // -webkit-filter: blur( 8px );
-                    // filter: blur( 8px );
+            // panels collapsed
+            &.collapsed {
 
-            // loaded state
-            &[data-load='loaded'] {
+                -webkit-filter: blur( 0px );
+                        filter: blur( 0px );
 
-                //
+            }
+
+            // panel(s) expanded
+            &.expanded {
+
+                -webkit-filter: blur( 16px );
+                        filter: blur( 16px );
 
             }
 
@@ -131,29 +105,20 @@
                 bottom: 0;
                 left: 0;
 
-                background: {
-
-                    // repeat: no-repeat;
-
-                }
-
-                mix-blend-mode: multiply;
-
             }
 
             // before
             &:before {
 
-                @include hide;
+                z-index: 10;
 
-                z-index: 0;
+                @include gradient(
 
-                background: {
+                    120deg,
+                    $nite, 0.000, 0%,
+                    red, 1.000, 100%
 
-                    image: url(../img/patterns/pattern.vertical.svg);
-                    // position: calc( 100% + 10rem ) 10rem;
-
-                }
+                );
 
                 opacity: 0.265;
 
@@ -162,19 +127,17 @@
             // after
             &:after {
 
-                // @include hide;
+                z-index: 20;
 
-                z-index: 0;
+                @include gradient(
 
-                background: {
+                    30deg,
+                    $cvnavy, 0.000, 0%,
+                    red, 1.000, 70%
 
-                    // image: url(../img/patterns/pattern.light.00.png);
-                    size: 100px 100px;
-                    // position: left 0rem;
+                );
 
-                }
-
-                opacity: 0.365;
+                opacity: 0.685;
 
             }
 
@@ -202,13 +165,6 @@
             opacity: 1.000;
 
             transition: all 40ms linear 160ms;
-
-        }
-
-        // build
-        #academics-content-build {
-
-
 
         }
 
@@ -542,7 +498,7 @@
 
             @include flex-h-j-v-s( false );
 
-            // @include hide;
+            @include hide;
 
         }
 
@@ -1671,6 +1627,585 @@
 
     }
 
+    // build
+    #degree-programs-content {
+
+        @include flex-h-j-v-s( false );
+
+        padding: 5rem 0 0 0;
+
+        // panels
+        .programs-view {
+
+            position: absolute;
+
+            top: 5rem;
+            bottom: 0;
+
+            z-index: 10;
+
+            width: 50%;
+            height: calc( 100% - 5rem );
+
+            // wrapper
+            .degree-programs-content-wrap {
+
+                position: relative;
+
+                z-index: 10;
+
+                // collapsed
+                .collapsed & {
+
+                    z-index: 20;
+
+                }
+
+            }
+
+            // content
+            .degree-programs-dynamic-content {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                @include flex-h-c-v-c( false );
+
+                flex-wrap: wrap;
+
+                width: 100%;
+                height: 100%;
+                padding: 5rem 5rem 5rem 4.75rem;
+
+                // tags
+                .tag {
+
+                    @include flex-h-c-v-c( true );
+
+                    height: 2rem;
+                    margin: 0 0.25rem 0 0.25rem;
+                    padding: 0 1rem 0 1rem;
+
+                    @include font( $industry, 0.6875rem, 700 );
+
+                    @include text( none );
+
+                    @include typo( 0.5rem, 0.045em );
+
+                    @include fill( white, 0.965 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $cvellow, 0.235 );
+
+                        cursor: pointer;
+
+                    }
+
+                    // selected state
+                    &.selected {
+
+                        @include color( $cvellow, 0.000 );
+
+                        @include fill( white, 0.865 );
+
+                    }
+
+                }
+
+            }
+
+            // main buttons
+            .degree-programs-button {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 0.875rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.75rem, 0.135em );
+
+                @include color( white, 0.000 );
+
+                @include fill( white, 0.985 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 360ms $outex 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include color( $gold, 0.000 );
+
+                    @include fill( white, 0.915 );
+
+                }
+
+            }
+
+            // close buttons
+            .collapse-content-button {
+
+                position: absolute;
+
+                top: 5rem;
+                right: 5rem;
+
+                z-index: 100;
+
+                @include flex-h-c-v-c( false );
+
+                width: 3rem;
+                height: 3rem;
+                padding: 1rem 1rem 1rem 1rem;
+
+                @include font( $industry, 0.65625rem, 700 );
+
+                @include text( $up );
+
+                @include typo( 0.3875rem, 0.045em );
+
+                @include color( white, 0.365 );
+
+                @include fill( white, 0.965 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.585 );
+
+                transition:
+
+                    background-color 360ms $outex 0ms,
+                             opacity 480ms $ocirc 480ms
+
+                ;
+
+                // hover state
+                &:hover {
+
+                    @include color( white, 0.000 );
+
+                    @include fill( $roarange, 0.000 );
+
+                }
+
+                // after
+                &:after {
+
+                    @include codicon( 1rem, 1rem, 0, 1rem, white, '\ED6E' );
+
+                }
+
+                // collapsed state
+                &.collapsed {
+
+                    visibility: hidden;
+
+                    opacity: 0.000;
+
+                    transition:
+
+                        background-color 360ms $outex 0ms,
+                                 opacity 480ms $ocirc 480ms
+
+                    ;
+
+                }
+
+                // expanded state
+                &.expanded {
+
+                    visibility: visible;
+
+                    opacity: 1.000;
+
+                    transition:
+
+                        background-color 360ms $outex 0ms,
+                                 opacity 480ms $ocirc 480ms
+
+                    ;
+
+                }
+
+                // text
+                span {
+
+                    overflow: hidden;
+
+                    text-indent: -999rem;
+
+                }
+
+            }
+
+        }
+
+        // static panel
+        #programs-static-panel {
+
+            left: 0;
+
+            @include flex-v-b-h-s( false );
+
+            padding: 0 5rem 5rem 5rem;
+
+            @include fill( $cvnavy, 0.865 );
+
+            // expanded state
+            &.expanded {
+
+                // padding: 0 calc( 50vw + 5rem ) 5rem 5rem;
+
+            }
+
+            // content wrap
+            .degree-programs-content-wrap {
+
+                @include flex-v-b-h-s( false );
+
+                height: 100%;
+
+            }
+
+            // title
+            .content-title {
+
+                margin: 0 0 1rem 0;
+
+                @include font( $klavislim, 2rem, 400 );
+
+                @include typo( 1rem, 0.085em );
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // text
+            .panel-text {
+
+                @include flex-h-c-v-c( false );
+
+                max-width: 30rem;
+                margin: 0 0 2rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include text( none );
+
+                @include typo( 1.5rem, 0.035em );
+
+            }
+
+        }
+
+        // dynamic panels
+        #programs-dynamic-panel {
+
+            // position: relative;
+
+            right: 0;
+
+            @include flex-v-j-h-st( false );
+
+            overflow: hidden;
+
+            @include fill( $nite, 0.385 );
+
+            // wrapper
+            .degree-programs-content-wrap {
+
+                @include flex-v-c-h-c( false );
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+            // content panel
+            .degree-programs-content {
+
+                position: absolute;
+
+                right: 0;
+                left: 0;
+
+                z-index: 10;
+
+                @include flex-v-c-h-c( false );
+
+                flex-basis: 50%;
+
+                height: 50%;
+
+                transition: flex-basis 480ms $ocirc 0ms;
+
+                // expanded state
+                &.expanded {
+
+                    // common
+                    .degree-programs-content-wrap,
+                    .degree-programs-dynamic-content {
+
+                        //
+
+                    }
+
+                    // wrapper
+                    .degree-programs-content-wrap {
+
+                        z-index: 10;
+
+                        visibility: hidden;
+
+                        opacity: 0.000;
+
+                    }
+
+                    // content
+                    .degree-programs-dynamic-content {
+
+                        z-index: 20;
+
+                        visibility: visible;
+
+                        opacity: 1.000;
+
+                    }
+
+                }
+
+                // collapsed state
+                &.collapsed {
+
+                    // common
+                    .degree-programs-content-wrap,
+                    .degree-programs-dynamic-content {
+
+                        //
+
+                    }
+
+                    // wrapper
+                    .degree-programs-content-wrap {
+
+                        z-index: 20;
+
+                        visibility: visible;
+
+                        opacity: 1.000;
+
+                        transition: opacity 480ms $outex 0ms;
+
+                    }
+
+                    // content
+                    .degree-programs-dynamic-content {
+
+                        z-index: 10;
+
+                        visibility: hidden;
+
+                        opacity: 0.000;
+
+                        transition: opacity 480ms $outex 480ms;
+
+                    }
+
+                }
+
+                // displaced state
+                &.displaced {
+
+                    // flex-basis: 0;
+
+                    transition: flex-basis 480ms $ocirc 0ms;
+
+                }
+
+                // title
+                h4 {
+
+                    margin: 0 0 2rem 0;
+
+                    @include font( $klavislim, 2.5rem, 400 );
+
+                    @include typo( 1.125rem, 0.085em );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // text
+                .panel-text {
+
+                    @include flex-h-c-v-c( false );
+
+                    margin: 0 0 2rem 0;
+
+                    @include font( $industry, 0.875rem, 600 );
+
+                    @include text( none, center );
+
+                    @include typo( 1.5rem, 0.035em );
+
+                }
+
+            }
+
+        }
+
+        // degree type
+        #degree-programs {
+
+            top: 0;
+
+            @include fill( $midnite, 0.785 );
+
+        }
+
+        // degree type content
+        #degrees-content-UI {
+
+            display: block;
+
+            // accordion
+            .programs-content-accordion {
+
+                width: 32rem;
+                margin: 0;
+
+                // item
+                .accordion-item {
+
+                    margin: 0 0 0.0625rem 0;
+
+                }
+
+                // title
+                .accordion-title {
+
+                    @include flex-h-j-v-c( false );
+
+                    height: 3rem;
+                    margin: 0 0 0.0625rem 0;
+                    padding: 0.125rem 1rem 0 1rem;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 0.75rem, 0.085em );
+
+                    @include fill( white, 0.925 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $gold, 0.425 );
+
+                    }
+
+                    // focus state
+                    &:focus {
+
+                        @include color( $gold, 0.000 );
+
+                    }
+
+                    // expanded
+                    &[aria-expanded='true'] {
+
+                        @include color( $gold, 0.000 );
+
+                        @include fill( $white, 0.885 );
+
+                    }
+
+                    // count
+                    .count {
+
+                        //
+
+                    }
+
+                }
+
+                // content
+                .accordion-content {
+
+                    // hidden
+                    &[aria-hidden='true'] {
+
+                        //
+
+                    }
+
+                    // visible
+                    &[aria-hidden='false'] {
+
+                        //
+
+                    }
+
+                    // degree
+                    .degree-program {
+
+                        display: block;
+
+                        height: 0.5625rem;
+                        margin: 0 0 1rem 0;
+
+                        // last child
+                        &:last-child {
+
+                            margin-bottom: 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // careers
+        #career-interests {
+
+            bottom: 0;
+
+            @include fill( white, 0.965 );
+
+        }
+
+        // career intersests content
+        #careers-content-UI {
+
+            //
+
+        }
+
+    }
+
     // form button
     #degree-programs-form-button {
 
@@ -1772,7 +2307,7 @@
     }
 
     // contact form
-    #degree-programs-form {
+    #degree-programs-forms {
 
         position: fixed;
 

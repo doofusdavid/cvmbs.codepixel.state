@@ -162,6 +162,9 @@
         // academics interact
         academicsFX.init();
 
+        // department degree programs [ BUILD ONLY ]
+        academicsFX.department();
+
         // alumni load
         alumniUI.init();
 
@@ -205,9 +208,9 @@
 
         var scrolltarget = $('#' + targetsection );
 
-        console.log( scrolltarget );
+        // console.log( scrolltarget );
 
-        scrolltarget.focus();
+        // scrolltarget.focus();
 
         scrolltarget.velocity( 'scroll', {
 
@@ -236,7 +239,13 @@
     // event handler
     degreebutton.on( 'click', function( e ) {
 
-        site.ui.sections.academics.focus();
+        site.ui.sections.academics.velocity( 'scroll', {
+
+            duration  : 360,
+            delay     : 0,
+            easing    : [0.023, 1, 0.32, 1]
+
+        });
 
     });
 

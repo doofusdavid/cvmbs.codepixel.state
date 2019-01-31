@@ -34,6 +34,7 @@
 				'show_ui' 				=> true,
 				'show_in_nav_menus' 	=> false,
 				'show_in_admin_bar' 	=> false,
+				'show_in_rest'          => true,
 				'query_var' 			=> true,
 				'can_export' 			=> true,
 				'rewrite' 				=> array( 'slug' => 'degree-programs', 'with_front' => false ),
@@ -45,9 +46,11 @@
 				'supports' 				=> array( 'title', 'thumbnail' ),
 				'taxonomies'			=> array(
 
-												'theme_categories',
+												// 'theme_categories',
 												// 'category',
-												'career_interests'
+												'career_interests',
+												'degree_types',
+												'department'
 
 											)
 
