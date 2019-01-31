@@ -104,14 +104,45 @@
 
         // standard
 
+            // light
+    		@font-face {
+
+    			font-family: 'Klavika';
+                    src: url('../fonts/klavika/Klavika-Light.otf')
+                    format('opentype');
+                font-weight: 300;
+                font-style: normal;
+
+            }
+
+            @font-face {
+
+    			font-family: 'Klavika';
+                    src: url('../fonts/klavika/Klavika-LightItalic.otf')
+                    format('opentype');
+                font-weight: 300;
+                font-style: italic;
+
+            }
+
             // regular
     		@font-face {
 
     			font-family: 'Klavika';
-                    src: url('../fonts/klavika/Klavika-Regular.ttf')
-                    format('truetype');
+                    src: url('../fonts/klavika/Klavika-Regular.otf')
+                    format('opentype');
                 font-weight: 400;
                 font-style: normal;
+
+            }
+
+            @font-face {
+
+    			font-family: 'Klavika';
+                    src: url('../fonts/klavika/Klavika-RegularItalic.otf')
+                    format('opentype');
+                font-weight: 400;
+                font-style: italic;
 
     		}
 
@@ -119,10 +150,20 @@
     		@font-face {
 
     			font-family: 'Klavika';
-                    src: url('../fonts/klavika/Klavika-Medium.ttf')
-                    format('truetype');
+                    src: url('../fonts/klavika/Klavika-Medium.otf')
+                    format('opentype');
                 font-weight: 500;
                 font-style: normal;
+
+            }
+
+            @font-face {
+
+    			font-family: 'Klavika';
+                    src: url('../fonts/klavika/Klavika-MediumItalic.otf')
+                    format('opentype');
+                font-weight: 500;
+                font-style: italic;
 
     		}
 
@@ -130,10 +171,20 @@
     		@font-face {
 
     			font-family: 'Klavika';
-    			 	src: url('../fonts/klavika/Klavika-Bold.ttf')
-                    format('truetype');
+    			 	src: url('../fonts/klavika/Klavika-Bold.otf')
+                    format('opentype');
     			font-weight: 700;
     			font-style: normal;
+
+            }
+
+            @font-face {
+
+    			font-family: 'Klavika';
+    			 	src: url('../fonts/klavika/Klavika-BoldItalic.otf')
+                    format('opentype');
+    			font-weight: 700;
+    			font-style: italic;
 
     		}
 

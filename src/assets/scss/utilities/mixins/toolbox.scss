@@ -306,7 +306,7 @@
         letter-spacing: $space;
 
     }
-    
+
     // transparentize
     @mixin fade( $type, $dye, $haze ) {
 
@@ -407,4 +407,23 @@
 
         }
 
+    }
+
+    // media queries
+    @mixin bpoint($point) {
+        @if $point == phone {
+            @media (min-width: 30em) { @content; }
+        }
+        @else if $point == tablet {
+            @media (min-width: 45em) { @content; }
+        }
+        @else if $point == desktop {
+            @media (min-width: 60em) { @content; }
+        }
+        @else if $point == widescreen {
+            @media (min-width: 100em) { @content; }
+        }
+        @else {
+            @media (min-width: $point) { @content; }
+        }
     }
