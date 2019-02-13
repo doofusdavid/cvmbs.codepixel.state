@@ -9,54 +9,33 @@
 <main id="site-layout" class="off-canvas-content secondary <?php echo $site_type; ?>" data-off-canvas-content>
 
     <!-- special.billboard -->
-    <!-- <section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);"> -->
-    <section id="special-billboard" class="ui-billboard pattern" tabindex="-1">
+    <section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">
+    <!-- <section id="special-billboard" class="ui-billboard pattern" tabindex="-1"> -->
 
-        <!-- billboard.layers -->
-        <div id="billboard-artwork-layers">
+        <!-- overlay -->
+        <div class="billboard-overlay">
 
-            <!-- headline -->
-            <span class="headline">
 
-                make a difference
-
-            </span>
-            <!-- END headline -->
-
-            <!-- text -->
-            <span class="description">
-
-                more than a century of excellence in teaching advanced<br />
-                veterinary medicine and compassionate care
-
-            </span>
-            <!-- END text -->
-
-            <!-- button -->
-            <button class="explore-button menu-item-link" data-section-link="overview">
-
-                explore our program
-
-            </button>
-            <!-- END button -->
 
         </div>
-        <!-- END billboard.layers -->
+        <!-- END overlay -->
+
+        <!-- content -->
+        <div class="billboard-content">
+
+            <?php
+
+                $theme = wp_get_theme();
+
+                echo $theme;
+
+            ?>
+
+        </div>
+        <!-- END content -->
 
     </section>
     <!-- END special.billboard -->
 
-    <?php get_template_part( 'elements/homepage/special/content/content.special' ); ?>
-
 </main>
 <!-- site.layout -->
-
-<!-- site.toolbar -->
-<toolbar id="site-toolbar">
-
-    <?php get_template_part( 'elements/homepage/special/toolbar/toolbar.button' ); ?>
-
-    <?php get_template_part( 'elements/homepage/special/toolbar/toolbar.menu' ); ?>
-
-</toolbar>
-<!-- END site.toolbar -->

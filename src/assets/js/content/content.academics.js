@@ -1035,7 +1035,8 @@ export var academicsFX = {
             dataType: 'json',
 
             // return items
-            url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?department=32',
+            // url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?department=32',
+            url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?filter[department]=environmental-health-and-radiological-sciences',
 
             type: 'GET',
 
@@ -1115,8 +1116,11 @@ export var academicsFX = {
 
                 });
 
+                // test degree type
+                var degreetype =
+
                 // insert HTML
-                $('#department-degree-programs').append( program );
+                $('#department-degree-programs .program-list').append( program );
 
             }
 
