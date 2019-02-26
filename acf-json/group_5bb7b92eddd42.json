@@ -281,6 +281,38 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_5c6edbe17f641",
+            "label": "Special Unit Homepage Layout",
+            "name": "special_unit_layout",
+            "type": "radio",
+            "instructions": "select a homepage layout",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "template": "Template Layout",
+                "builder": "Page Builder Layout"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -315,5 +347,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1548174577
+    "modified": 1550769194
 }

@@ -3,7 +3,7 @@
 
         <?php wp_footer(); ?>
 
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/js/library/velocity.ui.min.js"></script>
+        <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/js/library/velocity.ui.min.js"></script> -->
         <script id="__bs_script__">
 
             //<![CDATA[

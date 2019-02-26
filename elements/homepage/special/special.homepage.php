@@ -2,6 +2,7 @@
 
     $site_type  = get_field( 'site_type', 'options' );
     $site_image = get_field( 'site_background', 'options' );
+    $site_layout = get_field( 'special_unit_layout', 'options' );
 
 ?>
 
@@ -36,6 +37,34 @@
 
     </section>
     <!-- END special.billboard -->
+
+    <!-- special content -->
+    <section id="special-content" class="homepage-content">
+
+        <!-- content section -->
+        <div id="section-01" class="special-content-section">
+
+            <?php
+
+                if ( $site_layout == 'builder' ) {
+
+                    the_content();
+
+                } elseif ( $site_layout == 'template' ) {
+
+                    echo 'template layout';
+
+                }
+
+            ?>
+
+        </div>
+        <!-- END content section -->
+
+    </section>
+    <!-- END special content -->
+
+    <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
 </main>
 <!-- site.layout -->
