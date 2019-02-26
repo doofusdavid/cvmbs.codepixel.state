@@ -17,7 +17,7 @@ if ( have_rows('facts') ) :
 
 				<?php if ( get_sub_field('source') ) : ?>
 
-				<span class="fast-fact__source"><?php the_sub_field('source'); ?></span>
+				<span class="fast-fact__source">(<?php the_sub_field('source'); ?>)</span>
 
 				<?php endif; ?>
 			</div>
