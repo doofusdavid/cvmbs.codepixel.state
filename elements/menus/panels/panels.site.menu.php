@@ -30,11 +30,13 @@
 
             <?php
 
-                // cvmbs_site_menu();
-
                 if ( $site_type == 'college' ) {
 
                     get_template_part( 'elements/menus/panels/panel.global.menu' );
+
+                } else {
+
+                    cvmbs_site_menu();
 
                 }
 
@@ -49,7 +51,7 @@
 
                 //
 
-            } elseif ( $site_type == 'department' ) {
+            } elseif ( $site_type == 'department' || $site_type == 'special' ) {
 
                 echo '
                 <!-- global.menu -->
@@ -65,10 +67,6 @@
 
                 </li>
                 <!-- END global.menu -->';
-
-            } elseif ( $site_type == 'special' ) {
-
-                //
 
             }
 
@@ -118,7 +116,7 @@
         <!-- menu -->
         <nav id="menu-panel-global-menu" class="panel-content menu">
 
-            <?php get_template_part( 'elements/menus/panels/panels.global.menu' ); ?>
+            <?php get_template_part( 'elements/menus/panels/panel.global.menu' ); ?>
 
         </nav>
         <!-- END menu -->

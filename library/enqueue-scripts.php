@@ -1,26 +1,38 @@
 <?php
 
 if ( ! function_exists( 'foundationpress_asset_path' ) ) :
+
 	function foundationpress_asset_path( $filename ) {
+
 		$filename_split = explode( '.', $filename );
 		$dir            = end( $filename_split );
 		$manifest_path  = dirname( dirname( __FILE__ ) ) . '/dist/assets/' . $dir . '/rev-manifest.json';
 
 		if ( file_exists( $manifest_path ) ) {
+
 			$manifest = json_decode( file_get_contents( $manifest_path ), true );
+
 		} else {
+
 			$manifest = [];
+
 		}
 
 		if ( array_key_exists( $filename, $manifest ) ) {
+
 			return $manifest[ $filename ];
+
 		}
+
 		return $filename;
+
 	}
+
 endif;
 
 
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
+
 	function foundationpress_scripts() {
 
 		// Enqueue the main Stylesheet.
@@ -42,7 +54,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// wp_enqueue_script( 'jquery-migrate' );
 
 		// Enqueue Foundation scripts
-		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'cvmbs', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
 
 		// Enqueue Foundation scripts
 		// wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.admin.app.js' ), array( 'jquery' ), '1.0.0', true );
@@ -53,6 +65,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+
 endif;
 
 ?>

@@ -6,15 +6,17 @@
     // styles
     #site-layout.special {
 
-        position: absolute;
+        position: fixed;
 
         top: 0;
         right: 0;
         left: 0;
 
         width: 100vw;
-        height: auto;
+        // height: 100vh;
         padding: 100vh 0 0 0;
+
+        overflow: scroll;
 
         // menu open
         &.site-menu-open {
@@ -40,6 +42,7 @@
                 repeat: no-repeat;
                 size: cover;
                 position: center center;
+                attachment: fixed;
 
             }
 
@@ -77,6 +80,22 @@
                 z-index: 10;
 
                 @include font( $industry, 0.875rem, 700 );
+
+            }
+
+        }
+
+        // content
+        #special-content {
+
+            // sections
+            .special-content-section {
+
+                @include flex-v-c-h-c( false );
+
+                // height: 50vh;
+                height: auto;
+                padding: 8rem 0 8rem 0;
 
             }
 
