@@ -1,0 +1,51 @@
+.call-out {
+	padding: 8vw;
+
+	&__inner {
+		display: flex;
+		width: 100%;
+		max-width: 65em;
+		margin: 0 auto;
+		text-align: center;
+
+		@include bpoint(tablet) {
+			&:before, &:after {
+				content: '';
+				flex-shrink: 0;
+				display: block;
+				width: 8%;
+				border-top: .1875em solid $g135;
+				border-bottom: .1875em solid $g135;
+			}
+
+			&:before {
+				border-left: .1875em solid $g135;
+			}
+
+			&:after {
+				border-right: .1875em solid $g135;
+			}
+		}
+	}
+
+	&__content {
+		width: 100%;
+		padding: .25em 0;
+
+		&-wrap {
+			font-size: 1.625em;
+			font-weight: 200;
+		}
+	}
+
+	&__title {
+		margin-bottom: .375em;
+		color: $g135;
+		font-family: $klavislim;
+		font-size: 2.25em;
+		font-weight: 500;
+		letter-spacing: .05em;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+}

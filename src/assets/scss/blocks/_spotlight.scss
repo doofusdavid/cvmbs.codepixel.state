@@ -1,0 +1,99 @@
+.spotlight {
+	background: no-repeat center center / cover;
+
+	&__inner {
+		color: $sec_temp_white;
+
+		@include bpoint(tablet) {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		flex: 0 0 auto;
+		background: rgba($sec_temp_brown, .84);
+		padding: 8vw 8vw 0;
+
+		@include bpoint(tablet) {
+			width: 60%;
+			padding: 4vw 8vw 4vw 1em;
+		}
+
+		&-wrap {
+			text-align: center;
+
+			@include bpoint(tablet) {
+				text-align: inherit;
+			}
+		}
+	}
+
+	&__title {
+		color: $gold;
+		line-height: 1;
+	}
+
+	&__img {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-row-align: end;
+		align-items: end;
+		-ms-grid-column-align: center;
+		justify-items: center;
+		flex: 0 0 auto;
+		background: linear-gradient(
+			to bottom,
+			rgba($sec_temp_brown, .84) 0%,
+			rgba($sec_temp_brown, .78) 10%,
+			rgba($sec_temp_brown, .72) 20%,
+			rgba($sec_temp_brown, .66) 30%,
+			rgba($sec_temp_brown, .63) 40%,
+			rgba($sec_temp_brown, .60) 50%,
+			rgba($sec_temp_brown, .57) 60%,
+			rgba($sec_temp_brown, .54) 70%,
+			rgba($sec_temp_brown, .51) 80%,
+			rgba($sec_temp_brown, .48) 100%
+		);
+		padding: 0 8vw;
+		text-align: center;
+
+		@include bpoint(tablet) {
+			width: 40%;
+			background: linear-gradient(
+				to left,
+				rgba($sec_temp_brown, .84) 0%,
+				rgba($sec_temp_brown, .78) 10%,
+				rgba($sec_temp_brown, .72) 20%,
+				rgba($sec_temp_brown, .66) 30%,
+				rgba($sec_temp_brown, .63) 40%,
+				rgba($sec_temp_brown, .60) 50%,
+				rgba($sec_temp_brown, .57) 60%,
+				rgba($sec_temp_brown, .54) 70%,
+				rgba($sec_temp_brown, .51) 80%,
+				rgba($sec_temp_brown, .48) 100%
+			);
+			padding: 0;
+		}
+	}
+
+	&__button {
+		transition: all 220ms linear 0ms;
+		display: inline-block;
+		border: .0625em solid $gold;
+		padding: 1.375em 1.5em;
+		color: $sec_temp_white;
+		font-size: .875em;
+		letter-spacing: .1em;
+		line-height: 1.2;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			background: rgba($sec_temp_white, .1);
+			color: $sec_temp_white;
+		}
+	}
+}

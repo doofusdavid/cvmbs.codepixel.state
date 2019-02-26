@@ -1,0 +1,69 @@
+.fast-facts {
+	background: $sec_temp_white no-repeat center center / cover;
+	color: $charcoal;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5vw;
+		background: rgba($sec_temp_white, .82);
+
+		@include bpoint(tablet) {
+			padding: 8vw;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		@include bpoint(tablet) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-around;
+		}
+	}
+}
+
+.fast-fact {
+	max-width: 13rem;
+	margin: 3vw;
+	font-family: $vitesse;
+	letter-spacing: .04em;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include bpoint(tablet) {
+		width: 30%;
+		margin: 0;
+	}
+
+	&__value {
+		display: block;
+		color: $g135;
+		font-size: 3.5em;
+		letter-spacing: 0;
+		line-height: 1;
+	}
+
+	&__rate {
+		display: block;
+		color: $g135;
+		font-size: 1.5em;
+		line-height: 1;
+	}
+
+	&__desc {
+		display: block;
+		padding-top: .2em;
+		line-height: 1.2;
+	}
+
+	&__source {
+		display: block;
+		font-family: $klavislim;
+	}
+}

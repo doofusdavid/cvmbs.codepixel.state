@@ -1,0 +1,39 @@
+.single-cta {
+	background: no-repeat center center / cover;
+
+	&__inner {
+		padding: 8vw;
+		background: rgba($sec_temp_black, .68);
+		color: $sec_temp_white;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 50em;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__title {
+		color: $cvellow;
+		line-height: 1;
+	}
+
+	&__button {
+		transition: all 220ms linear 0ms;
+		display: inline-block;
+		border: .0625em solid $cvellow;
+		padding: 1.375em 1.5em;
+		color: $sec_temp_white;
+		font-size: .875em;
+		letter-spacing: .1em;
+		line-height: 1.2;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover, &:focus {
+			background: rgba($sec_temp_white, .1);
+			color: $sec_temp_white;
+		}
+	}
+}

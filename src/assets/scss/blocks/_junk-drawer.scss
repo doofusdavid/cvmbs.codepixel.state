@@ -1,0 +1,40 @@
+.junk-drawer {
+	padding: 8vw 4vw 8vw 8vw;
+
+	.bg--none + & {
+		background: $sec_temp_grey;
+	}
+
+	&__title {
+		line-height: 1;
+	}
+
+	&__list {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+
+		&-item {
+			margin-top: 1.5em;
+			padding-right: 4vw;
+			font-size: 1em;
+			line-height: 1.2;
+		}
+	}
+
+	&__link {
+		border-bottom: .0625em solid;
+		padding-bottom: .125em;
+		color: $sec_temp_link_color;
+
+		&:visited {
+			color: $sec_temp_link_visited;
+		}
+
+		&:hover, &:focus {
+			border-bottom: .125em solid;
+			padding-bottom: .0625em;
+		}
+	}
+}

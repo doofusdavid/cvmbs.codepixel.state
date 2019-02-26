@@ -1,0 +1,77 @@
+.group-bios {
+	padding: 8vw;
+
+	&__grid {
+		margin-top: calc(1em + 1vw);
+
+		@include bpoint(desktop) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&-item {
+			margin-top: calc(1em + 1vw);
+
+			@include bpoint(40em) {
+				display: grid;
+				grid-gap: 1em;
+				grid-template-rows: auto;
+				grid-template-columns: auto 1fr;
+			}
+
+			@include bpoint(desktop) {
+				width: calc(50% - 1em - 1vw);
+
+				&:nth-child(-n+2) {
+					margin-top: 0;
+				}
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__image {
+		margin-bottom: 1em;
+	}
+
+	&__heading {
+		margin-bottom: .5em;
+		color: $dark;
+		font-family: $vitesse;
+		font-size: 1em;
+		letter-spacing: 0;
+		line-height: 1.2;
+		text-transform: none;
+
+		@include bpoint(40em) {
+			font-size: 1.125em;
+		}
+	}
+
+	&__desc {
+		font-size: .875em;
+		font-weight: 400;
+
+		display: none;
+	}
+
+	&__contact {
+		font-family: $vitesse;
+		font-size: .9375em;
+		font-weight: 400;
+
+		p {
+			line-height: 1.2;
+			margin-bottom: .25em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

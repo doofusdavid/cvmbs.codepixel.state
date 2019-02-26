@@ -1,0 +1,68 @@
+.secondary-page-header {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: auto;
+	grid-template-rows: auto;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+	background: transparent no-repeat center center / cover;
+
+	&__inner {
+		-ms-grid-row: 1;
+		grid-row: 1;
+		-ms-grid-column: 1;
+		grid-column: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		font-family: $klavika;
+		font-weight: 300;
+
+		&:before {
+			content: '';
+			flex-grow: 1;
+			display: block;
+			min-height: 10rem;
+			background: linear-gradient(
+				to top,
+				rgba($dark-nite, .7) 0,
+				rgba($dark-nite, .525) 15%,
+				rgba($dark-nite, .35) 30%,
+				rgba($dark-nite, .175) 65%,
+				rgba($dark-nite, 0) 100%
+			);
+		}
+	}
+
+	&__content {
+		width: 100%;
+		padding: 2vw 8vw 4vw;
+		background: rgba($dark-nite, .7);
+		color: $rite-lite;
+
+		&-inner {
+			width: 100%;
+			max-width: 35rem;
+		}
+	}
+
+	.entry-title {
+		color: $cvellow;
+		letter-spacing: .065em;
+		line-height: 1.2;
+	}
+
+	.entry-subtitle {
+		margin-bottom: .75rem;
+		font-family: $klavislim;
+		font-size: 1.25rem;
+		letter-spacing: .075em;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		@include bpoint(40em) {
+			font-size: 2rem;
+		}
+	}
+}
