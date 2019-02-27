@@ -57,3 +57,6 @@
 
     // protocol relative urls
     // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+
+    // custom image sizes
+    add_image_size( 'x-large', 1920, 1920, false );
