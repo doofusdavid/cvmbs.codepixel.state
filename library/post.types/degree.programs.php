@@ -1,63 +1,52 @@
 <?php
+/**
+ * Register a Degree Program post type.
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function cvmbs_degree_program_init() {
+    $labels = array(
+        'name'                  => _x( 'Degree Programs', 'post type general name', 'cvmbsPress' ),
+        'menu_name'             => _x( 'Degree Programs', 'admin menu', 'cvmbsPress' ), // Default is the same as `name`.
+        'singular_name'         => _x( 'Degree Program', 'post type singular name', 'cvmbsPress' ),
+        'name_admin_bar'        => _x( 'Degree Program', 'add new on admin bar', 'cvmbsPress' ), // Default is the same as `singular_name`.
+        'add_new'               => _x( 'Add New', 'degree program', 'cvmbsPress' ),
+        'add_new_item'          => __( 'Add New Degree Program', 'cvmbsPress' ),
+        'edit_item'             => __( 'Edit Degree Program', 'cvmbsPress' ),
+        'new_item'              => __( 'New Degree Program', 'cvmbsPress' ),
+        'view_item'             => __( 'View Degree Program', 'cvmbsPress' ),
+        'view_items'            => __( 'View Degree Programs', 'cvmbsPress' ),
+        'search_items'          => __( 'Search Degree Programs', 'cvmbsPress' ),
+        'all_items'             => __( 'All Degree Programs', 'cvmbsPress' ),
+        'archives'              => __( 'Degree Program Archives', 'cvmbsPress' ),
+        'attributes'            => __( 'Degree Program Attributes', 'cvmbsPress' ),
+        'insert_into_item'      => __( 'Insert into degree program', 'cvmbsPress' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this degree program', 'cvmbsPress' ),
+        'not_found'             => __( 'No degree programs found.', 'cvmbsPress' ),
+        'not_found_in_trash'    => __( 'No degree programs found in Trash.', 'cvmbsPress' ),
+        'parent_item_colon'     => __( 'Parent Degree Programs:', 'cvmbsPress' )
+    );
 
-    // call the custom post type function on WP init
-	add_action( 'init', 'degree_program_post_type' );
+    $args = array(
+        'labels'              => $labels,
+        'public'              =>  true,
+        'exclude_from_search' =>  false, // Default: value of the opposite of public argument
+        'publicly_queryable'  =>  true, // Default: value of public argument
+        'show_ui'             =>  true, // Default: value of public argument
+        'show_in_menu'        =>  true, // Default: value of show_ui argument
+        'show_in_admin_bar'   =>  true, // Default: value of the show_in_menu argument
+        'show_in_nav_menus'   =>  true, // Default: value of public argument
+        'menu_position'       =>  null, // Default: null - defaults to below Comments
+        'menu_icon'           => 'dashicons-welcome-learn-more',
+        'capability_type'     => 'post', // Default: "post"
+        'hierarchical'        =>  true, // Default: false
+        'supports'            =>  array( 'title', 'thumbnail', 'page-attributes' ),
+        'has_archive'         =>  true, // Default: false
+        'rewrite'             =>  array( 'slug' => 'degree-programs' ), // Default: true and use $post_type as slug
+        'can_export'          =>  true, // Default: true
+        'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').
+    );
 
-    // define custom post type function and properties
-	function degree_program_post_type() {
-
-	    // register post type + pass properties array to function
-		register_post_type( 'degree-program',
-
-		    // define post type options and properties
-			array(
-
-				'labels' => array(
-
-					'name' 				=> __( 'Degree Programs', 'cvmbsPress' ),
-					'singular_name' 	=> __( 'Degree Program', 'cvmbsPress' ),
-					'all_items' 		=> __( 'All Degree Programs', 'cvmbsPress' ),
-					'add_new' 			=> __( 'Add Degree Program', 'cvmbsPress' ),
-					'add_new_item' 		=> __( 'Add New Degree Program', 'cvmbsPress' ),
-					'edit' 				=> __( 'Edit', 'cvmbsPress' ),
-					'edit_item' 		=> __( 'Edit Degree Program', 'cvmbsPress' ),
-					'new_item' 			=> __( 'New Degree Program', 'cvmbsPress' ),
-					'search_items' 		=> __( 'Search Degree Programs', 'cvmbsPress' ),
-					'not_found' 		=> __( 'No degree programs here...probably should do something about that.', 'cvmbsPress' ),
-					'parent_item_colon' => ''
-
-				),
-
-				'public'				=> true,
-				'publicly_queryable' 	=> true,
-				'exclude_from_search'   => true,
-				'show_ui' 				=> true,
-				'show_in_nav_menus' 	=> false,
-				'show_in_admin_bar' 	=> false,
-				'show_in_rest'          => true,
-				'query_var' 			=> true,
-				'can_export' 			=> true,
-				'rewrite' 				=> array( 'slug' => 'degree-programs', 'with_front' => false ),
-				'has_archive' 			=> true,
-				'capability_type' 		=> 'post',
-				'hierarchical' 			=> false,
-				'menu_position' 		=> 4,
-				'menu_icon' 			=> 'dashicons-welcome-learn-more',
-				'supports' 				=> array( 'title', 'thumbnail' ),
-				'taxonomies'			=> array(
-
-												// 'theme_categories',
-												// 'category',
-												'career_interests',
-												'degree_types',
-												'department'
-
-											)
-
-			)
-
-		);
-
-	}
-
-?>
+    register_post_type( 'degree-program', $args );
+}
+add_action( 'init', 'cvmbs_degree_program_init' );

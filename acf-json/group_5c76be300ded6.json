@@ -1,0 +1,653 @@
+{
+    "key": "group_5c76be300ded6",
+    "title": "Degree Programs",
+    "fields": [
+        {
+            "key": "field_5c7d693771daf",
+            "label": "Program Introduction",
+            "name": "program_intro",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5c7d8ef297ba9",
+                    "label": "Description",
+                    "name": "desc",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_5c7d8f0697baa",
+                    "label": "Program Overview",
+                    "name": "overview",
+                    "type": "url",
+                    "instructions": "URL",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c7d8f1e97bab",
+                    "label": "Curriculum",
+                    "name": "curriculum",
+                    "type": "url",
+                    "instructions": "URL",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c77011e303bf",
+            "label": "Program Blocks",
+            "name": "program_blocks",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5c77026dec019": {
+                    "key": "5c77026dec019",
+                    "name": "program_facts",
+                    "label": "Program Facts",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c77029b303c0",
+                            "label": "Facts",
+                            "name": "facts",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Fact",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c7702be303c1",
+                                    "label": "Fact",
+                                    "name": "fact",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5c7702d1303c2",
+                                    "label": "Description",
+                                    "name": "desc",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": "wpautop"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c7704474f576": {
+                    "key": "layout_5c7704474f576",
+                    "name": "concentrations",
+                    "label": "Concentrations",
+                    "display": "row",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c7704524f577": {
+                    "key": "layout_5c7704524f577",
+                    "name": "career_opportunities",
+                    "label": "Career Opportunities",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7704624f578",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5c7704944f579",
+                            "label": "Careers",
+                            "name": "careers",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Career",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c7704a64f57a",
+                                    "label": "Career",
+                                    "name": "career",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c7705304f57b": {
+                    "key": "layout_5c7705304f57b",
+                    "name": "potential_employers",
+                    "label": "Potential Employers",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7705404f57c",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5c7705564f57d",
+                            "label": "Employers",
+                            "name": "employers",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Employer",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c7705654f57e",
+                                    "label": "Employer",
+                                    "name": "employer",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c7705ee4f57f": {
+                    "key": "layout_5c7705ee4f57f",
+                    "name": "student_orgs",
+                    "label": "Student Organizations",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c77060c4f580",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c77061a4f581",
+                            "label": "Organizations",
+                            "name": "orgs",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Organization",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c7706344f582",
+                                    "label": "Organization",
+                                    "name": "org",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c7706b24f583": {
+                    "key": "layout_5c7706b24f583",
+                    "name": "minor",
+                    "label": "Minor",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7706d04f585",
+                            "label": "Image",
+                            "name": "img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5c7706b94f584",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5c77070b4f586",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c77078f816fd": {
+                    "key": "layout_5c77078f816fd",
+                    "name": "similar_majors",
+                    "label": "Similar Majors",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c7709fc816fe",
+                            "label": "Majors",
+                            "name": "majors",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "row",
+                            "button_label": "Add Major",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c770a11816ff",
+                                    "label": "Major",
+                                    "name": "major",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c770fc981700": {
+                    "key": "layout_5c770fc981700",
+                    "name": "research_opportunities",
+                    "label": "Research Opportunities",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c770fff81702",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5c770fd581701",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5c771315603ea",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5c77129d81703": {
+                    "key": "layout_5c77129d81703",
+                    "name": "program_contacts",
+                    "label": "Program Contacts",
+                    "display": "row",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Block",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5c7d701dac97d",
+            "label": "Tuition & Financial Aid",
+            "name": "tuition_financial_aid",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5c7d8e49553e9",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Tuition & Financial Aid",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c7d7031ac97e",
+                    "label": "Description",
+                    "name": "desc",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_5c7d703fac97f",
+                    "label": "Call to Action",
+                    "name": "call_to_action",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "degree-program"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "content for the Degree Programs custom post type",
+    "modified": 1551733060
+}
