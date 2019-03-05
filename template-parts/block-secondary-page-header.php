@@ -1,5 +1,5 @@
 <?php
-$header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'full' ) . ');"' : '';
+$header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'x-large' ) . ');"' : '';
 
 if ( have_rows('page_header') ) :
 	while ( have_rows('page_header') ) : the_row();

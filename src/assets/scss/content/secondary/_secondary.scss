@@ -1,7 +1,3 @@
-html {
-	width: 100% !important;
-}
-
 .page-template-secondary-landing {
 	background: $sec_temp_off_white;
 	color: $steel;
@@ -14,5 +10,5 @@ html {
 
 // stylesheet :: secondary layout stylesheet compiler
 
-    // content
-    @import 'secondary.content';
+	// content
+	@import 'secondary.content';

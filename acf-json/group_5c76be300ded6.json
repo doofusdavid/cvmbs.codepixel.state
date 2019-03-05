@@ -384,7 +384,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
+                            "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -394,6 +394,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5c7ebb58b1247",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_5c7706b94f584",
@@ -488,7 +507,7 @@
                         {
                             "key": "field_5c770fff81702",
                             "label": "Image",
-                            "name": "image",
+                            "name": "img",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -498,7 +517,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
+                            "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -649,5 +668,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1551733060
+    "modified": 1551810635
 }

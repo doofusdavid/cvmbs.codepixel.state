@@ -163,7 +163,7 @@
         academicsFX.init();
 
         // department degree programs [ BUILD ONLY ]
-        academicsFX.department();
+        // academicsFX.department();
 
         // alumni load
         alumniUI.init();
