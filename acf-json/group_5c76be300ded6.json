@@ -649,6 +649,57 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_5c8199fc85b8c",
+            "label": "Testing Stuff",
+            "name": "testing_stuff",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5c819d9d3ef62",
+            "label": "",
+            "name": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c8199fc85b8c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -668,5 +719,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1551810635
+    "modified": 1551998968
 }

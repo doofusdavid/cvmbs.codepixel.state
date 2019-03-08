@@ -1,10 +1,10 @@
 // stylesheet :: content stylesheet compiler
 
-    // globals
-    @import 'programs.globals';
+    // archive
+    @import 'programs.archive';
 
     // single
     @import 'programs.single';
-
-    // archive
-    @import 'programs.archive';
+    @import 'programs.header';
+    @import 'programs.intro';
+    @import 'programs.facts';

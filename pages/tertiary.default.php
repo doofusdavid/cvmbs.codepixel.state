@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Secondary Landing Page
+ * Template Name: Tertiary Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */

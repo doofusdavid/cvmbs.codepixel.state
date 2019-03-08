@@ -35,11 +35,9 @@
                     @include fill( $dark-nite, 0.245 );
 
                     @include gradient(
-
                         90deg,
                         red, 1.000, 0%,
                         $dark, 0.000, 100%
-
                     );
 
                 }
@@ -104,6 +102,7 @@
         }
 
     }
+
     .degree-program-container {
 
         position: relative;
@@ -112,7 +111,7 @@
         right: 0;
         left: 0;
 
-        width: calc( 100vw + 2rem );
+        width: 100%;
 
         -webkit-filter: blur( 0px );
                 filter: blur( 0px );
@@ -129,111 +128,25 @@
 
         }
 
-        // header
-        .degree-program-header {
 
-            position: relative;
-
-            @include flex-v-b-h-s( false );
-
-            width: calc( 100vw + 2rem );
-            height: 28rem;
-            margin: 0 4rem 0 0;
-            padding: 4rem calc( 10vw + 4rem ) 2rem 10vw;
-
-            @include fill( white, 0.965 );
-
-            background: {
-
-                size: cover;
-                position: center center;
-                repeat: no-repeat;
-
-            }
-
-            // overlay
-            &:after {
-
-                content: '';
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                z-index: 10;
-
-                @include fill( $cvnavy, 0.565 );
-
-            }
-
-            // title
-            .program-title {
-
-                position: relative;
-
-                z-index: 20;
-
-                margin: 0 0 0 0;
-                padding: 0 0 0 0;
-
-                @include font( $klavislim, 3rem, 400 );
-
-                line-height: 4rem;
-
-                letter-spacing: 0.285em;
-
-                @include color( $cvellow, 0.000 );
-
-            }
-
-            // navigation
-            .program-navigation {
-
-                position: relative;
-
-                z-index: 20;
-
-                @include font( $klavislim, 1rem, 400 );
-
-                line-height: 1rem;
-
-                letter-spacing: 0.285em;
-
-                @include text( $up );
-
-                @include color( white, 0.000 );
-
-            }
-
-        }
 
         // content
-        .degree-program-content {
+        // .degree-program-content {
 
-            width: calc( 100vw + 2rem );
-            height: auto;
-            min-height: calc( 100vh - 28rem );
-            // margin: 0 4rem 0 0;
+        //     width: 100%;
+        //     height: auto;
+        //     min-height: calc( 100vh - 28rem );
+        //     // margin: 0 4rem 0 0;
 
-            @include color( $app10, 0.000 );
+        //     @include color( $app10, 0.000 );
 
-        }
+        // }
 
         // content
         .program-content {
 
             width: 100%;
             padding: 8rem 8rem 8rem 8rem;
-
-            // row
-            &.program-row {
-
-                // padding: 8rem 0 8rem 0;
-
-            }
 
             // lite
             &.lite {
@@ -478,142 +391,7 @@
 
             }
 
-            // facts
-            &.facts {
 
-                position: relative;
-
-                @include flex-h-j-v-s( false );
-
-                padding: 10rem 10vw 10rem 10vw;
-
-                @include fill( $cvnavy, 0.00 );
-
-                // after
-                &:after {
-
-                    content: '';
-
-                    position: absolute;
-
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-
-                    z-index: 0;
-
-                    background: {
-
-                        image: url(../img/patterns/pattern.horizontal.svg);
-                        repeat: no-repeat;
-                        size: 120%;
-                        position: 0 -8rem;
-
-                    }
-
-                    opacity: 0.275;
-
-                    mix-blend-mode: overlay;
-
-                }
-
-                // title
-                .facts-title {
-
-                    position: relative;
-
-                    z-index: 10;
-
-                    @include flex-h-e-v-t( true );
-
-                    width: 40%;
-                    margin: 0 0 0 0;
-                    padding: 0 3rem 0 0;
-
-                    border-right: 1px solid transparentize( white, 0.465 );
-
-                    // title
-                    .title {
-
-                        @include font( $klavislim, 3rem, 400 );
-
-                        line-height: 2.5rem;
-
-                        letter-spacing: 0.075em;
-
-                        @include color( $blue, 0.000 );
-
-                    }
-
-                }
-
-                // title
-                .facts-content {
-
-                    position: relative;
-
-                    z-index: 10;
-
-                    @include flex-h-s-v-t( true );
-
-                    width: 60%;
-                    margin: 0 0 0 0;
-                    padding: 0 0 0 3rem;
-
-                    // list
-                    .list {
-
-                        margin: 0 0 0 0;
-
-                        list-style: none;
-
-                        // item
-                        li {
-
-                            margin: 0 0 2rem 0;
-
-                            @include font( $industry, 0.875rem, 500 );
-
-                            line-height: 1.25rem;
-
-                            letter-spacing: 0.035em;
-
-                            @include color( white, 0.000 );
-
-                            // last child
-                            &:last-child {
-
-                                margin-bottom: 0;
-
-                            }
-
-                            // highlight
-                            .highlight {
-
-                                @include flex-h-s-v-c( false );
-
-                                margin: 0 0 0.5rem 0;
-
-                                @include font( $klavislim, 1.25rem, 400 );
-
-                                line-height: 1rem;
-
-                                letter-spacing: 0.075em;
-
-                                @include text( $up );
-
-                                @include color( $cvellow, 0.000 );
-
-                            }
-
-                        }
-
-                    }
-
-                }
-
-            }
 
             // documents
             &.documents {
@@ -801,11 +579,11 @@
                             transition: $all220;
 
                             // hover state
-                            &:hover {
+                            // &:hover {
 
-                                // @include fill( $g140, 0.000 );
+                            //     // @include fill( $g140, 0.000 );
 
-                            }
+                            // }
 
                             // after
                             &:after {

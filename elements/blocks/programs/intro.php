@@ -2,22 +2,13 @@
 if ( have_rows('program_intro') ) :
 	while ( have_rows('program_intro') ) : the_row();
 ?>
-<!-- description -->
-<div class="program-content program-row description lite">
-	<!-- description -->
-	<div class="description-text">
-		<?php the_sub_field('desc'); ?>
-	</div>
-	<!-- END description -->
 
-	<!-- sidebar -->
-	<aside class="program-sidebar">
+<div class="degree-program-intro">
+	<div class="degree-program-intro__sidebar">
 		<?php if ( $deg_types = get_the_terms( $post->ID, 'degree_type' ) ) : ?>
-			<!-- title -->
 			<span class="degree-type-label"><?php _e( 'Degree Type', 'cvmbsPress' ); ?></span>
 			<!-- END title -->
 
-			<!-- type -->
 			<span class="degree-type-text">
 				<?php echo esc_attr( $deg_types[0]->name ); ?>
 			</span>
@@ -35,10 +26,15 @@ if ( have_rows('program_intro') ) :
 			<?php _e( 'Curriculum', 'cvmbsPress' ); ?>
 		</a>
 		<?php endif; ?>
-	</aside>
+	</div>
 	<!-- END sidebar -->
+
+	<div class="degree-program-intro__desc">
+		<?php the_sub_field('desc'); ?>
+	</div>
+	<!-- END description -->
 </div>
-<!-- END description -->
+
 <?php
 	endwhile;
 endif;

@@ -34,10 +34,12 @@ $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field(
 
 				<!-- contact box -->
 				<span class="contact-box">
-					<?php echo $researcher_name; ?><br/>
-					<?php echo $researcher_title; ?><br/>
-					<!-- <img src="<?php echo $researcher_image[ 'url' ]; ?>" width="256" alt="foobar"/><br/> -->
-					<?php echo $researcher_email; ?>
+					<?php // echo $researcher_name; ?>
+					<!-- <br/> -->
+					<?php // echo $researcher_title; ?>
+					<!-- <br/> -->
+					<!-- <img src="<?php // echo $researcher_image[ 'url' ]; ?>" width="256" alt="foobar"/><br/> -->
+					<?php // echo $researcher_email; ?>
 				</span>
 				<!-- END contact box -->
 
