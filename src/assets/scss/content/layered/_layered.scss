@@ -1,0 +1,10 @@
+.page-template-secondary-landing,
+.page-template-layered-page {
+	background: $sec_temp_off_white;
+	color: $steel;
+	font-size: 1rem;
+
+	.bg--none + .bg--none {
+		padding-top: calc(8vw - 5em);
+	}
+}

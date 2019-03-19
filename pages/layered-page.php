@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Secondary Landing Page
+ * Template Name: Layered Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 get_header();
 
-$block_path = 'elements/blocks/secondary/';
+$block_path = 'elements/blocks/layered/';
 ?>
 
 <div id="primary" class="content-area">
@@ -84,6 +84,6 @@ $block_path = 'elements/blocks/secondary/';
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php // get_footer(); ?>
+<?php get_footer(); ?>
 
 <?php get_template_part( 'elements/layout/layout.footer' ); ?>

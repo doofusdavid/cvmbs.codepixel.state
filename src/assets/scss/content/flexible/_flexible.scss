@@ -1,0 +1,34 @@
+.page-template-tertiary-default,
+.page-template-flexible-page {
+	display: flex;
+	flex-direction: column;
+	background: $sec_temp_off_white;
+	color: $steel;
+	font-size: 1rem;
+
+	.content-area {
+		flex-grow: 1;
+	}
+
+	.template-block {
+		padding: 0 8vw;
+
+		&:first-child() {
+			padding-top: 6.25em;
+		}
+
+		&:last-child() {
+			padding-bottom: 1.25em;
+		}
+
+		&__inner--fixed {
+			max-width: 75rem;
+			margin: 0 auto;
+		}
+	}
+
+	.template-title {
+		margin-bottom: 1.6rem;
+		line-height: 1;
+	}
+}

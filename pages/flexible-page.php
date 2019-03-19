@@ -1,13 +1,13 @@
 <?php
 /**
- * Template Name: Tertiary Page
+ * Template Name: Flexible Content
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 get_header();
 
-$block_path = 'elements/blocks/tertiary/';
+$block_path = 'elements/blocks/flexible/';
 $title_width = get_field('page_title_width') ? '--full' : '--fixed';
 ?>
 

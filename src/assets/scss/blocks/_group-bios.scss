@@ -2,7 +2,13 @@
 	padding: 8vw;
 
 	&__grid {
-		margin-top: calc(1em + 1vw);
+		&:not(:first-child) {
+			margin-top: 1.5em;
+
+			@include bpoint(desktop) {
+				margin-top:	2em;
+			}
+		}
 
 		@include bpoint(desktop) {
 			display: flex;
@@ -12,7 +18,7 @@
 		}
 
 		&-item {
-			margin-top: calc(1em + 1vw);
+			margin: 1.5em 0 1em;
 
 			@include bpoint(40em) {
 				display: grid;
@@ -22,7 +28,8 @@
 			}
 
 			@include bpoint(desktop) {
-				width: calc(50% - 1em - 1vw);
+				width: calc(50% - 1em);
+				margin-top: 2em;
 
 				&:nth-child(-n+2) {
 					margin-top: 0;
@@ -36,15 +43,16 @@
 	}
 
 	&__image {
+		max-width: 150px;
 		margin-bottom: 1em;
 	}
 
-	&__heading {
+	&__name {
 		margin-bottom: .5em;
 		color: $dark;
 		font-family: $vitesse;
 		font-size: 1em;
-		letter-spacing: 0;
+		font-weight: 400;
 		line-height: 1.2;
 		text-transform: none;
 
@@ -57,13 +65,19 @@
 		font-size: .875em;
 		font-weight: 400;
 
-		display: none;
+		.group-bios & {
+			display: none;
+		}
 	}
 
 	&__contact {
 		font-family: $vitesse;
 		font-size: .9375em;
 		font-weight: 400;
+
+		&-detail {
+			font-weight: 700;
+		}
 
 		p {
 			line-height: 1.2;

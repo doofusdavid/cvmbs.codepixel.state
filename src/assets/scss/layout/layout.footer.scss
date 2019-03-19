@@ -22,7 +22,7 @@
 
         @include flex-h-j-v-t( false );
 
-        width: $footer_width;
+        // width: $footer_width;
         min-height: $footer_height;
         margin: 0;
         padding: $footer_padding;
@@ -309,7 +309,7 @@
 
             @include flex-h-j-v-c( false );
 
-            width: $footer_width;
+            // width: $footer_width;
             height: 5rem;
             margin: 0;
             padding: 0 5rem 0 5rem;

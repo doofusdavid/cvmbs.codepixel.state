@@ -1,0 +1,45 @@
+%floated-image {
+	max-width: 100%;
+	margin-bottom: 1em;
+
+	@include bpoint(desktop) {
+		max-width: calc(50% - 1em);
+	}
+}
+
+.floated-image {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	&--left {
+		@extend %floated-image;
+
+		@include bpoint(desktop) {
+			float: left;
+			margin-right: 1em;
+		}
+	}
+
+	&--right {
+		@extend %floated-image;
+
+		@include bpoint(desktop) {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+
+	&__caption {
+		padding: .5rem .5rem 0;
+		font-size: .875em;
+		font-style: italic;
+		text-align: center;
+	}
+}

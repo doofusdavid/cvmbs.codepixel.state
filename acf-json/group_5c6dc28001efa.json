@@ -1,6 +1,6 @@
 {
     "key": "group_5c6dc28001efa",
-    "title": "Secondary Landing Page",
+    "title": "Layered Page",
     "fields": [
         {
             "key": "field_5c6dc2c04b343",
@@ -1321,6 +1321,13 @@
             {
                 "param": "page_template",
                 "operator": "==",
+                "value": "pages\/layered-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
                 "value": "pages\/secondary.landing.php"
             }
         ]
@@ -1335,5 +1342,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1550789837
+    "modified": 1553008091
 }
