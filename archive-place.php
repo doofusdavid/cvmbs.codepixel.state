@@ -26,18 +26,42 @@
 			</h2>
 	        <!-- END title -->
 
+			<!-- toolbar -->
+			<div id="places-toolbar">
+
+				<span>
+
+					filter places
+
+				</span>
+
+			</div>
+			<!-- END toolbar -->
+
 			<?php
 
 				while ( have_posts() ) : the_post();
 
 				$place_name  = get_the_title();
                 $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-                $place_link  = get_the_permalink();
+
+				$place_link_status = get_field( 'place_link' );
+
+                if ( $place_link_status ) {
+
+                    $place_link_url = get_field( 'place_website' );
+                    $place_link     = $place_link_url[ 'url' ];
+
+                } else {
+
+                    $place_link  = get_the_permalink();
+
+                }
 
 			?>
 
 			<!-- card -->
-			<a class="place-card" href="<?php the_permalink(); ?>">
+			<a class="place-card" href="<?php echo $place_link; ?>">
 
 				<!-- artwork -->
                 <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
