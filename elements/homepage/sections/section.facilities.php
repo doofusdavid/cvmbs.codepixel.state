@@ -3,7 +3,8 @@
     $places_query = array(
 
         'post_type' => 'place',
-        'orderby'   => 'rand',
+        // 'orderby'   => 'rand',
+        'posts_per_page' => 4
 
     );
 
@@ -58,7 +59,19 @@
 
                 $place_name  = get_the_title();
                 $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-                $place_link  = get_the_permalink();
+
+                $place_link_status = get_field( 'place_link' );
+
+                if ( $place_link_status ) {
+
+                    $place_link_url = get_field( 'place_website' );
+                    $place_link     = $place_link_url[ 'url' ];
+
+                } else {
+
+                    $place_link  = get_the_permalink();
+
+                }
 
             ?>
 
@@ -93,7 +106,7 @@
                     <!-- END title -->
 
                     <!-- link -->
-                    <a href="<?php the_permalink(); ?>" class="place-link">
+                    <a href="<?php echo $place_link; ?>" class="place-link">
 
                         view facility
 
