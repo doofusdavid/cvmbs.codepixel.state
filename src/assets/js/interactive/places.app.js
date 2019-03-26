@@ -44,14 +44,23 @@ export var placesUI = {
 
         );
 
-        placesUI.filter( views );
+        // test for page template
+        if ( $('body').is( '.post-type-archive-place' ) ) {
+
+            placesUI.filter( views );
+
+        } else {
+
+            //
+
+        }
 
     },
 
     // event listener
     filter: function( views ) {
 
-        //
+        // do stuff
 
     }
 
