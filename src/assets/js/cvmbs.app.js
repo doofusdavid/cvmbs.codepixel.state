@@ -8,6 +8,7 @@
     // import whatInput from 'what-input';
     import { menusFX } from './components/menus.ui';
     import { scrollUI } from './interactive/scroll.navigate';
+    import { placesUI } from './interactive/places.app';
     import { slides } from './interactive/billboard.slides';
     import { sections } from './components/load.section';
     import { academicsUI, academicsFX } from './content/content.academics';
@@ -150,8 +151,8 @@
         // menus
         menusFX.init();
 
-        // homepage scroll
-        // scrollUI.init();
+        // places
+        placesUI.init();
 
         // section load
         sections.init();
