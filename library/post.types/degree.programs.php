@@ -41,12 +41,12 @@ function cvmbs_degree_program_init() {
         'capability_type'     => 'post', // Default: "post"
         'hierarchical'        =>  true, // Default: false
         'supports'            =>  array( 'title', 'thumbnail', 'page-attributes' ),
-        'has_archive'         =>  true, // Default: false
+        'has_archive'         =>  false, // true, // Default: false
         'rewrite'             =>  array( 'slug' => 'degree-programs' ), // Default: true and use $post_type as slug
         'can_export'          =>  true, // Default: true
         'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').
     );
 
-    register_post_type( 'degree-program', $args );
+    register_post_type( 'degree_program', $args );
 }
 add_action( 'init', 'cvmbs_degree_program_init' );

@@ -1,9 +1,5 @@
-<?php
-$block_width = get_sub_field('block_width') ? '--full' : '--fixed';
-?>
-
-<div class="template-block">
-	<div class="template-block__inner<?php echo $block_width; ?>">
+<div class="template-block flexible-quote">
+	<div class="template-block__inner">
 
 		<blockquote class="page-quote__wrap">
 			<div class="page-quote__icon--open" aria-hidden="true">
@@ -29,5 +25,5 @@ $block_width = get_sub_field('block_width') ? '--full' : '--fixed';
 			</div><!-- .page-quote__attribution -->
 		</blockquote><!-- .page-quote__wrap -->
 
-	</div><!--. template-block__inner<?php echo $block_width; ?> -->
+	</div><!--. template-block__inner -->
 </div><!--. template-block -->

@@ -656,7 +656,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "degree-program"
+                "value": "degree_program"
             }
         ]
     ],
@@ -668,5 +668,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1552088241
+    "modified": 1553720179
 }

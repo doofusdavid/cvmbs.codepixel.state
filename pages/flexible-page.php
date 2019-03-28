@@ -8,7 +8,6 @@
 get_header();
 
 $block_path = 'elements/blocks/flexible/';
-$title_width = get_field('page_title_width') ? '--full' : '--fixed';
 ?>
 
 <div id="primary" class="content-area">
@@ -18,81 +17,61 @@ $title_width = get_field('page_title_width') ? '--full' : '--fixed';
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<div class="template-block">
-				<div class="template-block__inner<?php echo $title_width; ?>">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-				</div><!--. template-block__inner<?php echo $title_width; ?> -->
-			</div><!--. template-block -->
+			<div class="flexible-page-header">
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			</div><!-- .flexible-page-header -->
 
-			<?php
-			get_template_part( $block_path . 'page-header' );
+			<div class="flexible-page-content">
 
-			if ( have_rows('page_blocks') ) :
+				<?php
+				if ( have_rows('page_blocks') ) :
 
-				while ( have_rows('page_blocks') ) : the_row();
+					while ( have_rows('page_blocks') ) : the_row();
 
-					if ( get_row_layout() == 'text_editor' ) :
+						if ( get_row_layout() == 'text_editor' ) :
 
-						get_template_part( $block_path . 'text-editor' );
+							get_template_part( $block_path . 'text-editor' );
 
-					elseif ( get_row_layout() == 'contact_group' ) :
+						elseif ( get_row_layout() == 'contact_group' ) :
 
-						get_template_part( $block_path . 'contact-group' );
+							get_template_part( $block_path . 'contact-group' );
 
-					elseif ( get_row_layout() == 'content_area_with_image') :
+						elseif ( get_row_layout() == 'content_area_with_image') :
 
-						get_template_part( $block_path . 'floated-image' );
+							get_template_part( $block_path . 'floated-image' );
 
-			// 		elseif ( get_row_layout() == 'dual_ctas' ) :
+						elseif ( get_row_layout() == 'quotation' ) :
 
-			// 			get_template_part( $block_path . 'dual-ctas' );
+							get_template_part( $block_path . 'quotation' );
 
-			// 		elseif ( get_row_layout() == 'fast_facts' ) :
+						elseif ( get_row_layout() == 'ctas_with_image' ) :
 
-			// 			get_template_part( $block_path . 'fast-facts' );
+							get_template_part( $block_path . 'ctas-with-image' );
 
-			// 		elseif ( get_row_layout() == 'group_bios' ) :
+						elseif ( get_row_layout() == 'ctas_without_image' ) :
 
-			// 			get_template_part( $block_path . 'group-bios' );
+							get_template_part( $block_path . 'ctas-without-image' );
 
-			// 		elseif ( get_row_layout() == 'highlight_group' ) :
+						elseif ( get_row_layout() == 'video' ) :
 
-			// 			get_template_part( $block_path . 'highlight-group' );
+							get_template_part( $block_path . 'video' );
 
-			// 		elseif ( get_row_layout() == 'junk_drawer' ) :
+						elseif ( get_row_layout() == 'accordion_group' ) :
 
-			// 			get_template_part( $block_path . 'junk-drawer' );
+							get_template_part( $block_path . 'accordion-group' );
 
-			// 		elseif ( get_row_layout() == 'launch_pads' ) :
+						else:
 
-			// 			get_template_part( $block_path . 'launch-pads' );
+							// no blocks found
 
-					elseif ( get_row_layout() == 'quotation' ) :
+						endif;
 
-						get_template_part( $block_path . 'quotation' );
+					endwhile;
 
-			// 		elseif ( get_row_layout() == 'single_cta' ) :
+				endif;
+				?>
 
-			// 			get_template_part( $block_path . 'single-cta' );
-
-			// 		elseif ( get_row_layout() == 'source_stories' ) :
-
-			// 			get_template_part( $block_path . 'source-stories' );
-
-			// 		elseif ( get_row_layout() == 'spotlight' ) :
-
-			// 			get_template_part( $block_path . 'spotlight' );
-
-					else:
-
-						// no blocks found
-
-					endif;
-
-				endwhile;
-
-			endif;
-			?>
+			</div><!-- .flexible-page-content -->
 
 		</article><!-- #post-<?php the_ID(); ?> -->
 

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Function_Reference/register_taxonomy
  */
-function cvmbs_degree_type_taxonomies() {
+function cvmbs_degree_type_taxonomy() {
 	$labels = array(
 		'name'               => _x( 'Degree Types', 'taxonomy general name', 'cvmbsPress' ),
 		'singular_name'      => _x( 'Degree Type', 'taxonomy singular name', 'cvmbsPress' ),
@@ -30,9 +30,9 @@ function cvmbs_degree_type_taxonomies() {
 	);
 
 	$post_types = array(
-		'degree-program'
+		'degree_program'
 	);
 
 	register_taxonomy( 'degree_type', $post_types, $args );
 }
-add_action( 'init', 'cvmbs_degree_type_taxonomies', 0 );
+add_action( 'init', 'cvmbs_degree_type_taxonomy', 0 );

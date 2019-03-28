@@ -69,6 +69,14 @@ $block_path = 'elements/blocks/layered/';
 
 						get_template_part( $block_path . 'spotlight' );
 
+					elseif ( get_row_layout() == 'video' ) :
+
+						get_template_part( $block_path . 'video' );
+
+					elseif ( get_row_layout() == 'general_content' ) :
+
+						get_template_part( $block_path . 'general-content' );
+
 					else:
 
 						// no blocks found

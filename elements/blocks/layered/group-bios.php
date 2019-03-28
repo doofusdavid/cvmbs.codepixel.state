@@ -1,5 +1,5 @@
 <section class="group-bios">
-	<h2 class="group-bios__title"><?php the_sub_field('heading'); ?></h2>
+	<h2 class="group-bios__heading"><?php the_sub_field('heading'); ?></h2>
 	<div class="group-bios__grid">
 
 		<div class="group-bios__grid-item">

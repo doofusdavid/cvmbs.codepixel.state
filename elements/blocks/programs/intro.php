@@ -31,6 +31,7 @@ if ( have_rows('program_intro') ) :
 
 	<div class="degree-program-intro__desc">
 		<?php the_sub_field('desc'); ?>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non dapibus lacus. Aenean sodales, mauris nec ornare eleifend, eros arcu molestie felis, id ornare est erat sed velit. Quisque hendrerit vitae justo a tristique. Nullam purus ipsum, venenatis ultricies dictum ac, lacinia eget dolor. Curabitur et rhoncus augue.</p>
 	</div>
 	<!-- END description -->
 </div>
