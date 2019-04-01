@@ -33,62 +33,55 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 			</div><!-- .degree-program-header__inner -->
 		</header><!-- .degree-program-header -->
 
+		<?php get_template_part( $block_path . 'intro' ); ?>
+
 		<?php
-				get_template_part( $block_path . 'intro' );
+		$children = get_children( array(
+			'post_parent' => $post->ID,
+			'post_status' => 'publish',
+			'orderby'     => 'title',
+			'order'       => 'ASC'
+		) );
 
-				// get_template_part( $block_path . 'children' );
+		if ( $children ) :
+		?>
 
-				if ( have_rows('program_blocks') ) :
+		<div style="background:#a1a1a1; padding:6vw 8vw;">
+			<?php foreach ( $children as $child ) : ?>
 
-					while ( have_rows('program_blocks') ) : the_row();
+			<div class="program-children" style="padding:2vw 0;">
+				<h2 style="line-height:1"><?php echo esc_attr( $child->post_title ); ?></h2>
 
-						if ( get_row_layout() == 'program_facts' ) :
+				<?php
+				$grandchildren = get_children( array(
+					'post_parent' => $child->ID,
+					'post_status' => 'publish',
+					'orderby'     => 'title',
+					'order'       => 'ASC'
+				) );
 
-							get_template_part( $block_path . 'facts' );
+				if ( $grandchildren ) :
+				?>
 
-						elseif ( get_row_layout() == 'concentrations') :
+				<ul>
+					<?php foreach ( $grandchildren as $grandchild ) : ?>
+					<li>
+						<?php echo esc_attr( $grandchild->post_title ); ?>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+				<?php endif; ?>
 
-							get_template_part( $block_path . 'concentrations' );
+			</div>
 
-						elseif ( get_row_layout() == 'career_opportunities') :
+			<?php endforeach; ?>
 
-							get_template_part( $block_path . 'careers' );
+		</div>
+		<?php endif; ?>
 
-						elseif ( get_row_layout() == 'potential_employers') :
-
-							get_template_part( $block_path . 'employers' );
-
-						elseif ( get_row_layout() == 'student_orgs') :
-
-							get_template_part( $block_path . 'orgs' );
-
-						elseif ( get_row_layout() == 'minor') :
-
-							get_template_part( $block_path . 'minor' );
-
-						elseif ( get_row_layout() == 'similar_majors') :
-
-							get_template_part( $block_path . 'majors' );
-
-						elseif ( get_row_layout() == 'research_opportunities') :
-
-							get_template_part( $block_path . 'research' );
-
-						elseif ( get_row_layout() == 'program_contacts') :
-
-							get_template_part( $block_path . 'contacts' );
-
-						else:
-
-							// no blocks found
-
-						endif;
-
-					endwhile;
-
-				endif;
-
+		<?php
 				get_template_part( $block_path . 'financial' );
+
 				get_template_part( $block_path . 'visit-foco' );
 
 			endwhile;

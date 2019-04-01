@@ -40,8 +40,8 @@
 				'has_archive' 			=> false,
 				'capability_type' 		=> 'post',
 				'hierarchical' 			=> false,
-				'menu_position' 		=> 4,
-				'menu_icon' 			=> 'dashicons-groups',
+				'menu_position' 		=> 9,
+				'menu_icon' 			=> 'dashicons-id-alt',
 				'supports' 				=> array( 'title' )
 
 			)

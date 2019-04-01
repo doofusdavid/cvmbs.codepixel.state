@@ -657,6 +657,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "degree_program"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "posts-degree-programs\/overview.php"
             }
         ]
     ],
@@ -668,5 +673,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1553720179
+    "modified": 1553880690
 }

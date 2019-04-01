@@ -18,4 +18,7 @@
     // places
     require_once( 'post.types/places.php' );
 
+    // student organizations
+    require_once( 'post.types/student.organizations.php' );
+
 ?>

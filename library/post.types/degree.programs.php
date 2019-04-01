@@ -36,12 +36,12 @@ function cvmbs_degree_program_init() {
         'show_in_menu'        =>  true, // Default: value of show_ui argument
         'show_in_admin_bar'   =>  true, // Default: value of the show_in_menu argument
         'show_in_nav_menus'   =>  true, // Default: value of public argument
-        'menu_position'       =>  null, // Default: null - defaults to below Comments
+        'menu_position'       =>  6,
         'menu_icon'           => 'dashicons-welcome-learn-more',
         'capability_type'     => 'post', // Default: "post"
         'hierarchical'        =>  true, // Default: false
         'supports'            =>  array( 'title', 'thumbnail', 'page-attributes' ),
-        'has_archive'         =>  false, // true, // Default: false
+        'has_archive'         =>  true, // Default: false
         'rewrite'             =>  array( 'slug' => 'degree-programs' ), // Default: true and use $post_type as slug
         'can_export'          =>  true, // Default: true
         'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').

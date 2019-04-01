@@ -1,39 +1,27 @@
 .degree-program-intro {
-	display: grid;
-	grid-gap: 2em;
-	-ms-grid-rows: auto 2em auto;
-	grid-template-rows: repeat(2, auto);
-	-ms-grid-columns: 1fr;
-	grid-template-columns: 1fr;
 	background: $sec_temp_white;
 	padding: 8vw;
 	@include color( $cvnavy, 0.165 );
 
-	@include bpoint(tablet) {
-		grid-gap: 4vw;
-		-ms-grid-row: auto;
-		grid-template-rows: auto;
-		-ms-grid-columns: 1fr 4vw auto;
-		grid-template-columns: 1fr auto;
+	&__inner {
+		@include bpoint(tablet) {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
 	}
 
 	&__sidebar {
-		-ms-grid-row: 1;
-		grid-row: 1;
-		-ms-grid-column: 1;
-		grid-column: 1;
-
 		@include flex-v-t-h-s( true );
+		margin-bottom: 2em;
 
 		@include bpoint(tablet) {
-			-ms-grid-column: 3;
-			grid-column: 2;
+			margin-bottom: 0;
+			margin-left: 4vw;
 		}
 
-		// title
 		.degree-type-label {
 			display: block;
-			// @include flex-h-s-v-c( true );
 			height: 0.75rem;
 			margin: 0 0 0.5rem 0;
 			@include font( $industry, 0.6875rem, 600 );
@@ -43,10 +31,8 @@
 			@include color( $blue, 0.000 );
 		}
 
-		// title
 		.degree-type-text {
 			display: block;
-			// @include flex-h-s-v-c( true );
 			height: 1rem;
 			margin: 0 0 1rem 0;
 			@include font( $klavislim, 1rem, 400 );
@@ -56,7 +42,6 @@
 			@include color( $cvnavy, 0.225 );
 		}
 
-		// button
 		.degree-document-button {
 			position: relative;
 			@include flex-h-s-v-c( true );
@@ -72,17 +57,14 @@
 			@include fill( $cvnavy, 0.095 );
 			transition: $all220;
 
-			// last child
 			&:last-child {
 				margin: 0 0 0 0;
 			}
 
-			// hover state
 			&:hover {
 				@include fill( $roarange, 0.000 );
 			}
 
-			// after
 			&:after {
 				@include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
 				position: absolute;
@@ -96,20 +78,12 @@
 	}
 
 	&__desc {
-		-ms-grid-row: 3;
-		grid-row: 2;
-		-ms-grid-column: 1;
-		grid-column: 1;
-		-ms-grid-row-align: center;
-		align-self: center;
-		// @include flex-h-e-v-c( true );
+		max-width: 75em;
 		@include font( $klavika, 1.25rem, 400 );
-		// line-height: 1.6;
 		letter-spacing: 0.065em;
 
 		@include bpoint(tablet) {
-			-ms-grid-row: 1;
-			grid-row: 1;
+			margin-right: auto;
 		}
 
 		& > :last-child {
