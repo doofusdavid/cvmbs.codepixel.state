@@ -64,15 +64,15 @@
     // register CSS & JS for ACF Flexible Content thumbnails
     function acf_flexible_content_thumbnails() {
         // register admin.css
-        wp_enqueue_style( 'css-theme-admin', get_template_directory_uri().'/dist/assets/css/admin.css', false, 1.0 );
+        wp_enqueue_style( 'css-theme-admin', get_template_directory_uri().'/dist/assets/css/admin.css', 1.0, false );
 
         // register admin.js
-        wp_register_script( 'js-theme-admin', get_stylesheet_directory_uri().'/js/cvmbs.admin.js', array('jquery'), 1.0, true );
+        wp_register_script( 'js-theme-admin', get_template_directory_uri().'/js/cvmbs.admin.js', array('jquery'), 1.0, true );
         wp_localize_script( 'js-theme-admin', 'theme_var',
             array(
                 'upload' => get_template_directory_uri().'/dist/assets/img/acf-thumbnails/',
             )
         );
-        wp_enqueue_script( 'js-theme-admin');
+        wp_enqueue_script( 'js-theme-admin' );
     }
     add_action( 'admin_enqueue_scripts', 'acf_flexible_content_thumbnails' );
