@@ -541,6 +541,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5c9154239aa71": {
+                    "key": "layout_5c9154239aa71",
+                    "name": "general_content",
+                    "label": "General Content",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c91542c9aa72",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5c6f0b9ce05b9": {
                     "key": "layout_5c6f0b9ce05b9",
                     "name": "group_bios",
@@ -1338,35 +1367,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_5c9154239aa71": {
-                    "key": "layout_5c9154239aa71",
-                    "name": "general_content",
-                    "label": "General Content",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5c91542c9aa72",
-                            "label": "Content",
-                            "name": "content",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "New Block",
@@ -1393,5 +1393,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553547091
+    "modified": 1554148658
 }
