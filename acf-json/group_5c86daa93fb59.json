@@ -16,6 +16,40 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5c9a7f3736ef8": {
+                    "key": "layout_5c9a7f3736ef8",
+                    "name": "billboard",
+                    "label": "Billboard",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c9a7f3f36ef9",
+                            "label": "Billboard Image",
+                            "name": "billboard_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
                 "layout_5c86e3f7d9279": {
                     "key": "layout_5c86e3f7d9279",
                     "name": "text_editor",
@@ -69,6 +103,25 @@
                             "maxlength": "",
                             "rows": "",
                             "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5c8fbeecc0da3",
+                            "label": "Block Width",
+                            "name": "block_width",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Full",
+                            "ui_off_text": "Fixed"
                         },
                         {
                             "key": "field_5c882027bdcd3",
@@ -420,6 +473,25 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_5c8fc153b3e76",
+                            "label": "Block Width",
+                            "name": "block_width",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Full",
+                            "ui_off_text": "Fixed"
                         }
                     ],
                     "min": "",
@@ -866,6 +938,20 @@
                 "operator": "==",
                 "value": "pages\/flexible-page.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/tertiary.default.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/unit.flexible.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -878,5 +964,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553548524
+    "modified": 1553726623
 }
