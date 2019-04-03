@@ -40,7 +40,7 @@
 				'has_archive' 			=> true,
 				'capability_type' 		=> 'post',
 				'hierarchical' 			=> false,
-				'menu_position' 		=> 4,
+				'menu_position' 		=> 7,
 				'menu_icon' 			=> 'dashicons-building',
 				'supports' 				=> array( 'title', 'thumbnail' ),
 				'taxonomies'			=> array(

@@ -36,7 +36,7 @@ function cvmbs_degree_program_init() {
         'show_in_menu'        =>  true, // Default: value of show_ui argument
         'show_in_admin_bar'   =>  true, // Default: value of the show_in_menu argument
         'show_in_nav_menus'   =>  true, // Default: value of public argument
-        'menu_position'       =>  null, // Default: null - defaults to below Comments
+        'menu_position'       =>  6,
         'menu_icon'           => 'dashicons-welcome-learn-more',
         'capability_type'     => 'post', // Default: "post"
         'hierarchical'        =>  true, // Default: false
@@ -47,6 +47,6 @@ function cvmbs_degree_program_init() {
         'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').
     );
 
-    register_post_type( 'degree-program', $args );
+    register_post_type( 'degree_program', $args );
 }
 add_action( 'init', 'cvmbs_degree_program_init' );

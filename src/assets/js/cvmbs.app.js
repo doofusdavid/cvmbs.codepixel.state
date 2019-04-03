@@ -328,3 +328,36 @@
 // ================================================================================
 // END :: prototype DVM build
 // ================================================================================
+
+
+
+// ================================================================================
+// START :: CVMBS Accordions
+// ================================================================================
+
+    if ( $('.cvmbs-accordions').length > 0 ) {
+        $('.cvmbs-accordion').each(function() {
+            $(this).addClass('has-loaded');
+        });
+
+        $('.cvmbs-accordion__title').each(function() {
+            var accordionTitle = $(this).html();
+
+            $(this).html('<button class="cvmbs-accordion__toggle" aria-expanded="false">' + accordionTitle + '</button>');
+        });
+
+        $('.cvmbs-accordion__content').each(function() {
+            $(this).attr('aria-hidden', 'true');
+        });
+
+        $('.cvmbs-accordion__toggle').click(function() {
+            $(this).attr('aria-expanded', function(i, attr) {
+                $(this).parent().next().attr('aria-hidden', attr);
+                return attr == 'true' ? 'false' : 'true';
+            });
+        });
+    };
+
+// ================================================================================
+// END :: CVMBS Accordions
+// ================================================================================

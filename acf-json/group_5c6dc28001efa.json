@@ -582,6 +582,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5c9154239aa71": {
+                    "key": "layout_5c9154239aa71",
+                    "name": "general_content",
+                    "label": "General Content",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c91542c9aa72",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5c6f0b9ce05b9": {
                     "key": "layout_5c6f0b9ce05b9",
                     "name": "group_bios",
@@ -1346,6 +1375,35 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c91410400a9c": {
+                    "key": "layout_5c91410400a9c",
+                    "name": "video",
+                    "label": "Video",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c993ef577d92",
+                            "label": "YouTube Video ID",
+                            "name": "video_id",
+                            "type": "text",
+                            "instructions": "e.g., 2DegmW2U73M",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",

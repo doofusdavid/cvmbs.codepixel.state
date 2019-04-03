@@ -1,0 +1,40 @@
+{
+    "key": "group_5ca22f5aaf5a8",
+    "title": "Student Organizations",
+    "fields": [
+        {
+            "key": "field_5ca22f7509b55",
+            "label": "Organization Website",
+            "name": "student_org_link",
+            "type": "url",
+            "instructions": "optional website URL for organization in lieu of content on this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "student_organization"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1554133043
+}

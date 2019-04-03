@@ -7,7 +7,7 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary" data-off-canvas-content>
+<main id="site-layout" class="off-canvas-content" data-off-canvas-content>
 
 	<!-- content container -->
 	<div class="degree-program-container">
@@ -20,21 +20,20 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		<header class="degree-program-header" <?php echo $header_bg; ?>>
 			<div class="degree-program-header__inner">
 				<h1 class="degree-program-header__title">
-					<span class="program-navigation">Degree Program</span>
+					<?php
+					$ancestors = get_post_ancestors( $post->ID );
+
+					if ( $ancestors[1] ) {
+						$parent_degree = get_post( $ancestors[0] );
+						echo '<span class="program-navigation">' . $parent_degree->post_title . '</span>';
+					} elseif ( $ancestors[0]) {
+						echo '<span class="program-navigation">Degree Program</span>';
+					}
+					?>
 					<span class="program-title"><?php the_title(); ?></span>
 				</h1><!-- .degree-program-header__title -->
 			</div><!-- .degree-program-header__inner -->
 		</header><!-- .degree-program-header -->
-
-		<?php
-
-			if( $program_video ) {
-
-				get_template_part( 'elements/degree.programs/degree.programs.video' );
-
-			}
-
-		?>
 
 		<?php
 

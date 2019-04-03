@@ -1,9 +1,5 @@
-<?php
-$block_width = get_sub_field('block_width') ? '--full' : '--fixed';
-?>
-
 <div class="template-block">
-	<div class="template-block__inner<?php echo $block_width; ?>">
+	<div class="template-block__inner">
 
 		<?php
 		if ( have_rows('heading') ) :
@@ -66,5 +62,5 @@ $block_width = get_sub_field('block_width') ? '--full' : '--fixed';
 
 <?php endif; ?>
 
-	</div><!--. template-block__inner<?php echo $block_width; ?> -->
+	</div><!--. template-block__inner -->
 </div><!--. template-block -->
