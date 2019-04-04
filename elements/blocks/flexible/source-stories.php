@@ -23,7 +23,7 @@ if ( ! is_wp_error( $response ) && $response['response']['code'] == 200 ) :
 		<?php if ( $cta = get_sub_field('cta_array') ) : ?>
 
 		<p class="source-stories__cta">
-			<a href="<?php echo esc_url( $cta['link'] ); ?>"><?php echo esc_attr( $cta['title'] ); ?></a>
+			<a href="<?php echo esc_url( $cta['url'] ); ?>"><?php echo esc_attr( $cta['title'] ); ?></a>
 		</p>
 
 		<?php endif; ?>
