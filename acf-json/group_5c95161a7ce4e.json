@@ -1,11 +1,11 @@
 {
     "key": "group_5c95161a7ce4e",
-    "title": "Announcement",
+    "title": "Notification",
     "fields": [
         {
             "key": "field_5c951632e84d9",
             "label": "Type",
-            "name": "flex_alert_type",
+            "name": "notification_type",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -16,10 +16,13 @@
                 "id": ""
             },
             "choices": {
-                "emergency": "Emergency"
+                "date": "Date\/Deadline",
+                "info": "Information",
+                "notice": "Notice",
+                "warn": "Warning"
             },
             "default_value": [
-                "emergency"
+                "info"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -31,7 +34,7 @@
         {
             "key": "field_5c9516aae84da",
             "label": "Message",
-            "name": "flex_alert_msg",
+            "name": "notification_msg",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -46,6 +49,23 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5ca64240aac3b",
+            "label": "Expiration",
+            "name": "notification_expire",
+            "type": "date_picker",
+            "instructions": "(optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 0
         }
     ],
     "location": [
@@ -67,5 +87,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553274616
+    "modified": 1554400074
 }
