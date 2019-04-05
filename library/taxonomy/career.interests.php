@@ -28,7 +28,7 @@ function create_career_interest_taxonomy() {
 		'show_in_menu'       =>  true, // if not set, defaults to value of show_ui argument
 		'show_in_nav_menus'  =>  true,
 		'show_in_quick_edit' =>  true, // if not set, defaults to value of show_ui argument
-		'show_admin_column'  =>  true, // allow automatic creation of taxonomy columns on associated post-types table
+		'show_admin_column'  =>  false, // allow automatic creation of taxonomy columns on associated post-types table
 		'hierarchical'       =>  true,
 		'labels'             => $labels,
 		'query_var'          => '', // default: $taxonomy
