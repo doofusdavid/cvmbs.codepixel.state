@@ -2,7 +2,7 @@
 if ( $video_id = get_sub_field('video_id') ) :
 ?>
 
-<div class="template-block">
+<div class="template-block video">
 	<div class="template-block__wrap">
 		<div class="layered-video__wrap">
 			<div class="layered-video__inner">

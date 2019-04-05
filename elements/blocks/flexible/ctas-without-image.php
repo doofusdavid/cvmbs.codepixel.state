@@ -3,7 +3,7 @@ $h_level = get_sub_field('h_level');
 $layout = get_sub_field('layout');
 ?>
 
-<div class="template-block">
+<div class="template-block ctas-without-image">
 	<div class="template-block__inner">
 
 		<?php if ( have_rows('ctas') ) : ?>

@@ -2,7 +2,7 @@
 $h_level = get_sub_field('h_level');
 ?>
 
-<div class="template-block">
+<div class="template-block accordion-block">
 	<div class="template-block__inner">
 
 		<?php if ( have_rows('accordions') ) : ?>

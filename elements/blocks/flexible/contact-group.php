@@ -1,4 +1,4 @@
-<div class="template-block">
+<div class="template-block contact-group">
 	<div class="template-block__inner">
 
 		<?php

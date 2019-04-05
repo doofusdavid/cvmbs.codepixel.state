@@ -67,14 +67,6 @@
 		line-height: 1;
 	}
 
-	a {
-		color: $sec_temp_link_color;
-
-		&:visited {
-			color: $sec_temp_link_visited;
-		}
-	}
-
 	&__button {
 		transition: all 220ms linear 0ms;
 		display: inline-block;
@@ -110,6 +102,14 @@
 
 			&:not(:first-child) {
 				margin-top: .5em;
+			}
+		}
+
+		a {
+			color: $sec_temp_link_color;
+
+			&:visited {
+				color: $sec_temp_link_visited;
 			}
 		}
 	}
