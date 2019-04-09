@@ -1,0 +1,10 @@
+.notification-box {
+	margin: 1.5em auto;
+	border-left: .3125em solid $cvellow;
+	box-shadow: 0 .125em .5em .125em rgba(black,.1);
+	padding: 1.5em;
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}

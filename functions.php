@@ -76,3 +76,17 @@
         wp_enqueue_script( 'js-theme-admin' );
     }
     add_action( 'admin_enqueue_scripts', 'acf_flexible_content_thumbnails' );
+
+
+    // determine if an item is expired - date should be passed in using 'Ymd' format
+    function is_this_item_expired( $expiration ) {
+        $expired = true;
+
+        if ( !($expiration) ) {
+            $expired = false; // if no expiration set, this item cannot expire
+        } elseif ( $expiration >= date('Ymd') ) {
+            $expired = false;
+        }
+
+        return $expired;
+    }

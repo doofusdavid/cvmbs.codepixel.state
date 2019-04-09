@@ -24,6 +24,12 @@ $block_path = 'elements/blocks/flexible/';
 			<div class="flexible-page-content">
 
 				<?php
+				if ( get_field('notification_msg') ) :
+
+					get_template_part( $block_path . 'notification' );
+
+				endif;
+
 				if ( have_rows('page_blocks') ) :
 
 					while ( have_rows('page_blocks') ) : the_row();

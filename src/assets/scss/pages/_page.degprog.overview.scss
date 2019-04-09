@@ -1,0 +1,49 @@
+.degree_program-template-overview {
+	font-size: 1rem;
+
+	.list-of-programs {
+		background:#E8E7E3;
+		padding:6vw 8vw;
+		color:#545454;
+	}
+
+	.program-children {
+		@include bpoint(desktop) {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 2em;
+			-ms-grid-rows: auto;
+			grid-template-rows: auto;
+			-ms-grid-columns: 1fr 2em 2fr;
+			grid-template-columns: 1fr 2fr;
+			padding: 2vw 0;
+		}
+
+		h2 {
+			line-height: 1;
+		}
+	}
+
+	.child-program-name {
+		-ms-grid-row: 1;
+		grid-row: 1;
+		-ms-grid-column: 1;
+		grid-column: 1;
+		font-size: 1.5rem;
+
+		@include bpoint(40em) {
+			font-size: 1.5rem;
+		}
+
+		@include bpoint(desktop) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.program-desc {
+		-ms-grid-row: 1;
+		grid-row: 1;
+		-ms-grid-column: 3;
+		grid-column: 2;
+	}
+}

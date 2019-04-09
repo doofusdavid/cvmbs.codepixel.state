@@ -27,7 +27,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		<header class="degree-program-header" <?php echo $header_bg; ?>>
 			<div class="degree-program-header__inner">
 				<h1 class="degree-program-header__title">
-					<span class="program-navigation">Degree Program</span>
 					<span class="program-title"><?php the_title(); ?></span>
 				</h1><!-- .degree-program-header__title -->
 			</div><!-- .degree-program-header__inner -->
@@ -46,31 +45,43 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		if ( $children ) :
 		?>
 
-		<div style="background:#a1a1a1; padding:6vw 8vw;">
+		<div class="list-of-programs">
 			<?php foreach ( $children as $child ) : ?>
 
-			<div class="program-children" style="padding:2vw 0;">
-				<h2 style="line-height:1"><?php echo esc_attr( $child->post_title ); ?></h2>
+			<div class="program-children">
+				<h2 class="child-program-name"><a href="<?php echo esc_url( get_permalink( $child->ID ) ); ?>"><?php echo esc_attr( $child->post_title ); ?></a></h2>
 
-				<?php
-				$grandchildren = get_children( array(
-					'post_parent' => $child->ID,
-					'post_status' => 'publish',
-					'orderby'     => 'title',
-					'order'       => 'ASC'
-				) );
+				<div class="program-desc">
 
-				if ( $grandchildren ) :
-				?>
+					<?php
+					if ( have_rows( 'program_intro', $child->ID ) ) :
+						while ( have_rows( 'program_intro', $child->ID ) ) : the_row();
+							the_sub_field('desc');
+						endwhile;
+					endif;
+					?>
 
-				<ul>
-					<?php foreach ( $grandchildren as $grandchild ) : ?>
-					<li>
-						<?php echo esc_attr( $grandchild->post_title ); ?>
-					</li>
-					<?php endforeach; ?>
-				</ul>
-				<?php endif; ?>
+					<?php
+					$grandchildren = get_children( array(
+						'post_parent' => $child->ID,
+						'post_status' => 'publish',
+						'orderby'     => 'title',
+						'order'       => 'ASC'
+					) );
+
+					if ( $grandchildren ) :
+					?>
+
+					<ul>
+						<?php foreach ( $grandchildren as $grandchild ) : ?>
+						<li>
+							<a href="<?php echo esc_url( get_permalink( $grandchild->ID ) ); ?>"><?php echo esc_attr( $grandchild->post_title ); ?></a>
+						</li>
+						<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
+
+				</div>
 
 			</div>
 
