@@ -45,41 +45,41 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 			while ( have_rows('program_blocks') ) : the_row();
 
-				if ( get_row_layout() == 'program_facts' ) :
-
-					get_template_part( $block_path . 'facts' );
-
-				elseif ( get_row_layout() == 'concentrations') :
-
-					get_template_part( $block_path . 'concentrations' );
-
-				elseif ( get_row_layout() == 'career_opportunities') :
+				if ( get_row_layout() == 'career_opportunities') :
 
 					get_template_part( $block_path . 'careers' );
+
+				// elseif ( get_row_layout() == 'concentrations') :
+
+				// 	get_template_part( $block_path . 'concentrations' );
 
 				elseif ( get_row_layout() == 'potential_employers') :
 
 					get_template_part( $block_path . 'employers' );
 
-				elseif ( get_row_layout() == 'student_orgs') :
+				elseif ( get_row_layout() == 'program_contacts') :
 
-					get_template_part( $block_path . 'orgs' );
+					get_template_part( $block_path . 'contacts' );
 
-				elseif ( get_row_layout() == 'minor') :
+				elseif ( get_row_layout() == 'program_facts' ) :
 
-					get_template_part( $block_path . 'minor' );
-
-				elseif ( get_row_layout() == 'similar_majors') :
-
-					get_template_part( $block_path . 'majors' );
+					get_template_part( $block_path . 'facts' );
 
 				elseif ( get_row_layout() == 'research_opportunities') :
 
 					get_template_part( $block_path . 'research' );
 
-				elseif ( get_row_layout() == 'program_contacts') :
+				elseif ( get_row_layout() == 'student_orgs') :
 
-					get_template_part( $block_path . 'contacts' );
+					get_template_part( $block_path . 'orgs' );
+
+				// elseif ( get_row_layout() == 'minor') :
+
+				// 	get_template_part( $block_path . 'minor' );
+
+				// elseif ( get_row_layout() == 'similar_majors') :
+
+				// 	get_template_part( $block_path . 'majors' );
 
 				else:
 
