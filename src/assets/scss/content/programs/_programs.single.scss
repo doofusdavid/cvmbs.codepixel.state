@@ -146,7 +146,7 @@
         .program-content {
 
             width: 100%;
-            padding: 8rem 8rem 8rem 8rem;
+            padding: 8vw;
 
             // lite
             &.lite {
@@ -163,231 +163,6 @@
                 @include color( white, 0.000 );
 
                 @include fill( $app05, 0.000 );
-
-            }
-
-            // description
-            &.description {
-
-                @include flex-h-j-v-s( false );
-
-                padding: 0 0 0 0;
-
-                // text
-                .description-text {
-
-                    @include flex-h-e-v-c( true );
-
-                    padding: 8rem 3rem 8rem 8rem;
-
-                    @include font( $klavika, 1.25rem, 400 );
-
-                    line-height: 2rem;
-
-                    letter-spacing: 0.065em;
-
-                }
-
-                // sidebar
-                .program-sidebar {
-
-                    @include flex-v-t-h-s( true );
-
-                    padding: 8rem 8rem 8rem 3rem;
-
-                    // title
-                    .degree-type-label {
-
-                        @include flex-h-s-v-c( true );
-
-                        height: 0.75rem;
-                        margin: 0 0 0.5rem 0;
-
-                        @include font( $industry, 0.6875rem, 600 );
-
-                        line-height: 0.75rem;
-
-                        letter-spacing: 0.065em;
-
-                        @include text( $up );
-
-                        @include color( $blue, 0.000 );
-
-                    }
-
-                    // title
-                    .degree-type-text {
-
-                        @include flex-h-s-v-c( true );
-
-                        height: 1rem;
-                        margin: 0 0 1rem 0;
-
-                        @include font( $klavislim, 1rem, 400 );
-
-                        line-height: 0.75rem;
-
-                        letter-spacing: 0.165em;
-
-                        @include text( $up );
-
-                        @include color( $cvnavy, 0.225 );
-
-                    }
-
-                    // button
-                    .degree-document-button {
-
-                        position: relative;
-
-                        @include flex-h-s-v-c( true );
-
-                        min-width: 16rem;
-                        height: 3rem;
-                        margin: 0 0 1rem 0;
-                        padding: 0.1875rem 3rem 0 1.25rem;
-
-                        @include font( $klavislim, 1rem, 400 );
-
-                        line-height: 0.75rem;
-
-                        letter-spacing: 0.265em;
-
-                        @include text( $up );
-
-                        @include color( white, 0.000 );
-
-                        @include fill( $cvnavy, 0.095 );
-
-                        transition: $all220;
-
-                        // last child
-                        &:last-child {
-
-                            margin: 0 0 0 0;
-
-                        }
-
-                        // hover state
-                        &:hover {
-
-                            @include fill( $roarange, 0.000 );
-
-                        }
-
-                        // after
-                        &:after {
-
-                            @include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
-
-                            position: absolute;
-
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-
-                            z-index: 10;
-
-                            @include color( white, 0.375 );
-
-                        }
-
-                    }
-
-                }
-
-            }
-
-            // video
-            &.video {
-
-                @include flex-h-j-v-s( false );
-
-                background: {
-
-                    image: url(../img/content/content.background.00.jpg);
-                    repeat: no-repeat;
-                    size: cover;
-                    position: top right;
-
-                }
-
-                // video container
-                .video-container {
-
-                    width: 60%;
-
-                    // video
-                    .program-video {
-
-                        position: relative;
-
-                        padding: 56.25% 0 0 0;
-
-                        // iframe
-                        iframe {
-
-                            position: absolute;
-
-                            top: 0;
-                            left: 0;
-
-                            width: 100%;
-                            height: 100%;
-
-                        }
-
-                    }
-
-                }
-
-                // text
-                .video-text {
-
-                    @include flex-v-b-h-s( true );
-
-                    width: 40%;
-                    padding: 0 0 0 3rem;
-
-                    letter-spacing: 0.035em;
-
-                    @include text( $up );
-
-                    @include color( $app90, 0.000 );
-
-                    // type
-                    .program-type {
-
-                        @include font( $klavislim, 1rem, 400 );
-
-                        line-height: 2rem;
-
-                        letter-spacing: 0.265em;
-
-                    }
-
-                    // name
-                    .program-name {
-
-                        margin: 0 0 0 -0.125rem;
-
-                        @include font( $klavislim, 3rem, 400 );
-
-                        line-height: 3rem;
-
-                    }
-
-                    // subtext
-                    .program-subtext {
-
-                        @include font( $vitesse, 0.75rem, 600 );
-
-                        line-height: 1rem;
-
-                    }
-
-                }
-
 
             }
 
@@ -613,7 +388,7 @@
 
                 @include flex-h-j-v-s( false );
 
-                padding: 0 0 0 0;
+                padding: 0;
 
                 @include fill( $neutral, 0.000 );
 
@@ -625,7 +400,7 @@
                     flex-basis: 40%;
 
                     margin: 0;
-                    padding: 8rem 4rem 16rem 10vw;
+                    padding: 8vw;
 
                     @include fill( $blue, 0.000 );
 
@@ -670,7 +445,7 @@
                     flex-wrap: wrap;
                     flex-basis: 60%;
 
-                    padding: 8rem 10vw 8rem 4rem;
+                    padding: 8vw;
 
                     @include fill( $blue, 0.385 );
 
@@ -702,7 +477,7 @@
 
                 @include flex-h-j-v-s( false );
 
-                padding: 0 0 0 0;
+                padding: 0;
 
                 @include fill( $neutral, 0.000 );
 
@@ -714,7 +489,7 @@
                     flex-basis: 40%;
 
                     margin: 0;
-                    padding: 8rem 10vw 16rem 4rem;
+                    padding: 8vw;
 
                     @include fill( $neutral, 0.000 );
 
@@ -759,7 +534,7 @@
                     flex-wrap: wrap;
                     flex-basis: 60%;
 
-                    padding: 8rem 10vw 8rem 4rem;
+                    padding: 8vw;
 
                     @include fill( white, 0.265 );
 
@@ -1042,7 +817,7 @@
             // research opportunties
             &.research {
 
-                padding: 0 0 0 0;
+                padding: 0;
 
                 // wrapper
                 .content-wrapper {
@@ -1143,14 +918,14 @@
 
             }
 
-            // tuition + financail aid
+            // tuition + financial aid
             &.tuition {
 
                 position: relative;
 
                 @include flex-h-e-v-c( false );
 
-                padding: 12rem 8rem 12rem 8rem;
+                padding: 8vw;
 
                 @include fill( $beige, 0.000 );
 

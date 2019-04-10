@@ -501,35 +501,6 @@
                     "min": "",
                     "max": "1"
                 },
-                "layout_5cabbd0b2c2c5": {
-                    "key": "layout_5cabbd0b2c2c5",
-                    "name": "text_editor",
-                    "label": "Text Editor",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cabbd132c2c6",
-                            "label": "Content",
-                            "name": "content",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5cabb8cb95267": {
                     "key": "layout_5cabb8cb95267",
                     "name": "video",
@@ -657,5 +628,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1554909992
+    "modified": 1554917990
 }
