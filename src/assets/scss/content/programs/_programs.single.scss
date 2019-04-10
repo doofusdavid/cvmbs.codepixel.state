@@ -1067,7 +1067,7 @@
                         @include flex-v-c-h-s( true );
 
                         width: 40%;
-                        padding: 8rem 4rem 8rem 8rem;
+                        padding: 8vw;
 
                         @include fill( $beige, 0.565 );
 
@@ -1090,53 +1090,8 @@
                         @include flex-v-c-h-st( true );
 
                         width: 60%;
-                        padding: 8rem 8rem 8rem 4rem;
-
-                        // list
-                        .research-opportunity {
-
-                            position: absolute;
-
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-
-                            z-index: 10;
-
-                            @include flex-v-b-h-s( false );
-
-                            width: 100%;
-                            height: 100%;
-                            padding: 8rem 8rem 8rem 4rem;
-
-                            background: {
-
-                                repeat: no-repeat;
-                                size: cover;
-                                position: center center;
-
-                            }
-
-                            // contact
-                            .contact-box {
-
-                                position: absolute;
-
-                                bottom: 4rem;
-                                left: 0;
-
-                                z-index: 10;
-
-                                padding: 2rem 2rem 2rem 2rem;
-
-                                @include fill( $blue, 0.125 );
-
-                                @include color( white, 0.000 );
-
-                            }
-
-                        }
+                        background: no-repeat center center / cover;
+                        padding: 8vw;
 
                     }
 

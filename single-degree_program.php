@@ -49,10 +49,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 					get_template_part( $block_path . 'careers' );
 
-				// elseif ( get_row_layout() == 'concentrations') :
-
-				// 	get_template_part( $block_path . 'concentrations' );
-
 				elseif ( get_row_layout() == 'potential_employers') :
 
 					get_template_part( $block_path . 'employers' );
@@ -72,6 +68,14 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 				elseif ( get_row_layout() == 'student_orgs') :
 
 					get_template_part( $block_path . 'orgs' );
+
+				elseif ( get_row_layout() == 'video') :
+
+					get_template_part( $block_path . 'video' );
+
+				// elseif ( get_row_layout() == 'concentrations') :
+
+				// 	get_template_part( $block_path . 'concentrations' );
 
 				// elseif ( get_row_layout() == 'minor') :
 
