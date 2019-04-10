@@ -370,21 +370,6 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5c771315603ea",
-                            "label": "Call To Action",
-                            "name": "cta",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
-                        },
-                        {
                             "key": "field_5caba41d6612b",
                             "label": "Opportunities",
                             "name": "opportunities",
@@ -492,7 +477,7 @@
                                     "key": "field_5c7706344f582",
                                     "label": "Organization",
                                     "name": "org",
-                                    "type": "link",
+                                    "type": "post_object",
                                     "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
@@ -501,7 +486,14 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "post_type": [
+                                        "student_organization"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "id",
+                                    "ui": 1
                                 }
                             ]
                         }
@@ -665,5 +657,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "content for the Degree Programs custom post type",
-    "modified": 1554758979
+    "modified": 1554909992
 }

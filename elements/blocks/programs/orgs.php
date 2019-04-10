@@ -16,8 +16,8 @@
 				$org = get_sub_field('org');
 		?>
 
-				<button class="organization-button" data-url="<?php echo esc_url( $org['url'] ); ?>">
-					<?php echo esc_attr( $org['title'] ); ?>
+				<button class="organization-button" data-url="<?php echo esc_url( get_permalink( $org ) ); ?>">
+					<?php echo esc_attr( get_the_title( $org ) ); ?>
 				</button>
 
 		<?php
