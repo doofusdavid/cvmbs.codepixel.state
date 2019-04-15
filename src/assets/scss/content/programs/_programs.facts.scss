@@ -5,22 +5,24 @@
 	background: $cvnavy;
 	color: $sec_temp_white;
 
-	// after
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: {
-			image: url(../img/patterns/pattern.horizontal.svg);
-			repeat: no-repeat;
-			size: 120%;
-			position: 0 -8rem;
+	// after (only if supported by browser)
+	@supports (mix-blend-mode: overlay) {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0.175;
+			mix-blend-mode: overlay;
+			background: {
+				image: url(../img/patterns/pattern.horizontal.svg);
+				repeat: no-repeat;
+				size: 120%;
+				position: 0 -8rem;
+			}
 		}
-		opacity: 0.275;
-		mix-blend-mode: overlay;
 	}
 
 	&__inner {
