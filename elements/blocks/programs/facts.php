@@ -1,20 +1,20 @@
-<div class="program-facts facts">
+<div class="program-facts">
 	<div class="program-facts__inner">
-		<div class="facts-title">
-			<h2 class="title"><?php _e( 'Program Facts', 'cvmbsPress'); ?></h2>
-		</div><!-- END title -->
+		<h2 class="program-facts__title">
+			<?php _e( 'Program Facts', 'cvmbsPress'); ?>
+		</h2>
 
-		<div class="facts-content">
+		<div class="program-facts__content">
 
 			<?php if ( have_rows( 'facts' ) ): ?>
 
-				<ul class="list">
+				<ul class="program-facts__list">
 
 					<?php while ( have_rows( 'facts' ) ): the_row(); ?>
 
-					<li>
+					<li class="program-facts__item">
 
-						<em class="highlight"><?php the_sub_field('fact'); ?></em>
+						<h3 class="program-facts__name"><?php the_sub_field('fact'); ?></h3>
 
 						<?php the_sub_field('desc'); ?>
 
@@ -26,6 +26,6 @@
 
 			<?php endif; ?>
 
-		</div><!-- END list -->
+		</div><!-- .program-facts__list -->
 	</div><!-- .program-facts__inner -->
 </div><!-- .program-facts -->

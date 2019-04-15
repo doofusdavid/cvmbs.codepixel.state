@@ -1,6 +1,5 @@
 .program-facts {
 	position: relative;
-	// padding: 10rem 10vw 10rem 10vw;
 	padding: 8vw;
 	background: $cvnavy;
 	color: $sec_temp_white;
@@ -33,35 +32,23 @@
 		}
 	}
 
-	// title
-	.facts-title {
-		// position: relative;
-		// z-index: 10;
+	&__title {
 		@include flex-h-e-v-t( true );
 		margin-bottom: 2rem;
+		color: $blue;
+		@include font( $klavislim, 3rem, 400 );
+		letter-spacing: 0.075em;
+		line-height: .875;
 
 		@include bpoint(desktop) {
 			max-width: 40%;
 			margin: 0;
-			border-right: 1px solid transparentize( white, 0.465 );
+			border-right: 1px solid transparentize(white, 0.465);
 			padding-right: 4vw;
-		}
-
-		// title
-		.title {
-			margin: 0;
-			@include font( $klavislim, 3rem, 400 );
-			line-height: 2.5rem;
-			line-height: 1;
-			letter-spacing: 0.075em;
-			@include color( $blue, 0.000 );
 		}
 	}
 
-	// title
-	.facts-content {
-		// position: relative;
-		// z-index: 10;
+	&__content {
 		@include flex-h-s-v-t( true );
 		margin: 0;
 
@@ -70,36 +57,30 @@
 			width: 60%;
 			padding-left: 4vw;
 		}
+	}
 
-		// list
-		.list {
-			margin: 0;
-			list-style: none;
+	&__list {
+		margin: 0;
+		list-style: none;
+	}
 
-			// item
-			li {
-				margin: 0 0 2rem 0;
-				@include font( $industry, 0.875rem, 500 );
-				line-height: 1.25rem;
-				letter-spacing: 0.035em;
-				@include color( white, 0.000 );
+	&__item {
+		@include font( $industry, 0.875rem, 500 );
+		letter-spacing: 0.035em;
+		@include color( white, 0.000 );
 
-				// last child
-				&:last-child {
-					margin-bottom: 0;
-				}
-
-				// highlight
-				.highlight {
-					@include flex-h-s-v-c( false );
-					margin: 0 0 0.5rem 0;
-					@include font( $klavislim, 1.25rem, 400 );
-					line-height: 1rem;
-					letter-spacing: 0.075em;
-					@include text( $up );
-					@include color( $cvellow, 0.000 );
-				}
-			}
+		&:not(:last-child) {
+			margin-bottom: 2rem;
 		}
+	}
+
+	&__name {
+		@include flex-h-s-v-c( false );
+		margin-bottom: .5rem;
+		@include font( $klavislim, 1.25rem, 400 );
+		line-height: 1;
+		letter-spacing: 0.075em;
+		@include text( $up );
+		@include color( $cvellow, 0.000 );
 	}
 }
