@@ -7,7 +7,7 @@ if ( have_rows('program_intro') ) :
 	$curriculum = get_sub_field('curriculum');
 ?>
 
-<div class="degree-program-intro">
+<div class="degree-program-intro program-block">
 	<div class="degree-program-intro__inner">
 
 		<?php if ( $apply || $curriculum ) : ?>

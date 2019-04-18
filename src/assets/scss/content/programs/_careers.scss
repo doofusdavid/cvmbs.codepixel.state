@@ -1,0 +1,89 @@
+.careers {
+	background: $neutral;
+
+	@include bpoint(desktop) {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-rows: auto;
+		grid-template-rows: auto;
+		-ms-grid-columns: 2fr 3fr;
+		grid-template-columns: 2fr 3fr;
+	}
+
+	&__intro {
+		margin: 0;
+		padding: calc(2vw + 1rem) 8vw;
+		background: $deg_temp_teal;
+
+		@include bpoint(desktop) {
+			-ms-grid-row: 1;
+			grid-row: 1;
+			-ms-grid-column: 1;
+			grid-column: 1;
+			padding: 8vw;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		color: $cvellow;
+	}
+
+	&__desc {
+		margin-top: 1rem;
+		color: white;
+		@include font( $industry, 0.875rem, 600 );
+		letter-spacing: 0.035em;
+		line-height: 1.5rem;
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		padding: 8vw;
+		@include fill( $blue, 0.385 );
+
+		@include bpoint(desktop) {
+			-ms-grid-row: 1;
+			grid-row: 1;
+			-ms-grid-column: 2;
+			grid-column: 2;
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+
+		@include bpoint(phone) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		margin-top: 3vw;// 1rem;
+		@include font( $industry, 1rem, 600 );
+		line-height: 1.2;// 0.75rem;
+		@include color( $app05, 0.165 );
+
+		@include bpoint(phone) {
+			width: calc(50% - 1vw);
+
+			&:nth-child(2) {
+				margin-top: 0;
+			}
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

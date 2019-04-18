@@ -1,51 +1,31 @@
-<!-- potential careers -->
-<div class="program-content program-row careers">
+<div class="careers program-block_">
 
-	<?php
-
-		$program_careers_text = get_field( 'program_careers_description' );
-
-	?>
-
-	<!-- text -->
-	<div class="careers-text">
-
-		<!-- title -->
-		<h3 class="careers-title">
+	<div class="careers__intro">
+		<h3 class="careers__title program-block__title">
 			<?php _e( 'Career Opportunties', 'cvmbsPress' ); ?>
 		</h3>
-		<!-- END title -->
 
 		<?php if ( get_sub_field('desc') ) : ?>
-		<!-- text -->
-		<span class="careers-description">
+		<div class="careers__desc">
 			<?php the_sub_field('desc'); ?>
-		</span>
-		<!-- END text -->
+		</div>
+		<?php endif; ?>
+	</div><!-- .careers__intro -->
+
+	<div class="careers__content">
+
+		<?php if ( have_rows( 'careers' ) ) : ?>
+		<ul class="careers__list">
+
+			<?php while ( have_rows( 'careers' ) ) : the_row(); ?>
+			<li class="careers__item">
+				<?php the_sub_field('career'); ?>
+			</li>
+			<?php endwhile; ?>
+
+		</ul><!-- .careers__list -->
 		<?php endif; ?>
 
-	</div>
-	<!-- END text -->
+	</div><!-- .careers__content -->
 
-	<!-- list -->
-	<div class="careers-list">
-
-		<?php
-		if ( have_rows( 'careers' ) ) :
-			while ( have_rows( 'careers' ) ) : the_row();
-		?>
-
-			<span class="item">
-				<?php the_sub_field('career'); ?>
-			</span>
-
-		<?php
-			endwhile;
-		endif;
-		?>
-
-	</div>
-	<!-- END list -->
-
-</div>
-<!-- END potential careers -->
+</div><!-- .careers -->

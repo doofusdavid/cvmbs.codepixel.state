@@ -1,0 +1,52 @@
+.financial {
+	background: $beige url(../img/content/content.background.06.jpg) no-repeat center center / cover;
+
+	&__inner {
+		background: rgba($beige, 0.435);
+		padding: 8vw;
+
+		@include bpoint(desktop) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	&__content {
+		@include typo( 1.5rem, 0.045em );
+		color: $app05;
+
+		@include bpoint(desktop) {
+			width: 50%;
+		}
+	}
+
+	&__title {
+		color: $g140;
+	}
+
+	&__cta {
+		margin: 1.25rem 0 0 0;
+	}
+
+	&__button {
+		transition: $all220;
+		display: inline-block;
+		padding: .875rem 1.25rem;
+		border: .0125em solid $g140;
+		color: $g140;
+		@include font( $industry, 0.75rem, 600 );
+		line-height: 1.2;
+		letter-spacing: 0.065em;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:visited {
+			color: $g140;
+		}
+
+		&:hover, &:focus, &:active {
+			background: $g140;
+			color: white;
+		}
+	}
+}

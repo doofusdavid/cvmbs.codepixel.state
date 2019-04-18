@@ -35,9 +35,6 @@
 		@include flex-h-e-v-t( true );
 		margin-bottom: 2rem;
 		color: $blue;
-		@include font( $klavislim, 3rem, 400 );
-		letter-spacing: 0.075em;
-		line-height: .875;
 
 		@include bpoint(desktop) {
 			max-width: 40%;
@@ -64,17 +61,18 @@
 	}
 
 	&__item {
+		margin-bottom: 2rem;
 		@include font( $industry, 0.875rem, 500 );
 		letter-spacing: 0.035em;
 		@include color( white, 0.000 );
 
-		&:not(:last-child) {
-			margin-bottom: 2rem;
+		&:last-child,
+		*:last-child {
+			margin-bottom: 0;
 		}
 	}
 
 	&__name {
-		@include flex-h-s-v-c( false );
 		margin-bottom: .5rem;
 		@include font( $klavislim, 1.25rem, 400 );
 		line-height: 1;

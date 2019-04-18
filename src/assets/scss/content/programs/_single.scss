@@ -1,5 +1,18 @@
 // stylesheet :: degree program post content styles
 
+    .program-block {
+        &__title {
+            @include font( $klavislim, 2rem, 400 );
+            letter-spacing: .075em;
+            line-height: 1;
+            @include text( $up );
+
+            @include bpoint(desktop) {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
     // settings
     $degree : 1rem;
 
@@ -127,20 +140,6 @@
             transition: all 0ms linear 0ms;
 
         }
-
-
-
-        // content
-        // .degree-program-content {
-
-        //     width: 100%;
-        //     height: auto;
-        //     min-height: calc( 100vh - 28rem );
-        //     // margin: 0 4rem 0 0;
-
-        //     @include color( $app10, 0.000 );
-
-        // }
 
         // content
         .program-content {
@@ -383,254 +382,6 @@
 
             }
 
-            // careers
-            &.careers {
-
-                @include flex-h-j-v-s( false );
-
-                padding: 0;
-
-                @include fill( $neutral, 0.000 );
-
-                // text
-                .careers-text {
-
-                    @include flex-v-t-h-e( false );
-
-                    flex-basis: 40%;
-
-                    margin: 0;
-                    padding: 8vw;
-
-                    @include fill( $blue, 0.000 );
-
-                    // title
-                    .careers-title {
-
-                        @include font( $klavislim, 2.5rem, 400 );
-
-                        line-height: 3rem;
-
-                        letter-spacing: 0.075em;
-
-                        @include text( $up, right );
-
-                        @include color( $cvellow, 0.000 );
-
-                    }
-
-                    // text
-                    .careers-description {
-
-                        @include font( $industry, 0.875rem, 600 );
-
-                        line-height: 1.5rem;
-
-                        letter-spacing: 0.035em;
-
-                        @include text( inherit, right );
-
-                        @include color( white, 0.000 );
-
-                    }
-
-                }
-
-                // list
-                .careers-list {
-
-                    @include flex-h-s-v-t( false );
-
-                    align-content: flex-start;
-                    flex-wrap: wrap;
-                    flex-basis: 60%;
-
-                    padding: 8vw;
-
-                    @include fill( $blue, 0.385 );
-
-                    // item
-                    .item {
-
-                        @include flex-h-s-v-c( true );
-
-                        flex-basis: 50%;
-
-                        height: 2rem;
-                        margin: 0 0 1rem 0;
-                        padding: 0 1rem 0 0;
-
-                        @include font( $industry, 1rem, 600 );
-
-                        line-height: 0.75rem;
-
-                        @include color( $app05, 0.165 );
-
-                    }
-
-                }
-
-            }
-
-            // employers
-            &.employers {
-
-                @include flex-h-j-v-s( false );
-
-                padding: 0;
-
-                @include fill( $neutral, 0.000 );
-
-                // text
-                .employers-text {
-
-                    @include flex-v-t-h-s( false );
-
-                    flex-basis: 40%;
-
-                    margin: 0;
-                    padding: 8vw;
-
-                    @include fill( $neutral, 0.000 );
-
-                    // title
-                    .employers-title {
-
-                        @include font( $klavislim, 2.5rem, 400 );
-
-                        line-height: 3rem;
-
-                        letter-spacing: 0.075em;
-
-                        @include text( $up, left );
-
-                        @include color( $g140, 0.000 );
-
-                    }
-
-                    // text
-                    .employers-description {
-
-                        @include font( $industry, 0.875rem, 600 );
-
-                        line-height: 1.5rem;
-
-                        letter-spacing: 0.035em;
-
-                        @include text( inherit, left );
-
-                        @include color( $app05, 0.165 );
-
-                    }
-
-                }
-
-                // list
-                .employers-list {
-
-                    @include flex-h-e-v-t( true );
-
-                    align-content: flex-start;
-                    flex-wrap: wrap;
-                    flex-basis: 60%;
-
-                    padding: 8vw;
-
-                    @include fill( white, 0.265 );
-
-                    // item
-                    .item {
-
-                        @include flex-h-e-v-c( true );
-
-                        flex-basis: 50%;
-
-                        height: 2rem;
-                        margin: 0 0 1rem 0;
-                        padding: 0 1rem 0 0;
-
-                        @include font( $industry, 1rem, 600 );
-
-                        line-height: 0.75rem;
-
-                        @include text( inherit, right );
-
-                        @include color( $app05, 0.165 );
-
-                    }
-
-                }
-
-            }
-
-            // organziations
-            &.organizations {
-
-                @include flex-v-c-h-c( false );
-
-                // title
-                .title {
-
-                    @include font( $klavislim, 2.5rem, 400 );
-
-                    line-height: 4rem;
-
-                    letter-spacing: 0.075em;
-
-                    @include color( $gold, 0.000 );
-
-                }
-
-                // row
-                .buttons {
-
-                    @include flex-h-c-v-c( false );
-
-                    width: 100%;
-
-                }
-
-                // button
-                .organization-button {
-
-                    @include flex-h-c-v-c( true );
-
-                    height: 3rem;
-                    margin: 0 1rem 0 0;
-                    padding: 0.125rem 1.25rem 0 1.25rem;
-
-                    border: 1px solid white;
-
-                    @include font( $klavislim, 0.875rem, 400 );
-
-                    line-height: 0.75rem;
-
-                    letter-spacing: 0.135em;
-
-                    @include text( $up );
-
-                    @include color( white, 0.000 );
-
-                    transition: $all220;
-
-                    // hover state
-                    &:hover {
-
-                        @include fill( $roarange, 0.000 );
-
-                    }
-
-                    // last child
-                    &:last-child {
-
-                        margin: 0 0 0 0;
-
-                    }
-
-                }
-
-            }
-
             // minors
             &.minors {
 
@@ -814,66 +565,6 @@
 
             }
 
-            // research opportunties
-            &.research {
-
-                padding: 0;
-
-                // wrapper
-                .content-wrapper {
-
-                    @include flex-h-j-v-s( false );
-
-                }
-
-                // title
-                .title {
-
-                    @include typo( 3rem, 0.075em );
-
-                }
-
-                // content
-                .content {
-
-                    // left
-                    &.left {
-
-                        @include flex-v-c-h-s( true );
-
-                        width: 40%;
-                        padding: 8vw;
-
-                        @include fill( $beige, 0.565 );
-
-                        // content
-                        .content {
-
-                            @include font( $industry, 0.875rem, 600 );
-
-                            @include color( $app05, 0.000 );
-
-                        }
-
-                    }
-
-                    // right
-                    &.right {
-
-                        position: relative;
-
-                        @include flex-v-c-h-st( true );
-
-                        width: 60%;
-                        background: no-repeat center center / cover;
-                        padding: 8vw;
-
-                    }
-
-                }
-
-            }
-
             // contacts
             &.contacts {
 
@@ -913,108 +604,6 @@
                         }
 
                     }
-
-                }
-
-            }
-
-            // tuition + financial aid
-            &.tuition {
-
-                position: relative;
-
-                @include flex-h-e-v-c( false );
-
-                padding: 8vw;
-
-                @include fill( $beige, 0.000 );
-
-                background: {
-
-                    image: url(../img/content/content.background.06.jpg);
-                    repeat: no-repeat;
-                    size: cover;
-                    position: center center;
-
-                }
-
-                // after
-                &:after {
-
-                    content: '';
-
-                    position: absolute;
-
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-
-                    z-index: 10;
-
-                    @include fill( $beige, 0.565 );
-
-                }
-
-                // wrapper
-                .content-wrapper {
-
-                    position: relative;
-
-                    z-index: 20;
-
-                    @include flex-v-j-h-e( false );
-
-                    width: 50%;
-
-                }
-
-                // title
-                .title {
-
-                    position: relative;
-
-                    z-index: 20;
-
-                    // @include flex-h-c-v-c( false );
-
-                    // width: 100%;
-
-                    @include color( $g140, 0.000 );
-
-                }
-
-                // content
-                .content {
-
-                    position: relative;
-
-                    z-index: 20;
-
-                    @include typo( 1.5rem, 0.045em );
-
-                    @include color( $app05, 0.000 );
-
-                }
-
-                // button
-                .content-button {
-
-                    @include flex-h-c-v-c( false );
-
-                    height: 3rem;
-                    margin: 2rem 0 0 0;
-                    padding: 0.0625rem 1rem 0 1rem;
-
-                    border: 1px solid $g140;
-
-                    @include font( $industry, 0.75rem, 600 );
-
-                    @include typo( 0.5rem, 0.065em );
-
-                    @include text( $up );
-
-                    @include color( $g140, 0.000 );
 
                 }
 
@@ -1122,19 +711,6 @@
                     margin-bottom: 0;
 
                 }
-
-            }
-
-            // title
-            .title {
-
-                @include font( $klavislim, 2.5rem, 400 );
-
-                line-height: 4rem;
-
-                letter-spacing: 0.075em;
-
-                @include color( $blue, 0.000 );
 
             }
 

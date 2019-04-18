@@ -2,58 +2,39 @@
 $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field('img') .')";' : '';
 ?>
 
-<!-- research opportunities -->
-<div class="program-content program-row research lite">
+<div class="research program-block">
 
-	<!-- content wrapper -->
-	<div class="content-wrapper">
+	<div class="research__image" <?php echo $bg_img; ?>>
+	</div><!-- .research__image -->
 
-		<!-- content half -->
-		<div class="content left">
+	<div class="research__content">
 
-			<!-- title -->
-			<h3 class="title">
-				<?php _e( 'Research Opportunities', 'cvmbsPress' ); ?>
-			</h3>
-			<!-- END title -->
+		<h3 class="research__title program-block__title">
+			<?php _e( 'Research Opportunities', 'cvmbsPress' ); ?>
+		</h3>
 
-			<!-- content  -->
-			<div class="content">
-				<?php the_sub_field('desc'); ?>
+		<?php the_sub_field('desc'); ?>
 
-				<?php if ( have_rows('opportunities') ) : ?>
+		<?php if ( have_rows('opportunities') ) : ?>
+		<ul>
 
-				<ul>
+			<?php while ( have_rows('opportunities') ) : the_row(); ?>
+			<li>
 
-					<?php while ( have_rows('opportunities') ) : the_row(); ?>
+				<?php
+				if ( $link = get_sub_field('link') ) :
+					echo '<a href="' . esc_url( $link ) . '">' . esc_attr( get_sub_field('name') ) . '</a>';
+				else :
+					the_sub_field('name');
+				endif;
+				?>
 
-					<li>
-						<?php if ( $link = get_sub_field('link') ) : ?>
-							<a href="<?php echo esc_url( $link ); ?>"><?php the_sub_field('name'); ?></a>
-						<?php else : ?>
-							<?php the_sub_field('name'); ?>
-						<?php endif; ?>
-					</li>
+			</li>
+			<?php endwhile; ?>
 
-					<?php endwhile; ?>
+		</ul>
+		<?php endif; ?>
 
-				</ul>
+	</div><!-- .research__content -->
 
-				<?php endif; ?>
-
-			</div>
-			<!-- END content  -->
-
-		</div>
-		<!-- END content half -->
-
-		<!-- content half -->
-		<div class="content right" <?php echo $bg_img; ?>>
-		</div>
-		<!-- END content half -->
-
-	</div>
-	<!-- END content wrapper -->
-
-</div>
-<!-- END research opportunities -->
+</div><!-- .research -->

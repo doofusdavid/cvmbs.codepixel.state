@@ -1,11 +1,11 @@
 <!-- program contacts -->
-<div class="program-content program-row contacts dark">
+<div class="program-content program-row dark contacts program-block">
 
 	<!-- content wrapper -->
 	<div class="content-wrapper">
 
 		<!-- title -->
-		<h3 class="title">
+		<h3 class="title program-block__title">
 
 			program contacts
 
@@ -32,7 +32,7 @@
 
 					<li class="contact-card">
 
-						<img src="<?php echo $contact_photo; ?>" alt="foobar">
+						<img src="<?php echo $contact_photo; ?>" alt="">
 						<?php echo $contact_name; ?><br/>
 						<?php echo $contact_type; ?><br/>
 						<?php echo $contact_phone; ?><br/>

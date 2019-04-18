@@ -1,10 +1,16 @@
 // stylesheet :: content stylesheet compiler
 
     // archive
-    @import 'programs.archive';
+    @import 'archive';
 
     // single
-    @import 'programs.single';
-    @import 'programs.header';
-    @import 'programs.intro';
-    @import 'programs.facts';
+    @import 'single';
+    @import 'header';
+    @import 'intro';
+    @import 'facts';
+    @import 'careers';
+    @import 'employers';
+    @import 'research';
+    @import 'orgs';
+    @import 'financial';
+    @import 'location';

@@ -1,14 +1,10 @@
-<!-- student organizations -->
-<div class="program-content program-row organizations dark">
+<div class="organizations program-block">
 
-	<!-- title -->
-	<h3 class="title">
+	<h3 class="organizations__title program-block__title">
 		<?php the_sub_field('heading'); ?>
-	</h3>
-	<!-- END title -->
+	</h3><!-- .organizations__title -->
 
-	<!-- buttons -->
-	<div class="buttons">
+	<div class="organizations__buttons">
 
 		<?php
 		if ( have_rows( 'orgs' ) ) :
@@ -16,17 +12,13 @@
 				$org = get_sub_field('org');
 		?>
 
-				<button class="organization-button" data-url="<?php echo esc_url( get_permalink( $org ) ); ?>">
-					<?php echo esc_attr( get_the_title( $org ) ); ?>
-				</button>
+			<a class="organizations__button" href="<?php echo esc_url( get_permalink( $org ) ); ?>"><?php echo esc_attr( get_the_title( $org ) ); ?></a>
 
 		<?php
 			endwhile;
 		endif;
 		?>
 
-	</div>
-	<!-- END buttons -->
+	</div><!-- .organizations__buttons -->
 
-</div>
-<!-- END student organizations -->
+</div><!-- .organizations -->

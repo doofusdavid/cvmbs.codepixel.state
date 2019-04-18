@@ -5,45 +5,40 @@ if ( have_rows( 'visit_foco', 'option' ) ) :
 ?>
 
 <!-- location -->
-<div class="program-content program-row location dark" <?php echo $foco_bg; ?>>
+<div class="location program-block">
 
-	<!-- content wrapper -->
-	<div class="content-wrapper">
+	<div class="location__inner">
 
-		<h3 class="title"><?php the_sub_field('heading'); ?></h3>
+		<div class="location__content">
 
-		<div class="content">
+			<h2 class="location__title program-block__title"><?php the_sub_field('heading'); ?></h2>
 
-			<?php if ( get_sub_field('desc') ) : ?>
+			<?php
+			if ( get_sub_field('desc') ) :
+				the_sub_field('desc');
+			else:
+				echo '<p>Fort Collins blends education and industry, hard work and outdoor recreation, tradition and progress. If you’re looking for a college experience with the perfect fusion of culture, opportunity and adventure, Fort Collins is where you’ll find it. Located at the foothills of the Rocky Mountains, Fort Collins provides extensive access to hundreds of miles of trails for biking and hiking, world-class fishing and rock climbing, and camping, all in an area with over 300 days of sun per year.</p>';
+			endif;
 
-				<?php the_sub_field('desc'); ?>
+			if ( have_rows('ctas') ) :
+				while ( have_rows('ctas') ) : the_row();
+					$link = get_sub_field('link');
+			?>
 
-			<?php else: ?>
+			<p class="location__cta">
+				<a class="location__button" href="<?php echo esc_url( $link['url'] ); ?>"><?php echo esc_attr( $link['title'] ); ?></a>
+			</p>
 
-				<p>Fort Collins blends education and industry, hard work and outdoor recreation, tradition and progress. If you’re looking for a college experience with the perfect fusion of culture, opportunity and adventure, Fort Collins is where you’ll find it. Located at the foothills of the Rocky Mountains, Fort Collins provides extensive access to hundreds of miles of trails for biking and hiking, world-class fishing and rock climbing, and camping, all in an area with over 300 days of sun per year.</p>
+			<?php
+				endwhile;
+			endif;
+			?>
 
-			<?php endif; ?>
+		</div><!-- .location__content -->
 
-		</div>
+	</div><!-- .location__inner -->
 
-		<?php
-		if ( have_rows('ctas') ) :
-			while ( have_rows('ctas') ) : the_row();
-				$link = get_sub_field('link');
-		?>
-			<!-- button -->
-			<a class="content-button" href="<?php echo esc_url( $link['url'] ); ?>"><?php echo esc_attr( $link['title'] ); ?></a>
-			<!-- END button -->
-		<?php
-			endwhile;
-		endif;
-		?>
-
-	</div>
-	<!-- END content wrapper -->
-
-</div>
-<!-- END location -->
+</div><!-- .location -->
 
 <?php
 	endwhile;

@@ -1,6 +1,6 @@
-<div class="program-facts">
+<div class="program-facts program-block">
 	<div class="program-facts__inner">
-		<h2 class="program-facts__title">
+		<h2 class="program-facts__title program-block__title">
 			<?php _e( 'Program Facts', 'cvmbsPress'); ?>
 		</h2>
 

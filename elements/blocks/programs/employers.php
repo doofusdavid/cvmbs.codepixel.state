@@ -1,45 +1,31 @@
-<!-- potential employers -->
-<div class="program-content program-row employers">
+<div class="employers program-block">
 
-	<!-- list -->
-	<div class="employers-list">
-
-		<?php
-		if ( have_rows( 'employers' ) ) :
-			while ( have_rows( 'employers' ) ): the_row();
-		?>
-
-			<span class="item">
-				<?php the_sub_field('employer'); ?>
-			</span>
-
-		<?php
-			endwhile;
-		endif;
-		?>
-
-	</div>
-	<!-- END list -->
-
-	<!-- text -->
-	<div class="employers-text">
-
-		<!-- title -->
-		<h3 class="employers-title">
+	<div class="employers__intro">
+		<h3 class="employers__title program-block__title">
 			<?php _e( 'Potential Employers', 'cvmbsPress' ); ?>
 		</h3>
-		<!-- END title -->
 
 		<?php if ( get_sub_field('desc') ) : ?>
-		<!-- text -->
-		<span class="employers-description">
+		<div class="employers__desc">
 			<?php the_sub_field('desc'); ?>
-		</span>
-		<!-- END text -->
+		</div>
+		<?php endif; ?>
+	</div><!-- .employers__intro -->
+
+	<div class="employers__content">
+
+		<?php if ( have_rows( 'employers' ) ) : ?>
+		<ul class="employers__list">
+
+			<?php while ( have_rows( 'employers' ) ) : the_row(); ?>
+			<li class="employers__item">
+				<?php the_sub_field('employer'); ?>
+			</li>
+			<?php endwhile; ?>
+
+		</ul><!-- .employers__list -->
 		<?php endif; ?>
 
-	</div>
-	<!-- END text -->
+	</div><!-- .employers__content -->
 
-</div>
-<!-- END potential employers -->
+</div><!-- .employers -->
