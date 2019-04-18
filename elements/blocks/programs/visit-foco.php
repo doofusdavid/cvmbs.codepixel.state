@@ -1,7 +1,6 @@
 <?php
 if ( have_rows( 'visit_foco', 'option' ) ) :
 	while ( have_rows( 'visit_foco', 'option' ) ) : the_row();
-		$foco_bg = get_sub_field('bg_img') ? 'style="background-image:url(' . esc_url( get_sub_field('bg_img') ) . ');"' : '';
 ?>
 
 <!-- location -->
@@ -16,8 +15,6 @@ if ( have_rows( 'visit_foco', 'option' ) ) :
 			<?php
 			if ( get_sub_field('desc') ) :
 				the_sub_field('desc');
-			else:
-				echo '<p>Fort Collins blends education and industry, hard work and outdoor recreation, tradition and progress. If you’re looking for a college experience with the perfect fusion of culture, opportunity and adventure, Fort Collins is where you’ll find it. Located at the foothills of the Rocky Mountains, Fort Collins provides extensive access to hundreds of miles of trails for biking and hiking, world-class fishing and rock climbing, and camping, all in an area with over 300 days of sun per year.</p>';
 			endif;
 
 			if ( have_rows('ctas') ) :
