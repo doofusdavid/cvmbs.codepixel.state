@@ -18,30 +18,6 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5c7d75cefa915",
-                    "label": "Background Image",
-                    "name": "bg_img",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5c7d75e4fa916",
                     "label": "Heading",
                     "name": "heading",
@@ -135,5 +111,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1551726318
+    "modified": 1555601631
 }
