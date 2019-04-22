@@ -1,0 +1,149 @@
+// stylesheet :: directory demo styles
+
+    // settings
+    $directory : 1rem;
+
+    // styles
+    #directory {
+
+        position: relative;
+
+        padding: 13rem 5rem 5rem 5rem;
+
+        // toolbar
+        #directory-toolbar {
+
+            position: fixed;
+
+            top: 5rem;
+            right: 0;
+            left: 0;
+
+            z-index: 10;
+
+            @include flex-h-j-v-s( false );
+
+            width: 100%;
+            height: 3rem;
+
+            @include fill( $dark, 0.565 );
+
+        }
+
+        // query
+        #query {
+
+            @include flex-h-s-v-c( false );
+
+            // order: 1;
+
+            padding: 0.0625rem 1.25rem 0 1.25rem;
+
+            @include font( $industry, 0.625rem, 600 );
+
+            @include typo( 0.5rem, 0.065em );
+
+            // label
+            .query-label {
+
+                @include color( white, 0.565 );
+
+            }
+
+        }
+
+        // title
+        #title {
+
+            @include flex-h-s-v-c( false );
+
+            order: 0;
+
+            padding: 0.0625rem 1.25rem 0 1.25rem;
+
+            @include font( $industry, 0.625rem, 600 );
+
+            // @include text( $up );
+
+            @include typo( 1.25rem, 0.085em );
+
+            @include color( white, 0.000 );
+
+            // @include fill( $g135, 0.725 );
+
+            // highlight
+            em {
+
+                font-style: normal;
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // brackets
+            span {
+
+                @include color( white, 0.565 );
+
+            }
+
+            // color
+            strong {
+
+                @include color( $campaign, 0.000 );
+
+            }
+
+        }
+
+        // headings
+        h6 {
+
+            @include color( $gold, 0.000 );
+
+            @include typo( 1.5rem, 0.085em );
+
+        }
+
+        // table
+        #directory-records {
+
+            // row
+            .record {
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include color( $campaign, 0.000 );
+
+                    @include fill( white, 0.915 );
+
+                    cursor: pointer;
+
+                    // email
+                    .email-link {
+
+                        @include color( $campaign, 0.000 );
+
+                    }
+
+                }
+
+                // email
+                .email-link {
+
+                    // @include text( none, none );
+
+                    @include color( $rite-lite, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+            }
+
+        }
+
+    }

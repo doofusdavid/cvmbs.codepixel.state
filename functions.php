@@ -3,6 +3,12 @@
     // custom admin
     require_once( 'library/admin.php' );
 
+    // directory
+    require_once( 'library/directory/directory.php' );
+
+    // composer
+    require_once( 'vendor/autoload.php' );
+
     // various clean up functions
     require_once( 'library/cleanup.php' );
 
