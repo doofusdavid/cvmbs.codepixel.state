@@ -42,7 +42,7 @@
     $storage = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
 
     // send data to json store
-    file_put_contents( $storage, $data );
+    // file_put_contents( $storage, $data );
 
     // revise array data
     $data = $directory->GetMembersBySearchNameResult->MemberResponse;
@@ -170,7 +170,7 @@
         </pre>
 
         <!-- Data Tables -->
-        <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+        <!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
         <script type="text/javascript">
 
             // alphabet search
