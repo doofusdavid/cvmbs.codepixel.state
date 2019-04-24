@@ -2,17 +2,17 @@
 $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field('img') .')";' : '';
 ?>
 
-<div class="research program-block image--<?php the_sub_field('img_pos'); ?>">
+<div class="app-info program-block image--<?php the_sub_field('img_pos'); ?>">
 
-	<div class="research__image" <?php echo $bg_img; ?>>
+	<div class="app-info__image" <?php echo $bg_img; ?>>
 	</div><!-- .research__image -->
 
-	<div class="research__content">
+	<div class="app-info__content">
 
-		<div class="research__inner">
+		<div class="app-info__inner">
 
-			<h3 class="research__title program-block__title">
-				<?php _e( 'Research Opportunities', 'cvmbsPress' ); ?>
+			<h3 class="app-info__title program-block__title">
+				<?php _e( 'Application Information and Deadlines', 'cvmbsPress' ); ?>
 			</h3>
 
 			<?php the_sub_field('desc'); ?>
@@ -37,7 +37,7 @@ $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field(
 			</ul>
 			<?php endif; ?>
 
-		</div><!-- .research__inner -->
+		</div><!-- .app-info__inner -->
 
 	</div><!-- .research__content -->
 

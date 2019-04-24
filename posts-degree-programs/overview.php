@@ -13,10 +13,8 @@ $block_path = 'elements/blocks/programs/';
 $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'x-large' ) . ');"' : '';
 ?>
 
-<!-- site.layout -->
 <main id="site-layout" class="off-canvas-content" data-off-canvas-content>
 
-	<!-- content container -->
 	<div class="degree-program-container">
 
 		<?php
@@ -27,12 +25,28 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		<header class="degree-program-header" <?php echo $header_bg; ?>>
 			<div class="degree-program-header__inner">
 				<h1 class="degree-program-header__title">
-					<span class="program-title"><?php the_title(); ?></span>
+					<?php the_title(); ?>
 				</h1><!-- .degree-program-header__title -->
 			</div><!-- .degree-program-header__inner -->
 		</header><!-- .degree-program-header -->
 
-		<?php get_template_part( $block_path . 'intro' ); ?>
+		<?php
+		if ( have_rows('program_intro') ) :
+			while ( have_rows('program_intro') ) : the_row();
+		?>
+
+		<div class="degree-program-intro program-block">
+			<div class="degree-program-intro__inner">
+				<div class="degree-program-intro__desc">
+					<?php the_sub_field('desc'); ?>
+				</div><!-- .degree-program-intro__desc -->
+			</div><!-- .degree-program-intro__inner -->
+		</div>
+
+		<?php
+			endwhile;
+		endif;
+		?>
 
 		<?php
 		$children = get_children( array(
@@ -101,12 +115,9 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		get_template_part( 'elements/layout/layout.footer' );
 		?>
 
-	</div>
-	<!-- END content container -->
+	</div><!-- END content container -->
 
-</main>
-<!-- site.layout -->
+</main><!-- END site.layout -->
 
 <?php
-
 get_footer();

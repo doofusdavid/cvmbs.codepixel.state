@@ -25,12 +25,13 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 					if ( $ancestors[1] ) {
 						$parent_degree = get_post( $ancestors[0] );
-						echo '<span class="program-navigation">' . $parent_degree->post_title . '</span>';
-					} elseif ( $ancestors[0]) {
-						echo '<span class="program-navigation">Degree Program</span>';
+						echo '<span class="degree-program-header__parent">' . $parent_degree->post_title . '</span>';
+					} elseif ( $ancestors[0] ) {
+						echo '<span class="degree-program-header__parent">' . __( 'Degree Program', 'cvmbsPress' ) . '</span>';
 					}
 					?>
-					<span class="program-title"><?php the_title(); ?></span>
+
+					<?php the_title(); ?>
 				</h1><!-- .degree-program-header__title -->
 			</div><!-- .degree-program-header__inner -->
 		</header><!-- .degree-program-header -->
@@ -39,13 +40,17 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 		get_template_part( $block_path . 'intro' );
 
-		// get_template_part( $block_path . 'children' );
+		get_template_part( $block_path . 'children' );
 
 		if ( have_rows('program_blocks') ) :
 
 			while ( have_rows('program_blocks') ) : the_row();
 
-				if ( get_row_layout() == 'career_opportunities') :
+				if ( get_row_layout() == 'app_info') :
+
+					get_template_part( $block_path . 'app-info' );
+
+				elseif ( get_row_layout() == 'career_opportunities') :
 
 					get_template_part( $block_path . 'careers' );
 
