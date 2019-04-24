@@ -60,6 +60,7 @@
         // secondary
         .page-template-secondary &,
         .single-degree-program &,
+        .page-template-directory &,
         .archive & {
 
             @include fill( $g135, 0.000 );
