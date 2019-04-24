@@ -8,124 +8,134 @@
 
         position: relative;
 
-        padding: 13rem 5rem 5rem 5rem;
+        min-height: calc( 100vh - 27rem );
+        padding: 10rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.265 );
+
+        @include fill( white, 0.000 );
+
+        // header
+        header {
+
+            @include flex-h-s-v-c( false );
+
+            height: 5rem;
+
+            // page title
+            h1 {
+
+                margin: 0 0 0 0;
+
+                @include typo( 3rem, 0.025em );
+
+                @include color( $cvnavy, 0.235 );
+
+            }
+
+        }
+
+        // output
+        pre {
+
+            @include hide;
+
+        }
+
+        // common toolbar
+        .toolbar {
+
+            height: 5rem;
+
+        }
 
         // toolbar
         #directory-toolbar {
 
-            position: fixed;
+            height: 10rem;
 
-            top: 5rem;
-            right: 0;
-            left: 0;
+            @include font( $industry, 0.875rem, 600 );
 
-            z-index: 10;
+            // alphabet
+            .alphabet {
 
-            @include flex-h-j-v-s( false );
+                @include flex-h-j-v-c( false );
 
-            width: 100%;
-            height: 3rem;
+                width: 100%;
+                height: 5rem;
 
-            @include fill( $dark, 0.565 );
+                border-top: 1px solid transparentize( $app05, 0.825 );
+                border-bottom: 1px solid transparentize( $app05, 0.825 );
 
-        }
+                // label
+                .alphabet-label {
 
-        // query
-        #query {
+                    @include color( $app05, 0.625 );
 
-            @include flex-h-s-v-c( false );
+                }
 
-            // order: 1;
+                // letters
+                .alphabet-control {
 
-            padding: 0.0625rem 1.25rem 0 1.25rem;
+                    @include flex-h-c-v-c( true );
 
-            @include font( $industry, 0.625rem, 600 );
+                    min-width: 2rem;
+                    height: 2rem;
+                    padding: 0 0.5rem 0 0.5rem;
 
-            @include typo( 0.5rem, 0.065em );
+                    @include fill( white, 1.000 );
 
-            // label
-            .query-label {
+                    transition: all 220ms linear 0ms;
 
-                @include color( white, 0.565 );
+                    // hover state
+                    &:hover {
 
-            }
+                        @include color( $campaign, 0.000 );
 
-        }
+                        @include fill( $g135, 0.000 );
 
-        // title
-        #title {
+                        cursor: pointer;
 
-            @include flex-h-s-v-c( false );
+                    }
 
-            order: 0;
+                    // active state
+                    &.active {
 
-            padding: 0.0625rem 1.25rem 0 1.25rem;
+                        @include color( white, 0.000 );
 
-            @include font( $industry, 0.625rem, 600 );
+                        @include fill( $g140, 0.000 );
 
-            // @include text( $up );
+                    }
 
-            @include typo( 1.25rem, 0.085em );
-
-            @include color( white, 0.000 );
-
-            // @include fill( $g135, 0.725 );
-
-            // highlight
-            em {
-
-                font-style: normal;
-
-                @include color( $gold, 0.000 );
+                }
 
             }
-
-            // brackets
-            span {
-
-                @include color( white, 0.565 );
-
-            }
-
-            // color
-            strong {
-
-                @include color( $campaign, 0.000 );
-
-            }
-
-        }
-
-        // headings
-        h6 {
-
-            @include color( $gold, 0.000 );
-
-            @include typo( 1.5rem, 0.085em );
 
         }
 
         // table
         #directory-records {
 
+            @include font( $industry, 0.875rem, 600 );
+
             // row
             .record {
 
-                transition: all 220ms linear 0ms;
+                transition: all 320ms $outex 0ms;
 
                 // hover state
                 &:hover {
 
-                    @include color( $campaign, 0.000 );
+                    @include color( $cvellow, 0.000 );
 
-                    @include fill( white, 0.915 );
+                    @include fill( $cvnavy, 0.165 );
 
                     cursor: pointer;
 
                     // email
                     .email-link {
 
-                        @include color( $campaign, 0.000 );
+                        @include color( $cvellow, 0.000 );
 
                     }
 
@@ -136,9 +146,220 @@
 
                     // @include text( none, none );
 
-                    @include color( $rite-lite, 0.000 );
+                    @include color( $app05, 0.265 );
 
-                    transition: all 220ms linear 0ms;
+                    transition: all 320ms $outex 0ms;
+
+                }
+
+            }
+
+        }
+
+        // control group
+        #directory-fields {
+
+            @include flex-h-j-v-c( false );
+
+            height: 5rem;
+
+            // common
+            .dataTables_length,
+            .dataTables_filter {
+
+                // the emptiness
+
+            }
+
+        }
+
+        // control group
+        #directory-info {
+
+            height: 3rem;
+
+        }
+
+        // control directory view(s)
+        #directory-records_length {
+
+            @include flex-h-j-v-c( true );
+
+            height: 5rem;
+
+            // label
+            label {
+
+                @include flex-h-j-v-c( true );
+
+            }
+
+            // select
+            select {
+
+                @include flex-h-e-v-c( true );
+
+                width: 3rem;
+                height: 2rem;
+                margin: 0 0.5rem 0 0.5rem;
+                padding: 0 1.25rem 0 0.5rem;
+
+                border: none;
+
+                @include font( $industry, 0.875rem, 700 );
+
+                @include text( none, center );
+
+                @include color( white, 0.000 );
+
+                @include fill( $cvnavy, 0.165 );
+
+                background: {
+
+                    // image: url(../img/icons/admin/icon_billboard.svg);
+                    repeat: no-repeat;
+                    size: 1.25rem 1.25rem;
+                    position: center right;
+
+                }
+
+                appearance: none;
+
+                // after
+                &:before {
+
+                    @include codicon( 1rem, 2rem, 0.5rem 0 0.5rem 0, 1rem, white, '\EDC9' );
+
+                }
+
+            }
+
+        }
+
+        // control directory view(s)
+        #directory-records_filter {
+
+            // label
+            label {
+
+                @include flex-h-j-v-c( true );
+
+            }
+
+            // input
+            input {
+
+                @include flex-h-s-v-c( true );
+
+                height: 2rem;
+                margin: 0 0 0 0.5rem;
+                padding: 0 0.5rem 0 0.5rem;
+
+                border: none;
+
+                @include color( white, 0.000 );
+
+                @include fill( $cvnavy, 0.165 );
+
+            }
+
+        }
+
+        // directory info
+        #directory-records_info {
+
+            @include flex-h-c-v-c( false );
+
+            height: 3rem;
+
+        }
+
+        // pagination
+        #directory-controls {
+
+            @include flex-h-c-v-c( false );
+
+            height: 5rem;
+
+            border-top: 1px solid transparentize( $app05, 0.825 );
+            border-bottom: 1px solid transparentize( $app05, 0.825 );
+
+            @include font( $industry, 0.875rem, 600 );
+
+            // pagination controls
+            #directory-records_paginate {
+
+                @include flex-h-c-v-c( false );
+
+                width: 50%;
+
+                // directions
+                #directory-records_previous,
+                #directory-records_next {
+
+                    // disabled
+                    &.disabled {
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( white, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+                // ellipsis
+                .ellipsis {
+
+                    @include flex-v-c-h-c( true );
+
+                    padding: 0 0.5rem 0 0.5rem;
+
+                }
+
+                // button
+                .paginate_button {
+
+                    @include flex-v-c-h-c( true );
+
+                    min-width: 2rem;
+                    height: 2rem;
+                    // margin:
+                    padding: 0 0.5rem 0 0.5rem;
+
+                    @include color( $app05, 0.265 );
+
+                    transition: all 320ms $outex 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include color( $campaign, 0.000 );
+
+                        @include fill( $g135, 0.000 );
+
+                    }
+
+                    // disabled state
+                    &.disabled {
+
+                        @include color( $app05, 0.625 );
+
+                    }
+
+                    // current state
+                    &.current {
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $g140, 0.000 );
+
+                        transition: all 320ms $outex 0ms;
+
+                    }
 
                 }
 
