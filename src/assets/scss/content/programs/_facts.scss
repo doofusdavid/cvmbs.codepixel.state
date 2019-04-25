@@ -26,6 +26,8 @@
 	}
 
 	&__inner {
+		position: relative;
+
 		@include bpoint(desktop) {
 			display: flex;
 		}

@@ -14,18 +14,21 @@ if ( have_rows('tuition_financial_aid') ) :
 			<?php
 			if ( get_sub_field('desc') ) :
 				the_sub_field('desc');
-			else :
-				echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non dapibus lacus. Aenean sodales, mauris nec ornare eleifend, eros arcu molestie felis, id ornare est erat sed velit. Quisque hendrerit vitae justo a tristique. Nullam purus ipsum, venenatis ultricies dictum ac, lacinia eget dolor. Curabitur et rhoncus augue. Nullam aliquet tortor non ultricies blandit. Proin nec libero at sapien lobortis gravida eu non ipsum. Suspendisse pellentesque dapibus gravida. Sed faucibus elit in dignissim malesuada.</p>';
 			endif;
 
-			if ( $cta = get_sub_field('call_to_action') ) :
+			if ( have_rows('ctas') ) :
+				while ( have_rows('ctas') ) : the_row();
+					$link = get_sub_field('link');
 			?>
 
 			<p class="financial__cta">
-				<a class="financial__button" href="<?php echo esc_url( $cta['url'] ); ?>"><?php echo esc_attr( $cta['title'] ); ?></a>
+				<a class="financial__button" href="<?php echo esc_url( $link['url'] ); ?>"><?php echo esc_attr( $link['title'] ); ?></a>
 			</p>
 
-			<?php endif; ?>
+			<?php
+				endwhile;
+			endif;
+			?>
 
 		</div>
 

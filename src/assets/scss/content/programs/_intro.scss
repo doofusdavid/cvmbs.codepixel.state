@@ -6,74 +6,47 @@
 	&__inner {
 		@include bpoint(tablet) {
 			display: flex;
-			flex-direction: row-reverse;
 			justify-content: space-between;
 		}
 	}
 
 	&__sidebar {
-		@include flex-v-t-h-s( true );
-		margin-bottom: 2em;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		margin-top: 2em;
 
 		@include bpoint(tablet) {
+			margin-top: 0;
+			margin-left: 2em;
+		}
+	}
+
+	&__button {
+		transition: $all220;
+		min-width: 16rem;
+		margin: 0 0 .5rem 0;
+		background: rgba( $cvnavy, .9 );
+		padding: 1rem 1.25rem;
+		color: white;
+		@include font( $klavislim, 1rem, 500 );
+		letter-spacing: 0.265em;
+		line-height: 1;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:visited {
+			color: white;
+		}
+
+		&:hover, &:focus, &:active {
+			background: $blue;
+			color: $cvnavy;
+		}
+
+		&:last-child {
 			margin-bottom: 0;
-			margin-left: 4vw;
-		}
-
-		.degree-type-label {
-			display: block;
-			height: 0.75rem;
-			margin: 0 0 0.5rem 0;
-			@include font( $industry, 0.6875rem, 600 );
-			line-height: 0.75rem;
-			letter-spacing: 0.065em;
-			@include text( $up );
-			@include color( $blue, 0.000 );
-		}
-
-		.degree-type-text {
-			display: block;
-			height: 1rem;
-			margin: 0 0 1rem 0;
-			@include font( $klavislim, 1rem, 400 );
-			line-height: 0.75rem;
-			letter-spacing: 0.165em;
-			@include text( $up );
-			@include color( $cvnavy, 0.225 );
-		}
-
-		.degree-document-button {
-			position: relative;
-			@include flex-h-s-v-c( true );
-			min-width: 16rem;
-			height: 3rem;
-			margin: 0 0 1rem 0;
-			padding: 0.1875rem 3rem 0 1.25rem;
-			@include font( $klavislim, 1rem, 400 );
-			line-height: 0.75rem;
-			letter-spacing: 0.265em;
-			@include text( $up );
-			@include color( white, 0.000 );
-			@include fill( $cvnavy, 0.095 );
-			transition: $all220;
-
-			&:last-child {
-				margin: 0 0 0 0;
-			}
-
-			&:hover {
-				@include fill( $roarange, 0.000 );
-			}
-
-			&:after {
-				@include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				z-index: 10;
-				@include color( white, 0.375 );
-			}
 		}
 	}
 
@@ -82,12 +55,17 @@
 		@include font( $klavika, 1.25rem, 400 );
 		letter-spacing: 0.065em;
 
-		@include bpoint(tablet) {
-			margin-right: auto;
-		}
-
 		& > :last-child {
 			margin-bottom: 0;
 		}
-  }
+	}
+
+	&__grid {
+		margin-top: 2em;
+		width: 100%;
+
+		@include bpoint(tablet) {
+			margin-top: 4vw;
+		}
+	}
 }

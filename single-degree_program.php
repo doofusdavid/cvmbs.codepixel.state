@@ -40,8 +40,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 		get_template_part( $block_path . 'intro' );
 
-		get_template_part( $block_path . 'children' );
-
 		if ( have_rows('program_blocks') ) :
 
 			while ( have_rows('program_blocks') ) : the_row();

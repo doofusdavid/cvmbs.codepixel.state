@@ -1,6 +1,6 @@
 {
     "key": "group_5c76be300ded6",
-    "title": "Degree Programs",
+    "title": "Degree Programs: Default",
     "fields": [
         {
             "key": "field_5c7d693771daf",
@@ -37,11 +37,11 @@
                     "new_lines": "wpautop"
                 },
                 {
-                    "key": "field_5c7d8f0697baa",
-                    "label": "Apply",
-                    "name": "apply",
-                    "type": "url",
-                    "instructions": "URL",
+                    "key": "field_5cc0c16937ca0",
+                    "label": "Buttons",
+                    "name": "buttons",
+                    "type": "repeater",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -49,24 +49,28 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5c7d8f1e97bab",
-                    "label": "Curriculum",
-                    "name": "curriculum",
-                    "type": "url",
-                    "instructions": "URL",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Add Button",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cc0c17f37ca1",
+                            "label": "Button",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
                 }
             ]
         },
@@ -144,7 +148,7 @@
                             "name": "desc",
                             "type": "textarea",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -159,8 +163,8 @@
                         },
                         {
                             "key": "field_5cbe3d2b09cf6",
-                            "label": "Opportunities",
-                            "name": "opportunities",
+                            "label": "Dates",
+                            "name": "dates",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -177,9 +181,9 @@
                             "button_label": "Add Opportunity",
                             "sub_fields": [
                                 {
-                                    "key": "field_5cbe3d2b09cf7",
-                                    "label": "Name",
-                                    "name": "name",
+                                    "key": "field_5cc21a6ff1e4d",
+                                    "label": "Date",
+                                    "name": "date",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 1,
@@ -196,12 +200,12 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5cbe3d2b09cf8",
-                                    "label": "Link",
-                                    "name": "link",
-                                    "type": "url",
+                                    "key": "field_5cc21a77f1e4e",
+                                    "label": "Action",
+                                    "name": "action",
+                                    "type": "text",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -209,7 +213,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": ""
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 }
                             ]
                         }
@@ -513,7 +520,7 @@
                             "name": "desc",
                             "type": "textarea",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -527,7 +534,7 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5caba41d6612b",
+                            "key": "field_5cc21f6354a33",
                             "label": "Opportunities",
                             "name": "opportunities",
                             "type": "repeater",
@@ -546,7 +553,7 @@
                             "button_label": "Add Opportunity",
                             "sub_fields": [
                                 {
-                                    "key": "field_5caba48d6612d",
+                                    "key": "field_5cc21f7c54a34",
                                     "label": "Name",
                                     "name": "name",
                                     "type": "text",
@@ -565,7 +572,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5caba4516612c",
+                                    "key": "field_5cc21f8b54a35",
                                     "label": "Link",
                                     "name": "link",
                                     "type": "url",
@@ -759,6 +766,42 @@
                         "id": ""
                     },
                     "return_format": "array"
+                },
+                {
+                    "key": "field_5cc2217fe192f",
+                    "label": "CTA's",
+                    "name": "ctas",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Add CTA",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cc2219be1930",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ]
                 }
             ]
         }
@@ -784,6 +827,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "content for the Degree Programs custom post type",
-    "modified": 1556041197
+    "description": "",
+    "modified": 1556226491
 }
