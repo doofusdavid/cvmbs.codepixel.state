@@ -2,22 +2,6 @@
 <!-- container -->
 <div class="article-container">
 
-    <!-- title -->
-    <button class="section-title scroll-trigger" data-section="research">
-
-        global research map
-
-    </button>
-    <!-- END title -->
-
-    <!-- background.image -->
-    <div class="section-image" data-load="pending" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/sections/research/research.billboard.00.jpg">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.image -->
-
     <!-- background.color -->
     <div class="section-base">
 
@@ -44,7 +28,7 @@
                 <!-- END color + gradient -->
 
                 <!-- pattern -->
-                <div class="pattern-layer fx-layer" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/sections/research/research.map.01.svg">
+                <div class="pattern-layer fx-layer layer">
 
                     <!-- map -->
                     <div id="research-map" class="map">
@@ -60,19 +44,29 @@
             </div>
             <!-- END visual FX -->
 
-            <!-- map.toolbar -->
-            <toolbar id="research-map-toolbar" class="ui-toolbar">
+            <!-- content -->
+            <div class="content-layer">
 
-                <!-- toolbar.title -->
-                <span class="toolbar-title">
+                <span class="headline">
 
-                    research with<br>a global impact
+                    world class research<br />supporting real world results
 
                 </span>
-                <!-- END toolbar.title -->
 
-            </toolbar>
-            <!-- END map.toolbar -->
+                <span class="text">
+
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+
+                </span>
+
+                <a href="/research" class="content-button">
+
+                    explore our research
+
+                </a>
+
+            </div>
+            <!-- END content -->
 
         </div>
         <!-- END content.layers -->
