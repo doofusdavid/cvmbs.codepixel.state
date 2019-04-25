@@ -20,6 +20,8 @@
 
                 function cartographer() {
 
+                    return;
+
                     map = new google.maps.Map( document.getElementById( 'research-map' ), {
 
                         center : {

@@ -163,14 +163,14 @@
 
             <?php
 
-                // print_r( $data );
+                print_r( $data );
 
             ?>
 
         </pre>
 
         <!-- Data Tables -->
-        <!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
+        <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript">
 
             // alphabet search
