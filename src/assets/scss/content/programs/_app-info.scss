@@ -7,12 +7,12 @@
 		display: grid;
 		-ms-grid-rows: auto;
 		grid-template-rows: auto;
-		-ms-grid-columns: 2fr 3fr;
-		grid-template-columns: 2fr 3fr;
+		-ms-grid-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 
 		&.image--left {
-			-ms-grid-columns: 3fr 2fr;
-			grid-template-columns: 3fr 2fr;
+			-ms-grid-columns: 1fr 1fr;
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
@@ -53,5 +53,61 @@
 		color: $navy-h;
 		letter-spacing: 0.075em;
 		line-height: 1;
+	}
+
+	&__table {
+		tbody {
+			tr {
+				border-bottom: .0625em solid $neutral;
+
+				&:first-child {
+					border-top: .0625em solid $neutral;
+				}
+
+				&:nth-child(odd) {
+					background: none;
+				}
+
+				&:nth-child(even) {
+					background: rgba($beige, .55);
+				}
+
+				*:first-child {
+					min-width: 8em;
+				}
+			}
+
+			th,
+			td {
+				padding: .5em;
+				text-align: inherit;
+			}
+		}
+	}
+
+	&__cta {
+		margin: 1.25rem 0 0 0;
+	}
+
+	&__button {
+		transition: $all220;
+		display: inline-block;
+		padding: .875rem 1.25rem;
+		border: .0125em solid $g140;
+		color: $g140;
+		@include font( $industry, 0.75rem, 600 );
+		line-height: 1.2;
+		letter-spacing: 0.065em;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:visited {
+			color: $g140;
+		}
+
+		&:hover, &:focus, &:active {
+			background: $g135;
+			color: white;
+		}
 	}
 }

@@ -1,4 +1,4 @@
-<div class="careers program-block_">
+<div class="careers program-block">
 
 	<div class="careers__intro">
 		<h3 class="careers__title program-block__title">
