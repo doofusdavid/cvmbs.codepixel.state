@@ -1915,8 +1915,6 @@
         // dynamic panels
         #programs-dynamic-panel {
 
-            // position: relative;
-
             right: 0;
 
             @include flex-v-j-h-st( false );
@@ -1973,6 +1971,8 @@
 
                         opacity: 0.000;
 
+                        transition: opacity 720ms $outex 0ms;
+
                     }
 
                     // content
@@ -1983,6 +1983,8 @@
                         visibility: visible;
 
                         opacity: 1.000;
+
+                        transition: opacity 720ms $outex 720ms;
 
                     }
 
@@ -2008,7 +2010,7 @@
 
                         opacity: 1.000;
 
-                        transition: opacity 480ms $outex 0ms;
+                        transition: opacity 720ms $outex 0ms;
 
                     }
 
@@ -2021,7 +2023,7 @@
 
                         opacity: 0.000;
 
-                        transition: opacity 480ms $outex 480ms;
+                        transition: opacity 720ms $outex 480ms;
 
                     }
 
@@ -2080,107 +2082,110 @@
         // degree type content
         #degrees-content-UI {
 
-            display: block;
+            @include flex-h-j-v-s( false );
+            @include flex-v-j-h-st( false );
 
-            // accordion
-            .programs-content-accordion {
+            height: 100%;
+            padding: 25vh 4rem 25vh 4rem;
 
-                width: 32rem;
-                margin: 0;
+            // header
+            .header {
 
-                // item
-                .accordion-item {
+                position: absolute;
 
-                    margin: 0 0 0.0625rem 0;
+                @include flex-v-b-h-s( false );
 
-                }
+                // height: 4rem;
+                padding: 0 0 0 1rem;
 
-                // title
-                .accordion-title {
+                transform: translate3d( 0, -5rem, 0 );
 
-                    @include flex-h-j-v-c( false );
+                // common
+                span {
 
-                    height: 3rem;
-                    margin: 0 0 0.0625rem 0;
-                    padding: 0.125rem 1rem 0 1rem;
-
-                    @include font( $klavislim, 1rem, 400 );
-
-                    @include text( $up );
-
-                    @include typo( 0.75rem, 0.085em );
-
-                    @include fill( white, 0.925 );
-
-                    transition: all 220ms linear 0ms;
-
-                    // hover state
-                    &:hover {
-
-                        @include color( white, 0.000 );
-
-                        @include fill( $gold, 0.425 );
-
-                    }
-
-                    // focus state
-                    &:focus {
-
-                        @include color( $gold, 0.000 );
-
-                    }
-
-                    // expanded
-                    &[aria-expanded='true'] {
-
-                        @include color( $gold, 0.000 );
-
-                        @include fill( $white, 0.885 );
-
-                    }
-
-                    // count
-                    .count {
-
-                        //
-
-                    }
+                    @include flex-h-s-v-b( false );
 
                 }
 
-                // content
-                .accordion-content {
+                // headline
+                .headline {
 
-                    // hidden
-                    &[aria-hidden='true'] {
+                    @include font( $klavislim, 2rem, 400 );
 
-                        //
+                    @include typo( 2rem, 0.135em );
 
-                    }
+                    @include color( $gold, 0.000 );
 
-                    // visible
-                    &[aria-hidden='false'] {
+                }
 
-                        //
+                // subheadline
+                .subheadline {
 
-                    }
+                    @include font( $industry, 0.875rem, 500 );
 
-                    // degree
-                    .degree-program {
+                    @include text( none );
 
-                        display: block;
+                    @include typo( 1.25rem, 0.035em );
 
-                        height: 0.5625rem;
-                        margin: 0 0 1rem 0;
+                }
 
-                        // last child
-                        &:last-child {
+            }
 
-                            margin-bottom: 0;
+            // cards
+            .degree-types {
 
-                        }
+                @include flex-h-j-v-s( false );
 
-                    }
+                width: 100%;
+                height: 100%;
+
+            }
+
+            // degree type card
+            .degree-type-link {
+
+                @include flex-v-b-h-s( true );
+
+                width: calc( 25% - 2rem );
+                margin: 0 1rem 0 1rem;
+                padding: 2rem 2rem 4rem 2rem;
+
+                @include fill( white, 0.965 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( white, 0.815 );
+
+                }
+
+                // type
+                .degree-type {
+
+                    @include flex-h-s-v-b( false );
+
+                    margin: 0 0 1rem 0;
+
+                    @include font( $klavislim, 1.5rem, 400 );
+
+                    @include typo( 0.75rem, 0.045em );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // text
+                .degree-type-text {
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                    @include text( none );
+
+                    @include typo( 1.25rem, 0.035em );
 
                 }
 
