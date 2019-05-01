@@ -31,7 +31,6 @@ $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field(
 						<td><?php the_sub_field('action'); ?></td>
 					</tr>
 					<?php endwhile; ?>
-
 				</tbody>
 			</table><!-- .app-info__table -->
 			<?php endif; ?>

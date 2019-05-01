@@ -111,13 +111,13 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 			endwhile;
 		endif;
-
-		get_template_part( 'elements/layout/layout.footer' );
 		?>
 
-	</div><!-- END content container -->
+	</div><!-- .degree-program-container -->
 
 </main><!-- END site.layout -->
 
 <?php
+get_template_part( 'elements/layout/layout.footer' );
+
 get_footer();

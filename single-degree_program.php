@@ -76,18 +76,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 					get_template_part( $block_path . 'video' );
 
-				// elseif ( get_row_layout() == 'concentrations') :
-
-				// 	get_template_part( $block_path . 'concentrations' );
-
-				// elseif ( get_row_layout() == 'minor') :
-
-				// 	get_template_part( $block_path . 'minor' );
-
-				// elseif ( get_row_layout() == 'similar_majors') :
-
-				// 	get_template_part( $block_path . 'majors' );
-
 				else:
 
 					// no blocks found
@@ -107,14 +95,14 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		<?php
 			endwhile;
 		endif;
-
-		get_template_part( 'elements/layout/layout.footer' );
 		?>
 
-	</div>
-	<!-- END content container -->
+	</div><!-- .degree-program-container -->
 
 </main>
 <!-- site.layout -->
 
-<?php get_footer(); ?>
+<?php
+get_template_part( 'elements/layout/layout.footer' );
+
+get_footer();

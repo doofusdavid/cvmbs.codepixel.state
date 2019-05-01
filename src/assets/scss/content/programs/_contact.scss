@@ -30,6 +30,7 @@
 
 		@include bpoint(desktop) {
 			display: flex;
+			justify-content: center;
 		}
 	}
 
@@ -51,7 +52,8 @@
 		@include bpoint(desktop) {
 			flex-grow: 1;
 			width: 60%;
-			padding-left: 4vw;
+			max-width: 75em;
+			margin-left: 4vw;
 		}
 
 		.gform_wrapper {

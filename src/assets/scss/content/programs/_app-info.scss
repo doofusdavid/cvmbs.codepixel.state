@@ -40,7 +40,7 @@
 		justify-content: center;
 		background: rgba($beige, .275);
 		padding: 8vw;
-		color: $app05;
+		color: $oil;
 		@include font( $industry, 0.875rem, 500 );
 
 		.image--left & {
@@ -56,14 +56,11 @@
 	}
 
 	&__table {
+		border-top: .0625em solid $neutral;
+		border-bottom: .0625em solid $neutral;
+
 		tbody {
 			tr {
-				border-bottom: .0625em solid $neutral;
-
-				&:first-child {
-					border-top: .0625em solid $neutral;
-				}
-
 				&:nth-child(odd) {
 					background: none;
 				}

@@ -1,0 +1,41 @@
+.faq-group {
+	background: white;
+	padding: 8vw;
+	color: $oil;
+
+	&:nth-child(even) {
+		background: $sec_temp_off_white;
+	}
+
+	&__inner {
+		@include bpoint(desktop) {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 2fr 3fr;
+		}
+	}
+
+	&__title {
+		@include bpoint(desktop) {
+			padding-right: 1em;
+		}
+	}
+
+	.cvmbs-accordions {
+		@include bpoint(desktop) {
+			margin-top: 0;
+		}
+	}
+
+	.cvmbs-accordion {
+		&:last-child {
+			@include bpoint(desktop) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__title {
+			font-size: 1.25rem;
+		}
+	}
+}
