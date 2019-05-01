@@ -98,77 +98,101 @@
         <!-- dynamic content -->
         <div id="degrees-content-UI" class="degree-programs-dynamic-content">
 
-            <!-- accordion -->
-            <ul id="degrees-content-accordion" class="programs-content-accordion accordion" data-accordion data-allow-all-closed="true">
+            <!-- header -->
+            <div class="header">
 
-                <?php
+                <span class="headline">
 
-                    $degrees = get_terms( array(
+                    explore degree programs by degree type
 
-                        'taxonomy' => 'degree_types',
-                        'orderby'  => 'term_id'
+                </span>
 
-                    ));
+                <span class="subheadline">
 
-                    foreach ( $degrees as $degree ) {
+                    select an academic level to view all degree programs and lorem ipsum dolor sit amet, consectetuer adipiscing elit
 
-                        $degree_types_query = array(
+                </span>
 
-                            'post_type' => 'degree-program',
-                            'tax_query' => array(
+            </div>
+            <!-- END header -->
 
-                                array(
+            <!-- cards -->
+            <div class="degree-types">
 
-                                    'taxonomy' => $degree->taxonomy,
-                                    'field'    => 'slug',
-                                    'terms'    => $degree->slug
+                <!-- card -->
+                <a class="degree-type-link" href="">
 
-                                )
+                    <span class="degree-type">
 
-                            )
+                        undergraduate
 
-                        );
+                    </span>
 
-                        $degree_types = new WP_Query( $degree_types_query );
+                    <span class="degree-type-text">
 
-                        echo '
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-                            <li class="accordion-item" data-accordion-item>
+                    </span>
 
-                                <a href="#" class="accordion-title">
+                </a>
+                <!-- END card -->
 
-                                    ' . $degree->name . '
+                <!-- card -->
+                <a class="degree-type-link" href="">
 
-                                    <span class="count">
+                    <span class="degree-type">
 
-                                        [ ' . $degree->count . ' ]
+                        graduate
 
-                                    </span>
+                    </span>
 
-                                </a>
+                    <span class="degree-type-text">
 
-                                <div class="accordion-content" data-tab-content>';
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa consequat.
 
-                        while ( $degree_types->have_posts() ) : $degree_types->the_post();
+                    </span>
 
-                        echo '<span class="degree-program">' . get_the_title() . '</span>';
+                </a>
+                <!-- END card -->
 
-                        endwhile;
+                <!-- card -->
+                <a class="degree-type-link" href="">
 
-                        echo '
+                    <span class="degree-type">
 
-                                </div>
+                        residency
 
-                            </li>
+                    </span>
 
-                        ';
+                    <span class="degree-type-text">
 
-                    }
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur cupidatat non proident.
 
-                ?>
+                    </span>
 
-            </ul>
-            <!-- END accordion -->
+                </a>
+                <!-- END card -->
+
+                <!-- card -->
+                <a class="degree-type-link" href="">
+
+                    <span class="degree-type">
+
+                        professional
+
+                    </span>
+
+                    <span class="degree-type-text">
+
+                        Quis auctor elit sed vulputate mi sit amet. Enim venenatis urna cursus. Actincidunt vitae semper lectus nulla at volutpat.
+
+                    </span>
+
+                </a>
+                <!-- END card -->
+
+            </div>
+            <!-- END cards -->
 
         </div>
         <!-- END dynamic content -->
