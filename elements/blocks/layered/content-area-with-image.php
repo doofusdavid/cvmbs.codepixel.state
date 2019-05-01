@@ -10,7 +10,7 @@
 
 		<?php if ( $cta = get_sub_field('cta_array') ) : ?>
 
-		<p>
+		<p class="content-with-image__cta">
 			<a class="content-with-image__button" href="<?php echo esc_url( $cta['url'] ); ?>"><?php echo esc_attr( $cta['title'] ); ?></a>
 		</p>
 
@@ -19,37 +19,32 @@
 		<?php
 		if ( have_rows('other_links') ) :
 			while ( have_rows('other_links') ) : the_row();
+				$links_heading = get_sub_field('heading');
+
+				if ( have_rows('links') ) :
 		?>
 
-		<div class="content-with-image__links">
+		<?php if ( $links_heading ) : ?>
+		<h3 class="content-with-image__links-title"><?php echo esc_attr( $links_heading ); ?></h3>
+		<?php endif; ?>
 
-			<?php if ( get_sub_field('heading') ) : ?>
+		<ul class="content-with-image__links-list">
 
-			<h3 class="content-with-image__links-title"><?php the_sub_field('heading'); ?></h3>
+			<?php
+			while ( have_rows('links') ) : the_row();
+				$link = get_sub_field('link_array');
+			?>
 
-			<?php endif; ?>
+			<li class="content-with-image__links-item">
+				<a href="<?php echo esc_url( $link['url'] ); ?>"><?php echo esc_attr( $link['title'] ); ?></a>
+			</li>
 
-			<ul class="content-with-image__links-list">
+			<?php endwhile; ?>
 
-				<?php
-				if ( have_rows('links') ) :
-					while ( have_rows('links') ) : the_row();
-						$link = get_sub_field('link_array');
-				?>
-
-				<li class="content-with-image__links-item">
-					<a href="<?php echo esc_url( $link['url'] ); ?>"><?php echo esc_attr( $link['title'] ); ?></a>
-				</li>
-
-				<?php
-					endwhile;
-				endif;
-				?>
-
-			</ul><!-- .content-with-image__links-list -->
-		</div><!-- .content-with-image__links -->
+		</ul><!-- .content-with-image__links-list -->
 
 		<?php
+				endif;
 			endwhile;
 		endif;
 		?>

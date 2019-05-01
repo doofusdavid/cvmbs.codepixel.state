@@ -9,7 +9,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content" data-off-canvas-content>
 
-	<!-- content container -->
 	<div class="degree-program-container">
 
 		<?php
