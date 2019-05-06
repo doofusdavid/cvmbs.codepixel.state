@@ -33,6 +33,7 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		<?php
 		if ( have_rows('program_intro') ) :
 			while ( have_rows('program_intro') ) : the_row();
+				if ( get_sub_field('desc') ) :
 		?>
 
 		<div class="degree-program-intro program-block">
@@ -44,6 +45,7 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		</div>
 
 		<?php
+				endif;
 			endwhile;
 		endif;
 		?>
