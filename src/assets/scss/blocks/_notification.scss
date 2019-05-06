@@ -2,9 +2,29 @@
 	margin: 1.5em auto;
 	border-left: .3125em solid $cvellow;
 	box-shadow: 0 .125em .5em .125em rgba(black,.1);
+	background: white;
 	padding: 1.5em;
 
-	& > *:last-child {
-		margin-bottom: 0;
+	&__image {
+		display: none;
+	}
+
+	&__icon {
+		display: none;
+	}
+
+	&__title {
+		font-size: 1.75rem;
+		line-height: 1;
+
+		@include bpoint(40em) {
+			font-size: 2em;
+		}
+	}
+
+	&__content {
+		> *:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

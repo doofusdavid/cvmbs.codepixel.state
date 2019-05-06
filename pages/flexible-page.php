@@ -24,19 +24,13 @@ $block_path = 'elements/blocks/flexible/';
 			<div class="flexible-page-content">
 
 				<?php
-				if ( get_field('notification_msg') ) :
-
-					get_template_part( $block_path . 'notification' );
-
-				endif;
-
 				if ( have_rows('page_blocks') ) :
 
 					while ( have_rows('page_blocks') ) : the_row();
 
-						if ( get_row_layout() == 'text_editor' ) :
+						if ( get_row_layout() == 'accordion_group' ) :
 
-							get_template_part( $block_path . 'text-editor' );
+							get_template_part( $block_path . 'accordion-group' );
 
 						elseif ( get_row_layout() == 'contact_group' ) :
 
@@ -46,10 +40,6 @@ $block_path = 'elements/blocks/flexible/';
 
 							get_template_part( $block_path . 'floated-image' );
 
-						elseif ( get_row_layout() == 'quotation' ) :
-
-							get_template_part( $block_path . 'quotation' );
-
 						elseif ( get_row_layout() == 'ctas_with_image' ) :
 
 							get_template_part( $block_path . 'ctas-with-image' );
@@ -58,13 +48,21 @@ $block_path = 'elements/blocks/flexible/';
 
 							get_template_part( $block_path . 'ctas-without-image' );
 
+						elseif ( get_row_layout() == 'notification' ) :
+
+							get_template_part( $block_path . 'notification' );
+
+						elseif ( get_row_layout() == 'quotation' ) :
+
+							get_template_part( $block_path . 'quotation' );
+
+						elseif ( get_row_layout() == 'text_editor' ) :
+
+							get_template_part( $block_path . 'text-editor' );
+
 						elseif ( get_row_layout() == 'video' ) :
 
 							get_template_part( $block_path . 'video' );
-
-						elseif ( get_row_layout() == 'accordion_group' ) :
-
-							get_template_part( $block_path . 'accordion-group' );
 
 						else:
 
