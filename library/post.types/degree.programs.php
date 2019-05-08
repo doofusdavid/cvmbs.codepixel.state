@@ -44,7 +44,8 @@ function cvmbs_degree_program_init() {
         'has_archive'         =>  true, // Default: false
         'rewrite'             =>  array( 'slug' => 'degree-programs' ), // Default: true and use $post_type as slug
         'can_export'          =>  true, // Default: true
-        'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').
+        'delete_with_user'    =>  null, // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').
+        'show_in_rest'        =>  true
     );
 
     register_post_type( 'degree_program', $args );

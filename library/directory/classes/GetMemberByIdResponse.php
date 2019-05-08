@@ -4,14 +4,14 @@ class GetMemberByIdResponse
 {
 
   /**
-   * 
+   *
    * @var MemberResponse $GetMemberByIdResult
    * @access public
    */
   public $GetMemberByIdResult = null;
 
   /**
-   * 
+   *
    * @param MemberResponse $GetMemberByIdResult
    * @access public
    */

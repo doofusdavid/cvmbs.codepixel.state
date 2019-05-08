@@ -35,23 +35,11 @@
 
     );
 
-    // departments array
-    $departments = array(
-
-        '210' => 'College Office',
-        '135' => 'Clinical Sciences',
-        '172' => 'Clinicians',
-        '626' => 'Orthopaedic Research Center',
-        '208' => 'Environmental Health & Radiological Health Sciences',
-        '134' => 'Veterinary Diagnostic Lab',
-        '136' => 'Veterinary Teaching Hospital',
-        '209' => 'Microbiology, Immunology, & Pathology',
-        '205' => 'Cellular & Molecular Biology'
-
-    );
-
     // get returned data object
     $members = $directory->GetMembersBySearchNameResult->MemberResponse;
+
+    // create JSON store
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
 
 ?>
 
@@ -75,83 +63,145 @@
 
         <pre>
 
-            <?php
+        <?php
 
-                echo '<br />';
-                print_r( $departments );
+            // create storage array
+            $storage = array(
 
-                echo '<br />';
-                print_r( $getGroups );
+                'data' => array(),
+                'departments' => array(),
+                'members' => array()
 
-                // create storage array
-                $output = array(
+            );
 
-                    'members' => array()
+            // filestore metadata
+            $storage[ 'data' ] = array(
+
+                'filestore' => $filestore,
+                // 'generated' => date( 'Y m d H:i:s', filectime( $filestore ) ),
+                'modified' => date( 'Y m d H:i:s', filemtime( $filestore ) ),
+                'records'  => count( $members ),
+
+            );
+
+            // departments array
+            $storage[ 'departments' ] = array(
+
+                '134' => 'Veterinary Diagnostic Lab',
+                '135' => 'Clinical Sciences Department',
+                '136' => 'Veterinary Teaching Hospital',
+                '139' => 'Veterinary Teaching Hospital Working Group',
+                '140' => 'Clinical Sciences Department Working Group',
+                '172' => 'Clinicians',
+                '193' => 'VTH Medical Records - Read Only',
+                '203' => 'CVMBS College Office',
+                '204' => 'CVMBS Finance & Strategic Services',
+                '205' => 'Cellular & Molecular Biology',
+                '206' => 'CVMBS Molecular, Cellular & Integrative Neurosciences',
+                '207' => 'CVMBS Biomedical Sciences Dept',
+                '208' => 'CVMBS Environmental & Radiological Health Sciences Dept',
+                '209' => 'CVMBS Microbiology, Immunology & Pathology Dept',
+                '210' => 'College Office',
+                '215' => 'CVMBS Environmental & Radiological Health Sciences Dept  Working Group',
+                '539' => 'Center for Environmental Medicine',
+                '626' => 'Orthopaedic Research Center',
+                '674' => 'Center for Environmental Medicine Department',
+
+            );
+
+            // iterate over data
+            foreach( $members as $member ) {
+
+                // use member ID to find departments
+                $queryId = $member->Id;
+
+                // get department groups
+                $groups = $service->GetGroupsByMemberId(
+
+                    array( 'memberId' => $queryId )
 
                 );
 
-                // iterate
-                foreach( $members as $member ) {
+                // get contact info
+                $contacts = $service->GetMemberContactsByMemberId(
 
-                    // use member ID to find departments
-                    $queryGroups = $member->Id;
+                    array( 'id' => $queryId )
 
-                    // get department groups
-                    $groups = $service->GetGroupsByMemberId(
+                );
 
-                        array( 'memberId' => $queryGroups )
+                // get photo
+                $photos = $service->GetMemberPhotoByMemberId(
 
-                    );
+                    array( 'id' => $queryId )
 
-                    // get returned data object
-                    $memberGroups = $groups->GetGroupsByMemberIdResult->GroupResponse;
+                );
 
-                    if ( is_array( $memberGroups ) ) {
+                // get returned data object(s)
+                $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
+                $memberContacts = $contacts->GetMemberContactsByMemberIdResult->MemberContactResponse;
+                $memberPhotos   = $photos->GetMemberPhotoByMemberIdResult->MemberPhotoResponse;
 
-                        // $department = 'array';
-                        $department = $memberGroups[0]->GroupFriendlyName;
-                        $primaryGroupId = $memberGroups[0]->Id;
+                // test for department group data type
+                if ( is_array( $memberGroups ) ) {
 
-                    } else {
+                    $department = $memberGroups[0]->GroupFriendlyName;
+                    $primaryGroupId = $memberGroups[0]->Id;
 
-                        // $department = 'object';
-                        $department = $memberGroups->GroupFriendlyName;
-                        $primaryGroupId = $memberGroups->Id;
+                } else {
 
-                    }
-
-                    $output[ 'members' ][] = array(
-
-                        'ID'           => $member->Id,
-                        'eName'        => $member->EName,
-                        'firstName'    => $member->FirstName,
-                        'lastName'     => $member->LastName,
-                        // 'memberGroups' => $memberGroups,
-                        'primaryGroup' => $primaryGroupId,
-                        'department'   => $department
-
-                    );
+                    $department = $memberGroups->GroupFriendlyName;
+                    $primaryGroupId = $memberGroups->Id;
 
                 }
 
-                // prettify
-                $data = json_encode( $output, JSON_PRETTY_PRINT );
+                // test for contact info data type
+                if ( is_array( $memberContacts ) ) {
 
-                echo '<br />';
-                print_r( $data );
+                    $phone = $memberContacts[0]->PhoneNumber;
 
-            ?>
+                } else {
 
-        </pre>
+                    $phone = $memberContacts->PhoneNumber;
 
-        <pre>
+                }
 
-            <?php
+                // setup variables
+                $email = strtolower( $member->EmailAddress );
+                $name  = $member->FirstName . ' ' . $member->LastName;
 
-                echo '<br />';
-                print_r( $members );
+                // push to members array
+                $storage[ 'members' ][] = array(
 
-            ?>
+                    'memberID'        => $member->Id,
+                    'eName'           => $member->EName,
+                    'firstName'       => $member->FirstName,
+                    'lastName'        => $member->LastName,
+                    'fullName'        => $member->FirstName . ' ' . $member->LastName,
+                    'email'           => strtolower( $member->EmailAddress ),
+                    'title'           => $member->EmployeeTitle,
+                    'primaryGroupID'  => $primaryGroupId,
+                    'groups'          => $memberGroups,
+                    'department'      => $department,
+                    'phone'           => $phone,
+                    'contactInfo'     => $memberContacts,
+                    'photo'           => $memberPhotos
+
+                );
+
+            }
+
+            // prettify
+            $data = json_encode( $storage, JSON_PRETTY_PRINT );
+
+            // send data to json store
+            file_put_contents( $filestore, $data );
+
+            echo '<br />';
+            print_r( $memberPhotos );
+            echo '<br />';
+            print_r( $data );
+
+        ?>
 
         </pre>
 

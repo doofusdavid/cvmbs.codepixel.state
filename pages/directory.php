@@ -8,46 +8,15 @@
 
 <?php
 
-    // set WSDL service URL
-    $serviceURL = 'http://www.cvmbs.colostate.edu/directoryservice/DirectoryService.svc?wsdl';
-
-    // instantiate DirectoryService
-    $service = new SoapClient( $serviceURL );
-
-    // output list of functions
-    $response = $service->__getFunctions();
-
-    // set static query
-    $query = $_GET[ 'query' ];
-
-    // test for value
-    if ( !$query ) {
-
-        $query = ' ';
-        // $query = 'dev';
-
-    }
-
-    // output magic
-    $directory = $service->GetMembersBySearchName(
-
-        array( 'searchName' => $query )
-
-    );
-
-    // store in normalized array
-    $data    = json_encode( $directory, JSON_PRETTY_PRINT );
-    $members = json_encode( $directory, JSON_PRETTY_PRINT );
-
     // create json store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
 
-    // send data to json store
-    // file_put_contents( $filestore, $members );
+    // convert store to data
+    $getdata     = file_get_contents( $filestore );
+    $membersdata = json_decode( $getdata );
 
-    // revise array data
-    $data    = $directory->GetMembersBySearchNameResult->MemberResponse;
-    $members = $directory->GetMembersBySearchNameResult->MemberResponse;
+    // setup data object
+    $members = $membersdata->members;
 
 ?>
 
@@ -94,6 +63,7 @@
         <!-- table -->
         <table id="directory-records" class="sloaded">
 
+            <!-- sortable header -->
             <thead>
 
                 <tr>
@@ -110,7 +80,7 @@
 
                     </th>
 
-                    <th>
+                    <th width="120">
 
                         Phone
 
@@ -125,51 +95,26 @@
                 </tr>
 
             </thead>
+            <!-- END sortable header -->
 
+            <!-- data table -->
             <tbody>
 
                 <?php
 
                     foreach ( $members as $member ) {
 
-                        $query = $member->Id;
-
-                        // output magic
-                        $groups = $service->GetGroupsByMemberId(
-
-                            array( 'memberId' => $query )
-                            // array( 'memberId' => '904' ) 12 affiliations
-
-                        );
-
-                        // setup returned data object
-                        $memberGroups = $groups->GetGroupsByMemberIdResult->GroupResponse;
-
-                        // test for array or object
-                        if ( is_array( $memberGroups ) ) {
-
-                            // $department = 'array';
-                            $department = $memberGroups[0]->GroupFriendlyName;
-                            $primaryGroupId = $memberGroups[0]->Id;
-
-                        } else {
-
-                            // $department = 'object';
-                            $department = $memberGroups->GroupFriendlyName;
-                            $primaryGroupId = $memberGroups->Id;
-
-                        }
-
-                        $ename      = $member->EName;
-                        $lastName   = $member->LastName;
-                        $firstName  = $member->FirstName;
-                        $eMail      = strtolower( $member->EmailAddress );
-                        $phone      = $member->MemberContacts->MemberContactResponse->PhoneNumber;
+                        $query      = $member->memberID;
+                        $ename      = $member->eName;
+                        $lastName   = $member->lastName;
+                        $firstName  = $member->firstName;
+                        $eMail      = strtolower( $member->email );
+                        $phone      = $member->contactInfo;
                         // $memberId   = $member->Id;
-                        // $department = $member->DepartmentGroup;
+                        $department = $member->department;
 
-                        // $results .= '<tr class="record"><td>' . $firstName . ' ' . $lastName . '</td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $memberId . '</td><td>' . $department . '</td></tr>';
-                        $results .= '<tr class="record"><td>' . $firstName . ' ' . $lastName . '</td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                        // $results .= '<tr class="record"><td>' . $firstName . ' ' . $lastName . '</td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                        $results .= '<tr class="record"><td><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $firstName . ' ' . $lastName . '</a></td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td></td><td>' . $department . '</td></tr>';
 
                     }
 
@@ -178,6 +123,7 @@
                 ?>
 
             </tbody>
+            <!-- END data table -->
 
         </table>
         <!-- END table -->
@@ -198,13 +144,12 @@
         </div>
         <!-- END info -->
 
-        <pre>
+        <pre class="hide">
 
             <?php
 
-                // print_r( $output );
                 echo '<br />';
-                print_r( $data );
+                print_r( $members );
 
             ?>
 
