@@ -6,15 +6,22 @@
     // styles
     #department-billboard {
 
-        @include fullscreen( fixed, 10, false, hidden );
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        z-index: 1;
 
         @include flex-v-c-h-c( false );
 
-        @include hide;
+        width: 100vw;
+        height: 50vh;
 
-        overflow: hidden;
+        // @include fill( $cvnavy, 0.365 );
 
-        // @include fill( $app05, 0.000 );
+        @include gradient( 180deg, red, 1.000, 0%, $cvnavy, 0.000, 100% );
 
         -webkit-filter: blur( 0px );
                 filter: blur( 0px );

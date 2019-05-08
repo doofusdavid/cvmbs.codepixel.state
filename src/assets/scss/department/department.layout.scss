@@ -6,23 +6,24 @@
     // styles
     #site-layout.department {
 
-        position: fixed;
+        position: relative;
 
-        top: -1rem;
-        right: -1rem;
-        bottom: -1rem;
-        left: -1rem;
+        // top: -1rem;
+        // right: -1rem;
+        // bottom: -1rem;
+        // left: -1rem;
 
-        width: calc( 100vw + 2rem );
-        height: calc( 100vh + 2rem );
+        // width: calc( 100vw + 2rem );
+        // height: calc( 100vh + 2rem );
 
         overflow: scroll;
 
         background: {
 
             repeat: no-repeat;
-            size: cover;
-            position: center center;
+            size: contain;
+            position: top center;
+            attachment: fixed;
 
         }
 
