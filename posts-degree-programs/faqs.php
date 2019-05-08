@@ -76,8 +76,6 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 			</div><!-- .program-blocks -->
 
 		<?php
-			get_template_part( $block_path . 'financial' );
-
 			get_template_part( $block_path . 'visit-foco' );
 
 			endwhile;

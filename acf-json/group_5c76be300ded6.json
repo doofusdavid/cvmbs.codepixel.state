@@ -737,7 +737,7 @@
         },
         {
             "key": "field_5c7d701dac97d",
-            "label": "Tuition & Financial Aid",
+            "label": "Tuition and Financial Aid",
             "name": "tuition_financial_aid",
             "type": "group",
             "instructions": "",
@@ -763,7 +763,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Tuition & Financial Aid",
+                    "default_value": "Tuition and Financial Aid",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -854,5 +854,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556657757
+    "modified": 1557350696
 }

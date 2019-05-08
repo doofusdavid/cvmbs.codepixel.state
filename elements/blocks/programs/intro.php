@@ -43,9 +43,9 @@ if ( have_rows('program_intro') ) :
 		<?php
 		if ( $terms ) :
 			if ( $terms[0]->slug == 'undergraduate' ) :
-				echo '<h2>' . __('Concentrations', 'cvmbsPress') . '</h2>';
+				echo '<h2>' . __('Concentrations', 'cvmbsPress') . ' (' . count( $children ) . ')</h2>';
 			elseif ( $terms[0]->slug == 'graduate' ) :
-				echo '<h2>' . __('Specializations', 'cvmbsPress') . '</h2>';
+				echo '<h2>' . __('Specializations', 'cvmbsPress') . ' (' . count( $children ) . ')</h2>';
 			endif;
 		endif;
 
