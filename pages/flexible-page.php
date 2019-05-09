@@ -17,9 +17,7 @@ $block_path = 'elements/blocks/flexible/';
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<div class="flexible-page-header">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</div><!-- .flexible-page-header -->
+			<?php get_template_part( $block_path . 'page-header' ); ?>
 
 			<div class="flexible-page-content">
 
