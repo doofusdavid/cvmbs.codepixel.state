@@ -405,6 +405,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5cd5ac2cd9876",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "(optional)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "wpautop"
+                        },
+                        {
                             "key": "field_5caba3d86612a",
                             "label": "Form",
                             "name": "form",
@@ -854,5 +873,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557350696
+    "modified": 1557507166
 }
