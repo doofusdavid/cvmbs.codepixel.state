@@ -13,4 +13,6 @@
 
     require_once( 'taxonomy/departments.php' );
 
+    require_once( 'taxonomy/relationships.php' );
+
 ?>
