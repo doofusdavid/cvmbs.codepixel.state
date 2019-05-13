@@ -24,6 +24,7 @@ function cvmbs_degree_type_taxonomy() {
 		// The default settings of `$publicly_queryable`, `$show_ui`, and `$show_in_nav_menus` are inherited from `$public`.
 		'public'             =>  true,
 		'show_admin_column'  =>  true, // allow automatic creation of taxonomy columns on associated post-types table
+		'show_in_rest'       =>  true,
 		'hierarchical'       =>  true,
 		'labels'             => $labels,
 		'rewrite'            =>  array( 'slug' => 'degree-type' )

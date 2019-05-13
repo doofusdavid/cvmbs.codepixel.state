@@ -29,7 +29,7 @@ function create_academic_level_taxonomy() {
 		'show_in_nav_menus'  =>  true,
 		'show_in_quick_edit' =>  true, // if not set, defaults to value of show_ui argument
 		'show_admin_column'  =>  true, // allow automatic creation of taxonomy columns on associated post-types table
-		'description'        => '', // a description of the taxonomy
+		'show_in_rest'       =>  true,
 		'hierarchical'       =>  true,
 		'labels'             => $labels,
 		'query_var'          => '', // default: $taxonomy
