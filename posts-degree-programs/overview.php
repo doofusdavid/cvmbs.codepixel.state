@@ -54,7 +54,7 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 		$children = get_children( array(
 			'post_parent' => $post->ID,
 			'post_status' => 'publish',
-			'orderby'     => 'title',
+			'orderby'     => 'menu_order',
 			'order'       => 'ASC'
 		) );
 
@@ -81,7 +81,7 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 					$grandchildren = get_children( array(
 						'post_parent' => $child->ID,
 						'post_status' => 'publish',
-						'orderby'     => 'title',
+						'orderby'     => 'menu_order',
 						'order'       => 'ASC'
 					) );
 
