@@ -69,7 +69,7 @@
     </section>
     <!-- END department.billboard -->
 
-    <?php get_template_part( 'elements/homepage/department/content/content.department.build' ); ?>
+    <?php get_template_part( 'elements/homepage/department/content/content.department' ); ?>
 
     <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
