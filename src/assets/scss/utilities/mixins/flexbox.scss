@@ -346,6 +346,25 @@
 
         }
 
+        // vertical column -> top -> h + right
+        @mixin flex-v-t-h-st( $inline ) {
+
+            @if $inline {
+
+                display: inline-flex;
+
+            } @else {
+
+                display: flex;
+
+            }
+
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+
+        }
+
         // vertical column -> center -> h + center
         @mixin flex-v-c-h-c( $inline ) {
 

@@ -26,6 +26,12 @@
 
 		</head>
 
-		<body <?php body_class(); ?>>
+		<?php
+
+			$site_type = get_field( 'site_type', 'options' );
+
+		?>
+
+		<body <?php body_class(); ?> data-site-type="<?php echo $site_type; ?>">
 
 		<?php get_template_part( 'elements/layout/layout.header' ); ?>

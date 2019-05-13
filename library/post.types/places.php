@@ -34,6 +34,7 @@
 				'show_ui' 				=> true,
 				'show_in_nav_menus' 	=> false,
 				'show_in_admin_bar' 	=> false,
+				'show_in_rest'			=> true,
 				'query_var' 			=> true,
 				'can_export' 			=> true,
 				'rewrite' 				=> array( 'slug' => 'places', 'with_front' => false ),

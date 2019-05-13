@@ -1,0 +1,152 @@
+// stylesheet :: department homepage intro/quick links
+
+    // settings
+    $intro : 1rem;
+
+    // styles
+    #department-banner {
+
+        position: relative;
+
+        @include flex-h-j-v-s( false );
+
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.165 );
+
+        @include fill( white, 0.000 );
+
+        // intro
+        .introduction-text {
+
+            padding: 0 2rem 0 0;
+
+            @include font( $industry, 0.875rem, 600 );
+
+            @include typo( 1.5rem, 0.055em );
+
+        }
+
+        // links
+        .link-box {
+
+            @include hide;
+
+            min-width: 16rem;
+            margin: -7rem 0 0 2rem;
+            // margin: 0 0 0 2rem;
+            padding: 0 0 0 0;
+
+            list-style: none;
+
+            // link
+            .link-item {
+
+                display: block;
+
+                width: 100%;
+                margin: 0 0 1rem 0;
+
+                // last child
+                &:last-child {
+
+                    margin: 0 0 0 0;
+
+                }
+
+                // first child
+                &:nth-child( 41 ) {
+
+                    // link
+                    a {
+
+                        border-color: $roarange;
+
+                        @include fill( $roarange, 0.825 );
+
+                    }
+
+                }
+
+                // first child
+                &:nth-child( 42 ) {
+
+                    // link
+                    a {
+
+                        border-color: lighten( $cvnavy, 7.5% );
+
+                        @include fill( lighten( $cvnavy, 7.5% ), 0.525 );
+
+                    }
+
+                }
+
+                // first child
+                &:nth-child( 43 ) {
+
+                    // link
+                    a {
+
+                        border-color: $cvellow;
+
+                        @include fill( $cvellow, 0.825 );
+
+                    }
+
+                }
+
+                // first child
+                &:nth-child( 44 ) {
+
+                    // link
+                    a {
+
+                        border-color: $blue;
+
+                        @include fill( $blue, 0.825 );
+
+                    }
+
+                }
+
+                // link
+                a {
+
+                    @include flex-h-c-v-c( false );
+
+                    width: 100%;
+                    height: 3rem;
+                    padding: 0.0625rem 0 0 0;
+
+                    // border: 1px solid;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 0.5rem, 0.045em );
+
+                    @include color( $rite-lite, 0.000 );
+
+                    @include fill( white, 0.915 );
+                    @include fill( $g135, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                    @include shadowbox( 1rem, 3.5rem, black, 0.465 );
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $cvellow, 0.000 );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

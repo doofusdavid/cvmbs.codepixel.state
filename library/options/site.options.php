@@ -41,6 +41,16 @@
 
     		));
 
+			// homepage
+			acf_add_options_sub_page( array(
+
+				'page_title' 	=> 'Homepage Options',
+				'menu_title' 	=> 'Homepage Options',
+				'parent_slug'   => 'site_options',
+				'menu_slug' 	=> 'homepage_options',
+
+			));
+
         }
 
         $cvmbs_research_map = array(
@@ -56,7 +66,7 @@
 
 		);
 
-        acf_add_options_page( $cvmbs_research_map );
+        // acf_add_options_page( $cvmbs_research_map );
 
 	}
 

@@ -6,81 +6,53 @@
     // styles
     #department-billboard {
 
-        position: fixed;
-
-        top: 0;
-        right: 0;
-        left: 0;
-
-        z-index: 1;
-
-        @include flex-v-c-h-c( false );
+        @include flex-v-b-h-s( false );
 
         width: 100vw;
-        height: 50vh;
-
-        // @include fill( $cvnavy, 0.365 );
+        padding: 40vw 0 0 0;
 
         @include gradient( 180deg, red, 1.000, 0%, $cvnavy, 0.000, 100% );
 
-        -webkit-filter: blur( 0px );
-                filter: blur( 0px );
+        // title
+        #homepage-title {
 
-        transition: all 0ms linear 120ms;
+            @include flex-h-s-v-b( false );
 
-        // menu open
-        .site-menu-open & {
+            padding: 0 0 2rem 5rem;
 
-            -webkit-filter: blur( 16px );
-                    filter: blur( 16px );
+            color: white;
 
-            transition: all 0ms linear 0ms;
+            // title
+            .site-title {
 
-        }
+                margin: 0 2rem 0 0;
+                padding: 1rem 2rem 1rem 0;
 
-        // layers
-        #billboard-artwork-layers {
+                border-right: 2px solid $cvellow;
 
-            @include fullscreen( absolute, 10, true, hidden );
+                @include font( $klavislim, 2rem, 400 );
 
-            top: -2rem;
-            right: -2rem;
-            bottom: -2rem;
-            left: -2rem;
+                @include typo( 2.5rem, 0.085em );
 
-            z-index: 200;
-
-            width: calc( 100vw + 4rem );
-            min-height: calc( 100vh + 4rem );
-            margin: 0;
-            padding: 2rem 2rem 2rem 2rem;
-
-            // common
-            .layer {
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                background: {
-
-                    repeat: no-repeat;
-                    size: cover;
-                    position: center center;
-
-                }
+                @include text( $up, right );
 
             }
 
-        }
+            // text
+            .site-description {
 
-        // placeholder
-        #homepage-build {
+                @include flex-h-s-v-b( true );
 
-            @include hide;
+                width: 20rem;
+                height: 7rem;
+                margin: 0 0 0 0;
+                padding: 0 0 1.25rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include typo( 1.25rem, 0.065em );
+
+            }
 
         }
 

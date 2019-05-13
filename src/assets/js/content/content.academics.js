@@ -1036,7 +1036,8 @@ export var academicsFX = {
 
             // return items
             // url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?department=32',
-            url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?filter[department]=environmental-health-and-radiological-sciences',
+            // url: 'http://cvmbs.codepixel.state/wp-json/wp/v2/degree-program/?filter[department]=environmental-health-and-radiological-sciences',
+            url: 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/degree_program/?filter[department]=environmental-health-and-radiological-sciences',
 
             type: 'GET',
 

@@ -1,8 +1,8 @@
 
-<!-- header -->
-<header id="site-header" class="ui-element layout-element" role="banner">
+<?php $site_type = get_field( 'site_type', 'options' ); ?>
 
-    <?php $site_type = get_field( 'site_type', 'options' ); ?>
+<!-- header -->
+<header id="site-header" class="header <?php echo $site_type; ?>" role="banner">
 
     <?php get_template_part( 'elements/brand/brand.rams' ); ?>
 

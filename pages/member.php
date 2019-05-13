@@ -46,7 +46,7 @@
 
     // get returned data object
     $data = $directory->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
-    $contacts = $memberContacts->$GetMemberContactsByMemberIdResult->MemberContactResponse;
+    // $contacts = $memberContacts->$GetMemberContactsByMemberIdResult->MemberContactResponse;
 
     // prettify
     // $data = json_encode( $test, JSON_PRETTY_PRINT );

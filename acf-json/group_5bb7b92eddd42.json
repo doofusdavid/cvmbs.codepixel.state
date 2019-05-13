@@ -229,7 +229,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_5c3f576f2256e",
@@ -313,105 +313,6 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
-        },
-        {
-            "key": "field_5cc21b980e399",
-            "label": "Visit Fort Collins",
-            "name": "visit_foco",
-            "type": "group",
-            "instructions": "Used on Degree Program pages.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "college"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5cc21bc60e39a",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5cc21bcd0e39b",
-                    "label": "Description",
-                    "name": "desc",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "wpautop"
-                },
-                {
-                    "key": "field_5cc21bd70e39c",
-                    "label": "CTA's",
-                    "name": "ctas",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 1,
-                    "max": 0,
-                    "layout": "row",
-                    "button_label": "Add CTA",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cc21c130e39d",
-                            "label": "Link",
-                            "name": "link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
-                        }
-                    ]
-                }
-            ]
         }
     ],
     "location": [
@@ -446,5 +347,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556226470
+    "modified": 1557431595
 }

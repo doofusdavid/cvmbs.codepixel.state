@@ -1,0 +1,168 @@
+// stylesheet :: department homepage giving
+
+    // settings
+    $giving : 1rem;
+
+    // styles
+    #department-giving {
+
+        position: relative;
+
+        @include flex-h-e-v-t( false );
+
+        height: 50vh;
+
+        @include fill( $nite, 0.000 );
+
+        // design
+        .design-layer {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 20;
+
+            width: 100%;
+            height: 100%;
+
+            // common
+            .layer {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+            // image
+            .image {
+
+                z-index: 10;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+            }
+
+            // color
+            .color {
+
+                z-index: 20;
+
+                @include fill( $dark, 0.365 );
+
+            }
+
+        }
+
+        // content
+        .content-layer {
+
+            position: relative;
+
+            z-index: 100;
+
+            @include flex-v-b-h-s( false );
+
+            width: 50vw;
+            height: 100%;
+            padding: 0 5rem 5rem 5rem;
+
+            @include fill( $dark, 0.085 );
+
+            background: {
+
+                image:
+
+                    linear-gradient(
+
+                        0deg,
+                        transparentize( $g140, 0.385 ) 0%,
+                        transparent 80%
+
+                    )
+
+                ;
+
+            }
+
+            // headline
+            .headline {
+
+                margin: 0 0 1rem 0;
+
+                @include font( $klavislim, 2rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 3rem, 0.085em );
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // text
+            .text {
+
+                margin: 0 0 2rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include text( none );
+
+                @include typo( 1.5rem, 0.035em );
+
+            }
+
+            // button
+            .content-button {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.75rem, 0.135em );
+
+                @include color( white, 0.000 );
+
+                @include fill( white, 0.985 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( $g140, 0.000 );
+
+                    cursor: pointer;
+
+                }
+
+            }
+
+        }
+
+    }
