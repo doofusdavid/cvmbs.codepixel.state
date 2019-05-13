@@ -26,7 +26,7 @@
     }
 
     // setup REST API request
-    $requestURL  = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/place?department=' . $department . '&per_page=4' );
+    $requestURL  = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/place?department=' . $department . '&per_page=4&_embed' );
     $data        = wp_remote_retrieve_body( $requestURL );
     $places      = json_decode( $data );
 
@@ -103,7 +103,7 @@
 
                     // echo $permalink . '<br />' . $placename . '<br />' . $thumbnail . '<br />';
 
-                    $placesdata .= '<article class="article" data-place="' . $permalink . '"><div class="thumb-artwork" style="background-image:url( ' . $thumbnail . ' )"></div><div class="thumb-overlay"></div><header><span class="place-title ' . $lines . '">' . $placename . '</span><a href=" ' . $permalink . ' " class="place-link">view facility</a></header></article>';
+                    $placesdata .= '<article class="article" data-place="' . $permalink . '"><div class="thumb-artwork" style="background-image:url( ' . $thumbnail . ' )"></div><div class="thumb-overlay"></div><header><span class="place-title ' . $lines . '">' . $placename . '</span><a href=" ' . $permalink . ' " class="place-link">learn more</a></header></article>';
 
                 }
 

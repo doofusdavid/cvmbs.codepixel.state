@@ -90,11 +90,20 @@
 
                     @include flex-h-s-v-c( false );
 
-                    @include font( $industry, 0.875rem, 500 );
+                    @include font( $industry, 0.875rem, 600 );
 
-                    @include typo( 1.5rem, 0.035em );
+                    @include typo( 2rem, 0.035em );
 
                     @include color( $cvellow, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include color( white, 0.000 );
+
+                    }
 
                 }
 

@@ -108,7 +108,7 @@
                     <!-- link -->
                     <a href="<?php echo $place_link; ?>" class="place-link">
 
-                        view facility
+                        learn more
 
                     </a>
                     <!-- END link -->
