@@ -58,7 +58,7 @@
     <!-- END text -->
 
     <!-- button -->
-    <a href="#" class="link-button">
+    <a href="/degree_programs" class="link-button">
 
         learn more
 
@@ -88,16 +88,6 @@
             echo $degree_programs;
 
         ?>
-
-        <!-- <pre> -->
-
-            <?php
-
-                // print_r( $programs );
-
-            ?>
-
-        <!-- </pre> -->
 
     </div>
     <!-- END undergraduate -->

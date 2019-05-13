@@ -176,10 +176,10 @@
         facilitiesUI.init();
 
         // news load
-        newsUI.init();
+        // newsUI.init();
 
         // news interact
-        newsFX.init();
+        // newsFX.init();
 
         // display content
         site.ui.layout.velocity( 'fadeIn', {

@@ -1,14 +1,34 @@
 <?php
 
-    $places_query = array(
+    // get site path
+    $siteinfo = get_blog_details();
 
-        'post_type' => 'place',
-        // 'orderby'   => 'rand',
-        'posts_per_page' => 4
+    // parse URL for site path
+    $siteurl = str_replace( '/', '', $siteinfo->path );
 
-    );
+    // set department ID for REST API tasks
+    if ( $siteurl == 'bms' ) {
 
-    // $places = new WP_Query( $places_query );
+        $department = '53';
+
+    } else if ( $siteurl == 'cs' ) {
+
+        $department = '54';
+
+    } else if ( $siteurl == 'erhs' ) {
+
+        $department = '55';
+
+    } else if ( $siteurl == 'mip' ) {
+
+        $department = '56';
+
+    }
+
+    // setup REST API request
+    $requestURL  = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/place?department=' . $department . '&per_page=4' );
+    $data        = wp_remote_retrieve_body( $requestURL );
+    $places      = json_decode( $data );
 
 ?>
 
@@ -55,27 +75,10 @@
 
             <?php
 
-                $request  = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/place/?filter[department]=environmental-health-and-radiological-sciences&per_page=4' );
-                $data     = wp_remote_retrieve_body( $request );
-                $places   = json_decode( $data );
-
-            ?>
-
-            <!-- <pre> -->
-
-                <?php
-
-                    // print_r( $places );
-
-                ?>
-
-            <!-- </pre> -->
-
-            <?php
-
                 foreach( $places as $place ) {
 
                     $permalink = $place->link;
+
                     if ( $place->featured_media ) {
 
                         $thumbnail = $place->featured_media;
@@ -85,11 +88,22 @@
                         $thumbnail = 'null';
 
                     }
+
                     $placename = $place->title->rendered;
+
+                    if ( strlen( $placename ) > 40 ) {
+
+                        $lines = 'multiple-lines';
+
+                    } else {
+
+                        $lines = 'single-line';
+
+                    }
 
                     // echo $permalink . '<br />' . $placename . '<br />' . $thumbnail . '<br />';
 
-                    $placesdata .= '<article class="article" data-place="' . $permalink . '"><div class="thumb-artwork" style="background-image:url( ' . $thumbnail . ' )"></div><div class="thumb-overlay"></div><header><span class="place-title">' . $placename . '</span><a href=" ' . $permalink . ' " class="place-link">view facility</a></header></article>';
+                    $placesdata .= '<article class="article" data-place="' . $permalink . '"><div class="thumb-artwork" style="background-image:url( ' . $thumbnail . ' )"></div><div class="thumb-overlay"></div><header><span class="place-title ' . $lines . '">' . $placename . '</span><a href=" ' . $permalink . ' " class="place-link">view facility</a></header></article>';
 
                 }
 

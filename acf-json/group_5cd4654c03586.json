@@ -159,7 +159,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "this is the department homepage\r\nresearch section placeholder content",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 2,
@@ -178,7 +178,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
@@ -253,7 +253,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "this is the department homepage\r\nservice and outreach section placeholder content",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 2,
@@ -272,7 +272,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
@@ -347,7 +347,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "this is the department homepage\r\ngiving section placeholder content",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 2,
@@ -366,7 +366,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
@@ -452,5 +452,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557772120
+    "modified": 1557778258
 }
