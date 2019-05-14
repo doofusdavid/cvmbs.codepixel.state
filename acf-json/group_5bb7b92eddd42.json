@@ -288,6 +288,86 @@
                     "maxlength": "",
                     "rows": 2,
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_5cda179d8e216",
+                    "label": "Facebook Link",
+                    "name": "facebook_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/www.facebook.com\/home.php?#!\/pages\/Fort-Collins-CO\/CSU-College-of-Veterinary-Medicine-and-bms\/296364382382",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17c38e217",
+                    "label": "Twitter Link",
+                    "name": "twitter_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/twitter.com\/csuvetmedbiosci",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17da8e218",
+                    "label": "LinkedIn Link",
+                    "name": "linkedin_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/www.linkedin.com\/groups?gid=2792630&trk=myg_ugrp_ovr",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17e78e219",
+                    "label": "YouTube Link",
+                    "name": "youtube_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.youtube.com\/csuvetmedbioscience\/",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda18148e21a",
+                    "label": "Instagram Link",
+                    "name": "instagram_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.instagram.com\/csuvetmedbiosci",
+                    "placeholder": ""
                 }
             ]
         }
@@ -324,5 +404,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557795732
+    "modified": 1557796900
 }

@@ -1,6 +1,19 @@
+<?php
+
+    // footer contact info group
+    $footer_contact_info = get_field( 'footer_contact_info', 'options' );
+
+    // social media links
+    $facebook   = $footer_contact_info[ 'facebook_link' ];
+    $twitter    = $footer_contact_info[ 'twitter_link' ];
+    $instagram  = $footer_contact_info[ 'instagram_link' ];
+    $youtube    = $footer_contact_info[ 'youtube_link' ];
+    $linkedin   = $footer_contact_info[ 'linkedin_link' ];
+
+?>
 
 <!-- button -->
-<a href="#" class="social-media button facebook">
+<a href="<?php echo $facebook; ?>" class="social-media button facebook">
 
     <svg x="0px" y="0px" viewBox="-786 630 32 32" enable-background="new -786 630 32 32" xml:space="preserve">
 
@@ -12,7 +25,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="#" class="social-media button twitter">
+<a href="<?php echo $twitter; ?>" class="social-media button twitter">
 
     <svg x="0px" y="0px" viewBox="-786 630 32 32" enable-background="new -786 630 32 32" xml:space="preserve">
 
@@ -24,7 +37,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="#" class="social-media button linkedin">
+<a href="<?php echo $linkedin; ?>" class="social-media button linkedin">
 
     <svg x="0px" y="0px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 
@@ -40,7 +53,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="#" class="social-media button instagram">
+<a href="<?php echo $instagram; ?>" class="social-media button instagram">
 
     <svg x="0px" y="0px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 
@@ -56,7 +69,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="#" class="social-media button youtube">
+<a href="<?php echo $youtube; ?>" class="social-media button youtube">
 
     <svg x="0px" y="0px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 
