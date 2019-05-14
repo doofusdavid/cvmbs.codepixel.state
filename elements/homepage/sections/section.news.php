@@ -34,38 +34,38 @@ $articles    = json_decode( $data );
 
             <?php
 
-                foreach( $articles as $article ) {
+            foreach( $articles as $article ) {
 
-                    $permalink = $article->link;
-                    $thumbnail = $article->featured_image->source_url;
-                    $title     = $article->title->rendered;
-                    $excerpt   = $article->excerpt->rendered;
+                $permalink = $article->link;
+                $thumbnail = $article->featured_image->source_url;
+                $title     = $article->title->rendered;
+                $excerpt   = $article->excerpt->rendered;
 
-                    $content .= '
+                $content .= '
 
-                        <article class="article card" data-url="' . $permalink . '">
+                    <article class="article card" data-url="' . $permalink . '">
 
-                            <header class="header">
+                        <header class="header">
 
-                                <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
+                            <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
 
-                            </header>
+                        </header>
 
-                            <section class="content">
+                        <section class="content">
 
-                                <h2 class="title">' . $title . '</h2>
+                            <h2 class="title">' . $title . '</h2>
 
-                                <span class="text">' . $excerpt . '</span>
+                            <span class="text">' . $excerpt . '</span>
 
-                            </section>
+                        </section>
 
-                        </article>
+                    </article>
 
-                    ';
+                ';
 
-                }
+            }
 
-                echo $content;
+            echo $content;
 
             ?>
 
