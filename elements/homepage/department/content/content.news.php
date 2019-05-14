@@ -1,34 +1,34 @@
 <?php
 
-    // get site path
-    $siteinfo = get_blog_details();
+// get site path
+$siteinfo = get_blog_details();
 
-    // parse URL for site path
-    $siteurl = str_replace( '/', '', $siteinfo->path );
+// parse URL for site path
+$siteurl = str_replace( '/', '', $siteinfo->path );
 
-    // set department ID for REST API tasks
-    if ( $siteurl == 'bms' ) {
+// set department ID for REST API tasks
+if ( $siteurl == 'bms' ) {
 
-        $department = 'biomedical-sciences';
+    $department = 'biomedical-sciences';
 
-    } else if ( $siteurl == 'cs' ) {
+} else if ( $siteurl == 'cs' ) {
 
-        $department = 'clinical-sciences';
+    $department = 'clinical-sciences';
 
-    } else if ( $siteurl == 'erhs' ) {
+} else if ( $siteurl == 'erhs' ) {
 
-        $department = 'environmental-and-radiological-health-sciences';
+    $department = 'environmental-and-radiological-health-sciences';
 
-    } else if ( $siteurl == 'mip' ) {
+} else if ( $siteurl == 'mip' ) {
 
-        $department = 'microbiology-immunology-and-pathology';
+    $department = 'microbiology-immunology-and-pathology';
 
-    }
+}
 
-    // setup REST API request
-    $requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=' . $department . '&per_page=3' );
-    $data        = wp_remote_retrieve_body( $requestURL );
-    $articles    = json_decode( $data );
+// setup REST API request
+$requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=' . $department . '&per_page=3' );
+$data        = wp_remote_retrieve_body( $requestURL );
+$articles    = json_decode( $data );
 
 ?>
 
