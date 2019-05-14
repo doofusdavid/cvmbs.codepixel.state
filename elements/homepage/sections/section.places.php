@@ -57,6 +57,16 @@
                 $placename = get_the_title();
                 $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 
+                if ( strlen( $placename ) > 25 ) {
+
+                    $lines = 'multiple-lines';
+
+                } else {
+
+                    $lines = 'single-line';
+
+                }
+
                 if ( $placelink_status ) {
 
                     $place_link_url = get_field( 'place_website' );
@@ -90,7 +100,7 @@
                 <!-- END overlay -->
 
                 <!-- header -->
-                <header>
+                <header class="header <?php echo $lines; ?>">
 
                     <!-- title -->
                     <span class="place-title">

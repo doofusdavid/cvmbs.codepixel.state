@@ -37,6 +37,15 @@
 
             @include color( $dark, 0.125 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include text( $up, left );
+
+            }
+
             // before
             &:before {
 
@@ -139,7 +148,7 @@
             // mobile
             @include breakpoint ( small only ) {
 
-                padding: 5rem 1rem 0rem 1rem;
+                padding: 2rem 1rem 0rem 1rem;
 
             }
 
