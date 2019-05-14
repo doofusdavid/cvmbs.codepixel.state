@@ -11,19 +11,19 @@ $articles    = json_decode( $data );
 <div class="article-container" tabindex="-1">
 
     <!-- title -->
-    <button class="section-title scroll-trigger" data-section="news">
+    <a href="https://cvmbs.source.colostate.edu/" class="section-title" data-section="news">
 
         news and updates
 
         <!-- link -->
-        <span href="https://cvmbs.source.colostate.edu/" class="title-link">
+        <span class="title-link">
 
             view all
 
         </span>
         <!-- END link -->
 
-    </button>
+    </a>
     <!-- END title -->
 
     <!-- feature + sidebar -->
@@ -43,7 +43,7 @@ $articles    = json_decode( $data );
 
                 $content .= '
 
-                    <article class="article card" data-url="' . $permalink . '">
+                    <a href="' . $permalink . '" class="article card" data-url="' . $permalink . '">
 
                         <header class="header">
 
@@ -59,7 +59,7 @@ $articles    = json_decode( $data );
 
                         </section>
 
-                    </article>
+                    </a>
 
                 ';
 

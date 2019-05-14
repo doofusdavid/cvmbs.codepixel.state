@@ -29,6 +29,7 @@ if ( $siteurl == 'bms' ) {
 $requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=' . $department . '&per_page=3' );
 $data        = wp_remote_retrieve_body( $requestURL );
 $articles    = json_decode( $data );
+$sourceURL   = 'https://cvmbs.source.colostate.edu/tag/' . $department;
 
 ?>
 
@@ -36,19 +37,19 @@ $articles    = json_decode( $data );
 <div class="article-container" tabindex="-1">
 
     <!-- title -->
-    <button class="section-title scroll-trigger" data-section="news">
+    <a href="<?php echo $sourceURL; ?>" class="section-title scroll-trigger" data-section="news">
 
         news and updates
 
         <!-- link -->
-        <span href="https://cvmbs.source.colostate.edu/" class="title-link">
+        <span class="title-link">
 
             view all
 
         </span>
         <!-- END link -->
 
-    </button>
+    </a>
     <!-- END title -->
 
     <!-- feature + sidebar -->

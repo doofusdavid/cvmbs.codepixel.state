@@ -120,7 +120,7 @@
             // text
             .text {
 
-                margin: 0 0 2rem 0;
+                margin: 0 0 1rem 0;
 
                 @include font( $industry, 0.875rem, 600 );
 
@@ -130,35 +130,41 @@
 
             }
 
+            // buttons
+            .research-content {
+
+                @include flex-h-j-v-t( false );
+
+                flex-wrap: wrap;
+
+            }
+
             // button
-            .content-button {
+            .research-resource {
 
-                @include flex-h-c-v-c( false );
+                position: relative;
 
-                height: 4rem;
-                margin: 0;
-                padding: 0.0625rem 1.5rem 0 1.5rem;
+                @include flex-h-s-v-c( false );
 
-                @include font( $klavislim, 1rem, 400 );
+                width: calc( 50% - 0.5rem );
+                height: 2rem;
+                margin: 1rem 0 0 0;
+                padding: 0.0625rem 0 0 0;
 
-                @include text( $up );
+                // border-left: 2px solid $cvellow;
 
-                @include typo( 0.75rem, 0.135em );
+                @include font( $industry, 0.875rem, 600 );
+
+                @include text( none, left );
+
+                @include typo( 0.75rem, 0.045em );
 
                 @include color( white, 0.000 );
 
-                @include fill( white, 0.985 );
+                // before
+                &:before {
 
-                @include shadowbox( 1rem, 4rem, black, 0.385 );
-
-                transition: all 220ms linear 0ms;
-
-                // hover state
-                &:hover {
-
-                    @include fill( $blue, 0.000 );
-
-                    cursor: pointer;
+                    @include codicon( 2rem, 2rem, 0.5rem, 0.5rem, $cvellow, '\ED6F' );
 
                 }
 

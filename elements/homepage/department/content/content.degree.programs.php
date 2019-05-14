@@ -69,7 +69,7 @@
 <!-- END description -->
 
 <!-- programs -->
-<div id="department-degree-programs" class="degree-program-content">
+<div id="department-degree-programs-list" class="degree-program-content">
 
     <!-- undergraduate -->
     <div class="program-list undergraduate-programs">

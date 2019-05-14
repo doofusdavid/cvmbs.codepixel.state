@@ -81,13 +81,16 @@
 
                     if ( $place->featured_media ) {
 
-                        $thumbnail = $place->featured_media;
+                        // $thumbnail = $place->featured_media;
+                        // $thumbnail = $place->_embedded->{'wp:featuredmedia'}->media_details->sizes->full->source_url;
 
                     } else {
 
-                        $thumbnail = 'null';
+                        // $thumbnail = 'null';
 
                     }
+
+                    $thumbnail = $place->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->full->source_url;
 
                     $placename = $place->title->rendered;
 

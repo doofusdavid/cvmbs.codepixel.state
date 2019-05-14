@@ -80,8 +80,8 @@
             @include flex-v-b-h-s( false );
 
             width: 50vw;
-            height: 100%;
-            padding: 0 5rem 5rem 5rem;
+            min-height: 100%;
+            padding: 5rem 5rem 5rem 5rem;
 
             @include fill( $orange-m, 0.085 );
 
@@ -119,7 +119,7 @@
             // text
             .text {
 
-                margin: 0 0 2rem 0;
+                margin: 0 0 1rem 0;
 
                 @include font( $industry, 0.875rem, 600 );
 
@@ -131,20 +131,30 @@
 
             }
 
+            // buttons
+            .content-buttons {
+
+                @include flex-h-j-v-t( false );
+
+                flex-wrap: wrap;
+
+            }
+
             // button
             .content-button {
 
                 @include flex-h-c-v-c( false );
 
-                height: 4rem;
-                margin: 0;
-                padding: 0.0625rem 1.5rem 0 1.5rem;
+                width: calc( 50% - 0.5rem );
+                height: 3rem;
+                margin: 1rem 0 0 0;
+                padding: 0.0625rem 1rem 0 1rem;
 
-                @include font( $klavislim, 1rem, 400 );
+                @include font( $industry, 0.75rem, 600 );
 
-                @include text( $up );
+                @include text( $up, center );
 
-                @include typo( 0.75rem, 0.135em );
+                @include typo( 0.75rem, 0.045em );
 
                 @include color( white, 0.000 );
 

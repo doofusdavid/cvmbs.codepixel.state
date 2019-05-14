@@ -133,11 +133,11 @@
                 },
                 {
                     "key": "field_5cd5e82c08aaf",
-                    "label": "Research Content",
+                    "label": "Research Resources",
                     "name": "research_content",
                     "type": "group",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -147,19 +147,46 @@
                     "layout": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5cd5e881db277",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "textarea",
+                            "key": "field_5cdb062a7b9de",
+                            "label": "Display Research Resources?",
+                            "name": "display",
+                            "type": "true_false",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "this is the department homepage\r\nresearch section placeholder content",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5cd5e881db277",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "textarea",
+                            "instructions": "optional",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb062a7b9de",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "areas of expertise",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 2,
@@ -170,9 +197,17 @@
                             "label": "Text",
                             "name": "text",
                             "type": "textarea",
-                            "instructions": "provide 20-30 words of text content for the Research homepage layer",
-                            "required": 1,
-                            "conditional_logic": 0,
+                            "instructions": "optional",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb062a7b9de",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -185,19 +220,52 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_5cd5f05eab9ef",
-                            "label": "Button",
-                            "name": "button",
-                            "type": "link",
+                            "key": "field_5cdb209768d8e",
+                            "label": "Resources",
+                            "name": "resources",
+                            "type": "repeater",
                             "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb062a7b9de",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Research Resource",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cdb20c468d8f",
+                                    "label": "Resource",
+                                    "name": "resource",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
                         },
                         {
                             "key": "field_5cd5f070ab9f0",
@@ -206,7 +274,15 @@
                             "type": "image",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb062a7b9de",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -231,7 +307,7 @@
                     "name": "outreach_content",
                     "type": "group",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -241,13 +317,40 @@
                     "layout": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5cdb121437b68",
+                            "label": "Display Service + Outreach Content?",
+                            "name": "display",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_5cd9a32b3ed9d",
                             "label": "Title",
                             "name": "title",
                             "type": "textarea",
                             "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb121437b68",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -260,38 +363,75 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_5cd9a32b3ed9e",
+                            "key": "field_5cdb18ed8dc48",
                             "label": "Text",
                             "name": "text",
                             "type": "textarea",
-                            "instructions": "provide 20-30 words of text content for the Research homepage layer",
-                            "required": 1,
-                            "conditional_logic": 0,
+                            "instructions": "optional",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb121437b68",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.",
+                            "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "br"
                         },
                         {
-                            "key": "field_5cd9a32b3ed9f",
-                            "label": "Button",
-                            "name": "button",
-                            "type": "link",
+                            "key": "field_5cdb12a537b69",
+                            "label": "Links",
+                            "name": "links",
+                            "type": "repeater",
                             "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb121437b68",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Link",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cdb12b937b6a",
+                                    "label": "Link",
+                                    "name": "service_outreach_link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
                         },
                         {
                             "key": "field_5cd9a32b3eda0",
@@ -300,7 +440,15 @@
                             "type": "image",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb121437b68",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -325,7 +473,7 @@
                     "name": "giving_content",
                     "type": "group",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -335,13 +483,40 @@
                     "layout": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5cdb0c7bec1f1",
+                            "label": "Layout",
+                            "name": "layout",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Full (text w\/ button)",
+                            "ui_off_text": "Basic (button only)"
+                        },
+                        {
                             "key": "field_5cd9a3123ed97",
                             "label": "Title",
                             "name": "title",
                             "type": "textarea",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb0c7bec1f1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -360,7 +535,15 @@
                             "type": "textarea",
                             "instructions": "provide 20-30 words of text content for the Research homepage layer",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb0c7bec1f1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -452,5 +635,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557778258
+    "modified": 1557865221
 }

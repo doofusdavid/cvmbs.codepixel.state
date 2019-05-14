@@ -4,7 +4,7 @@ PORT: 1870
 # BrowserSync
 BROWSERSYNC:
     # local server
-    url: "http://vetmed.test/"
+    url: "http://cvmbs.codepixel.state/"
 
 # autoprefixer
 COMPATIBILITY:

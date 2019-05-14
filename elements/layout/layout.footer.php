@@ -1,9 +1,12 @@
 <?php
 
+    // set global blog variable
     global $blog_id;
 
+    // set dynamic blog id
     $currentsite = $blog_id;
 
+    // menu
     $locations   = get_nav_menu_locations();
     $left_menu   = get_term( $locations[ 'footer-menu-left' ], 'nav_menu' );
     $center_menu = get_term( $locations[ 'footer-menu-center' ], 'nav_menu' );

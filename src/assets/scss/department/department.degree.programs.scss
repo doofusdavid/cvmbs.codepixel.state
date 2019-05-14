@@ -14,6 +14,14 @@
 
         @include fill( $dark, 0.000 );
 
+        @include gradient(
+
+            0deg,
+            $g140, 0.365, 0%,
+            $g140, 1.000, 60%
+
+        );
+
         // content
         .degree-program-content {
 
@@ -69,12 +77,14 @@
 
                 @include fill( $px-orange, 0.000 );
 
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
             }
 
         }
 
         // degrees
-        #department-degree-programs {
+        #department-degree-programs-list {
 
             flex-basis: 40%;
 

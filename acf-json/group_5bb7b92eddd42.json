@@ -181,7 +181,7 @@
             "key": "field_5c3f576f2256e",
             "label": "Homepage Places",
             "name": "site_homepage_places",
-            "type": "repeater",
+            "type": "post_object",
             "instructions": "select 4 places to feature on the homepage",
             "required": 0,
             "conditional_logic": [
@@ -198,35 +198,14 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 4,
-            "max": 4,
-            "layout": "row",
-            "button_label": "Add Place",
-            "sub_fields": [
-                {
-                    "key": "field_5c3f57c52256f",
-                    "label": "Homepage Place",
-                    "name": "site_homepage_place",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "place"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                }
-            ]
+            "post_type": [
+                "place"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
         },
         {
             "key": "field_5cda0d16304de",
@@ -404,5 +383,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557796900
+    "modified": 1557850451
 }
