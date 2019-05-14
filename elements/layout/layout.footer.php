@@ -1,5 +1,9 @@
 <?php
 
+    global $blog_id;
+
+    $currentsite = $blog_id;
+
     $locations   = get_nav_menu_locations();
     $left_menu   = get_term( $locations[ 'footer-menu-left' ], 'nav_menu' );
     $center_menu = get_term( $locations[ 'footer-menu-center' ], 'nav_menu' );
@@ -47,6 +51,21 @@
         <!-- links.column -->
         <column id="footer-center" class="footer-column links wide">
 
+            <?php switch_to_blog( 1 ); ?>
+
+            <?php
+
+                $locations   = get_nav_menu_locations();
+                $left_menu   = get_term( $locations[ 'footer-menu-left' ], 'nav_menu' );
+                $center_menu = get_term( $locations[ 'footer-menu-center' ], 'nav_menu' );
+                $right_menu  = get_term( $locations[ 'footer-menu-right' ], 'nav_menu' );
+
+                $left_menu_name   = $left_menu->name;
+                $center_menu_name = $center_menu->name;
+                $right_menu_name  = $right_menu->name;
+
+            ?>
+
             <span class="links-header">
 
                 <?php echo $center_menu_name; ?>
@@ -72,6 +91,13 @@
         </column>
         <!-- END links.column -->
 
+        <?php
+
+            $giving_link = get_field( 'giving_button_link', 'options' );
+            $footer_contact_info = get_field( 'footer_contact_info', 'options' );
+
+        ?>
+
         <!-- links.column -->
         <column id="footer-drawer" class="footer-column content">
 
@@ -83,17 +109,67 @@
 
             <div id="contact-info">
 
-                <!-- {{> contact.footer }} -->
+                <span class="contact-label">
+
+                    mailing address
+
+                </span>
+
+                <span class="contact-text">
+
+                    <?php echo $footer_contact_info[ 'mailing_address' ]; ?>
+
+                </span>
+
+                <span class="contact-label">
+
+                    phone
+
+                </span>
+
+                <span class="contact-text">
+
+                    <?php echo $footer_contact_info[ 'phone' ]; ?>
+
+                </span>
+
+                <span class="contact-label">
+
+                    connect on social media
+
+                </span>
+
+                <div class="social-media-links">
+
+                    <?php get_template_part( 'elements/buttons/buttons.social.media' ); ?>
+
+                </div>
 
             </div>
 
-            <div class="social-media-links">
+            <!-- campaign button -->
+            <a id="campaign-button" class="ui-button special" href="https://advancing.colostate.edu/CVMBS">
 
-                {{> social.media }}
+                <!-- text.main -->
+                <span class="text main">
 
-            </div>
+                    state your purpose
 
-            <!-- {{> button.campaign }} -->
+                </span>
+                <!-- END text.main -->
+
+                <!-- text.small -->
+                <span class="text small">
+
+                    the campaign for colorado state university
+
+                </span>
+                <!-- END text.small -->
+
+            </a>
+            <!-- END campaign button -->
+
+            <?php switch_to_blog( $currentsite ); ?>
 
         </column>
         <!-- END links.column -->

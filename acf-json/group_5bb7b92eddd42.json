@@ -62,33 +62,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5bc00fe0dcd24",
-            "label": "Site Billboard Text",
-            "name": "site_billboard_text",
-            "type": "textarea",
-            "instructions": "enter a 20-30 word paragraph to display alongside the site's title in the homepage billboard",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "department"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5bb7d1239d4c6",
             "label": "Site Title Line Break?",
             "name": "site_title_line_break",
@@ -205,33 +178,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5bc00682941e4",
-            "label": "Site Introductory Text",
-            "name": "site_intro_text",
-            "type": "textarea",
-            "instructions": "enter a 1-2 sentence paragraph of snappy, clever, marketing copy for the homepage",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "department"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "br"
-        },
-        {
             "key": "field_5c3f576f2256e",
             "label": "Homepage Places",
             "name": "site_homepage_places",
@@ -283,18 +229,18 @@
             ]
         },
         {
-            "key": "field_5c6edbe17f641",
-            "label": "Special Unit Homepage Layout",
-            "name": "special_unit_layout",
-            "type": "radio",
-            "instructions": "select a homepage layout",
+            "key": "field_5cda0d16304de",
+            "label": "Footer Contact Info",
+            "name": "footer_contact_info",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
-                        "value": "special"
+                        "value": "college"
                     }
                 ]
             ],
@@ -303,16 +249,47 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "template": "Template Layout",
-                "builder": "Page Builder Layout"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value",
-            "save_other_choice": 0
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5cda122e304df",
+                    "label": "Mailing Address",
+                    "name": "mailing_address",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "1601 Campus Delivery\r\nFort Collins, CO 80523-1601",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5cda12fcac3b5",
+                    "label": "Phone",
+                    "name": "phone",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "CVMBS Main (970) 491-7051\r\nVeterinary Teaching Hospital (970) 297-5000",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                }
+            ]
         }
     ],
     "location": [
@@ -347,5 +324,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557431595
+    "modified": 1557795732
 }
