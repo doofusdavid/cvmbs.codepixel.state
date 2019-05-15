@@ -54,7 +54,7 @@
         <!-- links.column -->
         <column id="footer-center" class="footer-column links wide">
 
-            <?php switch_to_blog( 1 ); ?>
+            <?php if ( is_multisite() ) switch_to_blog( 1 ); ?>
 
             <?php
 
@@ -172,7 +172,7 @@
             </a>
             <!-- END campaign button -->
 
-            <?php switch_to_blog( $currentsite ); ?>
+            <?php if ( is_multisite() ) switch_to_blog( $currentsite ); ?>
 
         </column>
         <!-- END links.column -->
