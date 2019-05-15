@@ -46,6 +46,9 @@
     // entry meta for posts
     require_once( 'library/entry-meta.php' );
 
+    // custom metaboxes
+    require_once( 'library/metaboxes.php' );
+
     // enqueue scripts
     require_once( 'library/enqueue-scripts.php' );
 
