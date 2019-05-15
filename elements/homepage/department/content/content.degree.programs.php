@@ -4,7 +4,7 @@
     $department_options   = get_field( 'department_homepage_options' );
 
     // text content
-    $degree_programs_text = $department_options[ 'degree_programs_content' ];
+    $degree_programs_content = $department_options[ 'degree_programs_content' ];
 
     // get site path
     $siteinfo = get_blog_details();
@@ -49,13 +49,17 @@
     </h3>
     <!-- END title -->
 
+    <?php if ( $degree_programs_content ) : ?>
+
     <!-- text -->
     <p>
 
-        <?php echo $degree_programs_text; ?>
+        <?php echo $degree_programs_content; ?>
 
     </p>
     <!-- END text -->
+
+    <?php endif; ?>
 
     <!-- button -->
     <a href="/degree_programs" class="link-button">
