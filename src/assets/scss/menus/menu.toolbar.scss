@@ -30,6 +30,17 @@
 
         transition: background-color 360ms linear 0ms;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            top: 4rem;
+
+            width: 4rem;
+
+            transform: translate3d( 4rem, 0, 0 );
+
+        }
+
         // hover state
         &:hover {
 

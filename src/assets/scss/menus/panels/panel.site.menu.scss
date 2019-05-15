@@ -37,6 +37,13 @@
 
         @include fill( white, 1.000 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: calc( 100vh - 4rem );
+
+        }
+
         // menu open state
         .is-open & {
 

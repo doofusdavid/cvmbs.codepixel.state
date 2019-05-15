@@ -27,6 +27,14 @@
 
         -webkit-backface-visibility: visible;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            width: 4rem;
+            height: 4rem;
+
+        }
+
         // line
         &:after {
 
@@ -283,6 +291,16 @@
             @include text( $up );
 
             @include color( white, 0.225 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 4rem;
+                height: 4rem;
+
+                @include font( $industry, 0.5625rem, 700 );
+
+            }
 
             // base
             &.open {

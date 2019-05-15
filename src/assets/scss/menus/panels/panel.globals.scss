@@ -33,6 +33,13 @@
 
         @include fill( $app05, 0.345 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: calc( 100vh - 4rem );
+
+        }
+
         // inactive state
         &.inactive {
 
@@ -45,6 +52,13 @@
             transform: translate3d( 28rem, 0, 0 );
 
             transition: all 240ms $ocirc 60ms;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                transform: translate3d( 100%, 0, 0 );
+
+            }
 
         }
 
@@ -92,6 +106,13 @@
         @include text( $up );
 
         @include fill( white, 0.945 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: 4rem;
+
+        }
 
     }
 

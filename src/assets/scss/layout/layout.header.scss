@@ -57,6 +57,14 @@
 
         -webkit-app-region: drag;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: 4rem;
+            padding: 0 4rem 0 4rem;
+
+        }
+
         // secondary
         .page-template-secondary &,
         .single-degree-program &,
