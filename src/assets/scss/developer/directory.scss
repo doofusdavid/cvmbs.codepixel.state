@@ -128,6 +128,8 @@
             // row
             .record {
 
+                @include font( $industry, 0.75rem, 600 );
+
                 transition: all 320ms $outex 0ms;
 
                 // hover state
@@ -403,6 +405,14 @@
                     border-radius: 32rem !important;
 
                     @include fill( $cvnavy, 0.685 );
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
 
                 }
 
