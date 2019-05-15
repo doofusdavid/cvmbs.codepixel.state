@@ -128,7 +128,11 @@
             // row
             .record {
 
-                @include font( $industry, 0.75rem, 600 );
+                // height: 2rem;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include typo( inherit, -0.005em );
 
                 transition: all 320ms $outex 0ms;
 
@@ -142,11 +146,23 @@
                     cursor: pointer;
 
                     // email
-                    .email-link {
+                    .email-link,
+                    .member-link {
 
                         @include color( $cvellow, 0.000 );
 
+                        transition: all 320ms $outex 0ms;
+
                     }
+
+                }
+
+                // member
+                .member-link {
+
+                    @include color( $g140, 0.000 );
+
+                    transition: all 320ms $outex 0ms;
 
                 }
 
