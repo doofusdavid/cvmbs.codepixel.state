@@ -170,6 +170,8 @@
 
             <?php endwhile; ?>
 
+            <?php wp_reset_postdata(); ?>
+
         </section>
         <!-- END alumni.slides -->
 

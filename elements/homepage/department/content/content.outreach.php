@@ -6,6 +6,9 @@
     // research content
     $outreach_content = $department_options[ 'outreach_content' ];
 
+    // links
+    $links = $outreach_content[ 'links' ];
+
 ?>
 
 <!-- visual FX -->
@@ -39,17 +42,45 @@
 
     </span>
 
+    <?php if ( $outreach_content[ 'text' ] ) : ?>
+
     <span class="text">
 
         <?php echo $outreach_content[ 'text' ]; ?>
 
     </span>
 
-    <a href="<?php echo $outreach_content[ 'button' ][ 'url' ]; ?>" class="content-button">
+    <?php endif; ?>
 
-        <?php echo $outreach_content[ 'button' ][ 'title' ]; ?>
+    <div class="content-buttons">
 
-    </a>
+    <?php
+
+        foreach( $links as $link ) {
+
+            $title = get_sub_field( 'title' );
+
+            // $title   = $link[ 'title' ];
+            $title   = $link[ 'service_outreach_link' ][ 'title' ];
+            $linkURL = $link[ 'service_outreach_link' ][ 'url' ];
+
+            $content .= '
+
+                <a href="' . $linkURL . '" class="content-button">
+
+                    ' . $title . '
+
+                </a>
+
+            ';
+
+        }
+
+        echo $content;
+
+    ?>
+
+    </div>
 
 </div>
 <!-- END content -->

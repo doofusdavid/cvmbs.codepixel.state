@@ -34,6 +34,13 @@
 
         transition: all 0ms linear 0ms;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 2rem 2rem 2rem 2rem;
+
+        }
+
         // common
         .footer-row {
 
@@ -94,6 +101,16 @@
             @include flex-h-j-v-s( false );
 
             width: 100%;
+            padding: 0 0 2rem 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 0 0 2rem 0;
+
+            }
 
             // columns
             .footer-column {
@@ -103,13 +120,19 @@
                 min-height: 14rem;
                 margin: 0;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+                    min-height: 0;
+                    margin: 0 0 2rem 0;
+
+                }
+
                 // content
                 &.content {
 
                     @include flex-v-t-h-s( false );
-
-                    width: 18rem;
-                    padding: 0 0 0 1rem;
 
                     // header
                     .links-header {
@@ -125,19 +148,18 @@
                 // links
                 &.links {
 
-                    width: 15rem;
                     padding: 0 0 0 0;
 
                     &.default {
 
-                        width: 15rem;
+                        // width: 15rem;
 
                     }
 
                     // narrow column
                     &.narrow {
 
-                        width: 12rem;
+                        // width: 12rem;
 
                         .link {
 
@@ -150,7 +172,7 @@
                     // wide column
                     &.wide {
 
-                        width: 20rem;
+                        // width: 20rem;
 
                     }
 
@@ -222,21 +244,21 @@
 
                 @include flex-v-t-h-s( true );
 
-                order: 2;
+                // order: 2;
 
             }
 
             // center
             #footer-center {
 
-                order: 1;
+                // order: 1;
 
             }
 
             // right
             #footer-right {
 
-                order: 3;
+                // order: 3;
 
             }
 
@@ -253,7 +275,7 @@
                     flex-grow: 1;
 
                     width: 100%;
-                    margin: 0 0 0.5rem 0;
+                    margin: 0 0 1rem 0;
 
                     // labels
                     .contact-label {
@@ -316,6 +338,28 @@
 
             @include fill( $nite, 0.445 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                height: auto;
+                padding: 1rem 1rem 1rem 1rem;
+
+            }
+
+            // links
+            #footer-links {
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+
+                }
+
+            }
+
             // links
             .link-list {
 
@@ -323,6 +367,13 @@
 
                 height: 1rem;
                 margin: 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    // margin: 0 0 1rem 0;
+
+                }
 
                 // link
                 .link {
@@ -342,6 +393,15 @@
                     transition: $all220;
 
                     cursor: pointer;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 0 0.5rem 0 0.5rem;
+
+                        @include font( $industry, 0.5625rem, 600 );
+
+                    }
 
                     // hover state
                     &:hover {
@@ -383,6 +443,15 @@
 
                 @include color( white, 0.245 );
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    display: block;
+
+                    @include font( $industry, 0.5625rem, 600 );
+
+                }
+
                 em {
 
                     @include flex-h-c-v-c( true );
@@ -408,6 +477,13 @@
                 height: 2rem;
                 margin: 0;
                 padding: 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include hide;
+
+                }
 
                 &:hover {
 

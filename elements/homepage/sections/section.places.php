@@ -1,14 +1,7 @@
 <?php
 
-    $places_query = array(
-
-        'post_type' => 'place',
-        // 'orderby'   => 'rand',
-        'posts_per_page' => 4
-
-    );
-
-    $places = new WP_Query( $places_query );
+    // $places = get_field( 'site_homepage_places', 'options' );
+    $post_objects = get_field( 'site_homepage_places', 'options' );
 
 ?>
 
@@ -53,30 +46,42 @@
         <!-- news.feed -->
         <section id="facilities-carousel" class="article-cards ui-news">
 
+            <?php foreach( $post_objects as $post ) : ?>
+
+            <?php setup_postdata( $post ); ?>
+
             <?php
 
-                while ( $places->have_posts() ) : $places->the_post();
+                $placelink_status = get_field( 'place_link' );
 
-                $place_name  = get_the_title();
+                $placename = get_the_title();
                 $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 
-                $place_link_status = get_field( 'place_link' );
+                if ( strlen( $placename ) > 25 ) {
 
-                if ( $place_link_status ) {
-
-                    $place_link_url = get_field( 'place_website' );
-                    $place_link     = $place_link_url[ 'url' ];
+                    $lines = 'multiple-lines';
 
                 } else {
 
-                    $place_link  = get_the_permalink();
+                    $lines = 'single-line';
+
+                }
+
+                if ( $placelink_status ) {
+
+                    $place_link_url = get_field( 'place_website' );
+                    $placelink      = $place_link_url[ 'url' ];
+
+                } else {
+
+                    $placelink  = get_the_permalink();
 
                 }
 
             ?>
 
             <!-- post -->
-            <article class="article" data-place="<?php the_permalink(); ?>">
+            <a href="<?php echo $placelink; ?>" class="article">
 
                 <!-- artwork -->
                 <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
@@ -95,31 +100,37 @@
                 <!-- END overlay -->
 
                 <!-- header -->
-                <header>
+                <header class="header <?php echo $lines; ?>">
 
                     <!-- title -->
                     <span class="place-title">
 
-                        <?php echo $place_name; ?>
+                        <?php
+
+                            echo $placename;
+
+                        ?>
 
                     </span>
                     <!-- END title -->
 
                     <!-- link -->
-                    <a href="<?php echo $place_link; ?>" class="place-link">
+                    <span class="place-link">
 
                         learn more
 
-                    </a>
+                    </span>
                     <!-- END link -->
 
                 </header>
                 <!-- END header -->
 
-            </article>
+            </a>
             <!-- END post -->
 
-            <?php endwhile; ?>
+            <?php endforeach; ?>
+
+            <?php wp_reset_postdata(); ?>
 
         </section>
         <!-- END news.feed -->

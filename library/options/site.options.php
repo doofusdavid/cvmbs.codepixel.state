@@ -31,25 +31,7 @@
 
         if ( $site_type == 'department' ) {
 
-            // degree programs
-            acf_add_options_sub_page( array(
-
-    			'page_title' 	=> 'Homepage Degree Programs',
-    			'menu_title' 	=> 'Degree Programs Info',
-    			'parent_slug'   => 'site_options',
-    			'menu_slug' 	=> 'degree_programs',
-
-    		));
-
-			// homepage
-			acf_add_options_sub_page( array(
-
-				'page_title' 	=> 'Homepage Options',
-				'menu_title' 	=> 'Homepage Options',
-				'parent_slug'   => 'site_options',
-				'menu_slug' 	=> 'homepage_options',
-
-			));
+            //
 
         }
 

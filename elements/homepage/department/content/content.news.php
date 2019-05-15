@@ -1,34 +1,35 @@
 <?php
 
-    // get site path
-    $siteinfo = get_blog_details();
+// get site path
+$siteinfo = get_blog_details();
 
-    // parse URL for site path
-    $siteurl = str_replace( '/', '', $siteinfo->path );
+// parse URL for site path
+$siteurl = str_replace( '/', '', $siteinfo->path );
 
-    // set department ID for REST API tasks
-    if ( $siteurl == 'bms' ) {
+// set department ID for REST API tasks
+if ( $siteurl == 'bms' ) {
 
-        $department = 'biomedical-sciences';
+    $department = 'biomedical-sciences';
 
-    } else if ( $siteurl == 'cs' ) {
+} else if ( $siteurl == 'cs' ) {
 
-        $department = 'clinical-sciences';
+    $department = 'clinical-sciences';
 
-    } else if ( $siteurl == 'erhs' ) {
+} else if ( $siteurl == 'erhs' ) {
 
-        $department = 'environmental-and-radiological-health-sciences';
+    $department = 'environmental-and-radiological-health-sciences';
 
-    } else if ( $siteurl == 'mip' ) {
+} else if ( $siteurl == 'mip' ) {
 
-        $department = 'microbiology-immunology-and-pathology';
+    $department = 'microbiology-immunology-and-pathology';
 
-    }
+}
 
-    // setup REST API request
-    $requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=' . $department . '&per_page=3' );
-    $data        = wp_remote_retrieve_body( $requestURL );
-    $articles    = json_decode( $data );
+// setup REST API request
+$requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?filter[tag]=' . $department . '&per_page=3' );
+$data        = wp_remote_retrieve_body( $requestURL );
+$articles    = json_decode( $data );
+$sourceURL   = 'https://cvmbs.source.colostate.edu/tag/' . $department;
 
 ?>
 
@@ -36,19 +37,19 @@
 <div class="article-container" tabindex="-1">
 
     <!-- title -->
-    <button class="section-title scroll-trigger" data-section="news">
+    <a href="<?php echo $sourceURL; ?>" class="section-title scroll-trigger" data-section="news">
 
         news and updates
 
         <!-- link -->
-        <span href="https://cvmbs.source.colostate.edu/" class="title-link">
+        <span class="title-link">
 
             view all
 
         </span>
         <!-- END link -->
 
-    </button>
+    </a>
     <!-- END title -->
 
     <!-- feature + sidebar -->
@@ -59,38 +60,38 @@
 
             <?php
 
-                foreach( $articles as $article ) {
+            foreach( $articles as $article ) {
 
-                    $permalink = $article->link;
-                    $thumbnail = $article->featured_image->source_url;
-                    $title     = $article->title->rendered;
-                    $excerpt   = $article->excerpt->rendered;
+                $permalink = $article->link;
+                $thumbnail = $article->featured_image->source_url;
+                $title     = $article->title->rendered;
+                $excerpt   = $article->excerpt->rendered;
 
-                    $content .= '
+                $content .= '
 
-                        <article class="article card" data-url="' . $permalink . '">
+                    <article class="article card" data-url="' . $permalink . '">
 
-                            <header class="header">
+                        <header class="header">
 
-                                <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
+                            <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
 
-                            </header>
+                        </header>
 
-                            <section class="content">
+                        <section class="content">
 
-                                <h2 class="title">' . $title . '</h2>
+                            <h2 class="title">' . $title . '</h2>
 
-                                <span class="text">' . $excerpt . '</span>
+                            <span class="text">' . $excerpt . '</span>
 
-                            </section>
+                        </section>
 
-                        </article>
+                    </article>
 
-                    ';
+                ';
 
-                }
+            }
 
-                echo $content;
+            echo $content;
 
             ?>
 

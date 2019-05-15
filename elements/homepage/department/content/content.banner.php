@@ -1,7 +1,10 @@
 <?php
 
-    // intro
-    $site_intro_text = get_field( 'site_intro_text', 'options' );
+    // department homepage options
+    $department_options = get_field( 'department_homepage_options' );
+
+    // content variable(s)
+    $department_intro_text = $department_options[ 'department_intro_text' ];
 
 ?>
 
@@ -9,7 +12,7 @@
 <!-- introduction -->
 <div class="introduction-text">
 
-    <?php echo $site_intro_text; ?>
+    <?php echo $department_intro_text; ?>
 
 </div>
 <!-- END introduction -->

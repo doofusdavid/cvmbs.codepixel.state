@@ -37,6 +37,15 @@
 
             @include color( $dark, 0.125 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include text( $up, left );
+
+            }
+
             // before
             &:before {
 
@@ -136,6 +145,13 @@
             height: auto;
             padding: 5rem 4rem 5rem 4rem;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 2rem 1rem 0rem 1rem;
+
+            }
+
         }
 
         // feature + sidebar
@@ -145,162 +161,6 @@
 
             margin: 0;
             padding: 0;
-
-        }
-
-        // source feature --> REMOVE
-        #source-feature {
-
-            @include hide;
-
-            width: 63rem;
-            height: 28rem;
-            margin: 0;
-            padding: 1rem 1rem 1rem 1rem;
-
-            @include fill( white, 0.965 );
-
-            // article
-            #feature-article {
-
-                @include flex-h-j-v-s( false );
-
-                //image
-                .image {
-
-                    width: 36rem;
-                    height: 26rem;
-
-                    background: {
-
-                        repeat: no-repeat;
-                        size: cover;
-                        position: center -3rem;
-
-                    }
-
-                }
-
-                // content
-                .content {
-
-                    @include flex-v-t-h-s( false );
-
-                    width: 24rem;
-
-                    // title
-                    .title {
-
-                        margin: 0 0 1rem 0;
-
-                        @include font( $klavislim, 1.5rem, 400 );
-
-                        line-height: 1.75rem;
-
-                        letter-spacing: 0.065rem;
-
-                        @include text( $up );
-
-                        color: $gold;
-
-                    }
-
-                    // text
-                    .text {
-
-                        @include font( $industry, 0.875rem, 500 );
-
-                        line-height: 1.25rem;
-
-                        letter-spacing: 0.035em;
-
-                    }
-
-                }
-
-            }
-
-        }
-
-        // source sidebar --> REMOVE
-        #source-sidebar {
-
-            @include hide;
-
-            width: 22rem;
-            height: 39rem;
-            margin: 0;
-            padding: 0;
-
-            // @include fill( $dark, 0.485 );
-            @include fill( white, 0.965 );
-
-            // header
-            .header {
-
-                @include flex-h-s-v-c( false );
-
-                height: 3rem;
-                margin: 0;
-                padding: 0.125rem 1rem 0 1rem;
-
-                @include font( $klavislim, 1rem, 400 );
-
-                letter-spacing: 0.145em;
-
-                @include text( $up );
-
-                color: $gold;
-
-                @include fill( $dark, 0.465 );
-
-            }
-
-            // article
-            .article {
-
-                width: 100%;
-                height: 3rem;
-                margin: 0;
-
-                // hover state
-                &:hover {
-
-                    // title
-                    .title {
-
-                        color: $gold;
-
-                        @include fill( $nite, 0.645 );
-
-                    }
-
-                }
-
-                // title
-                .title {
-
-                    @include flex-h-s-v-c( false );
-
-                    height: 3rem;
-                    margin: 0;
-                    padding: 0.125rem 1rem 0 1rem;
-
-                    @include font( $klavika, 0.6875rem, 500 );
-
-                    line-height: 0.75rem;
-
-                    letter-spacing: 0.025em;
-
-                    color: white;
-
-                    @include fill( white, 1.000 );
-
-                    transition: all 220ms linear 0ms;
-
-                }
-
-            }
 
         }
 
@@ -315,6 +175,13 @@
             height: 100%;
             margin: 0;
             padding: 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+            }
 
             // article
             .article {
@@ -333,6 +200,13 @@
                 transform: translate3d( 0, 0, 0 );
 
                 transition: all 240ms $outex 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 1rem 2rem 1rem;
+
+                }
 
                 // hover state
                 &:hover {

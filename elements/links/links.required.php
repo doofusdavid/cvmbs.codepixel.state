@@ -5,15 +5,55 @@
     <!-- link.list -->
     <ul class="link-list">
 
-        <li class="link">Apply to CSU</li>
+        <li>
 
-        <li class="link">Contact Us</li>
+            <a class="link" href="http://admissions.colostate.edu/">
 
-        <li class="link">Disclaimer</li>
+                Apply to CSU
 
-        <li class="link">Equal Opportunity</li>
+            </a>
 
-        <li class="link">Privacy Statement</li>
+        </li>
+
+        <li>
+
+            <a class="link" href="http://colostate.edu/search/">
+
+                Search
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="link" href="http://colostate.edu/disclaimer/">
+
+                Disclaimer
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="link" href="http://www.colostate.edu/equal-opportunity/">
+
+                Equal Opportunity
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="link" href="http://colostate.edu/privacy/">
+
+                Privacy Statement
+
+            </a>
+
+        </li>
 
     </ul>
     <!-- END link.list -->
