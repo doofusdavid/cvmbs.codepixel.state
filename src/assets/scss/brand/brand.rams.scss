@@ -22,6 +22,14 @@
 
         transition: all 320ms $outex 0ms;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            width: 4rem;
+            height: 4rem;
+
+        }
+
         // border
         &:after {
 
@@ -57,6 +65,14 @@
 
             width: 4.5rem;
             height: 4.5rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 4rem;
+                height: 4rem;
+
+            }
 
             .path {
 
