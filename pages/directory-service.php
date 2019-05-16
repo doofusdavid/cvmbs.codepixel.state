@@ -43,6 +43,13 @@
     );
 
     // output magic
+    $koncarIDRequest = $service->GetMemberById(
+
+        array( 'id' => 40133 )
+
+    );
+
+    // output magic
     $koncarDataRequest = $service->GetMembersBySearchName(
 
         array( 'searchName' => 'koncar' )
@@ -61,6 +68,8 @@
     // get returned data object
     $yagerInfo = $yagerInfoRequest->GetMembersBySearchNameResult->MemberResponse;
 
+    // get returned data object
+    $koncarID   = $koncarIDRequest->GetMemberByIdResult->MemberResponse;
     // get returned data object
     $koncarData = $koncarDataRequest->GetMembersBySearchNameResult->MemberResponse;
     // get returned data object
@@ -88,6 +97,27 @@
 
         </header>
         <!-- END page header -->
+
+        <span>method => GetMemberById => 40133</span>
+
+        <pre>
+
+        <?php
+
+            // echo 'method => GetMembersBySearchName';
+
+            echo '<br  />DEFAULT RESPONSE OBJECT<br  />';
+            print_r( $koncarID );
+
+            // prettify
+            $koncar = json_encode( $koncarID, JSON_PRETTY_PRINT );
+
+            echo '<br />JSON FORMATTED OBJECT<br />';
+            print_r( $koncar );
+
+        ?>
+
+        </pre>
 
         <span>method => GetMembersBySearchName => 'yager'</span>
 

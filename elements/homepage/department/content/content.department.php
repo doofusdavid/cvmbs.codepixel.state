@@ -24,6 +24,14 @@
     </article>
     <!-- END degree.programs -->
 
+    <!-- homepage.section -->
+    <article id="department-expertise" class="homepage-section">
+
+        <?php get_template_part( 'elements/homepage/department/content/content.expertise' ); ?>
+
+    </article>
+    <!-- END homepage.section -->
+
     <?php
 
     // giving content

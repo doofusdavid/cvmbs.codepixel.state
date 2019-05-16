@@ -13,52 +13,6 @@
 
 ?>
 
-<!-- fx -->
-<div id="billboard-fx" class="ui-fx">
-
-    <!-- layer.base -->
-    <div class="layer base" style="background-image:url(<?php echo $site_image; ?>);">
-
-        <!--  -->
-
-    </div>
-    <!-- END layer.base -->
-
-    <!-- layer.blur -->
-    <div class="layer blur" style="background-image:url(<?php echo $site_image; ?>);">
-
-        <!--  -->
-
-    </div>
-    <!-- END layer.blur -->
-
-    <!-- layer.overlay -->
-    <div class="layer overlay vertical">
-
-        <!--  -->
-
-    </div>
-    <!-- END layer.overlay -->
-
-    <!-- layer.overlay -->
-    <div class="layer overlay horizontal">
-
-        <!--  -->
-
-    </div>
-    <!-- END layer.overlay -->
-
-</div>
-<!-- END fx -->
-
-<!-- headline -->
-<span id="billboard-tagline">
-
-    care for your world
-
-</span>
-<!-- END headline -->
-
 <!-- billboard.slides -->
 <section id="billboard-slides" class="ui-slides" data-section="slides" tabindex="-1">
 
@@ -110,62 +64,52 @@
                 </div>
                 <!-- END color.lite -->
 
-                <!-- pattern -->
-                <div class="slide-pattern vertical layer">
-
-                    <!--  -->
-
-                </div>
-                <!-- END pattern -->
-
-                <!-- pattern -->
-                <div class="slide-pattern horizontal layer">
-
-                    <!--  -->
-
-                </div>
-                <!-- END pattern -->
-
             </div>
             <!-- END slide.billboard -->
 
-            <!-- slide.content -->
-            <div class="slide-content">
+            <!-- slide.content.container -->
+            <div class="slide-content-container">
 
-                <!-- subheadline -->
-                <span class="line subheadline">
+                <!-- slide.content -->
+                <div class="slide-content">
 
-                    <?php echo $subheadline; ?>
+                    <!-- subheadline -->
+                    <span class="line subheadline">
 
-                </span>
-                <!-- END subheadline -->
+                        <?php echo $subheadline; ?>
 
-                <!-- headline -->
-                <span class="line headline">
+                    </span>
+                    <!-- END subheadline -->
 
-                    <?php echo $headline; ?>
+                    <!-- headline -->
+                    <span class="line headline">
 
-                </span>
-                <!-- END headline -->
+                        <?php echo $headline; ?>
 
-                <!-- description -->
-                <span class="line description">
+                    </span>
+                    <!-- END headline -->
 
-                    <?php echo $description; ?>
+                    <!-- description -->
+                    <span class="line description">
 
-                </span>
-                <!-- END description -->
+                        <?php echo $description; ?>
 
-                <!-- headline -->
-                <button class="button-link scroll-trigger" data-link="<?php echo $button_link; ?>" data-section="academics">
+                    </span>
+                    <!-- END description -->
 
-                    <?php echo $button_text; ?>
+                    <!-- headline -->
+                    <button class="button-link scroll-trigger" data-link="<?php echo $button_link; ?>" data-section="academics">
 
-                </span>
-                <!-- END headline -->
+                        <?php echo $button_text; ?>
+
+                    </span>
+                    <!-- END headline -->
+
+                </div>
+                <!-- END slide.content -->
 
             </div>
-            <!-- END slide.content -->
+            <!-- END slide.content.container -->
 
         </div>
         <!-- END container -->
@@ -179,5 +123,3 @@
 
 </section>
 <!-- END billboard.slides -->
-
-<?php get_template_part( 'elements/homepage/ui/scroll' ); ?>

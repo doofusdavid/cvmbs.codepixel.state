@@ -56,7 +56,7 @@
                     "name": "billboard_marketing_text",
                     "type": "textarea",
                     "instructions": "provide 20-25 words of snappy marketing text to appear next to the department name in the billboard content area",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "50",
@@ -118,7 +118,7 @@
                     "name": "degree_programs_content",
                     "type": "textarea",
                     "instructions": "provide 1-2 paragraphs of descriptive text to appear alongside the list of degree programs offered by the department",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -130,6 +130,149 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_5cdb372361fd6",
+                    "label": "Areas of Expertise",
+                    "name": "expertise_content",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cdb372361fd8",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "textarea",
+                            "instructions": "optional",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb372361fd7",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "areas of expertise",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5cdb372361fd9",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "textarea",
+                            "instructions": "optional",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb372361fd7",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5cdb372361fda",
+                            "label": "Areas",
+                            "name": "areas",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Research Resource",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cdb372361fdb",
+                                    "label": "Area of Expertise",
+                                    "name": "area",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5cdb372361fdc",
+                            "label": "Background",
+                            "name": "background",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cdb372361fd7",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
                 },
                 {
                     "key": "field_5cd5e82c08aaf",
@@ -220,10 +363,10 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_5cdb209768d8e",
-                            "label": "Resources",
-                            "name": "resources",
-                            "type": "repeater",
+                            "key": "field_5cdb3b8e7a1e2",
+                            "label": "Button Link",
+                            "name": "button_link",
+                            "type": "link",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
@@ -240,32 +383,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "Add Research Resource",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5cdb20c468d8f",
-                                    "label": "Resource",
-                                    "name": "resource",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                }
-                            ]
+                            "return_format": "array"
                         },
                         {
                             "key": "field_5cd5f070ab9f0",
@@ -635,5 +753,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557865221
+    "modified": 1557872781
 }

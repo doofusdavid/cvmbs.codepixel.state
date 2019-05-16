@@ -6,9 +6,6 @@
     // research content
     $research_content = $department_options[ 'research_content' ];
 
-    // resources
-    $resources = $research_content[ 'resources' ];
-
 ?>
 
 <!-- visual FX -->
@@ -56,31 +53,15 @@
 
     <?php endif; ?>
 
-    <div class="research-content">
+    <?php if ( $research_content[ 'button_link' ] ) : ?>
 
-        <?php
+    <a href="<?php echo $research_content[ 'button_link' ][ 'url' ]; ?>" class="content-button">
 
-            foreach( $resources as $resource ) {
+        <?php echo $research_content[ 'button_link' ][ 'title' ]; ?>
 
-                $title  = $resource[ 'resource' ];
+    </a>
 
-                $content .= '
-
-                    <span class="research-resource">
-
-                        ' . $title . '
-
-                    </span>
-
-                ';
-
-            }
-
-            echo $content;
-
-        ?>
-
-    </div>
+    <?php endif; ?>
 
 </div>
 <!-- END content -->

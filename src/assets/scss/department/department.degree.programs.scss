@@ -79,6 +79,8 @@
 
                 @include shadowbox( 1rem, 4rem, black, 0.385 );
 
+                @include hide;
+
             }
 
         }

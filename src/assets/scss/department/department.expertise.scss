@@ -5,15 +5,17 @@
     $billboard     : '../img/research/research.panel.00.jpg';
 
     // styles
-    #department-research {
+    #department-expertise {
 
         position: relative;
 
-        @include flex-h-e-v-t( false );
+        @include flex-h-s-v-t( false );
 
         height: 50vh;
+        height: auto;
+        // padding: 5rem 5rem 5rem 5rem;
 
-        @include fill( $cvnavy, 0.000 );
+        @include fill( $beige, 0.000 );
 
         // design
         .design-layer {
@@ -65,7 +67,7 @@
 
                 z-index: 20;
 
-                @include fill( $cvnavy, 0.465 );
+                @include fill( $beige, 0.115 );
 
             }
 
@@ -80,27 +82,10 @@
 
             @include flex-v-b-h-s( false );
 
-            width: 50vw;
             height: 100%;
-            padding: 0 5rem 5rem 5rem;
+            padding: 5rem 5rem 5rem 5rem;
 
-            @include fill( $cvnavy, 0.265 );
-
-            background: {
-
-                image:
-
-                    linear-gradient(
-
-                        0deg,
-                        transparentize( $blue, 0.585 ) 0%,
-                        transparent 80%
-
-                    )
-
-                ;
-
-            }
+            @include color( $app05, 0.125 );
 
             // headline
             .headline {
@@ -113,13 +98,14 @@
 
                 @include typo( 3rem, 0.085em );
 
-                @include color( $cvellow, 0.000 );
+                @include color( $g140, 0.000 );
 
             }
 
             // text
             .text {
 
+                width: 50%;
                 margin: 0 0 1rem 0;
 
                 @include font( $industry, 0.875rem, 600 );
@@ -131,7 +117,7 @@
             }
 
             // buttons
-            .research-content {
+            .expertise-content {
 
                 @include flex-h-j-v-t( false );
 
@@ -140,34 +126,33 @@
             }
 
             // button
-            .content-button {
+            .expertise-area {
 
-                @include flex-h-c-v-c( false );
+                position: relative;
 
-                height: 4rem;
+                @include flex-h-s-v-c( false );
+
+                flex-basis: 33.3333333%;
+
+                width: calc( 50% - 0.5rem );
+                height: 2rem;
                 margin: 1rem 0 0 0;
-                padding: 0.0625rem 1.5rem 0 1.5rem;
+                padding: 0.0625rem 0 0 0;
 
-                @include font( $klavislim, 1rem, 400 );
+                // border-left: 2px solid $cvellow;
 
-                @include text( $up );
+                @include font( $industry, 0.875rem, 600 );
 
-                @include typo( 0.75rem, 0.135em );
+                @include text( none, left );
 
-                @include color( white, 0.000 );
+                @include typo( 0.75rem, 0.045em );
 
-                @include fill( white, 0.965 );
+                @include color( $app05, 0.125 );
 
-                @include shadowbox( 1rem, 4rem, black, 0.385 );
+                // before
+                &:before {
 
-                transition: all 220ms linear 0ms;
-
-                // hover state
-                &:hover {
-
-                    @include fill( $blue, 0.000 );
-
-                    cursor: pointer;
+                    @include codicon( 2rem, 2rem, 0.5rem, 0.5rem, $g140, '\ED6F' );
 
                 }
 

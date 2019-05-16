@@ -44,6 +44,9 @@
 
     );
 
+    // photoURL
+    $photoURL = 'http://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $query;
+
     // get returned data object
     $data = $directory->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
     // $contacts = $memberContacts->$GetMemberContactsByMemberIdResult->MemberContactResponse;
@@ -98,7 +101,7 @@
             <div class="listing-profile">
 
                 <!-- photo -->
-                <div class="profile-photo">
+                <div class="profile-photo" style="background-image:url(<?php echo $photoURL; ?>);">
 
                     <!--  -->
 
