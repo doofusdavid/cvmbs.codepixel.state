@@ -161,7 +161,7 @@
         academicsUI.init();
 
         // academics interact
-        academicsFX.init();
+        // academicsFX.init();
 
         // department degree programs [ BUILD ONLY ]
         // academicsFX.department();

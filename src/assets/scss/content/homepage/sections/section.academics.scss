@@ -159,6 +159,8 @@
         // content
         .section-content {
 
+            @include hide;
+
             width: 100vw;
             height: 100vh;
 
