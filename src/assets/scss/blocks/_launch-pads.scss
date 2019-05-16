@@ -102,7 +102,7 @@
 
 			&:before {
 				content: '';
-				transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+				transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1) 3ms;
 				display: block;
 				flex-grow: 1;
 				background: rgba($sec_temp_white, .72);
@@ -130,7 +130,7 @@
 			}
 
 			&-name {
-				transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+				transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1) 3ms;
 				width: 100%;
 				max-width: 100%;
 				background: rgba($sec_temp_white, .72);

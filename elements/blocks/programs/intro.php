@@ -14,7 +14,7 @@ if ( have_rows('program_intro') ) :
 ?>
 
 <div class="degree-program-intro program-block">
-	<div class="degree-program-intro__inner">
+	<div class="degree-program-intro__content">
 
 		<div class="degree-program-intro__desc">
 			<?php the_sub_field('desc'); ?>
@@ -35,24 +35,38 @@ if ( have_rows('program_intro') ) :
 		</div><!-- .degree-program-intro__sidebar -->
 		<?php endif; ?>
 
-	</div><!-- .degree-program-intro__inner -->
+	</div><!-- .degree-program-intro__content -->
 
-	<?php if ( $children ) : ?>
+	<?php
+	if ( $children ) :
+		$grid_size = count( $children ) < 3 ? 'large' : 'small';
+	?>
+
 	<div class="degree-program-intro__grid">
 
 		<?php
 		if ( $terms ) :
 			if ( $terms[0]->slug == 'undergraduate' ) :
-				echo '<h2>' . __('Concentrations', 'cvmbsPress') . '</h2>';// ' (' . count( $children ) . ')</h2>';
-			elseif ( $terms[0]->slug == 'graduate' ) :
-				echo '<h2>' . __('Specializations', 'cvmbsPress') . '</h2>';// ' (' . count( $children ) . ')</h2>';
+		?>
+
+			<h2 class="degree-program-intro__grid-title"><?php _e( 'Concentrations', 'cvmbsPress' ); ?></h2>
+
+			<?php elseif ( $terms[0]->slug == 'graduate' ) : ?>
+
+			<h2 class="degree-program-intro__grid-title"><?php _e( 'Specializations', 'cvmbsPress' ); ?></h2>
+
+		<?php
 			endif;
 		endif;
-
-		foreach ( $children as $child ) :
-			echo '<p><a href="' . esc_url( get_permalink( $child->ID ) ) . '">' . $child->post_title . '</a></p>';
-		endforeach;
 		?>
+
+		<div class="degree-program-intro__grid-inner grid--<?php echo $grid_size; ?>">
+			<?php foreach ( $children as $child ) : ?>
+			<a href="<?php echo esc_url( get_permalink( $child->ID ) ); ?>" class="degree-program-intro__grid-item" style="background-image:url(<?php echo get_the_post_thumbnail_url(  $child->ID, 'fp-medium' ); ?>);">
+				<span class="degree-program-intro__grid-item-name"><?php echo esc_attr( $child->post_title ); ?></span>
+			</a><!-- .degree-program-intro__grid-item -->
+			<?php endforeach; ?>
+		</div><!-- .degree-program-intro__grid-inner -->
 
 	</div><!-- .degree-program-intro__grid -->
 	<?php endif; ?>
