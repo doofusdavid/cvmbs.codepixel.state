@@ -92,55 +92,6 @@
 
             @include fill( $section_color, 0.000 );
 
-            // common
-            &:before,
-            &:after {
-
-                content: '';
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-            }
-
-            // before
-            &:before {
-
-                z-index: 10;
-
-                @include gradient(
-
-                    120deg,
-                    $nite, 0.000, 0%,
-                    red, 1.000, 100%
-
-                );
-
-                opacity: 0.265;
-
-            }
-
-            // after
-            &:after {
-
-                z-index: 20;
-
-                @include gradient(
-
-                    30deg,
-                    $cvnavy, 0.000, 0%,
-                    red, 1.000, 70%
-
-                );
-
-                opacity: 0.685;
-
-            }
-
         }
 
         // title
