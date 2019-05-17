@@ -11,32 +11,11 @@
     // styles
     #alumni {
 
-        // load state
-        &[data-load='loaded'] {
-
-            //
-
-        }
-
         // container
         .article-container {
 
             width: 100vw;
             height: 100vh;
-
-        }
-
-        // image
-        .section-image {
-
-            opacity: 0.000;
-
-            // load state
-            &[data-load='loaded'] {
-
-                filter: blur( 2px ) grayscale( 0.000 );
-
-            }
 
         }
 
@@ -58,24 +37,92 @@
 
         }
 
-        // title
-        .section-title {
-
-            @include hide;
-
-            line-height: 2.5rem;
-
-            @include text( $up, center );
-
-            color: white;
-
-        }
-
         // content
         .section-content {
 
+            // content
+            .slide-layers {
+
+                @include flex-v-b-h-s( false );
+
+                width: 100vw;
+                height: 100vh;
+                padding: 5rem 5rem 5rem 5rem;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    padding: 2rem 2rem 2rem 2rem;
+
+                }
+
+                // mobile
+                @include breakpoint ( medium only ) {
+
+                    // padding:
+
+                }
+
+            }
+
+            // image
+            .image-layer {
+
+                @include fullscreen( absolute, 10, false, hidden );
+
+                // common
+                .layer {
+
+                    @include fullscreen( absolute, inherit, false, hidden );
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                }
+
+                // base
+                .base {
+
+                    z-index: 10;
+
+                }
+
+                // blur
+                .blur {
+
+                    z-index: 100;
+
+                    padding: calc( 100vh - 23rem ) 4.5rem 4.5rem 4.5rem;
+
+                    background: {
+
+                        clip: content-box;
+
+                    }
+
+                    -webkit-filter: blur( 16px );
+                            filter: blur( 16px );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: calc( 100vh - 18.5rem ) 2rem 2rem 2rem;
+
+                    }
+
+                }
+
+            }
+
             // design
             .design-layer {
+
+                @include fullscreen( absolute, 20, false, hidden );
 
                 // fx.layers
                 .fx-layer {
@@ -113,130 +160,68 @@
             }
 
             // container
-            .slider-layer {
+            .content-layer {
 
                 position: relative;
 
+                z-index: 200;
+
                 width: 100%;
-                height: 16rem;
+                // height: 16rem;
                 margin: 0;
                 padding: 0;
 
             }
 
             // slider base
-            .slider-base {
+            .title-layer {
 
                 position: absolute;
 
-                // right: 0;
-                bottom: 0;
-                left: 20rem;
+                top: 0;
+                right: 0;
 
-                @include flex-h-j-v-s( false );
+                z-index: 30;
 
-                width: 24rem;
-                height: 22rem;
+                @include flex-h-e-v-c( false );
+
+                // width: 24rem;
+                height: 3rem;
                 margin: 0;
-                padding: 3rem;
+                padding: 0 1rem 0 1rem;
 
-                @include fill( $nite, 0.765 );
+                @include font( $klavislim, 0.75rem, 500 );
 
-                // common
-                &:before,
-                &:after {
+                @include text( $up );
 
-                    // @include shadowbox( 1.5rem, 4rem, black, 0.615 );
+                @include typo( 0.75rem, 0.165em );
 
-                }
+                // @include fill( red, 0.725 );
 
-                // layer
-                &:before {
-
-                    content: '';
-
-                    position: absolute;
-
-                    left: -12rem;
-                    bottom: 6rem;
-
-                    z-index: 1;
-
-                    width: 18rem;
-                    height: 18rem;
-
-                    @include fill( white, 0.925 );
-
-                }
-
-                // layer
-                &:after {
-
-                    content: '';
-
-                    position: absolute;
-
-                    left: -16rem;
-                    bottom: -2rem;
-
-                    z-index: 0;
-
-                    width: 24rem;
-                    height: 22rem;
-
-                    @include fill( $orange, 0.265 );
-
-                }
+                @include color( $orange, 0.000 );
 
             }
 
             // slider
             .slider {
 
-                position: absolute;
 
-                bottom: 0;
-                left: 0;
-
-                z-index: 10;
 
                 @include flex-v-b-h-s( false );
 
-                width: 60vw;
+                width: 100%;
                 height: auto;
-                min-height: 16rem;
                 margin: 0;
                 padding: 4rem 3rem 3rem 3rem;
 
-                @include fill( $lights, 0.065 );
+                @include fill( $nite, 0.425 );
 
-                @include shadowbox( 1.5rem, 4rem, black, 0.615 );
+                @include shadowbox( 1.5rem, 4rem, black, 0.315 );
 
-                // quote
-                &:before {
+                // mobile
+                @include breakpoint ( small only ) {
 
-                    // content: '\201c';
-
-                    position: absolute;
-
-                    top: 1.75rem;
-                    left: 1rem;
-
-                    z-index: 1;
-
-                    @include flex-v-c-h-c( false );
-
-                    width: 4rem;
-                    height: 4rem;
-                    margin: 0;
-                    padding: 2rem 0 0 0;
-
-                    @include font( $industry, 9rem, 700, italic );
-
-                    line-height: 3rem;
-
-                    // color: transparentize( $orange, 0.565 );
-                    color: transparentize( $orange, 0.645 );
+                    padding: 2rem 2rem 2rem 2rem;
 
                 }
 
@@ -259,7 +244,19 @@
 
                     @include text( none );
 
-                    color: $oil;
+                    // @include color( $app05, 0.000 );
+                    @include color( white, 0.000 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 0 0 0 0;
+
+                        @include font( $klavislim, 0.875rem, 500, italic );
+
+                        @include typo( 1.25rem, 0.035em );
+
+                    }
 
                     // quote
                     &:before {
@@ -282,10 +279,14 @@
 
                         @include font( $industry, 10rem, 700, italic );
 
-                        line-height: 3rem;
+                        @include color( $orange, 0.685 );
 
-                        // color: transparentize( $orange, 0.565 );
-                        color: transparentize( $orange, 0.645 );
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            font-size: 7rem;
+
+                        }
 
                     }
 
@@ -297,12 +298,20 @@
                     @include flex-h-j-v-t( false );
 
                     width: 100%;
-                    min-width: 18rem;
                     height: 4rem;
                     margin: 1rem 0 0 0;
                     padding: 0;
 
                     opacity: 1.000;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: auto;
+
+                        @include flex-v-b-h-st( false );
+
+                    }
 
                     // attribution
                     .slide-citation {
@@ -315,6 +324,14 @@
                         @include font( $industry, 0.875rem, normal, normal );
 
                         letter-spacing: 0.035em;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            height: auto;
+                            margin: 0 0 1rem 0;
+
+                        }
 
                         // name
                         strong {
@@ -331,7 +348,14 @@
 
                             line-height: 1rem;
 
-                            color: $g140;
+                            @include color( $orange, 0.000 );
+
+                            // mobile
+                            @include breakpoint ( small only ) {
+
+                                height: auto;
+
+                            }
 
                         }
 
@@ -344,13 +368,7 @@
 
                             line-height: 0.75rem;
 
-                            text: {
-
-                                // align: right;
-
-                            }
-
-                            color: $steel;
+                            @include color( white, 0.365 );
 
                         }
 
@@ -361,13 +379,12 @@
 
                         @include flex-h-c-v-c( false );
 
-                        min-width: 14rem;
                         width: auto;
                         height: 4rem;
                         margin: 0;
                         padding: 0.0625rem 1.5rem 0 1.5rem;
 
-                        @include font( $klavislim, 0.875rem, 500, normal );
+                        @include font( $klavislim, 1rem, 400 );
 
                         line-height: 1rem;
 
@@ -377,15 +394,26 @@
 
                         color: white;
 
-                        @include fill( white, 0.925 );
-                        @include fill( $g135, 0.125 );
+                        // @include fill( $orange, 0.000 );
+                        @include fill( darken( $orange, 7.5% ), 0.000 );
+
+                        @include shadowbox( 1rem, 3rem, black, 0.285 );
 
                         transition: $all220;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            height: 3rem;
+
+                            font-size: 0.875rem;
+
+                        }
 
                         // hover state
                         &:hover {
 
-                            @include fill( $orange, 0.000 );
+                            @include fill( $g140, 0.000 );
 
                         }
 
@@ -411,6 +439,8 @@
                 height: 3rem;
                 margin: 0;
                 padding: 0;
+
+                @include hide;
 
                 // class hook
                 .billboard-control {
@@ -532,17 +562,6 @@
                     // outline: none;
 
                 }
-
-            }
-
-            // content
-            .content-layers {
-
-                @include flex-v-b-h-s( false );
-
-                width: 100vw;
-                height: 100vh;
-                padding: 0 0 5rem 5rem;
 
             }
 
