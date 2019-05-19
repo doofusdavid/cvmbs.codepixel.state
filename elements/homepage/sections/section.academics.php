@@ -1,13 +1,6 @@
 <?php
 
-    $degree_programs_query = array(
-
-        'post_type' => 'degree-program',
-        'orderby'   => 'rand',
-
-    );
-
-    $degree_programs = new WP_Query( $degree_programs_query );
+    //
 
 ?>
 
@@ -15,7 +8,7 @@
 <div class="article-container">
 
     <!-- background.image -->
-    <div class="section-image collapsed" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.09.jpg">
+    <div class="section-image" data-background="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.09.jpg">
 
         <!-- empty -->
 
@@ -30,18 +23,52 @@
     </div>
     <!-- END background.color -->
 
-    <!-- title -->
-    <span class="section-title">
-
-        academic degree programs
-
-    </span>
-    <!-- END title -->
-
     <!-- content -->
-    <div id="degree-programs-content" class="section-content">
+    <div class="section-content">
 
-        <?php get_template_part( 'elements/homepage/sections/degree.programs/degree.programs' ); ?>
+        <!-- video -->
+        <div id="video-layer" class="content-layer">
+
+            <!-- container -->
+            <div class="video-container">
+
+                <iframe src="https://www.youtube.com/embed/2DegmW2U73M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <!-- END container -->
+
+        </div>
+        <!-- END video -->
+
+        <!-- video -->
+        <div id="text-layer" class="content-layer">
+
+            <!-- title -->
+            <span class="layer-title">
+
+                this is how we care
+
+            </span>
+            <!-- END title -->
+
+            <!-- text -->
+            <span class="layer-text">
+
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+
+            </span>
+            <!-- END text -->
+
+            <!-- button -->
+            <a href="/degree-programs" class="layer-link">
+
+                explore degree programs
+
+            </a>
+            <!-- END button -->
+
+        </div>
+        <!-- END video -->
 
     </div>
     <!-- END content -->

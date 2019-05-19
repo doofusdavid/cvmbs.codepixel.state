@@ -134,6 +134,8 @@
 
                 @include font( $klavislim, 2rem, 400 );
 
+                @include text( $up );
+
                 @include typo( 3rem, 0.085em );
 
                 @include color( $cvellow, 0.000 );

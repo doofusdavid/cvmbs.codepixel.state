@@ -321,6 +321,8 @@
 
                         @include font( $industry, 0.875rem, normal, normal );
 
+                        @include text( $up );
+
                         letter-spacing: 0.035em;
 
                         // mobile
