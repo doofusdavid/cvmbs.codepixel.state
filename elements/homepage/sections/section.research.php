@@ -1,3 +1,12 @@
+<?php
+
+    // college homepage options
+    $college_options = get_field( 'college_homepage_options' );
+
+    // research content
+    $research_content = $college_options[ 'research_content' ];
+
+?>
 
 <!-- container -->
 <div class="article-container">
@@ -20,7 +29,7 @@
             <div class="design-layer">
 
                 <!-- color + gradient -->
-                <div class="color-layer fx-layer layer">
+                <div class="image-layer fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
 
                     <!-- ball so hard -->
 
@@ -49,19 +58,19 @@
 
                 <span class="headline">
 
-                    world class research<br />supporting real world results
+                    <?php echo $research_content[ 'title' ]; ?>
 
                 </span>
 
                 <span class="text">
 
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+                    <?php echo $research_content[ 'text' ]; ?>
 
                 </span>
 
                 <a href="/research" class="content-button">
 
-                    explore our research
+                    <?php echo $research_content[ 'link' ][ 'title' ]; ?>
 
                 </a>
 
