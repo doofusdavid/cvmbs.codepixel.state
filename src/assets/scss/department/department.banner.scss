@@ -16,6 +16,13 @@
 
         @include fill( white, 0.000 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
         // intro
         .introduction-text {
 

@@ -12,6 +12,7 @@
         @include flex-h-e-v-t( false );
 
         height: 50vh;
+        height: auto;
 
         @include fill( $cvnavy, 0.000 );
 
@@ -55,6 +56,14 @@
                     repeat: no-repeat;
                     size: cover;
                     position: center center;
+                    attachment: fixed;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    background-attachment: scroll;
 
                 }
 
@@ -82,7 +91,7 @@
 
             width: 50vw;
             height: 100%;
-            padding: 0 5rem 5rem 5rem;
+            padding: 5rem 5rem 5rem 5rem;
 
             @include fill( $cvnavy, 0.265 );
 
@@ -99,6 +108,14 @@
                     )
 
                 ;
+
+            }
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                padding: 2rem 2rem 2rem 2rem;
 
             }
 

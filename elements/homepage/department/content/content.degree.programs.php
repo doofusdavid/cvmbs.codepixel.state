@@ -38,18 +38,41 @@
 
 ?>
 
+<!-- visual FX -->
+<div class="design-layer">
+
+    <!-- image -->
+    <!-- <div class="image fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ]; ?>)"> -->
+    <div class="image fx-layer layer">
+
+        <!-- ball so hard -->
+
+    </div>
+    <!-- END image -->
+
+    <!-- color -->
+    <div class="color fx-layer layer">
+
+        <!--  -->
+
+    </div>
+    <!-- END color -->
+
+</div>
+<!-- END visual FX -->
+
+<!-- title -->
+<h3 class="section-heading">
+
+    degree programs
+
+</h3>
+<!-- END title -->
+
+<?php if ( $degree_programs_content ) : ?>
+
 <!-- description -->
 <div id="department-degree-programs-description" class="degree-program-content">
-
-    <!-- title -->
-    <h3 class="section-heading">
-
-        degree programs
-
-    </h3>
-    <!-- END title -->
-
-    <?php if ( $degree_programs_content ) : ?>
 
     <!-- text -->
     <p>
@@ -58,8 +81,6 @@
 
     </p>
     <!-- END text -->
-
-    <?php endif; ?>
 
     <!-- button -->
     <a href="/degree_programs" class="link-button">
@@ -71,6 +92,8 @@
 
 </div>
 <!-- END description -->
+
+<?php endif; ?>
 
 <!-- programs -->
 <div id="department-degree-programs-list" class="degree-program-content">
@@ -85,7 +108,15 @@
                 $title = $program->title->rendered;
                 $link  = $program->link;
 
-                $degree_programs .= '<a class="program-link" href="' . $link . '">' . $title . '</a>';
+                $degree_programs .= '
+
+                    <a class="program-link" href="' . $link . '">
+
+                        ' . $title . '
+
+                    </a>
+
+                ';
 
             }
 
