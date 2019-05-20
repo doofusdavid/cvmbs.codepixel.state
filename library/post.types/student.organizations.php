@@ -40,7 +40,7 @@ function codex_student_organization_init() {
 		'capability_type'     => 'post',
 		'hierarchical'        =>  false,
 		'supports'            =>  array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-		'has_archive'         =>  false,
+		'has_archive'         =>  true,
 		'rewrite'             =>  array( 'slug' => 'student-organizations' ),
 		'can_export'          =>  true,
 		'delete_with_user'    =>  null // Default: null _ If not set (the default), posts are trashed if post_type_supports('author').

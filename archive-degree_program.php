@@ -2,34 +2,52 @@
 get_header();
 ?>
 
-<!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary programs archive" data-off-canvas-content>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-	<!-- container -->
-	<div class="content-container programs">
+		<?php if ( have_posts() ) : ?>
 
-		<div class="programs-overlay"></div><!-- .programs-overlay -->
+		<header class="deg-progs__header">
+			<div class="deg-progs__header-inner">
+				<h1 class="deg-progs__header-title">
+					<?php _e( get_queried_object()->label, 'csu-career-center' ); ?>
+				</h1><!-- .deg-progs__header-title -->
+			</div><!-- .deg-progs__header-inner -->
+		</header><!-- .deg-progs__header -->
 
-	    <!-- content -->
-	    <section class="programs-content">
+		<div class="deg-progs__grid">
+			<div class="deg-progs__grid-inner">
 
-			<h2 class="page-title">degree programs</h2>
+			<?php
+			while ( have_posts() ) : the_post();
+				$card_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'fp-medium' ) . ');"' : '';
+				$link = ( get_field('student_org_link') ) ? get_field('student_org_link') : get_permalink();
+			?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+				<a class="deg-progs__grid-item" href="<?php echo esc_url( $link ); ?>" <?php echo $card_bg; ?>>
+					<span class="deg-progs__grid-item-name">
+						<?php
+						$ancestors = get_post_ancestors( $post->ID );
 
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						if ( $ancestors[1] ) {
+							echo get_post( $ancestors[0] )->post_title . ':';
+						}
+						?>
+						<?php the_title(); ?>
+					</span>
+				</a>
 
 			<?php endwhile; ?>
 
-	    </section>
-	    <!-- END content -->
+			</div><!-- .deg-progs__grid-inner -->
+		</div><!-- .deg-progs__grid -->
 
-        <?php get_template_part( 'elements/layout/layout.footer' ); ?>
+		<?php endif; ?>
 
-	</div>
-	<!-- END container -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-</main>
-<!-- site.layout -->
+<?php
+get_template_part( 'elements/layout/layout.footer' );
 
-<?php get_footer(); ?>
+get_footer();

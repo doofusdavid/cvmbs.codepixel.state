@@ -1,23 +1,11 @@
-.post-type-archive-degree_program {
-	display: flex;
-	flex-direction: column;
-	background: $sec_temp_off_white;
-	color: $steel;
-	font-size: 1rem;
-
-	.content-area {
-		flex-grow: 1;
-	}
-}
-
-.deg-progs {
+.student-orgs {
 	&__header {
 		position: relative;
 		display: flex;
 		align-items: flex-end;
 		min-height: 50vh;
 		padding: 5rem 8vw 1.5rem;
-		background: white url(../img/billboards/degrees/degrees.billboard.00.jpg) no-repeat center center / cover;
+		background: white url(../img/billboards/billboard.24.jpg) no-repeat center center / cover;
 
 		// overlay
 		&:before {

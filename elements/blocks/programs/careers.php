@@ -2,7 +2,7 @@
 
 	<div class="careers__intro">
 		<h3 class="careers__title program-block__title">
-			<?php _e( 'Career Opportunties', 'cvmbsPress' ); ?>
+			<?php _e( 'Career Opportunities', 'cvmbsPress' ); ?>
 		</h3>
 
 		<?php if ( get_sub_field('desc') ) : ?>
