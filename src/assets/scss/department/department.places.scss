@@ -48,6 +48,13 @@
             height: auto;
             padding: 5rem 4rem 4rem 4rem;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 2rem 1rem 1rem 1rem;
+
+            }
+
         }
 
         // billboard
@@ -106,6 +113,15 @@
             @include typo( 1.25rem, 0.135em );
 
             @include color( white, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include text( $up, left );
+
+            }
 
             // before
             &:before {
@@ -223,6 +239,13 @@
                 margin: 0;
                 padding: 0;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                }
+
                 // article
                 .article {
 
@@ -247,6 +270,14 @@
                     transform: translate3d( 0, 0, 0 );
 
                     transition: all 240ms $outex 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        min-height: 16rem;
+                        padding: 2rem 2rem 2rem 4rem;
+
+                    }
 
                     // hover state
                     &:hover {

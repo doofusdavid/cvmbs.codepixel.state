@@ -324,8 +324,12 @@
                 padding: 0 0 0 0;
 
                 @include font( $klavislim, 1.75rem, 400 );
+                // @include font( $klavika, 1.25rem, 500 );
+
+                // @include text( none );
 
                 @include typo( 1rem, 0.245rem );
+                // @include typo( 1rem, 0.085rem );
 
                 @include color( $gold, 0.000 );
 

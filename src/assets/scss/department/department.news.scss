@@ -6,6 +6,456 @@
     // styles
     #department-news {
 
-        //
+        // height: 32rem;
+        padding: 0;
+
+        @include fill( $beige, 0.000 );
+
+        // title
+        .section-title {
+
+            position: relative;
+
+            @include flex-h-j-v-b( false );
+
+            height: 3rem;
+            margin: 0 0 1rem 1rem;
+            padding: 0 0 1rem 1rem;
+
+            @include font( $klavislim, 2rem, 400 );
+
+            @include text( $up );
+
+            @include typo( 1.25rem, 0.135em );
+
+            @include color( $dark, 0.125 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include text( $up, left );
+
+            }
+
+            // before
+            &:before {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0.5rem;
+                bottom: 0.25rem;
+                left: 0;
+
+                z-index: 10;
+
+                width: 2px;
+                height: 1.5rem;
+
+                @include fill( lighten( $g140, 7.5% ), 0.000 );
+
+            }
+
+            // hover state
+            &:hover {
+
+                cursor: pointer;
+
+                // link
+                .title-link {
+
+                    @include color( $dark, 0.000 );
+
+                    transform: translate3d( -1.5rem, 0, 0 );
+
+                    transition: all 360ms $outex 0ms;
+
+                    // after
+                    &:after {
+
+                        opacity: 1.000;
+
+                        transform: translate3d( 0, 0, 0 );
+
+                        transition: all 360ms $outex 0ms;
+
+                    }
+
+                }
+
+            }
+
+            // link
+            .title-link {
+
+                @include flex-h-e-v-b( true );
+
+                height: 2rem;
+                margin: 0 1rem 0 0;
+
+                @include font( $industry, 0.6875rem, 700 );
+
+                @include typo( 0.5rem, 0.075em );
+
+                @include color( $dark, 0.325 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 360ms $outex 0ms;
+
+                // after
+                &:after {
+
+                    @include codicon( 1rem, 2.25rem, 1.25rem 0 0 0, 1rem, $dark, '\EDC8' );
+
+                    position: absolute;
+
+                    top: 0;
+                    right: -1.5rem;
+                    bottom: 0;
+
+                    opacity: 0.000;
+
+                    transform: translate3d( -2rem, 0, 0 );
+
+                    transition: all 360ms $outex 0ms;
+
+                }
+
+            }
+
+        }
+
+        // container
+        .article-container {
+
+            @include flex-v-j-h-st( false );
+
+            width: 100vw;
+            height: auto;
+            padding: 5rem 4rem 5rem 4rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 2rem 1rem 0rem 1rem;
+
+            }
+
+        }
+
+        // feature + sidebar
+        #main-source-content {
+
+            @include flex-v-j-h-st( false );
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        // source feed
+        #source-feed {
+
+            @include flex-h-s-v-st( false );
+
+            flex-wrap: nowrap;
+
+            width: auto;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+            }
+
+            // article
+            .article {
+
+                @include flex-v-t-h-c( true );
+
+                flex-basis: 33.3333333%;
+
+                height: auto;
+                margin: 0 1rem 0 1rem;
+
+                @include fill( white, 0.185 );
+
+                @include shadowbox( 1.5rem, 4rem, black, 0.615 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 240ms $outex 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 1rem 2rem 1rem;
+
+                }
+
+                // hover state
+                &:hover {
+
+                    cursor: pointer;
+
+                    transform: translate3d( 0, -1rem, 0 );
+
+                    @include fill( white, 0.000 );
+
+                    // header
+                    .header {
+
+                        // image
+                        .image {
+
+                            -webkit-filter:
+
+                                grayscale( 0.000 )
+                                opacity( 1.000 )
+
+                            ;
+
+                            transition: all 220ms linear 0ms;
+
+                        }
+
+                    }
+
+                }
+
+                // focus state
+                &:focus {
+
+                    // outline: none;
+
+                }
+
+                // header
+                .header {
+
+                    position: relative;
+
+                    @include flex-v-t-h-c( false );
+
+                    flex-grow: 1;
+
+                    width: 100%;
+                    height: 14rem;
+                    min-height: 14rem;
+                    margin: 0;
+                    padding: 0;
+
+                    // image
+                    .image {
+
+                        position: relative;
+
+                        z-index: 10;
+
+                        @include flex-v-b-h-c( false );
+
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+
+                        background: {
+
+                            repeat: no-repeat;
+                            size: cover;
+                            position: center center;
+
+                        }
+
+                        -webkit-filter:
+
+                            // grayscale( 0.245 )
+                            grayscale( 0.000 )
+                            // opacity( 0.585 )
+                            opacity( 1.000 )
+
+                        ;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    // meta
+                    .meta {
+
+                        position: absolute;
+
+                        // top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 20;
+
+                        @include flex-h-j-v-c( false );
+
+                        @include hide;
+
+                        width: 16rem;
+                        height: 1.25rem;
+                        margin: 0;
+                        padding: 0 0 0 0;
+
+                        // common
+                        .date,
+                        .post-category {
+
+                            @include flex-h-c-v-c( true );
+
+                            height: 1.25rem;
+                            padding: 0.0625rem 0.5rem 0 0.5rem;
+
+                            @include font( $industry, 0.5625rem, 700 );
+
+                            line-height: 0.5rem;
+
+                            letter-spacing: 0.065em;
+
+                            @include text( $up );
+
+                            color: white;
+
+                        }
+
+                        // date
+                        .date {
+
+                            order: -1;
+
+                            @include fill( white, 0.945 );
+
+                        }
+
+                        // category
+                        .post-category {
+
+                            padding: 0 0.5rem 0 0.5rem;
+
+                            @include font( $industry, 0.5625rem, 700 );
+
+                            letter-spacing: 0.025em;
+
+                            @include fill( $g135, 0.185 );
+
+                            // hide class
+                            &.superchannel,
+                            &.national-western-stock-show,
+                            &.special-events {
+
+                                @include hide;
+
+                            }
+
+                            // campaign
+                            &.state-your-purpose {
+
+                                color: $campaign;
+
+                                @include fill( $dark, 0.325 );
+
+                            }
+
+                            // obituaries
+                            &.obituaries {
+
+                                @include fill( $blue, 0.425 );
+
+                            }
+
+                            // headlines
+                            &.latest-headlines {
+
+                                @include fill( $roarange, 0.385 );
+
+                            }
+
+                            // ram family
+                            &.ram-family {
+
+                                @include fill( $orange, 0.385 );
+
+                            }
+
+                            // outreach
+                            &.outreach {
+
+                                @include fill( $cvellow, 0.685 );
+
+                            }
+
+                            // research
+                            &.research {
+
+                                @include fill( $cvnavy, 0.415 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                // content
+                .content {
+
+                    position: relative;
+
+                    @include flex-v-t-h-s( false );
+
+                    width: 100%;
+                    min-height: 8rem;
+                    margin: 0;
+                    padding: 1rem 2rem 2rem 2rem;
+
+                    // title
+                    .title {
+
+                        @include font( $klavislim, 1rem, 500 );
+
+                        @include text( $up );
+
+                        @include typo( 1.5rem, 0.025em );
+
+                        color: $g140;
+
+                    }
+
+                    // text
+                    .text {
+
+                        @include font( $industry, 0.75rem, 500 );
+
+                        // paragraph
+                        p {
+
+                            margin: 0;
+
+                            @include typo( 1.25rem, 0.035em );
+
+                            color: $oil;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
 
     }

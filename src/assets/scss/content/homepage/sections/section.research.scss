@@ -23,21 +23,6 @@
 
         }
 
-        // title
-        .section-title {
-
-            @include hide;
-
-            padding: 1.125rem 1.5rem 1rem 1.5rem;
-
-            @include font( $klavislim, 1.5rem, 400 );
-
-            color: $gold;
-
-            @include fill( $cvnavy, 0.245 );
-
-        }
-
         // content
         .section-content {
 
@@ -54,21 +39,27 @@
 
                 @include fullscreen( absolute, 1, false, hidden );
 
-                @include background( $billboard, false, cover, center center );
-
             }
 
-            // color + gradient
-            .color-layer {
+            // image
+            .image-layer {
 
+                background: {
 
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
 
             }
 
             // pattern + artwork
             .pattern-layer {
 
-                @include background( '', false, cover, center center );
+                z-index: 10;
+
+                @include fill( $cvnavy, 0.465 );
 
             }
 
@@ -79,18 +70,23 @@
 
             position: relative;
 
+            @include flex-h-e-v-c( false );
+
             height: 100%;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-b-h-st( false );
+
+            }
 
         }
 
         // content
         .content-layer {
 
-            position: absolute;
-
-            top: 0;
-            right: 0;
-            bottom: 0;
+            position: relative;
 
             z-index: 100;
 
@@ -120,12 +116,25 @@
 
             }
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                height: 50%;
+                padding: 2rem 2rem 2rem 2rem;
+
+                @include fill( $cvnavy, 1.000 );
+
+            }
+
             // headline
             .headline {
 
                 margin: 0 0 1rem 0;
 
                 @include font( $klavislim, 2rem, 400 );
+
+                @include text( $up );
 
                 @include typo( 3rem, 0.085em );
 
@@ -179,85 +188,6 @@
                 }
 
             }
-
-        }
-
-        // map
-        #research-map {
-
-            position: absolute;
-
-            top: -3.5rem;
-            right: -3.5rem;
-            bottom: -3.5rem;
-            left: -3.5rem;
-
-            z-index: 20;
-
-            width: calc( 100vw + 7rem );
-            height: calc( 100vh + 7rem );
-
-            // @include fill( red, 0.725 );
-
-            opacity: 0.645;
-
-            // after
-            &:after {
-
-                content: '';
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                z-index: 10;
-
-                @include fill( $cvnavy, 0.465 );
-
-                mix-blend-mode: overlay;
-
-            }
-
-        }
-
-        // map toolbar
-        #research-map-toolbar {
-
-            position: absolute;
-
-            top: 5rem;
-            right: 5rem;
-            bottom: 0;
-            left: 5rem;
-
-            z-index: 50;
-
-            @include flex-h-j-v-c( false );
-
-            width: calc( 100vw - 10rem );
-            height: 5rem;
-            margin: 0;
-            padding: 1.125rem 1rem 1rem 1.25rem;
-
-            @include fill( $cvnavy, 0.145 );
-
-            @include hide;
-
-        }
-
-        // toolbar title
-        .toolbar-title {
-
-            @include font( $klavislim, 1rem, 400 );
-
-            line-height: 1rem;
-
-            letter-spacing: 0.105em;
-
-            color: $gold;
 
         }
 

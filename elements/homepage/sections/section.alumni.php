@@ -76,8 +76,30 @@
             <!-- slide -->
             <article class="ui-slide-article" data-load="false" style="background-image:url(<?php echo $alumni_image_url; ?>);">
 
-                <!-- content.layers -->
-                <div class="content-layers">
+                <!-- slide.layers -->
+                <div class="slide-layers">
+
+                    <!-- image FX -->
+                    <div class="image-layer">
+
+                        <!-- base -->
+                        <div class="base fx-layer layer" style="background-image:url(<?php echo $alumni_image_url; ?>);">
+
+                            <!-- ball so hard -->
+
+                        </div>
+                        <!-- END base -->
+
+                        <!-- blur -->
+                        <div class="blur fx-layer layer" style="background-image:url(<?php echo $alumni_image_url; ?>);">
+
+                            <!-- ball so hard -->
+
+                        </div>
+                        <!-- END blur -->
+
+                    </div>
+                    <!-- END image FX -->
 
                     <!-- visual FX -->
                     <div class="design-layer">
@@ -102,15 +124,7 @@
                     <!-- END visual FX -->
 
                     <!-- slider -->
-                    <div class="slider-layer">
-
-                        <!-- slider.base -->
-                        <div class="slider-base layer">
-
-                            <!-- foobar -->
-
-                        </div>
-                        <!-- END slider.base -->
+                    <div class="content-layer">
 
                         <!-- alumni.slider -->
                         <div id="alumni-slider" class="slider layer scroll-trigger" data-section="alumni">
@@ -125,6 +139,14 @@
 
                             <!-- slide.meta -->
                             <div class="slide-meta">
+
+                                <!-- title -->
+                                <div class="title-layer">
+
+                                    alumni spotlight
+
+                                </div>
+                                <!-- END title -->
 
                                 <!-- slide.quote -->
                                 <span class="slide-citation">
@@ -146,11 +168,11 @@
                                 <!-- END slide.quote -->
 
                                 <!-- button -->
-                                <button class="slide-button">
+                                <a href="<?php echo $alumni_link; ?>" class="slide-button">
 
-                                    read <?php echo $alumni_name; ?>'s story
+                                    <?php echo $alumni_name; ?>'s story
 
-                                </button>
+                                </a>
                                 <!-- END button -->
 
                             </div>
@@ -163,7 +185,7 @@
                     <!-- END slider -->
 
                 </div>
-                <!-- END content.layers -->
+                <!-- END slide.layers -->
 
             </article>
             <!-- END slide -->
