@@ -1,6 +1,6 @@
 <?php
 
-    // template name: directory
+    // template name: Directory
 
 ?>
 
@@ -73,7 +73,7 @@
 
                     }
 
-                    echo $directory_type . ' ' . $directory_page . ' [ ' . $department_ID . ' ]';
+                    echo $directory_type . ' ' . $directory_page;
 
                 ?>
 
