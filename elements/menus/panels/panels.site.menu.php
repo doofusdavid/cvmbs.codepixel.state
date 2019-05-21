@@ -156,38 +156,6 @@
     </panel>
     <!-- END panel.events -->
 
-    <!-- panel.resources -->
-    <panel id="menu-panel-resources" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-resources-header" class="panel-header">
-
-            college resources
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $resources_panel; ?>
-
-    </panel>
-    <!-- END panel.resources -->
-
-    <!-- panel.social -->
-    <panel id="menu-panel-social" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-social-header" class="panel-header">
-
-            connect with us on social media
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $social_panel; ?>
-
-    </panel>
-    <!-- END panel.social -->
-
     <!-- panel.contact -->
     <panel id="menu-panel-contact" class="inactive ui-panel menu-panel">
 

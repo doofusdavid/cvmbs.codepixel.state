@@ -266,8 +266,6 @@
 
                     ?>
 
-                    <!-- <span class="listing-heading">things are happening</span> -->
-
                 </div>
                 <!-- END listing -->
 
@@ -293,8 +291,6 @@
                         echo $certifications;
 
                     ?>
-
-                    <!-- <span class="listing-heading">things are happening</span> -->
 
                 </div>
                 <!-- END listing -->
@@ -322,8 +318,6 @@
 
                     ?>
 
-                    <!-- <span class="listing-heading">things are happening</span> -->
-
                 </div>
                 <!-- END listing -->
 
@@ -350,8 +344,6 @@
                         echo $links;
 
                     ?>
-
-                    <!-- <span class="listing-heading">things are happening</span> -->
 
                 </div>
                 <!-- END listing -->

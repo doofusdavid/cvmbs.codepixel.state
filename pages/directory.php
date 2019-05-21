@@ -113,51 +113,9 @@
                         $tableName  = $lastName . ', ' . $firstName;
                         $eMail      = strtolower( $member->email );
                         $phone      = $member->phone;
-                        // $memberId   = $member->Id;
                         $department = $member->department;
 
-                        // $results .= '<tr class="record"><td>' . $firstName . ' ' . $lastName . '</td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
                         $results .= '<tr class="record"><td><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
-
-                        // $results .= '
-                        //
-                        //     <tr class="record">
-                        //
-                        //         <td>
-                        //
-                        //             <a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">
-                        //
-                        //                 ' . $tableName . '
-                        //
-                        //             </a>
-                        //
-                        //         </td>
-                        //
-                        //         <td>
-                        //
-                        //             <a class="email-link" href="mailto:' . $eMail . '">
-                        //
-                        //                 ' . $eMail . '
-                        //
-                        //             </a>
-                        //
-                        //         </td>
-                        //
-                        //         <td>
-                        //
-                        //             ' . $phone . '
-                        //
-                        //         </td>
-                        //
-                        //         <td>
-                        //
-                        //             ' . $department . '
-                        //
-                        //         </td>
-                        //
-                        //     </tr>
-                        //
-                        // ';
 
                     }
 

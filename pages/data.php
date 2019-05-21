@@ -14,7 +14,7 @@
     // instantiate DirectoryService
     $service = new SoapClient( $serviceURL );
 
-    // output list of functions
+    // output list of functions [ debug ]
     $response = $service->__getFunctions();
 
     // set static query
@@ -77,8 +77,8 @@
             $storage[ 'data' ] = array(
 
                 'filestore' => $filestore,
-                'modified' => date( 'Y m d H:i:s', filemtime( $filestore ) ),
-                'records'  => count( $members ),
+                'modified'  => date( 'Y m d H:i:s', filemtime( $filestore ) ),
+                'records'   => count( $members ),
 
             );
 
