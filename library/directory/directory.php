@@ -12,9 +12,10 @@
 
     // output list of functions
     $response = $service->__getFunctions();
+    // $response = $service->__getTypes();
 
     // ID variable
-    $id = '36422';
+    $id = '40133';
 
     // output magic
     $memberName = $service->GetMembersBySearchName(
@@ -67,7 +68,7 @@
 
     // data
     $name      = $memberName->GetMembersBySearchNameResult->MemberResponse;
-    $data      = $memberData->GetMemberByIdResult->MemberResponse;
+    $data      = $memberId->GetMemberByIdResult->MemberResponse;
     $groups    = $memberGroups->GetGroupsByMemberIdResult->GroupResponse;
     $contacts  = $memberContacts->GetMemberContactsByMemberIdResult->MemberContactResponse;
     $directory = $memberDirectory->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
