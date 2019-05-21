@@ -423,6 +423,16 @@
 
             transition: $all220;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                bottom: 18rem;
+
+                width: 3rem;
+                height: 3rem;
+
+            }
+
             // focus state
             &:focus {
 
@@ -466,8 +476,14 @@
 
                 z-index: 201;
 
-                // @include fill( $orange, 0.000 );
                 @include fill( white, 0.965 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    right: 5rem;
+
+                }
 
                 // disabled
                 &.slick-disabled {
@@ -484,6 +500,13 @@
                 right: 2.5rem;
 
                 @include fill( white, 0.925 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    right: 2rem;
+
+                }
 
                 // disabled
                 &.slick-disabled {
@@ -510,6 +533,16 @@
                     height: 4rem;
 
                     @include shadowbox( 1rem, 3rem, black, 0.315 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        left: -3rem;
+
+                        width: 6rem;
+                        height: 3rem;
+
+                    }
 
                 }
 
