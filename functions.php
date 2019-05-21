@@ -4,7 +4,7 @@
     require_once( 'library/admin.php' );
 
     // directory
-    require_once( 'library/directory/directory.php' );
+    // require_once( 'library/directory/directory.php' );
 
     // composer
     // require_once( 'vendor/autoload.php' );
