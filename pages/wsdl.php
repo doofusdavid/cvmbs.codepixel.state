@@ -17,10 +17,13 @@
     // output list of functions
     $response = $service->__getFunctions();
 
+    // ID test
+    $memberID = 33704;
+
     // output magic
     $getMember = $service->GetMemberById(
 
-        array( 'id' => '33704' )
+        array( 'id' => $memberID )
 
     );
 
@@ -50,24 +53,16 @@
         </header>
         <!-- END page header -->
 
-        <span>method => GetMemberById => 33704</span>
+        <span>method => GetMemberById => <?php echo $memberID; ?></span>
 
         <pre>
 
         <?php
 
-            // echo 'method => GetMembersBySearchName';
-
-            print_r( $service );
-
             echo '<br  />DEFAULT RESPONSE OBJECT<br  />';
-            print_r( $member );
+            print_r( $getMember );
 
-            // prettify
-            $json = json_encode( $member, JSON_PRETTY_PRINT );
-
-            echo '<br />JSON FORMATTED OBJECT<br />';
-            print_r( $json );
+            echo '<br /><br />';
 
         ?>
 

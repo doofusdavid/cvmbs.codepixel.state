@@ -72,23 +72,6 @@
 
         ?>
 
-        <!-- brand.state -->
-        <span id="brand-state-required">
-
-            <?php get_template_part( 'elements/brand/brand.state.classic' ); ?>
-
-        </span>
-        <!-- END brand.state -->
-
-        <!-- copyright -->
-        <span id="copyright-text">
-
-            Copyright &copy; 2018 by the College of Veterinary Medicine and Biomedical Sciences<br />
-            Colorado State University, Fort Collins, Colorado 80523 USA
-
-        </span>
-        <!-- END copyright -->
-
     </panel>
     <!-- END panel.main -->
 
@@ -155,68 +138,6 @@
 
     </panel>
     <!-- END panel.events -->
-
-    <!-- panel.resources -->
-    <panel id="menu-panel-resources" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-resources-header" class="panel-header">
-
-            college resources
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $resources_panel; ?>
-
-    </panel>
-    <!-- END panel.resources -->
-
-    <!-- panel.social -->
-    <panel id="menu-panel-social" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-social-header" class="panel-header">
-
-            connect with us on social media
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $social_panel; ?>
-
-    </panel>
-    <!-- END panel.social -->
-
-    <!-- panel.contact -->
-    <panel id="menu-panel-contact" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-contact-header" class="panel-header">
-
-            contact information
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $contact_panel; ?>
-
-    </panel>
-    <!-- END panel.contact -->
-
-    <!-- panel.news -->
-    <panel id="menu-panel-news" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-news-header" class="panel-header">
-
-            news from around the college
-
-        </header>
-        <!-- END panel.header -->
-
-    </panel>
-    <!-- END panel.news -->
 
 </menu>
 <!-- END menu.panels -->

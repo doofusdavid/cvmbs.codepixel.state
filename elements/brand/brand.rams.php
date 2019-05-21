@@ -1,5 +1,5 @@
 
-<button id="brand-rams" class="brand-link" data-url="http://colostate.edu">
+<a href="https://colostate.edu" id="brand-rams" class="brand-link">
 
     <svg class="brand-icon" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 
@@ -67,4 +67,4 @@
 
     </svg>
 
-</button>
+</a>

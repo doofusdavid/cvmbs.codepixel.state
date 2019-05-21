@@ -18,7 +18,7 @@
         width: $brand_width;
         height: $brand_height;
         margin: 0;
-        padding: 0;
+        padding: 0.25rem 0.25rem 0.25rem 0.25rem;
 
         transition: all 320ms $outex 0ms;
 
@@ -27,6 +27,7 @@
 
             width: 4rem;
             height: 4rem;
+            padding: 0;
 
         }
 

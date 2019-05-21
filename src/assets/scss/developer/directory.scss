@@ -11,6 +11,8 @@
         min-height: calc( 100vh - 27rem );
         padding: 10rem 5rem 5rem 5rem;
 
+        @include font( $industry, 0.875rem, 600 );
+
         @include color( $app05, 0.265 );
 
         @include fill( white, 0.000 );
@@ -404,6 +406,8 @@
 
                 width: 16rem;
 
+                @include text( none, center );
+
                 // common
                 span {
 
@@ -446,6 +450,8 @@
 
                         @include font( $klavislim, 1.75rem, 400 );
 
+                        @include text( none );
+
                         @include typo( 1rem, 0.045em );
 
                     }
@@ -476,7 +482,7 @@
                 padding: 0 0 0 2rem;
 
                 // about
-                .about {
+                .listing-heading {
 
                     display: block;
 
@@ -489,6 +495,43 @@
                     @include color( $g140, 0.000 );
 
                 }
+
+                // groups
+                .listing-group {
+
+                    margin: 0 0 1rem 0;
+
+                }
+
+                // entry
+                .entry {
+
+                    display: block;
+
+                    margin: 0 0 1rem 0;
+
+                    @include font( $industry, 0.875rem, 600 );
+
+                }
+
+            }
+
+        }
+
+        // developer
+        .developer {
+
+            // hide
+            &.hide {
+
+                @include hide;
+
+            }
+
+            // show
+            &.show {
+
+
 
             }
 

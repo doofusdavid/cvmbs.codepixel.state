@@ -31,28 +31,41 @@
     $response = $service->__getFunctions();
 
     // output
-    $directory = $service->GetDirectoryInfoByMemberId(
+    $getMemberProfileInfo = $service->GetDirectoryProfileByMemberId(
+
+        array( 'id' => $query )
+
+    );
+
+    // output
+    $getMemberDirectoryInfo = $service->GetDirectoryInfoByMemberId(
 
         array( 'id' => $query )
 
     );
 
     // contacts
-    $memberContacts = $service->GetMemberContactsByMemberId(
+    $getMemberContactInfo = $service->GetMemberContactsByMemberId(
 
         array( 'id' => $query )
 
     );
 
+    // prettify
+    $memberDirectoryInfo = $getMemberDirectoryInfo->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
+
     // photoURL
     $photoURL = 'http://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $query;
 
-    // get returned data object
-    $data = $directory->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
-    // $contacts = $memberContacts->$GetMemberContactsByMemberIdResult->MemberContactResponse;
+    // setup CV array
+    $directory = array(
 
-    // prettify
-    // $data = json_encode( $test, JSON_PRETTY_PRINT );
+        'certifications' => array(),
+        'degrees'        => array(),
+        'publications'   => array(),
+        'links'          => array()
+
+    );
 
 ?>
 
@@ -62,21 +75,60 @@
     <!-- directory -->
     <div id="directory" class="page-container">
 
-        <pre>
-
-            <?php
-
-                print_r( $contacts );
-                print_r( $data );
-                print_r( $directory );
-
-            ?>
-
-        </pre>
-
         <?php
 
-            foreach( $members as $member ) {
+            // setup bio content
+            foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
+
+                $profile = $memberProfileInfo->ProfileText;
+
+            }
+
+            // setup CV content
+            foreach ( $memberDirectoryInfo as $directoryInfo ) {
+
+                $directoryType = $directoryInfo->DirectoryType;
+
+                if ( $directoryType == 'Certification' ) {
+
+                    $directory[ 'certifications' ][] = $directoryInfo->DirectoryHeader;
+
+                }
+
+                if ( $directoryType == 'Degree' ) {
+
+                    $directory[ 'degrees' ][] = array(
+
+                        'degree' => $directoryInfo->DirectoryHeader,
+                        'level'  => $directoryInfo->DirectoryDescription,
+                        'year'   => $directoryInfo->DirectoryYear,
+                        'notes'  => $directoryInfo->DirectoryNotes
+
+                    );
+
+                }
+
+                if ( $directoryType == 'Publication' ) {
+
+                    $directory[ 'publications' ][] = $directoryInfo->DirectoryHeader;
+
+                }
+
+                if ( $directoryType == 'Link' ) {
+
+                    $directory[ 'links' ][] = array(
+
+                        'url'   => $directoryInfo->DirectoryDescription,
+                        'title' => $directoryInfo->DirectoryHeader
+
+                    );
+
+                }
+
+            }
+
+            // setup photo + contact info
+            foreach ( $members as $member ) {
 
                 if ( $member->memberID == $query ) {
 
@@ -86,7 +138,16 @@
                     $email      = $member->email;
                     $title      = $member->title;
                     $department = $member->department;
-                    $phone      = $member->contactInfo->PhoneNumber;
+
+                    if ( is_array( $member->contactInfo ) ) {
+
+                        $phone = $member->contactInfo[0]->PhoneNumber;
+
+                    } else {
+
+                        $phone = $member->contactInfo->PhoneNumber;
+
+                    }
 
                 }
 
@@ -112,11 +173,11 @@
                 <div class="profile-name">
 
                     <!-- name -->
-                    <span class="name">
+                    <h1 class="name">
 
                         <?php echo $fullName; ?>
 
-                    </span>
+                    </h1>
                     <!-- END name -->
 
                     <!-- title -->
@@ -166,19 +227,162 @@
             <!-- info -->
             <div class="listing-info">
 
-                <span class="about">About <?php echo $firstName; ?></span>
+                <!-- listing group -->
+                <div class="listing-group bio">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Ullamcorper velit sed ullamcorper morbi tincidunt. Lacus vestibulum sed arcu non odio euismod lacinia at quis. Dictum non consectetur a erat. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Commodo elit at imperdiet dui accumsan. In massa tempor nec feugiat nisl pretium fusce. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Vitae sapien pellentesque habitant morbi tristique senectus et. Nunc congue nisi vitae suscipit tellus mauris a diam. Phasellus faucibus scelerisque eleifend donec. Nulla aliquet enim tortor at auctor.</p>
+                    <h3 class="listing-heading">About <?php echo $firstName; ?></h3>
 
-                <p>Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Amet dictum sit amet justo donec enim. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Aliquet nibh praesent tristique magna sit. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Varius duis at consectetur lorem donec massa sapien. Odio eu feugiat pretium nibh. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Rhoncus urna neque viverra justo nec ultrices dui sapien eget. Aliquam vestibulum morbi blandit cursus risus at. At varius vel pharetra vel turpis nunc eget lorem dolor. Non arcu risus quis varius quam quisque. At ultrices mi tempus imperdiet nulla malesuada. Sed nisi lacus sed viverra tellus in.</p>
+                    <!-- listing -->
+                    <div class="listing">
 
-                <p>Amet cursus sit amet dictum sit amet. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Massa placerat duis ultricies lacus sed turpis. Sed blandit libero volutpat sed cras ornare arcu dui. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Ornare arcu odio ut sem nulla pharetra diam sit amet. Nullam non nisi est sit amet facilisis magna etiam tempor. Enim diam vulputate ut pharetra sit amet. Arcu non sodales neque sodales ut etiam sit amet nisl. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Venenatis tellus in metus vulputate eu scelerisque. Condimentum mattis pellentesque id nibh tortor id aliquet.</p>
+                        <p><?php echo $profile; ?></p>
+
+                    </div>
+                    <!-- END listing group -->
+
+                </div>
+                <!-- END listing -->
+
+                <?php if ( count( $directory[ 'degrees' ] ) > 0 ) : ?>
+
+                <!-- listing -->
+                <div class="listing-group cv">
+
+                    <h4>Education</h4>
+
+                    <?php
+
+                        foreach( $directory[ 'degrees' ] as $degree ) {
+
+                            $school  = $degree[ 'degree' ];
+                            $year    = $degree[ 'year' ];
+                            $level   = $degree[ 'level' ];
+
+                            $degrees .= '<span class="entry">' . $school . ', ' . $year . '<br />' . $level . '</span>';
+
+                        }
+
+                        echo $degrees;
+
+                    ?>
+
+                </div>
+                <!-- END listing -->
+
+                <?php endif; ?>
+
+                <?php if ( count( $directory[ 'certifications' ] ) > 0 ) : ?>
+
+                <!-- listing -->
+                <div class="listing-group cv">
+
+                    <h4>Certifications</h4>
+
+                    <?php
+
+                        foreach( $directory[ 'certifications' ] as $certification ) {
+
+                            $entry  = $certification[ 'certification' ];
+
+                            $certifications .= '<span class="entry">' . $certification . '</span>';
+
+                        }
+
+                        echo $certifications;
+
+                    ?>
+
+                </div>
+                <!-- END listing -->
+
+                <?php endif; ?>
+
+                <?php if ( count( $directory[ 'publications' ] ) > 0 ) : ?>
+
+                <!-- listing -->
+                <div class="listing-group cv">
+
+                    <h4>Publications</h4>
+
+                    <?php
+
+                        foreach( $directory[ 'publications' ] as $publication ) {
+
+                            $entry  = $publication[ 'publication' ];
+
+                            $publications .= '<span class="entry">' . $publication . '</span>';
+
+                        }
+
+                        echo $publications;
+
+                    ?>
+
+                </div>
+                <!-- END listing -->
+
+                <?php endif; ?>
+
+                <?php if ( count( $directory[ 'links' ] ) > 0 ) : ?>
+
+                <!-- listing -->
+                <div class="listing-group cv">
+
+                    <h4>Links</h4>
+
+                    <?php
+
+                        foreach( $directory[ 'links' ] as $link ) {
+
+                            $title  = $link[ 'title' ];
+                            $url    = $link[ 'url' ];
+
+                            $links .= '<a href="' . $url . '" class="entry">' . $title . '</a>';
+
+                        }
+
+                        echo $links;
+
+                    ?>
+
+                </div>
+                <!-- END listing -->
+
+                <?php endif; ?>
 
             </div>
             <!-- END info -->
 
         </div>
         <!-- END listing -->
+
+        <pre class="developer show hide">
+
+            <?php print_r( $directory ); ?>
+
+        </pre>
+
+        <pre class="developer hide">
+
+            <?php
+
+                print_r( $getMemberProfileInfo );
+                echo '<br />';
+                print_r( $getMemberDirectoryInfo );
+                echo '<br />';
+                echo '<br />';
+                print_r( $getMemberContactInfo );
+
+                // profile text
+                foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
+
+                    $profile = $memberProfileInfo->ProfileText;
+
+                }
+
+            ?>
+
+        </pre>
 
     </div>
     <!-- END directory -->
