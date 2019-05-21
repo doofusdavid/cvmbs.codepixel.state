@@ -388,6 +388,168 @@
 
         }
 
+        // controls
+        .arrow-controls {
+
+            position: absolute;
+
+            right: 2.5rem;
+            bottom: 2.5rem;
+
+            z-index: 200;
+
+            @include flex-h-j-v-c( false );
+
+            width: 8rem;
+            height: 4rem;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        // class hook
+        .billboard-control {
+
+            position: absolute;
+
+            bottom: 2.5rem;
+
+            z-index: 200;
+
+            width: 4rem;
+            height: 4rem;
+            margin: 0;
+            padding: 0;
+
+            transition: $all220;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                bottom: 18rem;
+
+                width: 3rem;
+                height: 3rem;
+
+            }
+
+            // focus state
+            &:focus {
+
+                // outline: none;
+
+            }
+
+            // hover state
+            &.prev-arrow,
+            &.next-arrow {
+
+                // hover state
+                &:hover {
+
+                    @include fill( $blue, 0.000 );
+
+                    cursor: pointer;
+
+                }
+
+                // disabled
+                &.slick-disabled {
+
+                    cursor: not-allowed;
+
+                    // svg
+                    svg {
+
+                        opacity: 0.465;
+
+                    }
+
+                }
+
+            }
+
+            // prev.arrow
+            &.prev-arrow {
+
+                right: 6.5rem;
+
+                z-index: 201;
+
+                @include fill( white, 0.965 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    right: 5rem;
+
+                }
+
+                // disabled
+                &.slick-disabled {
+
+                    @include fill( white, 0.965 );
+
+                }
+
+            }
+
+            // next.arrow
+            &.next-arrow {
+
+                right: 2.5rem;
+
+                @include fill( white, 0.925 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    right: 2rem;
+
+                }
+
+                // disabled
+                &.slick-disabled {
+
+                    @include fill( white, 0.925 );
+
+                }
+
+                // before
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: -4rem;
+
+                    z-index: -1;
+
+                    width: 8rem;
+                    height: 4rem;
+
+                    @include shadowbox( 1rem, 3rem, black, 0.315 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        left: -3rem;
+
+                        width: 6rem;
+                        height: 3rem;
+
+                    }
+
+                }
+
+            }
+
+        }
+
     }
 
     // build

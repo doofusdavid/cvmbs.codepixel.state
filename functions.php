@@ -3,12 +3,6 @@
     // custom admin
     require_once( 'library/admin.php' );
 
-    // directory
-    // require_once( 'library/directory/directory.php' );
-
-    // composer
-    // require_once( 'vendor/autoload.php' );
-
     // various clean up functions
     require_once( 'library/cleanup.php' );
 
@@ -20,9 +14,6 @@
 
     // utilities
     require_once( 'library/utilities.php' );
-
-    // custom fields
-    // require_once( 'library/custom.fields/custom.fields.php' );
 
     // taxonomy pages
     require_once( 'library/taxonomy.php' );
