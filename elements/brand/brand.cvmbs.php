@@ -1,6 +1,6 @@
 
 <!-- brand.cvmbs -->
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="brand-cvmbs" class="brand-link">
+<a href="<?php echo esc_url( home_url( '../' ) ); ?>" id="brand-cvmbs" class="brand-link">
 
     <h1 id="brand-cvmbs-text">
 
