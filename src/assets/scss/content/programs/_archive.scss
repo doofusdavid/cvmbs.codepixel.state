@@ -14,9 +14,7 @@
 	&__header {
 		position: relative;
 		display: flex;
-		align-items: flex-end;
-		min-height: 50vh;
-		padding: 5rem 8vw 1.5rem;
+		flex-direction: column;
 		background: white url(../img/billboards/degrees/degrees.billboard.00.jpg) no-repeat center center / cover;
 
 		// overlay
@@ -32,6 +30,16 @@
 
 		&-inner {
 			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			max-width: 100%;
+			min-height: 50vh;
+			padding: 5rem 8vw 1.5rem;
+
+			& > * {
+				max-width: 100%;
+			}
 		}
 
 		&-title {

@@ -10,7 +10,7 @@ get_header();
 		<header class="student-orgs__header">
 			<div class="student-orgs__header-inner">
 				<h1 class="student-orgs__header-title">
-					<?php _e( get_queried_object()->label, 'csu-career-center' ); ?>
+					<?php echo esc_attr( get_queried_object()->label ); ?>
 				</h1><!-- .student-orgs__header-title -->
 			</div><!-- .student-orgs__header-inner -->
 		</header><!-- .student-orgs__header -->

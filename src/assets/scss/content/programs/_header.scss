@@ -1,9 +1,7 @@
 .degree-program-header {
 	position: relative;
 	display: flex;
-	align-items: flex-end;
-	min-height: 65vh;
-	padding: 5rem 8vw 3rem;
+	flex-direction: column;
 	background: white no-repeat center center / cover;
 
 	// overlay
@@ -17,8 +15,18 @@
 		background: rgba($cvnavy, .76);
 	}
 
-	&__inner {
+	&-inner {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		max-width: 100%;
+		min-height: 50vh;
+		padding: 5rem 8vw 1.5rem;
+
+		& > * {
+			max-width: 100%;
+		}
 	}
 
 	&__title {

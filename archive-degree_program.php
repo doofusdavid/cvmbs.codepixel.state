@@ -10,7 +10,7 @@ get_header();
 		<header class="deg-progs__header">
 			<div class="deg-progs__header-inner">
 				<h1 class="deg-progs__header-title">
-					<?php _e( get_queried_object()->label, 'csu-career-center' ); ?>
+					<?php echo esc_attr( get_queried_object()->label ); ?>
 				</h1><!-- .deg-progs__header-title -->
 			</div><!-- .deg-progs__header-inner -->
 		</header><!-- .deg-progs__header -->
