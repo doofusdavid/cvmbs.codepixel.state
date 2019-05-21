@@ -1,6 +1,6 @@
 <?php
 
-    // template name: member
+    // template name: Directory Member View
 
 ?>
 
