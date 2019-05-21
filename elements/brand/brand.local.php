@@ -8,7 +8,7 @@
 ?>
 
 <!-- local.brand -->
-<span id="brand-local">
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="brand-local">
 
     <?php
 
@@ -24,5 +24,5 @@
 
     ?>
 
-</span>
+</a>
 <!-- END local.brand -->

@@ -1,6 +1,6 @@
 
 <!-- brand.state -->
-<button id="brand-state" class="brand-link" data-url="http://colostate.edu">
+<a href="https://colostate.edu" id="brand-state" class="brand-link">
 
     <h1 id="brand-state-text">
 
@@ -29,5 +29,5 @@
 
     </h1>
 
-</button>
+</a>
 <!-- END brand.state -->
