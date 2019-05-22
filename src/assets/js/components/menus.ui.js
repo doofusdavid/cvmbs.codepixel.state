@@ -135,7 +135,8 @@ export var menusFX = {
             // show menu
             menu.velocity({
 
-                translateX : [ menuX, '28rem' ],
+                // translateX : [ menuX, '28rem' ],
+                translateX : [ 0, '100%' ],
                 opacity    : [ 1, 0 ]
 
             }, {
@@ -225,7 +226,8 @@ export var menusFX = {
             // hide menu
             menu.velocity({
 
-                translateX : [ '28rem', menuX ],
+                // translateX : [ '28rem', menuX ],
+                translateX : [ '100%', 0 ],
                 opacity    : [ 0, 1 ]
 
             }, {

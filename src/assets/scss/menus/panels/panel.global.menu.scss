@@ -379,6 +379,13 @@
                 margin: 0;
                 padding: 0;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    height: 4rem;
+
+                }
+
             }
 
             // home
@@ -655,6 +662,13 @@
                 padding: 0 1rem 1rem 2rem;
 
                 transition: all 720ms $ocirc 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    height: 4rem;
+
+                }
 
                 // hover state
                 &:hover {

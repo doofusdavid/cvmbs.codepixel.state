@@ -147,6 +147,8 @@
 
                 @include text( $up );
 
+                @include typo( 2rem, 0.045em );
+
                 @include color( $gold, 0.000 );
 
             }

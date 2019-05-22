@@ -123,21 +123,7 @@
     </panel>
     <!-- END panel.search -->
 
-    <!-- panel.events -->
-    <panel id="menu-panel-events" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-events-header" class="panel-header">
-
-            college event calendar
-
-        </header>
-        <!-- END panel.header -->
-
-        <?php echo $events_panel; ?>
-
-    </panel>
-    <!-- END panel.events -->
+    <?php get_template_part( 'elements/menus/panels/panel.events' ); ?>
 
 </menu>
 <!-- END menu.panels -->

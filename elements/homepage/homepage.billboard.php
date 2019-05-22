@@ -3,7 +3,7 @@
     $billboard_query = array(
 
         'post_type' => 'billboard',
-        'orderby'   => 'rand',
+        // 'orderby'   => 'rand',
 
     );
 

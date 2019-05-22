@@ -171,7 +171,7 @@
             <!-- text -->
             <span class="link-text">
 
-                service + outreach
+                outreach
 
             </span>
             <!-- END text -->
