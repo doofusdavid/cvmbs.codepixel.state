@@ -30,7 +30,7 @@ get_header();
 						$ancestors = get_post_ancestors( $post->ID );
 
 						if ( $ancestors[1] ) {
-							echo get_post( $ancestors[0] )->post_title . ':';
+							echo get_post( $ancestors[0] )->post_title . ' &mdash;';
 						}
 						?>
 						<?php the_title(); ?>
