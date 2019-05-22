@@ -73,6 +73,12 @@ export var menusFX = {
     // event listener
     access: function( menu, button ) {
 
+        // check viewport for menu position
+        var mediaQ = Foundation.MediaQuery.current;
+        var menuX;
+
+        console.log( mediaQ );
+
         $(window).on( 'opened.zf.offcanvas', function( e, target ) {
 
             // event emitter
@@ -116,10 +122,20 @@ export var menusFX = {
 
             });
 
+            if ( mediaQ == 'large' ) {
+
+                menuX = '-5rem';
+
+            } else if ( mediaQ == 'small' ) {
+
+                menuX = '-4rem';
+
+            }
+
             // show menu
             menu.velocity({
 
-                translateX : [ '-5rem', '28rem' ],
+                translateX : [ menuX, '28rem' ],
                 opacity    : [ 1, 0 ]
 
             }, {

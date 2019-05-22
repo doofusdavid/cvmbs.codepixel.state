@@ -93,7 +93,7 @@
 					<!-- link -->
                     <span class="place-link">
 
-                        view facility
+                        learn more
 
                     </span>
                     <!-- END link -->

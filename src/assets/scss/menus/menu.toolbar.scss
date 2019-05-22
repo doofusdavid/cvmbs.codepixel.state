@@ -36,6 +36,7 @@
             top: 4rem;
 
             width: 4rem;
+            height: calc( 100vh - 4rem );
 
             transform: translate3d( 4rem, 0, 0 );
 
@@ -72,6 +73,13 @@
             margin: 0;
             padding: 0;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 4rem;
+
+            }
+
             // list
             ul {
 
@@ -81,6 +89,13 @@
 
                 list-style: none;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 4rem;
+
+                }
+
                 // list item
                 .menu-item {
 
@@ -88,6 +103,14 @@
                     height: 5rem;
                     margin: 0;
                     padding: 0;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 4rem;
+                        height: 4rem;
+
+                    }
 
                     // hidden state
                     &.hidden {
@@ -110,6 +133,15 @@
                 padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
                 transition: all 220ms linear 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 4rem;
+                    height: 4rem;
+                    padding: 0 0 0 0;
+
+                }
 
                 // hover state
                 &:hover {

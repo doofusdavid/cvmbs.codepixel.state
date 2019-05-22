@@ -62,6 +62,13 @@
 
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 4rem 0 0 0;
+
+            }
+
             // header
             .panel-header {
 
@@ -117,7 +124,7 @@
                                 // color: $g140;
                                 color: $gold;
 
-                                @include fill( $dark, 0.465 );
+                                @include fill( $g135, 0.465 );
 
                                 // arrow
                                 &:after {
@@ -144,7 +151,7 @@
                         // arrow
                         &:after {
 
-                            // @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\edc9' );
+                            @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\edc9' );
 
                             position: absolute;
 
@@ -178,6 +185,8 @@
                                 bottom: 1rem;
 
                                 z-index: 0;
+
+                                border: none !important;
 
                                 transform: rotate( 0deg );
                                 transform-origin: center center;
@@ -216,6 +225,8 @@
                             @include fill( $dark, 0.465 );
 
                             a {
+
+                                padding: 0.0625rem 1rem 0 2rem;
 
                                 color: white;
 
