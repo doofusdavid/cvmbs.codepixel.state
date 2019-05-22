@@ -1,11 +1,23 @@
 <?php
 get_header();
+
+// The Query
+$args = array(
+	'post_type'      => 'degree_program',
+	'posts_per_page' =>  99,
+	'orderby'        => 'menu_order',
+	'order'          => 'ASC',
+	'tax_query'      =>  array( array(
+		'taxonomy' => 'degree_type',
+		'operator' => 'EXISTS'
+	) )
+);
+
+$programs = new WP_Query( $args );
 ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
 
 		<header class="deg-progs__header">
 			<div class="deg-progs__header-inner">
@@ -15,11 +27,13 @@ get_header();
 			</div><!-- .deg-progs__header-inner -->
 		</header><!-- .deg-progs__header -->
 
+		<?php if ( $programs->have_posts() ) : ?>
+
 		<div class="deg-progs__grid">
 			<div class="deg-progs__grid-inner">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( $programs->have_posts() ) : $programs->the_post();
 				$card_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'fp-medium' ) . ');"' : '';
 				$link = ( get_field('student_org_link') ) ? get_field('student_org_link') : get_permalink();
 			?>
@@ -37,7 +51,7 @@ get_header();
 					</span>
 				</a>
 
-			<?php endwhile; ?>
+			<?php endwhile; wp_reset_postdata(); ?>
 
 			</div><!-- .deg-progs__grid-inner -->
 		</div><!-- .deg-progs__grid -->
