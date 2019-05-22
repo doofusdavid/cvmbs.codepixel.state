@@ -1,6 +1,11 @@
+<?php
+
+    $site_type = get_field( 'site_type', 'options' );
+
+?>
 
 <!-- brand.cvmbs -->
-<a href="<?php echo esc_url( home_url( '../' ) ); ?>" id="brand-cvmbs" class="brand-link">
+<a href="<?php echo esc_url( home_url( '../' ) ); ?>" id="brand-cvmbs" class="brand-link <?php echo $site_type; ?>">
 
     <h1 id="brand-cvmbs-text">
 

@@ -54,7 +54,7 @@
             <!-- text -->
             <span class="layer-text">
 
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes ridiculus mus.
+                Our majors launch careers in health and medicine. You’ll find challenging coursework, talented peers, attentive advisors, and caring and accomplished professors.
 
             </span>
             <!-- END text -->

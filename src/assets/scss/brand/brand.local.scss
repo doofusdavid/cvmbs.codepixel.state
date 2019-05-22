@@ -27,4 +27,19 @@
 
         @include color( white, 0.000 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            position: static;
+
+            height: 2rem;
+
+            @include font( $proxima, 0.625rem, 600 );
+
+            @include text( $up );
+
+            @include typo( 1rem, 0.015em );
+
+        }
+
     }

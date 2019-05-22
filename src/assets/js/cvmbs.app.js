@@ -234,22 +234,6 @@
 
     });
 
-    // degree programs
-    var degreebutton = $('.button-link');
-
-    // event handler
-    degreebutton.on( 'click', function( e ) {
-
-        site.ui.sections.academics.velocity( 'scroll', {
-
-            duration  : 360,
-            delay     : 0,
-            easing    : [0.023, 1, 0.32, 1]
-
-        });
-
-    });
-
     // menu variables
     var globalnav = $('#global-menu-link');
     var localmenu = $('#menu-department-menu, #menu-special-unit-menu');

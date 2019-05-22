@@ -123,6 +123,8 @@
         // text
         #text-layer {
 
+            @include flex-v-c-h-s( false );
+
             width: 40%;
             padding: 0 0 0 2rem;
 
@@ -141,7 +143,7 @@
 
                 margin: 0 0 1rem 0;
 
-                @include font( $klavislim, 2rem, 400 );
+                @include font( $klavislim, 2.25rem, 400 );
 
                 @include text( $up );
 
@@ -149,10 +151,23 @@
 
             }
 
+            // text
+            .layer-text {
+
+                margin: 1rem 0 1rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include typo( 1.25rem, 0.035em );
+
+                @include color( white, 0.000 );
+
+            }
+
             // button
             .layer-link {
 
-                @include flex-h-c-v-c( true );
+                @include flex-h-c-v-c( false );
 
                 height: 4rem;
                 margin: 1rem 0 0 0;

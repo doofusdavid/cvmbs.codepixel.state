@@ -18,6 +18,23 @@
 
         color: white;
 
+        // department
+        &.department {
+
+            // desktop
+            .brand-desktop {
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include hide;
+
+                }
+
+            }
+
+        }
+
         // menu open state + page templates
         .site-menu-open &,
         .ui-contrast &,
@@ -71,8 +88,6 @@
                 line-height: 1rem;
 
                 @include breakpoint ( small only ) {
-
-                    // @include hide;
 
                     font: {
 
