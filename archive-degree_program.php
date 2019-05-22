@@ -4,9 +4,9 @@ get_header();
 // The Query
 $args = array(
 	'post_type'      => 'degree_program',
-	'posts_per_page' =>  99,
 	'orderby'        => 'menu_order',
 	'order'          => 'ASC',
+	'posts_per_page' =>  99,
 	'tax_query'      =>  array( array(
 		'taxonomy' => 'degree_type',
 		'operator' => 'EXISTS'
@@ -51,7 +51,11 @@ $programs = new WP_Query( $args );
 					</span>
 				</a>
 
-			<?php endwhile; wp_reset_postdata(); ?>
+			<?php
+			endwhile;
+
+			wp_reset_postdata();
+			?>
 
 			</div><!-- .deg-progs__grid-inner -->
 		</div><!-- .deg-progs__grid -->

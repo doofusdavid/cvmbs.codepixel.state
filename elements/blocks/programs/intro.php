@@ -1,16 +1,16 @@
 <?php
 if ( have_rows('program_intro') ) :
 	while ( have_rows('program_intro') ) : the_row();
+		$terms = wp_get_post_terms( $post->ID, 'academic_level' );
 
-	$terms      = wp_get_post_terms( $post->ID, 'academic_level' );
-	$children   = get_children( array(
-		'post_parent' => $post->ID,
-		'post_status' => 'publish',
-		'tax_query'   =>  array( array(
-			'taxonomy' => 'academic_level',
-			'operator' => 'EXISTS'
-		) )
-	) );
+		$children = get_children( array(
+			'post_parent' => $post->ID,
+			'post_status' => 'publish',
+			'tax_query'   =>  array( array(
+				'taxonomy' => 'degree_type',
+				'operator' => 'EXISTS'
+			) )
+		) );
 ?>
 
 <div class="degree-program-intro program-block">
