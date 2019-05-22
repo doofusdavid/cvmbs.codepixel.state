@@ -26,7 +26,7 @@
         $subheadline     = get_field( 'subheadline_text' );
         $headline        = get_field( 'headline_text' );
         $description     = get_field( 'description_text' );
-        $button_link     = get_field( 'button_link' );
+        $button_link     = get_field( 'button_url' );
         $button_text     = get_field( 'button_text' );
 
     ?>
@@ -98,11 +98,11 @@
                     <!-- END description -->
 
                     <!-- headline -->
-                    <button class="button-link scroll-trigger" data-link="<?php echo $button_link; ?>" data-section="academics">
+                    <a href="<?php echo $button_link; ?>" class="button-link">
 
                         <?php echo $button_text; ?>
 
-                    </span>
+                    </a>
                     <!-- END headline -->
 
                 </div>

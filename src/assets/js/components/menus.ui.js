@@ -122,7 +122,7 @@ export var menusFX = {
 
             });
 
-            if ( mediaQ == 'large' ) {
+            if ( mediaQ == 'large' || mediaQ == 'xlarge' ) {
 
                 menuX = '-5rem';
 
@@ -212,10 +212,20 @@ export var menusFX = {
 
             });
 
+            if ( mediaQ == 'large' ) {
+
+                menuX = '-5rem';
+
+            } else if ( mediaQ == 'small' ) {
+
+                menuX = '-4rem';
+
+            }
+
             // hide menu
             menu.velocity({
 
-                translateX : [ '28rem', '-5rem' ],
+                translateX : [ '28rem', menuX ],
                 opacity    : [ 0, 1 ]
 
             }, {
