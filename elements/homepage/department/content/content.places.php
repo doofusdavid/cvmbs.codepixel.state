@@ -1,25 +1,31 @@
 <?php
 
+    // set global blog variable
+    global $blog_id;
+
+    // set dynamic blog id
+    $currentsite = $blog_id;
+
     // get site path
     $siteinfo = get_blog_details();
 
     // parse URL for site path
-    $siteurl = str_replace( '/', '', $siteinfo->path );
+    $dept_slug = str_replace( '/', '', $siteinfo->path );
 
     // set department ID for REST API tasks
-    if ( $siteurl == 'bms' ) {
+    if ( $dept_slug == 'bms' ) {
 
         $department = '53';
 
-    } else if ( $siteurl == 'cs' ) {
+    } else if ( $dept_slug == 'cs' ) {
 
         $department = '54';
 
-    } else if ( $siteurl == 'erhs' ) {
+    } else if ( $dept_slug == 'erhs' ) {
 
         $department = '55';
 
-    } else if ( $siteurl == 'mip' ) {
+    } else if ( $dept_slug == 'mip' ) {
 
         $department = '56';
 
@@ -73,46 +79,66 @@
         <!-- news.feed -->
         <section id="facilities-carousel" class="article-cards ui-news">
 
-            <?php
+        <?php
+        // switch to main site for query
+        switch_to_blog( 1 );
 
-                foreach( $places as $place ) {
+        $args = array(
+            'post_type' => 'place',
+            'tax_query' => array( array(
+                'taxonomy' => 'department',
+                'field'    => 'slug',
+                'terms'    =>  array( $dept_slug )
+            ) )
+        );
 
-                    $permalink = $place->link;
+        $places = new WP_Query( $args );
 
-                    if ( $place->featured_media ) {
+        if ( $places->have_posts() ) :
+            while ( $places->have_posts() ) : $places->the_post();
+                $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+                $lines = ( strlen( get_the_title() ) > 25 ) ? 'multiple-lines' : 'single-line';
+                $place_link = ( get_field('place_link') ) ? get_field( 'place_website' )['url'] : get_the_permalink();
+        ?>
 
-                        // $thumbnail = $place->featured_media;
-                        // $thumbnail = $place->_embedded->{'wp:featuredmedia'}->media_details->sizes->full->source_url;
+        <a class="article place-link" href="<?php echo esc_url( $place_link ) ?>">
 
-                    } else {
+            <!-- artwork -->
+            <div class="thumb-artwork" style="background-image:url(<?php echo esc_url( $place_image ); ?>)">
+                <!-- the emptiness -->
+            </div>
+            <!-- END artwork -->
 
-                        // $thumbnail = 'null';
+            <!-- overlay -->
+            <div class="thumb-overlay">
+                <!-- the emptiness -->
+            </div>
+            <!-- END overlay -->
 
-                    }
+            <!-- header -->
+            <header class="header <?php echo $lines; ?>">
 
-                    $thumbnail = $place->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->full->source_url;
+                <!-- title -->
+                <span class="place-title">
+                    <?php the_title(); ?>
+                </span>
+                <!-- END title -->
 
-                    $placename = $place->title->rendered;
+                <!-- link -->
+                <span class="place-link">learn more</span>
+                <!-- END link -->
 
-                    if ( strlen( $placename ) > 40 ) {
+            </header>
+            <!-- END header -->
+        </a><!-- .place-link -->
 
-                        $lines = 'multiple-lines';
+        <?php
+            endwhile; wp_reset_postdata();
+        endif;
 
-                    } else {
-
-                        $lines = 'single-line';
-
-                    }
-
-                    // echo $permalink . '<br />' . $placename . '<br />' . $thumbnail . '<br />';
-
-                    $placesdata .= '<article class="article" data-place="' . $permalink . '"><div class="thumb-artwork" style="background-image:url( ' . $thumbnail . ' )"></div><div class="thumb-overlay"></div><header><span class="place-title ' . $lines . '">' . $placename . '</span><a href=" ' . $permalink . ' " class="place-link">learn more</a></header></article>';
-
-                }
-
-                echo $placesdata;
-
-            ?>
+        // return to getting data from current site
+        switch_to_blog( $currentsite );
+        ?>
 
         </section>
         <!-- END news.feed -->
