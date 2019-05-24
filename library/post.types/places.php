@@ -12,20 +12,23 @@
 		    // define post type options and properties
 			array(
 
-				'labels' => array(
-
-					'name' 				=> __( 'Places', 'cvmbsPress' ),
-					'singular_name' 	=> __( 'Place', 'cvmbsPress' ),
-					'all_items' 		=> __( 'All Places', 'cvmbsPress' ),
-					'add_new' 			=> __( 'Add Place', 'cvmbsPress' ),
-					'add_new_item' 		=> __( 'Add New Place', 'cvmbsPress' ),
-					'edit' 				=> __( 'Edit', 'cvmbsPress' ),
-					'edit_item' 		=> __( 'Edit Place', 'cvmbsPress' ),
-					'new_item' 			=> __( 'New Place', 'cvmbsPress' ),
-					'search_items' 		=> __( 'Search Places', 'cvmbsPress' ),
-					'not_found' 		=> __( 'Nothing to see here...', 'cvmbsPress' ),
-					'parent_item_colon' => ''
-
+				'labels'                => array(
+					'name'                  => _x( 'Places', 'post type general name', 'cvmbsPress' ),
+					'singular_name'         => _x( 'Place', 'post type singular name', 'cvmbsPress' ),
+					'add_new'               => _x( 'Add New', 'place', 'cvmbsPress' ),
+					'add_new_item'          => __( 'Add New Place', 'cvmbsPress' ),
+					'edit_item'             => __( 'Edit Place', 'cvmbsPress' ),
+					'new_item'              => __( 'New Place', 'cvmbsPress' ),
+					'view_item'             => __( 'View Place', 'cvmbsPress' ),
+					'view_items'            => __( 'View Places', 'cvmbsPress' ),
+					'search_items'          => __( 'Search Places', 'cvmbsPress' ),
+					'all_items'             => __( 'All Places', 'cvmbsPress' ),
+					'archives'              => __( 'Place Archives', 'cvmbsPress' ),
+					'attributes'            => __( 'Place Attributes', 'cvmbsPress' ),
+					'insert_into_item'      => __( 'Insert into place', 'cvmbsPress' ),
+					'uploaded_to_this_item' => __( 'Uploaded to this place', 'cvmbsPress' ),
+					'not_found'             => __( 'No places found.', 'cvmbsPress' ),
+					'not_found_in_trash'    => __( 'No places found in Trash.', 'cvmbsPress' )
 				),
 
 				'public'				=> true,
