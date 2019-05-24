@@ -1,5 +1,11 @@
 <?php
 
+    // set global blog variable
+    global $blog_id;
+
+    // set dynamic blog id
+    $currentsite = $blog_id;
+
     // department homepage options
     $department_options   = get_field( 'department_homepage_options' );
 
@@ -10,31 +16,26 @@
     $siteinfo = get_blog_details();
 
     // parse URL for site path
-    $siteurl = str_replace( '/', '', $siteinfo->path );
+    $dept_slug = str_replace( '/', '', $siteinfo->path );
 
     // set department ID for REST API tasks
-    if ( $siteurl == 'bms' ) {
+    if ( $dept_slug == 'bms' ) {
 
         $department = '53';
 
-    } else if ( $siteurl == 'cs' ) {
+    } else if ( $dept_slug == 'cs' ) {
 
         $department = '54';
 
-    } else if ( $siteurl == 'erhs' ) {
+    } else if ( $dept_slug == 'erhs' ) {
 
         $department = '55';
 
-    } else if ( $siteurl == 'mip' ) {
+    } else if ( $dept_slug == 'mip' ) {
 
         $department = '56';
 
     }
-
-    // setup REST API request
-    $requestURL = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/degree_program?department=' . $department );
-    $data       = wp_remote_retrieve_body( $requestURL );
-    $programs   = json_decode( $data );
 
 ?>
 
@@ -42,7 +43,7 @@
 <div class="design-layer">
 
     <!-- image -->
-    <!-- <div class="image fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ]; ?>)"> -->
+    <!-- <div class="image fx-layer layer" style="background-image:url(<?php // echo $research_content[ 'background' ]; ?>)"> -->
     <div class="image fx-layer layer">
 
         <!-- ball so hard -->
@@ -102,26 +103,53 @@
     <div class="program-list undergraduate-programs">
 
         <?php
+        // switch to main site for query
+        switch_to_blog( 1 );
 
-            foreach( $programs as $program ) {
+        $args = array(
+            'post_type' => 'degree_program',
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'department',
+                    'field'    => 'slug',
+                    'terms'    =>  array( $dept_slug )
+                ),
+                array(
+                    'taxonomy' => 'academic_level',
+                    'field'    => 'slug',
+                    'terms'    =>  array( 'graduate' )
+                ),
+                array(
+                    'taxonomy' => 'degree_type',
+                    'operator' => 'EXISTS'
+                )
+            )
+        );
 
-                $title = $program->title->rendered;
-                $link  = $program->link;
+        $programs = new WP_Query( $args );
 
-                $degree_programs .= '
+        if ( $programs->have_posts() ) :
+            while ( $programs->have_posts() ) : $programs->the_post();
+                $ancestors = get_post_ancestors( $post->ID );
+        ?>
 
-                    <a class="program-link" href="' . $link . '">
-
-                        ' . $title . '
-
-                    </a>
-
-                ';
-
+        <a class="program-link" href="<?php the_permalink(); ?>">
+            <?php
+            if ( $ancestors[1] ) {
+                echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
             }
 
-            echo $degree_programs;
+            the_title();
+            ?>
+        </a><!-- .program-link -->
 
+        <?php
+            endwhile; wp_reset_postdata();
+        endif;
+
+        // return to getting data from current site
+        switch_to_blog( $currentsite );
         ?>
 
     </div>
