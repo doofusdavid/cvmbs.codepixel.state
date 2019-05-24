@@ -33,7 +33,7 @@
 				'exclude_from_search'   => true,
 				'show_ui' 				=> true,
 				'show_in_nav_menus' 	=> false,
-				'show_in_admin_bar' 	=> false,
+				'show_in_admin_bar' 	=> true,
 				'show_in_rest'			=> true,
 				'query_var' 			=> true,
 				'can_export' 			=> true,

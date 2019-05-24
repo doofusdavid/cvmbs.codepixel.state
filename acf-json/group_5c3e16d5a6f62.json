@@ -3,25 +3,6 @@
     "title": "Places",
     "fields": [
         {
-            "key": "field_5c3e1701e4b80",
-            "label": "Description",
-            "name": "place_description",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5c952e352399b",
             "label": "Place Link",
             "name": "place_link",
@@ -46,7 +27,7 @@
             "name": "place_website",
             "type": "link",
             "instructions": "optionally provide a website URL for the place",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -62,6 +43,33 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5c3e1701e4b80",
+            "label": "Description",
+            "name": "place_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c952e352399b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -79,8 +87,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
         "discussion",
         "comments",
         "revisions",
@@ -94,5 +100,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1553281654
+    "modified": 1558717897
 }
