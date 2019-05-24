@@ -1,6 +1,6 @@
 
 <!-- brand.state -->
-<a href="https://colostate.edu" id="brand-state" class="brand-link">
+<a href="https://www.colostate.edu/" id="brand-state" class="brand-link">
 
     <h1 id="brand-state-text">
 
