@@ -108,6 +108,8 @@
 
         $args = array(
             'post_type' => 'degree_program',
+            'orderby'   => 'order',
+            'order'     => 'ASC',
             'tax_query' => array(
                 'relation' => 'AND',
                 array(
