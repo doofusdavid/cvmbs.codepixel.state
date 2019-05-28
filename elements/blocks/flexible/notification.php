@@ -2,11 +2,12 @@
 $expired = is_this_item_expired( get_sub_field('expiration') );
 
 if ( ! ( $expired ) ) :
+	$type = get_sub_field('type');
 ?>
 
 <div class="template-block notification-block">
 	<div class="template-block__inner notification-block__inner">
-		<div class="notification-box">
+		<div class="notification-box box--<?php echo esc_attr( $type ); ?>">
 			<div class="notification-box__image">
 				<img class="notification-box__image" src="<?php echo esc_url( get_template_directory_uri() . '/dist/assets/img/icons/admin/icon_close.svg'); ?>" alt="">
 			</div>
