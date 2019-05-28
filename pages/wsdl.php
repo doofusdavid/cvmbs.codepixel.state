@@ -28,7 +28,7 @@
     );
 
     // get returned data object
-    $member = $getMember->GetMemberByIdResult->MemberResponse;
+    $member = json_encode( $getMember->GetMemberByIdResult, JSON_PRETTY_PRINT );
 
     // create JSON store
     $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
@@ -60,7 +60,7 @@
         <?php
 
             echo '<br  />DEFAULT RESPONSE OBJECT<br  />';
-            print_r( $getMember );
+            print_r( $member );
 
             echo '<br /><br />';
 
