@@ -38,7 +38,7 @@
     <div id="footer-top" class="footer-row">
 
         <!-- links.column -->
-        <column id="footer-left" class="footer-column links narrow">
+        <aside id="footer-left" class="footer-column links narrow">
 
             <span class="links-header">
 
@@ -48,11 +48,11 @@
 
             <?php footer_left_menu(); ?>
 
-        </column>
+        </aside>
         <!-- END links.column -->
 
         <!-- links.column -->
-        <column id="footer-center" class="footer-column links wide">
+        <aside id="footer-center" class="footer-column links wide">
 
             <?php switch_to_blog( 1 ); ?>
 
@@ -77,11 +77,11 @@
 
             <?php footer_center_menu(); ?>
 
-        </column>
+        </aside>
         <!-- END links.column -->
 
         <!-- links.column -->
-        <column id="footer-right" class="footer-column links default">
+        <aside id="footer-right" class="footer-column links default">
 
             <span class="links-header">
 
@@ -91,7 +91,7 @@
 
             <?php footer_right_menu(); ?>
 
-        </column>
+        </aside>
         <!-- END links.column -->
 
         <?php
@@ -186,7 +186,7 @@
         <?php get_template_part( 'elements/links/links.required' ); ?>
 
         <!-- brand.state -->
-        <button id="brand-legacy" class="footer-button" data-link="http://colostate.edu">
+        <a id="brand-legacy" class="footer-button" href="https://www.colostate.edu">
 
             <svg x="0px" y="0px" viewBox="0 0 256 32" enable-background="new 0 0 256 32" xml:space="preserve">
 
@@ -236,7 +236,7 @@
 
             </svg>
 
-        </button>
+        </a>
         <!-- END brand.state -->
 
     </div>

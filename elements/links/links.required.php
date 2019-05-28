@@ -1,70 +1,86 @@
 
 <!-- footer.left -->
-<div id="footer-links">
+<details id="footer-links" open>
 
-    <!-- link.list -->
-    <ul class="link-list">
+    <!-- links -->
+    <nav class="link-list">
 
-        <li>
+        <!-- link.list -->
+        <ul class="link-list">
 
-            <a class="link" href="http://admissions.colostate.edu/">
+            <!-- link -->
+            <li>
 
-                Apply to CSU
+                <a class="link" href="http://admissions.colostate.edu/">
 
-            </a>
+                    Apply to CSU
 
-        </li>
+                </a>
 
-        <li>
+            </li>
+            <!-- END link -->
 
-            <a class="link" href="http://colostate.edu/search/">
+            <!-- link -->
+            <li>
 
-                Search
+                <a class="link" href="http://colostate.edu/search/">
 
-            </a>
+                    Search
 
-        </li>
+                </a>
 
-        <li>
+            </li>
+            <!-- END link -->
 
-            <a class="link" href="http://colostate.edu/disclaimer/">
+            <!-- link -->
+            <li>
 
-                Disclaimer
+                <a class="link" href="http://colostate.edu/disclaimer/">
 
-            </a>
+                    Disclaimer
 
-        </li>
+                </a>
 
-        <li>
+            </li>
+            <!-- END link -->
 
-            <a class="link" href="http://www.colostate.edu/equal-opportunity/">
+            <!-- link -->
+            <li>
 
-                Equal Opportunity
+                <a class="link" href="http://www.colostate.edu/equal-opportunity/">
 
-            </a>
+                    Equal Opportunity
 
-        </li>
+                </a>
 
-        <li>
+            </li>
+            <!-- END link -->
 
-            <a class="link" href="http://colostate.edu/privacy/">
+            <!-- link -->
+            <li>
 
-                Privacy Statement
+                <a class="link" href="http://colostate.edu/privacy/">
 
-            </a>
+                    Privacy Statement
 
-        </li>
+                </a>
 
-    </ul>
-    <!-- END link.list -->
+            </li>
+            <!-- END link -->
+
+        </ul>
+        <!-- END link.list -->
+
+    </nav>
+    <!-- END links -->
 
     <!-- copyright -->
-    <span class="copyright">
+    <summary class="copyright">
 
         Copyright <em>&copy;</em> 2018 by Colorado State University, Fort Collins, CO 80523 USA
 
-    </span>
+    </summary>
     <!-- END copyright -->
 
-</div>
+</details>
 <!-- END footer.left -->

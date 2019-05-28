@@ -365,6 +365,8 @@
 
                 @include flex-h-s-v-c( false );
 
+                order: -1;
+
                 height: 1rem;
                 margin: 0;
 
@@ -434,6 +436,8 @@
             .copyright {
 
                 @include flex-h-s-v-b( false );
+
+                order: 1;
 
                 height: 1rem;
 
@@ -507,6 +511,26 @@
                         fill-opacity: 0.825;
 
                         transition: $all220;
+
+                    }
+
+                }
+
+            }
+
+            // details tag
+            details {
+
+                @include flex-v-t-h-s( false );
+
+                // summary label
+                summary {
+
+                    order: 1;
+
+                    &:-webkit-details-marker {
+
+                        background: url();
 
                     }
 
