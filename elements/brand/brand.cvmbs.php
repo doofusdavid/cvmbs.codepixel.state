@@ -7,7 +7,7 @@
 <!-- brand.cvmbs -->
 <a href="<?php echo esc_url( home_url( '../' ) ); ?>" id="brand-cvmbs" class="brand-link <?php echo $site_type; ?>">
 
-    <h1 id="brand-cvmbs-text">
+    <h2 id="brand-cvmbs-text">
 
         <span class="brand-desktop">
 
@@ -20,7 +20,7 @@
 
         </span>
 
-    </h1>
+    </h2>
 
 </a>
 <!-- END brand.cvmbs -->

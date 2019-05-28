@@ -15,7 +15,7 @@
 <menu id="site-menu-panels" class="ui-panels">
 
     <!-- panel.main -->
-    <panel id="menu-panel-main" class="active ui-panel menu-panel">
+    <section id="menu-panel-main" class="active ui-panel menu-panel">
 
         <!-- panel.header -->
         <header id="menu-panel-main-header" class="panel-header">
@@ -72,11 +72,11 @@
 
         ?>
 
-    </panel>
+    </section>
     <!-- END panel.main -->
 
     <!-- panel.global -->
-    <panel id="menu-panel-global" class="inactive ui-panel menu-panel">
+    <section id="menu-panel-global" class="inactive ui-panel menu-panel">
 
         <!-- panel.header -->
         <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">
@@ -104,11 +104,11 @@
         </nav>
         <!-- END menu -->
 
-    </panel>
+    </section>
     <!-- END panel.global -->
 
     <!-- panel.search -->
-    <panel id="menu-panel-search" class="inactive ui-panel menu-panel">
+    <section id="menu-panel-search" class="inactive ui-panel menu-panel">
 
         <!-- panel.header -->
         <header id="menu-panel-search-header" class="panel-header">
@@ -120,7 +120,7 @@
 
         search
 
-    </panel>
+    </section>
     <!-- END panel.search -->
 
     <?php get_template_part( 'elements/menus/panels/panel.events' ); ?>

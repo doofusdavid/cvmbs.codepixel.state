@@ -1,5 +1,5 @@
 <!-- panel.events -->
-<panel id="menu-panel-events" class="inactive ui-panel menu-panel">
+<section id="menu-panel-events" class="inactive ui-panel menu-panel">
 
     <!-- panel.header -->
     <header id="menu-panel-events-header" class="panel-header">
@@ -34,7 +34,7 @@
 
 			if ( $content === FALSE ) {
 
-			// error handling
+			    // error handling
 				echo '
 
 					<div class="calendar-fail">
@@ -134,5 +134,5 @@
 	</div>
 	<!-- END panel utility class -->
 
-</panel>
+</section>
 <!-- END panel.events -->

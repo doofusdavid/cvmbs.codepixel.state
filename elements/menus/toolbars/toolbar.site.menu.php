@@ -1,6 +1,6 @@
 
 <!-- site.toolbar -->
-<toolbar id="site-menu-toolbar" class="ui-toolbar" data-open="site-menu">
+<menu id="site-menu-toolbar" class="ui-toolbar" data-open="site-menu">
 
     <!-- menu -->
     <nav id="toolbar-menu">
@@ -47,5 +47,5 @@
     </nav>
     <!-- END  menu -->
 
-</toolbar>
+</menu>
 <!-- END site.toolbar -->
