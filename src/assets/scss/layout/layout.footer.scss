@@ -477,6 +477,8 @@
             // required logo
             #brand-legacy {
 
+                position: relative;
+
                 width: 16rem;
                 height: 2rem;
                 margin: 0;
@@ -489,6 +491,7 @@
 
                 }
 
+                // hover
                 &:hover {
 
                     svg {
@@ -503,6 +506,7 @@
 
                 }
 
+                // artwork
                 svg {
 
                     path {
@@ -513,6 +517,15 @@
                         transition: $all220;
 
                     }
+
+                }
+
+                // label
+                .link-label {
+
+                    position: absolute;
+
+                    visibility: hidden;
 
                 }
 

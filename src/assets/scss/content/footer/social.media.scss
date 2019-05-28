@@ -65,6 +65,15 @@
 
             }
 
+            // label
+            .link-label {
+
+                position: absolute;
+
+                visibility: hidden;
+
+            }
+
             &.facebook {
 
                 // @include fill( white, 0.965 );

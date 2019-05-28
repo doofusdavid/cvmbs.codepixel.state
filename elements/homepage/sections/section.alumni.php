@@ -31,6 +31,14 @@
             <!-- previous arrow -->
             <button id="prev-arrow-control" class="billboard-control prev-arrow billboard-link" role="button" tabindex="-1" title="Previous Slide">
 
+                <!-- label -->
+                <span class="button-label">
+
+                    previous slide
+
+                </span>
+                <!-- END label -->
+
                 <svg class="prev-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
 
             		<polygon fill="#FFFFFF" points="26.8,30.4 20.3,24 26.8,17.6 27.7,18.4 22.1,24 27.7,29.6" />
@@ -43,11 +51,21 @@
             <!-- next arrow -->
             <button id="next-arrow-control" class="billboard-control next-arrow billboard-link" role="button" tabindex="-1" title="Next Slide">
 
+                <!-- label -->
+                <span class="button-label">
+
+                    next slide
+
+                </span>
+                <!-- END label -->
+
+                <!-- arrow -->
                 <svg class="next-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
 
                     <polygon fill="#FFFFFF" points="22.2,30.4 21.3,29.6 26.9,24 21.3,18.4 22.2,17.6 28.7,24" />
 
                 </svg>
+                <!-- END arrow -->
 
             </button>
             <!-- END next arrow -->

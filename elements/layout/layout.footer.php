@@ -40,11 +40,11 @@
         <!-- links.column -->
         <aside id="footer-left" class="footer-column links narrow">
 
-            <span class="links-header">
+            <h5 class="links-header">
 
                 <?php echo $left_menu_name; ?>
 
-            </span>
+            </h5>
 
             <?php footer_left_menu(); ?>
 
@@ -69,11 +69,11 @@
 
             ?>
 
-            <span class="links-header">
+            <h5 class="links-header">
 
                 <?php echo $center_menu_name; ?>
 
-            </span>
+            </h5>
 
             <?php footer_center_menu(); ?>
 
@@ -83,11 +83,11 @@
         <!-- links.column -->
         <aside id="footer-right" class="footer-column links default">
 
-            <span class="links-header">
+            <h5 class="links-header">
 
                 <?php echo $right_menu_name; ?>
 
-            </span>
+            </h5>
 
             <?php footer_right_menu(); ?>
 
@@ -104,11 +104,11 @@
         <!-- links.column -->
         <column id="footer-drawer" class="footer-column content">
 
-            <span class="links-header">
+            <h5 class="links-header">
 
                 get in touch
 
-            </span>
+            </h5>
 
             <div id="contact-info">
 
@@ -187,6 +187,14 @@
 
         <!-- brand.state -->
         <a id="brand-legacy" class="footer-button" href="https://www.colostate.edu">
+
+            <!-- label -->
+            <span class="link-label">
+
+                colorado state university
+
+            </span>
+            <!-- END label -->
 
             <svg x="0px" y="0px" viewBox="0 0 256 32" enable-background="new 0 0 256 32" xml:space="preserve">
 
