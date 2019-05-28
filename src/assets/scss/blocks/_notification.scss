@@ -4,20 +4,22 @@
 	background: white;
 	padding: 1.5em;
 
-	&.box--date {
-		border-left: .3125em solid $campaign;
-	}
+	&.box {
+		&--date {
+			border-left: .3125em solid $campaign;
+		}
 
-	&.box--info {
-		border-left: .3125em solid $blue;
-	}
+		&--info {
+			border-left: .3125em solid $blue;
+		}
 
-	&.box--notice {
-		border-left: .3125em solid $hot-yellow;
-	}
+		&--notice {
+			border-left: .3125em solid $yellow-h;
+		}
 
-	&.box--warn {
-		border-left: .3125em solid $roarange;
+		&--warn {
+			border-left: .3125em solid $roarange;
+		}
 	}
 
 	&__image {
