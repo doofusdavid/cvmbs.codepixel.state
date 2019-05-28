@@ -25,17 +25,23 @@
     <!-- END background.image -->
 
     <!-- title -->
-    <a href="/places" class="section-title" data-section="facilities">
+    <a href="/places" data-section="facilities">
 
-        centers + institutes
+        <!-- heading -->
+        <h3 class="section-title">
 
-        <!-- link -->
-        <span class="title-link">
+            centers + institutes
 
-            view all
+            <!-- link -->
+            <span class="title-link">
 
-        </span>
-        <!-- END link -->
+                view all
+
+            </span>
+            <!-- END link -->
+
+        </h3>
+        <!-- END heading -->
 
     </a>
     <!-- END title -->
@@ -103,7 +109,7 @@
                 <header class="header <?php echo $lines; ?>">
 
                     <!-- title -->
-                    <span class="place-title">
+                    <h4 class="place-title">
 
                         <?php
 
@@ -111,7 +117,7 @@
 
                         ?>
 
-                    </span>
+                    </h4>
                     <!-- END title -->
 
                     <!-- link -->

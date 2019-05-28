@@ -2,6 +2,14 @@
 <!-- main.menu -->
 <button id="button-main-menu" class="site-menu-button" data-target="main">
 
+    <!-- label -->
+    <span class="link-label">
+
+        main menu
+
+    </span>
+    <!-- END label -->
+
     <!-- icon -->
     <svg class="icon hidden" width="64px" height="64px">
 

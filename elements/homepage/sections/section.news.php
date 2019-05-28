@@ -11,17 +11,23 @@ $articles    = json_decode( $data );
 <div class="article-container" tabindex="-1">
 
     <!-- title -->
-    <a href="https://cvmbs.source.colostate.edu/" class="section-title" data-section="news">
+    <a href="https://cvmbs.source.colostate.edu/" data-section="news">
 
-        news and updates
+        <!-- heading -->
+        <h3 class="section-title">
 
-        <!-- link -->
-        <span class="title-link">
+            news and updates
 
-            view all
+            <!-- label -->
+            <span class="title-link">
 
-        </span>
-        <!-- END link -->
+                view all
+
+            </span>
+            <!-- END label -->
+
+        </h3>
+        <!-- END heading -->
 
     </a>
     <!-- END title -->
@@ -53,9 +59,9 @@ $articles    = json_decode( $data );
 
                         <section class="content">
 
-                            <h2 class="title">' . $title . '</h2>
+                            <h4 class="title">' . $title . '</h4>
 
-                            <span class="text">' . $excerpt . '</span>
+                            ' . $excerpt . '
 
                         </section>
 

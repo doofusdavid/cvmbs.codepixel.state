@@ -56,17 +56,17 @@
             <!-- content -->
             <div class="content-layer">
 
-                <span class="headline">
+                <h3 class="headline">
 
                     <?php echo $research_content[ 'title' ]; ?>
 
-                </span>
+                </h3>
 
-                <span class="text">
+                <p class="text">
 
                     <?php echo $research_content[ 'text' ]; ?>
 
-                </span>
+                </p>
 
                 <a href="/research" class="content-button">
 

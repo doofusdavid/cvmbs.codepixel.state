@@ -128,6 +128,8 @@
             // common
             .site-menu-button {
 
+                position: relative;
+
                 display: block;
 
                 width: 5rem;
@@ -175,6 +177,15 @@
                     // outline: none;
 
                     @include fill( white, 0.925 );
+
+                }
+
+                // link label
+                .link-label {
+
+                    position: absolute;
+
+                    visibility: hidden;
 
                 }
 

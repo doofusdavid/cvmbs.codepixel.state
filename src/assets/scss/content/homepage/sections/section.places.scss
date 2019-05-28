@@ -543,6 +543,8 @@
 
                             @include typo( 0.875rem, 0.085em );
 
+                            @include color( $rite-lite, 0.000 );
+
                         }
 
                         // link
