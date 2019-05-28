@@ -18,25 +18,6 @@
     // parse URL for site path
     $dept_slug = str_replace( '/', '', $siteinfo->path );
 
-    // set department ID for REST API tasks
-    if ( $dept_slug == 'bms' ) {
-
-        $department = '53';
-
-    } else if ( $dept_slug == 'cs' ) {
-
-        $department = '54';
-
-    } else if ( $dept_slug == 'erhs' ) {
-
-        $department = '55';
-
-    } else if ( $dept_slug == 'mip' ) {
-
-        $department = '56';
-
-    }
-
 ?>
 
 <!-- visual FX -->

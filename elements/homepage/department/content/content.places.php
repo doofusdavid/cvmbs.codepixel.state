@@ -12,30 +12,6 @@
     // parse URL for site path
     $dept_slug = str_replace( '/', '', $siteinfo->path );
 
-    // set department ID for REST API tasks
-    if ( $dept_slug == 'bms' ) {
-
-        $department = '53';
-
-    } else if ( $dept_slug == 'cs' ) {
-
-        $department = '54';
-
-    } else if ( $dept_slug == 'erhs' ) {
-
-        $department = '55';
-
-    } else if ( $dept_slug == 'mip' ) {
-
-        $department = '56';
-
-    }
-
-    // setup REST API request
-    $requestURL  = wp_remote_get( 'https://vetmedbiosci.colostate.edu/wp-json/wp/v2/place?department=' . $department . '&per_page=4&_embed' );
-    $data        = wp_remote_retrieve_body( $requestURL );
-    $places      = json_decode( $data );
-
 ?>
 
 <!-- container -->
@@ -84,8 +60,9 @@
         switch_to_blog( 1 );
 
         $args = array(
-            'post_type' => 'place',
-            'tax_query' => array( array(
+            'post_type'      => 'place',
+            'posts_per_page' =>  4,
+            'tax_query'      => array( array(
                 'taxonomy' => 'department',
                 'field'    => 'slug',
                 'terms'    =>  array( $dept_slug )
