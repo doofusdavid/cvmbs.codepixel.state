@@ -151,36 +151,6 @@
         // menus
         menusFX.init();
 
-        // places
-        placesUI.init();
-
-        // section load
-        sections.init();
-
-        // academics load
-        academicsUI.init();
-
-        // academics interact
-        // academicsFX.init();
-
-        // department degree programs [ BUILD ONLY ]
-        // academicsFX.department();
-
-        // alumni load
-        alumniUI.init();
-
-        // research load
-        researchUI.init();
-
-        // facilities load
-        facilitiesUI.init();
-
-        // news load
-        // newsUI.init();
-
-        // news interact
-        // newsFX.init();
-
         // display content
         site.ui.layout.velocity( 'fadeIn', {
 
@@ -191,42 +161,6 @@
             complete   : function() {
 
                 // site.ui.billboard.focus();
-
-            }
-
-        });
-
-    });
-
-    // scroll section triggers
-    var scroller = $('.scroll-trigger');
-
-    // event handler
-    scroller.on( 'click', function( e ) {
-
-        // data attribute
-        var targetsection = $(this).data( 'section' );
-
-        var scrolltarget = $('#' + targetsection );
-
-        // console.log( scrolltarget );
-
-        // scrolltarget.focus();
-
-        scrolltarget.velocity( 'scroll', {
-
-            begin     : function() {
-
-                //
-
-            },
-            container : site.ui.layout,
-            duration  : 640,
-            delay     : 60,
-            easing    : [0.023, 1, 0.32, 1],
-            complete  : function() {
-
-                //
 
             }
 
@@ -250,67 +184,8 @@
 
     }
 
-    var pageURL;
-    var pagelink = $('.link');
-
-    // handle links (temp)
-    pagelink.on( 'click', function( e ) {
-
-        pageURL = $(this).attr( 'data-url' );
-
-        // window.open( pageURL, '_self' );
-        window.open( pageURL );
-
-    });
-
 // ================================================================================
 // END :: initialize
-// ================================================================================
-
-
-
-// ================================================================================
-// START :: prototype DVM build
-// ================================================================================
-
-    // variables
-    var scrollcontrol = $('#site-toolbar .menu-item-link, #special-billboard .explore-button');
-
-    // event handler
-    scrollcontrol.on( 'click', function( e ) {
-
-        // data attribute
-        var scrollsection = $(this).data( 'section-link' );
-        var scrolltarget  = $('#' + scrollsection );
-
-        // test
-        console.log( scrolltarget );
-
-        scrolltarget.velocity( 'scroll', {
-
-            begin     : function() {
-
-                // article.toggleClass( 'active' );
-
-            },
-            container : site.ui.layout,
-            duration  : 640,
-            delay     : 60,
-            easing    : [0.023, 1, 0.32, 1],
-            complete  : function() {
-
-                // $(this).focus().toggleClass( 'active' );
-
-                // site.ui.content.trigger( 'activate.ui.article', [ target ] );
-
-            }
-
-        });
-
-    });
-
-// ================================================================================
-// END :: prototype DVM build
 // ================================================================================
 
 
