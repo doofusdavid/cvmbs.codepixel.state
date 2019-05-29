@@ -2,7 +2,7 @@
 <!-- homepage.section -->
 <section id="academics" class="ui-article collapsed" data-section="academics" data-load="pending" tabindex="-1">
 
-    <?php get_template_part( 'elements/homepage/sections/section.academics' ); ?>
+    <?php get_template_part( 'elements/homepage/sections/section.degree.programs' ); ?>
 
 </section>
 <!-- END homepage.section -->
