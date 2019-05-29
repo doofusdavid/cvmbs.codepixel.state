@@ -7,15 +7,7 @@
     import $ from 'jquery';
     // import whatInput from 'what-input';
     import { menusFX } from './components/menus.ui';
-    import { scrollUI } from './interactive/scroll.navigate';
-    import { placesUI } from './interactive/places.app';
     import { slides } from './interactive/billboard.slides';
-    import { sections } from './components/load.section';
-    import { academicsUI, academicsFX } from './content/content.academics';
-    import { alumniUI } from './content/content.alumni';
-    import { researchUI } from './content/content.research';
-    import { facilitiesUI } from './content/content.facilities';
-    import { newsUI, newsFX } from './content/content.news';
 
     import './library/foundation.explicit';
 
