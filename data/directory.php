@@ -4,8 +4,8 @@
     error_reporting( E_ERROR | E_WARNING | E_PARSE );
 
     // set file location
-    $filelocation = '/home/vetmedbiosci/public_html/wp-content/themes/cvmbsPress/data/';
-    // $filelocation = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/';
+    // $filelocation = '/home/vetmedbiosci/public_html/wp-content/themes/cvmbsPress/data/';
+    $filelocation = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/';
 
     // set WSDL service URL
     $serviceURL = 'http://www.cvmbs.colostate.edu/directoryservice/DirectoryService.svc?wsdl';
@@ -108,6 +108,13 @@
 
             );
 
+            // get address info
+            // $address = $service->GetMemberById(
+
+                // array( 'id' => $queryId )
+
+            // );
+
             // get photo
             $photos = $service->GetMemberPhotoByMemberId(
 
@@ -116,6 +123,7 @@
             );
 
             // get returned data object(s)
+            $memberAddress  = $address->GetMemberByIdResult;
             $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
             $memberContacts = $contacts->GetMemberContactsByMemberIdResult->MemberContactResponse;
             $memberPhotos   = $photos->GetMemberPhotoByMemberIdResult->MemberPhotoResponse;
@@ -123,8 +131,18 @@
             // test for department group data type
             if ( is_array( $memberGroups ) ) {
 
-                $department     = $memberGroups[0]->GroupFriendlyName;
-                $primaryGroupId = $memberGroups[0]->Id;
+                foreach ( $memberGroups as $memberGroup ) {
+
+                    $departmentID = $memberGroup->IsPrimaryGroup;
+
+                    if ( $departmentID ) {
+
+                        $department     = $memberGroup->GroupFriendlyName;
+                        $primaryGroupId = $memberGroup->Id;
+
+                    }
+
+                }
 
             } else {
 
@@ -226,6 +244,9 @@
                 'department'        => $department,
                 'phone'             => $phone,
                 'contactInfo'       => $memberContacts,
+                'addressInfo'       => 'ball so hard',
+                // 'addressInfo'       => $member->BusinessAddress1,
+                'address'           => $memberAddress->BusinessAddress1,
                 'photo'             => $memberPhotos
 
             );
@@ -237,6 +258,7 @@
 
         // send data to json store
         file_put_contents( $tempfilestore, $data );
+
         // overwrite JSON file
         rename( $tempfilestore, $filestore );
 
