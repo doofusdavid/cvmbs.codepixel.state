@@ -19,13 +19,13 @@ $programs = new WP_Query( $args );
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<header class="deg-progs__header">
-			<div class="deg-progs__header-inner">
-				<h1 class="deg-progs__header-title">
+		<header class="deg-progs-header">
+			<div class="deg-progs-header__inner">
+				<h1 class="deg-progs-header__title">
 					<?php echo esc_attr( get_queried_object()->label ); ?>
-				</h1><!-- .deg-progs__header-title -->
-			</div><!-- .deg-progs__header-inner -->
-		</header><!-- .deg-progs__header -->
+				</h1><!-- .deg-progs-header__title -->
+			</div><!-- .deg-progs-header__inner -->
+		</header><!-- .deg-progs-header -->
 
 		<?php if ( $programs->have_posts() ) : ?>
 
