@@ -12,7 +12,7 @@
     $site_type = get_field( 'site_type', 'options' );
 
     // create json store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
 
     // convert store to data
     $getdata     = file_get_contents( $filestore );
@@ -160,7 +160,8 @@
                             $tableName  = $lastName . ', ' . $firstName;
                             $eMail      = strtolower( $member->email );
                             $phone      = $member->phone;
-                            $department = $member->department;
+                            // $department = $member->department;
+                            $department = $member->directoryGroup;
 
                             $results .= '<tr class="record"><td><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
 

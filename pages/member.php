@@ -12,7 +12,7 @@
     $query = $_GET[ 'id' ];
 
     // create json store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
 
     // convert store to data
     $getdata     = file_get_contents( $filestore );
@@ -137,7 +137,8 @@
                     $firstName  = $member->firstName;
                     $email      = $member->email;
                     $title      = $member->title;
-                    $department = $member->department;
+                    // $department = $member->department;
+                    $department = $member->directoryGroup;
 
                     if ( is_array( $member->contactInfo ) ) {
 
