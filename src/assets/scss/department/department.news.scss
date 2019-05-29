@@ -435,20 +435,15 @@
                     }
 
                     // text
-                    .text {
+                    p {
+
+                        margin: 0;
 
                         @include font( $industry, 0.75rem, 500 );
 
-                        // paragraph
-                        p {
+                        @include typo( 1.25rem, 0.035em );
 
-                            margin: 0;
-
-                            @include typo( 1.25rem, 0.035em );
-
-                            color: $oil;
-
-                        }
+                        color: $oil;
 
                     }
 

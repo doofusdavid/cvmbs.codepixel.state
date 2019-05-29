@@ -328,7 +328,7 @@
 
             .pipe( webpackStream( webpackConfig, webpack2 ) )
 
-            .pipe( $.concat( 'cvmbs.main.min.js' ) )
+            .pipe( $.concat( 'cvmbs.app.min.js' ) )
 
             .pipe( $.uglify()
 
