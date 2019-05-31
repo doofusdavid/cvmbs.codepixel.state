@@ -5,7 +5,7 @@
 
     // import modules
     import $ from 'jquery';
-    // import whatInput from 'what-input';
+    import whatInput from 'what-input';
     import { menusFX } from './components/menus.ui';
     import { slides } from './interactive/billboard.slides';
 

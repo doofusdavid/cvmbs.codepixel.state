@@ -51,8 +51,24 @@
 
     );
 
+    // get department groups
+    $groups = $service->GetGroupsByMemberId(
+
+        array( 'memberId' => $query )
+
+    );
+
+    // test
+    $getMember = $service->GetMemberById(
+
+        array( 'id' => $query )
+
+    );
+
     // prettify
     $memberDirectoryInfo = $getMemberDirectoryInfo->GetDirectoryInfoByMemberIdResult->DirectoryInfoResponse;
+
+    $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
 
     // photoURL
     $photoURL = 'http://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $query;
@@ -87,6 +103,7 @@
             // setup CV content
             foreach ( $memberDirectoryInfo as $directoryInfo ) {
 
+                // setup CV content types
                 $directoryType = $directoryInfo->DirectoryType;
 
                 if ( $directoryType == 'Certification' ) {
@@ -228,6 +245,16 @@
             <!-- info -->
             <div class="listing-info">
 
+                <pre class="developer hide">
+
+                    <?php
+
+                        print_r( $memberGroups );
+
+                    ?>
+
+                </pre>
+
                 <!-- listing group -->
                 <div class="listing-group bio">
 
@@ -356,12 +383,6 @@
 
         </div>
         <!-- END listing -->
-
-        <pre class="developer show hide">
-
-            <?php print_r( $directory ); ?>
-
-        </pre>
 
         <pre class="developer hide">
 

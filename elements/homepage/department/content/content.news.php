@@ -69,7 +69,7 @@ $sourceURL   = 'https://cvmbs.source.colostate.edu/tag/' . $department;
 
                 $content .= '
 
-                    <article class="article card" data-url="' . $permalink . '">
+                    <a href="' . $permalink . '" class="article card" data-url="' . $permalink . '">
 
                         <header class="header">
 
@@ -79,13 +79,13 @@ $sourceURL   = 'https://cvmbs.source.colostate.edu/tag/' . $department;
 
                         <section class="content">
 
-                            <h2 class="title">' . $title . '</h2>
+                            <h4 class="title">' . $title . '</h4>
 
-                            <span class="text">' . $excerpt . '</span>
+                            ' . $excerpt . '
 
                         </section>
 
-                    </article>
+                    </a>
 
                 ';
 

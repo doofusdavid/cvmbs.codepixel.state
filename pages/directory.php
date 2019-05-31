@@ -30,19 +30,19 @@
     // set department ID for REST API tasks
     if ( $siteurl == 'bms' ) {
 
-        $department_ID = '207';
+        $department_ID = '1003';
 
     } else if ( $siteurl == 'cs' ) {
 
-        $department_ID = '135';
+        $department_ID = '1002';
 
     } else if ( $siteurl == 'erhs' ) {
 
-        $department_ID = '208';
+        $department_ID = '1005';
 
     } else if ( $siteurl == 'mip' ) {
 
-        $department_ID = '209';
+        $department_ID = '1004';
 
     }
 
@@ -160,7 +160,6 @@
                             $tableName  = $lastName . ', ' . $firstName;
                             $eMail      = strtolower( $member->email );
                             $phone      = $member->phone;
-                            // $department = $member->department;
                             $department = $member->directoryGroup;
 
                             $results .= '<tr class="record"><td><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
@@ -176,7 +175,7 @@
 
                         foreach ( $members as $member ) {
 
-                            if ( $member->primaryGroupID == $department_ID ) {
+                            if ( $member->directoryGroupID == $department_ID ) {
 
                                 $query      = $member->memberID;
                                 $ename      = $member->eName;
@@ -220,17 +219,6 @@
 
         </div>
         <!-- END info -->
-
-        <pre class="hide">
-
-            <?php
-
-                echo '<br />';
-                print_r( $members );
-
-            ?>
-
-        </pre>
 
         <!-- Data Tables -->
         <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>

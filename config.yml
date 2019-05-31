@@ -35,7 +35,6 @@ PATHS:
     # Javascript
     entries:
         - "src/assets/js/cvmbs.app.js"
-        - "src/assets/js/cvmbs.admin.app.js"
     # package tasks
     package:
         - "**/*"
