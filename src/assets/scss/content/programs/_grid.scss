@@ -1,11 +1,7 @@
 .deg-progs__grid {
-	padding: 1.5rem 8vw;
-
-	&-inner {
-		@include bpoint(tablet) {
-			display: flex;
-			flex-wrap: wrap;
-		}
+	@include bpoint(tablet) {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&-item {
@@ -72,7 +68,7 @@
 			display: block;
 			flex-grow: 1;
 			background: rgba($sec_temp_white, .72);
-			padding-top: 50%;
+			padding-top: 40%;
 		}
 
 		&:hover, &:focus {

@@ -29,14 +29,14 @@ $programs = new WP_Query( $args );
 
 		<?php if ( $programs->have_posts() ) : ?>
 
-		<div class="deg-progs__grid">
-			<div class="deg-progs__grid-inner">
+		<div class="deg-progs-content">
+			<div class="deg-progs__grid">
 
-			<?php
-			while ( $programs->have_posts() ) : $programs->the_post();
-				$card_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'fp-medium' ) . ');"' : '';
-				$link = ( get_field('student_org_link') ) ? get_field('student_org_link') : get_permalink();
-			?>
+				<?php
+				while ( $programs->have_posts() ) : $programs->the_post();
+					$card_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'fp-medium' ) . ');"' : '';
+					$link = ( get_field('student_org_link') ) ? get_field('student_org_link') : get_permalink();
+				?>
 
 				<a class="deg-progs__grid-item" href="<?php echo esc_url( $link ); ?>" <?php echo $card_bg; ?>>
 					<span class="deg-progs__grid-item-name">
@@ -51,14 +51,15 @@ $programs = new WP_Query( $args );
 					</span>
 				</a>
 
-			<?php
-			endwhile;
+				<?php
+				endwhile;
 
-			wp_reset_postdata();
-			?>
+				wp_reset_postdata();
+				?>
 
-			</div><!-- .deg-progs__grid-inner -->
-		</div><!-- .deg-progs__grid -->
+			</div><!-- .deg-progs__grid -->
+
+		</div><!-- .deg-progs-content -->
 
 		<?php endif; ?>
 
