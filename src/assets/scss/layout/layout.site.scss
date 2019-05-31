@@ -86,7 +86,7 @@
 
         }
 
-        @include scrolls( true, $body-scroll, $body-thumb, $body-track );
+        // @include scrolls( true, $body-scroll, $body-thumb, $body-track );
 
         -webkit-filter: blur( 0px );
                 filter: blur( 0px );
