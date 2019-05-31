@@ -9,8 +9,8 @@ BROWSERSYNC:
 # autoprefixer
 COMPATIBILITY:
     - "last 2 versions"
-    - "ie >= 9"
-    - "ios >= 7"
+    - "ie 11"
+    - "ios >= 10"
 
 # static asset revisioning
 REVISIONING: true

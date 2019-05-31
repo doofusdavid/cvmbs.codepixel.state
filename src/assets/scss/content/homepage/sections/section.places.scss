@@ -23,17 +23,6 @@
 
         @include fill( $roarange, 0.185 );
 
-        // focus state
-        &:focus {
-
-            .section-base {
-
-                // @include fill( red, 0.625 );
-
-            }
-
-        }
-
         // container
         .article-container {
 
@@ -48,6 +37,10 @@
 
                 padding: 2rem 1rem 1rem 1rem;
 
+            }
+
+            & > a {
+                text-decoration: none;
             }
 
         }
@@ -105,6 +98,8 @@
 
             @include color( white, 0.000 );
 
+            text-decoration: none;
+
             // mobile
             @include breakpoint ( small only ) {
 
@@ -135,7 +130,9 @@
             }
 
             // hover state
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
 
                 cursor: pointer;
 

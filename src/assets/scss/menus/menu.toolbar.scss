@@ -174,8 +174,6 @@
                 // focus state
                 &:focus {
 
-                    // outline: none;
-
                     @include fill( white, 0.925 );
 
                 }
@@ -206,9 +204,7 @@
                     .path {
 
                         fill: white;
-                        // fill: $g135;
 
-                        // opacity: 0.565;
                         opacity: 0.765;
 
                         transition: all 220ms linear 0ms;

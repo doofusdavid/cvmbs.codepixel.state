@@ -17,15 +17,17 @@
 
         border: none;
 
-        background: {
+        text-decoration: none;
 
-            // color: transparent;
-
-        }
+        color: white;
 
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
+
+            outline: none;
 
             &:before {
 
@@ -107,7 +109,6 @@
                 letter-spacing: 0.025em;
 
                 color: transparentize( white, 0.465 );
-                // color: transparentize( $campaign, 0.125 );
 
             }
 
@@ -119,7 +120,6 @@
 
                 font: {
 
-                    // size: 0.53125rem;
                     size: 0.46875rem;
                     weight: 700;
 

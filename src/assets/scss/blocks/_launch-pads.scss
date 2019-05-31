@@ -60,11 +60,18 @@
 			$block: &;
 			display: flex;
 			flex-direction: column;
+			box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
 			margin-top: 2em;
 			background: transparent no-repeat center center / cover;
 			color: $sec_temp_white;
 			line-height: 1.2;
-			box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
+			text-decoration: none;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $sec_temp_white;
+			}
 
 			&:first-child {
 				margin-top: 0;

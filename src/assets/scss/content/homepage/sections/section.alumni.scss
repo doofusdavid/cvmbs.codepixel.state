@@ -401,6 +401,8 @@
 
                         transition: $all220;
 
+                        text-decoration: none;
+
                         // mobile
                         @include breakpoint ( small only ) {
 
@@ -411,7 +413,9 @@
                         }
 
                         // hover state
-                        &:hover {
+                        &:hover,
+                        &:focus,
+                        &:active {
 
                             @include fill( $g140, 0.000 );
 
@@ -452,13 +456,6 @@
 
                     transition: $all220;
 
-                    // focus state
-                    &:focus {
-
-                        // outline: none;
-
-                    }
-
                     // hover state
                     &.prev-arrow,
                     &.next-arrow {
@@ -467,7 +464,6 @@
                         &:hover {
 
                             @include fill( $g140, 0.000 );
-                            // @include fill( $orange, 0.000 );
 
                         }
 
@@ -477,7 +473,6 @@
                     &.prev-arrow {
 
                         @include fill( $orange, 0.000 );
-                        // @include fill( $g135, 0.165 );
 
                     }
 
@@ -492,8 +487,6 @@
                     .button-label {
 
                         position: absolute;
-
-                        // top: -100%;
 
                         visibility: hidden;
 
@@ -533,18 +526,6 @@
 
                     z-index: 1;
 
-                    // custom slide class
-                    .ui-slide-article {
-
-                        // content
-                        .slide-content {
-
-                            //
-
-                        }
-
-                    }
-
                 }
 
             }
@@ -564,13 +545,6 @@
                     repeat: no-repeat;
                     size: cover;
                     position: center center;
-
-                }
-
-                // focus state
-                &:focus {
-
-                    // outline: none;
 
                 }
 

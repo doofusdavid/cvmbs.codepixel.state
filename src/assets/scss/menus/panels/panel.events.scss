@@ -106,10 +106,6 @@
 
 						@include disable-mouse-outline;
 
-						// outline: none;
-
-						// box-shadow: $access;
-
 					}
 
 					&.local-link {
@@ -394,15 +390,6 @@
 
 					background-color:
 
-						// adjust-color(
-
-						// 	$red,
-						// 	$lightness  : -10%,
-						// 	$saturation : 0%,
-						// 	$alpha 		: -0.885
-
-						// )
-
 						transparentize(white, 1.000)
 
 					;
@@ -412,15 +399,6 @@
 				&:nth-child(even) {
 
 					background-color:
-
-						// adjust-color(
-
-						// 	$navy,
-						// 	$lightness  : -15%,
-						// 	$saturation : 0%,
-						// 	$alpha 		: -0.875
-
-						// )
 
 						transparentize(white, 1.000)
 
@@ -471,10 +449,6 @@
 
 						@include disable-mouse-outline;
 
-						// outline: none;
-
-						// box-shadow: $access;
-
 					}
 
 				}
@@ -488,10 +462,7 @@
 					justify-content: flex-start;
 
 					width: 100%;
-					// margin-bottom: 12px;
 					padding: 0;
-
-					// background-color: transparentize(white, 0.955);
 
 					.calendar-icon {
 
@@ -550,8 +521,6 @@
 									$alpha 		: -0.725
 
 								)
-
-								// transparentize($dark, 0.115)
 
 							;
 
@@ -692,10 +661,6 @@
 
 							@include disable-mouse-outline;
 
-							// outline: none;
-
-							// box-shadow: $access;
-
 						}
 
 						a {
@@ -711,14 +676,12 @@
 				.calendar-footer {
 
 					display: flex;
-					// display: none;
 
 					flex-direction: row;
 
 					justify-content: space-between;
 
 					width: 100%;
-					// margin-top: 8px;
 
 					background-color: transparentize(white, 0.925);
 
@@ -766,10 +729,6 @@
 						&:focus {
 
 							@include disable-mouse-outline;
-
-							// outline: none;
-
-							// box-shadow: $access;
 
 						}
 
@@ -829,7 +788,6 @@
 
 							font: {
 
-								// family: $klav-nemi;
 								family: $industry;
 								size: 10px;
 								weight: 600;
@@ -869,15 +827,6 @@
 
 								background-color:
 
-									// adjust-color(
-
-									// 	$navy,
-									// 	$lightness  : 4%,
-									// 	$saturation : 0%,
-									// 	$alpha 		: -0.225
-
-									// )
-
 									transparentize($gold, 0.565)
 
 								;
@@ -887,10 +836,6 @@
 							&:focus {
 
 								@include disable-mouse-outline;
-
-								// outline: none;
-
-								// box-shadow: $access;
 
 							}
 

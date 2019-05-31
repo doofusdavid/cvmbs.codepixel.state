@@ -77,8 +77,11 @@ $btn_bg: #236670;
 			color: $sec_temp_off_white;
 			line-height: 1.2;
 			text-align: center;
+			text-decoration: none;
 
-			&:hover {
+			&:hover,
+			&:focus,
+			&:active {
 				background: darken($btn_bg, 2.5%);
 				color: $sec_temp_off_white;
 			}

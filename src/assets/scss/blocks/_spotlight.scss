@@ -89,9 +89,12 @@
 		letter-spacing: .1em;
 		line-height: 1.2;
 		text-align: center;
+		text-decoration: none;
 		text-transform: uppercase;
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus,
+		&:active {
 			background: rgba($sec_temp_white, .1);
 			color: $sec_temp_white;
 		}

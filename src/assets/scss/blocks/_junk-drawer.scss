@@ -28,12 +28,15 @@
 		padding-bottom: .125em;
 		color: $sec_temp_link_color;
 		line-height: 1.6;
+		text-decoration: none;
 
 		&:visited {
 			color: $sec_temp_link_visited;
 		}
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus,
+		&:active {
 			border-bottom: .125em solid;
 			padding-bottom: .0625em;
 		}

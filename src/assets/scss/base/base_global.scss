@@ -1,32 +1,18 @@
 // stylesheet :: base global elements common styles
 
     // html + body
-        html,
-        body {
+    html,
+    body {
 
-            // height: 100%;
-            margin: 0;
-            padding: 0;
+        margin: 0;
+        padding: 0;
 
-            ::selection {
+        ::selection {
 
-                color: $brite;
+            color: $brite;
 
-                background-color: transparentize( $app20, 0.585 );
-
-            }
+            background-color: transparentize( $app20, 0.585 );
 
         }
 
-        // remove browser default
-        * {
-
-            // focus state
-            &:focus {
-
-                // temporary
-                outline: none;
-
-            }
-
-        }
+    }

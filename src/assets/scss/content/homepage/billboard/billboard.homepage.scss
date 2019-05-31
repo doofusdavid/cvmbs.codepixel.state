@@ -91,13 +91,6 @@
         -webkit-filter: blur( 0px );
                 filter: blur( 0px );
 
-        // focus state
-        &:focus {
-
-            // outline: none;
-
-        }
-
         // image class
         &.image {
 
@@ -106,15 +99,11 @@
 
                 background: {
 
-                    // image: url(../img/billboards/billboard.17.jpg);
-
                     repeat: no-repeat;
                     size: cover;
                     position: center center;
 
                 }
-
-                // opacity: 0.500;
 
             }
 
@@ -127,8 +116,6 @@
             &:before {
 
                 background: {
-
-                    // image: url(../img/patterns/pattern.triangles.svg);
 
                     repeat: repeat;
                     size: cover;
@@ -178,9 +165,6 @@
             width: calc( 100% + 2rem );
             height: calc( 100% + 2rem );
 
-            // -webkit-filter: blur( 0px );
-                    // filter: blur( 0px );
-
             transition: all 0ms linear 0ms;
 
         }
@@ -199,7 +183,6 @@
                 font: {
 
                     style: normal;
-                    // weight: 700;
 
                 }
 
@@ -257,7 +240,6 @@
 
                 background: {
 
-                    // image: url(../img/billboards/billboard.00.jpg);
                     repeat: no-repeat;
                     size: cover;
                     position: center center;
@@ -433,13 +415,6 @@
 
             }
 
-            // focus state
-            &:focus {
-
-                // outline: none;
-
-            }
-
             // hover state
             &.prev-arrow,
             &.next-arrow {
@@ -553,20 +528,11 @@
 
                 position: absolute;
 
-                // top: -100%;
-
                 visibility: hidden;
 
             }
 
         }
-
-    }
-
-    // build
-    #billboard-build {
-
-
 
     }
 

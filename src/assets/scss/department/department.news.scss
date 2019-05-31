@@ -231,13 +231,6 @@
 
                 }
 
-                // focus state
-                &:focus {
-
-                    // outline: none;
-
-                }
-
                 // header
                 .header {
 
@@ -277,9 +270,7 @@
 
                         -webkit-filter:
 
-                            // grayscale( 0.245 )
                             grayscale( 0.000 )
-                            // opacity( 0.585 )
                             opacity( 1.000 )
 
                         ;
@@ -293,7 +284,6 @@
 
                         position: absolute;
 
-                        // top: 0;
                         right: 0;
                         bottom: 0;
                         left: 0;

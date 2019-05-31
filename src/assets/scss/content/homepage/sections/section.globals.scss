@@ -41,13 +41,6 @@
 
         }
 
-        // focus state
-        &:focus {
-
-            // outline: none;
-
-        }
-
         // menu open state
         .site-menu-open & {
 
@@ -61,34 +54,18 @@
 
             }
 
-            // content + color
-            .section-content {
-
-                // opacity: 0.000 !important;
-
-                // transition: all 40ms linear 0ms;
-
-            }
-
         }
 
         // container
         .article-container {
 
-            // position: absolute;
             position: relative;
-
-            // top: -1rem;
-            // right: -1rem;
-            // bottom: -1rem;
-            // left: -1rem;
 
             z-index: 10;
 
             @include flex-v-c-h-c( false );
 
             width: $section_width;
-            // height: $section_height;
             margin: 0;
             padding: 0;
 
@@ -145,13 +122,10 @@
             left: 0;
 
             width: 100%;
-            // height: 100%;
             padding: 1rem 1rem 1rem 1rem;
             padding: 0;
 
             opacity: 1.000;
-
-            // transition: all 240ms linear 360ms;
 
         }
 
@@ -215,10 +189,8 @@
             @include fullscreen( absolute, 50, false, hidden );
 
             width: 100%;
-            // height: calc( 100% - 1px );
             height: 100%;
             margin: 0;
-            // padding: 5rem 1rem 1rem 1rem;
 
             background: {
 
@@ -233,8 +205,6 @@
                 @include font( $industry, 0.6875rem, 600 );
 
                 @include typo( 0.5rem, 0.085em );
-
-                // @include text( $up );
 
                 @include color( white, 0.000 );
 

@@ -82,6 +82,7 @@
 		letter-spacing: .1em;
 		line-height: 1.2;
 		text-align: center;
+		text-decoration: none;
 		text-transform: uppercase;
 
 		&:link {
@@ -92,7 +93,9 @@
 			color: $oil;
 		}
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $sec_temp_link_color;
 			color: $sec_temp_white;
 		}
@@ -104,19 +107,10 @@
 		}
 
 		&-item {
-			// font-size: 1em;
 			line-height: 1.2;
 
 			&:not(:first-child) {
 				margin-top: .5em;
-			}
-		}
-
-		a {
-			color: $sec_temp_link_color;
-
-			&:visited {
-				color: $sec_temp_link_visited;
 			}
 		}
 	}

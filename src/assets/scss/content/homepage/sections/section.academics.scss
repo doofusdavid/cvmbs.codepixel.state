@@ -189,8 +189,12 @@
 
                 transition: all 320ms $outex 0ms;
 
+                text-decoration: none;
+
                 // hover state
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( white, 0.915 );
 

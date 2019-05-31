@@ -13,13 +13,6 @@
 
         @include fill( $section_color, 0.000 );
 
-        // color
-        .section-base {
-
-            //
-
-        }
-
         // title
         .section-title {
 
@@ -36,6 +29,8 @@
             @include typo( 1.25rem, 0.135em );
 
             @include color( $dark, 0.125 );
+
+            text-decoration: none;
 
             // mobile
             @include breakpoint ( small only ) {
@@ -67,7 +62,9 @@
             }
 
             // hover state
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
 
                 cursor: pointer;
 
@@ -152,6 +149,10 @@
 
             }
 
+            & > a {
+                text-decoration: none;
+            }
+
         }
 
         // feature + sidebar
@@ -201,6 +202,8 @@
 
                 transition: all 240ms $outex 0ms;
 
+                text-decoration: none;
+
                 // mobile
                 @include breakpoint ( small only ) {
 
@@ -209,7 +212,9 @@
                 }
 
                 // hover state
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     cursor: pointer;
 
@@ -235,13 +240,6 @@
                         }
 
                     }
-
-                }
-
-                // focus state
-                &:focus {
-
-                    // outline: none;
 
                 }
 
@@ -284,9 +282,7 @@
 
                         -webkit-filter:
 
-                            // grayscale( 0.245 )
                             grayscale( 0.000 )
-                            // opacity( 0.585 )
                             opacity( 1.000 )
 
                         ;
@@ -300,7 +296,6 @@
 
                         position: absolute;
 
-                        // top: 0;
                         right: 0;
                         bottom: 0;
                         left: 0;

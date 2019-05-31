@@ -150,32 +150,6 @@
 
                     padding: 0 0 0 0;
 
-                    &.default {
-
-                        // width: 15rem;
-
-                    }
-
-                    // narrow column
-                    &.narrow {
-
-                        // width: 12rem;
-
-                        .link {
-
-                            //
-
-                        }
-
-                    }
-
-                    // wide column
-                    &.wide {
-
-                        // width: 20rem;
-
-                    }
-
                 }
 
                 // column headers
@@ -215,12 +189,20 @@
 
                         @include text( $up );
 
+                        text-decoration: none;
+
                         @include color( white, 0.385 );
 
                         transition: all 220ms linear 0ms;
 
+                        &:visited {
+                            @include color( white, 0.385 );
+                        }
+
                         // hover state
-                        &:hover {
+                        &:hover,
+                        &:focus,
+                        &:active {
 
                             color: $gold;
 
@@ -243,22 +225,6 @@
             #footer-left {
 
                 @include flex-v-t-h-s( true );
-
-                // order: 2;
-
-            }
-
-            // center
-            #footer-center {
-
-                // order: 1;
-
-            }
-
-            // right
-            #footer-right {
-
-                // order: 3;
 
             }
 
@@ -370,13 +336,6 @@
                 height: 1rem;
                 margin: 0;
 
-                // mobile
-                @include breakpoint ( small only ) {
-
-                    // margin: 0 0 1rem 0;
-
-                }
-
                 // link
                 .link {
 
@@ -388,6 +347,8 @@
 
                     @include font( $industry, 0.625rem, 600 );
 
+                    text-decoration: none;
+
                     @include typo( 0.625rem, 0.065em );
 
                     @include color( white, 0.245 );
@@ -396,21 +357,27 @@
 
                     cursor: pointer;
 
+                    &:visited {
+                        @include color( white, 0.245 );
+                    }
+
+                    // hover state
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        color: $gold;
+
+                        @include fill( white, 1.000 );
+
+                    }
+
                     // mobile
                     @include breakpoint ( small only ) {
 
                         padding: 0 0.5rem 0 0.5rem;
 
                         @include font( $industry, 0.5625rem, 600 );
-
-                    }
-
-                    // hover state
-                    &:hover {
-
-                        color: $gold;
-
-                        @include fill( white, 1.000 );
 
                     }
 
@@ -483,6 +450,8 @@
                 height: 2rem;
                 margin: 0;
                 padding: 0;
+
+                color: white;
 
                 // mobile
                 @include breakpoint ( small only ) {

@@ -19,13 +19,17 @@
 
 		a {
 			color: $sec_temp_link_color;
+			text-decoration: none;
 
 			&:visited {
 				color: $sec_temp_link_visited;
 			}
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus,
+			&:active {
 				color: $sec_temp_link_color;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -49,6 +53,7 @@
 		max-width: 20em;
 		margin: 1.5em auto 0;
 		color: inherit;
+		text-decoration: none;
 
 		&:after {
 			content: '';

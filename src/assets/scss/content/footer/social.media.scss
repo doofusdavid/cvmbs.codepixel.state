@@ -22,7 +22,11 @@
 
             transition: $all220;
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
+
+                outline: none;
 
                 @include fill( white, 0.965 );
 
@@ -76,9 +80,9 @@
 
             &.facebook {
 
-                // @include fill( white, 0.965 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( $facebook, 0.115 );
 
@@ -88,9 +92,9 @@
 
             &.twitter {
 
-                // @include fill( white, 0.935 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( $twitter, 0.085 );
 
@@ -100,9 +104,9 @@
 
             &.linkedin {
 
-                // @include fill( white, 0.910 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( $linkedin, 0.105 );
 
@@ -112,9 +116,9 @@
 
             &.instagram {
 
-                // @include fill( white, 0.960 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( white, 1.000 );
 
@@ -158,9 +162,9 @@
 
             &.pinterest {
 
-                // @include fill( white, 0.935 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( $pinterest, 0.125 );
 
@@ -170,9 +174,9 @@
 
             &.youtube {
 
-                // @include fill( white, 0.985 );
-
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
 
                     @include fill( $youtube, 0.165 );
 
