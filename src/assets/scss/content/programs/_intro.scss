@@ -34,6 +34,7 @@
 		letter-spacing: 0.265em;
 		line-height: 1;
 		text-align: center;
+		text-decoration: none;
 		text-transform: uppercase;
 
 		&:visited {
@@ -86,31 +87,36 @@
 			$block: &;
 			display: flex;
 			flex-direction: column;
+			box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
 			width: 100%;
 			margin-top: 2em;
 			background: transparent no-repeat center center / cover;
 			color: $sec_temp_white;
 			line-height: 1.2;
-			box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
+			text-decoration: none;
 
 			@include bpoint(tablet) {
-				width: calc(50% - 1em);
+				width: calc(50% - 1rem);
+				font-size: 1.125em;
 
 				&:nth-child(even) {
-					margin-left: 2em;
+					margin-left: 2rem;
 				}
 			}
 
 			@include bpoint(desktop) {
+				font-size: 1.25em;
+
 				.grid--small & {
-					width: calc((100% / 3) - 1em);
+					width: calc((100% / 3) - 1rem);
+					font-size: 1.125em;
 
 					&:nth-child(even) {
 						margin-left: 0;
 					}
 
 					&:not(:nth-child(3n+1)) {
-						margin-left: calc(3em / 2);
+						margin-left: calc(3rem / 2);
 					}
 				}
 			}

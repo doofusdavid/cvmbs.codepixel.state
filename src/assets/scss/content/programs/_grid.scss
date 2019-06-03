@@ -8,11 +8,12 @@
 		$block: &;
 		display: flex;
 		flex-direction: column;
+		box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
 		margin-top: 2em;
 		background: white url(../img/billboards/degrees/degrees.billboard.00.jpg) no-repeat center center / cover;
 		color: $sec_temp_white;
 		line-height: 1.2;
-		box-shadow: 0 .5em 1em 0 transparentize($dark-nite, .625);
+		text-decoration: none;
 
 		&:first-child {
 			margin-top: 0;
