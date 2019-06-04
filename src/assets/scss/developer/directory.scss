@@ -262,6 +262,13 @@
 
                     cursor: pointer;
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include fill( $g140, 0.000 );
+
+                    }
+
                     // toggle controls
                     .mobile-toggle {
 
@@ -288,6 +295,13 @@
                         @include color( $cvellow, 0.000 );
 
                         transition: all 320ms $outex 0ms;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include color( white, 0.000 );
+
+                        }
 
                     }
 
