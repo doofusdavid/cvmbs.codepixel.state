@@ -71,7 +71,7 @@
     $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
 
     // photoURL
-    $photoURL = 'http://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $query;
+    $photoURL = 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $query;
 
     // setup CV array
     $directory = array(
@@ -92,6 +92,10 @@
     <div id="directory" class="page-container">
 
         <?php
+
+            // setup contact info
+            $memberOfficeRoom = $getMember->GetMemberByIdResult->OfficeRoomName;
+            $memberOfficeBldg = $getMember->GetMemberByIdResult->OfficeBldgName;
 
             // setup bio content
             foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
@@ -220,6 +224,14 @@
                 <!-- contact -->
                 <div class="profile-contact">
 
+                    <!-- office -->
+                    <p>
+
+                        <?php echo $memberOfficeRoom . ' ' . $memberOfficeBldg; ?>
+
+                    </p>
+                    <!-- END office -->
+
                     <!-- email -->
                     <a href="mailto:<?php echo $email; ?>" class="email">
 
@@ -245,13 +257,9 @@
             <!-- info -->
             <div class="listing-info">
 
-                <pre class="developer hide">
+                <pre class="developer">
 
-                    <?php
-
-                        print_r( $memberGroups );
-
-                    ?>
+                    <?php print_r( $getMember ); ?>
 
                 </pre>
 

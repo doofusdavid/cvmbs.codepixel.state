@@ -17,12 +17,26 @@
 
         @include fill( white, 0.000 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 6rem 2rem 2rem 2rem;
+
+        }
+
         // header
         header {
 
             @include flex-h-s-v-c( false );
 
             height: 5rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                height: 3rem;
+
+            }
 
             // page title
             h1 {
@@ -32,6 +46,13 @@
                 @include typo( 3rem, 0.025em );
 
                 @include color( $cvnavy, 0.235 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    font-size: 2rem;
+
+                }
 
             }
 
@@ -65,6 +86,13 @@
 
             @include font( $industry, 0.875rem, 600 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                height: auto;
+
+            }
+
             // alphabet
             .alphabet {
 
@@ -76,10 +104,32 @@
                 border-top: 1px solid transparentize( $app05, 0.825 );
                 border-bottom: 1px solid transparentize( $app05, 0.825 );
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    display: block;
+
+                    padding: 1rem 0 1rem 0;
+
+                    height: auto;
+
+                    @include font( $industry, 0.75rem, 700 );
+
+                    text-align: center;
+
+                }
+
                 // label
                 .alphabet-label {
 
                     @include color( $app05, 0.625 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        margin: 0 0.25rem 0 0;
+
+                    }
 
                 }
 
@@ -95,6 +145,14 @@
                     @include fill( white, 1.000 );
 
                     transition: all 220ms linear 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        // height: 1.5rem;
+                        padding: 0.0625rem 0.5rem 0 0.5rem;
+
+                    }
 
                     // hover state
                     &:hover {
@@ -125,7 +183,21 @@
         // table
         #directory-records {
 
+            width: 100% !important;
+
             @include font( $industry, 0.875rem, 600 );
+
+            // header
+            thead {
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include fill( $dark, 0.085 );
+
+                }
+
+            }
 
             // row
             .record {
@@ -138,6 +210,49 @@
 
                 transition: all 320ms $outex 0ms;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    position: relative;
+
+                    // icons
+                    &:before,
+                    &:after {
+
+                        position: absolute;
+
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        @include flex-v-c-h-c( false );
+
+                        @include codicon( 1.5rem, 2.3125rem, 0.6875rem 0 0.4375rem 0.5rem, 0.5rem, $blue, inherit );
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    // before
+                    &:before {
+
+                        // content: '\ED5B';
+
+                        opacity: 1.000;
+
+                    }
+
+                    // after
+                    &:after {
+
+                        // content: '\ED5C';
+
+                        opacity: 0.000;
+
+                    }
+
+                }
+
                 // hover state
                 &:hover {
 
@@ -146,6 +261,25 @@
                     @include fill( $cvnavy, 0.165 );
 
                     cursor: pointer;
+
+                    // toggle controls
+                    .mobile-toggle {
+
+                        // before->open
+                        &:before {
+
+                            @include color( $campaign, 0.000 );
+
+                        }
+
+                        // after->close
+                        &:after {
+
+                            //
+
+                        }
+
+                    }
 
                     // email
                     .email-link,
@@ -159,6 +293,154 @@
 
                 }
 
+                // expanded state
+                &.parent {
+
+                    @include fill( $g135, 0.000 );
+
+                    // hover state
+                    &:hover {
+
+                        @include color( white, 0.000 );
+
+                        // @include fill( $roarange, 0.000 );
+
+                        // toggle controls
+                        .mobile-toggle {
+
+                            // before->open
+                            &:before {
+
+                                //
+
+                            }
+
+                            // after->close
+                            &:after {
+
+                                @include color( $roarange, 0.000 );
+
+                            }
+
+                        }
+
+                        // member
+                        .member-link {
+
+                            @include color( white, 0.000 );
+
+                            transition: all 320ms $outex 0ms;
+
+                        }
+
+                    }
+
+                    // toggle controls
+                    .mobile-toggle {
+
+                        // icons
+                        &:before,
+                        &:after {
+
+                            // @include color( red, 0.000 );
+
+                        }
+
+                        // before->open
+                        &:before {
+
+                            opacity: 0.000;
+
+                        }
+
+                        // after->close
+                        &:after {
+
+                            opacity: 1.000;
+
+                        }
+
+                    }
+
+                    // link
+                    .member-link {
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                }
+
+                // toggle controls
+                .mobile-toggle {
+
+                    @include hide;
+
+                    position: relative;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include flex-h-c-v-c( true );
+
+                        width: 2rem;
+                        height: 1.5rem;
+
+                    }
+
+                    // icons
+                    &:before,
+                    &:after {
+
+                        position: absolute;
+
+                        top: 0;
+                        left: 0;
+
+                        @include flex-v-c-h-c( false );
+
+                        @include codicon( 2rem, 2.3125rem, 0.6875rem 0 0.4375rem 0.75rem, 0.5rem, transparentize( $app05, 0.685 ), inherit );
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    // before->open
+                    &:before {
+
+                        content: '\ED5B';
+
+                        @include color( $app05, 0.685 );
+
+                        opacity: 1.000;
+
+                    }
+
+                    // after->close
+                    &:after {
+
+                        content: '\ED5C';
+
+                        @include color( white, 0.000 );
+
+                        opacity: 0.000;
+
+                    }
+
+                }
+
+                // common
+                .email-link,
+                .member-link {
+
+                    display: block;
+
+                    padding: 0.5625rem 0.75rem 0.4375rem 0.75rem;
+
+                    text-decoration: none;
+
+                }
+
                 // member
                 .member-link {
 
@@ -166,16 +448,62 @@
 
                     transition: all 320ms $outex 0ms;
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        position: relative;
+
+                        display: inline-block;
+
+                        padding: 0.5625rem 0.75rem 0.4375rem 0rem;
+
+                    }
+
                 }
 
                 // email
                 .email-link {
 
-                    // @include text( none, none );
-
                     @include color( $app05, 0.265 );
 
                     transition: all 320ms $outex 0ms;
+
+                }
+
+            }
+
+            // column
+            .link-column {
+
+                padding: 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    // padding: 0 0 0 1.75rem;
+
+                }
+
+            }
+
+            // child row (mobile)
+            tr.child {
+
+                @include fill( $g140, 0.000 );
+
+                // list
+                .dtr-details {
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include color( white, 0.000 );
+
+                    // link
+                    a {
+
+                        @include color( $campaign, 0.000 );
+
+                    }
 
                 }
 
@@ -194,7 +522,12 @@
             .dataTables_length,
             .dataTables_filter {
 
-                // the emptiness
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include font( $industry, 0.75rem, 700 );
+
+                }
 
             }
 
@@ -204,6 +537,13 @@
         #directory-info {
 
             height: 3rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $industry, 0.6875rem, 700 );
+
+            }
 
         }
 
@@ -232,6 +572,7 @@
                 padding: 0 1.25rem 0 0.5rem;
 
                 border: none;
+                border-radius: 0px;
 
                 @include font( $industry, 0.875rem, 700 );
 
@@ -250,7 +591,7 @@
 
                 }
 
-                appearance: none;
+                // appearance: none;
 
                 // after
                 &:before {
@@ -313,12 +654,26 @@
 
             @include font( $industry, 0.875rem, 600 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                height: 3rem;
+
+            }
+
             // pagination controls
             #directory-records_paginate {
 
                 @include flex-h-c-v-c( false );
 
                 width: 50%;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+
+                }
 
                 // directions
                 #directory-records_previous,
@@ -354,10 +709,11 @@
 
                     min-width: 2rem;
                     height: 2rem;
-                    // margin:
                     padding: 0 0.5rem 0 0.5rem;
 
                     @include color( $app05, 0.265 );
+
+                    text-decoration: none;
 
                     transition: all 320ms $outex 0ms;
 
@@ -385,6 +741,17 @@
                         @include fill( $g140, 0.000 );
 
                         transition: all 320ms $outex 0ms;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        min-width: 1.5rem;
+                        height: 1.5rem;
+                        padding: 0.0625rem 0.5rem 0 0.5rem;
+
+                        @include font( $industry, 0.75rem, 700 );
 
                     }
 

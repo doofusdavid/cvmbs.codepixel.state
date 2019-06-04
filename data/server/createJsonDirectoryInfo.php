@@ -18,6 +18,8 @@
         // output list of functions
         $response = $service->__getFunctions();
 
+
+
         // output magic
         $directory = $service->GetMembersBySearchName(
 
@@ -42,9 +44,9 @@
         // create storage array
         $storage = array(
 
-            'data' => array(),
-            'departments' => array(),
-            'members' => array()
+            'data'         => array(),
+            'members'      => array(),
+            'departments'  => array()
 
         );
 
@@ -57,37 +59,6 @@
 
         );
 
-        // departments array
-        $storage[ 'departments' ] = array(
-
-            '134' => 'Veterinary Diagnostic Lab',
-            '135' => 'Clinical Sciences Department',
-            '136' => 'Veterinary Teaching Hospital',
-            '138' => 'Veterinary Diagnostic Lab',
-            '139' => 'Veterinary Teaching Hospital Working Group',
-            '140' => 'Clinical Sciences Department Working Group',
-            '170' => 'Clinical Pathology',
-            '172' => 'Clinicians',
-            '176' => 'VTH Interns All',
-            '178' => 'Faculty',
-            '182' => 'VTH Medical Records',
-            '188' => 'VTH Veterinary Technicians',
-            '193' => 'VTH Medical Records - Read Only',
-            '203' => 'CVMBS College Office',
-            '204' => 'CVMBS Finance & Strategic Services',
-            '205' => 'Cellular & Molecular Biology',
-            '206' => 'CVMBS Molecular, Cellular & Integrative Neurosciences',
-            '207' => 'CVMBS Biomedical Sciences Dept',
-            '208' => 'CVMBS Environmental & Radiological Health Sciences Dept',
-            '209' => 'CVMBS Microbiology, Immunology & Pathology Dept',
-            '210' => 'College Office',
-            '215' => 'CVMBS Environmental & Radiological Health Sciences Dept  Working Group',
-            '539' => 'Center for Environmental Medicine',
-            '626' => 'Orthopaedic Research Center',
-            '674' => 'Center for Environmental Medicine Department',
-
-        );
-
         // iterate over data
         foreach( $members as $member ) {
 
@@ -95,18 +66,10 @@
             $queryId = $member->Id;
 
             // get department groups
-            $groups = $service->GetGroupsByMemberId(
-
-                array( 'memberId' => $queryId )
-
-            );
+            $groups = $service->GetGroupsByMemberId( array( 'memberId' => $queryId ) );
 
             // get contact info
-            $contacts = $service->GetMemberContactsByMemberId(
-
-                array( 'id' => $queryId )
-
-            );
+            $contacts = $service->GetMemberContactsByMemberId( array( 'id' => $queryId ) );
 
             // get address info
             // $address = $service->GetMemberById(
@@ -131,6 +94,8 @@
             // test for department group data type
             if ( is_array( $memberGroups ) ) {
 
+                $multipleGroups = true;
+
                 foreach ( $memberGroups as $memberGroup ) {
 
                     $departmentID = $memberGroup->IsPrimaryGroup;
@@ -145,6 +110,8 @@
                 }
 
             } else {
+
+                $multipleGroups = false;
 
                 $department     = $memberGroups->GroupFriendlyName;
                 $primaryGroupId = $memberGroups->Id;
@@ -240,18 +207,50 @@
                 'directoryGroupID'  => $directoryGroupId,
                 'directoryGroup'    => $directoryGroupName,
                 'primaryGroupID'    => $primaryGroupId,
-                'groups'            => $memberGroups,
+                'multipleGroups'    => $multipleGroups,
+                // 'groups'            => $memberGroups,
                 'department'        => $department,
                 'phone'             => $phone,
                 'contactInfo'       => $memberContacts,
                 'addressInfo'       => 'ball so hard',
                 // 'addressInfo'       => $member->BusinessAddress1,
                 'address'           => $memberAddress->BusinessAddress1,
-                'photo'             => $memberPhotos
+                'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id
 
             );
 
         }
+
+        // departments array
+        $storage[ 'departments' ] = array(
+
+            '134' => 'Veterinary Diagnostic Lab',
+            '135' => 'Clinical Sciences Department',
+            '136' => 'Veterinary Teaching Hospital',
+            '138' => 'Veterinary Diagnostic Lab',
+            '139' => 'Veterinary Teaching Hospital Working Group',
+            '140' => 'Clinical Sciences Department Working Group',
+            '170' => 'Clinical Pathology',
+            '172' => 'Clinicians',
+            '176' => 'VTH Interns All',
+            '178' => 'Faculty',
+            '182' => 'VTH Medical Records',
+            '188' => 'VTH Veterinary Technicians',
+            '193' => 'VTH Medical Records - Read Only',
+            '203' => 'CVMBS College Office',
+            '204' => 'CVMBS Finance & Strategic Services',
+            '205' => 'Cellular & Molecular Biology',
+            '206' => 'CVMBS Molecular, Cellular & Integrative Neurosciences',
+            '207' => 'CVMBS Biomedical Sciences Dept',
+            '208' => 'CVMBS Environmental & Radiological Health Sciences Dept',
+            '209' => 'CVMBS Microbiology, Immunology & Pathology Dept',
+            '210' => 'College Office',
+            '215' => 'CVMBS Environmental & Radiological Health Sciences Dept  Working Group',
+            '539' => 'Center for Environmental Medicine',
+            '626' => 'Orthopaedic Research Center',
+            '674' => 'Center for Environmental Medicine Department',
+
+        );
 
         // prettify
         $data = json_encode( $storage, JSON_PRETTY_PRINT );

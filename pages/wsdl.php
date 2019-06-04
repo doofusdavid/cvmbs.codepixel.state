@@ -19,19 +19,27 @@
 
     // ID test
     $memberID = 33704;
+    // $memberID = 3980;
+    $groupID = 619;
 
     // output magic
-    $getMember = $service->GetMemberById(
+    $getGroups = $service->GetGroupsByMemberId( array( 'memberId' => $memberID ) );
 
-        array( 'id' => $memberID )
+    // output magic
+    $getResearchers = $service->GetMembersByGroupId( array( 'id' => $groupID ) );
 
-    );
+    // output magic
+    $getMember = $service->GetMemberById( array( 'id' => $memberID ) );
+
+    // output magic
+    $getGroupKey = $service->GetGroupByGroupKey( array( 'groupKey' => 'ERHSEpidemFaculty' ) );
 
     // get returned data object
-    $member = json_encode( $getMember->GetMemberByIdResult, JSON_PRETTY_PRINT );
+    $member      = json_encode( $getMember->GetMemberByIdResult, JSON_PRETTY_PRINT );
+    $researchers = json_encode( $getResearchers->GetMembersByGroupIdResult->MemberResponse, JSON_PRETTY_PRINT );
 
     // create JSON store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/library/directory/data/directory.json';
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
 
 ?>
 
@@ -53,16 +61,19 @@
         </header>
         <!-- END page header -->
 
-        <span>method => GetMemberById => <?php echo $memberID; ?></span>
-
         <pre>
 
         <?php
 
-            echo '<br  />DEFAULT RESPONSE OBJECT<br  />';
+            // $title = $researchers
+
+            // echo '<br />' . $;
+            print_r( $researchers );
+
+            echo '<br  />GetMemberById ';
             print_r( $member );
 
-            echo '<br /><br />';
+            // echo '<br /><br />';
 
         ?>
 
