@@ -15,45 +15,32 @@
 ?>
 
 <!-- container -->
-<div class="article-container">
-
-    <!-- background.color -->
-    <div class="section-base">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.color -->
-
-    <!-- background.image -->
-    <div class="section-image scroll-trigger" data-section="facilities">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.image -->
+<div class="article-container section-places__inner">
 
     <!-- title -->
-    <a href="/places" class="section-title" data-section="facilities">
+    <a href="/places" data-section="facilities">
 
-        centers + institutes
+        <!-- heading -->
+        <h2 class="section-places__heading">
 
-        <!-- link -->
-        <span class="title-link">
+            <?php _e( 'Centers and Institutes', 'cvmbsPress' ); ?>
 
-            view all
+            <!-- link -->
+            <span class="title-link">
 
-        </span>
-        <!-- END link -->
+                <?php _e( 'View All', 'cvmbsPress' ); ?>
+
+            </span>
+            <!-- END link -->
+
+        </h2>
+        <!-- END heading -->
 
     </a>
     <!-- END title -->
 
-    <!-- feature + sidebar -->
-    <div id="facilities-content">
-
-        <!-- news.feed -->
-        <section id="facilities-carousel" class="article-cards ui-news">
+    <!-- news.feed -->
+    <div id="facilities-carousel" class="places__grid article-cards ui-news">
 
         <?php
         // switch to main site for query
@@ -74,11 +61,10 @@
         if ( $places->have_posts() ) :
             while ( $places->have_posts() ) : $places->the_post();
                 $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-                $lines = ( strlen( get_the_title() ) > 25 ) ? 'multiple-lines' : 'single-line';
                 $place_link = ( get_field('place_link') ) ? get_field( 'place_website' )['url'] : get_the_permalink();
         ?>
 
-        <a class="article place-link" href="<?php echo esc_url( $place_link ) ?>">
+        <a class="article places__grid-item" href="<?php echo esc_url( $place_link ) ?>">
 
             <!-- artwork -->
             <div class="thumb-artwork" style="background-image:url(<?php echo esc_url( $place_image ); ?>)">
@@ -93,7 +79,7 @@
             <!-- END overlay -->
 
             <!-- header -->
-            <header class="header <?php echo $lines; ?>">
+            <header class="header">
 
                 <!-- title -->
                 <span class="place-title">
@@ -117,11 +103,8 @@
         switch_to_blog( $currentsite );
         ?>
 
-        </section>
-        <!-- END news.feed -->
-
     </div>
-    <!-- END feature + sidebar -->
+    <!-- END news.feed -->
 
 </div>
 <!-- END container -->

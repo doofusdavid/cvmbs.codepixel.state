@@ -1,52 +1,14 @@
 // stylesheet :: facilities section layout + content styles
 
-    // settings
-    $facilities_fx : all 320ms $oquin 0ms;
-    $section_color : transparentize( $roarange, 0.185 );
-    $section_color :
-
-        linear-gradient(
-
-            0deg,
-            transparentize( $roarange, 1.000 ) 0%,
-            transparent 60%
-
-        )
-
-    ;
-
     // styles
-    #facilities {
+    .section-places {
 
-        height: auto;
-        margin: 0;
-
+        position: relative;
         @include fill( $roarange, 0.185 );
 
-        // container
-        .article-container {
-
-            @include flex-v-j-h-st( false );
-
-            width: 100vw;
-            height: auto;
-            padding: 5rem 4rem 4rem 4rem;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                padding: 2rem 1rem 1rem 1rem;
-
-            }
-
-            & > a {
-                text-decoration: none;
-            }
-
-        }
-
         // billboard
-        .section-image {
+        &:before {
+            content: '';
 
             position: absolute;
 
@@ -54,8 +16,6 @@
             right: 0;
             bottom: 0;
             left: 0;
-
-            z-index: 20;
 
             background: {
 
@@ -74,25 +34,33 @@
 
         }
 
-        // color
-        .section-base {
+        // container
+        &__inner {
 
-            z-index: 10;
+            padding: 2rem 1rem 1rem 1rem;
+
+            @include bpoint(40em) {
+                padding: 5rem 4rem 4rem 4rem;
+            }
+
+            & > a {
+                text-decoration: none;
+            }
 
         }
 
         // title
-        .section-title {
+        &__heading {
 
             position: relative;
 
             @include flex-h-j-v-b( false );
 
-            height: 3rem;
+            // height: 3rem;
             margin: 0 0 0 1rem;
             padding: 0 0 1rem 1rem;
 
-            @include font( $klavislim, 2rem, 400 );
+            @include font( $klavislim, 1.5rem, 400 );
 
             @include typo( 1.25rem, 0.135em );
 
@@ -100,12 +68,16 @@
 
             text-decoration: none;
 
+            @include bpoint(40em) {
+                font-size: 2rem;
+            }
+
             // mobile
             @include breakpoint ( small only ) {
 
-                @include font( $klavislim, 1.5rem, 400 );
+                // @include font( $klavislim, 1.5rem, 400 );
 
-                @include text( $up, left );
+                // @include text( $up, left );
 
             }
 
@@ -203,372 +175,313 @@
 
         }
 
-        // content
-        #facilities-content {
+    }
+
+    // grid
+    .places__grid {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        // article
+        &-item {
 
             position: relative;
 
-            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 0 0 auto;
 
-            @include flex-v-j-h-st( false );
+            width: calc(100% - 2rem);
 
-            margin: 0;
-            padding: 0;
+            height: 20rem;
+            min-height: 24vw;
+            margin: 1rem 1rem 1rem 1rem;
+            padding: 2rem;
 
-            // carousel
-            #facilities-carousel {
+            overflow: hidden;
 
-                @include flex-h-s-v-st( false );
+            @include color( white, 0.000 );
 
-                flex-wrap: wrap;
+            @include shadowbox( 1.5rem, 4rem, black, 0.615 );
 
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
+            transform: translate3d( 0, 0, 0 );
 
-                // mobile
-                @include breakpoint ( small only ) {
+            transition: all 240ms $outex 0ms;
 
-                    @include flex-v-t-h-st( false );
+            @include bpoint(desktop) {
+                width: calc(50% - 2rem);
+            }
+
+            // hover state
+            &:hover,
+            &:focus,
+            &:active {
+
+                cursor: pointer;
+
+                // artwork
+                .thumb-artwork {
+
+                    -webkit-filter:
+
+                        opacity( 0.565 )
+                        blur( 0px )
+
+                    ;
+
+                    filter:
+
+                        opacity( 0.865 )
+                        blur( 0px )
+
+                    ;
+
+                    transform: scale3d( 1.15, 1.15, 1.15 );
+
+                    transition: all 360ms $ocirc 0ms;
 
                 }
 
-                // article
-                .article {
+                // overlay
+                .thumb-overlay {
 
-                    position: relative;
+                    transition: all 360ms $outex 0ms;
 
-                    @include flex-v-t-h-c( true );
+                    // before
+                    &:before {
 
-                    flex-basis: calc( 50% - 2rem );
+                        opacity: 0.000;
 
-                    height: 20rem;
-                    margin: 1rem 1rem 1rem 1rem;
-                    padding: 2rem;
-
-                    overflow: hidden;
-
-                    @include color( white, 0.000 );
-
-                    // @include fill( $roarange, 0.185 );
-
-                    @include shadowbox( 1.5rem, 4rem, black, 0.615 );
-
-                    transform: translate3d( 0, 0, 0 );
-
-                    transition: all 240ms $outex 0ms;
-
-                    // mobile
-                    @include breakpoint ( small only ) {
-
-                        min-height: 16rem;
-                        padding: 2rem 2rem 2rem 4rem;
+                        transition: all 360ms $outex 0ms;
 
                     }
 
-                    // hover state
-                    &:hover {
+                    // after
+                    &:after {
 
-                        cursor: pointer;
-
-                        // artwork
-                        .thumb-artwork {
-
-                            -webkit-filter:
-
-                                opacity( 0.565 )
-                                // grayscale( 0.765 )
-                                blur( 0px )
-
-                            ;
-
-                            filter:
-
-                                opacity( 0.865 )
-                                // grayscale( 0.365 )
-                                blur( 0px )
-
-                            ;
-
-                            transform: scale3d( 1.15, 1.15, 1.15 );
-
-                            transition: all 360ms $ocirc 0ms;
-
-                        }
-
-                        // overlay
-                        .thumb-overlay {
-
-                            transition: all 360ms $outex 0ms;
-
-                            // before
-                            &:before {
-
-                                opacity: 0.000;
-
-                                transition: all 360ms $outex 0ms;
-
-                            }
-
-                            // after
-                            &:after {
-
-                                opacity: 0.925;
-
-                            }
-
-                        }
-
-                        // title
-                        header {
-
-                            position: absolute;
-
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-
-                            z-index: 30;
-
-                            @include flex-v-b-h-e( false );
-
-                            width: 100%;
-                            // height: 3rem;
-                            // padding: 0 2rem 2rem 0;
-
-                            // common
-                            .place-title,
-                            .place-link {
-
-                                transition: all 360ms $ocirc 0ms;
-
-                            }
-
-                            // title
-                            .place-title {
-
-                                transform: translate3d( 0, -1rem, 0 );
-
-                            }
-
-                            // link
-                            .place-link {
-
-                                display: block;
-
-                                visibility: visible;
-
-                                opacity: 1.000;
-
-                                transform: translate3d( 0, -1rem, 0 );
-
-                            }
-
-                        }
+                        opacity: 0.925;
 
                     }
+
+                }
+
+                // title
+                header {
+
+                    position: absolute;
+
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 30;
+
+                    @include flex-v-b-h-e( false );
+
+                    width: 100%;
 
                     // common
-                    .thumb-artwork,
-                    .thumb-overlay {
+                    .place-title,
+                    .place-link {
 
-                        position: absolute;
-
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-
-                    }
-
-                    // artwork
-                    .thumb-artwork {
-
-                        z-index: 10;
-
-                        background: {
-
-                            repeat: no-repeat;
-                            size: cover;
-                            position: center center;
-
-                        }
-
-                        -webkit-filter:
-
-                            opacity( 1.000 )
-                            grayscale( 0.000 )
-                            // blur( 8px )
-
-                        ;
-
-                        filter:
-
-                            opacity( 1.000 )
-                            grayscale( 0.000 )
-                            // blur( 8px )
-
-                        ;
-
-                        transform: scale3d( 1, 1, 1 );
-
-                        transition: all 360ms $outex 0ms;
-
-                    }
-
-                    // overlay
-                    .thumb-overlay {
-
-                        z-index: 20;
-
-                        transition: all 360ms $outex 0ms;
-
-                        // common
-                        &:before,
-                        &:after {
-
-                            position: absolute;
-
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-
-                            transition: all 360ms $outex 0ms;
-
-                        }
-
-                        // before
-                        &:before {
-
-                            content: '';
-
-                            z-index: 10;
-
-                            @include fill( $roarange, 0.345 );
-
-                            opacity: 1.000;
-
-                        }
-
-                        // after
-                        &:after {
-
-                            content: '';
-
-                            z-index: 20;
-
-                            @include gradient(
-
-                                180deg,
-                                red, 1.000, 0%,
-                                // $cvnavy, 0.365, 100%
-                                $cvnavy, 0.000, 100%
-
-                            );
-
-                            opacity: 0.785;
-
-                        }
+                        transition: all 360ms $ocirc 0ms;
 
                     }
 
                     // title
-                    header {
+                    .place-title {
 
-                        position: absolute;
-
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-
-                        z-index: 30;
-
-                        @include flex-v-b-h-e( false );
-
-                        width: 100%;
-                        padding: 0 2rem 2rem 0;
-
-                        // mobile
-                        @include breakpoint ( small only ) {
-
-                            padding: 0 2rem 2rem 4rem;
-
-                        }
-
-                        // single line
-                        &.single-line {
-
-                            // title
-                            .place-title {
-
-                                @include typo( 0.875rem, 0.085em );
-
-                            }
-
-                        }
-
-                        // multiple line
-                        &.multiple-lines {
-
-                            // title
-                            .place-title {
-
-                                @include typo( 1.25rem, 0.085em );
-
-                            }
-
-                        }
-
-                        // common
-                        .place-title,
-                        .place-link {
-
-                            transform: translate3d( 0, 0, 0 );
-
-                            transition: all 360ms $ocirc 0ms;
-
-                        }
-
-                        // title
-                        .place-title {
-
-                            @include font( $klavislim, 1.25rem, 400 );
-
-                            @include text( $up, right );
-
-                            @include typo( 0.875rem, 0.085em );
-
-                            @include color( $rite-lite, 0.000 );
-
-                        }
-
-                        // link
-                        .place-link {
-
-                            position: absolute;
-
-                            right: 2rem;
-                            bottom: 1rem;
-
-                            z-index: 10;
-
-                            @include font( $industry, 0.6875rem, 700 );
-
-                            @include text( $up );
-
-                            @include typo( 0.75rem, 0.045em );
-
-                            @include color( $roarange, 0.000 );
-
-                            opacity: 0.000;
-
-                            transform: translate3d( 0, 2rem, 0 );
-
-                        }
+                        transform: translate3d( 0, -1rem, 0 );
 
                     }
+
+                    // link
+                    .place-link {
+
+                        display: block;
+
+                        visibility: visible;
+
+                        opacity: 1.000;
+
+                        transform: translate3d( 0, -1rem, 0 );
+
+                    }
+
+                }
+
+            }
+
+            // common
+            .thumb-artwork,
+            .thumb-overlay {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+            }
+
+            // artwork
+            .thumb-artwork {
+
+                z-index: 1;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                -webkit-filter:
+
+                    opacity( 1.000 )
+                    grayscale( 0.000 )
+
+                ;
+
+                filter:
+
+                    opacity( 1.000 )
+                    grayscale( 0.000 )
+
+                ;
+
+                transform: scale3d( 1, 1, 1 );
+
+                transition: all 360ms $outex 0ms;
+
+            }
+
+            // overlay
+            .thumb-overlay {
+
+                z-index: 2;
+
+                transition: all 360ms $outex 0ms;
+
+                // common
+                &:before,
+                &:after {
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    transition: all 360ms $outex 0ms;
+
+                }
+
+                // before
+                &:before {
+
+                    content: '';
+
+                    z-index: 10;
+
+                    @include fill( $roarange, 0.345 );
+
+                    opacity: 1.000;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    z-index: 20;
+
+                    @include gradient(
+
+                        180deg,
+                        red, 1.000, 0%,
+                        $cvnavy, 0.000, 100%
+
+                    );
+
+                    opacity: 0.785;
+
+                }
+
+            }
+
+            // title
+            header {
+
+                position: absolute;
+
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 3;
+
+                @include flex-v-b-h-e( false );
+
+                width: 100%;
+                padding: 0 2rem 2rem 4rem;
+
+                @include bpoint(40em) {
+                    padding-left: 0;
+                }
+
+                // common
+                .place-title,
+                .place-link {
+
+                    transform: translate3d( 0, 0, 0 );
+
+                    transition: all 360ms $ocirc 0ms;
+
+                }
+
+                // title
+                .place-title {
+
+                    margin-bottom: .1875em;
+
+                    @include font( $klavislim, 1.25rem, 400 );
+
+                    @include text( $up, right );
+
+                    @include typo( 1, 0.085em );
+
+                    @include color( $rite-lite, 0.000 );
+
+                }
+
+                // link
+                .place-link {
+
+                    position: absolute;
+
+                    right: 2rem;
+                    bottom: 1rem;
+
+                    z-index: 10;
+
+                    @include font( $industry, 0.6875rem, 700 );
+
+                    @include text( $up );
+
+                    @include typo( 0.75rem, 0.045em );
+
+                    @include color( $roarange, 0.000 );
+
+                    opacity: 0.000;
+
+                    transform: translate3d( 0, 2rem, 0 );
 
                 }
 

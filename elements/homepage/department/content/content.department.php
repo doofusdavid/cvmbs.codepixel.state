@@ -6,30 +6,30 @@
 ?>
 
 <!-- department.content -->
-<section id="department-content" class="homepage-content department">
+<div id="department-content" class="homepage-content department">
 
     <!-- homepage.intro -->
-    <article id="department-banner" class="homepage-section">
+    <section id="department-banner" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.banner' ); ?>
 
-    </article>
+    </section>
     <!-- END homepage.intro -->
 
     <!-- degree.programs -->
-    <article id="department-degree-programs" class="homepage-section">
+    <section id="department-degree-programs" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.degree.programs' ); ?>
 
-    </article>
+    </section>
     <!-- END degree.programs -->
 
     <!-- homepage.section -->
-    <article id="department-expertise" class="homepage-section">
+    <section id="department-expertise" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.expertise' ); ?>
 
-    </article>
+    </section>
     <!-- END homepage.section -->
 
     <?php
@@ -44,21 +44,21 @@
     if ( $research_display ) : ?>
 
     <!-- homepage.section -->
-    <article id="department-research" class="homepage-section">
+    <section id="department-research" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.research' ); ?>
 
-    </article>
+    </section>
     <!-- END homepage.section -->
 
     <?php endif; ?>
 
     <!-- homepage.section -->
-    <article id="department-places" class="homepage-section">
+    <section id="department-places" class="homepage-section section-places">
 
         <?php get_template_part( 'elements/homepage/department/content/content.places' ); ?>
 
-    </article>
+    </section>
     <!-- END homepage.section -->
 
     <?php
@@ -73,21 +73,21 @@
     if ( $outreach_display ) : ?>
 
     <!-- service.outreach -->
-    <article id="department-outreach" class="homepage-section">
+    <section id="department-outreach" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.outreach' ); ?>
 
-    </article>
+    </section>
     <!-- END service.outreach -->
 
     <?php endif; ?>
 
     <!-- news -->
-    <article id="department-news" class="homepage-section">
+    <section id="department-news" class="homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.news' ); ?>
 
-    </article>
+    </section>
     <!-- END news -->
 
     <?php
@@ -102,21 +102,21 @@
     if ( $giving_layout ) : ?>
 
     <!-- giving -->
-    <article id="department-giving" class="full homepage-section">
+    <section id="department-giving" class="full homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.giving.full' );
 
     else : ?>
 
     <!-- giving -->
-    <article id="department-giving" class="basic homepage-section">
+    <section id="department-giving" class="basic homepage-section">
 
         <?php get_template_part( 'elements/homepage/department/content/content.giving.basic' );
 
     endif; ?>
 
-    </article>
+    </section>
     <!-- END giving -->
 
-</section>
+</div>
 <!-- END department.content -->

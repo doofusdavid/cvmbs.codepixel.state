@@ -1,148 +1,92 @@
 <?php
 
-    // $places = get_field( 'site_homepage_places', 'options' );
-    $post_objects = get_field( 'site_homepage_places', 'options' );
+    $posts = get_field( 'site_homepage_places', 'options' );
 
 ?>
 
 <!-- container -->
-<div class="article-container">
-
-    <!-- background.color -->
-    <div class="section-base">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.color -->
-
-    <!-- background.image -->
-    <div class="section-image scroll-trigger" data-section="facilities">
-
-        <!-- empty -->
-
-    </div>
-    <!-- END background.image -->
+<div class="article-container section-places__inner">
 
     <!-- title -->
     <a href="/places" data-section="facilities">
 
         <!-- heading -->
-        <h3 class="section-title">
+        <h2 class="section-places__heading">
 
-            centers + institutes
+            <?php _e( 'Centers and Institutes', 'cvmbsPress' ); ?>
 
             <!-- link -->
             <span class="title-link">
 
-                view all
+                <?php _e( 'View All', 'cvmbsPress' ); ?>
 
             </span>
             <!-- END link -->
 
-        </h3>
+        </h2>
         <!-- END heading -->
 
     </a>
     <!-- END title -->
 
-    <!-- feature + sidebar -->
-    <div id="facilities-content">
+    <!-- news.feed -->
+    <div id="facilities-carousel" class="places__grid article-cards ui-news">
 
-        <!-- news.feed -->
-        <section id="facilities-carousel" class="article-cards ui-news">
+        <?php
+        foreach( $posts as $post ) : // variable must be called $post (IMPORTANT)
+            setup_postdata( $post );
 
-            <?php foreach( $post_objects as $post ) : ?>
+            $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+            $placelink = ( get_field('place_link') ) ? get_field( 'place_website' )['url'] : get_the_permalink();
+        ?>
 
-            <?php setup_postdata( $post ); ?>
+        <!-- post -->
+        <a class="article places__grid-item" href="<?php echo $placelink; ?>">
 
-            <?php
+            <!-- artwork -->
+            <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
 
-                $placelink_status = get_field( 'place_link' );
+                <!-- the emptiness -->
 
-                $placename = get_the_title();
-                $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+            </div>
+            <!-- END artwork -->
 
-                if ( strlen( $placename ) > 25 ) {
+            <!-- overlay -->
+            <div class="thumb-overlay">
 
-                    $lines = 'multiple-lines';
+                <!-- the emptiness -->
 
-                } else {
+            </div>
+            <!-- END overlay -->
 
-                    $lines = 'single-line';
+            <!-- header -->
+            <header class="header">
 
-                }
+                <!-- title -->
+                <h4 class="place-title">
 
-                if ( $placelink_status ) {
+                    <?php the_title(); ?>
 
-                    $place_link_url = get_field( 'place_website' );
-                    $placelink      = $place_link_url[ 'url' ];
+                </h4>
+                <!-- END title -->
 
-                } else {
+                <!-- link -->
+                <span class="place-link">learn more</span>
+                <!-- END link -->
 
-                    $placelink  = get_the_permalink();
+            </header>
+            <!-- END header -->
 
-                }
+        </a>
+        <!-- END post -->
 
-            ?>
-
-            <!-- post -->
-            <a href="<?php echo $placelink; ?>" class="article">
-
-                <!-- artwork -->
-                <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
-
-                    <!-- the emptiness -->
-
-                </div>
-                <!-- END artwork -->
-
-                <!-- overlay -->
-                <div class="thumb-overlay">
-
-                    <!-- the emptiness -->
-
-                </div>
-                <!-- END overlay -->
-
-                <!-- header -->
-                <header class="header <?php echo $lines; ?>">
-
-                    <!-- title -->
-                    <h4 class="place-title">
-
-                        <?php
-
-                            echo $placename;
-
-                        ?>
-
-                    </h4>
-                    <!-- END title -->
-
-                    <!-- link -->
-                    <span class="place-link">
-
-                        learn more
-
-                    </span>
-                    <!-- END link -->
-
-                </header>
-                <!-- END header -->
-
-            </a>
-            <!-- END post -->
-
-            <?php endforeach; ?>
-
-            <?php wp_reset_postdata(); ?>
-
-        </section>
-        <!-- END news.feed -->
+        <?php
+            wp_reset_postdata();
+        endforeach;
+        ?>
 
     </div>
-    <!-- END feature + sidebar -->
+    <!-- END news.feed -->
 
 </div>
 <!-- END container -->

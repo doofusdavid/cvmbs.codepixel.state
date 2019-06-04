@@ -24,7 +24,7 @@
 <!-- END homepage.section -->
 
 <!-- homepage.section -->
-<section id="facilities" class="ui-article" data-section="facilities" data-load="pending" tabindex="-1">
+<section id="facilities" class="section-places" data-section="facilities" data-load="pending" tabindex="-1">
 
     <?php get_template_part( 'elements/homepage/sections/section.places' ); ?>
 
