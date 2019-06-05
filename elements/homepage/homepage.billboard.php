@@ -2,8 +2,7 @@
 
     $billboard_query = array(
 
-        'post_type' => 'billboard',
-        // 'orderby'   => 'rand',
+        'post_type' => 'billboard'
 
     );
 
@@ -14,7 +13,7 @@
 ?>
 
 <!-- billboard.slides -->
-<section id="billboard-slides" class="ui-slides" data-section="slides" tabindex="-1">
+<section id="billboard-slides" class="ui-slides">
 
     <?php
 

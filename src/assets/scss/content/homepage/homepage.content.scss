@@ -1,23 +1,18 @@
 // stylesheet :: homepage layout + content styles
 
-    // settings
-    $content_width  : 100vw;
-    $content_width_ex : calc( 100vw + 4rem );
-    $content_height : 100vh;
-
     // styles
-    #content-homepage {
+    .content-homepage {
 
-        top: 0;
-        right: 0;
-        left: 0;
+        // top: 0;
+        // right: 0;
+        // left: 0;
 
-        z-index: 100;
+        // z-index: 100;
 
-        width: $content_width;
-        height: auto;
-        margin: 100vh 0 0 0;
-        padding: 0 0 0 0;
+        // width: 100vw;
+        // height: auto;
+        // margin: 100vh 0 0 0;
+        // padding: 0 0 0 0;
 
         background: {
 

@@ -1,17 +1,14 @@
 // stylesheet :: academics section layout + content styles
 
     // settings
-    $academics_fx : all 320ms $oquin 0ms;
     $section_color : transparentize( $nite, 0.365 );
-
     $billboard : '../img/billboards/billboard.34.jpg';
 
     // styles
-    #academics {
+    .section-academics {
 
         position: relative;
-
-        height: auto;
+        // height: auto;
 
         @include shadowbox( 2rem, 7rem, black, 0.625 );
 
@@ -30,13 +27,12 @@
         }
 
         // container
-        .article-container {
+        // .article-container {
 
-            position: relative;
+        //     position: relative;
+        //     height: auto;
 
-            height: auto;
-
-        }
+        // }
 
         // common
         .section-image,
@@ -54,7 +50,7 @@
         // image
         .section-image {
 
-            z-index: 10;
+            // z-index: 10;
 
             background: {
 
@@ -70,7 +66,7 @@
         // color base
         .section-base {
 
-            z-index: 20;
+            // z-index: 20;
 
             @include fill( $section_color, 0.000 );
 
@@ -81,14 +77,14 @@
 
             position: relative;
 
-            z-index: 100;
+            // z-index: 100;
 
             @include flex-v-j-h-st( false );
 
-            height: auto;
+            // height: auto;
             padding: 10rem 4rem 10rem 4rem;
 
-            opacity: 1.000;
+            // opacity: 1.000;
 
             transition: all 40ms linear 160ms;
 
@@ -103,15 +99,8 @@
 
         }
 
-        // content
-        .content-layer {
-
-            //
-
-        }
-
         // text
-        #text-layer {
+        .text-layer {
 
             @include flex-v-c-h-c( false );
 
@@ -162,7 +151,7 @@
         }
 
         // video
-        #video-layer {
+        .video-layer {
 
             @include flex-h-c-v-c( false );
 
@@ -187,7 +176,6 @@
 
                 position: relative;
 
-                // width: 60%;
                 max-width: 100%;
                 height: 0;
                 padding-bottom: 56.25%;
@@ -232,8 +220,6 @@
 
                     z-index: 2;
 
-                    // @include fill( $midnite, 0.365 );
-
                 }
 
                 // video
@@ -254,7 +240,7 @@
         }
 
         // links
-        #links-layer {
+        .links-layer {
 
             @include flex-h-j-v-c( false );
 

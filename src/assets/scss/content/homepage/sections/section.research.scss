@@ -1,10 +1,7 @@
 // stylesheet :: academics section layout + content styles
 
     // settings
-    $research_fx : all 320ms $oquin 0ms;
     $section_color : transparentize( $cvnavy, 0.145 );
-
-    $billboard : '../img/research/research.panel.00.jpg';
 
     // styles
     #research {
@@ -29,7 +26,6 @@
         .section-content {
 
             height: 100%;
-            // padding: 1rem 1rem 1rem 1rem;
 
         }
 
@@ -125,6 +121,10 @@
 
                 @include fill( $cvnavy, 1.000 );
 
+            }
+
+            & > * {
+                max-width: 100%;
             }
 
             // headline

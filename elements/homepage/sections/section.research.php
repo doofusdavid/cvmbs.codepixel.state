@@ -8,80 +8,84 @@
 
 ?>
 
-<!-- container -->
-<div class="article-container">
+<section id="research">
 
-    <!-- background.color -->
-    <div class="section-base">
+    <!-- container -->
+    <div class="article-container">
 
-        <!-- empty -->
+        <!-- background.color -->
+        <div class="section-base">
 
-    </div>
-    <!-- END background.color -->
+            <!-- empty -->
 
-    <!-- section.content -->
-    <div class="section-content" data-load="pending">
+        </div>
+        <!-- END background.color -->
 
-        <!-- content.layers -->
-        <div class="content-layers">
+        <!-- section.content -->
+        <div class="section-content" data-load="pending">
 
-            <!-- visual FX -->
-            <div class="design-layer">
+            <!-- content.layers -->
+            <div class="content-layers">
 
-                <!-- color + gradient -->
-                <div class="image-layer fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
+                <!-- visual FX -->
+                <div class="design-layer">
 
-                    <!-- ball so hard -->
-
-                </div>
-                <!-- END color + gradient -->
-
-                <!-- pattern -->
-                <div class="pattern-layer fx-layer layer">
-
-                    <!-- map -->
-                    <div id="research-map" class="map">
+                    <!-- color + gradient -->
+                    <div class="image-layer fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
 
                         <!-- ball so hard -->
 
                     </div>
-                    <!-- END map -->
+                    <!-- END color + gradient -->
+
+                    <!-- pattern -->
+                    <div class="pattern-layer fx-layer layer">
+
+                        <!-- map -->
+                        <div id="research-map" class="map">
+
+                            <!-- ball so hard -->
+
+                        </div>
+                        <!-- END map -->
+
+                    </div>
+                    <!-- END pattern -->
 
                 </div>
-                <!-- END pattern -->
+                <!-- END visual FX -->
+
+                <!-- content -->
+                <div class="content-layer">
+
+                    <h3 class="headline">
+
+                        <?php echo $research_content[ 'title' ]; ?>
+
+                    </h3>
+
+                    <p class="text">
+
+                        <?php echo $research_content[ 'text' ]; ?>
+
+                    </p>
+
+                    <a href="/research" class="content-button">
+
+                        <?php echo $research_content[ 'link' ][ 'title' ]; ?>
+
+                    </a>
+
+                </div>
+                <!-- END content -->
 
             </div>
-            <!-- END visual FX -->
-
-            <!-- content -->
-            <div class="content-layer">
-
-                <h3 class="headline">
-
-                    <?php echo $research_content[ 'title' ]; ?>
-
-                </h3>
-
-                <p class="text">
-
-                    <?php echo $research_content[ 'text' ]; ?>
-
-                </p>
-
-                <a href="/research" class="content-button">
-
-                    <?php echo $research_content[ 'link' ][ 'title' ]; ?>
-
-                </a>
-
-            </div>
-            <!-- END content -->
+            <!-- END content.layers -->
 
         </div>
-        <!-- END content.layers -->
+        <!-- END section.content -->
 
     </div>
-    <!-- END section.content -->
+    <!-- END container -->
 
-</div>
-<!-- END container -->
+</section><!-- #research -->

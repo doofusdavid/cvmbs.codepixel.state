@@ -1,9 +1,7 @@
 // stylesheet :: news section layout + content styles
 
     // settings
-    $news_fx : all 320ms $oquin 0ms;
     $section_color : transparentize( $beige, 0.085 );
-    $card : lighten( $beige, 5% );
 
     // styles
     #news {
@@ -280,12 +278,7 @@
 
                         }
 
-                        -webkit-filter:
-
-                            grayscale( 0.000 )
-                            opacity( 1.000 )
-
-                        ;
+                        -webkit-filter: grayscale( 0.000 ) opacity( 1.000 );
 
                         transition: all 220ms linear 0ms;
 
@@ -416,7 +409,7 @@
 
                     position: relative;
 
-                    @include flex-v-t-h-s( false );
+                    // @include flex-v-t-h-s( false );
 
                     width: 100%;
                     min-height: 8rem;
