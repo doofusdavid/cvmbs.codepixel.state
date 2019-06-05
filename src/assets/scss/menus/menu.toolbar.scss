@@ -30,7 +30,7 @@
 
         transition: background-color 360ms linear 0ms;
 
-        @include hide;
+        // @include hide;
 
         // mobile
         @include breakpoint ( small only ) {
