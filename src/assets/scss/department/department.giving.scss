@@ -165,6 +165,8 @@
 
                     @include text( $up );
 
+                    text-decoration: none;
+
                     @include typo( 0.75rem, 0.135em );
 
                     @include color( white, 0.000 );
@@ -240,6 +242,8 @@
                 @include font( $klavislim, 1rem, 400 );
 
                 @include text( $up );
+
+                text-decoration: none;
 
                 @include typo( 0.75rem, 0.135em );
 

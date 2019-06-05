@@ -26,6 +26,8 @@
 
             @include text( $up );
 
+            text-decoration: none;
+
             @include typo( 1.25rem, 0.135em );
 
             @include color( $dark, 0.125 );
@@ -193,6 +195,8 @@
                 transform: translate3d( 0, 0, 0 );
 
                 transition: all 240ms $outex 0ms;
+
+                text-decoration: none;
 
                 // mobile
                 @include breakpoint ( small only ) {
