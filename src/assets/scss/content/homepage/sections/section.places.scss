@@ -4,7 +4,8 @@
     .section-places {
 
         position: relative;
-        @include fill( $roarange, 0.185 );
+        // @include fill( $roarange, 0.185 );
+        background: #bc4c2d; // $roarange with .815 opacity over $app05
 
         // billboard
         &:before {
