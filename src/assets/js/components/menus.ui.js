@@ -77,19 +77,8 @@ export var menusFX = {
         var mediaQ = Foundation.MediaQuery.current;
         var menuX;
 
-        // test viewport size
-        if ( mediaQ == 'large' ) {
-
-            menuX = '-5rem';
-
-        } else if ( mediaQ == 'small' ) {
-
-            menuX = '-4rem';
-
-        }
-
         // handle ZURB offcanvas event
-        $(window).on( 'opened.zf.offcanvas', function( e, target ) {
+        $(window).on( 'opened.zf.offcanvas', function( e, target, menuX ) {
 
             // event emitter
             $('#billboard-slides').trigger( 'pause.homepage.feature', [ menu ] );
@@ -132,11 +121,22 @@ export var menusFX = {
 
             });
 
+            // test viewport size
+            if ( mediaQ == 'large' || mediaQ == 'xlarge' ) {
+
+                menuX = '-5rem';
+
+            } else if ( mediaQ == 'small' ) {
+
+                menuX = '-4rem';
+
+            }
+
             // show menu
             menu.velocity({
 
-                // translateX : [ menuX, '28rem' ],
-                translateX : [ 0, '100%' ],
+                translateX : [ menuX, '28rem' ],
+                // translateX : [ 0, '100%' ],
                 opacity    : [ 1, 0 ]
 
             }, {
@@ -181,7 +181,7 @@ export var menusFX = {
 
             });
 
-        }).on( 'closed.zf.offcanvas', function( e, target ) {
+        }).on( 'closed.zf.offcanvas', function( e, target, menuX ) {
 
             // event emitter
             $('#billboard-slides').trigger( 'start.homepage.feature', [ menu ] );
@@ -213,11 +213,22 @@ export var menusFX = {
 
             });
 
+            // test viewport size
+            if ( mediaQ == 'large' || mediaQ == 'xlarge' ) {
+
+                menuX = '-5rem';
+
+            } else if ( mediaQ == 'small' ) {
+
+                menuX = '-4rem';
+
+            }
+
             // hide menu
             menu.velocity({
 
-                // translateX : [ '28rem', menuX ],
-                translateX : [ '100%', 0 ],
+                translateX : [ '28rem', menuX ],
+                // translateX : [ '100%', 0 ],
                 opacity    : [ 0, 1 ]
 
             }, {
