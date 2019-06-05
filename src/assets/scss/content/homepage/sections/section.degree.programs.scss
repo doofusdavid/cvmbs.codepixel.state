@@ -4,10 +4,14 @@
     $academics_fx : all 320ms $oquin 0ms;
     $section_color : transparentize( $nite, 0.365 );
 
-    $billboard : '../img/billboards/billboard.30.jpg';
+    $billboard : '../img/billboards/billboard.34.jpg';
 
     // styles
     #academics {
+
+        position: relative;
+
+        height: auto;
 
         @include shadowbox( 2rem, 7rem, black, 0.625 );
 
@@ -28,15 +32,29 @@
         // container
         .article-container {
 
-            height: 100vh;
-            padding: 0 0 0 0;
+            position: relative;
+
+            height: auto;
+
+        }
+
+        // common
+        .section-image,
+        .section-base {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
 
         }
 
         // image
         .section-image {
 
-            @include fullscreen( absolute, 10, true, hidden );
+            z-index: 10;
 
             background: {
 
@@ -52,35 +70,23 @@
         // color base
         .section-base {
 
-            width: 100vw;
-            height: 100vh;
+            z-index: 20;
 
             @include fill( $section_color, 0.000 );
-
-        }
-
-        // title
-        .section-title {
-
-            @include hide;
-
-            position: absolute;
-
-            top: 12rem;
-
-            @include color( $gold, 0.000 );
 
         }
 
         // content
         .section-content {
 
-            @include flex-h-j-v-c( false );
+            position: relative;
 
-            width: 100vw;
-            // height: 100vh;
+            z-index: 100;
+
+            @include flex-v-j-h-st( false );
+
             height: auto;
-            padding: 10rem 5rem 10rem 5rem;
+            padding: 10rem 4rem 10rem 4rem;
 
             opacity: 1.000;
 
@@ -104,29 +110,16 @@
 
         }
 
-        // video
-        #video-layer {
-
-            width: 60%;
-
-            @include shadowbox( 1rem, 3.5rem, black, 0.285 );
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                width: 100%;
-
-            }
-
-        }
-
         // text
         #text-layer {
 
-            @include flex-v-c-h-s( false );
+            @include flex-v-c-h-c( false );
 
-            width: 40%;
+            // width: 40%;
+            margin: 0 0 3rem 0;
             padding: 0 0 0 2rem;
+
+            @include text( inherit, center );
 
             // mobile
             @include breakpoint ( small only ) {
@@ -166,24 +159,122 @@
 
             }
 
+        }
+
+        // video
+        #video-layer {
+
+            @include flex-h-c-v-c( false );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+
+            }
+
+            // layer(?)
+            .video-content {
+
+                width: 60%;
+
+                @include shadowbox( 1rem, 3.5rem, black, 0.285 );
+
+            }
+
+            // video container
+            .video-container {
+
+                position: relative;
+
+                // width: 60%;
+                max-width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+
+                overflow: hidden;
+
+                background: {
+
+                    image: url(../img/content/degree.programs.video.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // video layers
+                &:before,
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                }
+
+                // before
+                &:before {
+
+                    z-index: 1;
+
+                    @include fill( $midnite, 0.365 );
+
+                }
+
+                // after
+                &:after {
+
+                    z-index: 2;
+
+                    // @include fill( $midnite, 0.365 );
+
+                }
+
+                // video
+                iframe {
+
+                    position: absolute;
+
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+            }
+
+        }
+
+        // links
+        #links-layer {
+
+            @include flex-h-j-v-c( false );
+
+            margin: 3rem 0 0 0;
+
             // button
             .layer-link {
 
-                @include flex-h-c-v-c( false );
+                position: relative;
 
-                height: 4rem;
-                margin: 1rem 0 0 0;
-                padding: 0.0625rem 1.5rem 0 1.5rem;
+                @include flex-v-b-h-e( false );
 
-                @include font( $klavislim, 1rem, 400 );
-
-                @include text( $up );
-
-                @include typo( 0.75rem, 0.045em );
+                flex-basis: 33.3333333%;
+                height: 12rem;
+                margin: 0 1rem 0 1rem;
+                padding: 0rem 1.5rem 1.5rem 1.5rem;
 
                 @include color( white, 0.000 );
 
-                @include fill( white, 0.965 );
+                @include fill( $midnite, 0.365 );
 
                 @include shadowbox( 1rem, 3rem, black, 0.325 );
 
@@ -200,31 +291,44 @@
 
                 }
 
-            }
+                // before
+                &:before {
 
-        }
+                    content: '';
 
-        // video container
-        .video-container {
+                    position: absolute;
 
-            position: relative;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
 
-            max-width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
+                    z-index: 0;
 
-            overflow: hidden;
+                    @include gradient(
 
-            // video
-            iframe {
+                        0deg,
+                        $g140, 0.565, 0%,
+                        transparent, 1.000, 100%
 
-                position: absolute;
+                    );
 
-                top: 0;
-                left: 0;
+                }
 
-                width: 100%;
-                height: 100%;
+                // text
+                span {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 0.75rem, 0.045em );
+
+                }
 
             }
 

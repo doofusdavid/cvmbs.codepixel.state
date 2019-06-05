@@ -10,19 +10,6 @@
     // styles
     .ui-article {
 
-        position: relative;
-
-        z-index: 20;
-
-        @include flex-v-c-h-c( false );
-
-        width: $section_width;
-        height: $section_height;
-        margin: 0;
-        padding: 0;
-
-        overflow: hidden;
-
         background: {
 
             color:
@@ -58,16 +45,6 @@
 
         // container
         .article-container {
-
-            position: relative;
-
-            z-index: 10;
-
-            @include flex-v-c-h-c( false );
-
-            width: $section_width;
-            margin: 0;
-            padding: 0;
 
             -webkit-filter: blur( 0px );
                     filter: blur( 0px );
