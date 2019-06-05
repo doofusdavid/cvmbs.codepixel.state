@@ -24,10 +24,9 @@
 <div class="design-layer">
 
     <!-- image -->
-    <!-- <div class="image fx-layer layer" style="background-image:url(<?php // echo $research_content[ 'background' ]; ?>)"> -->
     <div class="image fx-layer layer">
 
-        <!-- ball so hard -->
+        <!-- -->
 
     </div>
     <!-- END image -->
