@@ -5,10 +5,10 @@
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content department" data-off-canvas-content style="background-image:url(<?php echo $site_image; ?>);">
+<main id="site-layout" class="off-canvas-content department" data-off-canvas-content>
 
     <!-- department.billboard -->
-    <section id="department-billboard" class="ui-billboard pattern" tabindex="-1">
+    <section id="department-billboard" class="department-billboard ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">
 
         <!-- billboard.title -->
         <header id="homepage-title" class="homepage-section">

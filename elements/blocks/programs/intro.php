@@ -53,7 +53,7 @@ if ( have_rows('program_intro') ) :
 
 			<?php elseif ( $terms[0]->slug == 'graduate' ) : ?>
 
-			<h2 class="degree-program-intro__grid-title"><?php _e( 'Specializations', 'cvmbsPress' ); ?></h2>
+			<h2 class="degree-program-intro__grid-title"><?php _e( 'Plans of Study', 'cvmbsPress' ); ?></h2>
 
 		<?php
 			endif;

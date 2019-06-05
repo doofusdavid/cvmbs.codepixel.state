@@ -4,17 +4,35 @@
     $billboard : 1rem;
 
     // styles
-    #department-billboard {
+    .department-billboard {
+
+        position: relative;
 
         @include flex-v-b-h-s( false );
 
         width: 100vw;
         padding: 40vw 0 0 0;
 
-        @include gradient( 180deg, red, 1.000, 0%, $cvnavy, 0.000, 100% );
+        background: no-repeat center center / cover;
+
+        @supports (background-attachment: fixed) {
+            background-attachment: fixed;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include gradient( 180deg, red, 1.000, 0%, $cvnavy, 0.000, 100% );
+        }
 
         // title
         #homepage-title {
+
+            position: relative;
 
             @include flex-h-s-v-b( false );
 
