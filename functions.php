@@ -12,15 +12,6 @@
     // menus
     require_once( 'library/menus/menus.php' );
 
-    // utilities
-    require_once( 'library/utilities.php' );
-
-    // taxonomy pages
-    require_once( 'library/taxonomy.php' );
-
-    // post types
-    require_once( 'library/post.types.php' );
-
     // options pages
     require_once( 'library/options.php' );
 
@@ -36,9 +27,6 @@
 
     // entry meta for posts
     require_once( 'library/entry-meta.php' );
-
-    // custom metaboxes
-    require_once( 'library/metaboxes.php' );
 
     // enqueue scripts
     require_once( 'library/enqueue-scripts.php' );
