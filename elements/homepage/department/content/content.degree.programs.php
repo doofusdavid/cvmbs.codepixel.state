@@ -3,11 +3,17 @@
     // set global blog variable
     global $blog_id;
 
+    // get global WP taxonomies
+    global $wp_taxonomies;
+
+    // taxonomies used for queries
+    $tax_terms = array( 'department', 'academic_level', 'degree_type' );
+
     // set dynamic blog id
     $currentsite = $blog_id;
 
     // department homepage options
-    $department_options   = get_field( 'department_homepage_options' );
+    $department_options = get_field( 'department_homepage_options' );
 
     // text content
     $degree_programs_content = $department_options[ 'degree_programs_content' ];
@@ -81,16 +87,23 @@
 
     <!-- undergraduate -->
     <div class="program-list undergraduate-programs">
-
         <?php
         // switch to main site for query
         switch_to_blog( 1 );
 
+        // grant switch_to_blog() access to query taxonomies
+        foreach ( $tax_terms as $term ) {
+            if ( !taxonomy_exists( $term ) ) {
+                $wp_taxonomies[$term] = '';
+            }
+        }
+
         $args = array(
-            'post_type' => 'degree_program',
-            'orderby'   => 'order',
-            'order'     => 'ASC',
-            'tax_query' => array(
+            'post_type'      => 'degree_program',
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+            'posts_per_page' =>  99,
+            'tax_query'      => array(
                 'relation' => 'AND',
                 array(
                     'taxonomy' => 'department',
@@ -124,6 +137,7 @@
 
             the_title();
             ?>
+            (<?php echo $post->ID; ?>)
         </a><!-- .program-link -->
 
         <?php

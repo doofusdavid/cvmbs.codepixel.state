@@ -3,6 +3,12 @@
     // set global blog variable
     global $blog_id;
 
+    // get global WP taxonomies
+    global $wp_taxonomies;
+
+    // taxonomies used for queries
+    $tax_terms = array( 'department' );
+
     // set dynamic blog id
     $currentsite = $blog_id;
 
@@ -45,6 +51,13 @@
         <?php
         // switch to main site for query
         switch_to_blog( 1 );
+
+        // grant switch_to_blog() access to query taxonomies
+        foreach ( $tax_terms as $term ) {
+            if ( !taxonomy_exists( $term ) ) {
+                $wp_taxonomies[$term] = '';
+            }
+        }
 
         $args = array(
             'post_type'      => 'place',
