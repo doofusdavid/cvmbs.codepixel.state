@@ -107,23 +107,11 @@
     </section>
     <!-- END panel.global -->
 
-    <!-- panel.search -->
-    <section id="menu-panel-search" class="inactive ui-panel menu-panel">
-
-        <!-- panel.header -->
-        <header id="menu-panel-search-header" class="panel-header">
-
-            search
-
-        </header>
-        <!-- END panel.header -->
-
-        search
-
-    </section>
-    <!-- END panel.search -->
+    <?php get_template_part( 'elements/menus/panels/panel.search' ); ?>
 
     <?php get_template_part( 'elements/menus/panels/panel.events' ); ?>
+
+    <?php get_template_part( 'elements/menus/panels/panel.build' ); ?>
 
 </menu>
 <!-- END menu.panels -->

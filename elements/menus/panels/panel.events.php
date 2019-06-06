@@ -56,7 +56,7 @@
 			} else {
 
 				$x = new SimpleXmlElement( $content );
-				$limit = 12;
+				$limit = 16;
 				$i = 1;
 
 				echo '<ul class="accordion events-list scroll-fix" data-accordion data-multi-expand="true" data-allow-all-closed="true">';
