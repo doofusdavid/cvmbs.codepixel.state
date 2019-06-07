@@ -396,9 +396,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.home.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.home.jpg);
+
+                        }
 
                     }
 
@@ -432,9 +439,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.about.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.about.jpg);
+
+                        }
 
                     }
 
@@ -477,9 +491,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.students.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.students.jpg);
+
+                        }
 
                     }
 
@@ -522,9 +543,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.research.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.research.jpg);
+
+                        }
 
                     }
 
@@ -567,9 +595,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.service.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.service.jpg);
+
+                        }
 
                     }
 
@@ -612,9 +647,16 @@
                 // artwork
                 .link-artwork {
 
-                    background: {
+                    background-image: none;
 
-                        image: url(../img/menus/menu.item.alumni.jpg);
+                    // load on menu open
+                    &.loaded {
+
+                        background: {
+
+                            image: url(../img/menus/menu.item.alumni.jpg);
+
+                        }
 
                     }
 

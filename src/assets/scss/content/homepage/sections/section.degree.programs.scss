@@ -8,7 +8,6 @@
     .section-academics {
 
         position: relative;
-        // height: auto;
 
         @include shadowbox( 2rem, 7rem, black, 0.625 );
 
@@ -26,14 +25,6 @@
 
         }
 
-        // container
-        // .article-container {
-
-        //     position: relative;
-        //     height: auto;
-
-        // }
-
         // common
         .section-image,
         .section-base {
@@ -50,16 +41,19 @@
         // image
         .section-image {
 
-            // z-index: 10;
+            z-index: 10;
 
             background: {
 
-                image: url($billboard);
+                // image: url($billboard);
+                image: url(../img/patterns/pattern.vertical.png);
                 repeat: no-repeat;
-                size: cover;
-                position: center center;
+                // size: cover;
+                position: left center;
 
             }
+
+            opacity: 0.725;
 
         }
 
@@ -68,7 +62,8 @@
 
             // z-index: 20;
 
-            @include fill( $section_color, 0.000 );
+            // @include fill( $section_color, 0.000 );
+            @include fill( $dark, 0.000 );
 
         }
 
@@ -77,7 +72,7 @@
 
             position: relative;
 
-            // z-index: 100;
+            z-index: 100;
 
             @include flex-v-j-h-st( false );
 
@@ -105,7 +100,9 @@
             @include flex-v-c-h-c( false );
 
             // width: 40%;
-            margin: 0 0 3rem 0;
+            // margin: 0 0 3rem 0;
+            // temporary
+            margin: 0 0 1rem 0;
             padding: 0 0 0 2rem;
 
             @include text( inherit, center );
@@ -154,6 +151,9 @@
         .video-layer {
 
             @include flex-h-c-v-c( false );
+
+            // temporary
+            @include hide;
 
             // mobile
             @include breakpoint ( small only ) {
@@ -244,7 +244,9 @@
 
             @include flex-h-j-v-c( false );
 
-            margin: 3rem 0 0 0;
+            // margin: 3rem 0 0 0;
+            // temporary
+            margin: 1rem 0 0 0;
 
             // button
             .layer-link {
@@ -258,15 +260,23 @@
                 margin: 0 1rem 0 1rem;
                 padding: 0rem 1.5rem 1.5rem 1.5rem;
 
+                text-decoration: none;
+
                 @include color( white, 0.000 );
 
                 @include fill( $midnite, 0.365 );
 
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
                 @include shadowbox( 1rem, 3rem, black, 0.325 );
 
                 transition: all 320ms $outex 0ms;
-
-                text-decoration: none;
 
                 // hover state
                 &:hover,
@@ -315,6 +325,27 @@
                     @include typo( 0.75rem, 0.045em );
 
                 }
+
+            }
+
+            // undergraduate
+            #undergraduate-link {
+
+                //
+
+            }
+
+            // graduate
+            #graduate-link {
+
+
+
+            }
+
+            // dvm
+            #dvm-link {
+
+
 
             }
 
