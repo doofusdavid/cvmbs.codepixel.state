@@ -239,8 +239,6 @@
                 // before
                 &:before {
 
-                    z-index: 1;
-
                     background: {
 
                         repeat: no-repeat;
@@ -261,8 +259,6 @@
                 // after
                 &:after {
 
-                    z-index: 10;
-
                     @include fill( $dark, 0.565 );
 
                     @include gradient(
@@ -282,7 +278,7 @@
 
                     position: relative;
 
-                    z-index: 20;
+                    z-index: 1;
 
                     @include font( $klavislim, 1rem, 400 );
 

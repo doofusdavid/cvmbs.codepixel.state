@@ -3,7 +3,7 @@
     // styles
     .billboard-homepage {
 
-        @include flex-v-c-h-c( false );
+        // @include flex-v-c-h-c( false );
 
         min-height: 100vh;
 
@@ -132,23 +132,23 @@
         }
 
         // layers
-        &:before {
+        // &:before {
 
-            content: '';
+        //     content: '';
 
-            @include fullscreen( absolute, 1, false, hidden );
+        //     @include fullscreen( absolute, 1, false, hidden );
 
-            top: -1rem;
-            right: -1rem;
-            bottom: -1rem;
-            left: -1rem;
+        //     top: -1rem;
+        //     right: -1rem;
+        //     bottom: -1rem;
+        //     left: -1rem;
 
-            width: calc( 100% + 2rem );
-            height: calc( 100% + 2rem );
+        //     width: calc( 100% + 2rem );
+        //     height: calc( 100% + 2rem );
 
-            transition: all 0ms linear 0ms;
+        //     transition: all 0ms linear 0ms;
 
-        }
+        // }
 
         // text
         .text {
