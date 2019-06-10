@@ -2,14 +2,23 @@
 
     // settings
     $section_color : transparentize( $nite, 0.365 );
-    $billboard : '../img/billboards/billboard.34.jpg';
+    $billboard : '../img/billboards/billboard.00.jpg';
 
     // styles
     .section-academics {
 
         position: relative;
 
+        height: 80vh;
+
         @include shadowbox( 2rem, 7rem, black, 0.625 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: auto;
+
+        }
 
         // menu open state
         &.site-menu-open {
@@ -22,6 +31,15 @@
                 transition: all 40ms linear 0ms;
 
             }
+
+        }
+
+        // container
+        .article-container {
+
+            // @include flex-v-c-h-c( false );
+
+            height: 100%;
 
         }
 
@@ -45,10 +63,10 @@
 
             background: {
 
-                // image: url($billboard);
-                image: url(../img/patterns/pattern.vertical.png);
+                image: url($billboard);
+                // image: url(../img/patterns/pattern.vertical.png);
                 repeat: no-repeat;
-                // size: cover;
+                size: cover;
                 position: left center;
 
             }
@@ -60,10 +78,10 @@
         // color base
         .section-base {
 
-            // z-index: 20;
+            z-index: 20;
 
             // @include fill( $section_color, 0.000 );
-            @include fill( $dark, 0.000 );
+            @include fill( $dark, 0.215 );
 
         }
 
@@ -74,12 +92,11 @@
 
             z-index: 100;
 
-            @include flex-v-j-h-st( false );
+            // @include flex-v-j-h-st( false );
+            @include flex-v-c-h-st( false );
 
-            // height: auto;
+            height: 100%;
             padding: 10rem 4rem 10rem 4rem;
-
-            // opacity: 1.000;
 
             transition: all 40ms linear 160ms;
 
@@ -88,7 +105,7 @@
 
                 @include flex-v-c-h-c( false );
 
-                padding: 6rem 2rem 6rem 2rem;
+                padding: 6rem 2rem 1rem 2rem;
 
             }
 
@@ -244,9 +261,16 @@
 
             @include flex-h-j-v-c( false );
 
-            // margin: 3rem 0 0 0;
-            // temporary
             margin: 1rem 0 0 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                width: 100%;
+
+            }
 
             // button
             .layer-link {
@@ -259,6 +283,8 @@
                 height: 12rem;
                 margin: 0 1rem 0 1rem;
                 padding: 0rem 1.5rem 1.5rem 1.5rem;
+
+                overflow: hidden;
 
                 text-decoration: none;
 
@@ -278,6 +304,16 @@
 
                 transition: all 320ms $outex 0ms;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    flex-basis: auto;
+
+                    width: 100%;
+                    margin: 1rem 0 1rem 0;
+
+                }
+
                 // hover state
                 &:hover,
                 &:focus,
@@ -287,8 +323,33 @@
 
                 }
 
-                // before
-                &:before {
+                // hover state
+                &:hover {
+
+                    // before
+                    &:before {
+
+                        -webkit-filter: opacity( 0.815 ) grayscale( 0.000 );
+                                filter: opacity( 0.815 ) grayscale( 0.000 );
+
+                        transform: scale3d( 1.25, 1.25, 1.25 );
+
+                        transition: all 360ms $outex 0ms;
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include fill( $nite, 0.645 );
+
+                    }
+
+                }
+
+                // common
+                &:before,
+                &:after {
 
                     content: '';
 
@@ -299,15 +360,46 @@
                     bottom: 0;
                     left: 0;
 
-                    z-index: 0;
+                }
+
+                // before
+                &:before {
+
+                    z-index: 1;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    -webkit-filter: opacity( 0.545 ) grayscale( 0.000 );
+                            filter: opacity( 0.545 ) grayscale( 0.000 );
+
+                    transform: scale3d( 1, 1, 1 );
+
+                    transition: all 360ms $outex 0ms;
+
+                }
+
+                // after
+                &:after {
+
+                    z-index: 10;
+
+                    @include fill( $dark, 0.565 );
 
                     @include gradient(
 
                         0deg,
-                        $g140, 0.565, 0%,
+                        $g140, 0.265, 0%,
                         transparent, 1.000, 100%
 
                     );
+
+                    transition: all 220ms linear 0ms;
 
                 }
 
@@ -316,7 +408,7 @@
 
                     position: relative;
 
-                    z-index: 10;
+                    z-index: 20;
 
                     @include font( $klavislim, 1rem, 400 );
 
@@ -331,21 +423,49 @@
             // undergraduate
             #undergraduate-link {
 
-                //
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/degree.programs/degree.programs.undergraduate.jpg);
+                        position: center bottom;
+
+                    }
+
+                }
 
             }
 
             // graduate
             #graduate-link {
 
+                // before
+                &:before {
 
+                    background: {
+
+                        image: url(../img/degree.programs/degree.programs.graduate.jpg);
+
+                    }
+
+                }
 
             }
 
             // dvm
             #dvm-link {
 
+                // before
+                &:before {
 
+                    background: {
+
+                        image: url(../img/degree.programs/degree.programs.dvm.jpg);
+
+                    }
+
+                }
 
             }
 
