@@ -2,11 +2,11 @@
 <main id="site-layout" class="off-canvas-content <?php echo $site_type; ?>" data-off-canvas-content style="background-image:url(<?php echo $site_image; ?>);">
 
     <!-- billboard.homepage -->
-    <!-- <div id="billboard-homepage" class="billboard-homepage"> -->
+    <div id="billboard-homepage" class="billboard-homepage">
 
-        <?php // get_template_part( 'elements/homepage/homepage.billboard' ); ?>
+        <?php get_template_part( 'elements/homepage/homepage.billboard' ); ?>
 
-    <!-- </div> -->
+    </div>
     <!-- END billboard.homepage -->
 
     <!-- content.homepage -->
