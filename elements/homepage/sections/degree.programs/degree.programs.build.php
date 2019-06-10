@@ -7,7 +7,7 @@
         <!-- color + gradient -->
         <div class="color-layer fx-layer layer">
 
-            <!-- ball so hard -->
+            <!-- empty -->
 
         </div>
         <!-- END color + gradient -->
@@ -15,7 +15,7 @@
         <!-- pattern -->
         <div class="pattern-layer fx-layer">
 
-            <!-- ball so hard -->
+            <!-- empty -->
 
         </div>
         <!-- END pattern -->

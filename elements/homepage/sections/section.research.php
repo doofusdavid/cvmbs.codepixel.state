@@ -8,84 +8,34 @@
 
 ?>
 
-<section id="research">
+<section id="research" class="section-research">
 
-    <!-- container -->
-    <div class="article-container">
+    <div class="section-research__inner" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
 
-        <!-- background.color -->
-        <div class="section-base">
+        <div class="section-research__content">
 
-            <!-- empty -->
+            <h3 class="headline">
 
-        </div>
-        <!-- END background.color -->
+                <?php echo $research_content[ 'title' ]; ?>
 
-        <!-- section.content -->
-        <div class="section-content" data-load="pending">
+            </h3>
 
-            <!-- content.layers -->
-            <div class="content-layers">
+            <p class="text">
 
-                <!-- visual FX -->
-                <div class="design-layer">
+                <?php echo $research_content[ 'text' ]; ?>
 
-                    <!-- color + gradient -->
-                    <div class="image-layer fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
+            </p>
 
-                        <!-- ball so hard -->
+            <p class="cta">
+                <a href="/research" class="content-button">
 
-                    </div>
-                    <!-- END color + gradient -->
+                    <?php echo $research_content[ 'link' ][ 'title' ]; ?>
 
-                    <!-- pattern -->
-                    <div class="pattern-layer fx-layer layer">
+                </a>
+            </p>
 
-                        <!-- map -->
-                        <div id="research-map" class="map">
+        </div><!-- .section-research__content -->
 
-                            <!-- ball so hard -->
-
-                        </div>
-                        <!-- END map -->
-
-                    </div>
-                    <!-- END pattern -->
-
-                </div>
-                <!-- END visual FX -->
-
-                <!-- content -->
-                <div class="content-layer">
-
-                    <h3 class="headline">
-
-                        <?php echo $research_content[ 'title' ]; ?>
-
-                    </h3>
-
-                    <p class="text">
-
-                        <?php echo $research_content[ 'text' ]; ?>
-
-                    </p>
-
-                    <a href="/research" class="content-button">
-
-                        <?php echo $research_content[ 'link' ][ 'title' ]; ?>
-
-                    </a>
-
-                </div>
-                <!-- END content -->
-
-            </div>
-            <!-- END content.layers -->
-
-        </div>
-        <!-- END section.content -->
-
-    </div>
-    <!-- END container -->
+    </div><!-- .section-research__inner -->
 
 </section><!-- #research -->

@@ -14,7 +14,7 @@
     <!-- image -->
     <div class="image fx-layer layer" style="background-image:url(<?php echo $giving_content[ 'background' ]; ?>)">
 
-        <!-- ball so hard -->
+        <!-- empty -->
 
     </div>
     <!-- END image -->
