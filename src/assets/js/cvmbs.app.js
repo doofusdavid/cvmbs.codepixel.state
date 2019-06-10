@@ -147,8 +147,8 @@
         site.ui.layout.velocity( 'fadeIn', {
 
             visibility : 'visible',
-            delay      : 2400,
-            duration   : 1600,
+            delay      : 800,
+            duration   : 2400,
             easing     : 'easeOutExpo',
             complete   : function() {
 
