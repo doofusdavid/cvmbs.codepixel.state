@@ -125,7 +125,7 @@
                         <!-- button -->
                         <a href="<?php echo $link; ?>" class="slide-button">
 
-                            <?php echo $name; ?>'s story
+                            <?php echo $name; ?>'<?php echo ( substr( $name, -1) == 's' ) ? '' : 's' ; ?> story
 
                         </a>
                         <!-- END button -->
