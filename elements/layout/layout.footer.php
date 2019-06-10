@@ -32,10 +32,10 @@
 ?>
 
 <!-- site.footer -->
-<footer id="site-footer" class="ui-element layout-element <?php echo $class; ?> hidden">
+<footer id="site-footer" class="site-footer ui-element layout-element <?php echo $class; ?> hidden">
 
     <!-- links.row -->
-    <div id="footer-top" class="footer-row">
+    <div id="footer-top" class="footer-row site-footer__top">
 
         <!-- links.column -->
         <aside id="footer-left" class="footer-column links narrow">
@@ -181,7 +181,7 @@
     <!-- END links.row -->
 
     <!-- links.row -->
-    <div id="footer-bottom" class="footer-row">
+    <div id="footer-bottom" class="footer-row site-footer__bottom">
 
         <?php get_template_part( 'elements/links/links.required' ); ?>
 

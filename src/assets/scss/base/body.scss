@@ -1,20 +1,13 @@
 // stylesheet :: body element styles
 
-    // settings
-    $body-height : 100%;
-    $body-scroll : transparent;
-    $body-thumb  : transparentize( $brite, 0.385 );
-    $body-track  : transparentize( white, 1.000 );
-
     // styles
     body {
         position: relative;
 
         width: 100%;
-        // height: $body-height;
-        height: 100%;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
+        // height: 100%;
+        margin: 0;
+        padding: 0;
 
         & > * {
             max-width: 100%;
@@ -47,8 +40,6 @@
             ;
 
         }
-
-        // @include scrolls( true, $body-scroll, $body-thumb, $body-track );
 
         // secondary
         &.page-template-secondary,

@@ -1,31 +1,8 @@
 // stylesheet :: site footer styles
 
-    // settings
-    $footer_width  : 100vw;
-    $footer_width_ex : calc( 100vw + 4rem );
+    .site-footer {
 
-    $footer_height : 27rem;
-
-    $footer_padding    : 5rem 5rem 5rem 5rem;
-    $footer_padding_ex : 4rem 8rem 6rem 8rem;
-
-    // styles
-    #site-footer {
-
-        position: relative;
-
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        z-index: 30;
-
-        @include flex-h-j-v-t( false );
-
-        // width: $footer_width;
-        min-height: $footer_height;
         margin: 0;
-        padding: $footer_padding;
 
         @include fill( $dark, 0.000 );
 
@@ -33,13 +10,6 @@
                 filter: blur( 0px );
 
         transition: all 0ms linear 0ms;
-
-        // mobile
-        @include breakpoint ( small only ) {
-
-            padding: 2rem 2rem 2rem 2rem;
-
-        }
 
         // common
         .footer-row {
@@ -96,20 +66,14 @@
         }
 
         // top
-        #footer-top {
+        &__top {
 
-            @include flex-h-j-v-s( false );
+            @include flex-v-t-h-st( false );
+            padding: 2rem;
 
-            width: 100%;
-            padding: 0 0 2rem 0;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                @include flex-v-t-h-st( false );
-
-                padding: 0 0 2rem 0;
-
+            @include bpoint(40em) {
+                @include flex-h-j-v-s( false );
+                padding: 5rem 5rem 2rem;
             }
 
             // columns
@@ -285,19 +249,10 @@
         }
 
         // bottom row
-        #footer-bottom {
-
-            position: absolute;
-
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            z-index: 10;
+        &__bottom {
 
             @include flex-h-j-v-c( false );
 
-            // width: $footer_width;
             height: 5rem;
             margin: 0;
             padding: 0 5rem 0 5rem;

@@ -21,13 +21,6 @@
 
         }
 
-        // container
-        .article-container {
-
-            // height: 100%;
-
-        }
-
         // common
         .section-image,
         .section-base {
@@ -46,7 +39,7 @@
 
             background: {
 
-                image: url('../img/billboards/billboard.00.jpg');
+                image: url(../img/billboards/billboard.00.jpg);
                 repeat: no-repeat;
                 size: cover;
                 position: left center;
@@ -132,98 +125,6 @@
                 @include typo( 1.25rem, 0.035em );
 
                 @include color( white, 0.000 );
-
-            }
-
-        }
-
-        // video
-        .video-layer {
-
-            @include flex-h-c-v-c( false );
-
-            // temporary
-            @include hide;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                width: 100%;
-
-            }
-
-            // layer(?)
-            .video-content {
-
-                width: 60%;
-
-                @include shadowbox( 1rem, 3.5rem, black, 0.285 );
-
-            }
-
-            // video container
-            .video-container {
-
-                position: relative;
-
-                max-width: 100%;
-                height: 0;
-                padding-bottom: 56.25%;
-
-                overflow: hidden;
-
-                background: {
-
-                    image: url(../img/content/degree.programs.video.jpg);
-                    repeat: no-repeat;
-                    size: cover;
-                    position: center center;
-
-                }
-
-                // video layers
-                &:before,
-                &:after {
-
-                    content: '';
-
-                    position: absolute;
-
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-
-                }
-
-                // before
-                &:before {
-
-                    // z-index: 1;
-
-                    @include fill( $midnite, 0.365 );
-
-                }
-
-                // after
-                &:after {
-
-                    // z-index: 2;
-
-                }
-
-                // video
-                iframe {
-
-                    position: absolute;
-
-                    top: 0;
-                    left: 0;
-
-                    width: 100%;
-                    height: 100%;
-
-                }
 
             }
 
