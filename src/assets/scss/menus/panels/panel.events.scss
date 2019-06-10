@@ -13,6 +13,56 @@
 
             @include fill( $blue, 0.565 );
 
+            // view all link
+            #view-calendar-link {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+
+                z-index: 10;
+
+                @include flex-v-b-h-s( false );
+
+                width: 6rem;
+                height: 5rem;
+                margin: 0;
+                padding: 0 0 1rem 0.25rem;
+
+                text-decoration: none;
+
+                cursor: pointer;
+
+                // label
+                .label {
+
+                    @include flex-h-s-v-c( true );
+
+                    height: 1rem;
+
+                    @include font( $industry, 0.65625rem, 700 );
+
+                    @include typo( 0.5rem, 0.115em );
+
+                    @include text( $up );
+
+                    @include color( white, 0.000 );
+
+                    // after
+                    &:after {
+
+                        @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\EDC8' );
+
+                        margin: 0 0.25rem 0 0;
+
+                    }
+
+                }
+
+            }
+
         }
 
         #calendar-links-container {
@@ -99,12 +149,6 @@
 							size: 9px;
 
 						}
-
-					}
-
-					&:focus {
-
-						@include disable-mouse-outline;
 
 					}
 
@@ -375,11 +419,9 @@
 
 			.event {
 
-				display: flex;
+				@include flex-h-j-v-t( false );
 
-				flex-direction: column;
-
-				// padding: 16px;
+                padding: 1rem 1rem 1rem 1rem;
 
 				border-bottom: 1px solid transparentize(white, 0.865);
 
@@ -448,183 +490,49 @@
 
 					}
 
-					&:focus {
-
-						@include disable-mouse-outline;
-
-					}
-
 				}
 
-				.calendar-entry {
+				.calendar-icon {
 
-					display: flex;
+					display: inline-flex;
 
-					flex-direction: row;
+					flex-direction: column;
 
-					justify-content: flex-start;
-
-					width: 100%;
-					padding: 0;
-
-					.calendar-icon {
-
-						display: inline-flex;
-
-						flex-direction: column;
-
-						width: 64px;
-						height: 64px;
-
-						span {
-
-							box-sizing: border-box;
-
-							text: {
-
-								align: center;
-								transform: $up;
-								rendering: $pixper;
-
-							}
-
-						}
-
-						.calendar-month {
-
-							height: 24px;
-							padding: 1px 0 0 0;
-
-							font: {
-
-								family: $klavislim;
-								size: 11px;
-								weight: normal;
-
-							}
-
-                            @include font( $klavislim, 0.6875rem, 500 );
-
-							line-height: 24px;
-
-							letter-spacing: 0.065em;
-
-							text: {
-
-								rendering: $pixper;
-
-							}
-
-							@include color( $gold, 0.000 );
-
-                            @include fill(
-
-                                adjust-color(
-
-                                    $blue,
-                                    $lightness  : -2.5%,
-                                    $saturation : 1.5%,
-                                    $alpha 		: -0.525
-
-                                ), 0.000
-
-                            );
-
-						}
-
-						.calendar-day {
-
-                            @include font( $decima, 1.75rem, 700 );
-
-                            @include typo( 2.5rem, -0.025em );
-
-							color: white;
-							background-color: transparentize(white, 0.945);
-
-						}
-
-					}
-
-					.entry-info {
-
-						display: flex;
-
-						flex-direction: column;
-
-						justify-content: center;
-
-						width: calc(100% - 64px);
-						padding: 0 0 0 16px;
-
-						span {
-
-							display: block;
-
-							text: {
-
-								rendering: $pixper;
-
-							}
-
-							&.event-title {
-
-								font: {
-
-									family: $industry;
-									size: 13px;
-                                    weight: 600;
-
-								}
-
-								line-height: 18px;
-
-								letter-spacing: 0.025em;
-
-								color: $gold;
-
-							}
-
-							&.event-date {
-
-								font: {
-
-									family: $industry;
-									size: 10px;
-                                    weight: 600;
-
-								}
-
-								line-height: 18px;
-
-								letter-spacing: 0.025em;
-
-								text: {
-
-									transform: $up;
-
-								}
-
-								color: $white;
-
-							}
-
-						}
-
-					}
-
-				}
-
-				.content {
-
-					padding: 0 16px 16px 16px;
-
-					border: none;
-
-					background-color: transparentize(white, 1.000);
+					width: 64px;
+					height: 64px;
 
 					span {
 
-						display: inline-block;
+						box-sizing: border-box;
+
+						text: {
+
+							align: center;
+							transform: $up;
+							rendering: $pixper;
+
+						}
+
+					}
+
+					.calendar-month {
+
+						height: 24px;
+						padding: 1px 0 0 0;
+
+						font: {
+
+							family: $klavislim;
+							size: 11px;
+							weight: normal;
+
+						}
+
+                        @include font( $klavislim, 0.6875rem, 500 );
+
+						line-height: 24px;
+
+						letter-spacing: 0.065em;
 
 						text: {
 
@@ -632,42 +540,96 @@
 
 						}
 
+						@include color( $gold, 0.000 );
+
+                        @include fill(
+
+                            adjust-color(
+
+                                $blue,
+                                $lightness  : -2.5%,
+                                $saturation : 1.5%,
+                                $alpha 		: -0.525
+
+                            ), 0.000
+
+                        );
+
 					}
 
-					.entry-description {
+					.calendar-day {
 
-						margin-bottom: 16px;
+                        @include font( $decima, 1.75rem, 700 );
 
-						font: {
+                        @include typo( 2.5rem, -0.025em );
 
-							family: $industry;
-							size: 11px;
+						color: white;
+						background-color: transparentize(white, 0.945);
 
-						}
+					}
 
-						line-height: 18px;
+				}
 
-						letter-spacing: 0.025em;
+                // link
+                .entry-link {
 
-						text: {
+                    @include font( $industry, 0.875rem, 700 );
 
-							transform: none;
+                    text-decoration: none;
 
-						}
+                    @include color( $gold, 0.000 );
 
-						color: $white;
+                    // hover state
+                    &:hover {
 
-						&:focus {
+                        text-decoration: underline;
 
-							@include disable-mouse-outline;
+                    }
 
-						}
+                }
 
-						a {
+				.entry-info {
 
-							color: $gold;
+					@include flex-v-t-h-s( false );
 
-						}
+					width: calc(100% - 64px);
+					padding: 0 0 0 16px;
+
+				}
+
+                // date
+                .entry-date {
+
+                    margin: 0 0 0 0;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include text( $up );
+
+                }
+
+                // text
+				.entry-description {
+
+					margin: 0 0 0 0;
+
+					@include font( $industry, 0.875rem, 500 );
+
+					line-height: 18px;
+
+					letter-spacing: 0.025em;
+
+					text: {
+
+						transform: none;
+
+					}
+
+					@include color( $white, 0.135 );
+
+					a {
+
+						color: $gold;
 
 					}
 
@@ -725,12 +687,6 @@
 						}
 
 						color: transparentize(white, 0.065);
-
-						&:focus {
-
-							@include disable-mouse-outline;
-
-						}
 
 						&:before {
 
@@ -819,12 +775,6 @@
 							&:hover {
 
 								@include fill( $blue, 0.235 );
-
-							}
-
-							&:focus {
-
-								@include disable-mouse-outline;
 
 							}
 

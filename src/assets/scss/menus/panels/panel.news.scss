@@ -6,7 +6,7 @@
     // styles
     #menu-panel-news {
 
-        @include gradient( 0deg, white, 0.685, 0%, red, 1.000, 50% );
+        @include gradient( 0deg, white, 0.685, 0%, transparent, 1.000, 50% );
 
         // header
         .panel-header {

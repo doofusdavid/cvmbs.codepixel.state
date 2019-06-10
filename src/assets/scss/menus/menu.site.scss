@@ -27,9 +27,7 @@
         top: 5rem;
         bottom: 0;
 
-        z-index: 80;
-
-        @include flex-v-c-h-c( false );
+        z-index: 1000;
 
         width: $menu_width;
         height: $menu_height;
