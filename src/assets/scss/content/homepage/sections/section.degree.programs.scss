@@ -1,24 +1,11 @@
 // stylesheet :: academics section layout + content styles
 
-    // settings
-    $section_color : transparentize( $nite, 0.365 );
-    $billboard : '../img/billboards/billboard.00.jpg';
-
     // styles
     .section-academics {
 
         position: relative;
 
-        height: 80vh;
-
         @include shadowbox( 2rem, 7rem, black, 0.625 );
-
-        // mobile
-        @include breakpoint ( small only ) {
-
-            height: auto;
-
-        }
 
         // menu open state
         &.site-menu-open {
@@ -37,9 +24,7 @@
         // container
         .article-container {
 
-            // @include flex-v-c-h-c( false );
-
-            height: 100%;
+            // height: 100%;
 
         }
 
@@ -59,12 +44,9 @@
         // image
         .section-image {
 
-            z-index: 10;
-
             background: {
 
-                image: url($billboard);
-                // image: url(../img/patterns/pattern.vertical.png);
+                image: url('../img/billboards/billboard.00.jpg');
                 repeat: no-repeat;
                 size: cover;
                 position: left center;
@@ -78,9 +60,6 @@
         // color base
         .section-base {
 
-            z-index: 20;
-
-            // @include fill( $section_color, 0.000 );
             @include fill( $dark, 0.215 );
 
         }
@@ -90,22 +69,19 @@
 
             position: relative;
 
-            z-index: 100;
-
-            // @include flex-v-j-h-st( false );
-            @include flex-v-c-h-st( false );
-
-            height: 100%;
-            padding: 10rem 4rem 10rem 4rem;
-
             transition: all 40ms linear 160ms;
 
-            // mobile
-            @include breakpoint ( small only ) {
+            @include flex-v-c-h-c( false );
 
-                @include flex-v-c-h-c( false );
+            padding: 6rem 2rem 1rem 2rem;
 
-                padding: 6rem 2rem 1rem 2rem;
+            @include bpoint(40em) {
+
+                @include flex-v-c-h-st( false );
+
+                min-height: 80vh;
+
+                padding: 10rem 4rem 10rem 4rem;
 
             }
 
@@ -116,9 +92,6 @@
 
             @include flex-v-c-h-c( false );
 
-            // width: 40%;
-            // margin: 0 0 3rem 0;
-            // temporary
             margin: 0 0 1rem 0;
             padding: 0 0 0 2rem;
 
@@ -226,7 +199,7 @@
                 // before
                 &:before {
 
-                    z-index: 1;
+                    // z-index: 1;
 
                     @include fill( $midnite, 0.365 );
 
@@ -235,7 +208,7 @@
                 // after
                 &:after {
 
-                    z-index: 2;
+                    // z-index: 2;
 
                 }
 
@@ -280,7 +253,7 @@
                 @include flex-v-b-h-e( false );
 
                 flex-basis: 33.3333333%;
-                height: 16rem;
+                height: 12rem;
                 margin: 0 1rem 0 1rem;
                 padding: 0rem 1.5rem 1.5rem 1.5rem;
 
