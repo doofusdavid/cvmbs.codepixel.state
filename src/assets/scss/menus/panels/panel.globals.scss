@@ -116,24 +116,3 @@
         overflow: scroll;
 
     }
-
-    // placeholder text
-    p {
-
-        @include font( $industry, 0.875rem, 500 );
-
-
-
-    }
-
-    // panel content
-    .panel-content {
-
-        // text panel
-        &.text {
-
-
-
-        }
-
-    }
