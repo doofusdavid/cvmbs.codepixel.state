@@ -59,7 +59,7 @@
 <?php if ( $degree_programs_content ) : ?>
 
 <!-- description -->
-<div id="department-degree-programs-description" class="degree-program-content">
+<div id="department-degree-programs-description" class="degree-program-block">
 
     <!-- text -->
     <p>
@@ -83,7 +83,7 @@
 <?php endif; ?>
 
 <!-- programs -->
-<div id="department-degree-programs-list" class="degree-program-content">
+<div id="department-degree-programs-list" class="degree-program-block">
 
     <!-- undergraduate -->
     <div class="program-list undergraduate-programs">

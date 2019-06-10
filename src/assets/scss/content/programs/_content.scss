@@ -1,0 +1,11 @@
+.degree-program-content {
+	padding: 1.5rem 8vw;
+	background: $sec_temp_off_white;
+	color: $steel;
+
+	&__inner {
+		width: 100%;
+		max-width: 65rem;
+		margin: 0 auto;
+	}
+}

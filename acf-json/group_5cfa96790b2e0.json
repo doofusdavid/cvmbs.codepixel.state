@@ -1,9 +1,9 @@
 {
-    "key": "group_5c76be300ded6",
-    "title": "Degree Programs: Default",
+    "key": "group_5cfa96790b2e0",
+    "title": "Residencies",
     "fields": [
         {
-            "key": "field_5c7d693771daf",
+            "key": "field_5cfa96790f377",
             "label": "Program Introduction",
             "name": "program_intro",
             "type": "group",
@@ -18,7 +18,7 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5c7d8ef297ba9",
+                    "key": "field_5cfa96791134d",
                     "label": "Description",
                     "name": "desc",
                     "type": "wysiwyg",
@@ -37,7 +37,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_5cc0c16937ca0",
+                    "key": "field_5cfa96791146f",
                     "label": "Buttons",
                     "name": "buttons",
                     "type": "repeater",
@@ -56,7 +56,7 @@
                     "button_label": "Add Button",
                     "sub_fields": [
                         {
-                            "key": "field_5cc0c17f37ca1",
+                            "key": "field_5cfa967913ce5",
                             "label": "Button",
                             "name": "link",
                             "type": "link",
@@ -75,7 +75,7 @@
             ]
         },
         {
-            "key": "field_5c77011e303bf",
+            "key": "field_5cfa96791774c",
             "label": "Program Blocks",
             "name": "program_blocks",
             "type": "flexible_content",
@@ -95,11 +95,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5cbe3d2b09cf4",
+                            "key": "field_5cfa967918e98",
                             "label": "Image",
                             "name": "img",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "(optional)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -119,7 +119,7 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5cbf4d73e7ab5",
+                            "key": "field_5cfa967918f75",
                             "label": "Image Position",
                             "name": "img_pos",
                             "type": "radio",
@@ -143,7 +143,7 @@
                             "save_other_choice": 0
                         },
                         {
-                            "key": "field_5cbe3d2b09cf5",
+                            "key": "field_5cfa967919042",
                             "label": "Description",
                             "name": "desc",
                             "type": "textarea",
@@ -162,7 +162,7 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5cbe3d2b09cf6",
+                            "key": "field_5cfa967919129",
                             "label": "Dates",
                             "name": "dates",
                             "type": "repeater",
@@ -181,7 +181,7 @@
                             "button_label": "Add Opportunity",
                             "sub_fields": [
                                 {
-                                    "key": "field_5cc21a6ff1e4d",
+                                    "key": "field_5cfa96791e375",
                                     "label": "Date",
                                     "name": "date",
                                     "type": "text",
@@ -200,7 +200,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5cc21a77f1e4e",
+                                    "key": "field_5cfa96791e465",
                                     "label": "Action",
                                     "name": "action",
                                     "type": "text",
@@ -221,7 +221,7 @@
                             ]
                         },
                         {
-                            "key": "field_5cc86490b72c0",
+                            "key": "field_5cfa96792106f",
                             "label": "CTA's",
                             "name": "ctas",
                             "type": "repeater",
@@ -240,7 +240,7 @@
                             "button_label": "Add CTA",
                             "sub_fields": [
                                 {
-                                    "key": "field_5cc864a0b72c1",
+                                    "key": "field_5cfa967922048",
                                     "label": "Link",
                                     "name": "link",
                                     "type": "link",
@@ -267,7 +267,26 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5c7704624f578",
+                            "key": "field_5cfaba65747d5",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Career Opportunities",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cfa9679243be",
                             "label": "Description",
                             "name": "desc",
                             "type": "textarea",
@@ -286,7 +305,7 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5c7704944f579",
+                            "key": "field_5cfa9679254be",
                             "label": "Careers",
                             "name": "careers",
                             "type": "repeater",
@@ -305,7 +324,7 @@
                             "button_label": "Add Career",
                             "sub_fields": [
                                 {
-                                    "key": "field_5c7704a64f57a",
+                                    "key": "field_5cfa96792653c",
                                     "label": "Career",
                                     "name": "career",
                                     "type": "text",
@@ -329,36 +348,17 @@
                     "min": "",
                     "max": "1"
                 },
-                "layout_5c7705304f57b": {
-                    "key": "layout_5c7705304f57b",
-                    "name": "potential_employers",
-                    "label": "Potential Employers",
+                "layout_5cfabafc299eb": {
+                    "key": "layout_5cfabafc299eb",
+                    "name": "facilities",
+                    "label": "Facilities",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5c7705404f57c",
-                            "label": "Description",
-                            "name": "desc",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "wpautop"
-                        },
-                        {
-                            "key": "field_5c7705564f57d",
-                            "label": "Employers",
-                            "name": "employers",
-                            "type": "repeater",
+                            "key": "field_5cfabb11299ec",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -367,49 +367,18 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "row",
-                            "button_label": "Add Employer",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c7705654f57e",
-                                    "label": "Employer",
-                                    "name": "employer",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_5c77129d81703": {
-                    "key": "layout_5c77129d81703",
-                    "name": "program_contacts",
-                    "label": "Program Contacts",
-                    "display": "row",
-                    "sub_fields": [
+                            "default_value": "Facilities",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
-                            "key": "field_5cd5ac2cd9876",
+                            "key": "field_5cfabb1c299ed",
                             "label": "Description",
                             "name": "desc",
                             "type": "textarea",
-                            "instructions": "(optional)",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -424,10 +393,10 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5caba3d86612a",
-                            "label": "Form",
-                            "name": "form",
-                            "type": "wysiwyg",
+                            "key": "field_5cfabb41299ee",
+                            "label": "Places",
+                            "name": "places",
+                            "type": "post_object",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -436,11 +405,14 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "basic",
-                            "media_upload": 1,
-                            "delay": 0
+                            "post_type": [
+                                "place"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "object",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -453,7 +425,26 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5c77029b303c0",
+                            "key": "field_5cfaba84747d6",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Program Facts",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cfa96792ec91",
                             "label": "Facts",
                             "name": "facts",
                             "type": "repeater",
@@ -472,7 +463,7 @@
                             "button_label": "Add Fact",
                             "sub_fields": [
                                 {
-                                    "key": "field_5c7702be303c1",
+                                    "key": "field_5cfa967930119",
                                     "label": "Fact",
                                     "name": "fact",
                                     "type": "text",
@@ -491,7 +482,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5c7702d1303c2",
+                                    "key": "field_5cfa96793022a",
                                     "label": "Description",
                                     "name": "desc",
                                     "type": "textarea",
@@ -522,11 +513,11 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5c770fff81702",
+                            "key": "field_5cfa967932ee0",
                             "label": "Image",
                             "name": "img",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "(optional)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -546,7 +537,7 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_5cbf4dcde7ab6",
+                            "key": "field_5cfa967934188",
                             "label": "Image Position",
                             "name": "img_pos",
                             "type": "radio",
@@ -570,7 +561,7 @@
                             "save_other_choice": 0
                         },
                         {
-                            "key": "field_5c770fd581701",
+                            "key": "field_5cfa9679353a5",
                             "label": "Description",
                             "name": "desc",
                             "type": "textarea",
@@ -589,7 +580,7 @@
                             "new_lines": "wpautop"
                         },
                         {
-                            "key": "field_5cc21f6354a33",
+                            "key": "field_5cfa9679368bd",
                             "label": "Opportunities",
                             "name": "opportunities",
                             "type": "repeater",
@@ -608,7 +599,7 @@
                             "button_label": "Add Opportunity",
                             "sub_fields": [
                                 {
-                                    "key": "field_5cc21f7c54a34",
+                                    "key": "field_5cfa967938140",
                                     "label": "Name",
                                     "name": "name",
                                     "type": "text",
@@ -627,7 +618,7 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_5cc21f8b54a35",
+                                    "key": "field_5cfa96793821b",
                                     "label": "Link",
                                     "name": "link",
                                     "type": "url",
@@ -648,14 +639,38 @@
                     "min": "",
                     "max": "1"
                 },
-                "layout_5c7705ee4f57f": {
-                    "key": "layout_5c7705ee4f57f",
-                    "name": "student_orgs",
-                    "label": "Student Organizations",
+                "layout_5cfabb80299f0": {
+                    "key": "layout_5cfabb80299f0",
+                    "name": "training_and_experience",
+                    "label": "Training and Experience",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5c77060c4f580",
+                            "key": "field_5cfabbae299f3",
+                            "label": "Image",
+                            "name": "img",
+                            "type": "image",
+                            "instructions": "(optional)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5cfabb89299f1",
                             "label": "Heading",
                             "name": "heading",
                             "type": "text",
@@ -667,17 +682,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Training and Experience",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5c77061a4f581",
-                            "label": "Organizations",
-                            "name": "orgs",
-                            "type": "repeater",
+                            "key": "field_5cfabb95299f2",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -686,64 +701,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 0,
-                            "layout": "row",
-                            "button_label": "Add Organization",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5c7706344f582",
-                                    "label": "Organization",
-                                    "name": "org",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "student_organization"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "id",
-                                    "ui": 1
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_5cabb8cb95267": {
-                    "key": "layout_5cabb8cb95267",
-                    "name": "video",
-                    "label": "Video",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cabb8db95268",
-                            "label": "YouTube Video ID",
-                            "name": "video_id",
-                            "type": "text",
-                            "instructions": "e.g., 2DegmW2U73M",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
                             "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -755,9 +717,9 @@
             "max": ""
         },
         {
-            "key": "field_5c7d701dac97d",
-            "label": "Tuition and Financial Aid",
-            "name": "tuition_financial_aid",
+            "key": "field_5cfa967941058",
+            "label": "Compensation and Benefits",
+            "name": "compensation_and_benefits",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -770,26 +732,26 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5c7d8e49553e9",
+                    "key": "field_5cfa96794233d",
                     "label": "Heading",
                     "name": "heading",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Tuition and Financial Aid",
+                    "default_value": "Compensation and Benefits",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5c7d7031ac97e",
+                    "key": "field_5cfa967942437",
                     "label": "Description",
                     "name": "desc",
                     "type": "textarea",
@@ -808,7 +770,7 @@
                     "new_lines": "wpautop"
                 },
                 {
-                    "key": "field_5cc2217fe192f",
+                    "key": "field_5cfa967942559",
                     "label": "CTA's",
                     "name": "ctas",
                     "type": "repeater",
@@ -827,7 +789,7 @@
                     "button_label": "Add CTA",
                     "sub_fields": [
                         {
-                            "key": "field_5cc2219be1930",
+                            "key": "field_5cfa967945e12",
                             "label": "Link",
                             "name": "link",
                             "type": "link",
@@ -851,17 +813,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "degree_program"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "posts-degree-programs\/overview.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "posts-degree-programs\/faqs.php"
+                "value": "residency"
             }
         ]
     ],
@@ -873,5 +825,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559926896
+    "modified": 1559945688
 }

@@ -1,11 +1,10 @@
 <?php
-$bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field('img') .')";' : '';
+$bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field('img') .')";' : 'style="background-image:url(' . get_template_directory_uri() . '/dist/assets/img/modules/research/background.00.jpg);"';
 ?>
 
 <div class="research program-block image--<?php the_sub_field('img_pos'); ?>">
 
-	<div class="research__image" <?php echo $bg_img; ?>>
-	</div><!-- .research__image -->
+	<div class="research__image" <?php echo $bg_img; ?>></div><!-- .research__image -->
 
 	<div class="research__content">
 

@@ -1,5 +1,13 @@
 .financial {
-	background: $beige url(../img/content/content.background.06.jpg) no-repeat center center / cover;
+	background: $beige no-repeat center center / cover;
+
+	&.type--student {
+		background-image: url(../img/content/content.background.06.jpg);
+	}
+
+	&.type--resident {
+		background-image: url(../img/modules/financial/background.00.jpg);
+	}
 
 	&__inner {
 		background: rgba($beige, 0.435);

@@ -1,9 +1,9 @@
 <?php
-if ( have_rows('tuition_financial_aid') ) :
-	while ( have_rows('tuition_financial_aid') ) : the_row();
+if ( have_rows('compensation_and_benefits') ) :
+	while ( have_rows('compensation_and_benefits') ) : the_row();
 ?>
 
-<div class="financial type--student">
+<div class="financial type--resident">
 
 	<div class="financial__inner">
 
