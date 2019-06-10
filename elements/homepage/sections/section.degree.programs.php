@@ -26,11 +26,11 @@
             <div id="text-layer" class="text-layer content-layer">
 
                 <!-- title -->
-                <span class="layer-title">
+                <h3 class="layer-title">
 
-                    this is how we care
+                    explore degree programs
 
-                </span>
+                </h3>
                 <!-- END title -->
 
                 <!-- text -->

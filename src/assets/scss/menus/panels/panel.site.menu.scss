@@ -407,9 +407,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.home.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.home.jpg);
+
+                            }
 
                         }
 
@@ -443,9 +450,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.about.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.about.jpg);
+
+                            }
 
                         }
 
@@ -488,9 +502,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.students.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.students.jpg);
+
+                            }
 
                         }
 
@@ -533,9 +554,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.research.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.research.jpg);
+
+                            }
 
                         }
 
@@ -578,9 +606,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.service.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.service.jpg);
+
+                            }
 
                         }
 
@@ -623,9 +658,16 @@
                     // artwork
                     .link-artwork {
 
-                        background: {
+                        background-image: none;
 
-                            image: url(../img/menus/menu.item.alumni.jpg);
+                        // load on menu open
+                        &.loaded {
+
+                            background: {
+
+                                image: url(../img/menus/menu.item.alumni.jpg);
+
+                            }
 
                         }
 
@@ -802,74 +844,6 @@
                     }
 
                 }
-
-            }
-
-            // brand
-            #brand-state-required {
-
-                position: absolute;
-
-                right: 0;
-                bottom: 2rem;
-                left: 0;
-
-                z-index: 20;
-
-                @include flex-h-c-v-c( false );
-
-                width: 100%;
-                height: 4rem;
-                // margin: 0 4rem 0 4rem;
-
-                // svg
-                svg {
-
-                    .path {
-
-                        fill: white;
-                        // fill: $g140;
-
-                    }
-
-                    // hollowed
-                    .hollow {
-
-                        fill-rule: evenodd;
-                        clip-rule: evenodd;
-
-                    }
-
-                }
-
-            }
-
-            // copyright
-            #copyright-text {
-
-                position: absolute;
-
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                z-index: 30;
-
-                @include flex-h-c-v-c( false );
-
-                width: 100%;
-                height: 3rem;
-                margin: 0;
-                padding: 0 1rem 1rem 1rem;
-
-                @include font( $industry, 0.5625rem, 600 );
-
-                @include text( none, center );
-
-                @include typo( 1rem, 0.035em );
-
-                // @include color( $midnite, 0.325 );
-                @include color( white, 0.325 );
 
             }
 

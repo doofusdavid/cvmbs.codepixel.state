@@ -86,6 +86,9 @@ export var menusFX = {
             // slide content
             var slidecontent = $('#billboard-slides .slick-current.slick-active .ui-slide-article .slide-content');
 
+            // toggle menu open state for link background images
+            $('#global-menu-list .link-artwork').addClass( 'loaded' );
+
             // toolbar
             toolbar = site.ui.toolbar;
 
