@@ -12,31 +12,6 @@
 
         position: relative;
 
-        // menu open state
-        .site-menu-open & {
-
-            // top level class
-            .article-container {
-
-                -webkit-filter: blur( 8px );
-                        filter: blur( 8px );
-
-                transition: all 0ms linear 0ms;
-
-            }
-
-        }
-
-        // container
-        .article-container {
-
-            -webkit-filter: blur( 0px );
-                    filter: blur( 0px );
-
-            transition: all 0ms linear 0ms;
-
-        }
-
         // content
         .section-content {
 
@@ -94,9 +69,6 @@
                         clip: content-box;
 
                     }
-
-                    -webkit-filter: blur( 16px );
-                            filter: blur( 16px );
 
                     // mobile
                     @include breakpoint ( small only ) {
