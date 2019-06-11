@@ -7,13 +7,10 @@ $articles    = json_decode( $data );
 
 ?>
 
-<section id="news">
-
-    <!-- container -->
-    <div class="article-container" tabindex="-1">
+<section id="news" class="section-news">
 
         <!-- title -->
-        <a href="https://cvmbs.source.colostate.edu/" data-section="news">
+        <a href="https://cvmbs.source.colostate.edu/">
 
             <!-- heading -->
             <h3 class="section-title">
@@ -34,56 +31,40 @@ $articles    = json_decode( $data );
         </a>
         <!-- END title -->
 
-        <!-- feature + sidebar -->
-        <div id="main-source-content">
+        <!-- news.feed -->
+        <section id="source-feed" class="source-feed">
 
-            <!-- news.feed -->
-            <section id="source-feed" class="article-cards ui-news">
+            <?php
 
-                <?php
+            foreach( $articles as $article ) :
+                $permalink = $article->link;
+                $thumbnail = $article->featured_image->source_url;
+                $title     = $article->title->rendered;
+                $excerpt   = $article->excerpt->rendered;
 
-                foreach( $articles as $article ) {
+            ?>
 
-                    $permalink = $article->link;
-                    $thumbnail = $article->featured_image->source_url;
-                    $title     = $article->title->rendered;
-                    $excerpt   = $article->excerpt->rendered;
+            <a href="<?php echo $permalink; ?>" class="article card">
 
-                    $content .= '
+                <div class="header" style="background-image:url( <?php echo $thumbnail; ?> )">
 
-                        <a href="' . $permalink . '" class="article card" data-url="' . $permalink . '">
+                    <!-- <span class="image"></span> -->
 
-                            <header class="header">
+                </div>
 
-                                <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
+                <div class="content">
 
-                            </header>
+                    <h4 class="title"><?php echo $title; ?></h4>
 
-                            <section class="content">
+                    <?php echo $excerpt; ?>
 
-                                <h4 class="title">' . $title . '</h4>
+                </div>
 
-                                ' . $excerpt . '
+            </a>
 
-                            </section>
+            <?php endforeach; ?>
 
-                        </a>
+        </section>
+        <!-- END news.feed -->
 
-                    ';
-
-                }
-
-                echo $content;
-
-                ?>
-
-            </section>
-            <!-- END news.feed -->
-
-        </div>
-        <!-- END feature + sidebar -->
-
-    </div>
-    <!-- END container -->
-
-</section><!-- #news -->
+</section><!-- .section-news -->

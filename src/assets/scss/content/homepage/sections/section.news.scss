@@ -4,12 +4,19 @@
     $section_color : transparentize( $beige, 0.085 );
 
     // styles
-    #news {
-
-        height: auto;
-        margin: 0;
+    .section-news {
 
         @include fill( $section_color, 0.000 );
+
+        padding: 2rem 1rem 0rem 1rem;
+
+        @include bpoint(tablet) {
+            padding: 5rem 4rem 5rem 4rem;
+        }
+
+        & > a {
+            text-decoration: none;
+        }
 
         // title
         .section-title {
@@ -131,66 +138,21 @@
 
         }
 
-        // container
-        .article-container {
-
-            @include flex-v-j-h-st( false );
-
-            width: 100vw;
-            height: auto;
-            padding: 5rem 4rem 5rem 4rem;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                padding: 2rem 1rem 0rem 1rem;
-
-            }
-
-            & > a {
-                text-decoration: none;
-            }
-
-        }
-
-        // feature + sidebar
-        #main-source-content {
-
-            @include flex-v-j-h-st( false );
-
-            margin: 0;
-            padding: 0;
-
-        }
-
         // source feed
-        #source-feed {
+        .source-feed {
 
-            @include flex-h-s-v-st( false );
+            display: flex;
+            flex-direction: column;
 
-            flex-wrap: nowrap;
-
-            width: auto;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                @include flex-v-t-h-st( false );
-
+            @include bpoint(tablet) {
+                flex-direction: row;
             }
 
             // article
             .article {
 
-                @include flex-v-t-h-c( true );
-
-                flex-basis: 33.3333333%;
-
-                height: auto;
-                margin: 0 1rem 0 1rem;
+                display: flex;
+                flex-direction: column;
 
                 @include fill( white, 0.185 );
 
@@ -202,11 +164,11 @@
 
                 text-decoration: none;
 
-                // mobile
-                @include breakpoint ( small only ) {
+                margin: 0 1rem 2rem 1rem;
 
-                    margin: 0 1rem 2rem 1rem;
-
+                @include bpoint(tablet) {
+                    width: calc((100% / 3) - 2rem);
+                    margin: 0 1rem 0 1rem;
                 }
 
                 // hover state
@@ -244,17 +206,9 @@
                 // header
                 .header {
 
-                    position: relative;
+                    background: no-repeat center center / cover;
 
-                    @include flex-v-t-h-c( false );
-
-                    flex-grow: 1;
-
-                    width: 100%;
-                    height: 14rem;
-                    min-height: 14rem;
-                    margin: 0;
-                    padding: 0;
+                    padding-top: 60%;
 
                     // image
                     .image {
@@ -284,136 +238,13 @@
 
                     }
 
-                    // meta
-                    .meta {
-
-                        position: absolute;
-
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-
-                        z-index: 20;
-
-                        @include flex-h-j-v-c( false );
-
-                        @include hide;
-
-                        width: 16rem;
-                        height: 1.25rem;
-                        margin: 0;
-                        padding: 0 0 0 0;
-
-                        // common
-                        .date,
-                        .post-category {
-
-                            @include flex-h-c-v-c( true );
-
-                            height: 1.25rem;
-                            padding: 0.0625rem 0.5rem 0 0.5rem;
-
-                            @include font( $industry, 0.5625rem, 700 );
-
-                            line-height: 0.5rem;
-
-                            letter-spacing: 0.065em;
-
-                            @include text( $up );
-
-                            color: white;
-
-                        }
-
-                        // date
-                        .date {
-
-                            order: -1;
-
-                            @include fill( white, 0.945 );
-
-                        }
-
-                        // category
-                        .post-category {
-
-                            padding: 0 0.5rem 0 0.5rem;
-
-                            @include font( $industry, 0.5625rem, 700 );
-
-                            letter-spacing: 0.025em;
-
-                            @include fill( $g135, 0.185 );
-
-                            // hide class
-                            &.superchannel,
-                            &.national-western-stock-show,
-                            &.special-events {
-
-                                @include hide;
-
-                            }
-
-                            // campaign
-                            &.state-your-purpose {
-
-                                color: $campaign;
-
-                                @include fill( $dark, 0.325 );
-
-                            }
-
-                            // obituaries
-                            &.obituaries {
-
-                                @include fill( $blue, 0.425 );
-
-                            }
-
-                            // headlines
-                            &.latest-headlines {
-
-                                @include fill( $roarange, 0.385 );
-
-                            }
-
-                            // ram family
-                            &.ram-family {
-
-                                @include fill( $orange, 0.385 );
-
-                            }
-
-                            // outreach
-                            &.outreach {
-
-                                @include fill( $cvellow, 0.685 );
-
-                            }
-
-                            // research
-                            &.research {
-
-                                @include fill( $cvnavy, 0.415 );
-
-                            }
-
-                        }
-
-                    }
-
                 }
 
                 // content
                 .content {
 
-                    position: relative;
+                    flex-grow: 1;
 
-                    // @include flex-v-t-h-s( false );
-
-                    width: 100%;
-                    min-height: 8rem;
-                    margin: 0;
                     padding: 1rem 2rem 2rem 2rem;
 
                     // title
