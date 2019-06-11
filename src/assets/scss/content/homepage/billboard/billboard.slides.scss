@@ -61,16 +61,21 @@
 
 			position: relative;
 
-			height: 100vh;
+			z-index: 20;
 
-		}
+			width: $slide_view_w;
+			height: $slide_view_h;
 
-		.slick-track {
-			height: 100vh;
 		}
 
 		// slide class
 		.slick-slide {
+
+			position: relative;
+
+			z-index: 0;
+
+			height: $slide_view_h;
 
 			// active
 			&.slick-active {
@@ -105,8 +110,8 @@
 
 				@include flex-v-b-h-s( false );
 
-				// width: calc( 100vw + 2rem );
-				// height: calc( 100vh + 2rem );
+				width: calc( 100vw + 2rem );
+				height: calc( 100vh + 2rem );
 				margin: 0;
 				padding: 1rem;
 
