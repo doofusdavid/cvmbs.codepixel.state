@@ -156,18 +156,10 @@
                 <!-- text.main -->
                 <span class="text main">
 
-                    state your purpose
+                    support the college
 
                 </span>
                 <!-- END text.main -->
-
-                <!-- text.small -->
-                <span class="text small">
-
-                    the campaign for colorado state university
-
-                </span>
-                <!-- END text.small -->
 
             </a>
             <!-- END campaign button -->
