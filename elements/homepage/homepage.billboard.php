@@ -13,7 +13,7 @@
 ?>
 
 <!-- billboard.slides -->
-<section id="billboard-slides" class="ui-slides">
+<section id="billboard-slides" class="billboard-slides ui-slides">
 
     <?php
 

@@ -1,568 +1,561 @@
 // stylesheet :: billboard.slides
 
-    // settings
-    $slide_view_w : 100vw;
-    $slide_view_h : 100vh;
+	// settings
+	// $slide_view_w : 100vw;
+	// $slide_view_h : 100vh;
 
-    // slide URLs
-    $academics_slide : '../img/billboards/billboard.07.jpg';
+	// slide URLs
+	$academics_slide : '../img/billboards/billboard.07.jpg';
 
-    // color mods
-    $blue-mod :
+	// color mods
+	$blue-mod :
 
-        adjust-color(
+		adjust-color(
 
-            $blue,
-            $hue          : 0%,
-            $saturation : -2%,
-            $lightness  : -10%,
-            $alpha         : -0.000
+			$blue,
+			$hue          : 0%,
+			$saturation : -2%,
+			$lightness  : -10%,
+			$alpha         : -0.000
 
-        )
+		)
 
-    ;
+	;
 
-    // styles
-    #billboard-slides {
+	// styles
+	.billboard-slides {
 
-        @include fullscreen( absolute, 100, true, visible );
+		// @include fullscreen( absolute, 100, true, visible );
 
-        @include flex-h-s-v-c( false );
+		// @include flex-h-s-v-c( false );
 
-        width: auto;
-        height: $slide_view_h;
+		// width: auto;
+		// height: $slide_view_h;
 
-        opacity: 1.000;
+		opacity: 1.000;
 
-        transition: all 240ms linear 160ms;
+		transition: all 240ms linear 160ms;
 
-        // menu open class
-        &.site-menu-open {
+		// menu open class
+		&.site-menu-open {
 
-            // custom slide class
-            .ui-slide-article {
+			// custom slide class
+			.ui-slide-article {
 
-                // artwork
-                .slide-artwork {
+				// artwork
+				.slide-artwork {
 
-                    -webkit-filter: blur( 8px );
-                            filter: blur( 8px );
+					-webkit-filter: blur( 8px );
+								filter: blur( 8px );
 
-                    transition: filter 20ms linear 0ms;
+					transition: filter 20ms linear 0ms;
 
-                }
+				}
 
-            }
+			}
 
-        }
+		}
 
-        // slides list
-        .slick-list {
+		// slides list
+		// .slick-list {
 
-            position: relative;
+			// height: 100vh;
 
-            z-index: 20;
+		// }
 
-            width: $slide_view_w;
-            height: $slide_view_h;
+		.slick-track {
+			height: 100vh;
+		}
 
-        }
+		// slide class
+		// .slick-slide {
 
-        // slide class
-        .slick-slide {
+			// active
+			// &.slick-active {
 
-            position: relative;
+				// z-index: 1;
 
-            z-index: 0;
+			// }
 
-            height: $slide_view_h;
+		// }
 
-            // active
-            &.slick-active {
+		// slide
+		.ui-slide-article {
 
-                z-index: 1;
+			position: relative;
 
-            }
+			@include flex-v-c-h-c( false );
 
-        }
+			// width: $slide_view_w;
+			// height: $slide_view_h;
 
-        // slide
-        .ui-slide-article {
+			// container
+			.slide-container {
 
-            position: relative;
+				// position: absolute;
 
-            @include flex-v-c-h-c( false );
+				// top: -1rem;
+				// right: -1rem;
+				// bottom: -1rem;
+				// left: -1rem;
 
-            width: $slide_view_w;
-            height: $slide_view_h;
+				// z-index: 10;
 
-            // container
-            .slide-container {
+				@include flex-v-b-h-s( false );
 
-                position: absolute;
+				// width: calc( 100vw + 2rem );
+				// height: calc( 100vh + 2rem );
+				margin: 0;
+				padding: 1rem;
 
-                top: -1rem;
-                right: -1rem;
-                bottom: -1rem;
-                left: -1rem;
+			}
 
-                z-index: 10;
+			// artwork
+			.slide-artwork {
 
-                @include flex-v-b-h-s( false );
+				@include fullscreen( absolute, 0, false, visible );
 
-                width: calc( 100vw + 2rem );
-                height: calc( 100vh + 2rem );
-                margin: 0;
-                padding: 1rem;
+				-webkit-filter: blur( 0px );
+						filter: blur( 0px );
 
-            }
+				transition: filter 40ms linear 120ms;
 
-            // artwork
-            .slide-artwork {
+				// dark
+				.dark {
 
-                @include fullscreen( absolute, 0, false, visible );
+					z-index: 20;
 
-                -webkit-filter: blur( 0px );
-                        filter: blur( 0px );
+					@include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
 
-                transition: filter 40ms linear 120ms;
+				}
 
-                // dark
-                .dark {
+				// lite
+				.lite {
 
-                    z-index: 20;
+					z-index: 10;
 
-                    @include gradient( 52deg, $nite, 0.025, 0%, $dark, 1.000, 70% );
+				}
 
-                }
+				// artwork
+				.slide-billboard {
 
-                // lite
-                .lite {
+					position: absolute;
 
-                    z-index: 10;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
 
-                }
+					z-index: 1;
 
-                // artwork
-                .slide-billboard {
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					padding: 0;
 
-                    position: absolute;
+					background: {
 
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
+						repeat: no-repeat;
+						size: cover;
+						position: center center;
 
-                    z-index: 1;
+					}
 
-                    width: 100%;
-                    height: 100%;
-                    margin: 0;
-                    padding: 0;
+				}
 
-                    background: {
+				// gradients
+				.slide-color {
 
-                        repeat: no-repeat;
-                        size: cover;
-                        position: center center;
+					position: absolute;
 
-                    }
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
 
-                }
+					width: 100%;
+					height: 100%;
 
-                // gradients
-                .slide-color {
+				}
 
-                    position: absolute;
+			}
 
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
+			// slide content
+			.slide-content-container {
 
-                    width: 100%;
-                    height: 100%;
+				position: relative;
 
-                }
+				z-index: 100;
 
-            }
+				@include flex-v-b-h-s( false );
 
-            // slide content
-            .slide-content-container {
+				width: 100vw;
+				height: 100vh;
+				padding: 2.5rem 2.5rem 2.5rem 2.5rem;
 
-                position: relative;
+				@include fill( white, 1.000 );
 
-                z-index: 100;
+				// mobile
+				@include breakpoint ( small only ) {
 
-                @include flex-v-b-h-s( false );
+					width: 100%;
+					height: 100%;
+					padding: 0 2rem 2rem 2rem;
 
-                width: 100vw;
-                height: 100vh;
-                padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+				}
 
-                @include fill( white, 1.000 );
+			}
 
-                // mobile
-                @include breakpoint ( small only ) {
+			// slide content
+			.slide-content {
+				max-width: 100%;
 
-                    width: 100%;
-                    height: 100%;
-                    padding: 0 2rem 2rem 2rem;
+				@include gradient(
 
-                }
+					180deg,
+					$g135, 1.000, 0%,
+					red, 1.000, 100%
 
-            }
+				);
 
-            // slide content
-            .slide-content {
-                max-width: 100%;
+			}
 
-                @include gradient(
+			// common
+			.line,
+			.text,
+			.button-link {
 
-                    180deg,
-                    $g135, 1.000, 0%,
-                    red, 1.000, 100%
+				position: relative;
 
-                );
+				z-index: 20;
 
-            }
+			}
 
-            // common
-            .line,
-            .text,
-            .button-link {
+			// line.common
+			.line {
 
-                position: relative;
+				@include flex-h-s-v-c( false );
 
-                z-index: 20;
+				@include text( $up );
 
-            }
+			}
 
-            // line.common
-            .line {
+			// text.subheadline
+			.subheadline {
 
-                @include flex-h-s-v-c( false );
+				margin: 0 0 1.5rem 0;
+				padding: 0 0 0 0;
 
-                @include text( $up );
+				@include font( $klavislim, 1.75rem, 400 );
 
-            }
+				@include typo( 1rem, 0.245rem );
 
-            // text.subheadline
-            .subheadline {
+				@include color( $gold, 0.000 );
 
-                margin: 0 0 1.5rem 0;
-                padding: 0 0 0 0;
+				// mobile
+				@include breakpoint ( medium down ) {
 
-                @include font( $klavislim, 1.75rem, 400 );
+					margin: 0 0 1rem 0;
 
-                @include typo( 1rem, 0.245rem );
+				}
 
-                @include color( $gold, 0.000 );
+				// mobile
+				@include breakpoint ( small only ) {
 
-                // mobile
-                @include breakpoint ( medium down ) {
+					margin: 0 0 1rem 0;
 
-                    margin: 0 0 1rem 0;
+					@include font( $klavislim, 1rem, 400 );
 
-                }
+				}
 
-                // mobile
-                @include breakpoint ( small only ) {
+			}
 
-                    margin: 0 0 1rem 0;
+			// text.headline
+			.headline {
 
-                    @include font( $klavislim, 1rem, 400 );
+				position: relative;
 
-                }
+				@include flex-h-s-v-b( false );
 
-            }
+				margin: 0 0 0.75rem 0;
+				padding: 0 0 0 0;
 
-            // text.headline
-            .headline {
+				@include font( $klavislim, 4rem, 400 );
 
-                position: relative;
+				@include typo( 3rem, 0.065em );
 
-                @include flex-h-s-v-b( false );
+				@include color( white, 0.000 );
 
-                margin: 0 0 0.75rem 0;
-                padding: 0 0 0 0;
+				transition: all 480ms $oquin 120ms;
 
-                @include font( $klavislim, 4rem, 400 );
+				// mobile
+				@include breakpoint ( medium down ) {
 
-                @include typo( 3rem, 0.065em );
+					@include typo( 2rem, 0.065em );
 
-                @include color( white, 0.000 );
+				}
 
-                transition: all 480ms $oquin 120ms;
+				// mobile
+				@include breakpoint ( small only ) {
 
-                // mobile
-                @include breakpoint ( medium down ) {
+					@include font( $klavislim, 2rem, 400 );
 
-                    @include typo( 2rem, 0.065em );
+				}
 
-                }
+			}
 
-                // mobile
-                @include breakpoint ( small only ) {
+			// text.description
+			.description {
 
-                    @include font( $klavislim, 2rem, 400 );
+				margin: 0.75rem 0 0 0;
 
-                }
+				@include font( $industry, 0.75rem, 600 );
 
-            }
+				@include text( none );
 
-            // text.description
-            .description {
+				@include typo( 1.125rem, 0.035em );
 
-                margin: 0.75rem 0 0 0;
+				@include color( white, 0.125 );
 
-                @include font( $industry, 0.75rem, 600 );
+				// mobile
+				@include breakpoint ( small only ) {
 
-                @include text( none );
+					// line breaks
+					br {
 
-                @include typo( 1.125rem, 0.035em );
+						@include hide;
 
-                @include color( white, 0.125 );
+					}
 
-                // mobile
-                @include breakpoint ( small only ) {
+				}
 
-                    // line breaks
-                    br {
+			}
 
-                        @include hide;
+			// button
+			.button-link {
 
-                    }
+				position: relative;
 
-                }
+				@include flex-h-c-v-c( true );
 
-            }
+				height: 4rem;
+				margin: 1.5rem 0 0 0;
+				padding: 0.0625rem 1.5rem 0 1.5rem;
 
-            // button
-            .button-link {
+				@include font( $klavislim, 1rem, 400 );
 
-                position: relative;
+				@include text( $up );
 
-                @include flex-h-c-v-c( true );
+				@include typo( 0.6875rem, 0.045em );
 
-                height: 4rem;
-                margin: 1.5rem 0 0 0;
-                padding: 0.0625rem 1.5rem 0 1.5rem;
+				@include color( white, 0.000 );
 
-                @include font( $klavislim, 1rem, 400 );
+				@include fill( white, 0.965 );
 
-                @include text( $up );
+				@include shadowbox( 1rem, 3rem, black, 0.165 );
 
-                @include typo( 0.6875rem, 0.045em );
+				transition: all 220ms linear 0ms;
 
-                @include color( white, 0.000 );
+				text-decoration: none;
 
-                @include fill( white, 0.965 );
+				// hover state
+				&:hover,
+				&:focus,
+				&:active {
 
-                @include shadowbox( 1rem, 3rem, black, 0.165 );
+					@include fill( white, 0.865 );
 
-                transition: all 220ms linear 0ms;
+					// corners
+					.corners {
 
-                text-decoration: none;
+						// common
+						&.right,
+						&.left {
 
-                // hover state
-                &:hover,
-                &:focus,
-                &:active {
+							// lines
+							&:before,
+							&:after {
 
-                    @include fill( white, 0.865 );
+								transition: all 120ms $ocirc 0ms;
 
-                    // corners
-                    .corners {
+							}
 
-                        // common
-                        &.right,
-                        &.left {
+						}
 
-                            // lines
-                            &:before,
-                            &:after {
+						// left
+						&.left {
 
-                                transition: all 120ms $ocirc 0ms;
+							// top
+							&:before {
 
-                            }
+								width: 100%;
+								height: 100%;
 
-                        }
+								transition-delay: 0ms;
 
-                        // left
-                        &.left {
+							}
 
-                            // top
-                            &:before {
+							// bottom
+							&:after {
 
-                                width: 100%;
-                                height: 100%;
+								width: 100%;
+								height: 100%;
 
-                                transition-delay: 0ms;
+								transition-delay: 30ms;
 
-                            }
+							}
 
-                            // bottom
-                            &:after {
+						}
 
-                                width: 100%;
-                                height: 100%;
+						// right
+						&.right {
 
-                                transition-delay: 30ms;
+							// top
+							&:before {
 
-                            }
+								width: 100%;
+								height: 100%;
 
-                        }
+								transition-delay: 0ms;
 
-                        // right
-                        &.right {
+							}
 
-                            // top
-                            &:before {
+							// bottom
+							&:after {
 
-                                width: 100%;
-                                height: 100%;
+								width: 100%;
+								height: 100%;
 
-                                transition-delay: 0ms;
+								transition-delay: 30ms;
 
-                            }
+							}
 
-                            // bottom
-                            &:after {
+						}
 
-                                width: 100%;
-                                height: 100%;
+					}
 
-                                transition-delay: 30ms;
+				}
 
-                            }
+				// corners
+				.corners {
 
-                        }
+					position: absolute;
 
-                    }
+					top: 0;
+					bottom: 0;
 
-                }
+					z-index: 0;
 
-                // corners
-                .corners {
+					width: 50%;
+					height: 4rem;
 
-                    position: absolute;
+					// left
+					&.left {
 
-                    top: 0;
-                    bottom: 0;
+						left: 0;
 
-                    z-index: 0;
+						// common
+						&:before,
+						&:after {
 
-                    width: 50%;
-                    height: 4rem;
+							left: 0;
 
-                    // left
-                    &.left {
+							border-right: none;
 
-                        left: 0;
+						}
 
-                        // common
-                        &:before,
-                        &:after {
+						// top
+						&:before {
 
-                            left: 0;
+							top: 0;
 
-                            border-right: none;
+							width: 0.5rem;
 
-                        }
+							border-bottom: none;
 
-                        // top
-                        &:before {
+							transition-delay: 0ms;
 
-                            top: 0;
+						}
 
-                            width: 0.5rem;
+						// bottom
+						&:after {
 
-                            border-bottom: none;
+							bottom: 0;
 
-                            transition-delay: 0ms;
+							width: 0.5rem;
 
-                        }
+							border-top: none;
 
-                        // bottom
-                        &:after {
+							transition-delay: 30ms;
 
-                            bottom: 0;
+						}
 
-                            width: 0.5rem;
+					}
 
-                            border-top: none;
+					// right
+					&.right {
 
-                            transition-delay: 30ms;
+						right: 0;
 
-                        }
+						// common
+						&:before,
+						&:after {
 
-                    }
+							right: 0;
 
-                    // right
-                    &.right {
+							border-left: none;
 
-                        right: 0;
+						}
 
-                        // common
-                        &:before,
-                        &:after {
+						// top
+						&:before {
 
-                            right: 0;
+							top: 0;
 
-                            border-left: none;
+							width: 0.5rem;
 
-                        }
+							border-bottom: none;
 
-                        // top
-                        &:before {
+							transition-delay: 0ms;
 
-                            top: 0;
+						}
 
-                            width: 0.5rem;
+						// bottom
+						&:after {
 
-                            border-bottom: none;
+							bottom: 0;
 
-                            transition-delay: 0ms;
+							width: 0.5rem;
 
-                        }
+							border-top: none;
 
-                        // bottom
-                        &:after {
+							transition-delay: 30ms;
 
-                            bottom: 0;
+						}
 
-                            width: 0.5rem;
+					}
 
-                            border-top: none;
+					// lines
+					&:before,
+					&:after {
 
-                            transition-delay: 30ms;
+						content: '';
 
-                        }
+						position: absolute;
 
-                    }
+						width: 0.5rem;
+						height: 0.5rem;
 
-                    // lines
-                    &:before,
-                    &:after {
+						border: 1px solid $gold;
 
-                        content: '';
+						transition: all 240ms $ocirc 0ms;
 
-                        position: absolute;
+					}
 
-                        width: 0.5rem;
-                        height: 0.5rem;
+				}
 
-                        border: 1px solid $gold;
+			}
 
-                        transition: all 240ms $ocirc 0ms;
+		}
 
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
+	}
