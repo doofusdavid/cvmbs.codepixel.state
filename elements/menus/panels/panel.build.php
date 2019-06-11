@@ -1,14 +1,6 @@
 <!-- panel.search -->
 <section id="menu-panel-build" class="inactive ui-panel menu-panel">
 
-    <!-- panel.header -->
-    <header id="menu-panel-search-header" class="panel-header">
-
-        example panel
-
-    </header>
-    <!-- END panel.header -->
-
     <!-- panel interior -->
     <div class="panel-interior">
 

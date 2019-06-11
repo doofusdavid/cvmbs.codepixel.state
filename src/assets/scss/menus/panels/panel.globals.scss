@@ -21,11 +21,12 @@
         // @include flex-v-c-h-c( false );
 
         width: 100%;
-        height: calc( 100vh - 5rem );
+        // height: calc( 100% - 5rem );
+        height: 100%;
         margin: 0;
         padding: 5rem 0 0 0;
 
-        // overflow: scroll;
+        overflow: hidden;
 
         @include font( $industry, 0.5625rem, 700 );
 
@@ -70,9 +71,11 @@
 
         .panel-text {
 
+            // margin: 1rem 2rem 1rem 2rem;
+
             @include font( $industry, 0.875rem, 600 );
 
-            @include typo( 1rem, 0.035em );
+            @include typo( 1.55rem, 0.035em );
 
         }
 
@@ -117,23 +120,24 @@
 
     #menu-panel-build {
 
-        padding: 5rem 0 0 0;
+        padding: 0 0 0 0;
 
-        overflow: hidden;
+        overflow: scroll;
 
         .panel-interior {
 
             position: absolute;
 
-            top: 5rem;
+            top: 0;
             right: 0;
             bottom: 0;
             left: 0;
 
+            height: 100%;
             padding: 2rem 2rem 2rem 2rem;
 
-            overflow: scroll;
-
+            overflow: scroll !important;
+            -webkit-overflow-scrolling: touch;
 
         }
 

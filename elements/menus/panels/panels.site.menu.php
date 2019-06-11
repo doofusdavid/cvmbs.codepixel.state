@@ -11,107 +11,101 @@
 
 ?>
 
-<!-- menu.panels -->
-<menu id="site-menu-panels" class="ui-panels">
+<!-- panel.main -->
+<section id="menu-panel-main" class="active ui-panel menu-panel">
 
-    <!-- panel.main -->
-    <section id="menu-panel-main" class="active ui-panel menu-panel">
+    <!-- panel.header -->
+    <header id="menu-panel-main-header" class="panel-header">
 
-        <!-- panel.header -->
-        <header id="menu-panel-main-header" class="panel-header">
+        navigation menu
 
-            navigation menu
+    </header>
+    <!-- END panel.header -->
 
-        </header>
-        <!-- END panel.header -->
-
-        <!-- menu -->
-        <nav id="menu-panel-main-menu" class="panel-content menu">
-
-            <?php
-
-                if ( $site_type == 'college' ) {
-
-                    get_template_part( 'elements/menus/panels/panel.global.menu' );
-
-                } else {
-
-                    cvmbs_site_menu();
-
-                }
-
-            ?>
-
-        </nav>
-        <!-- END menu -->
+    <!-- menu -->
+    <nav id="menu-panel-main-menu" class="panel-content menu">
 
         <?php
 
             if ( $site_type == 'college' ) {
 
-                //
+                get_template_part( 'elements/menus/panels/panel.global.menu' );
 
-            } elseif ( $site_type == 'department' || $site_type == 'special' ) {
+            } else {
 
-                echo '
-                <!-- global.menu -->
-                <li id="global-menu-link">
-
-                    <!-- link -->
-                    <button class="site-menu-button" data-target="global">
-
-                        College Menu
-
-                    </button>
-                    <!-- END link -->
-
-                </li>
-                <!-- END global.menu -->';
+                cvmbs_site_menu();
 
             }
 
         ?>
 
-    </section>
-    <!-- END panel.main -->
+    </nav>
+    <!-- END menu -->
 
-    <!-- panel.global -->
-    <section id="menu-panel-global" class="inactive ui-panel menu-panel">
+    <?php
 
-        <!-- panel.header -->
-        <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">
+        if ( $site_type == 'college' ) {
 
-            college menu
+            //
 
-            <button id="close-global-menu">
+        } elseif ( $site_type == 'department' || $site_type == 'special' ) {
 
-                <span class="label">
+            echo '
+            <!-- global.menu -->
+            <li id="global-menu-link">
 
-                    back
+                <!-- link -->
+                <button class="site-menu-button" data-target="global">
 
-                </span>
+                    College Menu
 
-            </button>
+                </button>
+                <!-- END link -->
 
-        </header>
-        <!-- END panel.header -->
+            </li>
+            <!-- END global.menu -->';
 
-        <!-- menu -->
-        <nav id="menu-panel-global-menu" class="panel-content menu">
+        }
 
-            <?php get_template_part( 'elements/menus/panels/panel.global.menu' ); ?>
+    ?>
 
-        </nav>
-        <!-- END menu -->
+</section>
+<!-- END panel.main -->
 
-    </section>
-    <!-- END panel.global -->
+<!-- panel.global -->
+<section id="menu-panel-global" class="inactive ui-panel menu-panel">
 
-    <?php get_template_part( 'elements/menus/panels/panel.search' ); ?>
+    <!-- panel.header -->
+    <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">
 
-    <?php get_template_part( 'elements/menus/panels/panel.events' ); ?>
+        college menu
 
-    <?php get_template_part( 'elements/menus/panels/panel.build' ); ?>
+        <button id="close-global-menu">
 
-</menu>
-<!-- END menu.panels -->
+            <span class="label">
+
+                back
+
+            </span>
+
+        </button>
+
+    </header>
+    <!-- END panel.header -->
+
+    <!-- menu -->
+    <nav id="menu-panel-global-menu" class="panel-content menu">
+
+        <?php get_template_part( 'elements/menus/panels/panel.global.menu' ); ?>
+
+    </nav>
+    <!-- END menu -->
+
+</section>
+<!-- END panel.global -->
+
+<?php get_template_part( 'elements/menus/panels/panel.search' ); ?>
+
+<?php get_template_part( 'elements/menus/panels/panel.events' ); ?>
+
+<?php get_template_part( 'elements/menus/panels/panel.build' ); ?>
