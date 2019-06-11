@@ -1,7 +1,7 @@
 <div class="program-facts program-block">
 	<div class="program-facts__inner">
 		<h2 class="program-facts__title program-block__title">
-			<?php _e( 'Program Facts', 'cvmbsPress'); ?>
+			<?php _e( 'Program Highlights', 'cvmbsPress'); ?>
 		</h2>
 
 		<div class="program-facts__content">
