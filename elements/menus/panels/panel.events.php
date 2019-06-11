@@ -6,6 +6,16 @@
 
         college event calendar
 
+        <a id="view-calendar-link" href="https://calendar.colostate.edu/cvmbs/" title="view full event calendar" >
+
+            <span class="label">
+
+                view all
+
+            </span>
+
+        </a>
+
     </header>
     <!-- END panel.header -->
 
@@ -59,7 +69,7 @@
 				$limit = 16;
 				$i = 1;
 
-				echo '<ul class="accordion events-list scroll-fix" data-accordion data-multi-expand="true" data-allow-all-closed="true">';
+				echo '<ul class="events-list scroll-fix">';
 
 				foreach( $x->channel->item as $entry ) {
 
@@ -68,50 +78,39 @@
 					$rawLocal 	  = $entry->children('xCal', true)->location;
 					$start 		  = $entry->children('xCal', true)->dtstart;
 					$link 		  = $entry->link;
-					$description  = str_replace('&nbsp;', '', $entry->children('xCal', true)->description);
+					$rawDesc      = str_replace('&nbsp;', '', $entry->children('xCal', true)->description);
 
 					$location 	  = strtok($rawLocal, '[0-9][1-9]');
 					$monthID  	  = date('m', strtotime($start));
 					$month 	  	  = date('F', strtotime($start));
 					$day 	  	  = date('j', strtotime($start));
 
-					echo '<li class="event accordion-navigation accordion-item" data-accordion-item>
+                    if ( $rawDesc ) {
 
-						<a class="accordion-title event-toggle" href="#event-' . $i . '">
+                        $description  = '<p class="entry-description" tabindex="0">' . $rawDesc . '</p>';
 
-							<div class="calendar-entry">
+                    } else {
 
-								<div class="calendar-icon">
+                        $description  = '';
 
-									<span class="calendar-month month-' . $monthID . '">' . $month . '</span>
-									<span class="calendar-day">' . $day . '</span>
+                    }
 
-								</div>
-								<div class="entry-info">
+					echo '<li class="event">
 
-									<span class="event-title">' . $title . '</span>
-									<span class="event-date">' . $date . '</span>
+                        <div class="calendar-icon">
 
-								</div>
+                            <span class="calendar-month month-' . $monthID . '">' . $month . '</span>
+                            <span class="calendar-day">' . $day . '</span>
 
-							</div>
+                        </div>
+                        <div class="entry-info">
 
-						</a>
+                            <a class="entry-link" href="' . $link . '">' . $title . '</a>
+                            <p class="entry-date">' . $date . '</p>
 
-						<div id="event-' . $i . '" class="accordion-content content" data-tab-content>
+                            ' . $description . '
 
-							<span class="entry-description" tabindex="0">' . $description . '</span>
-
-							<div class="calendar-footer">
-
-								<span class="event-location" tabindex="0" title="Event Location">' . $location . '</span>
-								<span class="event-link">
-									<a href="' . $link . '" target="_blank" title="more event information">more info</a>
-								</span>
-
-							</div>
-
-						</div>
+                        </div>
 
 					</li>';
 
