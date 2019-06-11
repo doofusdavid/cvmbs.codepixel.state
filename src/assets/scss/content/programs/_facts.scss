@@ -39,10 +39,10 @@
 		color: $blue;
 
 		@include bpoint(desktop) {
-			max-width: 40%;
 			margin: 0;
 			border-right: 1px solid transparentize(white, 0.465);
 			padding-right: 4vw;
+			white-space: nowrap;
 		}
 	}
 
