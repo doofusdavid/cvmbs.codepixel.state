@@ -14,7 +14,7 @@
 ?>
 
 <!-- special.billboard -->
-<section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $background; ?>);">
+<section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $billboard; ?>);">
 
     <!-- overlay -->
     <div class="billboard-overlay">
