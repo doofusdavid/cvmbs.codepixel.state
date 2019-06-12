@@ -8,7 +8,7 @@
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary special" data-off-canvas-content>
+<main id="site-layout" class="off-canvas-content special" data-off-canvas-content>
 
     <?php get_template_part( 'elements/homepage/dvm/panels/panel.billboard' ); ?>
 
