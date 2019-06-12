@@ -53,6 +53,18 @@
         // top
         &__top {
 
+            padding: 2rem;
+
+            @include bpoint(tablet) {
+
+                padding: 4rem 5rem;
+
+            }
+
+        }
+
+        .footer__columns {
+
             display: -ms-grid;
             display: grid;
             grid-gap: 2rem;
@@ -60,16 +72,16 @@
             grid-template-rows: repeat(4, auto);
             -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
-
-            padding: 2rem;
+            width: 100%;
+            max-width: 25em;
+            margin: 0 auto;
 
             @include bpoint(tablet) {
                 -ms-grid-rows: auto 2rem auto;
                 grid-template-rows: repeat(2, auto);
                 -ms-grid-columns: 1fr 2rem 1fr;
                 grid-template-columns: repeat(2, 1fr);
-
-                padding: 4rem 5rem;
+                max-width: none;
             }
 
             @include bpoint(desktop) {
@@ -79,68 +91,206 @@
                 grid-template-columns: repeat(4, 1fr);
             }
 
-            // columns
-            .footer-column {
+        }
 
-                // content
-                &.content {
+        .footer__column {
 
-                    @include flex-v-t-h-s( false );
+            &--quick-links {
+                -ms-grid-row: 1;
+                grid-row: 1;
+                -ms-grid-column: 1;
+                grid-column: 1;
+            }
 
-                    // header
-                    .links-header {
+            &--resources {
+                -ms-grid-row: 3;
+                grid-row: 2;
+                -ms-grid-column: 1;
+                grid-column: 1;
 
-                        @include flex-h-s-v-c( false );
+                @include bpoint(tablet) {
+                    -ms-grid-row: 1;
+                    grid-row: 1;
+                    -ms-grid-column: 3;
+                    grid-column: 2;
+                }
+            }
 
-                        padding: 0 0 0 0;
+            &--departments {
+                -ms-grid-row: 5;
+                grid-row: 3;
+                -ms-grid-column: 1;
+                grid-column: 1;
+
+                @include bpoint(tablet) {
+                    -ms-grid-row: 3;
+                    grid-row: 2;
+                    -ms-grid-column: 1;
+                    grid-column: 1;
+                }
+
+                @include bpoint(desktop) {
+                    -ms-grid-row: 1;
+                    grid-row: 1;
+                    -ms-grid-column: 5;
+                    grid-column: 3;
+                }
+            }
+
+            &--contact {
+                -ms-grid-row: 7;
+                grid-row: 4;
+                -ms-grid-column: 1;
+                grid-column: 1;
+
+                @include bpoint(tablet) {
+                    -ms-grid-row: 3;
+                    grid-row: 2;
+                    -ms-grid-column: 3;
+                    grid-column: 2;
+                }
+
+                @include bpoint(desktop) {
+                    -ms-grid-row: 1;
+                    grid-row: 1;
+                    -ms-grid-column: 7;
+                    grid-column: 4;
+                }
+            }
+
+            // content
+            &.content {
+
+                @include flex-v-t-h-s( false );
+
+                // header
+                .links-header {
+
+                    @include flex-h-s-v-c( false );
+
+                    padding: 0 0 0 0;
+
+                }
+
+            }
+
+            // column headers
+            .links-header {
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include typo( 1.2, 0.135em );
+
+                @include text( $up );
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // menu item
+            .menu-item {
+
+                // link
+                a {
+
+                    display: block;
+                    padding: 0.625rem 0;
+
+                    @include font( $industry, 0.625rem, 600 );
+
+                    @include typo( 1.2, 0.075em );
+
+                    @include text( $up );
+
+                    text-decoration: none;
+
+                    @include color( white, 0.385 );
+
+                    transition: all 220ms linear 0ms;
+
+                    &:visited {
+
+                        @include color( white, 0.385 );
+
+                    }
+
+                    // hover state
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        color: $gold;
 
                     }
 
                 }
 
-                // column headers
-                .links-header {
+                // line break (?)
+                .break {
 
-                    @include font( $klavislim, 1rem, 400 );
-
-                    @include typo( 1.2, 0.135em );
-
-                    @include text( $up );
-
-                    @include color( $gold, 0.000 );
+                    @include hide;
 
                 }
 
-                // menu item
-                .menu-item {
+            }
 
-                    // link
+            // contact info
+            .contact-info {
+
+                @include flex-v-t-h-s( false );
+
+                flex-grow: 1;
+
+                width: 100%;
+                margin: 0 0 1rem 0;
+
+                & > * {
+                    max-width: 100%;
+                }
+
+                // labels
+                .contact-label {
+
+                    @include flex-h-s-v-c( false );
+
+                    height: 1rem;
+                    margin: 0 0 0.25rem 0;
+
+                    @include font( $industry, 0.5625rem, 700 );
+
+                    @include typo( 0.625rem, 0.115em );
+
+                    @include text( $up );
+
+                    @include color( white, 0.185 );
+
+                }
+
+                // text
+                .contact-text {
+
+                    @include flex-h-s-v-c( false );
+
+                    margin: 0 0 0.75rem 0;
+
+                    @include font( $industry, 0.6875rem, 600 );
+
+                    text-decoration: none;
+
+                    @include typo( 0.875rem, 0.065em );
+
+                    @include color( white, 0.485 );
+
                     a {
 
-                        @include flex-h-s-v-c( false );
-
-                        height: auto;
-                        min-height: 2rem;
-                        margin: 0;
-                        padding: 0.25rem 0 0.25rem 0;
-
-                        @include font( $industry, 0.625rem, 600 );
-
-                        @include typo( 0.75rem, 0.075em );
-
-                        @include text( $up );
-
-                        text-decoration: none;
-
-                        @include color( white, 0.385 );
-
-                        transition: all 220ms linear 0ms;
+                        color: inherit;
 
                         &:visited {
-                            @include color( white, 0.385 );
+
+                            color: inherit;
+
                         }
 
-                        // hover state
                         &:hover,
                         &:focus,
                         &:active {
@@ -148,74 +298,6 @@
                             color: $gold;
 
                         }
-
-                    }
-
-                    // line break (?)
-                    .break {
-
-                        @include hide;
-
-                    }
-
-                }
-
-            }
-
-            // left
-            #footer-left {
-
-                @include flex-v-t-h-s( true );
-
-            }
-
-            // drawer
-            #footer-drawer {
-
-                order: 4;
-
-                // contact info
-                #contact-info {
-
-                    @include flex-v-t-h-s( false );
-
-                    flex-grow: 1;
-
-                    width: 100%;
-                    margin: 0 0 1rem 0;
-
-                    // labels
-                    .contact-label {
-
-                        @include flex-h-s-v-c( false );
-
-                        height: 1rem;
-                        margin: 0 0 0.25rem 0;
-
-                        @include font( $industry, 0.5625rem, 700 );
-
-                        @include typo( 0.625rem, 0.115em );
-
-                        @include text( $up );
-
-                        @include color( white, 0.185 );
-
-                    }
-
-                    // text
-                    .contact-text {
-
-                        @include flex-h-s-v-c( false );
-
-                        margin: 0 0 0.75rem 0;
-
-                        @include font( $industry, 0.6875rem, 600 );
-
-                        @include typo( 0.875rem, 0.065em );
-
-                        // @include text( $up );
-
-                        @include color( white, 0.485 );
 
                     }
 

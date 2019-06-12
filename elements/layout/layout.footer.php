@@ -37,131 +37,135 @@
     <!-- links.row -->
     <div id="footer-top" class="footer-row site-footer__top">
 
-        <!-- links.column -->
-        <section id="footer-left" class="footer-column column--quick-links links">
+        <div class="footer__columns">
 
-            <h2 class="links-header">
+            <!-- links.column -->
+            <section id="footer-left" class="footer__column footer__column--quick-links links">
 
-                <?php echo $left_menu_name; ?>
+                <h2 class="links-header">
 
-            </h2>
+                    <?php echo $left_menu_name; ?>
 
-            <?php footer_left_menu(); ?>
+                </h2>
 
-        </section>
-        <!-- END links.column -->
+                <?php footer_left_menu(); ?>
 
-        <!-- links.column -->
-        <section id="footer-center" class="footer-column column--resources links">
+            </section>
+            <!-- END links.column -->
 
-            <?php switch_to_blog( 1 ); ?>
+            <!-- links.column -->
+            <section id="footer-center" class="footer__column footer__column--resources links">
+
+                <?php switch_to_blog( 1 ); ?>
+
+                <?php
+
+                    $locations   = get_nav_menu_locations();
+                    $left_menu   = get_term( $locations[ 'footer-menu-left' ], 'nav_menu' );
+                    $center_menu = get_term( $locations[ 'footer-menu-center' ], 'nav_menu' );
+                    $right_menu  = get_term( $locations[ 'footer-menu-right' ], 'nav_menu' );
+
+                    $left_menu_name   = $left_menu->name;
+                    $center_menu_name = $center_menu->name;
+                    $right_menu_name  = $right_menu->name;
+
+                ?>
+
+                <h2 class="links-header">
+
+                    <?php echo $center_menu_name; ?>
+
+                </h2>
+
+                <?php footer_center_menu(); ?>
+
+            </section>
+            <!-- END links.column -->
+
+            <!-- links.column -->
+            <section id="footer-right" class="footer__column footer__column--departments links">
+
+                <h2 class="links-header">
+
+                    <?php echo $right_menu_name; ?>
+
+                </h2>
+
+                <?php footer_right_menu(); ?>
+
+            </section>
+            <!-- END links.column -->
 
             <?php
 
-                $locations   = get_nav_menu_locations();
-                $left_menu   = get_term( $locations[ 'footer-menu-left' ], 'nav_menu' );
-                $center_menu = get_term( $locations[ 'footer-menu-center' ], 'nav_menu' );
-                $right_menu  = get_term( $locations[ 'footer-menu-right' ], 'nav_menu' );
-
-                $left_menu_name   = $left_menu->name;
-                $center_menu_name = $center_menu->name;
-                $right_menu_name  = $right_menu->name;
+                $giving_link = get_field( 'giving_button_link', 'options' );
+                $footer_contact_info = get_field( 'footer_contact_info', 'options' );
 
             ?>
 
-            <h2 class="links-header">
+            <!-- links.column -->
+            <section id="footer-drawer" class="footer__column footer__column--contact content">
 
-                <?php echo $center_menu_name; ?>
+                <h2 class="links-header">
 
-            </h2>
+                    get in touch
 
-            <?php footer_center_menu(); ?>
+                </h2>
 
-        </section>
-        <!-- END links.column -->
+                <div id="contact-info" class="contact-info">
 
-        <!-- links.column -->
-        <section id="footer-right" class="footer-column column--departments links">
+                    <span class="contact-label">
 
-            <h2 class="links-header">
+                        mailing address
 
-                <?php echo $right_menu_name; ?>
+                    </span>
 
-            </h2>
+                    <span class="contact-text">
 
-            <?php footer_right_menu(); ?>
+                        <?php echo $footer_contact_info[ 'mailing_address' ]; ?>
 
-        </section>
-        <!-- END links.column -->
+                    </span>
 
-        <?php
+                    <span class="contact-label">
 
-            $giving_link = get_field( 'giving_button_link', 'options' );
-            $footer_contact_info = get_field( 'footer_contact_info', 'options' );
+                        phone
 
-        ?>
+                    </span>
 
-        <!-- links.column -->
-        <section id="footer-drawer" class="footer-column column--contact content">
+                    <span class="contact-text">
 
-            <h2 class="links-header">
+                        <?php echo $footer_contact_info[ 'phone' ]; ?>
 
-                get in touch
+                    </span>
 
-            </h2>
+                    <span class="contact-label">
 
-            <div id="contact-info">
+                        connect on social media
 
-                <span class="contact-label">
+                    </span>
 
-                    mailing address
+                    <div class="social-media-links">
 
-                </span>
+                        <?php get_template_part( 'elements/buttons/buttons.social.media' ); ?>
 
-                <span class="contact-text">
-
-                    <?php echo $footer_contact_info[ 'mailing_address' ]; ?>
-
-                </span>
-
-                <span class="contact-label">
-
-                    phone
-
-                </span>
-
-                <span class="contact-text">
-
-                    <?php echo $footer_contact_info[ 'phone' ]; ?>
-
-                </span>
-
-                <span class="contact-label">
-
-                    connect on social media
-
-                </span>
-
-                <div class="social-media-links">
-
-                    <?php get_template_part( 'elements/buttons/buttons.social.media' ); ?>
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- campaign button -->
+                <a id="campaign-button" class="campaign-button" href="https://advancing.colostate.edu/CVMBS">
 
-            <!-- campaign button -->
-            <a id="campaign-button" class="campaign-button" href="https://advancing.colostate.edu/CVMBS">
+                    <span class="text">Support the College</span>
 
-                <span class="text">Support the College</span>
+                </a>
+                <!-- END campaign button -->
 
-            </a>
-            <!-- END campaign button -->
+                <?php switch_to_blog( $currentsite ); ?>
 
-            <?php switch_to_blog( $currentsite ); ?>
+            </section>
+            <!-- END links.column -->
 
-        </section>
-        <!-- END links.column -->
+        </div><!-- .footer__columns -->
 
     </div>
     <!-- END links.row -->

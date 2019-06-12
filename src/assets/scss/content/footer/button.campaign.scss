@@ -1,8 +1,5 @@
 // stylesheet :: campaign button
 
-    // settings
-    $campaign_button : 4rem;
-
     // styles
     #campaign-button {
 
@@ -10,24 +7,23 @@
 
         display: inline-block;
 
-        padding: 2em 1.375em;
+        padding: 1.375em 1.375em;
 
         @include fill( white, 0.965 );
 
-        // border: none;
         border: .0125em solid transparent;
 
-        @include color( white, 0.000 );
+        @include color( white, 0.465 );
 
-        @include font( $industry, 0.6875rem, 600 );
+        @include font( $vitesse, 1rem, 700 );
 
         text-align: center;
 
         text-decoration: none;
 
-        @include text( $up );
+        text-transform: uppercase;
 
-        @include typo( 0.75rem, 0.085em );
+        @include typo( 1.2, 0.025em );
 
         cursor: pointer;
 
@@ -39,33 +35,7 @@
 
             border-color: $campaign;
 
-            @include color( white, 0.000 );
-
-            .text {
-
-                color: $campaign;
-
-            }
-
-        }
-
-        .text {
-
-            transition: all 220ms linear 0ms;
-
-            font: {
-
-                family: $vitesse;
-                size: 1rem;
-                weight: 700;
-
-            }
-
-            line-height: 1;
-
-            letter-spacing: 0.025em;
-
-            color: transparentize( white, 0.465 );
+            color: $campaign;
 
         }
 
