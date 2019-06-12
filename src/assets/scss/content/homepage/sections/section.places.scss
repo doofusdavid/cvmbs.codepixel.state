@@ -217,7 +217,9 @@
             transition: all 240ms $outex 0ms;
 
             @include bpoint(desktop) {
+
                 width: calc(50% - 2rem);
+
             }
 
             // hover state
@@ -233,14 +235,12 @@
                     -webkit-filter:
 
                         opacity( 0.565 )
-                        // blur( 0px )
 
                     ;
 
                     filter:
 
                         opacity( 0.865 )
-                        // blur( 0px )
 
                     ;
 
@@ -449,6 +449,8 @@
                     transform: translate3d( 0, 0, 0 );
 
                     transition: all 360ms $ocirc 0ms;
+
+                    max-width: 100%;
 
                 }
 
