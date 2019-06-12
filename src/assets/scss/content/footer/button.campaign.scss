@@ -6,20 +6,28 @@
     // styles
     #campaign-button {
 
-        position: relative;
+        transition: all 480ms $outex 0ms;
 
-        @include flex-v-c-h-c( false );
+        display: inline-block;
 
-        width: 17rem;
-        height: 4rem;
-        margin: 0;
-        padding: 0 0.5rem 0 0.5rem;
+        padding: 2em 1.375em;
 
-        border: none;
+        @include fill( white, 0.965 );
+
+        // border: none;
+        border: .0125em solid transparent;
+
+        @include color( white, 0.000 );
+
+        @include font( $industry, 0.6875rem, 600 );
+
+        text-align: center;
 
         text-decoration: none;
 
-        color: white;
+        @include text( $up );
+
+        @include typo( 0.75rem, 0.085em );
 
         cursor: pointer;
 
@@ -29,107 +37,35 @@
 
             outline: none;
 
-            &:before {
+            border-color: $campaign;
 
-                opacity: 1.000;
-
-            }
+            @include color( white, 0.000 );
 
             .text {
 
-                &.main {
-
-                    color: $campaign;
-
-                }
-
-                &.small {
-
-                    color: white;
-
-                }
+                color: $campaign;
 
             }
-
-        }
-
-        &:before,
-        &:after {
-
-            content: '';
-
-            position: absolute;
-
-        }
-
-        &:before {
-
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            z-index: 1;
-
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-
-            border: 1px solid $campaign;
-
-            opacity: 0.000;
-
-            transition: all 220ms linear 0ms;
 
         }
 
         .text {
 
-            @include flex-h-c-v-c( true );
-
             transition: all 220ms linear 0ms;
 
-            &.main {
+            font: {
 
-                padding: 0.125rem 0 0 0;
-
-                font: {
-
-                    family: $vitesse;
-                    size: 1.125rem;
-                    weight: 500;
-
-                }
-
-                line-height: 1rem;
-
-                letter-spacing: 0.025em;
-
-                color: transparentize( white, 0.465 );
+                family: $vitesse;
+                size: 1rem;
+                weight: 700;
 
             }
 
-            &.small {
+            line-height: 1;
 
-                align-items: flex-start;
+            letter-spacing: 0.025em;
 
-                height: 1.5rem;
-
-                font: {
-
-                    size: 0.46875rem;
-                    weight: 700;
-
-                }
-
-                line-height: 1rem;
-
-                letter-spacing: 0.045em;
-
-                color: transparentize( white, 0.645 );
-
-            }
+            color: transparentize( white, 0.465 );
 
         }
 

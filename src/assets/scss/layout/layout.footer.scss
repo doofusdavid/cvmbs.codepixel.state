@@ -53,30 +53,34 @@
         // top
         &__top {
 
-            @include flex-v-t-h-st( false );
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 2rem;
+            -ms-grid-rows: auto 2rem auto 2rem auto 2rem auto;
+            grid-template-rows: repeat(4, auto);
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+
             padding: 2rem;
 
-            @include bpoint(40em) {
-                @include flex-h-j-v-s( false );
-                padding: 5rem 5rem 2rem;
+            @include bpoint(tablet) {
+                -ms-grid-rows: auto 2rem auto;
+                grid-template-rows: repeat(2, auto);
+                -ms-grid-columns: 1fr 2rem 1fr;
+                grid-template-columns: repeat(2, 1fr);
+
+                padding: 4rem 5rem;
+            }
+
+            @include bpoint(desktop) {
+                -ms-grid-rows: auto;
+                grid-template-rows: auto;
+                -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
+                grid-template-columns: repeat(4, 1fr);
             }
 
             // columns
             .footer-column {
-
-                width: 25%;
-                height: 100%;
-                min-height: 14rem;
-                margin: 0;
-
-                // mobile
-                @include breakpoint ( small only ) {
-
-                    width: 100%;
-                    min-height: 0;
-                    margin: 0 0 2rem 0;
-
-                }
 
                 // content
                 &.content {
@@ -94,24 +98,12 @@
 
                 }
 
-                // links
-                &.links {
-
-                    padding: 0 0 0 0;
-
-                }
-
                 // column headers
                 .links-header {
 
-                    @include flex-h-s-v-c( false );
-
-                    height: 2rem;
-                    padding: 0;
-
                     @include font( $klavislim, 1rem, 400 );
 
-                    @include typo( 2rem, 0.135em );
+                    @include typo( 1.2, 0.135em );
 
                     @include text( $up );
 
@@ -236,60 +228,57 @@
         // bottom row
         &__bottom {
 
-            @include flex-h-j-v-c( false );
-
-            height: 5rem;
-            margin: 0;
-            padding: 0 5rem 0 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
             @include fill( $nite, 0.445 );
 
-            // mobile
-            @include breakpoint ( small only ) {
+            padding: 1.5rem 2rem;
 
-                @include flex-v-t-h-st( false );
-
-                height: auto;
-                padding: 1rem 1rem 1rem 1rem;
-
+            @include bpoint(tablet) {
+                padding: 1.5rem 5rem;
             }
 
             // links
-            #footer-links {
+            .footer-links {
 
-                // mobile
-                @include breakpoint ( small only ) {
-
-                    width: 100%;
-
-                }
+                margin: .5rem 1rem .5rem 0;
 
             }
 
             // links
             .link-list {
 
-                @include flex-h-s-v-c( false );
+                display: flex;
+                flex-wrap: wrap;
 
-                order: -1;
+                &-item {
 
-                height: 1rem;
-                margin: 0;
+                    margin-bottom: 0.375rem;
+
+                    padding-right: 0.5rem;
+
+                    @include font( $industry, 0.5625rem, 600 );
+
+                    @include bpoint(tablet) {
+
+                        margin-bottom: .25rem;
+
+                        padding-right: 0.75rem;
+
+                        font-size: .625rem;
+
+                    }
+
+                }
 
                 // link
                 .link {
 
-                    height: 0.625rem;
-                    margin: 0 0 0.375rem 0;
-                    padding: 0 0.75rem 0 0.75rem;
-
-                    border-right: 1px solid transparentize( white, 0.615 );
-
-                    @include font( $industry, 0.625rem, 600 );
-
                     text-decoration: none;
 
-                    @include typo( 0.625rem, 0.065em );
+                    @include typo( 1, 0.065em );
 
                     @include color( white, 0.245 );
 
@@ -312,29 +301,6 @@
 
                     }
 
-                    // mobile
-                    @include breakpoint ( small only ) {
-
-                        padding: 0 0.5rem 0 0.5rem;
-
-                        @include font( $industry, 0.5625rem, 600 );
-
-                    }
-
-                    // first child
-                    &:first-child {
-
-                        padding-left: 0;
-
-                    }
-
-                    // last child
-                    &:last-child {
-
-                        border-right: none;
-
-                    }
-
                 }
 
             }
@@ -342,32 +308,23 @@
             // copyright text
             .copyright {
 
-                @include flex-h-s-v-b( false );
+                margin: 0;
 
-                order: 1;
+                @include font( $industry, 0.5625rem, 600 );
 
-                height: 1rem;
-
-                @include font( $industry, 0.625rem, 600 );
-
-                @include typo( 0.875rem, 0.065em );
+                @include typo( 1, 0.065em );
 
                 @include color( white, 0.245 );
 
-                // mobile
-                @include breakpoint ( small only ) {
+                @include bpoint(tablet) {
 
-                    display: block;
-
-                    @include font( $industry, 0.5625rem, 600 );
+                    font-size: 0.625rem;
 
                 }
 
-                em {
+                .symbol {
 
-                    @include flex-h-c-v-c( true );
-
-                    margin: 0 0.125rem 0 0.125rem;
+                    margin-right: .25rem;
 
                     font: {
 
@@ -382,23 +339,15 @@
             }
 
             // required logo
-            #brand-legacy {
+            .brand-legacy {
 
                 position: relative;
 
                 width: 16rem;
                 height: 2rem;
-                margin: 0;
-                padding: 0;
+                margin: .5rem 0 .5rem auto;
 
                 color: white;
-
-                // mobile
-                @include breakpoint ( small only ) {
-
-                    @include hide;
-
-                }
 
                 // hover
                 &:hover {
@@ -424,35 +373,6 @@
                         fill-opacity: 0.825;
 
                         transition: $all220;
-
-                    }
-
-                }
-
-                // label
-                .link-label {
-
-                    position: absolute;
-
-                    visibility: hidden;
-
-                }
-
-            }
-
-            // details tag
-            details {
-
-                @include flex-v-t-h-s( false );
-
-                // summary label
-                summary {
-
-                    order: 1;
-
-                    &:-webkit-details-marker {
-
-                        background: url();
 
                     }
 

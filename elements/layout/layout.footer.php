@@ -38,21 +38,21 @@
     <div id="footer-top" class="footer-row site-footer__top">
 
         <!-- links.column -->
-        <aside id="footer-left" class="footer-column links narrow">
+        <section id="footer-left" class="footer-column column--quick-links links">
 
-            <h5 class="links-header">
+            <h2 class="links-header">
 
                 <?php echo $left_menu_name; ?>
 
-            </h5>
+            </h2>
 
             <?php footer_left_menu(); ?>
 
-        </aside>
+        </section>
         <!-- END links.column -->
 
         <!-- links.column -->
-        <aside id="footer-center" class="footer-column links wide">
+        <section id="footer-center" class="footer-column column--resources links">
 
             <?php switch_to_blog( 1 ); ?>
 
@@ -69,29 +69,29 @@
 
             ?>
 
-            <h5 class="links-header">
+            <h2 class="links-header">
 
                 <?php echo $center_menu_name; ?>
 
-            </h5>
+            </h2>
 
             <?php footer_center_menu(); ?>
 
-        </aside>
+        </section>
         <!-- END links.column -->
 
         <!-- links.column -->
-        <aside id="footer-right" class="footer-column links default">
+        <section id="footer-right" class="footer-column column--departments links">
 
-            <h5 class="links-header">
+            <h2 class="links-header">
 
                 <?php echo $right_menu_name; ?>
 
-            </h5>
+            </h2>
 
             <?php footer_right_menu(); ?>
 
-        </aside>
+        </section>
         <!-- END links.column -->
 
         <?php
@@ -102,13 +102,13 @@
         ?>
 
         <!-- links.column -->
-        <column id="footer-drawer" class="footer-column content">
+        <section id="footer-drawer" class="footer-column column--contact content">
 
-            <h5 class="links-header">
+            <h2 class="links-header">
 
                 get in touch
 
-            </h5>
+            </h2>
 
             <div id="contact-info">
 
@@ -151,22 +151,16 @@
             </div>
 
             <!-- campaign button -->
-            <a id="campaign-button" class="ui-button special" href="https://advancing.colostate.edu/CVMBS">
+            <a id="campaign-button" class="campaign-button" href="https://advancing.colostate.edu/CVMBS">
 
-                <!-- text.main -->
-                <span class="text main">
-
-                    support the college
-
-                </span>
-                <!-- END text.main -->
+                <span class="text">Support the College</span>
 
             </a>
             <!-- END campaign button -->
 
             <?php switch_to_blog( $currentsite ); ?>
 
-        </column>
+        </section>
         <!-- END links.column -->
 
     </div>
@@ -178,17 +172,9 @@
         <?php get_template_part( 'elements/links/links.required' ); ?>
 
         <!-- brand.state -->
-        <a id="brand-legacy" class="footer-button" href="https://www.colostate.edu">
+        <a id="brand-legacy" class="brand-legacy footer-button" href="https://www.colostate.edu" aria-label="Colorado State University">
 
-            <!-- label -->
-            <span class="link-label">
-
-                colorado state university
-
-            </span>
-            <!-- END label -->
-
-            <svg x="0px" y="0px" viewBox="0 0 256 32" enable-background="new 0 0 256 32" xml:space="preserve">
+            <svg x="0px" y="0px" viewBox="0 0 256 32" enable-background="new 0 0 256 32" xml:space="preserve" aria-hidden="true" focusable="false">
 
                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M45,11.9h5.6v3l2.3-2.7c0.6-0.7,2-0.9,3.5,0.3l-0.8,4.4 c-0.8-1.1-1.9-1.9-3-1.9c-1,0-2,0.7-2,2.2V21c0,1.4,0.4,1.8,1.9,1.9v0.5h-7.4l0-0.5c1.4,0,1.8-0.5,1.8-1.9v-7 c0-1.3-0.5-1.7-1.9-1.7V11.9L45,11.9z"/>
 

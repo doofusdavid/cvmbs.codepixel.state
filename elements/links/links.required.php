@@ -1,17 +1,17 @@
 
 <!-- footer.left -->
-<details id="footer-links" open>
+<div id="footer-links" class="footer-links">
 
     <!-- links -->
-    <nav class="link-list">
+    <nav class="links">
 
         <!-- link.list -->
         <ul class="link-list">
 
             <!-- link -->
-            <li>
+            <li class="link-list-item">
 
-                <a class="link" href="http://admissions.colostate.edu/">
+                <a class="link" href="https://admissions.colostate.edu/">
 
                     Apply to CSU
 
@@ -21,11 +21,11 @@
             <!-- END link -->
 
             <!-- link -->
-            <li>
+            <li class="link-list-item">
 
-                <a class="link" href="http://colostate.edu/search/">
+                <a class="link" href="https://www.colostate.edu/contact">
 
-                    Search
+                    Contact CSU
 
                 </a>
 
@@ -33,9 +33,9 @@
             <!-- END link -->
 
             <!-- link -->
-            <li>
+            <li class="link-list-item">
 
-                <a class="link" href="http://colostate.edu/disclaimer/">
+                <a class="link" href="https://colostate.edu/disclaimer/">
 
                     Disclaimer
 
@@ -45,9 +45,9 @@
             <!-- END link -->
 
             <!-- link -->
-            <li>
+            <li class="link-list-item">
 
-                <a class="link" href="http://www.colostate.edu/equal-opportunity/">
+                <a class="link" href="https://www.colostate.edu/equal-opportunity/">
 
                     Equal Opportunity
 
@@ -57,9 +57,9 @@
             <!-- END link -->
 
             <!-- link -->
-            <li>
+            <li class="link-list-item">
 
-                <a class="link" href="http://colostate.edu/privacy/">
+                <a class="link" href="https://colostate.edu/privacy/">
 
                     Privacy Statement
 
@@ -75,12 +75,8 @@
     <!-- END links -->
 
     <!-- copyright -->
-    <summary class="copyright">
-
-        Copyright <em>&copy;</em> 2018 by Colorado State University, Fort Collins, CO 80523 USA
-
-    </summary>
+    <p class="copyright"><span class="symbol">&copy;</span> <?php echo date('Y'); ?> Colorado State University</p>
     <!-- END copyright -->
 
-</details>
+</div>
 <!-- END footer.left -->
