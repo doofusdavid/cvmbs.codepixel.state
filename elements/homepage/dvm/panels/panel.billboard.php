@@ -4,7 +4,7 @@
 
     $billboard_panel = $homepage_panels[ 'panel_billboard' ];
 
-    $billboard   = get_field( 'homepage_billboard', 'options' );
+    $billboard   = get_field( 'site_background', 'options' );
     $background  = $billboard[ 'image' ][ 'url' ];
 
     // $background  = $billboard_panel[ 'billboard_image' ][ 'url' ];
