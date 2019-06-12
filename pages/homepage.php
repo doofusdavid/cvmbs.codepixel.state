@@ -20,7 +20,7 @@
 
         } else if ( $site_type == 'special' ) {
 
-            get_template_part( 'elements/homepage/special/special.homepage' );
+            get_template_part( 'elements/homepage/dvm/dvm.homepage' );
 
         }
 
