@@ -137,7 +137,6 @@
 
             the_title();
             ?>
-            (<?php echo $post->ID; ?>)
         </a><!-- .program-link -->
 
         <?php
