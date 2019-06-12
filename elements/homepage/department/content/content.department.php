@@ -16,13 +16,11 @@
     </section>
     <!-- END homepage.intro -->
 
-    <!-- degree.programs -->
-    <section id="department-degree-programs" class="homepage-section">
+    <?php
 
-        <?php get_template_part( 'elements/homepage/department/content/content.degree.programs' ); ?>
+    get_template_part( 'elements/homepage/department/content/content.degree.programs' );
 
-    </section>
-    <!-- END degree.programs -->
+    ?>
 
     <!-- homepage.section -->
     <section id="department-expertise" class="homepage-section">

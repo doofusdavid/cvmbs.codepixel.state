@@ -12,12 +12,6 @@
     // set dynamic blog id
     $currentsite = $blog_id;
 
-    // department homepage options
-    $department_options = get_field( 'department_homepage_options' );
-
-    // text content
-    $degree_programs_content = $department_options[ 'degree_programs_content' ];
-
     // get site path
     $siteinfo = get_blog_details();
 
@@ -26,67 +20,34 @@
 
 ?>
 
-<!-- visual FX -->
-<div class="design-layer">
+<!-- degree.programs -->
+<section id="department-degree-programs" class="dept-deg-progs homepage-section">
 
-    <!-- image -->
-    <div class="image fx-layer layer">
+    <!-- visual FX -->
+    <div class="design-layer">
 
-        <!-- -->
+        <!-- color -->
+        <div class="color fx-layer layer">
+            <!--  -->
+        </div>
+        <!-- END color -->
+
+        <!-- image -->
+        <div class="image fx-layer layer">
+            <!-- -->
+        </div>
+        <!-- END image -->
 
     </div>
-    <!-- END image -->
+    <!-- END visual FX -->
 
-    <!-- color -->
-    <div class="color fx-layer layer">
 
-        <!--  -->
 
-    </div>
-    <!-- END color -->
+    <!-- programs -->
+    <div id="department-degree-programs-content" class="dept-deg-progs__content">
 
-</div>
-<!-- END visual FX -->
+        <h2 class="section-heading">Degree Programs</h2>
 
-<!-- title -->
-<h3 class="section-heading">
-
-    degree programs
-
-</h3>
-<!-- END title -->
-
-<?php if ( $degree_programs_content ) : ?>
-
-<!-- description -->
-<div id="department-degree-programs-description" class="degree-program-block">
-
-    <!-- text -->
-    <p>
-
-        <?php echo $degree_programs_content; ?>
-
-    </p>
-    <!-- END text -->
-
-    <!-- button -->
-    <a href="/degree_programs" class="link-button">
-
-        learn more
-
-    </a>
-    <!-- END button -->
-
-</div>
-<!-- END description -->
-
-<?php endif; ?>
-
-<!-- programs -->
-<div id="department-degree-programs-list" class="degree-program-block">
-
-    <!-- undergraduate -->
-    <div class="program-list undergraduate-programs">
         <?php
         // switch to main site for query
         switch_to_blog( 1 );
@@ -97,8 +58,11 @@
                 $wp_taxonomies[$term] = '';
             }
         }
+        ?>
 
-        $args = array(
+
+        <?php
+        $grad_args = array(
             'post_type'      => 'degree_program',
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
@@ -122,33 +86,158 @@
             )
         );
 
-        $programs = new WP_Query( $args );
+        $grad_degs = new WP_Query( $grad_args );
 
-        if ( $programs->have_posts() ) :
-            while ( $programs->have_posts() ) : $programs->the_post();
-                $ancestors = get_post_ancestors( $post->ID );
+        if ( $grad_degs->have_posts() ) :
         ?>
 
-        <a class="program-link" href="<?php the_permalink(); ?>">
-            <?php
-            if ( $ancestors[1] ) {
-                echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
-            }
+        <div class="dept-deg-progs__type">
 
-            the_title();
+            <h3 class="dept-deg-progs__type-heading">Graduate Programs</h3>
+
+            <?php
+            while ( $grad_degs->have_posts() ) : $grad_degs->the_post();
+                $ancestors = get_post_ancestors( $post->ID );
             ?>
-        </a><!-- .program-link -->
+
+            <a class="program-link" href="<?php the_permalink(); ?>">
+                <?php
+                if ( $ancestors[1] ) {
+                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                }
+
+                the_title();
+                ?>
+            </a><!-- .program-link -->
+
+            <?php endwhile; wp_reset_postdata(); ?>
+
+        </div><!-- .dept-deg-progs__type -->
+
+        <?php endif; ?>
+
 
         <?php
-            endwhile; wp_reset_postdata();
-        endif;
+        $undergrad_args = array(
+            'post_type'      => 'degree_program',
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+            'posts_per_page' =>  99,
+            'tax_query'      => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'department',
+                    'field'    => 'slug',
+                    'terms'    =>  array( $dept_slug )
+                ),
+                array(
+                    'taxonomy' => 'academic_level',
+                    'field'    => 'slug',
+                    'terms'    =>  array( 'undergraduate' )
+                ),
+                array(
+                    'taxonomy' => 'degree_type',
+                    'field'    => 'slug',
+                    'terms'    =>  array( 'bs-concentration' )
+                )
+            )
+        );
 
+        $concentrations = new WP_Query( $undergrad_args );
+
+        if ( $concentrations->have_posts() ) :
+        ?>
+
+        <div class="dept-deg-progs__type">
+
+            <h3 class="dept-deg-progs__type-heading">Undergraduate Concentrations</h3>
+
+            <?php
+            while ( $concentrations->have_posts() ) : $concentrations->the_post();
+                $ancestors = get_post_ancestors( $post->ID );
+            ?>
+
+            <a class="program-link" href="<?php the_permalink(); ?>">
+                <?php
+                if ( $ancestors[1] ) {
+                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                }
+
+                the_title();
+                ?>
+            </a><!-- .program-link -->
+
+            <?php endwhile; wp_reset_postdata(); ?>
+
+        </div><!-- .dept-deg-progs__type -->
+
+        <?php endif; ?>
+
+
+        <?php
+        $minor_args = array(
+            'post_type'      => 'degree_program',
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+            'posts_per_page' =>  99,
+            'tax_query'      => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'department',
+                    'field'    => 'slug',
+                    'terms'    =>  array( $dept_slug )
+                ),
+                array(
+                    'taxonomy' => 'academic_level',
+                    'field'    => 'slug',
+                    'terms'    =>  array( 'undergraduate' )
+                ),
+                array(
+                    'taxonomy' => 'degree_type',
+                    'field'    => 'slug',
+                    'terms'    =>  array( 'minor' )
+                )
+            )
+        );
+
+        $minors = new WP_Query( $minor_args );
+
+        if ( $minors->have_posts() ) :
+        ?>
+
+        <div class="dept-deg-progs__type">
+
+            <h3 class="dept-deg-progs__type-heading">Undergraduate Minors</h3>
+
+            <?php
+            while ( $minors->have_posts() ) : $minors->the_post();
+                $ancestors = get_post_ancestors( $post->ID );
+            ?>
+
+            <a class="program-link" href="<?php the_permalink(); ?>">
+                <?php
+                if ( $ancestors[1] ) {
+                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                }
+
+                the_title();
+                ?>
+            </a><!-- .program-link -->
+
+            <?php endwhile; wp_reset_postdata(); ?>
+
+        </div><!-- .dept-deg-progs__type -->
+
+        <?php endif; ?>
+
+
+        <?php
         // return to getting data from current site
         switch_to_blog( $currentsite );
         ?>
 
     </div>
-    <!-- END undergraduate -->
+    <!-- END programs -->
 
-</div>
-<!-- END programs -->
+</section>
+<!-- END degree.programs -->

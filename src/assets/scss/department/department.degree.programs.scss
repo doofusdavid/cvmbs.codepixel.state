@@ -4,11 +4,9 @@
     $intro : 1rem;
 
     // styles
-    #department-degree-programs {
+    .dept-deg-progs {
 
         position: relative;
-
-        @include flex-v-t-h-st( false );
 
         padding: 10rem 5rem 10rem 5rem;
 
@@ -41,7 +39,7 @@
             bottom: 0;
             left: 0;
 
-            z-index: 20;
+            // z-index: 20;
 
             width: 100%;
             height: 100%;
@@ -64,7 +62,7 @@
             // image
             .image {
 
-                z-index: 30;
+                // z-index: 30;
 
                 background: {
 
@@ -84,7 +82,7 @@
             // color
             .color {
 
-                z-index: 20;
+                // z-index: 20;
 
                 @include fill( $dark, 0.365 );
 
@@ -92,122 +90,71 @@
 
         }
 
-        // content
-        .degree-program-block {
-
-            @include flex-v-t-h-s( false );
-
-        }
-
-        // title
-        h3 {
-
-            position: relative;
-
-            z-index: 20;
-
-            margin: 0 0 2rem 0;
-
-            @include font( $klavislim, 3rem, 400 );
-
-            @include typo( 2rem, 0.085em );
-
-            @include color( #F3F1E0, 0.000 );
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                margin: 0 0 1rem 0;
-
-                @include font( $klavislim, 2rem, 400 );
-
-            }
-
-        }
-
-        // description
-        #department-degree-programs-description {
-
-            flex-basis: 60%;
-
-            padding: 0 5rem 0 0;
-
-            // text
-            p {
-
-                @include font( $industry, 0.875rem, 500 );
-
-                @include typo( 1.5rem, 0.035em );
-
-            }
-
-            // button
-            .link-button {
-
-                @include flex-h-c-v-c( false );
-
-                height: 4rem;
-                margin: 1rem 0 0 0;
-                padding: 0.125rem 3rem 0 3rem;
-
-                @include font( $klavislim, 1rem, 400 );
-
-                @include text( $up );
-
-                @include typo( 0.875rem, 0.085em );
-
-                @include color( white, 0.000 );
-
-                @include fill( $px-orange, 0.000 );
-
-                @include shadowbox( 1rem, 4rem, black, 0.385 );
-
-                @include hide;
-
-            }
-
-        }
-
         // degrees
-        #department-degree-programs-list {
+        &__content {
 
             position: relative;
 
-            z-index: 20;
+            // title
+            .section-heading {
 
-            @include flex-h-s-v-st( false );
+                margin: 0 0 2rem 0;
 
-            flex-wrap: nowrap;
+                @include font( $klavislim, 3rem, 400 );
 
-            flex-basis: 40%;
+                @include typo( 1, 0.085em );
 
-            padding: 0 0 0 0;
+                @include color( #F3F1E0, 0.000 );
 
-            // list
-            .program-list {
+                // mobile
+                @include breakpoint ( small only ) {
 
-                @include flex-v-t-h-s( false );
+                    margin: 0 0 1rem 0;
 
-                // link
-                .program-link {
+                    @include font( $klavislim, 2rem, 400 );
 
-                    @include flex-h-s-v-c( false );
+                }
 
-                    @include font( $industry, 0.875rem, 600 );
+            }
 
-                    @include typo( 2rem, 0.035em );
+        }
 
-                    @include color( $cvellow, 0.000 );
+        // list
+        &__type {
 
-                    transition: all 220ms linear 0ms;
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
 
-                    // hover state
-                    &:hover {
+            &-heading {
+                color: white;
+            }
 
-                        @include color( white, 0.000 );
+            // link
+            .program-link {
 
-                    }
+                // @include flex-h-s-v-c( false );
+                display: block;
 
+                @include font( $industry, 0.875rem, 600 );
+
+                @include typo( 1.6, 0.035em );
+
+                @include color( $cvellow, 0.000 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover,
+                &:focus,
+                &:active {
+
+                    @include color( white, 0.000 );
+
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: .75rem;
                 }
 
             }
