@@ -1,0 +1,103 @@
+// stylesheet :: highlights panel styles
+
+    // settings
+    $highlights : 1rem;
+
+    // styles
+    #panel-curriculum {
+
+        z-index: 80;
+
+        height: auto;
+        padding: 0 0 0 0;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.03.jpg);
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $beige, 0.465 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include flex-v-c-h-c( false );
+
+            padding: 8rem 10rem 8rem 10rem;
+
+            text-align: center;
+
+            @include color( $g140, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 8rem 2.5rem 8rem 2.5rem;
+
+            }
+
+            // heading
+            h2 {
+
+                //
+
+            }
+
+            // text
+            p {
+
+                margin: 0 0 0 0;
+
+                @include font( $industry, 1rem, 600 );
+
+            }
+
+            // link
+            .document-link {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 2rem 0 0 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                // border: 1px solid $g140;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.875rem, 0.065em );
+
+                @include color( $g140, 0.000 );
+
+                @include color( white, 0.000 );
+
+                @include fill( $roarange, 0.000 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    // border-color: $roarange;
+
+                    @include color( white, 0.000 );
+
+                    @include fill( $g140, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

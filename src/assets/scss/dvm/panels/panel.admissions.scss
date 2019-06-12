@@ -1,0 +1,11 @@
+// stylesheet :: admissions panel styles
+
+    // settings
+    $admissions : 1rem;
+
+    // styles
+    #panel-admissions {
+
+        @include hide;
+
+    }

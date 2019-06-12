@@ -1,0 +1,308 @@
+// stylesheet :: contact panel styles
+
+    // settings
+    $contact : 1rem;
+
+    // styles
+    #panel-contact {
+
+        z-index: 100;
+
+        // min-height: 100vh;
+        height: auto;
+        padding: 10rem 0 10rem 0;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.06.jpg);
+
+        }
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 4rem 0 0rem 0;
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $beige, 0.385 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include color( $g140, 0.000 );
+
+            .description-text {
+
+                @include flex-h-c-v-c( false );
+
+                margin: 0 0 1rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 2rem 0 2rem;
+
+                }
+
+            }
+
+        }
+
+        // buttons
+        .button-group {
+
+            @include flex-h-j-v-t( false );
+
+            flex-wrap: wrap;
+
+            width: 100%;
+            padding: 0 4rem 0 4rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 1rem 1rem 1rem 1rem;
+
+            }
+
+            .contact-button {
+
+                position: relative;
+
+                @include flex-v-b-h-s( true );
+
+                width: calc( 25% - 2rem );
+                height: 10rem;
+                margin: 1rem 1rem 1rem 1rem;
+                padding: 0 1rem 1rem 1rem;
+
+                @include fill( $g135, 0.125 );
+                @include fill( $cvnavy, 0.215 );
+
+                @include shadowbox( 1rem, 3rem, black, 0.215 );
+
+                transition: all 220ms linear 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: calc( 100% - 2rem );
+                    height: 8rem;
+
+                }
+
+                // hover state
+                &:hover {
+
+                    @include fill( $dark, 0.125 );
+                    @include fill( $cvnavy, 0.000 );
+
+                    // before
+                    &:before {
+
+                        // opacity: 1.000;
+                        opacity: 0.465;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    span {
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                }
+
+                // before
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 0;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    opacity: 0.000;
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+                // text
+                span {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 1rem, 0.045em );
+
+                    @include color( $gold, 0.000 );
+                    @include color( white, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+            }
+
+            // thing
+            #high-school-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.00.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #college-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/conact.01.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #prospective-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.02.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #new-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.03.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #alumni {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.08.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #transfer-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.04.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #employer {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.06.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #other {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.05.jpg);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

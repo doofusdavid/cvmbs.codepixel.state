@@ -1,0 +1,100 @@
+// stylesheet :: degrees panel styles
+
+    // settings
+    $degrees : 1rem;
+
+    // styles
+    #panel-degrees {
+
+        z-index: 80;
+
+        // height: 60vh;
+        height: auto;
+        padding: 10rem 50vw 10rem 5rem;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.01.jpg);
+
+        }
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 4rem 3rem 4rem 3rem;
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $nite, 0.325 );
+            // @include fill( $beige, 0.385 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include flex-v-c-h-s( false );
+
+            @include text( none, left );
+
+            // heading
+            h2 {
+
+                @include color( $cvellow, 0.000 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    text-align: left;
+
+                }
+
+            }
+
+            // text
+            p {
+
+                margin: 0 0 0 0;
+
+                @include font( $industry, 1rem, 600 );
+
+            }
+
+            // link
+            .document-link {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 2rem 0 0 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.875rem, 0.065em );
+
+                @include color( white, 0.000 );
+
+                @include fill( white, 0.965 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( $g140, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

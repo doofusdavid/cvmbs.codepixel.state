@@ -1,0 +1,802 @@
+// stylesheet :: special unit layout styles
+
+    // settings
+    $billboard : 1rem;
+
+    // styles
+    #site-layout.special {
+
+        position: relative;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 100vw;
+        height: auto;
+        margin: 0 0 0 0;
+        padding: 100vh 0 0 0;
+
+        // menu open
+        &.site-menu-open {
+
+            -webkit-filter: blur( 16px );
+                    filter: blur( 16px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // billboard
+        #special-billboard {
+
+            @include fullscreen( absolute, 10, false, hidden );
+
+            @include flex-v-c-h-st( false );
+
+            height: 100vh;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+                attachment: fixed;
+
+            }
+
+            @include shadowbox( 3rem, 6rem, black, 0.365 );
+
+            -webkit-filter: blur( 0px );
+                    filter: blur( 0px );
+
+            transition: all 0ms linear 120ms;
+
+            // mobile
+            @include breakpoint ( large down ) {
+
+                background: {
+
+                    attachment: scroll;
+                    position: 80% center;
+
+                }
+
+            }
+
+            // overlay
+            .billboard-overlay {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 0;
+
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+
+                background: {
+
+                    image:
+
+                        linear-gradient(
+
+                            -45deg,
+                            transparentize( $dark, 0.215 ) 0%,
+                            transparent 50%
+
+                        ),
+
+                        linear-gradient(
+
+                            315deg,
+                            transparentize( $dark, 0.215 ) 0%,
+                            transparent 40%
+
+                        ),
+
+                        linear-gradient(
+
+                            20deg,
+                            transparentize( $dark, 0.215 ) 0%,
+                            transparent 50%
+
+                        )
+
+                    ;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    background: {
+
+                        image:
+
+                            linear-gradient(
+
+                                -45deg,
+                                transparentize( $dark, 0.215 ) 0%,
+                                transparent 70%
+
+                            ),
+
+                            linear-gradient(
+
+                                315deg,
+                                transparentize( $dark, 0.215 ) 0%,
+                                transparent 70%
+
+                            ),
+
+                            linear-gradient(
+
+                                10deg,
+                                transparentize( $cvnavy, 0.000 ) 0%,
+                                transparent 100%
+
+                            )
+
+                        ;
+
+                    }
+
+                }
+
+            }
+
+            // content
+            #billboard-container {
+
+                position: relative;
+
+                z-index: 10;
+
+                @include flex-h-e-v-b( false );
+
+                height: 100%;
+                padding: 5rem 2rem 6rem 6rem;
+
+                @include font( $industry, 0.875rem, 700 );
+
+                // mobile
+                @include breakpoint ( large down ) {
+
+                    @include flex-v-b-h-st( false );
+
+                    padding: 4rem 2rem 2rem 2rem;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    //
+
+                }
+
+                // content
+                #billboard-content {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include flex-v-b-h-s( false );
+
+                    width: 100%;
+                    height: 100%;
+
+                    // headline
+                    .headline {
+
+                        @include flex-h-s-v-c( false );
+
+                        height: 3.5rem;
+                        margin: 0 0 0 0;
+                        padding: 0.375rem 0 0 0;
+
+                        @include font( $klavislim, 5rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 3.375rem, 0.025em );
+
+                        // mobile
+                        @include breakpoint ( large down ) {
+
+                            @include font( $klavislim, 3.5rem, 400 );
+
+                        }
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            height: auto;
+
+                            @include font( $klavislim, 2.5rem, 400 );
+
+                            line-height: 2.5rem;
+
+                        }
+
+                    }
+
+                    // text
+                    .text {
+
+                        @include flex-h-s-v-c( false );
+
+                        width: 28rem;
+                        margin: 1.5rem 0 0 0;
+                        // padding: 0.375rem 0 0 0;
+
+                        @include font( $vitesse, 0.875rem, 500 );
+
+                        @include text( $up );
+
+                        @include typo( 1.25rem, 0.065em );
+
+                        @include color( $faux-gold, 0.000 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            width: auto;
+                            margin: 0 0 0 0;
+
+                            @include font( $vitesse, 0.75rem, 500 );
+
+                            @include typo( 1rem, 0.035em );
+
+                        }
+
+                    }
+
+                    // button
+                    .link {
+
+                        @include flex-h-c-v-c( false );
+
+                        width: 13rem;
+                        height: 4rem;
+                        margin: 1.5rem 0 0 0;
+                        padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                        border: none;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 0.75rem, 0.095em );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $blue, 0.000 );
+
+                        transition: all 360ms $outex 0ms;
+
+                        @include hide;
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $roarange, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+                // button group
+                #billboard-buttons {
+
+                    position: absolute;
+
+                    right: 2rem;
+                    bottom: 2rem;
+
+                    z-index: 20;
+
+                    @include flex-v-b-h-st( false );
+
+                    width: 22rem;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        position: static;
+
+                        // @include flex-v-b-h-s( false );
+
+                        width: 100%;
+
+                    }
+
+                }
+
+                // button
+                .button-link {
+
+                    @include flex-v-b-h-e( false );
+
+                    width: 22rem;
+                    height: 9rem;
+                    margin: 2rem 0 0 0;
+                    padding: 0 1.875rem 1.875rem 1rem;
+
+                    @include text( none, right );
+
+                    @include color( white, 0.000 );
+
+                    @include fill( white, 0.825 );
+
+                    @include shadowbox( 1.5rem, 4rem, black, 0.525 );
+
+                    transition: all 360ms $outex 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include flex-v-b-h-s( false );
+
+                        width: 100%;
+                        // width: auto;
+                        height: auto;
+                        margin: 1rem 0 0 0;
+                        padding: 2.25rem 1.875rem 1rem 1.5rem;
+
+                        // first child
+                        &:first-child {
+
+                            // margin: 0 0 0 0;
+
+                        }
+
+                    }
+
+                    // title
+                    .button-title {
+
+                        position: relative;
+
+                        @include flex-h-e-v-b( false );
+
+                        margin: 0 0 0.25rem 0;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 0.875rem, 0.115em );
+
+                        @include color( white, 0.000 );
+
+                        // before
+                        &:before {
+
+                            content: '';
+
+                            position: absolute;
+
+                            top: -1rem;
+                            right: 0.125rem;
+
+                            z-index: 1;
+
+                            width: 2rem;
+                            height: 0.125rem;
+
+                            @include fill( white, 0.000 );
+
+                            transition: all 360ms $outex 0ms;
+
+                            // mobile
+                            @include breakpoint ( small only ) {
+
+                                right: auto;
+                                left: 0;
+
+                            }
+
+                        }
+
+                    }
+
+                    // text
+                    .button-text {
+
+                        @include font( $industry, 0.75rem, 500 );
+
+                        @include typo( 0.875rem, 0.035em );
+
+                        @include color( white, 0.225 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include hide;
+
+                        }
+
+                    }
+
+                    // hover state
+                    &:hover {
+
+                        // title line
+                        .button-title {
+
+                            // before
+                            &:before {
+
+                                width: 3rem;
+
+                                transition: all 360ms $outex 0ms;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                // explore
+                #button-explore {
+
+                    @include gradient(
+
+                        90deg,
+                        lighten( $cvnavy, 3.5% ), 0.215, 0%,
+                        // white, 1.000, 100%
+                        lighten( $cvnavy, 3.5% ), 0.865, 100%
+
+                    );
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( lighten( $cvnavy, 5.5% ), 0.365 );
+
+                        // title
+                        .button-title {
+
+                            // before
+                            &:before {
+
+                                @include fill( lighten( $cvnavy, 15% ), 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                    // title line
+                    .button-title {
+
+                        // before
+                        &:before {
+
+                            @include fill( lighten( $cvnavy, 18% ), 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+                // admissions
+                #button-admissions {
+
+                    @include gradient(
+
+                        90deg,
+                        $cvellow, 0.565, 0%,
+                        $cvellow, 0.865, 100%
+
+                    );
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $cvellow, 0.565 );
+
+                    }
+
+                    // title line
+                    .button-title {
+
+                        // before
+                        &:before {
+
+                            @include fill( $cvellow, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+                // contact
+                #button-contact {
+
+                    @include gradient(
+
+                        90deg,
+                        #FE7727, 0.385, 0%,
+                        #FE7727, 0.915, 100%
+
+                    );
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( #FE7727, 0.385 );
+
+                    }
+
+                    // title line
+                    .button-title {
+
+                        // before
+                        &:before {
+
+                            @include fill( #FE7727, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // content
+        #special-content {
+
+            position: relative;
+
+            z-index: 5;
+
+            // 03
+            #section-03 {
+
+                @include fill( $blue, 0.685 );
+
+                background: {
+
+                    image: url(../img/billboards/billboard.12.jpg);
+
+                }
+
+            }
+
+            // 04
+            #section-04 {
+
+                @include fill( $cvellow, 0.685 );
+
+            }
+
+            // 05
+            #section-05 {
+
+                @include fill( white, 0.945 );
+
+            }
+
+            // 06
+            #section-06 {
+
+                @include fill( $cvnavy, 0.685 );
+
+            }
+
+        }
+
+        // footer
+        #site-footer {
+
+            // @include shadowbox( -1.5rem, 4.5rem, black, 0.265 );
+
+        }
+
+    }
+
+    // sections
+    .special-content-section {
+
+        position: relative;
+
+        @include flex-v-c-h-c( false );
+
+        height: 100vh;
+        // padding: 8rem 0 8rem 0;
+
+        background: {
+
+            repeat: no-repeat;
+            size: cover;
+            position: center center;
+            attachment: fixed;
+
+        }
+
+        @include shadowbox( 1rem, 6rem, black, 0.215 );
+
+        // mobile
+        @include breakpoint ( large down ) {
+
+            background-attachment: scroll;
+
+        }
+
+    }
+
+    // toolbar
+    #homepage-toolbar {
+
+        position: fixed;
+
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 100;
+
+        @include flex-h-s-v-c( false );
+
+        height: 5rem;
+        margin: 0;
+        padding: 0 0 0 5rem;
+
+        // overflow-x: scroll;
+
+        @include fill( $cvnavy, 0.165 );
+
+        @include color( white, 0.000 );
+
+        @include hide;
+
+        // active state
+        &.active {
+
+            transform: translate3d( 0, 0, 0 );
+
+            transition: all 360ms $oquin 0ms;
+
+        }
+
+        // inactive state
+        &.inactive {
+
+            transform: translate3d( 0, 100%, 0 );
+
+            transition: all 360ms $oquin 0ms;
+
+        }
+
+        // button
+        #toolbar-button {
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            width: 5rem;
+            height: 5rem;
+            margin: 0;
+            padding: 0;
+
+            @include fill( $blue, 0.895 );
+
+            transition: all 220ms linear 0ms;
+
+            // hover state
+            &:hover {
+
+                @include fill( white, 0.895 );
+
+            }
+
+        }
+
+        // menu
+        #toolbar-menu {
+
+            // @include hide;
+
+            width: calc( 100vw - 5rem );
+            height: 5rem;
+
+            // overflow-x: scroll;
+            overflow: hidden;
+
+            // list
+            ul {
+
+                @include flex-h-s-v-st( false );
+
+                flex-wrap: nowrap;
+
+                // min-width: 110.5rem;
+                height: 5rem;
+                margin: 0;
+                padding: 0;
+
+                list-style: none;
+
+                // menu item
+                .menu-item {
+
+                    @include flex-v-c-h-c( false );
+
+                    width: auto;
+                    height: 5rem;
+                    margin: 0;
+                    padding: 0;
+
+                    // link
+                    .menu-item-link {
+
+                        // @include flex-h-c-v-c( false );
+
+                        width: auto;
+                        height: 5rem;
+                        padding: 0.125rem 1.5rem 0 1.5rem;
+
+                        // @include font( $klavislim, 1rem, 400 );
+                        @include font( $industry, 0.6875rem, 700 );
+
+                        @include text( $up );
+
+                        @include typo( 0.75rem, 0.075em );
+
+                        @include color( white, 0.685 );
+
+                        @include fill( white, 1.000 );
+
+                        transition: all 220ms linear 0ms;
+
+                        // hover state
+                        &:hover {
+
+                            @include color( $blue, 0.000 );
+
+                            @include fill( white, 0.925 );
+
+                        }
+
+                        // active state
+                        &.active {
+
+                            @include color( $cvellow, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,262 @@
+// stylesheet :: overview panel styles
+
+    // settings
+    $overview : 1rem;
+
+    // styles
+    #panel-overview {
+
+        z-index: 90;
+
+        height: auto;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.02.jpg);
+
+        }
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            //
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $cvnavy, 0.215 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include flex-h-j-v-s( false );
+
+            height: 100%;
+            padding: 5rem 0 0 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 2rem 0 0 0;
+
+            }
+
+            // text
+            .text {
+
+                @include flex-v-b-h-s( false );
+
+                width: 30vw;
+                padding: 0 2rem 5rem 5rem;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+                    padding: 0 2rem 2rem 2rem;
+
+                }
+
+                // heading
+                h3 {
+
+                    @include font( $klavislim, 1.75rem, 500 );
+
+                    @include typo( 2rem, 0.045em );
+
+                    @include color( $cvellow, 0.000 );
+
+                }
+
+                // text
+                p {
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                    @include typo( 1.25rem, 0.035em );
+
+                    // last child
+                    &:last-child {
+
+                        margin-bottom: 0;
+
+                    }
+
+                }
+
+            }
+
+            // callouts
+            .callouts {
+
+                @include flex-h-j-v-b( false );
+
+                width: 70vw;
+                padding: 0 5rem 5rem 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    width: 100%;
+                    padding: 0 0 0 0;
+
+                }
+
+                // blocks
+                .callout-block {
+
+                    @include flex-v-c-h-c( true );
+
+                    flex-basis: 33.3333333%;
+
+                    height: 12rem;
+                    margin: 0 0 0 2rem;
+
+                    @include text( $up, center );
+
+                    @include fill( $cvnavy, 0.165 );
+
+                    @include shadowbox( 1rem, 3rem, black, 0.315 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        margin: 0 2rem 2rem 2rem;
+                        padding: 2rem 1rem 2rem 1rem;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        br {
+
+                            display: block;
+
+                        }
+
+                    }
+
+                }
+
+                // ranking
+                #ranking {
+
+                    // number
+                    .number {
+
+                        @include font( $vitesse, 5rem, 600 );
+
+                        @include typo( 5rem, 0.000em );
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                    // stat-label
+                    .stat-label {
+
+                        @include font( $vitesse, 0.75rem, 500 );
+
+                        @include text( $up );
+
+                        @include typo( 1rem, 0.015em );
+
+                        @include color( white, 0.000 );
+
+                        // source
+                        &.source {
+
+                            @include font( $klavislim, 0.75rem, 400 );
+
+                        }
+
+                    }
+
+                }
+
+                // specialties
+                #specialties {
+
+                    // number
+                    .number {
+
+                        @include font( $klavislim, 5rem, 600 );
+
+                        @include typo( 5rem, 0.000em );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                    // stat-label
+                    .stat-label {
+
+                        @include font( $vitesse, 0.75rem, 500 );
+
+                        @include text( $up );
+
+                        @include typo( 1rem, 0.015em );
+
+                        @include color( $cvellow, 0.000 );
+
+                        // source
+                        &.source {
+
+                            @include font( $klavislim, 1rem, 400 );
+
+                        }
+
+                    }
+
+                }
+
+                // visits
+                #visits {
+
+                    // number
+                    .number {
+
+                        @include font( $vitesse, 3rem, 400 );
+
+                        @include typo( 3rem, 0.000em );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                    // stat-label
+                    .stat-label {
+
+                        @include font( $vitesse, 0.75rem, 500 );
+
+                        @include text( $up );
+
+                        @include typo( 1rem, 0.015em );
+
+                        @include color( $cvellow, 0.000 );
+
+                        // source
+                        &.source {
+
+                            @include font( $klavislim, 1rem, 400 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

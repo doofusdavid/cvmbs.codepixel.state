@@ -1,0 +1,24 @@
+// stylesheet :: highlights panel styles
+
+    // settings
+    $highlights : 1rem;
+
+    // styles
+    #panel-highlights {
+
+        z-index: 80;
+
+        background: {
+
+            image: url(../img/billboards/billboard.00.jpg);
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $dark, 0.215 );
+
+        }
+
+    }

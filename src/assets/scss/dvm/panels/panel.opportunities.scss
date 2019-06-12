@@ -1,0 +1,114 @@
+// stylesheet :: opportunities panel styles
+
+    // settings
+    $opportunities : 1rem;
+
+    // styles
+    #panel-opportunities {
+
+        z-index: 90;
+
+        height: auto;
+        padding: 0 0 0 0;
+
+        background: {
+
+            image: url(../img/billboards/billboard.21.jpg);
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $roarange, 0.055 );
+
+            @include gradient(
+
+                0deg,
+                $cvnavy, 1.000, 0%,
+                $cvnavy, 0.565, 100%
+
+            );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include flex-v-c-h-c( false );
+
+            padding: 8rem 10rem 8rem 10rem;
+
+            text-align: center;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 6rem 2.5rem 6rem 2.5rem;
+
+            }
+
+            // heading
+            h2 {
+
+                // @include font( $klavislim, 2rem, 400 );
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // text
+            p {
+
+                margin: 0 0 0 0;
+
+                @include font( $industry, 1rem, 600 );
+
+                // @include color( $app05, 0.215 );
+
+            }
+
+            // buttons
+            .button-row {
+
+                @include flex-h-c-v-c( false );
+
+            }
+
+            // link
+            .document-link {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 2rem 1rem 0 1rem;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.875rem, 0.065em );
+
+                @include color( $g140, 0.000 );
+
+                @include color( white, 0.000 );
+
+                @include fill( $cvnavy, 0.000 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( $blue, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }
