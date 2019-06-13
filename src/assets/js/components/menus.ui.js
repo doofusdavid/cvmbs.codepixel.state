@@ -127,7 +127,7 @@ export var menusFX = {
             });
 
             // test viewport size
-            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' ) {
+            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' || mediaQ == 'xxlarge' ) {
 
                 menuX = '-5rem';
 
@@ -219,7 +219,7 @@ export var menusFX = {
             });
 
             // test viewport size
-            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' ) {
+            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' || mediaQ == 'xxlarge' ) {
 
                 menuX = '-5rem';
 
