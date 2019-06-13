@@ -113,6 +113,61 @@
                     "new_lines": "br"
                 },
                 {
+                    "key": "field_5d02b0e340c4d",
+                    "label": "Internships and Externships",
+                    "name": "internships_externships",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d02cbfde2f81",
+                            "label": "Internships",
+                            "name": "internships",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5d02cc09e2f82",
+                            "label": "Externships",
+                            "name": "externships",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ]
+                },
+                {
                     "key": "field_5cdb372361fd6",
                     "label": "Areas of Expertise",
                     "name": "expertise_content",
@@ -853,5 +908,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1560371519
+    "modified": 1560464409
 }

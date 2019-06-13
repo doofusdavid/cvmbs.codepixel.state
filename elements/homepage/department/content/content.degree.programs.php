@@ -64,7 +64,7 @@
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
             'posts_per_page' =>  99,
-            'tax_query'      => array(
+            'tax_query'      =>  array(
                 'relation' => 'AND',
                 array(
                     'taxonomy' => 'department',
@@ -102,7 +102,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
+                    echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
@@ -124,7 +124,7 @@
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
             'posts_per_page' =>  99,
-            'tax_query'      => array(
+            'tax_query'      =>  array(
                 'relation' => 'AND',
                 array(
                     'taxonomy' => 'department',
@@ -163,7 +163,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
+                    echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
@@ -185,7 +185,7 @@
             'orderby'        => 'menu_order',
             'order'          => 'ASC',
             'posts_per_page' =>  99,
-            'tax_query'      => array(
+            'tax_query'      =>  array(
                 'relation' => 'AND',
                 array(
                     'taxonomy' => 'department',
@@ -224,7 +224,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
+                    echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
