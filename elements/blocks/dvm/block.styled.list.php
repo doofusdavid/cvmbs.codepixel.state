@@ -10,6 +10,21 @@
 
         <?php
 
+			$heading_option = get_sub_field( 'heading_option' );
+
+			$list_title    = get_sub_field( 'heading' );
+
+			if ( $heading_option ) : ?>
+
+				<<?php echo $list_title[ 'html_tag' ]; ?> class="list-title">
+
+					<?php echo $list_title[ 'title' ]; ?>
+
+				</<?php echo $list_title[ 'html_tag' ]; ?>>
+
+
+			<?php endif;
+
             if ( have_rows( 'styled_list_items' ) ) : ?>
 
 			<!-- <ul> -->
