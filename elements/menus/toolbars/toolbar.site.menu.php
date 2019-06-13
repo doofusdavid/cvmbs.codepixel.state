@@ -42,15 +42,15 @@
             </li>
 
             <!-- placeholder -->
-            <li class="menu-item">
+            <!-- <li class="menu-item"> -->
 
                 <?php
 
-                    get_template_part( 'elements/menus/buttons/button.build' );
+                    // get_template_part( 'elements/menus/buttons/button.build' );
 
                 ?>
 
-            </li>
+            <!-- </li> -->
 
         </ul>
         <!-- END list -->

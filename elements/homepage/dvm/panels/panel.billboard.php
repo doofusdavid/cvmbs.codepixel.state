@@ -33,7 +33,13 @@
             <!-- headline -->
             <span class="headline">
 
-                <?php echo $headline; ?>
+                <?php
+
+                    // echo $headline;
+
+                ?>
+
+                make a difference
 
             </span>
             <!-- END headline -->
@@ -41,7 +47,13 @@
             <!-- text -->
             <span class="text">
 
-                <?php echo $subheadline; ?>
+                <?php
+
+                    // echo $subheadline;
+
+                ?>
+
+                more than a centruy of excellence in teaching advanced veterinary medicine and compassionate care
 
             </span>
             <!-- END text -->

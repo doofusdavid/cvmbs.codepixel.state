@@ -6,15 +6,14 @@
 
 <?php get_header(); ?>
 
-<!-- site.layout -->
-<main id="site-layout" class="off-canvas-content flexible" data-off-canvas-content>
+<div id="primary" class="content-area dvm-flexible">
+	<main id="main" class="site-main">
 
-    <!-- content -->
-    <div id="content-container" class="ui-section">
+        <?php while ( have_posts() ) : the_post(); ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php
-
-            while ( have_posts() ) : the_post();
 
             $header = get_field( 'page_header' );
 
@@ -34,89 +33,89 @@
 
         ?>
 
-        <!-- page content -->
-        <section id="primary" class="content-area <?php echo $content_class; ?>">
+        <?php
 
-            <?php
+            $page_notification = get_field( 'page_notification' );
+            $notification = $page_notification[ 'notification' ];
 
-                $page_notification = get_field( 'page_notification' );
-                $notification = $page_notification[ 'notification' ];
+            if ( $notification ) {
 
-                if ( $notification ) {
+                // get_template_part( 'elements/blocks/dvm/block.notification' );
 
-                    get_template_part( 'elements/blocks/dvm/block.notification' );
+            }
 
-                }
+        ?>
 
-                if ( have_rows( 'page_blocks' ) ) :
+        <div class="flexible-page-content">
 
-                    $page_blocks = get_field( 'page_blocks' );
+            <?php if ( have_rows( 'page_blocks' ) ) :
 
-                    while ( have_rows( 'page_blocks' ) ) : the_row();
+                $page_blocks = get_field( 'page_blocks' );
 
-                        if ( get_row_layout() == 'text_editor' ) :
+                while ( have_rows( 'page_blocks' ) ) : the_row();
 
-                            get_template_part( 'elements/blocks/dvm/block.text' );
+                    if ( get_row_layout() == 'text_editor' ) :
 
-                        elseif ( get_row_layout() == 'quotation' ) :
+                        get_template_part( 'elements/blocks/dvm/block.text' );
 
-                            get_template_part( 'elements/blocks/dvm/block.quotation' );
+                    elseif ( get_row_layout() == 'quotation' ) :
 
-                        elseif ( get_row_layout() == 'contact_group' ) :
+                        get_template_part( 'elements/blocks/dvm/block.quotation' );
 
-                            get_template_part( 'elements/blocks/dvm/block.contacts' );
+                    elseif ( get_row_layout() == 'contact_group' ) :
 
-                        elseif ( get_row_layout() == 'content_area_with_image' ) :
+                        get_template_part( 'elements/blocks/dvm/block.contacts' );
 
-                            get_template_part( 'elements/blocks/dvm/block.content.image' );
+                    elseif ( get_row_layout() == 'content_area_with_image' ) :
 
-                        elseif ( get_row_layout() == 'ctas_with_image' ) :
+                        get_template_part( 'elements/blocks/dvm/block.content.image' );
 
-                            get_template_part( 'elements/blocks/dvm/block.cta.image' );
+                    elseif ( get_row_layout() == 'ctas_with_image' ) :
 
-                        elseif ( get_row_layout() == 'cta' ) :
+                        get_template_part( 'elements/blocks/dvm/block.cta.image' );
 
-                            get_template_part( 'elements/blocks/dvm/block.cta' );
+                    elseif ( get_row_layout() == 'cta' ) :
 
-                        elseif ( get_row_layout() == 'video' ) :
+                        get_template_part( 'elements/blocks/dvm/block.cta' );
 
-                            get_template_part( 'elements/blocks/dvm/block.video' );
+                    elseif ( get_row_layout() == 'video' ) :
 
-                        elseif ( get_row_layout() == 'accordion' ) :
+                        get_template_part( 'elements/blocks/dvm/block.video' );
 
-                            get_template_part( 'elements/blocks/dvm/block.accordion' );
+                    elseif ( get_row_layout() == 'accordion' ) :
 
-                        elseif ( get_row_layout() == 'steps' ) :
+                        get_template_part( 'elements/blocks/dvm/block.accordion' );
 
-                            get_template_part( 'elements/blocks/dvm/block.steps' );
+                    elseif ( get_row_layout() == 'steps' ) :
 
-                        elseif ( get_row_layout() == 'timeline' ) :
+                        get_template_part( 'elements/blocks/dvm/block.steps' );
 
-                            get_template_part( 'elements/blocks/dvm/block.timeline' );
+                    elseif ( get_row_layout() == 'timeline' ) :
 
-                        elseif ( get_row_layout() == 'styled_list' ) :
+                        get_template_part( 'elements/blocks/dvm/block.timeline' );
 
-                            get_template_part( 'elements/blocks/dvm/block.styled.list' );
+                    elseif ( get_row_layout() == 'styled_list' ) :
 
-                        else:
+                        get_template_part( 'elements/blocks/dvm/block.styled.list' );
 
-                            // no blocks found
+                    else:
 
-                        endif;
+                        // no blocks found
 
-    				endwhile;
+                    endif;
 
-                endif;
+				endwhile;
 
-            ?>
+            endif; ?>
 
-        </section>
-        <!-- END page content -->
+        </div><!-- .flexible-page-content -->
 
-        <?php endwhile; ?>
+    </article><!-- #post-<?php the_ID(); ?> -->
 
-    </div>
-    <!-- END content -->
+    <?php endwhile; ?>
+
+</main><!-- #main -->
+</div><!-- #primary -->
 
     <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 

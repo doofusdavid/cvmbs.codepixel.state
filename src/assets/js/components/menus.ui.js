@@ -77,6 +77,8 @@ export var menusFX = {
         var mediaQ = Foundation.MediaQuery.current;
         var menuX;
 
+        console.log( mediaQ );
+
         // handle ZURB offcanvas event
         $(window).on( 'opened.zf.offcanvas', function( e, target, menuX ) {
 
@@ -125,7 +127,7 @@ export var menusFX = {
             });
 
             // test viewport size
-            if ( mediaQ == 'large' || mediaQ == 'xlarge' ) {
+            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' ) {
 
                 menuX = '-5rem';
 
@@ -217,7 +219,7 @@ export var menusFX = {
             });
 
             // test viewport size
-            if ( mediaQ == 'large' || mediaQ == 'xlarge' ) {
+            if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' ) {
 
                 menuX = '-5rem';
 

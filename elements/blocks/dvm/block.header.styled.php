@@ -4,34 +4,36 @@
     $options = $header[ 'header_options' ];
     $image   = $header[ 'background_image' ];
 
+if ( have_rows('page_header') ) :
+	while ( have_rows('page_header') ) : the_row();
+		if ( get_sub_field('styled_header') ) :
 ?>
 
-<!-- page header -->
-<header class="page-header styled" style="background-image:url(<?php echo $image[ 'url' ]; ?>);">
+<header class="flexible-page-header--styled" style="background-image:url(<?php echo $image[ 'url' ]; ?>);">
+	<div class="flexible-page-header--styled__inner">
+		<div class="flexible-page-header--styled__content">
+            <!-- page title -->
+            <h1 class="entry-title">
 
-    <!-- page title -->
-    <h1 class="page-title">
+                <?php the_title(); ?>
+                
+            </h1>
+            <!-- END page title -->
 
-        <?php the_title(); ?>
+            <!-- page subtitle -->
+            <p class="entry-subtitle"> <?php echo $options[ 'subtitle' ]; ?></p>
+            <!-- END page subtitle -->
+		</div><!-- .flexible-page-header--styled__content -->
+	</div><!-- .flexible-page-header--styled__inner -->
+</header><!-- .flexible-page-header--styled -->
 
-    </h1>
-    <!-- END page title -->
+<?php else : ?>
 
-    <!-- page subtitle -->
-    <span class="page-subtitle">
+<div class="flexible-page-header">
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+</div><!-- .flexible-page-header -->
 
-        <?php echo $options[ 'subtitle' ]; ?>
-
-    </span>
-    <!-- END page subtitle -->
-
-    <!-- text -->
-    <p class="page-intro">
-
-        <?php echo $options[ 'introduction' ]; ?>
-
-    </p>
-    <!-- END text -->
-
-</header>
-<!-- END page header -->
+<?php
+		endif;
+	endwhile;
+endif;
