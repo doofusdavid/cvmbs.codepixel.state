@@ -19,6 +19,13 @@
 
         }
 
+        // container
+        .panel-interior {
+
+            height: 100%;
+
+        }
+
         // search panel
         #___gcse_0 {
 
@@ -211,7 +218,7 @@
 
                     height: 2rem;
                     padding: 0 0 0 0;
-                    
+
                     @include fill( white, 0.925 );
 
                     // results count
