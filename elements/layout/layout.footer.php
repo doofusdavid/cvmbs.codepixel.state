@@ -114,11 +114,11 @@
 
                 <div id="contact-info" class="contact-info">
 
-                    <span class="contact-label">
+                    <small class="contact-label">
 
                         mailing address
 
-                    </span>
+                    </small>
 
                     <span class="contact-text">
 
@@ -126,11 +126,11 @@
 
                     </span>
 
-                    <span class="contact-label">
+                    <small class="contact-label">
 
                         phone
 
-                    </span>
+                    </small>
 
                     <span class="contact-text">
 
@@ -138,11 +138,11 @@
 
                     </span>
 
-                    <span class="contact-label">
+                    <small class="contact-label">
 
                         connect on social media
 
-                    </span>
+                    </small>
 
                     <div class="social-media-links">
 
