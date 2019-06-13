@@ -33,73 +33,79 @@ $sourceURL   = 'https://cvmbs.source.colostate.edu/tag/' . $department;
 
 ?>
 
-<!-- container -->
-<div class="article-container" tabindex="-1">
+<!-- news -->
+<section id="department-news" class="homepage-section">
 
-    <!-- title -->
-    <a href="<?php echo $sourceURL; ?>" class="section-title scroll-trigger" data-section="news">
+    <!-- container -->
+    <div class="article-container" tabindex="-1">
 
-        news and updates
+        <!-- title -->
+        <a href="<?php echo $sourceURL; ?>" class="section-title scroll-trigger" data-section="news">
 
-        <!-- link -->
-        <span class="title-link">
+            news and updates
 
-            view all
+            <!-- link -->
+            <span class="title-link">
 
-        </span>
-        <!-- END link -->
+                view all
 
-    </a>
-    <!-- END title -->
+            </span>
+            <!-- END link -->
 
-    <!-- feature + sidebar -->
-    <div id="main-source-content">
+        </a>
+        <!-- END title -->
 
-        <!-- news.feed -->
-        <section id="source-feed" class="article-cards ui-news">
+        <!-- feature + sidebar -->
+        <div id="main-source-content">
 
-            <?php
+            <!-- news.feed -->
+            <section id="source-feed" class="article-cards ui-news">
 
-            foreach( $articles as $article ) {
+                <?php
 
-                $permalink = $article->link;
-                $thumbnail = $article->featured_image->source_url;
-                $title     = $article->title->rendered;
-                $excerpt   = $article->excerpt->rendered;
+                foreach( $articles as $article ) {
 
-                $content .= '
+                    $permalink = $article->link;
+                    $thumbnail = $article->featured_image->source_url;
+                    $title     = $article->title->rendered;
+                    $excerpt   = $article->excerpt->rendered;
 
-                    <a href="' . $permalink . '" class="article card" data-url="' . $permalink . '">
+                    $content .= '
 
-                        <header class="header">
+                        <a href="' . $permalink . '" class="article card" data-url="' . $permalink . '">
 
-                            <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
+                            <header class="header">
 
-                        </header>
+                                <span class="image" style="background-image:url( ' . $thumbnail . ' )"></span>
 
-                        <section class="content">
+                            </header>
 
-                            <h4 class="title">' . $title . '</h4>
+                            <section class="content">
 
-                            ' . $excerpt . '
+                                <h4 class="title">' . $title . '</h4>
 
-                        </section>
+                                ' . $excerpt . '
 
-                    </a>
+                            </section>
 
-                ';
+                        </a>
 
-            }
+                    ';
 
-            echo $content;
+                }
 
-            ?>
+                echo $content;
 
-        </section>
-        <!-- END news.feed -->
+                ?>
+
+            </section>
+            <!-- END news.feed -->
+
+        </div>
+        <!-- END feature + sidebar -->
 
     </div>
-    <!-- END feature + sidebar -->
+    <!-- END container -->
 
-</div>
-<!-- END container -->
+</section>
+<!-- END news -->

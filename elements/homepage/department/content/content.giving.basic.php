@@ -8,36 +8,42 @@
 
 ?>
 
-<!-- visual FX -->
-<div class="design-layer">
+<!-- giving -->
+<section id="department-giving" class="basic homepage-section">
 
-    <!-- image -->
-    <div class="image fx-layer layer" style="background-image:url(<?php echo $giving_content[ 'background' ]; ?>)">
+    <!-- visual FX -->
+    <div class="design-layer">
 
-        <!-- empty -->
+        <!-- image -->
+        <div class="image fx-layer layer" style="background-image:url(<?php echo $giving_content[ 'background' ]; ?>)">
+
+            <!-- empty -->
+
+        </div>
+        <!-- END image -->
+
+        <!-- color -->
+        <div class="color fx-layer layer">
+
+            <!--  -->
+
+        </div>
+        <!-- END color -->
 
     </div>
-    <!-- END image -->
+    <!-- END visual FX -->
 
-    <!-- color -->
-    <div class="color fx-layer layer">
+    <!-- content -->
+    <div class="content-layer">
 
-        <!--  -->
+        <a href="<?php echo $giving_content[ 'button' ][ 'url' ]; ?>" class="content-button">
+
+            <?php echo $giving_content[ 'button' ][ 'title' ]; ?>
+
+        </a>
 
     </div>
-    <!-- END color -->
+    <!-- END content -->
 
-</div>
-<!-- END visual FX -->
-
-<!-- content -->
-<div class="content-layer">
-
-    <a href="<?php echo $giving_content[ 'button' ][ 'url' ]; ?>" class="content-button">
-
-        <?php echo $giving_content[ 'button' ][ 'title' ]; ?>
-
-    </a>
-
-</div>
-<!-- END content -->
+</section>
+<!-- END giving -->

@@ -8,60 +8,66 @@
 
 ?>
 
-<!-- visual FX -->
-<div class="design-layer">
+<!-- homepage.section -->
+<section id="department-research" class="homepage-section">
 
-    <!-- image -->
-    <div class="image fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ]; ?>)">
+    <!-- visual FX -->
+    <div class="design-layer">
 
-        <!-- empty -->
+        <!-- image -->
+        <div class="image fx-layer layer" style="background-image:url(<?php echo $research_content[ 'background' ]; ?>)">
+
+            <!-- empty -->
+
+        </div>
+        <!-- END image -->
+
+        <!-- color -->
+        <div class="color fx-layer layer">
+
+            <!--  -->
+
+        </div>
+        <!-- END color -->
 
     </div>
-    <!-- END image -->
+    <!-- END visual FX -->
 
-    <!-- color -->
-    <div class="color fx-layer layer">
+    <!-- content -->
+    <div class="content-layer">
 
-        <!--  -->
+        <?php if ( $research_content[ 'title' ] ) : ?>
+
+        <span class="headline">
+
+            <?php echo $research_content[ 'title' ]; ?>
+
+        </span>
+
+        <?php endif; ?>
+
+        <?php if ( $research_content[ 'text' ] ) : ?>
+
+        <span class="text">
+
+            <?php echo $research_content[ 'text' ]; ?>
+
+        </span>
+
+        <?php endif; ?>
+
+        <?php if ( $research_content[ 'button_link' ] ) : ?>
+
+        <a href="<?php echo $research_content[ 'button_link' ][ 'url' ]; ?>" class="content-button">
+
+            <?php echo $research_content[ 'button_link' ][ 'title' ]; ?>
+
+        </a>
+
+        <?php endif; ?>
 
     </div>
-    <!-- END color -->
+    <!-- END content -->
 
-</div>
-<!-- END visual FX -->
-
-<!-- content -->
-<div class="content-layer">
-
-    <?php if ( $research_content[ 'title' ] ) : ?>
-
-    <span class="headline">
-
-        <?php echo $research_content[ 'title' ]; ?>
-
-    </span>
-
-    <?php endif; ?>
-
-    <?php if ( $research_content[ 'text' ] ) : ?>
-
-    <span class="text">
-
-        <?php echo $research_content[ 'text' ]; ?>
-
-    </span>
-
-    <?php endif; ?>
-
-    <?php if ( $research_content[ 'button_link' ] ) : ?>
-
-    <a href="<?php echo $research_content[ 'button_link' ][ 'url' ]; ?>" class="content-button">
-
-        <?php echo $research_content[ 'button_link' ][ 'title' ]; ?>
-
-    </a>
-
-    <?php endif; ?>
-
-</div>
-<!-- END content -->
+</section>
+<!-- END homepage.section -->

@@ -8,47 +8,52 @@
 
 ?>
 
+<!-- homepage.intro -->
+<section id="department-banner" class="homepage-section">
 
-<!-- introduction -->
-<div class="introduction-text">
+    <!-- introduction -->
+    <div class="introduction-text">
 
-    <?php echo $department_intro_text; ?>
+        <?php echo $department_intro_text; ?>
 
-</div>
-<!-- END introduction -->
+    </div>
+    <!-- END introduction -->
 
-<!-- quick links -->
-<ul class="link-box">
+    <!-- quick links -->
+    <ul class="link-box">
 
-    <li class="link-item">
+        <li class="link-item">
 
-        <a href="#">degree programs</a>
+            <a href="#">degree programs</a>
 
-    </li>
+        </li>
 
-    <li class="link-item">
+        <li class="link-item">
 
-        <a href="#">centers and institutes</a>
+            <a href="#">centers and institutes</a>
 
-    </li>
+        </li>
 
-    <li class="link-item">
+        <li class="link-item">
 
-        <a href="#">services and outreach</a>
+            <a href="#">services and outreach</a>
 
-    </li>
+        </li>
 
-    <li class="link-item">
+        <li class="link-item">
 
-        <a href="#">about the department</a>
+            <a href="#">about the department</a>
 
-    </li>
+        </li>
 
-    <li class="link-item">
+        <li class="link-item">
 
-        <a href="#">communications</a>
+            <a href="#">communications</a>
 
-    </li>
+        </li>
 
-</ul>
-<!-- END quick links -->
+    </ul>
+    <!-- END quick links -->
+
+</section>
+<!-- END homepage.intro -->
