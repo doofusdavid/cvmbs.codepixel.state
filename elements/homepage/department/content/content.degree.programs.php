@@ -41,8 +41,6 @@
     </div>
     <!-- END visual FX -->
 
-
-
     <!-- programs -->
     <div id="department-degree-programs-content" class="dept-deg-progs__content">
 
@@ -59,7 +57,6 @@
             }
         }
         ?>
-
 
         <?php
         $grad_args = array(
@@ -95,6 +92,8 @@
 
             <h3 class="dept-deg-progs__type-heading">Graduate Programs</h3>
 
+            <div class="programs-container">
+
             <?php
             while ( $grad_degs->have_posts() ) : $grad_degs->the_post();
                 $ancestors = get_post_ancestors( $post->ID );
@@ -103,7 +102,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
@@ -111,6 +110,8 @@
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>
+
+            </div>
 
         </div><!-- .dept-deg-progs__type -->
 
@@ -152,6 +153,8 @@
 
             <h3 class="dept-deg-progs__type-heading">Undergraduate Concentrations</h3>
 
+            <div class="programs-container">
+
             <?php
             while ( $concentrations->have_posts() ) : $concentrations->the_post();
                 $ancestors = get_post_ancestors( $post->ID );
@@ -160,7 +163,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
@@ -168,6 +171,8 @@
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>
+
+            </div>
 
         </div><!-- .dept-deg-progs__type -->
 
@@ -209,6 +214,8 @@
 
             <h3 class="dept-deg-progs__type-heading">Undergraduate Minors</h3>
 
+            <div class="programs-container">
+
             <?php
             while ( $minors->have_posts() ) : $minors->the_post();
                 $ancestors = get_post_ancestors( $post->ID );
@@ -217,7 +224,7 @@
             <a class="program-link" href="<?php the_permalink(); ?>">
                 <?php
                 if ( $ancestors[1] ) {
-                    echo get_post( $ancestors[0] )->post_title . ' &mdash; ';
+                    echo '<span>' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
 
                 the_title();
@@ -225,6 +232,8 @@
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>
+
+            </div>
 
         </div><!-- .dept-deg-progs__type -->
 

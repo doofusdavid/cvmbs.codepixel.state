@@ -8,7 +8,7 @@
 
         position: relative;
 
-        padding: 10rem 5rem 10rem 5rem;
+        padding: 10rem 4rem 10rem 4rem;
 
         @include color( white, 0.000 );
 
@@ -17,8 +17,8 @@
         @include gradient(
 
             0deg,
-            $g140, 0.365, 0%,
-            $g140, 1.000, 60%
+            $g140, 0.000, 0%,
+            $g140, 1.000, 40%
 
         );
 
@@ -66,16 +66,17 @@
 
                 background: {
 
-                    image: url(../img/patterns/pattern.horizontal.svg);
+                    image: url(../img/patterns/pattern.vertical.svg);
                     repeat: no-repeat;
                     size: 160%;
-                    position: -10rem -10rem;
+                    size: cover;
+                    // position: -10rem -10rem;
 
                 }
 
-                // mix-blend-mode: overlay;
+                mix-blend-mode: overlay;
 
-                opacity: 0.065;
+                opacity: 0.165;
 
             }
 
@@ -98,7 +99,7 @@
             // title
             .section-heading {
 
-                margin: 0 0 2rem 0;
+                margin: 0 0 2rem 1rem;
 
                 @include font( $klavislim, 3rem, 400 );
 
@@ -127,22 +128,54 @@
             }
 
             &-heading {
+                margin: 0 0 1rem 1rem;
                 color: white;
+            }
+
+            .programs-container {
+
+                @include flex-h-s-v-st( false );
+
+                flex-wrap: wrap;
+
             }
 
             // link
             .program-link {
 
-                // @include flex-h-s-v-c( false );
-                display: block;
+                @include flex-v-b-h-s( true );
 
-                @include font( $industry, 0.875rem, 600 );
+                flex: 0 0 auto;
 
-                @include typo( 1.6, 0.035em );
+                width: calc( 25% - 2rem );
+                // height: 12rem;
+                margin: 1rem 1rem 1rem 1rem;
+                padding: 2rem 2rem 2rem 2rem;
+
+                // @include font( $industry, 0.875rem, 600 );
+                @include font( $klavislim, 1.125rem, 400 );
+
+                text-decoration: none;
+
+                @include text( $up );
+
+                @include typo( 1.2, 0.035em );
 
                 @include color( $cvellow, 0.000 );
 
+                @include fill( white, 0.965 );
+
+                @include shadowbox( 1rem, 3rem, black, 0.365 );
+
                 transition: all 220ms linear 0ms;
+
+                span {
+
+                    @include font( $klavislim, 0.875rem, 400 );
+
+                    @include color( white, 0.000 );
+
+                }
 
                 // hover state
                 &:hover,

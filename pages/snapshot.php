@@ -42,19 +42,19 @@
 
                 <div class="content-block">
 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.demographic.00.gif" alt="">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.demographic.00.gif" alt="">
 
                 </div>
 
                 <div class="content-block">
 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.demographic.01.gif" alt="">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.demographic.01.gif" alt="">
 
                 </div>
 
                 <div class="content-block">
 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.demographic.02.gif" alt="">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.demographic.02.gif" alt="">
 
                 </div>
 
@@ -64,7 +64,7 @@
             <!-- map -->
             <div id="map" class="content-row full">
 
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.map.gif" alt="5 countries and 26 states represented">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.map.gif" alt="5 countries and 26 states represented">
 
             </div>
             <!-- END map -->
@@ -158,13 +158,13 @@
 
                 <div class="content-block">
 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.language.02.gif" alt="13 langugaes spoken">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.language.02.gif" alt="13 langugaes spoken">
 
                 </div>
 
                 <div class="content-block">
 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/snapshot/snapshot.language.01.gif" alt="Armenian, Chinese, Dutch French, Hindi, Japanese, Korean, Persian, Punjabi, Russian, Spanish, Thai, and American Sign Language">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/snapshot/snapshot.language.01.gif" alt="Armenian, Chinese, Dutch French, Hindi, Japanese, Korean, Persian, Punjabi, Russian, Spanish, Thai, and American Sign Language">
 
                 </div>
 
