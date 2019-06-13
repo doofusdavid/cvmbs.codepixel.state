@@ -6,11 +6,8 @@
 
 <?php get_header(); ?>
 
-<!-- site.layout -->
-<main id="site-layout" class="off-canvas-content snapshot" data-off-canvas-content>
-
-    <!-- content -->
-    <div id="content-container" class="ui-section">
+<div id="primary" class="content-area dvm-snapshot">
+	<main id="main" class="site-main">
 
         <?php
 
@@ -20,13 +17,13 @@
 
             if( $header[ 'styled_header' ] ) {
 
-                get_template_part( 'elements/blocks/block.header.styled' );
+                get_template_part( 'elements/blocks/dvm/block.header.styled' );
 
                 $content_class = 'styled';
 
             } else {
 
-                get_template_part( 'elements/blocks/block.header.default' );
+                get_template_part( 'elements/blocks/dvm/block.header.default' );
 
                 $content_class = 'default';
 
@@ -34,8 +31,7 @@
 
         ?>
 
-        <!-- page content -->
-        <section id="primary" class="content-area <?php echo $content_class; ?>">
+        <div class="flexible-page-content">
 
             <!-- demographics -->
             <div id="demographics" class="content-row thirds">
