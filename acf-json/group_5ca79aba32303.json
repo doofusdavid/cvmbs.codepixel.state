@@ -1587,7 +1587,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "pages\/dvm.flexible.php"
             }
         ]
     ],
@@ -1601,5 +1601,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1560435982
+    "modified": 1560455388
 }
