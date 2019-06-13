@@ -1,8 +1,8 @@
 <div class="organizations program-block">
 
-	<h3 class="organizations__title program-block__title">
+	<h2 class="organizations__title program-block__title">
 		<?php the_sub_field('heading'); ?>
-	</h3><!-- .organizations__title -->
+	</h2><!-- .organizations__title -->
 
 	<div class="organizations__buttons">
 

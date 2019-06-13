@@ -146,7 +146,7 @@
                             "key": "field_5cfa967919042",
                             "label": "Description",
                             "name": "desc",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -156,10 +156,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "wpautop"
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
                         },
                         {
                             "key": "field_5cfa967919129",
@@ -718,6 +718,30 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_5d0286b56f097",
+                            "label": "Image Position",
+                            "name": "img_pos",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "Left",
+                                "right": "Right"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "right",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_5cfabb89299f1",
                             "label": "Heading",
                             "name": "heading",
@@ -873,5 +897,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560445230
+    "modified": 1560447144
 }

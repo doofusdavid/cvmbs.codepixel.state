@@ -1,9 +1,9 @@
 <div class="employers program-block">
 
 	<div class="employers__intro">
-		<h3 class="employers__title program-block__title">
+		<h2 class="employers__title program-block__title">
 			<?php _e( 'Potential Employers', 'cvmbsPress' ); ?>
-		</h3>
+		</h2>
 
 		<?php if ( get_sub_field('desc') ) : ?>
 		<div class="employers__desc">

@@ -11,9 +11,9 @@ $bg_img = get_sub_field('img') ? 'style="background-image:url(' . get_sub_field(
 
 		<div class="app-info__inner">
 
-			<h3 class="app-info__title program-block__title">
+			<h2 class="app-info__title program-block__title">
 				<?php _e( 'Application Information and Deadlines', 'cvmbsPress' ); ?>
-			</h3>
+			</h2>
 
 			<?php the_sub_field('desc'); ?>
 

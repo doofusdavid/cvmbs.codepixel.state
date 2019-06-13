@@ -55,6 +55,10 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 					get_template_part( $block_path . 'facilities' );
 
+				elseif ( get_row_layout() == 'program_contacts') :
+
+					get_template_part( $block_path . 'contacts' );
+
 				elseif ( get_row_layout() == 'program_facts' ) :
 
 					get_template_part( $block_path . 'facts' );
