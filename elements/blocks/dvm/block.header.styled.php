@@ -16,13 +16,24 @@ if ( have_rows('page_header') ) :
             <h1 class="entry-title">
 
                 <?php the_title(); ?>
-                
+
             </h1>
             <!-- END page title -->
 
             <!-- page subtitle -->
             <p class="entry-subtitle"> <?php echo $options[ 'subtitle' ]; ?></p>
             <!-- END page subtitle -->
+
+            <?php if ( $options[ 'introduction' ] ) : ?>
+
+            <span>
+
+                <?php echo $options[ 'introduction' ]; ?>
+
+            </span>
+
+            <?php endif; ?>
+
 		</div><!-- .flexible-page-header--styled__content -->
 	</div><!-- .flexible-page-header--styled__inner -->
 </header><!-- .flexible-page-header--styled -->

@@ -28,27 +28,92 @@
 
 		&__toggle {
 
+			position: relative;
+
 			@include flex-h-j-v-c( false );
 
 			width: 100%;
-			padding: 1.125rem 1rem 1rem 1rem;
+			padding: 1rem 1rem 1rem 0;
 
 			@include text( $up, left );
 
 			@include color( $g140, 0.000 );
 
-			transition: background 220ms linear 0ms;
+			transition: all 220ms linear 0ms;
 
 			// hover state
 			&:hover {
 
-				//
+				// @include fill( $app05, 0.825 );
+				@include color( $app05, 0.000 );
 
 			}
 
+			// opened state
 			&[aria-expanded='true'] {
 
-				//
+				// before
+				&:before {
+
+					opacity: 0.000;
+
+				}
+
+				// after
+				&:after {
+
+					opacity: 1.000;
+
+				}
+
+			}
+
+			// closed state
+			&[aria-expanded='false'] {
+
+				// before
+				&:before {
+
+					opacity: 1.000;
+
+				}
+
+				// after
+				&:after {
+
+					opacity: 0.000;
+
+				}
+
+			}
+
+			// icons
+			&:before,
+			&:after {
+
+				position: absolute;
+
+				top: 1.25rem;
+				right: 0;
+				bottom: 1.25rem;
+
+				z-index: 10;
+
+				transition: all 80ms linear 0ms;
+
+			}
+
+			// before
+			&:before {
+
+				@include codicon( 1rem, 1rem, 0, 1rem, transparentize( $app05, 0.325 ), '\ED5D' );
+
+			}
+
+			// after
+			&:after {
+
+				@include codicon( 1rem, 1rem, 0, 1rem, transparentize( $app05, 0.325 ), '\ED5E' );
 
 			}
 
@@ -60,21 +125,27 @@
 
 			.has-loaded & {
 
-				opacity: 1;
 				width: 100%;
 				height: 100%;
 				max-height: 1000vh;
-				background: #eee;
-				padding: 1rem;
+				padding: 1rem 1rem 1rem 1rem;
+
+				opacity: 1.000;
+
+				// background: #EEEEEE;
 
 				&[aria-hidden="true"] {
 
 					display: none;
-					overflow: hidden;
-					visibility: hidden;
-					opacity: 0;
+
 					height: 0;
 					max-height: 0;
+
+					overflow: hidden;
+
+					visibility: hidden;
+
+					opacity: 0.000;
 
 				}
 
