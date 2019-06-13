@@ -65,11 +65,11 @@
                 <header class="header">
 
                     <!-- title -->
-                    <h4 class="place-title">
+                    <h3 class="place-title">
 
                         <?php the_title(); ?>
 
-                    </h4>
+                    </h3>
                     <!-- END title -->
 
                     <!-- link -->
