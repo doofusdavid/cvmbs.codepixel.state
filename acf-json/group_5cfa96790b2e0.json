@@ -418,6 +418,54 @@
                     "min": "",
                     "max": "1"
                 },
+                "layout_5d0280cfea349": {
+                    "key": "layout_5d0280cfea349",
+                    "name": "program_contacts",
+                    "label": "Program Contacts",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d0280e9ea34a",
+                            "label": "Description",
+                            "name": "desc",
+                            "type": "textarea",
+                            "instructions": "(optional)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_5d028105ea34b",
+                            "label": "Form",
+                            "name": "form",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
                 "5c77026dec019": {
                     "key": "5c77026dec019",
                     "name": "program_facts",
@@ -825,5 +873,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559945688
+    "modified": 1560445230
 }
