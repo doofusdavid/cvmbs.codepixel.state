@@ -257,7 +257,7 @@
             <!-- info -->
             <div class="listing-info">
 
-                <pre class="developer">
+                <pre class="developer hide">
 
                     <?php print_r( $getMember ); ?>
 
