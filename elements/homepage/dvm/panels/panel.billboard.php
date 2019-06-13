@@ -95,7 +95,7 @@
             <!-- END link -->
 
             <!-- link -->
-            <a id="button-admissions" class="button-link" href="application-criteria">
+            <a id="button-admissions" class="button-link" href="admission-requirements">
 
                 <!-- title -->
                 <span class="button-title">
@@ -108,7 +108,7 @@
                 <!-- text -->
                 <span class="button-text">
 
-                    application criteria, evaluation factors, and tips for creating a strong application
+                    prerequisites, evaluation factors, and tips for creating a strong application
 
                 </span>
                 <!-- END text -->
