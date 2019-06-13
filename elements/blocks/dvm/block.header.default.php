@@ -7,7 +7,7 @@
 ?>
 
 <!-- page header -->
-<header class="page-header default">
+<header class="flexible-page-header">
 
     <!-- page title -->
     <h1 class="entry-title">

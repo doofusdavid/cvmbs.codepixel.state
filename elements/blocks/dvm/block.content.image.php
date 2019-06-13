@@ -3,14 +3,15 @@
 
     $image       = get_sub_field( 'image' );
     $image_width = $image[ 'width' ] . 'px';
+    $img_pos     = get_sub_field( 'image_position' );
 
 ?>
 
-<div class="template-block">
+<div class="template-block floated-image">
 
-    <div class="template-block__inner floated-image">
+    <div class="template-block__inner">
 
-    	<figure class="floated-image--left" width="<?php echo $image[ 'width' ]; ?>">
+    	<figure class="floated-image--<?php echo esc_attr( $img_pos ); ?>" width="<?php echo $image[ 'width' ]; ?>">
 
 			<?php echo wp_get_attachment_image( $image[ 'ID' ], 'large' ); ?>
 
