@@ -3,13 +3,12 @@
     $heading_level = get_sub_field( 'heading_level' );
     $layout        = get_sub_field( 'layout' );
     $ctas          = get_sub_field( 'ctas' );
-    $cta_image     = $ctas[0][ 'cta_image' ];
+    $cta_image     = get_sub_field( 'cta_image' );
 
 ?>
 
-<div class="template-block">
+<div class="template-block ctas-with-image">
 	<div class="template-block__inner">
-
 
 		<?php if ( have_rows('ctas') ) : ?>
 
@@ -18,7 +17,7 @@
 			<?php while ( have_rows('ctas') ) : the_row(); ?>
 
 			<div class="ctas__grid-item ">
-				<div class="ctas__grid-item-image" style="background-image:url(<?php echo $cta_image[ 'url' ]; ?>);"></div>
+				<div class="ctas__grid-item-image" style="background-image:url(<?php echo esc_url( get_sub_field('cta_image') ); ?>);"></div>
 
 				<div class="ctas__grid-item-content">
 					<<?php echo $heading_level; ?> class="ctas__grid-item-heading">
