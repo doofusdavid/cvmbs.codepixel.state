@@ -53,7 +53,7 @@
 
                 ?>
 
-                more than a centruy of excellence in teaching advanced veterinary medicine and compassionate care
+                more than a century of education, leadership, and innovation in veterinary medicine
 
             </span>
             <!-- END text -->

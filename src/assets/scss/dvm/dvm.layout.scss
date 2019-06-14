@@ -336,6 +336,8 @@
 
                     @include text( none, right );
 
+                    text-decoration: none;
+
                     @include color( white, 0.000 );
 
                     @include fill( white, 0.825 );
@@ -570,6 +572,13 @@
             position: relative;
 
             z-index: 5;
+
+            // links
+            a {
+
+                text-decoration: none;
+
+            }
 
             // 03
             #section-03 {

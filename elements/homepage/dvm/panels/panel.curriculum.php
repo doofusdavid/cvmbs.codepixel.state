@@ -18,7 +18,13 @@
 
     <p>
 
-        Your curriculum provides education and training that emphasize case-based and hands-on learning during all four years. You will progressively advance in knowledge and application of normal biology, pathophysiology, clinical medicine, surgery, clinical reasoning, and professional skills. You’ll spend your first and second years primarily in classrooms; your third and fourth years will be highlighted by clinical rotation at the James L. Voss Veterinary Teaching Hospital
+        Your curriculum provides education and training that emphasize case-based and hands-on learning during all four years. You will progressively advance in knowledge and application of normal biology, pathophysiology, clinical medicine, surgery, clinical reasoning, and professional skills.
+
+    </p>
+
+    <p>
+
+        You’ll spend your first and second years primarily in classrooms; your third and fourth years will be highlighted by clinical rotation at the James L. Voss Veterinary Teaching Hospital
 
     </p>
 
