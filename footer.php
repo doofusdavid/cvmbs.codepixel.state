@@ -1,3 +1,4 @@
+        </div><!-- #content -->
 
         <?php get_template_part( 'elements/menus/menu.site' ); ?>
 

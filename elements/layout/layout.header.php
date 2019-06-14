@@ -2,7 +2,7 @@
 <?php $site_type = get_field( 'site_type', 'options' ); ?>
 
 <!-- header -->
-<header id="site-header" class="header <?php echo $site_type; ?>" role="banner">
+<header id="site-header" class="header <?php echo $site_type; ?>" role="banner" aria-owns="cvmbs-content">
 
     <?php get_template_part( 'elements/brand/brand.rams' ); ?>
 
