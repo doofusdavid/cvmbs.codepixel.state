@@ -15,7 +15,8 @@
 		transition: all 360ms $outex 0ms;
 
 		// hover state
-		&:hover {
+		&:hover,
+		&:focus-within {
 
 			@include shadowbox( 0.5rem, 2rem, black, 0.685 );
 
@@ -46,7 +47,7 @@
 			@include flex-h-j-v-c( false );
 
 			width: 100%;
-			padding: 1.25rem 1rem 1.25rem 1.25rem;
+			padding: 1.25rem 3rem 1.25rem 1.25rem;
 
 			@include text( $up, left );
 
@@ -57,7 +58,9 @@
 			transition: all 220ms linear 0ms;
 
 			// hover state
-			&:hover {
+			&:hover,
+			&:focus,
+			&:active {
 
 				// @include fill( $app05, 0.825 );
 				@include color( $app05, 0.000 );
