@@ -8,39 +8,25 @@
 
 get_header(); ?>
 
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-			<article>
-				<header>
-					<h1 class="entry-title"><?php _e( 'File Not Found', 'foundationpress' ); ?></h1>
-				</header>
-				<div class="entry-content">
-					<div class="error">
-						<p class="bottom"><?php _e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'foundationpress' ); ?></p>
-					</div>
-					<p><?php _e( 'Please try the following:', 'foundationpress' ); ?></p>
-					<ul>
-						<li>
-							<?php _e( 'Check your spelling', 'foundationpress' ); ?>
-						</li>
-						<li>
-							<?php
-								/* translators: %s: home page url */
-								printf(
-									__( 'Return to the <a href="%s">home page</a>', 'foundationpress' ),
-									home_url()
-								);
-							?>
-						</li>
-						<li>
-							<?php _e( 'Click the <a href="javascript:history.back()">Back</a> button', 'foundationpress' ); ?>
-						</li>
-					</ul>
-				</div>
-			</article>
-		</main>
-		<?php get_sidebar(); ?>
-	</div>
-</div>
-<?php get_footer();
+<div class="error404__container">
+
+	<div class="error404__inner">
+
+		<main class="error404__content">
+
+			<p class="error404__hidden" aria-hidden="true">404</p>
+
+			<h1 class="error404__heading"><?php _e( 'Sorry, that page cannot be found.', 'cvmbsPress' ); ?></h1>
+
+			<p class="error404__message"><?php _e( 'We apologise for the inconvenience, but the page or section you have attempted to access cannot be found.', 'cvmbsPress' ); ?></p>
+
+		</main><!-- .error404__content -->
+
+	</div><!-- .error404__inner -->
+
+</div><!-- .error404__container -->
+
+<?php
+get_template_part( 'elements/layout/layout.footer' );
+
+get_footer();

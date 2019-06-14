@@ -1,0 +1,43 @@
+.error404 {
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		background: white url(../img/billboards/billboard.404.jpg) no-repeat center center / cover;
+		padding-top: 5rem;
+	}
+
+	&__inner {
+		padding: 8vw;
+	}
+
+	&__content {
+		color: $oil;
+		text-align: center;
+	}
+
+	&__hidden {
+		margin: 0;
+		color: rgba(white, .3);
+		font-family: $industry;
+		font-size: calc(5rem + 15vw);
+		font-weight: 900;
+		letter-spacing: .05em;
+		line-height: 1;
+		text-shadow: 0 0 .5em rgba($proper, .9);
+	}
+
+	&__heading {
+		font-family: $industry;
+		font-size: calc(1rem + 1vw);
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__message {
+		margin: 0;
+	}
+
+}
