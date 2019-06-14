@@ -36,14 +36,14 @@
         <?php
 
             $page_notification = get_field( 'page_notification' );
-            $notification = $page_notification[ 'notification' ];
+            $notification = $page_notification[ 'notification_option' ];
 
             if ( $notification ) {
 
                 get_template_part( 'elements/blocks/dvm/block.notification' );
 
             }
-
+			
         ?>
 
         <div class="flexible-page-content">

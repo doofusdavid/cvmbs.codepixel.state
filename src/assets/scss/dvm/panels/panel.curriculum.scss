@@ -52,7 +52,8 @@
             // text
             p {
 
-                margin: 0 0 0 0;
+                width: 60vw;
+                margin: 0 0 1rem 0;
 
                 @include font( $industry, 1rem, 600 );
 
@@ -64,7 +65,7 @@
                 @include flex-h-c-v-c( false );
 
                 height: 4rem;
-                margin: 2rem 0 0 0;
+                margin: 1rem 0 0 0;
                 padding: 0.0625rem 1.5rem 0 1.5rem;
 
                 // border: 1px solid $g140;

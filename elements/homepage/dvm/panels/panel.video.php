@@ -35,7 +35,7 @@
 
     <p>
 
-        Become part of a college that for more than a century has valued and taught the essential role of veterinary medicine in animal, human, and environmental health. With your knowledge and training, you’ll be prepared to make a difference in our world.
+        It's where hands meet heart.  It's where your life's work can save lives. It's where YOU make a difference. 
 
     </p>
 

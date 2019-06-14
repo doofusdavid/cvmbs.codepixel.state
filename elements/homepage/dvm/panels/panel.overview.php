@@ -21,13 +21,19 @@
 
         <p>
 
-            Ours is among a handful of legacy programs recognized by the Association of American Veterinary Medical Colleges for longstanding leadership in veterinary education. Our veterinary school includes many world-renowned faculty members and is continually ranked among the best in the world by U.S. News & World Report.
+            Become part of a college that has valued and taught the essential role of veterinary medicine in animal, human, and environmental health for over 100 years.
 
         </p>
 
         <p>
 
-            Four academic departments contribute faculty expertise and teaching to our Doctor of Veterinary Medicine Program – a feature that provides you with the most complete, in-depth scientific and medical knowledge and sets our program apart from all other veterinary schools.
+            Continually ranked among the best in the country by U.S. News & World Report, our Doctor of Veterinary Medicine Program was the first to teach veterinary ethics, clinical communication skills, and practitioner wellness.
+
+        </p>
+
+        <p>
+
+            Four academic departments contribute faculty expertise to our program, providing in-depth scientific and medical knowledge that sets our program apart from other veterinary schools.
 
         </p>
 
@@ -64,9 +70,9 @@
         <!-- callout -->
         <div id="visits" class="callout-block ">
 
-            <span class="number">40,000</span>
+            <span class="number">42,000</span>
 
-            <span class="stat-label">patient visits per year,<br />offering great cases<br />for learning</span>
+            <span class="stat-label">teaching hospital<br />patient visits per year</span>
 
         </div>
         <!-- END callout -->

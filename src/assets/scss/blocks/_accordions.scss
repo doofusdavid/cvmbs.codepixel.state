@@ -8,6 +8,19 @@
 
 	.cvmbs-accordion {
 
+		@include shadowbox( 0.125rem, 0.75rem, black, 0.885 );
+
+		transform: translate3d( 0, 0, 0 );
+
+		transition: all 360ms $outex 0ms;
+
+		// hover state
+		&:hover {
+
+			@include shadowbox( 0.5rem, 2rem, black, 0.685 );
+
+		}
+
 		&.has-loaded {
 
 			margin-bottom: 1.25rem;
@@ -33,11 +46,13 @@
 			@include flex-h-j-v-c( false );
 
 			width: 100%;
-			padding: 1rem 1rem 1rem 0;
+			padding: 1.25rem 1rem 1.25rem 1.25rem;
 
 			@include text( $up, left );
 
 			@include color( $g140, 0.000 );
+
+			@include fill( white, 0.000 );
 
 			transition: all 220ms linear 0ms;
 
@@ -93,9 +108,9 @@
 
 				position: absolute;
 
-				top: 1.25rem;
-				right: 0;
-				bottom: 1.25rem;
+				top: 1.5rem;
+				right: 1.5rem;
+				bottom: 1.5rem;
 
 				z-index: 10;
 
@@ -123,12 +138,14 @@
 
 			transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1);
 
+			@include fill( white, 0.000 );
+
 			.has-loaded & {
 
 				width: 100%;
 				height: 100%;
 				max-height: 1000vh;
-				padding: 1rem 1rem 1rem 1rem;
+				padding: 1rem 2rem 1rem 2rem;
 
 				opacity: 1.000;
 
