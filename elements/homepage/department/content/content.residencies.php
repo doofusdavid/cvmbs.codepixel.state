@@ -36,7 +36,7 @@
 
 	$args = array(
 		'post_type'      => 'residency',
-		'orderby'        => 'menu_order',
+		'orderby'        => 'title',
 		'order'          => 'ASC',
 		'posts_per_page' =>  99,
 		'tax_query'      =>  array(
