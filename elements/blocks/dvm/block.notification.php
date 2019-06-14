@@ -5,16 +5,28 @@
 
 ?>
 
-<!-- notification -->
-<div class="notification <?php echo $notification[ 'notification_type' ]; ?>">
+<!-- block -->
+<div class="template-block notification-block">
 
-    <h3>
+    <!-- container -->
+    <div class="template-block__inner notification-block__inner">
 
-        <?php echo $notification[ 'notification_title' ]; ?>
+        <!-- notification -->
+        <div class="notification <?php echo $notification[ 'notification_type' ]; ?>">
 
-    </h3>
+            <h3>
 
-    <?php echo $notification[ 'notification_content' ]; ?>
+                <?php echo $notification[ 'notification_title' ]; ?>
+
+            </h3>
+
+            <?php echo $notification[ 'notification_content' ]; ?>
+
+        </div>
+        <!-- END notification -->
+
+    </div>
+    <!-- END container -->
 
 </div>
-<!-- END notification -->
+<!-- END block -->
