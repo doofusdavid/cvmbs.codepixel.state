@@ -7,6 +7,14 @@
         // @include fill( $roarange, 0.185 );
         background: #bc4c2d; // $roarange with .815 opacity over $app05
 
+        @include gradient(
+
+            180deg,
+            $cvnavy, 0.000, 0%,
+            transparent, 1.000, 100%
+
+        );
+
         // billboard
         &:before {
             content: '';
