@@ -17,6 +17,7 @@
 			<?php while ( have_rows('ctas') ) : the_row(); ?>
 
 			<div class="ctas__grid-item ">
+
 				<div class="ctas__grid-item-image" style="background-image:url(<?php echo esc_url( get_sub_field('cta_image') ); ?>);"></div>
 
 				<div class="ctas__grid-item-content">

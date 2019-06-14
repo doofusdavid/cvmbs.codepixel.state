@@ -42,7 +42,11 @@
 
                 get_template_part( 'elements/blocks/dvm/block.notification' );
 
-            }
+            } else {
+
+				//
+
+			}
 
         ?>
 
