@@ -278,7 +278,7 @@
     // timeline
     .timeline {
 
-        // padding: 2rem 10vw 2rem 10vw;
+        padding: 2rem 0 2rem 0;
 
         // title
         .timeline-title {
@@ -287,85 +287,132 @@
 
         }
 
+		// entries
+		.timeline-entries {
+
+			position: relative;
+
+			// before
+			&:before {
+
+				content: '';
+
+				position: absolute;
+
+				top: 0;
+				left: 2.4375rem;
+
+				z-index: 1;
+
+				width: 2px;
+				height: 100%;
+
+				@include fill( $app05, 0.765 );
+
+			}
+
+		}
+
         // entry
         .timeline-entry {
+
+			position: relative;
+
+			min-height: 6rem;
+			margin: 0 0 2.5rem 0;
+			padding: 0 0 0 6rem;
 
             // even
             &:nth-child( even ) {
 
-                padding: 2rem 0 2rem 4rem;
-
-                border-top: 1px solid transparentize( $app05, 0.785 );
-                border-left: 1px solid transparentize( $app05, 0.785 );
+                //
 
             }
 
             // odd
             &:nth-child( odd ) {
 
-                padding: 2rem 4rem 2rem 0;
-
-                border-top: 1px solid transparentize( $app05, 0.785 );
-                border-right: 1px solid transparentize( $app05, 0.785 );
-
-            }
-
-            // first child
-            &:first-child {
-
-                border-top: none;
-
-            }
-
-            // last child
-            &:last-child {
-
-                // padding-bottom: 0;
-
-            }
-
-            // content
-            span {
-
-                display: block;
-
-                // text
-                p {
-
-                    // last child
-                    &:last-child {
-
-                        margin-bottom: 0;
-
-                    }
-
-                }
+				//
 
             }
 
             // date
             .timeline-entry-date {
 
-                margin: 0 0 0.5rem 0;
-
-                @include font( $industry, 0.75rem, 700 );
-
-                @include text( $up );
-
-                @include typo( 0.5rem, 0.045em );
-
-                @include color( $g140, 0.000 );
+				@include shadowbox( 0.75rem, 2rem, black, 0.465 );
 
             }
+
+			// date
+			.date {
+
+				// styled
+				&__styled {
+
+					position: absolute;
+
+					top: 0;
+					left: 0;
+
+					z-index: 10;
+
+					@include flex-v-j-h-st( false );
+
+					width: 5rem;
+					height: 6rem;
+
+					@include fill( white, 0.000 );
+
+				}
+
+				// default
+				&__default {
+
+					@include fill( blue, 0.000 );
+
+				}
+
+			}
+
+			// meta
+			.entry-meta {
+
+				// month
+				&__month {
+
+					@include flex-h-c-v-c( false );
+
+					height: 2.5rem;
+					padding: 0.5rem 0 0 0;
+
+					@include font( $klavislim, 0.875rem, 400 );
+
+					@include text( $up );
+
+				}
+
+				// day
+				&__day {
+
+					@include flex-h-c-v-t( false );
+
+					height: 4rem;
+					padding: 0 0 0.5rem 0;
+
+					@include font( $decima, 2rem, 400 );
+
+					@include text( $up );
+
+					letter-spacing: -0.1em;
+
+				}
+
+			}
 
             // title
             .timeline-entry-title {
 
-                margin: 0 0 0.5rem 0;
-
-                @include font( $industry, inherit, 700 );
-
-                @include color( $app05, 0.165 );
+                //
 
             }
 

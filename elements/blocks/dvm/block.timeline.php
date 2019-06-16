@@ -1,6 +1,7 @@
 <?php
 
 	$timeline_title = get_sub_field( 'heading' );
+	$heading_option = get_sub_field( 'heading_option' );
 
 ?>
 
@@ -13,67 +14,104 @@
         <!-- timeline -->
         <div class="timeline">
 
+		<?php if ( $heading_option ) : ?>
+
 		<<?php echo $timeline_title[ 'html_tag' ]; ?> class="timeline-title">
 
 			<?php echo $timeline_title[ 'title' ]; ?>
 
 		</<?php echo $timeline_title[ 'html_tag' ]; ?>>
 
-        <?php
+		<?php endif; ?>
 
-            if ( have_rows( 'timeline_entries' ) ) :
+		<?php $setup_chronos = get_sub_field( 'timeline_entries' ); ?>
 
-                while( have_rows( 'timeline_entries' ) ) : the_row();
+        <?php if ( have_rows( 'timeline_entries' ) ) : ?>
 
-					$date_style      = get_sub_field( 'date_style' );
-                    $entry_date      = get_sub_field( 'entry_date' );
-					$entry_date_text = get_sub_field( 'entry_date_text' );
-                    $entry_title     = get_sub_field( 'entry_title' );
-                    $entry_content   = get_sub_field( 'entry_content' ); ?>
+			<?php
 
-					<div class="timeline-entry">
+				$base_array  = $setup_chronos[ 0 ];
+				$config_base = explode( '-', $base_array[ 'entry_date' ] );
+				$base_year   = $config_base[ 2 ]; ?>
 
-						<div class="timeline-entry-content">
+			<!-- entries -->
+			<div class="timeline-entries">
 
-							<span class="timeline-entry-date">
+            <?php while( have_rows( 'timeline_entries' ) ) : the_row();
 
-								<?php
+				$date_style      = get_sub_field( 'date_style' );
+                $raw_entry_date  = get_sub_field( 'entry_date' );
+				$entry_date_text = get_sub_field( 'entry_date_text' );
+                $entry_title     = get_sub_field( 'entry_title' );
+                $entry_content   = get_sub_field( 'entry_content' );
 
-									if ( $date_style ) {
+				// setup date icons and chronology
+				$entry_date = explode( '-', $raw_entry_date );
 
-										echo $entry_date;
+				$month = $entry_date[ 0 ];
+				$day   = $entry_date[ 1 ];
+				$year  = $entry_date[ 2 ];
 
-									} else {
+				if ( $year > $base_year ) {
 
-										echo $entry_date_text;
+					// echo 'happy new year';
 
-									}
+				} ?>
 
-								?>
+				<div class="timeline-entry">
+
+					<div class="timeline-entry-content">
+
+						<?php if ( $date_style ) : ?>
+
+						<div class="timeline-entry-date date__styled">
+
+							<span class="entry-meta__month">
+
+								<?php echo $month; ?>
 
 							</span>
 
-		                    <span class="timeline-entry-title">
+							<span class="entry-meta__day">
 
-								<?php echo $entry_title; ?>
-
-							</span>
-
-							<span class="timeline-entry-text">
-
-								<?php echo $entry_content; ?>
+								<?php echo $day; ?>
 
 							</span>
 
 						</div>
 
+						<?php else : ?>
+
+						<span class="timeline-entry-date date__default">
+
+							<?php echo $entry_date_text; ?>
+
+						</span>
+
+						<?php endif; ?>
+
+	                    <span class="timeline-entry-title">
+
+							<?php echo $entry_title; ?>
+
+						</span>
+
+						<span class="timeline-entry-text">
+
+							<?php echo $entry_content; ?>
+
+						</span>
+
 					</div>
 
-                <?php endwhile;
+				</div>
 
-            endif;
+                <?php endwhile; ?>
 
-        ?>
+			</div>
+			<!-- END entries -->
+
+			<?php endif; ?>
 
         </div>
         <!-- END timeline -->
