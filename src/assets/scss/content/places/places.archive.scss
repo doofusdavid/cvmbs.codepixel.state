@@ -70,6 +70,13 @@
 
                         @include color( white, 0.000 );
 
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include font( $klavislim, 2rem, 400 );
+
+                        }
+
                     }
 
                     // toolbar
