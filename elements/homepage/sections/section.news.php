@@ -9,62 +9,58 @@ $articles    = json_decode( $data );
 
 <section id="news" class="section-news">
 
-        <!-- title -->
-        <a href="https://cvmbs.source.colostate.edu/">
+    <!-- title -->
+    <a href="https://cvmbs.source.colostate.edu/">
 
-            <!-- heading -->
-            <h3 class="section-title">
+        <!-- heading -->
+        <h3 class="section-title">
 
-                news and updates
+            news and updates
 
-                <!-- label -->
-                <span class="title-link">
+            <!-- label -->
+            <span class="title-link">
 
-                    view all
+                view all
 
-                </span>
-                <!-- END label -->
+            </span>
+            <!-- END label -->
 
-            </h3>
-            <!-- END heading -->
+        </h3>
+        <!-- END heading -->
+
+    </a>
+    <!-- END title -->
+
+    <!-- source-feed -->
+    <div id="source-feed" class="source-feed">
+
+        <?php
+
+        foreach( $articles as $article ) :
+            $permalink = $article->link;
+            $thumbnail = $article->featured_image->source_url;
+            $title     = $article->title->rendered;
+            $excerpt   = $article->excerpt->rendered;
+
+        ?>
+
+        <a href="<?php echo $permalink; ?>" class="article card">
+
+            <div class="header" style="background-image:url( <?php echo $thumbnail; ?> )"></div>
+
+            <div class="content">
+
+                <h4 class="title"><?php echo $title; ?></h4>
+
+                <?php echo $excerpt; ?>
+
+            </div>
 
         </a>
-        <!-- END title -->
 
-        <!-- news.feed -->
-        <section id="source-feed" class="source-feed">
+        <?php endforeach; ?>
 
-            <?php
-
-            foreach( $articles as $article ) :
-                $permalink = $article->link;
-                $thumbnail = $article->featured_image->source_url;
-                $title     = $article->title->rendered;
-                $excerpt   = $article->excerpt->rendered;
-
-            ?>
-
-            <a href="<?php echo $permalink; ?>" class="article card">
-
-                <div class="header" style="background-image:url( <?php echo $thumbnail; ?> )">
-
-                    <!-- <span class="image"></span> -->
-
-                </div>
-
-                <div class="content">
-
-                    <h4 class="title"><?php echo $title; ?></h4>
-
-                    <?php echo $excerpt; ?>
-
-                </div>
-
-            </a>
-
-            <?php endforeach; ?>
-
-        </section>
-        <!-- END news.feed -->
+    </div>
+    <!-- END source-feed -->
 
 </section><!-- .section-news -->
