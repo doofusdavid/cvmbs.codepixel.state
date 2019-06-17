@@ -100,13 +100,15 @@
             ?>
 
             <a class="program-link" href="<?php the_permalink(); ?>">
+
                 <?php
                 if ( $ancestors[1] ) {
                     echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
-
-                the_title();
                 ?>
+
+                <span class="program-link__title"><?php the_title(); ?></span>
+
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>
@@ -161,13 +163,15 @@
             ?>
 
             <a class="program-link" href="<?php the_permalink(); ?>">
+
                 <?php
                 if ( $ancestors[1] ) {
                     echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
-
-                the_title();
                 ?>
+
+                <span class="program-link__title"><?php the_title(); ?></span>
+
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>
@@ -222,13 +226,15 @@
             ?>
 
             <a class="program-link" href="<?php the_permalink(); ?>">
+
                 <?php
                 if ( $ancestors[1] ) {
                     echo '<span class="program-link__parent">' . get_post( $ancestors[0] )->post_title . '</span>';
                 }
-
-                the_title();
                 ?>
+
+                <span class="program-link__title"><?php the_title(); ?></span>
+
             </a><!-- .program-link -->
 
             <?php endwhile; wp_reset_postdata(); ?>

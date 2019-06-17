@@ -111,7 +111,9 @@
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 				<a class="program-link" href="<?php the_permalink(); ?>">
-					<?php the_title(); ?>
+
+					<span class="program-link__title"><?php the_title(); ?></span>
+
 				</a><!-- .program-link -->
 
 				<?php endwhile; wp_reset_postdata(); ?>

@@ -158,24 +158,22 @@
                 transition: all 220ms linear 0ms;
 
 				@include bpoint(tablet) {
-					width: calc(50% - 2rem);
+
+                    width: calc(50% - 2rem);
+
 				}
 
 				@include bpoint(desktop) {
-					width: calc((100% / 3) - 2rem);
+
+                    width: calc((100% / 3) - 2rem);
+
 				}
 
 				@include bpoint(widescreen) {
-					width: calc(25% - 2rem);
+
+                    width: calc(25% - 2rem);
+
 				}
-
-                &__parent {
-
-                    @include font( $klavislim, 0.875rem, 400 );
-
-                    @include color( white, 0.000 );
-
-                }
 
                 // hover state
                 &:hover,
@@ -185,6 +183,22 @@
                     @include color( white, 0.000 );
 
                     @include fill( white, 0.905 );
+
+                }
+
+                &__parent {
+
+                    max-width: 100%;
+
+                    @include font( $klavislim, 0.875rem, 400 );
+
+                    @include color( white, 0.000 );
+
+                }
+
+                &__title {
+
+                    max-width: 100%;
 
                 }
 
