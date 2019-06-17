@@ -96,11 +96,15 @@
 
 						</span>
 
+						<?php if ( $entry_content ) : ?>
+
 						<span class="timeline-entry-text">
 
 							<?php echo $entry_content; ?>
 
 						</span>
+
+						<?php endif; ?>
 
 					</div>
 
