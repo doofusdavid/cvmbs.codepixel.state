@@ -55,6 +55,13 @@
                     // padding: 9rem 4rem 4rem 4rem;
                     padding: 4rem 4rem 4rem 4rem;
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 1rem 1rem 1rem 1rem;
+
+                    }
+
                     // title
                     .page-title {
 
@@ -127,6 +134,15 @@
                     transform: translate3d( 0, 0, 0 );
 
                     transition: all 240ms $outex 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        flex-basis: 100%;
+
+                        width: 100%;
+
+                    }
 
                     // hover state
                     &:hover {
