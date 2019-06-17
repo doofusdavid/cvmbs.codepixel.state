@@ -12,24 +12,20 @@
 ?>
 
 <!-- homepage.section -->
-<section id="department-expertise" class="homepage-section">
+<section id="department-expertise" class="department-expertise homepage-section">
 
     <!-- visual FX -->
     <div class="design-layer">
 
         <!-- image -->
         <div class="image fx-layer layer" style="background-image:url(<?php echo $expertise_content[ 'background' ]; ?>)">
-
             <!-- empty -->
-
         </div>
         <!-- END image -->
 
         <!-- color -->
         <div class="color fx-layer layer">
-
-            <!--  -->
-
+            <!-- empty -->
         </div>
         <!-- END color -->
 
@@ -41,21 +37,18 @@
 
         <?php if ( $expertise_content[ 'title' ] ) : ?>
 
-        <span class="headline">
-
-            <?php echo $expertise_content[ 'title' ]; ?>
-
-        </span>
+        <h3 class="headline"><?php echo $expertise_content[ 'title' ]; ?></h3>
 
         <?php endif; ?>
 
+
         <?php if ( $expertise_content[ 'text' ] ) : ?>
 
-        <span class="text">
+        <p class="text">
 
             <?php echo $expertise_content[ 'text' ]; ?>
 
-        </span>
+        </p>
 
         <?php endif; ?>
 
