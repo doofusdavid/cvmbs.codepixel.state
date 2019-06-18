@@ -29,9 +29,9 @@
 				<div class="group-bios__details">
 					<p class="group-bios__name"><?php the_sub_field('name'); ?></p>
 
-					<?php if ( get_sub_field('desc') ) : ?>
+					<?php if ( get_sub_field('description') ) : ?>
 					<div class="group-bios__desc">
-						<?php the_sub_field('desc'); ?>
+						<?php the_sub_field('description'); ?>
 					</div><!-- .group-bios__desc -->
 					<?php endif; ?>
 
