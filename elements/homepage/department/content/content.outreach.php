@@ -12,7 +12,7 @@
 ?>
 
 <!-- service.outreach -->
-<section id="department-outreach" class="homepage-section">
+<section id="department-outreach" class="department-outreach homepage-section">
 
     <!-- visual FX -->
     <div class="design-layer">
@@ -39,11 +39,11 @@
     <!-- content -->
     <div class="content-layer">
 
-        <span class="headline">
+        <h2 class="headline">
 
             <?php echo $outreach_content[ 'title' ]; ?>
 
-        </span>
+        </h2>
 
         <?php if ( $outreach_content[ 'text' ] ) : ?>
 
