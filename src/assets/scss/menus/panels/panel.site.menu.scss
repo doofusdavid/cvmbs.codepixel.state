@@ -25,6 +25,8 @@
 
         padding: 5rem 0 0 0;
 
+        overflow: scroll;
+
         // @include fill( $nite, 0.785 );
 
         @include gradient( 0deg, $g140, 0.325, 0%, transparent, 1.000, 50% );
@@ -367,7 +369,7 @@
             }
 
             // home
-            #home {
+            #menu-link-home {
 
                 @include fill( $g140, 0.785 );
 
@@ -410,7 +412,7 @@
             }
 
             // about
-            #about {
+            #menu-link-about {
 
                 @include fill( $cvellow, 0.785 );
 
@@ -462,7 +464,7 @@
             }
 
             // students
-            #students {
+            #menu-link-students {
 
                 @include fill( $blue, 0.785 );
 
@@ -514,7 +516,7 @@
             }
 
             // research
-            #research {
+            #menu-link-research {
 
                 @include fill( $cvnavy, 0.785 );
 
@@ -566,7 +568,7 @@
             }
 
             // outreach
-            #outreach {
+            #menu-link-outreach {
 
                 @include fill( $roarange, 0.785 );
 
@@ -618,7 +620,7 @@
             }
 
             // alumni
-            #alumni {
+            #menu-link-alumni {
 
                 @include fill( $orange, 0.785 );
 

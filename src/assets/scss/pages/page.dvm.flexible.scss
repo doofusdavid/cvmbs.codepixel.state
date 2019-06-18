@@ -389,6 +389,8 @@
 
 					@include text( $up );
 
+					@include color( $g140, 0.000 );
+
 				}
 
 				// day
@@ -400,10 +402,11 @@
 					padding: 0 0 0.5rem 0;
 
 					@include font( $decima, 2rem, 400 );
+					// @include font( $klavislim, 3rem, 400 );
 
 					@include text( $up );
 
-					letter-spacing: -0.1em;
+					// letter-spacing: -0.1em;
 
 				}
 

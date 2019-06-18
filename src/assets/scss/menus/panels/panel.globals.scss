@@ -30,6 +30,8 @@
 
         @include font( $industry, 0.5625rem, 700 );
 
+        @include color( white, 0.000 );
+
         @include fill( $app05, 0.345 );
 
         // mobile

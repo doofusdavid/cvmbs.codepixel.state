@@ -9,6 +9,7 @@
                 src: url('../fonts/decima/DecimaMonoPro_Lite.otf') format('opentype');
             font-weight: 300;
             font-style: normal;
+            font-display: swap;
 
         }
 
@@ -19,6 +20,7 @@
                 src: url('../fonts/decima/DecimaMonoPro_Font.otf') format('opentype');
             font-weight: 500;
             font-style: normal;
+            font-display: swap;
 
         }
 
@@ -29,6 +31,7 @@
                 src: url('../fonts/decima/DecimaMonoPro_Bold.otf') format('opentype');
             font-weight: 700;
             font-style: normal;
+            font-display: swap;
 
         }
 
@@ -42,6 +45,7 @@
                 format('truetype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap;
 
         }
 
@@ -57,6 +61,7 @@
                     format('opentype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -78,6 +83,7 @@
                     format('opentype');
                 font-weight: 500;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -89,6 +95,7 @@
                     format('opentype');
                 font-weight: 700;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -112,6 +119,7 @@
                     format('opentype');
                 font-weight: 300;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -133,6 +141,7 @@
                     format('opentype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -154,6 +163,7 @@
                     format('opentype');
                 font-weight: 500;
                 font-style: normal;
+                font-display: swap;
 
             }
 
@@ -175,6 +185,7 @@
                     format('opentype');
     			font-weight: 700;
     			font-style: normal;
+                font-display: swap;
 
             }
 
@@ -200,6 +211,7 @@
                      url('//static.colostate.edu/fonts/clio-condensed/cliocondensed_regular_macroman/Clio_Condensed_Regular-webfont.ttf') format('truetype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio Condensed';
@@ -218,6 +230,7 @@
                      url('//static.colostate.edu/fonts/clio-condensed/cliocondensed_medium_macroman/Clio_Condensed_Medium-webfont.ttf') format('truetype');
                 font-weight: 500;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio Condensed';
@@ -236,6 +249,7 @@
                      url('//static.colostate.edu/fonts/clio-condensed/cliocondensed_bold_macroman/Clio_Condensed_Bold-webfont.ttf') format('truetype');
                 font-weight: 700;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio Condensed';
@@ -256,6 +270,7 @@
                      url('//static.colostate.edu/fonts/clio/clio_light_macroman/Clio_Light-webfont.ttf') format('truetype');
                 font-weight: 300;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio';
@@ -274,6 +289,7 @@
                      url('//static.colostate.edu/fonts/clio/clio_regular_macroman/Clio_Regular-webfont.ttf') format('truetype');
                 font-weight: 400;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio';
@@ -292,6 +308,7 @@
                      url('//static.colostate.edu/fonts/clio/clio_medium_macroman/Clio_Medium-webfont.ttf') format('truetype');
                 font-weight: 500;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio';
@@ -310,6 +327,7 @@
                      url('//static.colostate.edu/fonts/clio/clio_bold_macroman/Clio_Bold-webfont.ttf') format('truetype');
                 font-weight: 700;
                 font-style: normal;
+                font-display: swap;
             }
             @font-face {
                 font-family: 'Clio';
@@ -337,6 +355,7 @@
                  url('//static.colostate.edu/fonts/industry/industry_book_macroman/Industry-Book-webfont.ttf') format('truetype');
             font-weight: 400;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Industry';
@@ -355,6 +374,7 @@
                  url('//static.colostate.edu/fonts/industry/industry_medium_macroman/Industry-Medium-webfont.ttf') format('truetype');
             font-weight: 500;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Industry';
@@ -373,6 +393,7 @@
                  url('//static.colostate.edu/fonts/industry/industry_demi_macroman/Industry-Demi-webfont.ttf') format('truetype');
             font-weight: 600;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Industry';
@@ -391,6 +412,7 @@
                  url('//static.colostate.edu/fonts/industry/industry_bold_macroman/Industry-Bold-webfont.ttf') format('truetype');
             font-weight: 700;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Industry';
@@ -409,6 +431,7 @@
                  url('//static.colostate.edu/fonts/industry/industry_black_macroman/Industry-Black-webfont.ttf') format('truetype');
             font-weight: 900;
             font-style: normal;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Industry';
@@ -428,6 +451,7 @@
 		    	src: url('../fonts/proxima/ProximaNova_SemiBold.woff') format('woff');
 		    font-weight: 500;
 		    font-style: normal;
+            font-display: swap;
 
 		}
 
@@ -438,6 +462,7 @@
 		    	src: url('../fonts/proxima/ProximaNova_Bold.woff') format('woff');
 		    font-weight: 700;
 		    font-style: normal;
+            font-display: swap;
 
 		}
 
@@ -450,6 +475,7 @@
 		    	src: url('../fonts/vitesse/Vitesse-Medium.woff') format('woff');
 		    font-weight: 500;
 		    font-style: normal;
+            font-display: swap;
 
 		}
 
@@ -460,5 +486,6 @@
 		    	src: url('../fonts/vitesse/Vitesse-Bold.woff') format('woff');
 		    font-weight: 700;
 		    font-style: normal;
+            font-display: swap;
 
 		}
