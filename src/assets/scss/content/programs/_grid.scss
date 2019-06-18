@@ -40,7 +40,7 @@
 		}
 
 		@include bpoint(desktop) {
-			width: calc((100% / 3) - (2em * 2 / 3));
+			width: calc((100% / 3) - (2em * 2 / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
 
 			&:nth-child(-n+3) {
 				margin-top: 0;

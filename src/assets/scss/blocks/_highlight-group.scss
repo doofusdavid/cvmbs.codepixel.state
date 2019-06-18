@@ -29,7 +29,7 @@
 		margin-top: 3.75%;
 
 		&-item {
-			width: calc(#{ $max_width } / 3);
+			width: calc((#{ $max_width } / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
 			max-width: 50%;
 			padding: 5% 2.5%;
 			font-size: 1.0625em;
