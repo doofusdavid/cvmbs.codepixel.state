@@ -72,6 +72,8 @@
 </section>
 <!-- END panel.main -->
 
+<?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
+
 <!-- panel.global -->
 <section id="menu-panel-global" class="inactive ui-panel menu-panel">
 
@@ -104,8 +106,8 @@
 </section>
 <!-- END panel.global -->
 
+<?php endif; ?>
+
 <?php get_template_part( 'elements/menus/panels/panel.search' ); ?>
 
 <?php get_template_part( 'elements/menus/panels/panel.events' ); ?>
-
-<?php get_template_part( 'elements/menus/panels/panel.build' ); ?>

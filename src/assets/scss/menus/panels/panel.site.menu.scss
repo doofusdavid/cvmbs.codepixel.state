@@ -25,6 +25,8 @@
 
         padding: 5rem 0 0 0;
 
+        overflow: scroll;
+
         // @include fill( $nite, 0.785 );
 
         @include gradient( 0deg, $g140, 0.325, 0%, transparent, 1.000, 50% );

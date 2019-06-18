@@ -41,17 +41,6 @@
 
             </li>
 
-            <!-- placeholder -->
-            <!-- <li class="menu-item"> -->
-
-                <?php
-
-                    // get_template_part( 'elements/menus/buttons/button.build' );
-
-                ?>
-
-            <!-- </li> -->
-
         </ul>
         <!-- END list -->
 
