@@ -60,13 +60,7 @@
 			// image
 			.image {
 
-				background: {
-
-					image: url(../img/patterns/pattern.vertical.svg);
-					repeat: no-repeat;
-					size: cover;
-
-				}
+				background: url(../img/patterns/pattern.vertical.svg) no-repeat center center / cover;
 
 				mix-blend-mode: overlay;
 
