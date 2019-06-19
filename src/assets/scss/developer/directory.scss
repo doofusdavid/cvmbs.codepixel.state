@@ -853,6 +853,38 @@
 
                 }
 
+                // website
+                .website {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 1rem 0 0 0;
+                    padding: 0.0625rem 0 0 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    text-decoration: none;
+
+                    @include typo( 0.75rem, 0.035em );
+
+                    @include color( white, 0.000 );
+
+                    @include fill( $cvnavy, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $roarange, 0.000 );
+
+                    }
+
+                }
+
             }
 
             // info

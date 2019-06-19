@@ -248,6 +248,20 @@
                     </span>
                     <!-- END phone -->
 
+                    <?php $website = $getMember->GetMemberByIdResult->Website; ?>
+
+                    <?php if ( $website ) : ?>
+
+                    <!-- website link -->
+                    <a href="<?php echo $website ?>" class="website">
+
+                        view faculty website
+
+                    </a>
+                    <!-- END website link -->
+
+                    <?php endif; ?>
+
                 </div>
                 <!-- END contact -->
 
@@ -257,9 +271,9 @@
             <!-- info -->
             <div class="listing-info">
 
-                <pre class="developer hide">
+                <pre class="developer">
 
-                    <?php print_r( $getMember ); ?>
+                    <?php print_r( $getMember->GetMemberByIdResult ); ?>
 
                 </pre>
 
@@ -392,7 +406,7 @@
         </div>
         <!-- END listing -->
 
-        <pre class="developer hide">
+        <pre class="developer">
 
             <?php
 
