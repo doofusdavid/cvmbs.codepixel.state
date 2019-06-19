@@ -135,6 +135,12 @@
 
                 }
 
+                if ( $directoryType == 'Species Interest' ) {
+
+                    $directory[ 'species' ][] = $directoryInfo->DirectoryHeader;
+
+                }
+
                 if ( $directoryType == 'Link' ) {
 
                     $directory[ 'links' ][] = array(
@@ -271,7 +277,7 @@
             <!-- info -->
             <div class="listing-info">
 
-                <pre class="developer">
+                <pre class="developer hide">
 
                     <?php print_r( $getMember->GetMemberByIdResult ); ?>
 
@@ -373,6 +379,32 @@
 
                 <?php endif; ?>
 
+                <?php if ( count( $directory[ 'species' ] ) > 0 ) : ?>
+
+                <!-- listing -->
+                <div class="listing-group interests">
+
+                    <h4>Species Interest</h4>
+
+                    <?php
+
+                        foreach( $directory[ 'species' ] as $interest ) {
+
+                            $entry  = $interest[ 'interest' ];
+
+                            $interests .= '<span class="entry">' . $interest . '</span>';
+
+                        }
+
+                        echo $interests;
+
+                    ?>
+
+                </div>
+                <!-- END listing -->
+
+                <?php endif; ?>
+
                 <?php if ( count( $directory[ 'links' ] ) > 0 ) : ?>
 
                 <!-- listing -->
@@ -406,7 +438,7 @@
         </div>
         <!-- END listing -->
 
-        <pre class="developer">
+        <pre class="developer hide">
 
             <?php
 
