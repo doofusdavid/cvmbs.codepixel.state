@@ -115,8 +115,8 @@ export var slides = {
             arrows    : true,
             dots      : false,
 
-            prevArrow : '<button id="prev-arrow-control" class="billboard-control prev-arrow"><span class="button-label">previous slide</span><svg class="prev-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><polygon fill="#FFFFFF" points="26.8,30.4 20.3,24 26.8,17.6 27.7,18.4 22.1,24 27.7,29.6" /></svg></button>',
-            nextArrow : '<button id="next-arrow-control" class="billboard-control next-arrow"><span class="button-label">next slide</span><svg class="next-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><polygon fill="#FFFFFF" points="22.2,30.4 21.3,29.6 26.9,24 21.3,18.4 22.2,17.6 28.7,24" /></svg></button>',
+            prevArrow : '<button id="prev-arrow-control" class="billboard-control prev-arrow" title="previous slide"><span class="button-label">previous slide</span><svg class="prev-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><polygon fill="#FFFFFF" points="26.8,30.4 20.3,24 26.8,17.6 27.7,18.4 22.1,24 27.7,29.6" /></svg></button>',
+            nextArrow : '<button id="next-arrow-control" class="billboard-control next-arrow" title="next slide"><span class="button-label">next slide</span><svg class="next-arrow-icon arrow-icon" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><polygon fill="#FFFFFF" points="22.2,30.4 21.3,29.6 26.9,24 21.3,18.4 22.2,17.6 28.7,24" /></svg></button>',
 
             autoplay       : false,
             // autoplaySpeed  : 10000,
