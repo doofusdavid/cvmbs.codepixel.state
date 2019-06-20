@@ -10,6 +10,15 @@
 		}
 	}
 
+	&__inner {
+		max-width: 75rem;
+		margin: 0 auto;
+
+		.notification-box {
+			margin-bottom: 0;
+		}
+	}
+
 	&__sidebar {
 		display: flex;
 		flex-direction: column;

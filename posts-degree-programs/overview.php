@@ -41,6 +41,16 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 				<div class="degree-program-intro__desc">
 					<?php the_sub_field('desc'); ?>
 				</div><!-- .degree-program-intro__desc -->
+
+				<?php
+				if ( have_rows('intro_block') ) :
+					while ( have_rows('intro_block') ) : the_row();
+						if ( get_row_layout() == 'notification' ) :
+							get_template_part( 'elements/blocks/flexible/notification' );
+						endif;
+					endwhile;
+				endif;
+				?>
 			</div><!-- .degree-program-intro__inner -->
 		</div>
 

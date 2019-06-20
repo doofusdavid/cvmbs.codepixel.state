@@ -37,6 +37,119 @@
                     "delay": 0
                 }
             ]
+        },
+        {
+            "key": "field_5d0bed3c09b60",
+            "label": "Intro Block",
+            "name": "intro_block",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5d0bed70cce8a": {
+                    "key": "layout_5d0bed70cce8a",
+                    "name": "notification",
+                    "label": "Notification",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d0bed9209b61",
+                            "label": "Type",
+                            "name": "type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "date": "Date\/Deadline",
+                                "info": "Information",
+                                "notice": "Notice",
+                                "warn": "Warning"
+                            },
+                            "default_value": [
+                                "info"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5d0bedb109b62",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "(optional)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d0bedc109b63",
+                            "label": "Message",
+                            "name": "message",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5d0bedd309b64",
+                            "label": "Expiration",
+                            "name": "expiration",
+                            "type": "date_picker",
+                            "instructions": "(optional)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "F j, Y",
+                            "return_format": "Ymd",
+                            "first_day": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Block",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -56,5 +169,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559926885
+    "modified": 1561062901
 }
