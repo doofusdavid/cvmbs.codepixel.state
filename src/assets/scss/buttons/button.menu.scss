@@ -4,19 +4,13 @@
     $site_menu : 1rem;
 
     // styles
-    #site-menu-button {
+    .site-menu-button {
 
-        position: absolute;
-
-        z-index: 10;
-
-        top: 0;
-        right: 0;
-        bottom: 0;
+        flex: 0 0 auto;
 
         width: 5rem;
         height: 5rem;
-        margin: 0;
+        margin: 0 0 0 auto;
         padding: 0;
 
         @include fill( white, 0.925 );
@@ -37,8 +31,6 @@
 
         // line
         &:after {
-
-            // @include border( false, 0, auto, 0, -1px );
 
             -webkit-backface-visibility: visible;
 
@@ -197,20 +189,12 @@
         // menu open state
         &.site-menu-open {
 
-            // @include fill( $roarange, 0.485 );
-
-            // transform: translate3d( 2.75rem, 0, 0 );
-
             // hover state
             &:hover {
-
-                // @include fill( $roarange, 0.185 );
 
                 cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNy40MTQsMTZsNy43NzgsNy43NzhsLTEuNDE0LDEuNDE0TDE2LDE3LjQxNGwtNy43NzgsNy43NzhsLTEuNDE0LTEuNDE0TDE0LjU4NiwxNkw2LjgwOCw4LjIyMiBsMS40MTQtMS40MTRMMTYsMTQuNTg2bDcuNzc4LTcuNzc4bDEuNDE0LDEuNDE0TDE3LjQxNCwxNnoiPjwvcGF0aD48L3N2Zz4=) 16 16, auto;
 
                 .close {
-
-                    // @include fill( $roarange, 0.185 );
 
                     @include color( white, 0.000 );
 

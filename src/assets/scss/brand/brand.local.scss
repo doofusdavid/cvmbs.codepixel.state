@@ -5,6 +5,7 @@
 
     // styles
     #brand-local {
+        display: none !important;
 
         position: absolute;
 
@@ -19,13 +20,15 @@
         height: 5rem;
         padding: 0.0625rem 1.5rem 0 0;
 
-        @include font( $industry, 0.75rem, 600 );
+        @include font( $proxima, 0.75rem, 600 );
 
-        @include typo( 1.375em, 0.065em );
+        @include typo( 1.375em, 0.015em );
 
         @include text( inherit, right );
 
         text-decoration: none;
+
+        text-transform: uppercase;
 
         @include color( white, 0.000 );
 
