@@ -40,6 +40,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );
+		wp_deregister_script( 'wp-embed' );
+
+		// dequeue Gutenburg bloat
+		wp_dequeue_style( 'wp-block-library' );
+		wp_dequeue_style( 'wp-block-library-theme' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
@@ -65,6 +70,19 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+
+	function defer_cvmbs_scripts_and_styles( $tag, $handle, $src ) {
+
+        if ( 'requirejs' !== $handle )
+
+            return $tag;
+
+        return str_replace(' src', ' defer="defer" src', $tag );
+        // return str_replace(' src', ' async="async" src', $tag );
+
+    }
+
+	add_filter( 'script_loader_tag', 'defer_cvmbs_scripts_and_styles', 10, 3 );
 
 endif;
 

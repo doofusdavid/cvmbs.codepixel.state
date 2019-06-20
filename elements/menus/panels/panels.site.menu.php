@@ -12,7 +12,7 @@
 ?>
 
 <!-- panel.main -->
-<section id="menu-panel-main" class="active ui-panel menu-panel">
+<section id="menu-panel-main" class="active ui-panel menu-panel" aria-hidden="true">
 
     <!-- panel.header -->
     <header id="menu-panel-main-header" class="panel-header">
@@ -75,7 +75,7 @@
 <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
 
 <!-- panel.global -->
-<section id="menu-panel-global" class="inactive ui-panel menu-panel">
+<section id="menu-panel-global" class="inactive ui-panel menu-panel" aria-hidden="true">
 
     <!-- panel.header -->
     <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">

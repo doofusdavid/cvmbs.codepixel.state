@@ -13,7 +13,7 @@
 ?>
 
 <!-- button -->
-<a href="<?php echo $facebook; ?>" class="social-media button facebook">
+<a href="<?php echo $facebook; ?>" title="Facebook" class="social-media button facebook">
 
     <!-- label -->
     <span class="link-label">
@@ -33,7 +33,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="<?php echo $twitter; ?>" class="social-media button twitter">
+<a href="<?php echo $twitter; ?>" title="Twitter" class="social-media button twitter">
 
     <!-- label -->
     <span class="link-label">
@@ -53,7 +53,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="<?php echo $linkedin; ?>" class="social-media button linkedin">
+<a href="<?php echo $linkedin; ?>" title="LinkedIn" class="social-media button linkedin">
 
     <!-- label -->
     <span class="link-label">
@@ -77,7 +77,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="<?php echo $instagram; ?>" class="social-media button instagram">
+<a href="<?php echo $instagram; ?>" title="Instagram" class="social-media button instagram">
 
     <!-- label -->
     <span class="link-label">
@@ -101,7 +101,7 @@
 <!-- END button -->
 
 <!-- button -->
-<a href="<?php echo $youtube; ?>" class="social-media button youtube">
+<a href="<?php echo $youtube; ?>" title="YouTube" class="social-media button youtube">
 
     <!-- label -->
     <span class="link-label">

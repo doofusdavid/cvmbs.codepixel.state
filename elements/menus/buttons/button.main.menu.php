@@ -1,6 +1,6 @@
 
 <!-- main.menu -->
-<button id="button-main-menu" class="site-menu-button" data-target="main">
+<button id="button-main-menu" class="site-menu-button" data-target="main" aria-expanded="false" aria-controls="menu-panel-main">
 
     <!-- label -->
     <span class="link-label">
@@ -19,7 +19,7 @@
     <!-- END icon -->
 
     <!-- open icon -->
-    <svg class="icon open-menu" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+    <svg class="icon open-menu" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" alt="Navigation Menu">
 
         <!-- <rect class="path box" x="16" y="16" width="32" height="32" /> -->
 

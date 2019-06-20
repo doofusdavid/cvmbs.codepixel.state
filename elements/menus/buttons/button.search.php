@@ -1,6 +1,6 @@
 
 <!-- search -->
-<button id="button-search" class="site-menu-button" data-target="search">
+<button id="button-search" class="site-menu-button" data-target="search" aria-expanded="false" aria-controls="menu-panel-search">
 
     <!-- label -->
     <span class="link-label">
@@ -10,7 +10,7 @@
     </span>
     <!-- END label -->
 
-    <svg class="icon" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+    <svg class="icon" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve" alt="Search">
 
         <path class="path" id="handle_1_" fill-opacity="0.8" d="M35,33c-0.6,0.8-1.2,1.4-2,2l9,9l2-2L35,33z" />
 

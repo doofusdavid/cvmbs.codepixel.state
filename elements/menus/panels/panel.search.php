@@ -1,6 +1,6 @@
 
 <!-- panel.search -->
-<section id="menu-panel-search" class="inactive ui-panel menu-panel">
+<section id="menu-panel-search" class="inactive ui-panel menu-panel" aria-hidden="true">
 
     <!-- panel interior -->
     <div class="panel-interior">

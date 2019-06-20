@@ -1,6 +1,6 @@
 
 <!-- events -->
-<button id="button-events" class="site-menu-button" data-target="events">
+<button id="button-events" class="site-menu-button" data-target="events" aria-expanded="false" aria-controls="menu-panel-events">
 
     <!-- label -->
     <span class="link-label">
@@ -10,7 +10,7 @@
     </span>
     <!-- END label -->
 
-    <svg class="icon" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve">
+    <svg class="icon" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" xml:space="preserve" alt="College Event Calendar">
 
         <path class="path solid" d="M40,23v-3h-3v3H27v-3h-3v3h-4v21h24V23H40z M38,21h1v3h-1V21z M25,21h1v3h-1V21z M43,43H21V27h22V43z"/>
 
