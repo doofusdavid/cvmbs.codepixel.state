@@ -33,6 +33,7 @@
 		?>
 
 		<body <?php body_class(); ?> data-site-type="<?php echo $site_type; ?>">
+
 			<a href="#content" class="skip-link screen-reader-text"><?php esc_html_e( 'Skip to content', 'cvmbsPress' ); ?></a>
 
 			<?php get_template_part( 'elements/layout/layout.header' ); ?>

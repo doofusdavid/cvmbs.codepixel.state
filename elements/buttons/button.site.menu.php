@@ -1,6 +1,6 @@
 
 <!-- button -->
-<button id="site-menu-button" class="site-menu-button" data-toggle="site-menu">
+<button id="site-menu-button" class="main-menu-button" data-toggle="site-menu">
 
     <!-- open icon -->
     <span class="label open">

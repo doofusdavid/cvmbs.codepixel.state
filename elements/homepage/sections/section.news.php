@@ -37,8 +37,9 @@ $articles    = json_decode( $data );
         <?php
 
         foreach( $articles as $article ) :
+
             $permalink = $article->link;
-            $thumbnail = $article->featured_image->source_url;
+            $thumbnail = $article->featured_image->source_url_medium_large;
             $title     = $article->title->rendered;
             $excerpt   = $article->excerpt->rendered;
 

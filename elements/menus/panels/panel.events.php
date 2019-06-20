@@ -1,5 +1,5 @@
 <!-- panel.events -->
-<section id="menu-panel-events" class="inactive ui-panel menu-panel">
+<section id="menu-panel-events" class="inactive ui-panel menu-panel" aria-hidden="true">
 
     <!-- panel.header -->
     <header id="menu-panel-events-header" class="panel-header">
