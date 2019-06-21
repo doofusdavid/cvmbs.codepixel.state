@@ -115,6 +115,8 @@
 				margin: 0;
 				padding: 1rem;
 
+				@include fill( white, 0.000 );
+
 			}
 
 			// artwork
@@ -140,6 +142,8 @@
 				.lite {
 
 					z-index: 10;
+
+					@include gradient( 0deg, $nite, 0.125, 20%, $dark, 1.000, 100% );
 
 				}
 
@@ -167,6 +171,8 @@
 						position: center center;
 
 					}
+
+					@include hide;
 
 				}
 
