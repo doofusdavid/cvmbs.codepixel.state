@@ -1,6 +1,6 @@
 
 <!-- search -->
-<button id="button-search" class="site-menu-button" data-target="search" aria-expanded="false" aria-controls="menu-panel-search">
+<button id="button-search" class="site-menu-button" data-target="search" aria-expanded="false" aria-controls="menu-panel-search" tabindex="0">
 
     <!-- label -->
     <span class="link-label">

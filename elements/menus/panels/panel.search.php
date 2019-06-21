@@ -1,6 +1,6 @@
 
 <!-- panel.search -->
-<section id="menu-panel-search" class="inactive ui-panel menu-panel" aria-hidden="true">
+<aside id="menu-panel-search" class="inactive ui-panel menu-panel" role="complementary" aria-hidden="true" tabindex="-1">
 
     <!-- panel interior -->
     <div class="panel-interior">
@@ -29,5 +29,5 @@
     </div>
     <!-- END panel interior -->
 
-</section>
+</aside>
 <!-- END panel.search -->

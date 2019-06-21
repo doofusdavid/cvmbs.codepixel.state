@@ -1,6 +1,6 @@
 
 <!-- events -->
-<button id="button-events" class="site-menu-button" data-target="events" aria-expanded="false" aria-controls="menu-panel-events">
+<button id="button-events" class="site-menu-button" data-target="events" aria-expanded="false" aria-controls="menu-panel-events" tabindex="0">
 
     <!-- label -->
     <span class="link-label">

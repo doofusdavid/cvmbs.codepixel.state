@@ -1,5 +1,5 @@
 <!-- panel.events -->
-<section id="menu-panel-events" class="inactive ui-panel menu-panel" aria-hidden="true">
+<aside id="menu-panel-events" class="inactive ui-panel menu-panel" role="complementary" aria-hidden="true" tabindex="-1">
 
     <!-- panel.header -->
     <header id="menu-panel-events-header" class="panel-header">
@@ -133,5 +133,5 @@
 	</div>
 	<!-- END panel utility class -->
 
-</section>
+</aside>
 <!-- END panel.events -->

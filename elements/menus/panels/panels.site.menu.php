@@ -12,7 +12,7 @@
 ?>
 
 <!-- panel.main -->
-<section id="menu-panel-main" class="active ui-panel menu-panel" aria-hidden="true">
+<aside id="menu-panel-main" class="active ui-panel menu-panel" aria-hidden="true" tabindex="-1">
 
     <!-- panel.header -->
     <header id="menu-panel-main-header" class="panel-header">
@@ -23,7 +23,7 @@
     <!-- END panel.header -->
 
     <!-- menu -->
-    <nav id="menu-panel-main-menu" class="panel-content menu">
+    <nav id="menu-panel-main-menu" class="panel-content menu" role="navigation">
 
         <?php
 
@@ -69,13 +69,13 @@
 
     ?>
 
-</section>
+</aside>
 <!-- END panel.main -->
 
 <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
 
 <!-- panel.global -->
-<section id="menu-panel-global" class="inactive ui-panel menu-panel" aria-hidden="true">
+<aside id="menu-panel-global" class="inactive ui-panel menu-panel" aria-hidden="true" tabindex="-1">
 
     <!-- panel.header -->
     <header id="menu-panel-global-header" class="panel-header site-menu-button" data-target="main">
@@ -96,14 +96,14 @@
     <!-- END panel.header -->
 
     <!-- menu -->
-    <nav id="menu-panel-global-menu" class="panel-content menu">
+    <nav id="menu-panel-global-menu" class="panel-content menu" role="navigation">
 
         <?php get_template_part( 'elements/menus/panels/panel.global.menu' ); ?>
 
     </nav>
     <!-- END menu -->
 
-</section>
+</aside>
 <!-- END panel.global -->
 
 <?php endif; ?>

@@ -1,6 +1,6 @@
 
 <!-- main.menu -->
-<button id="button-main-menu" class="site-menu-button" data-target="main" aria-expanded="false" aria-controls="menu-panel-main">
+<button id="button-main-menu" class="site-menu-button" data-target="main" aria-expanded="false" aria-controls="menu-panel-main" tabindex="0">
 
     <!-- label -->
     <span class="link-label">
