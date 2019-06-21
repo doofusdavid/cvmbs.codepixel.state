@@ -6,6 +6,8 @@
     // styles
     #menu-panel-events {
 
+        @include fill( $cvnavy, 0.145 );
+
         @include gradient( 0deg, $blue, 0.565, 0%, transparent, 1.000, 50% );
 
         // header
