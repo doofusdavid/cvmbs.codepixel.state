@@ -167,7 +167,7 @@
                 margin: 0;
                 padding: 4rem 3rem 3rem 3rem;
 
-                @include fill( $nite, 0.425 );
+                @include fill( white, 0.095 );
 
                 @include shadowbox( 1.5rem, 4rem, black, 0.315 );
 
@@ -199,7 +199,7 @@
 
                 @include text( none );
 
-                @include color( white, 0.000 );
+                @include color( $app05, 0.185 );
 
                 // mobile
                 @include breakpoint ( small only ) {
@@ -302,7 +302,7 @@
 
                         line-height: 1rem;
 
-                        @include color( $orange, 0.000 );
+                        @include color( $g140, 0.000 );
 
                         // mobile
                         @include breakpoint ( small only ) {
@@ -322,7 +322,7 @@
 
                         line-height: 0.75rem;
 
-                        @include color( white, 0.365 );
+                        @include color( $app05, 0.215 );
 
                     }
 
@@ -348,7 +348,7 @@
 
                     color: white;
 
-                    @include fill( darken( $orange, 7.5% ), 0.000 );
+                    @include fill( $g140, 0.000 );
 
                     @include shadowbox( 1rem, 3rem, black, 0.285 );
 
@@ -370,7 +370,7 @@
                     &:focus,
                     &:active {
 
-                        @include fill( $g140, 0.000 );
+                        @include fill( darken( $orange, 7.5% ), 0.000 );
 
                     }
 
