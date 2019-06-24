@@ -778,12 +778,16 @@
         // record
         .directory-listing {
 
-            @include flex-h-s-v-t( false );
+            // @include flex-h-s-v-t( false );
+
+            overflow: hidden;
 
             // profile
             .listing-profile {
 
                 @include flex-v-t-h-c( false );
+
+                float: left;
 
                 width: 16rem;
 
@@ -890,8 +894,11 @@
             // info
             .listing-info {
 
-                @include flex-v-t-h-s( false );
+                // @include flex-v-t-h-s( false );
 
+                float: right;
+
+                width: calc( 100% - 16rem );
                 padding: 0 0 0 2rem;
 
                 // about
