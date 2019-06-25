@@ -322,11 +322,11 @@
 
 				margin: 0.75rem 0 0 0;
 
-				@include font( $industry, 0.75rem, 600 );
+				@include font( $industry, 0.875rem, 600 );
 
 				@include text( none );
 
-				@include typo( 1.125rem, 0.035em );
+				@include typo( 1.375rem, 0.035em );
 
 				@include color( white, 0.125 );
 
