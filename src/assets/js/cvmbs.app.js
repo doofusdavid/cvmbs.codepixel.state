@@ -162,7 +162,7 @@
 
     // menu variables
     var globalnav = $('#global-menu-link');
-    var localmenu = $('#menu-department-menu, #menu-special-unit-menu');
+    var localmenu = $('#menu-department-menu, #menu-dvm-menu');
 
     // test for local menu
     if ( localmenu.length > 0 ) {
