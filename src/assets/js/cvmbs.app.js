@@ -158,6 +158,9 @@
 
         });
 
+        // track focus
+        // trackFocus();
+
     });
 
     // menu variables
@@ -211,6 +214,41 @@
 
 // ================================================================================
 // END :: CVMBS Accordions
+// ================================================================================
+
+
+
+// ================================================================================
+// START :: track focus
+// ================================================================================
+
+    function trackFocus() {
+
+        $( 'body' ).delegate( '*', 'focus blur', function() {
+
+            var elem = $( this );
+
+            setTimeout(function() {
+
+                elem.toggleClass( 'find-me', elem.is( ':focus' ) );
+
+                var focusedElementCue  = $('.find-me');
+
+                var elementHasFocusTag = focusedElementCue.text();
+                var cleanElementOutput = elementHasFocusTag.toLowerCase();
+                var stringFocusElement = String(cleanElementOutput);
+                var elementHasFocus    = $.trim(stringFocusElement);
+
+                console.log(elementHasFocus);
+
+            }, 0 );
+
+        });
+
+    }
+
+// ================================================================================
+// END :: track focus
 // ================================================================================
 
 

@@ -1,6 +1,6 @@
         </div><!-- #content -->
 
-        <?php get_template_part( 'elements/menus/menu.site' ); ?>
+        <?php get_template_part( 'elements/menus/menu.site.tabs' ); ?>
 
         <?php wp_footer(); ?>
 

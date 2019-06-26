@@ -12,7 +12,7 @@
 ?>
 
 <!-- panel.main -->
-<aside id="menu-panel-main" class="active ui-panel menu-panel" aria-hidden="true" tabindex="-1">
+<aside id="menu-panel-main" class="active ui-panel menu-panel" aria-hidden="false" tabindex="-1">
 
     <!-- panel.header -->
     <header id="menu-panel-main-header" class="panel-header">
@@ -44,11 +44,7 @@
 
     <?php
 
-        if ( $site_type == 'college' ) {
-
-            //
-
-        } elseif ( $site_type == 'department' || $site_type == 'special' ) {
+        if ( $site_type == 'department' || $site_type == 'special' ) {
 
             echo '
             <!-- global.menu -->

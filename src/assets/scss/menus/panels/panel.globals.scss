@@ -18,13 +18,12 @@
 
         z-index: 10;
 
-        // @include flex-v-c-h-c( false );
-
         width: 100%;
-        // height: calc( 100% - 5rem );
         height: 100%;
         margin: 0;
         padding: 5rem 0 0 0;
+
+        border: none;
 
         overflow: hidden;
 
@@ -48,9 +47,9 @@
 
             // visibility: hidden;
 
-            opacity: 0.000;
+            // opacity: 0.000;
 
-            transform: translate3d( 28rem, 0, 0 );
+            // transform: translate3d( 28rem, 0, 0 );
 
             transition: all 240ms $ocirc 60ms;
 
@@ -63,9 +62,9 @@
 
             // visibility: visible;
 
-            opacity: 1.000;
+            // opacity: 1.000;
 
-            transform: translate3d( 0, 0, 0 );
+            // transform: translate3d( 0, 0, 0 );
 
             transition: all 360ms $ocirc 60ms;
 

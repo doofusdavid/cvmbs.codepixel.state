@@ -421,10 +421,6 @@
 
 			.event {
 
-				@include flex-h-j-v-t( false );
-
-                padding: 1rem 1rem 1rem 1rem;
-
 				border-bottom: 1px solid transparentize(white, 0.865);
 
 				background-color: transparentize(white, 1.000);
@@ -474,23 +470,15 @@
 
 				}
 
-				.event-toggle {
+				.event-link {
 
-					display: block;
+                    @include flex-h-j-v-t( false );
 
-					padding: 16px;
+                    padding: 1rem 1rem 1rem 1rem;
 
-					border: none;
+					text-decoration: none;
 
-                    text-decoration: none;
-
-					background-color: transparentize(white, 1.000);
-
-					&:before {
-
-						content: '';
-
-					}
+                    @include color( white, 0.000 );
 
 				}
 
@@ -573,7 +561,9 @@
 				}
 
                 // link
-                .entry-link {
+                .entry-title {
+
+                    order: 0;
 
                     @include font( $industry, 0.875rem, 700 );
 
@@ -602,6 +592,8 @@
                 // date
                 .entry-date {
 
+                    order: 10;
+
                     margin: 0 0 0 0;
 
                     @include font( $industry, 0.75rem, 600 );
@@ -612,6 +604,8 @@
 
                 // text
 				.entry-description {
+
+                    order: 30;
 
 					margin: 0 0 0 0;
 

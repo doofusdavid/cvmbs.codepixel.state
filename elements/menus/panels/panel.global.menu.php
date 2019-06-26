@@ -6,7 +6,7 @@
     <li id="menu-link-home" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/" class="menu-link">
+        <a href="/" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">
@@ -42,7 +42,7 @@
     <li id="menu-link-about" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/about" class="menu-link">
+        <a href="/about" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">
@@ -78,7 +78,7 @@
     <li id="menu-link-students" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/students" class="menu-link">
+        <a href="/students" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">
@@ -114,7 +114,7 @@
     <li id="menu-link-research" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/research" class="menu-link">
+        <a href="/research" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">
@@ -150,7 +150,7 @@
     <li id="menu-link-outreach" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/outreach" class="menu-link">
+        <a href="/outreach" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">
@@ -186,7 +186,7 @@
     <li id="menu-link-alumni" class="menu-item-link global-menu-item">
 
         <!-- link -->
-        <a href="/alumni" class="menu-link">
+        <a href="/alumni" class="menu-link" aria-hidden="true">
 
             <!-- artwork -->
             <span class="link-artwork">

@@ -2,50 +2,11 @@
 <!-- site.toolbar -->
 <div id="site-menu-toolbar" class="ui-toolbar">
 
-    <!-- menu -->
-    <nav id="toolbar-menu">
+    <?php get_template_part( 'elements/menus/buttons/button.main.menu' ); ?>
 
-        <!-- list -->
-        <ul>
+    <?php get_template_part( 'elements/menus/buttons/button.search' ); ?>
 
-            <!-- main menu -->
-            <li class="menu-item">
-
-                <?php
-
-                    get_template_part( 'elements/menus/buttons/button.main.menu' );
-
-                ?>
-
-            </li>
-
-            <!-- search -->
-            <li class="menu-item">
-
-                <?php
-
-                    get_template_part( 'elements/menus/buttons/button.search' );
-
-                ?>
-
-            </li>
-
-            <!-- events -->
-            <li class="menu-item">
-
-                <?php
-
-                    get_template_part( 'elements/menus/buttons/button.events' );
-
-                ?>
-
-            </li>
-
-        </ul>
-        <!-- END list -->
-
-    </nav>
-    <!-- END  menu -->
+    <?php get_template_part( 'elements/menus/buttons/button.events' ); ?>
 
 </div>
 <!-- END site.toolbar -->

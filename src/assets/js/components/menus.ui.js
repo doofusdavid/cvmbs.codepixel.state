@@ -19,7 +19,6 @@
 // START :: globals
 // ================================================================================
 
-    var views = [];
     var menu;
     var toolbar;
     var button;
@@ -47,20 +46,6 @@ export var menusFX = {
 
         );
 
-        views = [
-
-            site.ui.layout,
-            site.ui.header,
-            site.ui.billboard,
-            site.ui.slides,
-            site.ui.active,
-            site.ui.menus.navigation.component,
-            site.ui.menus.navigation.controller,
-            site.ui.footer
-            // $('#content-homepage')
-
-        ];
-
         menu   = site.ui.menus.navigation.component;
         button = site.ui.menus.navigation.controller;
 
@@ -82,49 +67,11 @@ export var menusFX = {
         // handle ZURB offcanvas event
         $(window).on( 'opened.zf.offcanvas', function( e, target, menuX ) {
 
-            // event emitter
-            $('#billboard-slides').trigger( 'pause.homepage.feature', [ menu ] );
-
-            // slide content
-            var slidecontent = $('#billboard-slides .slick-current.slick-active .ui-slide-article .slide-content');
+            // trap focus
+            // Foundation.Keyboard.trapFocus( menu );
 
             // toggle menu open state for link background images
             $('#global-menu-list .link-artwork').addClass( 'loaded' );
-
-            // toolbar
-            toolbar = site.ui.toolbar;
-
-            $.each( views, function( index, view ) {
-
-                view.toggleClass( 'site-menu-open' );
-
-            });
-
-            $('#site-content .ui-article.active').toggleClass( 'site-menu-open' );
-
-            // hide slide content
-            slidecontent.velocity({
-
-                translateX : [ '-100%', 0 ],
-                opacity    : [ 0, 1 ]
-
-            }, {
-
-                begin    : function() {
-
-                    //
-
-                },
-                duration : 240,
-    			delay 	 : 80,
-    			easing   : [0.23, 1, 0.32, 1],
-    			complete : function() {
-
-    				//
-
-    			}
-
-            });
 
             // test viewport size
             if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' || mediaQ == 'xxlarge' ) {
@@ -141,7 +88,6 @@ export var menusFX = {
             menu.velocity({
 
                 translateX : [ menuX, '28rem' ],
-                // translateX : [ 0, '100%' ],
                 opacity    : [ 1, 0 ]
 
             }, {
@@ -156,31 +102,7 @@ export var menusFX = {
     			easing   : [0.23, 1, 0.32, 1],
     			complete : function() {
 
-    				$(this).toggleClass( 'site-menu-open' );
-
-    			}
-
-            });
-
-            // show toolbar
-            toolbar.velocity({
-
-                translateX : [ 0, '100%' ]
-                // opacity    : [ 1, 0 ]
-
-            }, {
-
-                begin    : function() {
-
-                    //
-
-                },
-                duration : 480,
-    			delay 	 : 20,
-    			easing   : [0.23, 1, 0.32, 1],
-    			complete : function() {
-
-    				$(this).toggleClass( 'site-menu-open' );
+    				//
 
     			}
 
@@ -188,35 +110,8 @@ export var menusFX = {
 
         }).on( 'closed.zf.offcanvas', function( e, target, menuX ) {
 
-            // event emitter
-            $('#billboard-slides').trigger( 'start.homepage.feature', [ menu ] );
-
-            // slide content
-            var slidecontent = $('#billboard-slides .slick-current.slick-active .ui-slide-article .slide-content');
-
-            // show slide content
-            slidecontent.velocity({
-
-                translateX : [ 0, '-100%' ],
-                opacity    : [ 1, 0 ]
-
-            }, {
-
-                begin    : function() {
-
-                    //
-
-                },
-                duration : 220,
-    			delay 	 : 20,
-    			easing   : [0.23, 1, 0.32, 1],
-    			complete : function() {
-
-    				//
-
-    			}
-
-            });
+            // release focus
+            // Foundation.Keyboard.releaseFocus( menu );
 
             // test viewport size
             if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' || mediaQ == 'xxlarge' ) {
@@ -233,40 +128,7 @@ export var menusFX = {
             menu.velocity({
 
                 translateX : [ '28rem', menuX ],
-                // translateX : [ '100%', 0 ],
                 opacity    : [ 0, 1 ]
-
-            }, {
-
-                begin    : function() {
-
-                    $('#site-content .ui-article.active').toggleClass( 'site-menu-open' );
-
-                    $.each( views, function( index, view ) {
-
-                        view.toggleClass( 'site-menu-open' );
-
-                    });
-
-                },
-                duration : 380,
-    			delay 	 : 40,
-    			easing   : [0.23, 1, 0.32, 1],
-    			complete : function() {
-
-    				$(this).toggleClass( 'site-menu-open' );
-
-                    // $('section.visible').focus();
-
-    			}
-
-            });
-
-            // hide toolbar
-            toolbar.velocity({
-
-                translateX : [ '100%', 0 ]
-                // opacity    : [ 0, 1 ]
 
             }, {
 
@@ -275,16 +137,26 @@ export var menusFX = {
                     //
 
                 },
-                duration : 480,
-    			delay 	 : 220,
+                duration : 380,
+    			delay 	 : 40,
     			easing   : [0.23, 1, 0.32, 1],
     			complete : function() {
 
-    				$(this).toggleClass( 'site-menu-open' );
+                    //
 
     			}
 
             });
+
+        });
+
+        // handle ZURB tab change event
+        $(window).on( 'change.zf.tabs', function( e ) {
+
+            console.log( e );
+
+            // maybe trap focus
+            Foundation.Keyboard.trapFocus( menu );
 
         });
 
@@ -296,22 +168,10 @@ export var menusFX = {
         // button class
         var panelcue = $('.site-menu-button');
 
-        // global target panel
-        var targetpanel;
-        var activepanel;
-
         // event listener
         panelcue.on( 'click', function( e ) {
 
-            // global target panel
-            targetpanel = $('#menu-panel-' + $(this).attr( 'data-target' ));
-            activepanel = $('.menu-panel.active');
-
-            // activate target panel
-            targetpanel.toggleClass( 'active inactive' );
-
-            // deactivate panel
-            activepanel.toggleClass( 'active inactive' );
+            //
 
         });
 

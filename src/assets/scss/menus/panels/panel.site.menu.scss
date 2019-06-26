@@ -693,7 +693,8 @@
                 }
 
                 // hover state
-                &:hover {
+                &:hover,
+                &:focus {
 
                     // @include fill( white, 0.965 );
 

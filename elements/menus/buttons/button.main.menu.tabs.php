@@ -1,6 +1,6 @@
 
 <!-- main.menu -->
-<button id="button-main-menu" class="site-menu-button" data-target="main" aria-expanded="true" aria-controls="menu-panel-main" aria-label="main menu" tabindex="0">
+<a href="#menu-panel-main" id="button-main-menu" class="site-menu-button">
 
     <!-- label -->
     <span class="link-label">
@@ -48,5 +48,5 @@
     </svg>
     <!-- END open icon -->
 
-</button>
+</a>
 <!-- END main.menu -->

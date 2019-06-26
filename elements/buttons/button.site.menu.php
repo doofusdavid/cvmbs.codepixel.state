@@ -3,7 +3,7 @@
 <button id="site-menu-button" class="main-menu-button" data-toggle="site-menu">
 
     <!-- open icon -->
-    <span class="label open">
+    <span id="open-label" class="label open">
 
         menu
 
@@ -11,7 +11,7 @@
     <!-- END open icon -->
 
     <!-- close icon -->
-    <span class="label close">
+    <span id="close-label" class="label close" aria-hidden="true">
 
         close
 

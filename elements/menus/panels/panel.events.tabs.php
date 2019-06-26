@@ -1,20 +1,10 @@
 <!-- panel.events -->
-<aside id="menu-panel-events" class="inactive ui-panel menu-panel" role="complementary" aria-hidden="true" tabindex="-1">
+<div id="menu-panel-events" class="tabs-panel menu-panel">
 
     <!-- panel.header -->
     <header id="menu-panel-events-header" class="panel-header">
 
         college event calendar
-
-        <a id="view-calendar-link" href="https://calendar.colostate.edu/cvmbs/" title="view full event calendar">
-
-            <span class="label">
-
-                view all
-
-            </span>
-
-        </a>
 
     </header>
     <!-- END panel.header -->
@@ -97,7 +87,7 @@
 
 					echo '<li class="event">
 
-                        <a class="event-link" href="' . $link . '" aria-hidden="true">
+                        <a class="event-link" href="' . $link . '">
 
                             <div class="calendar-icon" aria-hidden="true">
 
@@ -137,5 +127,5 @@
 	</div>
 	<!-- END panel utility class -->
 
-</aside>
+</div>
 <!-- END panel.events -->
