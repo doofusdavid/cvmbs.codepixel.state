@@ -22,6 +22,7 @@
     var menu;
     var toolbar;
     var button;
+    var globalmenulink = $('#global-menu-link');
 
 // ================================================================================
 // END :: globals
@@ -49,14 +50,14 @@ export var menusFX = {
         menu   = site.ui.menus.navigation.component;
         button = site.ui.menus.navigation.controller;
 
-        menusFX.access( menu, button );
+        menusFX.access( menu, button, globalmenulink );
 
         menusFX.panels( menu );
 
     },
 
     // event listener
-    access: function( menu, button ) {
+    access: function( menu, button, globalmenulink ) {
 
         // check viewport for menu position
         var mediaQ = Foundation.MediaQuery.current;
@@ -153,7 +154,7 @@ export var menusFX = {
         // handle ZURB tab change event
         $(window).on( 'change.zf.tabs', function( e ) {
 
-            console.log( e );
+            // console.log( e );
 
             // maybe trap focus
             Foundation.Keyboard.trapFocus( menu );
@@ -172,6 +173,12 @@ export var menusFX = {
         panelcue.on( 'click', function( e ) {
 
             //
+
+        });
+
+        globalmenulink.on( 'click', function( e ) {
+
+            // console.log( 'ball so hard' );
 
         });
 

@@ -159,65 +159,10 @@
 
         }
 
-        // toolbar menu
-        #toolbar-menu {
+        // global menu button
+        #button-global-menu {
 
-            @include flex-v-c-h-c( false );
-
-            width: 5rem;
-            height: auto;
-            margin: 0;
-            padding: 0;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                width: 4rem;
-
-            }
-
-            // list
-            ul {
-
-                width: 5rem;
-                margin: 0;
-                padding: 0;
-
-                list-style: none;
-
-                // mobile
-                @include breakpoint ( small only ) {
-
-                    width: 4rem;
-
-                }
-
-                // list item
-                .menu-item {
-
-                    width: 5rem;
-                    height: 5rem;
-                    margin: 0;
-                    padding: 0;
-
-                    // mobile
-                    @include breakpoint ( small only ) {
-
-                        width: 4rem;
-                        height: 4rem;
-
-                    }
-
-                    // hidden state
-                    &.hidden {
-
-                        display: none;
-
-                    }
-
-                }
-
-            }
+            // visibility: hidden;
 
         }
 
