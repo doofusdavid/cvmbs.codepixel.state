@@ -16,8 +16,9 @@
         // );
 
         // billboard
-        &:before {
-            content: '';
+        .section-image {
+
+            // content: '';
 
             position: absolute;
 
@@ -28,7 +29,7 @@
 
             background: {
 
-                image: url(../img/billboards/billboard.10.jpg);
+                // image: url(../img/billboards/billboard.10.jpg);
                 repeat: no-repeat;
                 size: cover;
                 position: center bottom;

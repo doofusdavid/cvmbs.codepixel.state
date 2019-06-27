@@ -27,8 +27,10 @@
   "dependencies": {
     "foundation-sites": "6.4.3",
     "jquery": "~3.0.0",
+    "lazyload": "^2.0.0-rc.2",
     "motion-ui": "~1.2.2",
     "slick-carousel": "^1.8.1",
+    "vanilla-lazyload": "^12.0.0",
     "velocity-animate": "^1.5.2",
     "velocity-ui-pack": "^1.2.2",
     "what-input": "^4.1.3"

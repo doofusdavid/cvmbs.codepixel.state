@@ -6,6 +6,12 @@
 
 <section id="facilities" class="section-places">
 
+    <!-- background.image -->
+    <div class="section-image lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.10.jpg">
+        <!-- empty -->
+    </div>
+    <!-- END background.image -->
+
     <!-- container -->
     <div class="article-container section-places__inner">
 
@@ -46,7 +52,7 @@
             <a class="article places__grid-item" href="<?php echo $placelink; ?>">
 
                 <!-- artwork -->
-                <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
+                <div class="thumb-artwork lazyload" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif);" data-src="<?php echo $place_image; ?>">
 
                     <!-- the emptiness -->
 

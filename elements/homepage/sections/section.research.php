@@ -10,7 +10,7 @@
 
 <section id="research" class="section-research">
 
-    <div class="section-research__inner" style="background-image:url(<?php echo $research_content[ 'background' ][ 'url' ]; ?>)">
+    <div class="section-research__inner lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo $research_content[ 'background' ][ 'url' ]; ?>">
 
         <div class="section-research__content">
 

@@ -1,7 +1,7 @@
 <section id="academics" class="section-academics">
 
     <!-- background.image -->
-    <div class="section-image">
+    <div class="section-image lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.35.jpg">
         <!-- empty -->
     </div>
     <!-- END background.image -->
@@ -41,7 +41,7 @@
         <div id="links-layer" class="links-layer content-layer">
 
             <!-- button -->
-            <a id="undergraduate-link" href="/degree-programs/undergraduate" class="layer-link">
+            <a id="undergraduate-link" href="/degree-programs/undergraduate" class="layer-link lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/degree.programs/degree.programs.undergraduate.jpg">
 
                 <span>
 
@@ -53,7 +53,7 @@
             <!-- END button -->
 
             <!-- button -->
-            <a id="graduate-link" href="/degree-programs/graduate" class="layer-link">
+            <a id="graduate-link" href="/degree-programs/graduate" class="layer-link lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/degree.programs/degree.programs.graduate.jpg">
 
                 <span>
 
@@ -65,7 +65,7 @@
             <!-- END button -->
 
             <!-- button -->
-            <a id="dvm-link" href="/dvm" class="layer-link">
+            <a id="dvm-link" href="/dvm" class="layer-link lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/degree.programs/degree.programs.dvm.jpg">
 
                 <span>
 

@@ -20,6 +20,9 @@
     // foundation module
     import Foundation from 'foundation-sites';
 
+    // lazyload
+    import LazyLoad from 'vanilla-lazyload';
+
     // initialize foundation
     $(document).foundation();
 
@@ -160,6 +163,13 @@
 
         // track focus
         // trackFocus();
+
+        // lazyload
+        var lazyLoadFX = new LazyLoad({
+
+            elements_selector : '.lazyload'
+
+        });
 
     });
 
