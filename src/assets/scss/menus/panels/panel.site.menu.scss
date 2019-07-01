@@ -27,7 +27,7 @@
 
         overflow: scroll;
 
-        // @include fill( $nite, 0.785 );
+        @include fill( $app05, 0.185 );
 
         @include gradient( 0deg, $g140, 0.325, 0%, transparent, 1.000, 50% );
 
@@ -214,6 +214,217 @@
 
                 }
 
+                // global menu
+                &.college-menu {
+
+                    > a {
+
+                        // icon
+                        &:before {
+
+                            @include codicon( 1rem, 1rem, 0, 1rem, $gold, '\E904' );
+
+                            margin: 0 0.5rem 0 0;
+
+                        }
+
+                    }
+
+                    // global
+                    .menu-item {
+
+                        position: relative;
+
+
+                        // link
+                        a {
+
+                            @include font( $industry, 0.75rem, 600 );
+
+                            @include text( $up );
+
+                            @include color( white, 0.365 );
+
+                            // hover state
+                            &:hover {
+
+                                @include color( white, 0.000 );
+
+                                // before
+                                &:before {
+
+                                    opacity: 1.000;
+
+                                    transition: all 220ms linear 0ms;
+
+                                }
+
+                            }
+
+                            // before
+                            &:before {
+
+                                content: '';
+
+                                position: absolute;
+
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+
+                                z-index: 0;
+
+                                opacity: 0.365;
+
+                                transition: all 220ms linear 0ms;
+
+                            }
+
+                        }
+
+                    }
+
+                    // individual styles
+                    .link-college-home {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $g140, 0.285, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                    // about
+                    .link-about {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $cvellow, 0.685, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                    // students
+                    .link-students {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $blue, 0.485, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                    // research
+                    .link-research {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $cvnavy, 0.285, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                    // outreach
+                    .link-outreach {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $roarange, 0.585, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                    // alumni
+                    .link-alumni {
+
+                        // link
+                        a {
+
+                            // before
+                            &:before {
+
+                                @include gradient(
+
+                                    90deg,
+                                    transparent, 1.000, 0%,
+                                    $orange, 0.465, 100%
+
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
                 // link
                 a {
 
@@ -265,7 +476,6 @@
                 }
 
             }
-
             // global link
             #global-menu-link {
 
