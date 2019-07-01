@@ -32,26 +32,18 @@
 
         ?>
 
-        <div id="spotlight-billboard" class="section-content" style="background-image:url(<?php echo $image_url; ?>);">
+        <div id="spotlight-billboard" class="section-content">
 
             <!-- image FX -->
             <div class="image-layer">
 
                 <!-- base -->
-                <div class="base fx-layer layer" style="background-image:url(<?php echo $image_url; ?>);">
+                <div class="base fx-layer layer lazyload" style="background-image:url(data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=);" data-src="<?php echo $image_url; ?>">
 
                     <!-- empty -->
 
                 </div>
                 <!-- END base -->
-
-                <!-- blur -->
-                <div class="blur fx-layer layer" style="background-image:url(<?php echo $image_url; ?>);">
-
-                    <!-- empty -->
-
-                </div>
-                <!-- END blur -->
 
             </div>
             <!-- END image FX -->
