@@ -37,12 +37,13 @@
         // mobile
         @include breakpoint ( small only ) {
 
-            top: 4rem;
+            // top: 4rem;
+            right: -4rem;
 
             width: 4rem;
             height: calc( 100vh - 4rem );
 
-            transform: translate3d( 4rem, 0, 0 );
+            // transform: translate3d( 4rem, 0, 0 );
 
         }
 
