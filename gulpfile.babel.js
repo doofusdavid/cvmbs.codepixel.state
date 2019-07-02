@@ -261,7 +261,21 @@
 
                 .pipe( $.if( REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev.manifest() ) )
 
-                .pipe( gulp.dest( PATHS.site + '/assets/js' ) );
+                .pipe( gulp.dest( PATHS.site + '/assets/js' ) )
+
+                .pipe( notify({
+
+                    title: 'compiled',
+                    message: '<%= file.relative %> : <%= options.timestamp %>',
+                    onLast: true,
+                    icon: path.join( __dirname, notifycon_js ),
+                    templateOptions: {
+
+                        timestamp: timestamp
+
+                    }
+
+                } ) );
 
         },
 

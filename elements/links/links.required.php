@@ -35,7 +35,7 @@
             <!-- link -->
             <li class="link-list-item">
 
-                <a class="link" href="https://colostate.edu/disclaimer/">
+                <a class="link" href="https://www.colostate.edu/disclaimer/">
 
                     Disclaimer
 
@@ -59,7 +59,7 @@
             <!-- link -->
             <li class="link-list-item">
 
-                <a class="link" href="https://colostate.edu/privacy/">
+                <a class="link" href="https://www.colostate.edu/privacy/">
 
                     Privacy Statement
 
