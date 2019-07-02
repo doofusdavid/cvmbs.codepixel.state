@@ -349,6 +349,38 @@
 
                     }
 
+                    // misspelling
+                    .gs-spelling {
+
+                        @include font( $industry, 1rem, 500 );
+
+                        @include color( white, 0.000 );
+
+                        // link
+                        a {
+
+                            text-decoration: none;
+
+                            @include color( $gold, 0.000 );
+
+                        }
+
+                    }
+
+                    // no result container
+                    .gs-no-results-result {
+
+                        // content
+                        .gs-snippet {
+
+                            border: none;
+
+                            background: transparent;
+
+                        }
+
+                    }
+
                     // title
                     .gs-title {
 
