@@ -28,11 +28,7 @@
 
         @include gradient( 0deg, $nite, 0.565, 0%, $nite, 0.325, 100% );
 
-        // transform: translate3d( 5rem, 0, 0 );
-
         transition: background-color 360ms linear 0ms;
-
-        // @include hide;
 
         // mobile
         @include breakpoint ( small only ) {
@@ -157,13 +153,6 @@
                 }
 
             }
-
-        }
-
-        // global menu button
-        #button-global-menu {
-
-            // visibility: hidden;
 
         }
 

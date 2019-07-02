@@ -30,17 +30,5 @@
     </li>
     <!-- END list item -->
 
-    <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
-
-    <!-- list item -->
-    <li class="tabs-title">
-
-        <?php get_template_part( 'elements/menus/buttons/button.global.menu' ); ?>
-
-    </li>
-    <!-- END list item -->
-
-    <?php endif; ?>
-
 </ul>
 <!-- END site.toolbar -->

@@ -46,7 +46,7 @@
     </div>
     <!-- END panel.main -->
 
-    <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
+    <?php if ( $site_type == 'departments' || $site_type == 'specials' ) : ?>
 
     <!-- panel.global -->
     <div id="menu-panel-global" class="tabs-panel menu-panel">
