@@ -40,7 +40,7 @@
         },
         {
             "key": "field_5d0bed3c09b60",
-            "label": "Intro Block",
+            "label": "Intro Notification",
             "name": "intro_block",
             "type": "flexible_content",
             "instructions": "",
@@ -169,5 +169,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561062901
+    "modified": 1562104489
 }

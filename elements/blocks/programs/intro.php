@@ -38,8 +38,35 @@ if ( have_rows('program_intro') ) :
 	</div><!-- .degree-program-intro__content -->
 
 	<?php
+	if ( have_rows('notification_area') ) :
+		while ( have_rows('notification_area') ) : the_row();
+			if ( get_row_layout('notification') ) :
+				if ( ! is_this_item_expired( get_sub_field('expiration') ) ) :
+					$type = get_sub_field('type');
+	?>
+	<div class="degree-program__notification notification-block">
+		<div class="notification-box box--<?php echo esc_attr( $type ); ?>">
+			<div class="notification-box__content">
+				<?php if ( get_sub_field('heading') ) : ?>
+				<h2 class="notification-box__title">
+					<?php the_sub_field('heading'); ?>
+				</h2>
+				<?php endif; ?>
+
+				<?php the_sub_field('message'); ?>
+			</div><!-- .notification-box__content -->
+		</div><!-- .notification-box -->
+	</div><!-- .degree-program__notification -->
+	<?php
+				endif; // is_this_item_expired()
+			endif; // get_row_layout()
+		endwhile; // the_row()
+	endif; // have_rows()
+	?>
+
+	<?php
 	if ( $children ) :
-		$grid_size = count( $children ) < 3 ? 'large' : 'small';
+		$grid_size = ( count( $children ) < 3 ) ? 'large' : 'small';
 	?>
 
 	<div class="degree-program-intro__grid">

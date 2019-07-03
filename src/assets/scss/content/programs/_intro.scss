@@ -175,3 +175,14 @@
 		}
 	}
 }
+
+.degree-program__notification {
+	width: 100%;
+	max-width: 75rem;
+	margin: 2rem auto 0;
+	font-size: 1rem;
+
+	@include bpoint(widescreen) {
+		margin-top: 4vw;
+	}
+}
