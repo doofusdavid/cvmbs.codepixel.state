@@ -297,7 +297,7 @@ export var slides = {
 
             if ( loadstatus === 'false' ) {
 
-                $.Velocity.RunSequence( contentFX.loadslide );
+                // $.Velocity.RunSequence( contentFX.loadslide );
 
             } else {
 
@@ -376,7 +376,7 @@ export var slides = {
 
             ];
 
-            $.Velocity.RunSequence( contentFX.unloadslide );
+            // $.Velocity.RunSequence( contentFX.unloadslide );
 
         });
 

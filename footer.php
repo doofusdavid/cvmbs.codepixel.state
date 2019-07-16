@@ -4,8 +4,6 @@
 
         <?php wp_footer(); ?>
 
-        <script async src="<?php echo get_stylesheet_directory_uri(); ?>/src/assets/js/library/velocity.ui.min.js"></script>
-
         <?php
 
             $environment = $_SERVER[ 'DOCUMENT_ROOT' ];

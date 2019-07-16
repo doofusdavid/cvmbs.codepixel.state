@@ -15,7 +15,8 @@
     window.jQuery = window.$ = $;
 
     // global velocity object
-    var velocity = $.velocity = require( 'velocity-animate' );
+    // var velocity = $.velocity = require( 'velocity-animate' );
+    import velocity from 'velocity-animate';
 
     // foundation module
     import Foundation from 'foundation-sites';

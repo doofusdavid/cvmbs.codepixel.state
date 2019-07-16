@@ -52,20 +52,8 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Deregister the jquery-migrate version bundled with WordPress.
 		wp_deregister_script( 'jquery-migrate' );
 
-		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
-		wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
-
-		// Enqueue jQuery migrate. Uncomment the line below to enable.
-		// wp_enqueue_script( 'jquery-migrate' );
-
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'cvmbs', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
-
-		// Enqueue Foundation scripts
-		// wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.admin.app.js' ), array( 'jquery' ), '1.0.0', true );
-
-		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
-		//wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
 
 	}
 
@@ -73,16 +61,33 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	function defer_cvmbs_scripts_and_styles( $tag, $handle, $src ) {
 
-        if ( 'requirejs' !== $handle )
+        if ( 'cvmbs' === $handle ){
 
-            return $tag;
+			// return str_replace(' src', ' defer="defer" src', $tag );
+	        return str_replace( ' src=', ' async src=', $tag );
 
-        return str_replace(' src', ' defer="defer" src', $tag );
-        // return str_replace(' src', ' async="async" src', $tag );
+		}
+
+        return $tag;
 
     }
 
 	add_filter( 'script_loader_tag', 'defer_cvmbs_scripts_and_styles', 10, 3 );
+
+	function defer_jquery_load( $tag, $handle, $src ) {
+
+        if ( 'jquery' === $handle ){
+
+			// return str_replace(' src', ' defer="defer" src', $tag );
+	        return str_replace( ' src=', ' async src=', $tag );
+
+		}
+
+        return $tag;
+
+    }
+
+	add_filter( 'script_loader_tag', 'defer_jquery_load', 10, 3 );
 
 endif;
 

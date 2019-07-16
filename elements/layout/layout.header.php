@@ -16,7 +16,7 @@
             </a>
         </div><!-- .csu-signature -->
 
-        <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
+        <?php if ( $site_type == 'department' || $site_type == 'special' || $site_type == 'laboratory' ) : ?>
 
             <<?php echo $wrapper; ?> class="site-identifier">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="identifier-link" rel="home"><?php the_field( 'site_title', 'options' ); ?></a>
