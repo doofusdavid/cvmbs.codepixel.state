@@ -73,7 +73,7 @@
             "key": "field_5bb7d1239d4c6",
             "label": "Site Title Line Break?",
             "name": "site_title_line_break",
-            "type": "true_false",
+            "type": "checkbox",
             "instructions": "check this box if the site's title should include a line break to display properly",
             "required": 0,
             "conditional_logic": [
@@ -90,13 +90,6 @@
                         "operator": "==",
                         "value": "special"
                     }
-                ],
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "laboratory"
-                    }
                 ]
             ],
             "wrapper": {
@@ -104,11 +97,15 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "choices": {
+                "break": "include site title line break"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         },
         {
             "key": "field_5bb7d27b9d4c7",
@@ -122,12 +119,12 @@
                     {
                         "field": "field_5bb7d1239d4c6",
                         "operator": "==",
-                        "value": "1"
+                        "value": "break"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -149,12 +146,12 @@
                     {
                         "field": "field_5bb7d1239d4c6",
                         "operator": "==",
-                        "value": "1"
+                        "value": "break"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -394,5 +391,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563893805
+    "modified": 1563316307
 }
