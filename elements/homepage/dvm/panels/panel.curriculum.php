@@ -28,7 +28,7 @@
 
     </p>
 
-    <a class="document-link" href="https://vetmedbiosci.colostate.edu/dvm/wp-content/uploads/sites/6/2019/06/19-20_dvm_term-schedule-6.24.19-update.pdf">
+    <a class="document-link" href="https://vetmedbiosci.colostate.edu/dvm/wp-content/uploads/sites/6/2019/06/dvm-curriculum.pdf">
 
         view program curriculum
 
