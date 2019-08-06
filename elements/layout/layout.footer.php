@@ -108,7 +108,8 @@
 
                 <h2 class="links-header">
 
-                    get in touch
+                    <!-- get in touch -->
+                    contact the college
 
                 </h2>
 

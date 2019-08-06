@@ -1,0 +1,92 @@
+// stylesheet :: laboratory publications styles
+
+    // settings
+    $content : 1rem;
+
+    // styles
+    #publications {
+
+        position: relative;
+
+        // @include flex-h-j-v-s( false );
+
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.165 );
+
+        @include fill( white, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+        // title
+        h2 {
+
+            @include font( $klavislim, auto, 400 );
+
+            @include color( $g140, 0.000 );
+
+        }
+
+        // text
+        p {
+
+            margin: 0 0 2rem 0;
+            padding: 0 0 0 0;
+
+            @include font( $industry, 0.875rem, 600 );
+
+            // text-align: center;
+
+            @include typo( 1.5rem, 0.025em );
+
+            // last child
+            &:last-child {
+
+                margin: 0 0 0 0;
+
+            }
+
+        }
+
+        // link
+        .publications-link {
+
+            @include flex-h-c-v-c( true );
+
+            height: 4em;
+            margin: 0 0 0 0;
+            padding: 0.0625rem 1.5rem 0 1.5rem;
+
+            @include font( $klavislim, 1rem, 400 );
+
+            @include text( $up );
+
+            text-decoration: none;
+
+            @include typo( 0.75rem, 0.045em );
+
+            @include color( white, 0.000 );
+
+            @include fill( $roarange, 0.000 );
+
+            @include shadowbox( 1rem, 3rem, black, 0.465 );
+
+            transition: all 220ms linear 0ms;
+
+            // hover state
+            &:hover {
+
+                // @include color( $blue, 0.000 );
+
+                @include fill( $cvnavy, 0.000 );
+
+            }
+
+        }
+
+    }

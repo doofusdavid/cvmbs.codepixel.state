@@ -1,0 +1,67 @@
+// stylesheet :: laboratory staff styles
+
+    // settings
+    $backdrop : adjust-color(
+
+        $beige,
+        $hue          : 0%,
+        $saturation : -5%,
+        $lightness  : 5%,
+        $alpha         : -0.000
+
+    );
+
+    // styles
+    #staff {
+
+        position: relative;
+
+        // @include flex-h-j-v-s( false );
+
+        margin: 0 0 0 0;
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( white, 0.165 );
+
+        // @include fill( $g135, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+        // title
+        .group-bios__name {
+
+            // @include font( $vitesse, 1rem, 400 );
+
+            @include color( white, 0.000 );
+
+        }
+
+        // heading
+        h2 {
+
+            margin: 0 0 2rem 0;
+
+            @include typo( 1.75rem, auto );
+
+        }
+
+        // text
+        p {
+
+            //
+
+        }
+
+        // email
+        a {
+
+            @include color( white, 0.000 );
+
+        }
+
+    }

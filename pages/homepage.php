@@ -18,6 +18,10 @@
 
             get_template_part( 'elements/homepage/department/department.homepage' );
 
+        } else if ( $site_type == 'laboratory' ) {
+
+            get_template_part( 'elements/homepage/laboratory/laboratory.homepage' );
+
         } else if ( $site_type == 'special' ) {
 
             get_template_part( 'elements/homepage/dvm/dvm.homepage' );

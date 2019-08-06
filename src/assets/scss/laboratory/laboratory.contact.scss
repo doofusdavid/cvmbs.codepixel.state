@@ -1,0 +1,207 @@
+// stylesheet :: laboratory contact styles
+
+    // settings
+    $content : 1rem;
+
+    // styles
+    #contact {
+
+        position: relative;
+
+        min-height: 50vh;
+        padding: 0 0 0 0;
+
+        @include color( white, 0.165 );
+
+        @include fill( $nite, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+        // slide
+        .ui-slide {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            @include flex-h-e-v-t( false );
+
+            display: flex !important;
+
+            margin: 0 0 2rem 0;
+
+            // last child
+            &:last-child {
+
+                margin: 0 0 0 0;
+
+            }
+
+            // image
+            .image-container {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                background: {
+
+                    image: url(../img/billboards/billboard.33.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include fill( $dark, 0.365 );
+
+                }
+
+            }
+
+            // content
+            .content-wrapper {
+
+                position: relative;
+
+                z-index: 20;
+
+                @include flex-v-b-h-s( false );
+
+                flex-basis: 50%;
+
+                min-height: 100%;
+                padding: 0 5rem 5rem 5rem;
+
+                @include fill( $nite, 0.115 );
+
+            }
+
+        }
+
+        // title
+        h2 {
+
+            @include font( $klavislim, auto, 400 );
+
+            @include color( $gold, 0.000 );
+
+        }
+
+        // text
+        p {
+
+            margin: 0 0 2rem 0;
+            padding: 0 0 0 0;
+
+            @include font( $industry, 0.875rem, 600 );
+
+            // text-align: center;
+
+            @include typo( 1.5rem, 0.025em );
+
+            // last child
+            &:last-child {
+
+                margin: 0 0 0 0;
+
+            }
+
+        }
+
+        // social media buttons
+        .social-media-links {
+
+            @include flex-h-s-v-st( false );
+
+            // link
+            .social-link {
+
+                @include flex-v-c-h-c( true );
+
+                width: 2rem;
+                height: 2rem;
+                margin: 0 0.5rem 0 0;
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+                @include fill( white, 0.925 );
+
+                &.facebook {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        @include fill( $facebook, 0.115 );
+
+                    }
+
+                }
+
+                &.twitter {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        @include fill( $twitter, 0.085 );
+
+                    }
+
+                }
+
+                &.linkedin {
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        @include fill( $linkedin, 0.105 );
+
+                    }
+
+                }
+
+                // label
+                .link-label {
+
+                    position: absolute;
+
+                    visibility: hidden;
+
+                }
+
+            }
+
+        }
+
+    }

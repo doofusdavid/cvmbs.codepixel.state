@@ -1,0 +1,48 @@
+// stylesheet :: laboratory description styles
+
+    // settings
+    $content : 1rem;
+    $description : adjust-color(
+
+        $beige,
+        $hue          : 0%,
+        $saturation : 0%,
+        $lightness  : 0%,
+        $alpha         : -0.000
+
+    );
+
+    // styles
+    #laboratory-description {
+
+        position: relative;
+
+        @include flex-h-j-v-s( false );
+
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.165 );
+
+        @include fill( $description, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+        // intro
+        .description-text {
+
+            padding: 0 2rem 0 0;
+
+            @include font( $industry, 0.875rem, 600 );
+
+            // text-align: center;
+
+            @include typo( 1.5rem, 0.055em );
+
+        }
+
+    }
