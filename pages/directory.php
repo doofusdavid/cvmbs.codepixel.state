@@ -28,7 +28,7 @@
     $siteurl = str_replace( '/', '', $siteinfo->path );
 
     // set department ID for REST API tasks
-    switch( $siteurl ) {
+    switch ( $siteurl ) {
 
         case 'cs' :
 
@@ -190,9 +190,9 @@
                                 $tableName  = $lastName . ', ' . $firstName;
                                 $eMail      = strtolower( $member->email );
                                 $phone      = $member->phone;
-                                $department = $member->department;
+                                $department = $member->directoryGroup;
 
-                                $results .= '<tr class="record"><td><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
 
                             }
 
@@ -226,8 +226,27 @@
         </div>
         <!-- END info -->
 
+        <!-- filters -->
+        <div id="directory-filters" class="toolbar">
+
+            <span class="filter-label">generate a list by member type</span>
+
+            <a class="filter-link" href="#">faculty</a>
+
+            <a class="filter-link" href="#">staff</a>
+
+            <a class="filter-link" href="#">graduate students</a>
+
+            <a class="filter-link" href="#">residents/interns</a>
+
+            <a class="filter-link" href="#">post doctoral</a>
+
+            <a class="filter-link" href="#">associates</a>
+
+        </div>
+        <!-- END filters -->
+
         <!-- Data Tables -->
-        <!-- <script type="text/javascript" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script> -->
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
         <script type="text/javascript">
 
@@ -261,7 +280,7 @@
                 var controlfields = $('#directory-fields');
                 var directoryinfo = $('#directory-info');
                 var controlpages  = $('#directory-controls');
-                var table   = $('#directory-records').DataTable( {
+                var table         = $('#directory-records').DataTable( {
 
                     'order'    : [[ 0, 'asc' ]],
                     stateSave  : true,

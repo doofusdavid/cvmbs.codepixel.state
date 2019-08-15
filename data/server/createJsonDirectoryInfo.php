@@ -154,6 +154,7 @@
                     break;
 
                 case 209 :
+                case 205 :
 
                     $directoryGroupId   = 1004;
                     $directoryGroupName = 'Microbiology, Immunology, and Pathology';
@@ -183,9 +184,22 @@
                     $directoryGroupName = 'Veterinary Teaching Hospital';
                     break;
 
-                default :
+                case 674 :
+                case 539 :
 
                     $directoryGroupId   = 1008;
+                    $directoryGroupName = 'Center for Environmental Medicine';
+                    break;
+
+                case 206 :
+
+                    $directoryGroupId   = 1009;
+                    $directoryGroupName = 'Molecular, Cellular, and Integrative Neurosciences';
+                    break;
+
+                default :
+
+                    $directoryGroupId   = 1010;
                     $directoryGroupName = 'undefined';
 
             }

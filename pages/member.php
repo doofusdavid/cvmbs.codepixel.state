@@ -314,7 +314,7 @@
                             $year    = $degree[ 'year' ];
                             $level   = $degree[ 'level' ];
 
-                            $degrees .= '<span class="entry">' . $school . ', ' . $year . '<br />' . $level . '</span>';
+                            $degrees .= '<span class="entry">' . $level . ', ' . $school . ', ' . $year . '</span>';
 
                         }
 
@@ -438,27 +438,33 @@
         </div>
         <!-- END listing -->
 
-        <pre class="developer hide">
+        <!-- output -->
+        <div class="developer">
 
-            <?php
+            <pre>
 
-                print_r( $getMemberProfileInfo );
-                echo '<br />';
-                print_r( $getMemberDirectoryInfo );
-                echo '<br />';
-                echo '<br />';
-                print_r( $getMemberContactInfo );
+                <?php
 
-                // profile text
-                foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
+                    print_r( $getMember );
+                    echo '<br />';
+                    print_r( $getMemberDirectoryInfo );
+                    echo '<br />';
+                    echo '<br />';
+                    print_r( $getMemberContactInfo );
 
-                    $profile = $memberProfileInfo->ProfileText;
+                    // profile text
+                    foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
 
-                }
+                        $profile = $memberProfileInfo->ProfileText;
 
-            ?>
+                    }
 
-        </pre>
+                ?>
+
+            </pre>
+
+        </div>
+        <!-- END output -->
 
     </div>
     <!-- END directory -->
