@@ -209,6 +209,7 @@
                 'fullName'          => $member->FirstName . ' ' . $member->LastName,
                 'email'             => strtolower( $member->EmailAddress ),
                 'title'             => $member->EmployeeTitle,
+                'memberType'        => $member->EmployeeCategory,
                 'directoryGroupID'  => $directoryGroupId,
                 'directoryGroup'    => $directoryGroupName,
                 'primaryGroupID'    => $primaryGroupId,

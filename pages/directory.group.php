@@ -1,6 +1,6 @@
 <?php
 
-    // template name: Directory
+    // template name: Directory Group
 
 ?>
 
@@ -27,27 +27,41 @@
     // parse URL for site path
     $siteurl = str_replace( '/', '', $siteinfo->path );
 
+    // set slug variable for operators
+    global $post;
+    $directory_slug = $post->post_name;
+
     // set department ID for REST API tasks
-    switch ( $siteurl ) {
+    switch ( $directory_slug ) {
 
-        case 'cs' :
+        case 'faculty' :
 
-            $department_ID = 1002;
+            $group_name = 'Faculty';
             break;
 
-        case 'bms' :
+        case 'staff' :
 
-            $department_ID = 1003;
+            $group_name = 'Staff';
             break;
 
-        case 'mip' :
+        case 'graduate-students' :
 
-            $department_ID = 1004;
+            $group_name = 'GraduateStudents';
             break;
 
-        case 'erhs' :
+        case 'residents-interns' :
 
-            $department_ID = 1005;
+            $group_name = 'ResidentsInterns';
+            break;
+
+        case 'post-doctoral' :
+
+            $group_name = 'PostDoctoral';
+            break;
+
+        case 'associates' :
+
+            $group_name = 'AssociateFaculty';
             break;
 
     }
@@ -79,7 +93,8 @@
 
                     }
 
-                    echo $directory_type . ' ' . $directory_page;
+                    // echo $directory_type . ' ' . $directory_page;
+                    echo $directory_page . ' ' . 'directory';
 
                 ?>
 
@@ -154,21 +169,25 @@
 
                 <?php
 
-                    // college data
-                    if ( $site_type == 'college' ) {
+                    // faculty data
+                    if ( $directory_slug == 'faculty' ) {
 
                         foreach ( $members as $member ) {
 
-                            $query      = $member->memberID;
-                            $ename      = $member->eName;
-                            $lastName   = $member->lastName;
-                            $firstName  = $member->firstName;
-                            $tableName  = $lastName . ', ' . $firstName;
-                            $eMail      = strtolower( $member->email );
-                            $phone      = $member->phone;
-                            $department = $member->directoryGroup;
+                            if ( $member->memberType == $group_name ) {
 
-                            $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                                $query      = $member->memberID;
+                                $ename      = $member->eName;
+                                $lastName   = $member->lastName;
+                                $firstName  = $member->firstName;
+                                $tableName  = $lastName . ', ' . $firstName;
+                                $eMail      = strtolower( $member->email );
+                                $phone      = $member->phone;
+                                $department = $member->directoryGroup;
+
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+
+                            }
 
                         }
 
@@ -176,12 +195,116 @@
 
                     }
 
-                    // department data
-                    if ( $site_type == 'department' ) {
+                    // staff data
+                    if ( $directory_slug == 'staff' ) {
 
                         foreach ( $members as $member ) {
 
-                            if ( $member->directoryGroupID == $department_ID ) {
+                            if ( $member->memberType == $group_name ) {
+
+                                $query      = $member->memberID;
+                                $ename      = $member->eName;
+                                $lastName   = $member->lastName;
+                                $firstName  = $member->firstName;
+                                $tableName  = $lastName . ', ' . $firstName;
+                                $eMail      = strtolower( $member->email );
+                                $phone      = $member->phone;
+                                $department = $member->directoryGroup;
+
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+
+                            }
+
+                        }
+
+                        echo $results;
+
+                    }
+
+                    // graduate students data
+                    if ( $directory_slug == 'graduate-students' ) {
+
+                        foreach ( $members as $member ) {
+
+                            if ( $member->memberType == $group_name ) {
+
+                                $query      = $member->memberID;
+                                $ename      = $member->eName;
+                                $lastName   = $member->lastName;
+                                $firstName  = $member->firstName;
+                                $tableName  = $lastName . ', ' . $firstName;
+                                $eMail      = strtolower( $member->email );
+                                $phone      = $member->phone;
+                                $department = $member->directoryGroup;
+
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+
+                            }
+
+                        }
+
+                        echo $results;
+
+                    }
+
+                    // residents/interns data
+                    if ( $directory_slug == 'residents-interns' ) {
+
+                        foreach ( $members as $member ) {
+
+                            if ( $member->memberType == $group_name ) {
+
+                                $query      = $member->memberID;
+                                $ename      = $member->eName;
+                                $lastName   = $member->lastName;
+                                $firstName  = $member->firstName;
+                                $tableName  = $lastName . ', ' . $firstName;
+                                $eMail      = strtolower( $member->email );
+                                $phone      = $member->phone;
+                                $department = $member->directoryGroup;
+
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+
+                            }
+
+                        }
+
+                        echo $results;
+
+                    }
+
+                    // post-doctoral data
+                    if ( $directory_slug == 'post-doctoral' ) {
+
+                        foreach ( $members as $member ) {
+
+                            if ( $member->memberType == $group_name ) {
+
+                                $query      = $member->memberID;
+                                $ename      = $member->eName;
+                                $lastName   = $member->lastName;
+                                $firstName  = $member->firstName;
+                                $tableName  = $lastName . ', ' . $firstName;
+                                $eMail      = strtolower( $member->email );
+                                $phone      = $member->phone;
+                                $department = $member->directoryGroup;
+
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+
+                            }
+
+                        }
+
+                        echo $results;
+
+                    }
+
+                    // associates data
+                    if ( $directory_slug == 'associates' ) {
+
+                        foreach ( $members as $member ) {
+
+                            if ( $member->memberType == $group_name ) {
 
                                 $query      = $member->memberID;
                                 $ename      = $member->eName;

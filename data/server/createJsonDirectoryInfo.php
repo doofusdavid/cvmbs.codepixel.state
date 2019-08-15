@@ -18,8 +18,6 @@
         // output list of functions
         $response = $service->__getFunctions();
 
-
-
         // output magic
         $directory = $service->GetMembersBySearchName(
 
@@ -70,13 +68,6 @@
 
             // get contact info
             $contacts = $service->GetMemberContactsByMemberId( array( 'id' => $queryId ) );
-
-            // get address info
-            // $address = $service->GetMemberById(
-
-                // array( 'id' => $queryId )
-
-            // );
 
             // get photo
             $photos = $service->GetMemberPhotoByMemberId(
@@ -218,6 +209,7 @@
                 'fullName'          => $member->FirstName . ' ' . $member->LastName,
                 'email'             => strtolower( $member->EmailAddress ),
                 'title'             => $member->EmployeeTitle,
+                'memberType'        => $member->EmployeeCategory,
                 'directoryGroupID'  => $directoryGroupId,
                 'directoryGroup'    => $directoryGroupName,
                 'primaryGroupID'    => $primaryGroupId,
@@ -226,7 +218,7 @@
                 'department'        => $department,
                 'phone'             => $phone,
                 'contactInfo'       => $memberContacts,
-                'addressInfo'       => 'ball so hard',
+                // 'addressInfo'       => 'ball so hard',
                 // 'addressInfo'       => $member->BusinessAddress1,
                 'address'           => $memberAddress->BusinessAddress1,
                 'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id

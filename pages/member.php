@@ -445,10 +445,12 @@
 
                 <?php
 
+                    echo '<br />';
                     print_r( $getMember );
                     echo '<br />';
-                    print_r( $getMemberDirectoryInfo );
-                    echo '<br />';
+                    // print_r( $getMemberDirectoryInfo );
+                    // echo '<br />';
+                    print_r( $response );
                     echo '<br />';
                     print_r( $getMemberContactInfo );
 

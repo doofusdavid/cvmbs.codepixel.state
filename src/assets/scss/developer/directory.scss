@@ -190,6 +190,20 @@
             // header
             thead {
 
+                // row
+                tr {
+
+                    height: 2rem;
+
+                }
+
+                // head
+                th {
+
+                    padding: 0.125rem 0.75rem 0 0.75rem;
+
+                }
+
                 // mobile
                 @include breakpoint ( small only ) {
 
@@ -202,7 +216,7 @@
             // row
             .record {
 
-                // height: 2rem;
+                height: 2rem;
 
                 @include font( $industry, 0.875rem, 600 );
 
@@ -449,7 +463,8 @@
 
                     display: block;
 
-                    padding: 0.5625rem 0.75rem 0.4375rem 0.75rem;
+                    // padding: 0.5625rem 0.75rem 0.4375rem 0.75rem;
+                    padding: 0.125rem 0.75rem 0rem 0.75rem;
 
                     text-decoration: none;
 
