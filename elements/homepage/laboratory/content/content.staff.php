@@ -20,23 +20,32 @@
             $staff_photo = $staff[ 'photo' ];
             $staff_desc  = $staff[ 'description' ];
             $staff_phone = $staff[ 'phones' ];
+            $staff_link  = $staff[ 'directory_link' ];
             $staff_email = $staff[ 'email' ]; ?>
 
     		<div class="group-bios__grid-item">
 
                 <div class="group-bios__image">
 
-                    <img src="<?php echo $staff_photo; ?>" />
+                    <!-- directory link -->
+                    <a href="<?php echo $staff_link; ?>">
+
+                        <img src="<?php echo $staff_photo; ?>" />
+
+                    </a>
+                    <!-- END directory link -->
 
                 </div>
 
     			<div class="group-bios__details">
 
-                    <p class="group-bios__name">
+                    <!-- directory link -->
+                    <a class="group-bios__name" href="<?php echo $staff_link; ?>">
 
                         <?php echo $staff_name; ?>
 
-                    </p>
+                    </a>
+                    <!-- END directory link -->
 
     				<div class="group-bios__desc">
 

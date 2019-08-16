@@ -1,0 +1,77 @@
+// stylesheet :: laboratory fast facts styles
+
+    // settings
+    $content : 1rem;
+    $facts : adjust-color(
+
+        $blue,
+        $hue          : 0%,
+        $saturation : 0%,
+        $lightness  : 0%,
+        $alpha         : -0.000
+
+    );
+
+    // styles
+    #laboratory-facts {
+
+        position: relative;
+
+        @include flex-h-j-v-s( false );
+
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.165 );
+
+        @include fill( $facts, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+    }
+
+    // class hook
+    .fast-facts {
+
+        // container
+        &__inner {
+
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            @include fill( white, 1.000 );
+
+        }
+
+        // item hook
+        .fast-fact {
+
+            width: 33.3333333%;
+            max-width: 16rem;
+
+            // value
+            &__value {
+
+                @include font( $vitesse, 2rem, 700 );
+
+                @include color( white, 0.000 );
+
+            }
+
+            // rate
+            &__rate {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include color( $cvellow, 0.000 );
+
+            }
+
+        }
+
+    }

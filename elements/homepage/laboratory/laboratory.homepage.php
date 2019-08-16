@@ -62,6 +62,13 @@
 
         <?php endif; ?>
 
+        <!-- fast facts block -->
+        <?php if ( $lab_options[ 'fast_facts_option' ] ) : ?>
+
+        <?php get_template_part( 'elements/homepage/laboratory/content/content.facts' ); ?>
+
+        <?php endif; ?>
+
         <!-- staff block -->
         <?php if ( $lab_options[ 'lab_staff_option' ] ) : ?>
 
