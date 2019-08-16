@@ -849,6 +849,24 @@
 
                 }
 
+                // all members
+                &.all {
+
+                    @include color( $roarange, 0.000 );
+
+                    @include fill( $roarange, 0.865 );
+
+                    // hover state
+                    &:hover {
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $roarange, 0.000 );
+
+                    }
+
+                }
+
             }
 
         }
@@ -1022,13 +1040,27 @@
                 }
 
                 // entry
-                .entry {
+                .entry,
+                .interest {
 
                     display: block;
 
                     margin: 0 0 1rem 0;
 
                     @include font( $industry, 0.875rem, 600 );
+
+                    // title
+                    &.title {
+
+                        margin: 0 0 0.25rem 0;
+
+                        @include font( $industry, 0.875rem, 700 );
+
+                        @include typo( 1rem, 0em );
+
+                        @include color( $app05, 0.165 );
+
+                    }
 
                 }
 

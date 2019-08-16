@@ -112,7 +112,12 @@
 
                 if ( $directoryType == 'Certification' ) {
 
-                    $directory[ 'certifications' ][] = $directoryInfo->DirectoryHeader;
+                    $directory[ 'certifications' ][] = array(
+
+                        'certification' => $directoryInfo->DirectoryHeader,
+                        'description'   => $directoryInfo->DirectoryDescription
+
+                    );
 
                 }
 
@@ -137,7 +142,13 @@
 
                 if ( $directoryType == 'Species Interest' ) {
 
-                    $directory[ 'species' ][] = $directoryInfo->DirectoryHeader;
+                    $directory[ 'species' ][] = array(
+
+                        'title' => $directoryInfo->DirectoryHeader,
+                        'notes' => $directoryInfo->DirectoryNotes,
+                        'entry' => $directoryInfo->DirectoryDescription
+
+                    );
 
                 }
 
@@ -338,9 +349,10 @@
 
                         foreach( $directory[ 'certifications' ] as $certification ) {
 
-                            $entry  = $certification[ 'certification' ];
+                            $title       = $certification[ 'certification' ];
+                            $description = $certification[ 'description' ];
 
-                            $certifications .= '<span class="entry">' . $certification . '</span>';
+                            $certifications .= '<span class="entry">' . $title . '<br />' . $description . '</span>';
 
                         }
 
@@ -388,11 +400,13 @@
 
                     <?php
 
-                        foreach( $directory[ 'species' ] as $interest ) {
+                        foreach ( $directory[ 'species' ] as $interest ) {
 
-                            $entry  = $interest[ 'interest' ];
+                            $title = $interest[ 'title' ];
+                            $notes = $interest[ 'notes' ];
+                            // $entry = $interest[ 'entry' ];
 
-                            $interests .= '<span class="entry">' . $interest . '</span>';
+                            $interests .= '<span class="interest title">' . $title . '</span><span class="interest notes">' . $notes . '</span>';
 
                         }
 
@@ -414,7 +428,7 @@
 
                     <?php
 
-                        foreach( $directory[ 'links' ] as $link ) {
+                        foreach ( $directory[ 'links' ] as $link ) {
 
                             $title  = $link[ 'title' ];
                             $url    = $link[ 'url' ];
@@ -439,7 +453,7 @@
         <!-- END listing -->
 
         <!-- output -->
-        <div class="developer">
+        <div class="developer hide">
 
             <pre>
 
@@ -448,7 +462,7 @@
                     echo '<br />';
                     print_r( $getMember );
                     echo '<br />';
-                    // print_r( $getMemberDirectoryInfo );
+                    print_r( $getMemberDirectoryInfo );
                     // echo '<br />';
                     print_r( $response );
                     echo '<br />';

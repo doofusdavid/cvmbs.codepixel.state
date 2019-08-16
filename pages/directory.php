@@ -226,6 +226,8 @@
         </div>
         <!-- END info -->
 
+        <?php if ( $site_type == 'college' ) : ?>
+
         <!-- filters -->
         <div id="directory-filters" class="toolbar">
 
@@ -245,6 +247,8 @@
 
         </div>
         <!-- END filters -->
+
+        <?php endif; ?>
 
         <!-- Data Tables -->
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>

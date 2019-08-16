@@ -366,6 +366,8 @@
 
             <a class="filter-link" href="/directory/group/associates">associates</a>
 
+            <a class="filter-link all" href="/directory">all members</a>
+
         </div>
         <!-- END filters -->
 
