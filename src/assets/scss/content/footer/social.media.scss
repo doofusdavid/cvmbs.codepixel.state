@@ -141,7 +141,7 @@
                     bottom: 0;
                     left: 0;
 
-                    z-index: -1;
+                    z-index: 0;
 
                     background: {
 
@@ -155,6 +155,14 @@
                     opacity: 0.000;
 
                     transition: $all220;
+
+                }
+
+                svg {
+
+                    position: relative;
+
+                    z-index: 10;
 
                 }
 

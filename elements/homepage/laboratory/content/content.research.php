@@ -29,8 +29,16 @@
         <!-- content -->
         <div class="content-wrapper">
 
+            <!-- pattern -->
+            <div class="pattern-overlay">
+
+                <!--  -->
+
+            </div>
+            <!-- END pattern -->
+
             <!-- label -->
-            <span class="project-label">
+            <span class="project-label project-layer">
 
                 research project
 
@@ -38,7 +46,7 @@
             <!-- END label -->
 
             <!-- title -->
-            <h2>
+            <h2 class="project-layer">
 
                 <?php echo $project_title; ?>
 
@@ -46,7 +54,7 @@
             <!-- END title -->
 
             <!-- text -->
-            <p>
+            <p class="project-layer">
 
                 <?php echo $project_desc; ?>
 
@@ -56,7 +64,7 @@
             <?php if ( $project_link ) : ?>
 
             <!-- link -->
-            <a class="project-link" href="<?php echo $project_link; ?>">
+            <a class="project-link project-layer" href="<?php echo $project_link; ?>">
 
                 view project
 

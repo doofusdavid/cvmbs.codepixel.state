@@ -32,15 +32,6 @@
 
         }
 
-        // title
-        .group-bios__name {
-
-            // @include font( $vitesse, 1rem, 400 );
-
-            @include color( white, 0.000 );
-
-        }
-
         // heading
         h2 {
 
@@ -50,17 +41,39 @@
 
         }
 
+        // title
+        .group-bios__name {
+
+            display: inline-block;
+
+            // margin: 0 0 0.5rem 0;
+
+            text-decoration: none;
+
+            @include color( white, 0.000 );
+
+        }
+
+        // description
+        .group-bios__desc {
+
+            margin: 0 0 1rem 0;
+
+        }
+
         // text
         p {
 
-            //
+            @include color( white, 0.375 );
 
         }
 
         // email
         a {
 
-            @include color( white, 0.000 );
+            text-decoration: none;
+
+            @include color( white, 0.375 );
 
         }
 

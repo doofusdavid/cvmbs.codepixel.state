@@ -8,6 +8,9 @@
     $site_title_line_1 = get_field( 'site_title_line_1', 'options' );
     $site_title_line_2 = get_field( 'site_title_line_2', 'options' );
 
+    $lab_affiliation = get_field( 'laboratory_site_affiliation', 'options' );
+    $lab_parent_url  = get_field( 'laboratory_site_parent_url', 'options' );
+
 ?>
 
 <!-- header -->
@@ -28,7 +31,7 @@
         </div>
         <!-- END .csu-signature -->
 
-        <?php if ( $site_type == 'department' || $site_type == 'special' || $site_type == 'laboratory' ) : ?>
+        <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
 
         <!-- .site-identifier -->
         <<?php echo $wrapper; ?> class="site-identifier">
@@ -44,6 +47,28 @@
                 <?php the_field( 'site_title', 'options' ); ?>
 
                 <?php endif; ?>
+
+            </a>
+
+        </<?php echo $wrapper; ?>>
+        <!-- END .site-identifier -->
+
+        <!-- .site-identifier -->
+        <div class="site-identifier identifier--college">
+
+            <a href="<?php echo esc_url( home_url( '../' ) ); ?>" class="identifier-link"><?php echo $college; ?></a>
+
+        </div>
+        <!-- END .site-identifier -->
+
+        <?php elseif ( $site_type == 'laboratory' ) : ?>
+
+        <!-- .site-identifier -->
+        <<?php echo $wrapper; ?> class="site-identifier">
+
+            <a href="<?php echo $lab_parent_url; ?>" class="identifier-link" rel="home">
+
+                <?php echo $lab_affiliation; ?>
 
             </a>
 

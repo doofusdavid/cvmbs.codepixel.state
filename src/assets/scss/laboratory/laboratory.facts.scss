@@ -6,8 +6,8 @@
 
         $blue,
         $hue          : 0%,
-        $saturation : 0%,
-        $lightness  : 0%,
+        $saturation : -10%,
+        $lightness  : 35%,
         $alpha         : -0.000
 
     );
@@ -19,11 +19,20 @@
 
         @include flex-h-j-v-s( false );
 
-        padding: 5rem 5rem 5rem 5rem;
+        padding: 0 0 0 0;
 
         @include color( $app05, 0.165 );
 
         @include fill( $facts, 0.000 );
+
+        background: {
+
+            image: url(../img/billboards/billboard.10.jpg);
+            repeat: no-repeat;
+            size: cover;
+            position: bottom center;
+
+        }
 
         // mobile
         @include breakpoint ( small only ) {
@@ -42,9 +51,17 @@
 
             width: 100%;
             margin: 0;
-            padding: 0;
+            padding: 10rem 5rem 10rem 5rem;
 
-            @include fill( white, 1.000 );
+            @include fill( $facts, 0.265 );
+
+            @include gradient(
+
+                180deg,
+                transparent, 1.000, 0%,
+                white, 0.165, 100%
+
+            );
 
         }
 
@@ -52,14 +69,15 @@
         .fast-fact {
 
             width: 33.3333333%;
-            max-width: 16rem;
+            max-width: 20rem;
 
             // value
             &__value {
 
-                @include font( $vitesse, 2rem, 700 );
+                @include font( $vitesse, 2.5rem, 700 );
 
-                @include color( white, 0.000 );
+                // @include color( white, 0.000 );
+                @include color( $blue, 0.000 );
 
             }
 
@@ -68,7 +86,14 @@
 
                 @include font( $klavislim, 1.5rem, 400 );
 
-                @include color( $cvellow, 0.000 );
+                // @include color( $cvellow, 0.000 );
+
+            }
+
+            // description
+            &__desc {
+
+                @include color( $app05, 0.365 );
 
             }
 
