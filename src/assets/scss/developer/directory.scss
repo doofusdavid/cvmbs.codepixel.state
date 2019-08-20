@@ -824,11 +824,8 @@
                 height: 2rem;
                 margin: 0 0.5rem 0 0.5rem;
                 padding: 0.125rem 1rem 0 1rem;
-                // padding: 0rem 1rem 0 1rem;
 
                 @include font( $industry, 0.75rem, 700 );
-
-                // @include text( $up );
 
                 text-decoration: none;
 
@@ -873,8 +870,6 @@
 
         // record
         .directory-listing {
-
-            // @include flex-h-s-v-t( false );
 
             overflow: hidden;
 
@@ -999,8 +994,6 @@
 
             // info
             .listing-info {
-
-                // @include flex-v-t-h-s( false );
 
                 float: right;
 

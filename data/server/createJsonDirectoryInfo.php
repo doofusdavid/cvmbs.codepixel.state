@@ -214,11 +214,11 @@
                 'directoryGroup'    => $directoryGroupName,
                 'primaryGroupID'    => $primaryGroupId,
                 'multipleGroups'    => $multipleGroups,
-                // 'groups'            => $memberGroups,
+                'groups'            => $memberGroups,
                 'department'        => $department,
                 'phone'             => $phone,
                 'contactInfo'       => $memberContacts,
-                // 'addressInfo'       => 'ball so hard',
+                'addressInfo'       => $member->OfficeRoomName . ' ' . $member->OfficeBldgName,
                 // 'addressInfo'       => $member->BusinessAddress1,
                 'address'           => $memberAddress->BusinessAddress1,
                 'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id
