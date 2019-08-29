@@ -36,7 +36,19 @@
             // mobile
             @include breakpoint ( small only ) {
 
-                padding: 3rem 3rem 3rem 3rem;
+                // padding: 3rem 3rem 3rem 3rem;
+
+            }
+
+            // headings
+            h2 {
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include font( $klavislim, 2rem, 400);
+
+                }
 
             }
 

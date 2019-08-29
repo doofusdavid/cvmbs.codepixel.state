@@ -15,6 +15,13 @@
 
         background: no-repeat center center / cover;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 30vh 0 0 0;
+
+        }
+
         // overlay
         &:before {
 
@@ -71,6 +78,15 @@
             @include typo( 2.5rem, 0.035em );
 
             @include color( white, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                max-width: none;
+                padding: 0 2rem 2rem 2rem;
+
+            }
 
             // title
             .site-title {

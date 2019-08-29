@@ -23,7 +23,8 @@
 
         @include color( $app05, 0.165 );
 
-        @include fill( $facts, 0.000 );
+        // @include fill( $facts, 0.000 );
+        @include fill( $cvnavy, 0.000 );
 
         background: {
 
@@ -37,7 +38,7 @@
         // mobile
         @include breakpoint ( small only ) {
 
-            padding: 3rem 3rem 3rem 3rem;
+            // padding: 3rem 3rem 3rem 3rem;
 
         }
 
@@ -54,6 +55,7 @@
             padding: 10rem 5rem 10rem 5rem;
 
             @include fill( $facts, 0.265 );
+            // @include fill( $cvnavy, 0.285 );
 
             @include gradient(
 
@@ -63,6 +65,13 @@
 
             );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 3rem 3rem 3rem 3rem;
+
+            }
+
         }
 
         // item hook
@@ -70,6 +79,16 @@
 
             width: 33.3333333%;
             max-width: 20rem;
+            margin: 0 0 0 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                max-width: none;
+                margin: 2rem 0 2rem 0;
+
+            }
 
             // value
             &__value {

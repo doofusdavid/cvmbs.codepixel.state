@@ -16,7 +16,7 @@
 
         position: relative;
 
-        padding: 5rem 4rem 5rem 4rem;
+        padding: 5rem 4rem 4rem 4rem;
 
         @include color( $app05, 0.165 );
 
@@ -25,7 +25,7 @@
         // mobile
         @include breakpoint ( small only ) {
 
-            padding: 3rem 3rem 3rem 3rem;
+            padding: 3rem 2rem 2rem 2rem;
 
         }
 
@@ -41,12 +41,19 @@
 
             @include flex-h-j-v-s( false );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+            }
+
         }
 
-        // title
+        // article
         .article {
 
-            @include flex-v-c-h-s( true );
+            @include flex-v-t-h-s( true );
 
             width: 33.3333333%;
             min-height: 16rem;
@@ -59,23 +66,66 @@
 
             @include fill( white, 0.000 );
 
-            @include shadowbox( 1rem, 3rem, black, 0.465 );
+            @include shadowbox( 1.5rem, 3rem, black, 0.465 );
+
+            transform: translate3d( 0, 0, 0 );
+
+            transition: all 320ms $outex 0ms;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: auto;
+
+            }
+
+            // hover state
+            &:hover {
+
+                @include shadowbox( 1.5rem, 4rem, black, 0.265 );
+
+                transform: translate3d( 0, -1rem, 0 );
+
+            }
 
         }
 
+        // date
+        .date {
+
+            display: block;
+
+            margin: 0 0 0.25rem 0;
+
+            @include font( $industry, 0.6875rem, 700 );
+
+            @include text( $up );
+
+            @include color( $app05, 0.465 );
+
+        }
+
+        // title
         .title {
 
             display: block;
 
-            margin: 0 0 1rem 0;
+            margin: 0 0 0.75rem 0;
 
-            @include font( $klavislim, 1.5rem, 400 );
+            @include font( $klavislim, 1.25rem, 400 );
 
-            @include text( $up );
+            // @include text( $up );
 
-            @include typo( 1.25rem, 0.035em );
+            @include typo( 1.5rem, 0.015em );
 
             @include color( $g140, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $klavislim, 1.25rem, 400 );
+
+            }
 
         }
 

@@ -41,6 +41,39 @@
 
         }
 
+        // class hook
+        .group-bios {
+
+            // item
+            &__grid-item {
+
+                margin: 0 0 0 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 0 2rem 0;
+
+                    // last child
+                    &:last-child {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                }
+
+            }
+
+            // image
+            &__image {
+
+                @include shadowbox( 1.5rem, 3rem, black, 0.465 );
+
+            }
+
+        }
+
         // title
         .group-bios__name {
 

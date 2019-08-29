@@ -28,7 +28,7 @@
         <div class="content-wrapper">
 
             <!-- text -->
-            <p>
+            <p class="slideshow-layer">
 
                 <?php echo $slide_content; ?>
 

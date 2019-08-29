@@ -19,7 +19,7 @@
     <!-- section title -->
     <h2>
 
-        news
+        news + updates
 
     </h2>
     <!-- END section title -->
@@ -29,8 +29,12 @@
 
         <?php while ( $news_articles->have_posts() ) : $news_articles->the_post(); ?>
 
+        <?php $post_date = get_the_date(); ?>
+
         <!-- link -->
         <a href="<?php the_permalink(); ?>" class="article">
+
+            <span class="date"><?php echo $post_date; ?></span>
 
             <span class="title"><?php the_title(); ?></span>
 

@@ -44,7 +44,7 @@
 
     <?php
 
-        if ( $site_type == 'department' || $site_type == 'special' ) {
+        if ( $site_type == 'department' || $site_type == 'special' || $site_type == 'laboratory' ) {
 
             echo '
             <!-- global.menu -->
