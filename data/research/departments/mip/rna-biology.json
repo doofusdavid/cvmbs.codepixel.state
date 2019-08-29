@@ -1,0 +1,75 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/rna-biology.json",
+        "modified": "2019 08 29 14:30:49",
+        "records": 5
+    },
+    "members": [
+        {
+            "memberID": 3203,
+            "eName": "bgeiss",
+            "firstName": "Brian",
+            "lastName": "Geiss",
+            "fullName": "Brian Geiss",
+            "email": "brian.geiss@colostate.edu",
+            "phone": "970-491-6330",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3307,
+            "eName": "cwilusz",
+            "firstName": "Carol",
+            "lastName": "Wilusz",
+            "fullName": "Carol Wilusz",
+            "email": "carol.wilusz@colostate.edu",
+            "phone": "970-491-4919",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3591,
+            "eName": "jwilusz",
+            "firstName": "Jeffrey",
+            "lastName": "Wilusz",
+            "fullName": "Jeffrey Wilusz",
+            "email": "jeffrey.wilusz@colostate.edu",
+            "phone": "970-491-0652",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3636,
+            "eName": "kolson",
+            "firstName": "Kenneth",
+            "lastName": "Olson",
+            "fullName": "Kenneth Olson",
+            "email": "kenneth.olson@colostate.edu",
+            "phone": "970-491-8604",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3946,
+            "eName": "slayden",
+            "firstName": "Richard",
+            "lastName": "Slayden",
+            "fullName": "Richard Slayden",
+            "email": "richard.slayden@colostate.edu",
+            "phone": "970-491-2902",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}

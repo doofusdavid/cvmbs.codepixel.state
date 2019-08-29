@@ -103,6 +103,28 @@
         </header>
         <!-- END page header -->
 
+        <!-- filters -->
+        <div id="directory-filters" class="toolbar">
+
+            <span class="filter-label">generate a list by member type</span>
+
+            <a class="filter-link" href="/directory/group/faculty">faculty</a>
+
+            <a class="filter-link" href="/directory/group/staff">staff</a>
+
+            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
+
+            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
+
+            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
+
+            <a class="filter-link" href="/directory/group/associates">associates</a>
+
+            <a class="filter-link all" href="/directory">all members</a>
+
+        </div>
+        <!-- END filters -->
+
         <!-- toolbar.DEV -->
         <div id="directory-toolbar" class="toolbar">
 
@@ -348,28 +370,6 @@
 
         </div>
         <!-- END info -->
-
-        <!-- filters -->
-        <div id="directory-filters" class="toolbar">
-
-            <span class="filter-label">generate a list by member type</span>
-
-            <a class="filter-link" href="/directory/group/faculty">faculty</a>
-
-            <a class="filter-link" href="/directory/group/staff">staff</a>
-
-            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
-
-            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
-
-            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
-
-            <a class="filter-link" href="/directory/group/associates">associates</a>
-
-            <a class="filter-link all" href="/directory">all members</a>
-
-        </div>
-        <!-- END filters -->
 
         <!-- Data Tables -->
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>

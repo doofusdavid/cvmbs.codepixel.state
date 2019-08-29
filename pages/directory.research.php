@@ -1,6 +1,6 @@
 <?php
 
-    // template name: Directory
+    // template name: Research Topic Directory
 
 ?>
 
@@ -11,15 +11,9 @@
     // determine directory data source
     $site_type = get_field( 'site_type', 'options' );
 
-    // create json store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/directory.json';
-
-    // convert store to data
-    $getdata     = file_get_contents( $filestore );
-    $membersdata = json_decode( $getdata );
-
-    // setup data object
-    $members = $membersdata->members;
+    // set slug variable for operators
+    global $post;
+    $page_slug = $post->post_name;
 
     // get site path
     $siteinfo = get_blog_details();
@@ -27,30 +21,15 @@
     // parse URL for site path
     $siteurl = str_replace( '/', '', $siteinfo->path );
 
-    // set department ID for REST API tasks
-    switch ( $siteurl ) {
+    // create json store
+    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/research/departments/' . $siteurl . '/' . $page_slug . '.json';
 
-        case 'cs' :
+    // convert store to data
+    $getdata     = file_get_contents( $filestore );
+    $membersdata = json_decode( $getdata );
 
-            $department_ID = 1002;
-            break;
-
-        case 'bms' :
-
-            $department_ID = 1003;
-            break;
-
-        case 'mip' :
-
-            $department_ID = 1004;
-            break;
-
-        case 'erhs' :
-
-            $department_ID = 1005;
-            break;
-
-    }
+    // setup data object
+    $members = $membersdata->members;
 
 ?>
 
@@ -65,52 +44,12 @@
 
             <h1>
 
-                <?php
-
-                    $directory_page = get_the_title();
-
-                    if ( $site_type == 'department' ) {
-
-                        $directory_type = 'department';
-
-                    } elseif ( $site_type == 'college' ) {
-
-                        $directory_type = 'college';
-
-                    }
-
-                    echo $directory_type . ' ' . $directory_page;
-
-                ?>
+                <?php echo the_title() . ' faculty'; ?>
 
             </h1>
 
         </header>
         <!-- END page header -->
-
-        <?php if ( $site_type == 'college' ) : ?>
-
-        <!-- filters -->
-        <div id="directory-filters" class="toolbar">
-
-            <span class="filter-label">generate a list by member type</span>
-
-            <a class="filter-link" href="/directory/group/faculty">faculty</a>
-
-            <a class="filter-link" href="/directory/group/staff">staff</a>
-
-            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
-
-            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
-
-            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
-
-            <a class="filter-link" href="/directory/group/associates">associates</a>
-
-        </div>
-        <!-- END filters -->
-
-        <?php endif; ?>
 
         <!-- toolbar.DEV -->
         <div id="directory-toolbar" class="toolbar">
@@ -178,53 +117,23 @@
 
                 <?php
 
-                    // college data
-                    if ( $site_type == 'college' ) {
+                    // loop that data
+                    foreach ( $members as $member ) {
 
-                        foreach ( $members as $member ) {
+                        $query      = $member->memberID;
+                        $ename      = $member->eName;
+                        $lastName   = $member->lastName;
+                        $firstName  = $member->firstName;
+                        $tableName  = $lastName . ', ' . $firstName;
+                        $eMail      = strtolower( $member->email );
+                        $phone      = $member->phone;
+                        $department = $member->department;
 
-                            $query      = $member->memberID;
-                            $ename      = $member->eName;
-                            $lastName   = $member->lastName;
-                            $firstName  = $member->firstName;
-                            $tableName  = $lastName . ', ' . $firstName;
-                            $eMail      = strtolower( $member->email );
-                            $phone      = $member->phone;
-                            $department = $member->directoryGroup;
-
-                            $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
-
-                        }
-
-                        echo $results;
+                        $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
 
                     }
 
-                    // department data
-                    if ( $site_type == 'department' ) {
-
-                        foreach ( $members as $member ) {
-
-                            if ( $member->directoryGroupID == $department_ID ) {
-
-                                $query      = $member->memberID;
-                                $ename      = $member->eName;
-                                $lastName   = $member->lastName;
-                                $firstName  = $member->firstName;
-                                $tableName  = $lastName . ', ' . $firstName;
-                                $eMail      = strtolower( $member->email );
-                                $phone      = $member->phone;
-                                $department = $member->directoryGroup;
-
-                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
-
-                            }
-
-                        }
-
-                        echo $results;
-
-                    }
+                    echo $results;
 
                 ?>
 

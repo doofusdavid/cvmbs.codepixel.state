@@ -1,0 +1,95 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/erhs\/toxicology.json",
+        "modified": "2019 08 29 19:17:21",
+        "records": 6
+    },
+    "members": [
+        {
+            "memberID": 846,
+            "eName": "dhamar",
+            "firstName": "Dwayne",
+            "lastName": "Hamar",
+            "fullName": "Dwayne Hamar",
+            "email": "dwayne.hamar@colostate.edu",
+            "phone": "970-297-5122",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3411,
+            "eName": "gdooley",
+            "firstName": "Gregory",
+            "lastName": "Dooley",
+            "fullName": "Gregory Dooley",
+            "email": "gregory.dooley@colostate.edu",
+            "phone": "970-491-5128",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3763,
+            "eName": "mlegare",
+            "firstName": "Marie",
+            "lastName": "Legare",
+            "fullName": "Marie Legare",
+            "email": "marie.legare@colostate.edu",
+            "phone": "970-491-7043",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3847,
+            "eName": "ramsdell",
+            "firstName": "Howard",
+            "lastName": "Ramsdell",
+            "fullName": "Howard Ramsdell",
+            "email": "howard.ramsdell@colostate.edu",
+            "phone": "970-491-5698",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3991,
+            "eName": "tjalkens",
+            "firstName": "Ronald",
+            "lastName": "Tjalkens",
+            "fullName": "Ronald Tjalkens",
+            "email": "ron.tjalkens@colostate.edu",
+            "phone": "970-491-2825",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 4569,
+            "eName": "rshyang",
+            "firstName": "Raymond",
+            "lastName": "Yang",
+            "fullName": "Raymond Yang",
+            "email": "raymond.yang@colostate.edu",
+            "phone": "970-491-5652",
+            "department": "Environmental and Radiological Health Sciences"
+        }
+    ],
+    "topics": {
+        "1": "ERHS",
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "2": "MIP",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology",
+        "3": "BMS",
+        "714": "Cardiovascular Physiology"
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/erhs\/epidemiology.json",
+        "modified": "2019 08 29 19:12:59",
+        "records": 10
+    },
+    "members": [
+        {
+            "memberID": 3435,
+            "eName": "heiderjm",
+            "firstName": "Judy",
+            "lastName": "Heiderscheidt",
+            "fullName": "Judy Heiderscheidt",
+            "email": "judy.heiderscheidt@colostate.edu",
+            "phone": "970-491-5767",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3558,
+            "eName": "jpeel",
+            "firstName": "Jennifer",
+            "lastName": "Peel",
+            "fullName": "Jennifer Peel",
+            "email": "jennifer.peel@colostate.edu",
+            "phone": "970-491-6391",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3567,
+            "eName": "jreif",
+            "firstName": "John",
+            "lastName": "Reif",
+            "fullName": "John Reif",
+            "email": "john.reif@colostate.edu",
+            "phone": "970-491-6074",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3762,
+            "eName": "mlclark",
+            "firstName": "Maggie",
+            "lastName": "Clark",
+            "fullName": "Maggie Clark",
+            "email": "maggie.clark@colostate.edu",
+            "phone": "970-491-2891",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3993,
+            "eName": "tkeefe",
+            "firstName": "Thomas",
+            "lastName": "Keefe",
+            "fullName": "Thomas Keefe",
+            "email": "thomas.keefe@colostate.edu",
+            "phone": "970-491-5970",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 34735,
+            "eName": "magzamen",
+            "firstName": "Sheryl",
+            "lastName": "Magzamen",
+            "fullName": "Sheryl Magzamen",
+            "email": "sheryl.magzamen@colostate.edu",
+            "phone": "970-491-5469",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 35248,
+            "eName": "gbanders",
+            "firstName": "Georgiana",
+            "lastName": "Anderson",
+            "fullName": "Georgiana Anderson",
+            "email": "brooke.anderson@colostate.edu",
+            "phone": "970-491-1889",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 39521,
+            "eName": "jelf",
+            "firstName": "Jessica",
+            "lastName": "Elf",
+            "fullName": "Jessica Elf",
+            "email": "jessica.elf@colostate.edu",
+            "phone": "970-491-3878",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 39971,
+            "eName": "aneophyt",
+            "firstName": "Andreas",
+            "lastName": "Neophytou",
+            "fullName": "Andreas Neophytou",
+            "email": "andreas.neophytou@colostate.edu",
+            "phone": "970-491-7138",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 40024,
+            "eName": "rojasdav",
+            "firstName": "David",
+            "lastName": "Rojas",
+            "fullName": "David Rojas",
+            "email": "david.rojas@colostate.edu",
+            "phone": "970-491-6152",
+            "department": "Environmental and Radiological Health Sciences"
+        }
+    ],
+    "topics": {
+        "619": "Epidemiology",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}

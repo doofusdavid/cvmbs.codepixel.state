@@ -1,0 +1,55 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/regulatory-issues.json",
+        "modified": "2019 08 29 14:30:13",
+        "records": 3
+    },
+    "members": [
+        {
+            "memberID": 3261,
+            "eName": "cgweeks",
+            "firstName": "Claudia",
+            "lastName": "Gentry-Weeks",
+            "fullName": "Claudia Gentry-Weeks",
+            "email": "claudia.gentry-weeks@colostate.edu",
+            "phone": "970-491-5411",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3607,
+            "eName": "kdobos",
+            "firstName": "Karen",
+            "lastName": "Dobos",
+            "fullName": "Karen Dobos",
+            "email": "karen.dobos@colostate.edu",
+            "phone": "970-491-2229",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3862,
+            "eName": "rellis",
+            "firstName": "Robert",
+            "lastName": "Ellis",
+            "fullName": "Robert Ellis",
+            "email": "robert.ellis@colostate.edu",
+            "phone": "970-491-5740",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}

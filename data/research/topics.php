@@ -3,9 +3,14 @@
     // hide a bunch of PHP error notices
     error_reporting( E_ERROR | E_WARNING | E_PARSE );
 
+    // url vars
+    $groupID = $_GET[ 'groupID' ];
+    $topicID = $_GET[ 'topicID' ];
+    $siteID  = $_GET[ 'siteID' ];
+
     // set file location
     // $filelocation = '/home/vetmedbiosci/public_html/wp-content/themes/cvmbsPress/data/';
-    $filelocation = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/';
+    $filelocation = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/research/departments/' . $siteID . '/';
 
     // set WSDL service URL
     $serviceURL = 'http://www.cvmbs.colostate.edu/directoryservice/DirectoryService.svc?wsdl';
@@ -19,18 +24,18 @@
         $response = $service->__getFunctions();
 
         // output magic
-        $directory = $service->GetMembersBySearchName(
+        $directory = $service->GetMembersByGroupId(
 
-            array( 'searchName' => ' ' )
+            array( 'id' => $groupID )
 
         );
 
         // get returned data object
-        $members = $directory->GetMembersBySearchNameResult->MemberResponse;
+        $members = $directory->GetMembersByGroupIdResult->MemberResponse;
 
         // create JSON store
-        $filestore = $filelocation . 'directory.json';
-        $tempfilestore = $filelocation . 'directory-temp.json';
+        $filestore = $filelocation . $topicID . '.json';
+        $tempfilestore = $filelocation . $topicID . '-temp.json';
 
         // code depends on this file existing
         if ( !file_exists( $filestore ) ) {
@@ -42,9 +47,9 @@
         // create storage array
         $storage = array(
 
-            'data'         => array(),
-            'members'      => array(),
-            'departments'  => array()
+            'data'     => array(),
+            'members'  => array(),
+            'topics'   => array()
 
         );
 
@@ -60,18 +65,9 @@
             // get contact info
             $contacts = $service->GetMemberContactsByMemberId( array( 'id' => $queryId ) );
 
-            // get photo
-            $photos = $service->GetMemberPhotoByMemberId(
-
-                array( 'id' => $queryId )
-
-            );
-
             // get returned data object(s)
-            $memberAddress  = $address->GetMemberByIdResult;
             $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
             $memberContacts = $contacts->GetMemberContactsByMemberIdResult->MemberContactResponse;
-            $memberPhotos   = $photos->GetMemberPhotoByMemberIdResult->MemberPhotoResponse;
 
             // test for department group data type
             if ( is_array( $memberGroups ) ) {
@@ -190,7 +186,7 @@
             $email = strtolower( $member->EmailAddress );
             $name  = $member->FirstName . ' ' . $member->LastName;
 
-            // setup variables
+            // remove LocalHR admin accounts -> push to [ members ] array
             if ( strpos( $member->LastName, 'lhr' ) !== false ) {
 
                 continue;
@@ -200,26 +196,14 @@
                 // push to members array
                 $storage[ 'members' ][] = array(
 
-                    'memberID'          => $member->Id,
-                    'eName'             => $member->EName,
-                    'firstName'         => $member->FirstName,
-                    'lastName'          => $member->LastName,
-                    'fullName'          => $member->FirstName . ' ' . $member->LastName,
-                    'email'             => strtolower( $member->EmailAddress ),
-                    'title'             => $member->EmployeeTitle,
-                    'memberType'        => $member->EmployeeCategory,
-                    'directoryGroupID'  => $directoryGroupId,
-                    'directoryGroup'    => $directoryGroupName,
-                    'primaryGroupID'    => $primaryGroupId,
-                    'multipleGroups'    => $multipleGroups,
-                    'groups'            => $memberGroups,
-                    'department'        => $department,
-                    'phone'             => $phone,
-                    'contactInfo'       => $memberContacts,
-                    'addressInfo'       => $member->OfficeRoomName . ' ' . $member->OfficeBldgName,
-                    // 'addressInfo'       => $member->BusinessAddress1,
-                    'address'           => $memberAddress->BusinessAddress1,
-                    'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id
+                    'memberID'     => $member->Id,
+                    'eName'        => $member->EName,
+                    'firstName'    => $member->FirstName,
+                    'lastName'     => $member->LastName,
+                    'fullName'     => $member->FirstName . ' ' . $member->LastName,
+                    'email'        => strtolower( $member->EmailAddress ),
+                    'phone'        => $phone,
+                    'department'   => $directoryGroupName,
 
                 );
 
@@ -237,33 +221,38 @@
         );
 
         // departments array
-        $storage[ 'departments' ] = array(
+        $storage[ 'topics' ] = array(
 
-            '134' => 'Veterinary Diagnostic Lab',
-            '135' => 'Clinical Sciences Department',
-            '136' => 'Veterinary Teaching Hospital',
-            '138' => 'Veterinary Diagnostic Lab',
-            '139' => 'Veterinary Teaching Hospital Working Group',
-            '140' => 'Clinical Sciences Department Working Group',
-            '170' => 'Clinical Pathology',
-            '172' => 'Clinicians',
-            '176' => 'VTH Interns All',
-            '178' => 'Faculty',
-            '182' => 'VTH Medical Records',
-            '188' => 'VTH Veterinary Technicians',
-            '193' => 'VTH Medical Records - Read Only',
-            '203' => 'CVMBS College Office',
-            '204' => 'CVMBS Finance & Strategic Services',
-            '205' => 'Cellular & Molecular Biology',
-            '206' => 'CVMBS Molecular, Cellular & Integrative Neurosciences',
-            '207' => 'CVMBS Biomedical Sciences Dept',
-            '208' => 'CVMBS Environmental & Radiological Health Sciences Dept',
-            '209' => 'CVMBS Microbiology, Immunology & Pathology Dept',
-            '210' => 'College Office',
-            '215' => 'CVMBS Environmental & Radiological Health Sciences Dept  Working Group',
-            '539' => 'Center for Environmental Medicine',
-            '626' => 'Orthopaedic Research Center',
-            '674' => 'Center for Environmental Medicine Department',
+            618 => '================ ERHS ================',
+            619 => 'Epidemiology',
+            620 => 'Health Physics',
+            621 => 'Industrial Hygiene',
+            622 => 'Radiation Cancer Biology & Oncology',
+            623 => 'Toxicology',
+            624 => 'Veterinary Diagnostic Imaging',
+
+            683 => '================ MIP ================',
+            684 => 'Anatomic Pathology',
+            686 => 'Bacteriology',
+            687 => 'Cancer Biology',
+            688 => 'Clinical Pathology',
+            689 => 'Computational Biology',
+            690 => 'Diagnostics',
+            691 => 'Immunology',
+            692 => 'Parasitology',
+            693 => 'Pedagogy',
+            694 => 'Prion Biology',
+            695 => 'Biosafety',
+            696 => 'RNA Biology',
+            697 => 'Vector Biology',
+            698 => 'Virology',
+
+            713 => '================ BMS ================',
+            714 => 'Cardiovascular Physiology',
+            715 => 'Reproductive Physiology',
+            716 => 'Neurobiology',
+            717 => 'Neuroendocrinology',
+            718 => 'Pedagogy',
 
         );
 

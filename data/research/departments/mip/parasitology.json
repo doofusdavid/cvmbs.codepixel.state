@@ -1,0 +1,57 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/parasitology.json",
+        "modified": "2019 08 29 14:15:08",
+        "records": 4
+    },
+    "members": [
+        {
+            "memberID": 850,
+            "eName": "lrb2",
+            "firstName": "Lora",
+            "lastName": "Ballweber",
+            "fullName": "Lora Ballweber",
+            "email": "lora.ballweber@colostate.edu",
+            "phone": "970-491-7543",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 2632,
+            "eName": "ashlinto",
+            "firstName": "Ashley",
+            "lastName": "McGrew",
+            "fullName": "Ashley McGrew",
+            "email": "ashley.mcgrew@colostate.edu",
+            "phone": "970-297-5416",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3199,
+            "eName": "bfoy",
+            "firstName": "Brian",
+            "lastName": "Foy",
+            "fullName": "Brian Foy",
+            "email": "brian.foy@colostate.edu",
+            "phone": "970-491-3470",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 4022,
+            "eName": "wcb4",
+            "firstName": "William",
+            "lastName": "Black IV",
+            "fullName": "William Black IV",
+            "email": "william.black@colostate.edu",
+            "phone": "970-491-1081",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology"
+    }
+}

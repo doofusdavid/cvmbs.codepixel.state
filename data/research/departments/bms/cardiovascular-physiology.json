@@ -1,0 +1,89 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/bms\/cardiovascular-physiology.json",
+        "modified": "2019 08 29 19:33:37",
+        "records": 5
+    },
+    "members": [
+        {
+            "memberID": 3407,
+            "eName": "gamberg",
+            "firstName": "Gregory",
+            "lastName": "Amberg",
+            "fullName": "Gregory Amberg",
+            "email": "gregory.amberg@colostate.edu",
+            "phone": "970-491-4300",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3753,
+            "eName": "mfrye",
+            "firstName": "Melinda",
+            "lastName": "Frye",
+            "fullName": "Melinda Frye",
+            "email": "melinda.frye@colostate.edu",
+            "phone": "970-491-2009",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 37172,
+            "eName": "chicco",
+            "firstName": "Adam",
+            "lastName": "Chicco",
+            "fullName": "Adam Chicco",
+            "email": "adam.chicco@colostate.edu",
+            "phone": "970-491-3605",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 37729,
+            "eName": "bpmyers",
+            "firstName": "Brent",
+            "lastName": "Myers",
+            "fullName": "Brent Myers",
+            "email": "brent.myers@colostate.edu",
+            "phone": "970-491-2533",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 38788,
+            "eName": "rmaresh",
+            "firstName": "Ryan",
+            "lastName": "Maresh",
+            "fullName": "Ryan Maresh",
+            "email": "ryan.maresh@colostate.edu",
+            "phone": "970-491-3186",
+            "department": "Biomedical Sciences"
+        }
+    ],
+    "topics": {
+        "618": "================ ERHS ================",
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "683": "================ MIP ================",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology",
+        "713": "================ BMS ================",
+        "714": "Cardiovascular Physiology",
+        "715": "Reproductive Physiology",
+        "716": "Neurobiology",
+        "717": "Neuroendocrinology",
+        "718": "Pedagogy"
+    }
+}

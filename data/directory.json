@@ -1,166 +1,10 @@
 {
     "data": {
         "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/directory.json",
-        "modified": "2019 08 15 18:29:01",
-        "records": 2188
+        "modified": "2019 08 23 20:39:36",
+        "records": 2205
     },
     "members": [
-        {
-            "memberID": 820,
-            "eName": "lhrpmvdl",
-            "firstName": "Production",
-            "lastName": "lhrpmvdl",
-            "fullName": "Production lhrpmvdl",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1006,
-            "directoryGroup": "Veterinary Diagnostic Laboratory",
-            "primaryGroupID": 134,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Diagnostic Lab",
-                "GroupName": "DiagnosticLab Base",
-                "Id": 134,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Diagnostic Lab",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/820"
-        },
-        {
-            "memberID": 821,
-            "eName": "lhramvdl",
-            "firstName": "Production",
-            "lastName": "lhramvdl",
-            "fullName": "Production lhramvdl",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1006,
-            "directoryGroup": "Veterinary Diagnostic Laboratory",
-            "primaryGroupID": 134,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Diagnostic Lab",
-                "GroupName": "DiagnosticLab Base",
-                "Id": 134,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Diagnostic Lab",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/821"
-        },
-        {
-            "memberID": 822,
-            "eName": "lhrpmcls",
-            "firstName": null,
-            "lastName": "lhrpmcls",
-            "fullName": " lhrpmcls",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Clinical Sciences Department",
-                "GroupName": "ClinicalSciences Base",
-                "Id": 135,
-                "IsPrimaryGroup": true
-            },
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/822"
-        },
-        {
-            "memberID": 823,
-            "eName": "lhramcls",
-            "firstName": null,
-            "lastName": "lhramcls",
-            "fullName": " lhramcls",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Clinical Sciences Department",
-                "GroupName": "ClinicalSciences Base",
-                "Id": 135,
-                "IsPrimaryGroup": true
-            },
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/823"
-        },
-        {
-            "memberID": 824,
-            "eName": "lhrpmvth",
-            "firstName": null,
-            "lastName": "lhrpmvth",
-            "fullName": " lhrpmvth",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Teaching Hospital",
-                "GroupName": "Hospital Base",
-                "Id": 136,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Teaching Hospital",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/824"
-        },
-        {
-            "memberID": 825,
-            "eName": "lhramvth",
-            "firstName": null,
-            "lastName": "lhramvth",
-            "fullName": " lhramvth",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Teaching Hospital",
-                "GroupName": "Hospital Base",
-                "Id": 136,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Teaching Hospital",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/825"
-        },
         {
             "memberID": 827,
             "eName": "lmonzing",
@@ -11071,13 +10915,8 @@
                 }
             ],
             "department": "Veterinary Teaching Hospital",
-            "phone": "970-221-4535",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 896,
-                "IsPrimary": true,
-                "PhoneNumber": "970-221-4535"
-            },
+            "phone": null,
+            "contactInfo": null,
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/1175"
@@ -23373,40 +23212,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/3445"
         },
         {
-            "memberID": 3446,
-            "eName": "hordonez",
-            "firstName": "Heather",
-            "lastName": "Ordonez",
-            "fullName": "Heather Ordonez",
-            "email": "heather.ordonez@colostate.edu",
-            "title": "State Classified Hourly",
-            "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
-                    "GroupName": "Hospital",
-                    "Id": 139,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Veterinary Teaching Hospital",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/3446"
-        },
-        {
             "memberID": 3449,
             "eName": "hrunge",
             "firstName": "Heidi",
@@ -27955,12 +27760,12 @@
                 }
             ],
             "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": "970-492-4370",
+            "phone": "970-492-4349",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
                 "Id": 3412,
                 "IsPrimary": false,
-                "PhoneNumber": "970-492-4370"
+                "PhoneNumber": "970-492-4349"
             },
             "addressInfo": " ",
             "address": null,
@@ -29696,6 +29501,53 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/3946"
         },
         {
+            "memberID": 3947,
+            "eName": "slbrown",
+            "firstName": "Sandy",
+            "lastName": "Brown",
+            "fullName": "Sandy Brown",
+            "email": "sandy.brown@colostate.edu",
+            "title": "Office Administrative Support",
+            "memberType": "Staff",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": "970-297-1293",
+            "contactInfo": [
+                {
+                    "ContactTypeDescription": "Office",
+                    "Id": 3019,
+                    "IsPrimary": false,
+                    "PhoneNumber": "970-297-1293"
+                },
+                {
+                    "ContactTypeDescription": "Office",
+                    "Id": 3749,
+                    "IsPrimary": true,
+                    "PhoneNumber": "970-297-4115"
+                }
+            ],
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/3947"
+        },
+        {
             "memberID": 3950,
             "eName": "slquack",
             "firstName": "Sandra",
@@ -31241,266 +31093,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4046"
-        },
-        {
-            "memberID": 4050,
-            "eName": "_lhrdvm",
-            "firstName": "Production",
-            "lastName": "lhrdvm",
-            "fullName": "Production lhrdvm",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1001,
-            "directoryGroup": "College Office",
-            "primaryGroupID": 203,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS College Office",
-                "GroupName": "DeanVetMedicine Base",
-                "Id": 203,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS College Office",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4050"
-        },
-        {
-            "memberID": 4051,
-            "eName": "_lhrfss",
-            "firstName": "Production",
-            "lastName": "lhrfss",
-            "fullName": "Production lhrfss",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1010,
-            "directoryGroup": "undefined",
-            "primaryGroupID": 204,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Finance & Strategic Services",
-                "GroupName": "FinanceStrategicServices Base",
-                "Id": 204,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Finance & Strategic Services",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4051"
-        },
-        {
-            "memberID": 4052,
-            "eName": "_lhrcmb",
-            "firstName": "Production",
-            "lastName": "lhrcmb",
-            "fullName": "Production lhrcmb",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 205,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Cell & Molecular Biology",
-                "GroupName": "CellMolecularBiology Base",
-                "Id": 205,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Cell & Molecular Biology",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4052"
-        },
-        {
-            "memberID": 4053,
-            "eName": "_lhrmci",
-            "firstName": "Production",
-            "lastName": "lhrmci",
-            "fullName": "Production lhrmci",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1009,
-            "directoryGroup": "Molecular, Cellular, and Integrative Neurosciences",
-            "primaryGroupID": 206,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Molecular, Cellular & Integrative Neurosciences",
-                "GroupName": "MolecularCellularIntegrativeNeurosciences Base",
-                "Id": 206,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Molecular, Cellular & Integrative Neurosciences",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4053"
-        },
-        {
-            "memberID": 4054,
-            "eName": "_lhrbms",
-            "firstName": "Production",
-            "lastName": "lhrbms",
-            "fullName": "Production lhrbms",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                "GroupName": "BiomedicalSciences Base",
-                "Id": 207,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4054"
-        },
-        {
-            "memberID": 4055,
-            "eName": "_lhrerh",
-            "firstName": "Production",
-            "lastName": "lhrerh",
-            "fullName": "Production lhrerh",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                "Id": 208,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4055"
-        },
-        {
-            "memberID": 4056,
-            "eName": "_lhrmip",
-            "firstName": "Production",
-            "lastName": "lhrmip",
-            "fullName": "Production lhrmip",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                "GroupName": "MicrobiologyImmunologyPathology Base",
-                "Id": 209,
-                "IsPrimaryGroup": true
-            },
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4056"
-        },
-        {
-            "memberID": 4057,
-            "eName": "_lhrvdl",
-            "firstName": "Production",
-            "lastName": "lhrvdl",
-            "fullName": "Production lhrvdl",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1006,
-            "directoryGroup": "Veterinary Diagnostic Laboratory",
-            "primaryGroupID": 134,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Diagnostic Lab",
-                "GroupName": "DiagnosticLab Base",
-                "Id": 134,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Diagnostic Lab",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4057"
-        },
-        {
-            "memberID": 4058,
-            "eName": "_lhrcls",
-            "firstName": "Production",
-            "lastName": "lhrcls",
-            "fullName": "Production lhrcls",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Clinical Sciences Department",
-                "GroupName": "ClinicalSciences Base",
-                "Id": 135,
-                "IsPrimaryGroup": true
-            },
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4058"
-        },
-        {
-            "memberID": 4059,
-            "eName": "_lhrvth",
-            "firstName": "Production",
-            "lastName": "lhrvth",
-            "fullName": "Production lhrvth",
-            "email": "",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
-            "multipleGroups": false,
-            "groups": {
-                "GroupFriendlyName": "Veterinary Teaching Hospital",
-                "GroupName": "Hospital Base",
-                "Id": 136,
-                "IsPrimaryGroup": true
-            },
-            "department": "Veterinary Teaching Hospital",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/4059"
         },
         {
             "memberID": 4065,
@@ -35333,6 +34925,45 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33257"
         },
         {
+            "memberID": 33259,
+            "eName": "me2",
+            "firstName": "Michelle",
+            "lastName": "Staros",
+            "fullName": "Michelle Staros",
+            "email": "michelle.staros@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1003,
+            "directoryGroup": "Biomedical Sciences",
+            "primaryGroupID": 207,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
+                    "GroupName": "BiomedicalSciences Base",
+                    "Id": 207,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
+                    "GroupName": "BiomedicalSciences",
+                    "Id": 214,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Biomedical Sciences Dept",
+            "phone": "970-491-1461",
+            "contactInfo": {
+                "ContactTypeDescription": "Office",
+                "Id": 36859,
+                "IsPrimary": false,
+                "PhoneNumber": "970-491-1461"
+            },
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33259"
+        },
+        {
             "memberID": 33261,
             "eName": "sehun",
             "firstName": "Sehun",
@@ -35617,69 +35248,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33292"
-        },
-        {
-            "memberID": 33296,
-            "eName": "gebel67",
-            "firstName": "Gregory",
-            "lastName": "Ebel",
-            "fullName": "Gregory Ebel",
-            "email": "gregory.ebel@colostate.edu",
-            "title": "Faculty",
-            "memberType": "Faculty",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Infectious Disease Research Faculty",
-                    "GroupName": "Merial Infectious Disease",
-                    "Id": 589,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "MIP Vector Biology",
-                    "GroupName": "MIP Vector Biology",
-                    "Id": 697,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "MIP Virology",
-                    "GroupName": "MIP Virology",
-                    "Id": 698,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "MIP Genomics",
-                    "GroupName": "MIP Genomics",
-                    "Id": 711,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": "970-491-8374",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 36820,
-                "IsPrimary": false,
-                "PhoneNumber": "970-491-8374"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33296"
         },
         {
             "memberID": 33310,
@@ -37160,58 +36728,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33619"
-        },
-        {
-            "memberID": 33621,
-            "eName": "mmckenna",
-            "firstName": "Miles",
-            "lastName": "Mckenna",
-            "fullName": "Miles Mckenna",
-            "email": "miles.mckenna@colostate.edu",
-            "title": "Associate",
-            "memberType": "AssociateFaculty",
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Medical Records - Read Only",
-                    "GroupName": "Medical Records Read-Only",
-                    "Id": 193,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                    "Id": 208,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences",
-                    "Id": 215,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Clinical Sciences Report",
-                    "GroupName": "VTH Clinical Sciences Report",
-                    "Id": 670,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33621"
         },
         {
             "memberID": 33634,
@@ -39260,6 +38776,53 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33971"
+        },
+        {
+            "memberID": 33972,
+            "eName": "jeremycb",
+            "firstName": "Jeremy",
+            "lastName": "Bachtel",
+            "fullName": "Jeremy Bachtel",
+            "email": "jeremy.bachtel@colostate.edu",
+            "title": "Temporary (non-student) Hourly",
+            "memberType": "Staff",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": "970-297-4463",
+            "contactInfo": [
+                {
+                    "ContactTypeDescription": "Office",
+                    "Id": 37116,
+                    "IsPrimary": false,
+                    "PhoneNumber": "970-297-4463"
+                },
+                {
+                    "ContactTypeDescription": "Office",
+                    "Id": 37580,
+                    "IsPrimary": true,
+                    "PhoneNumber": "970-297-4463"
+                }
+            ],
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/33972"
         },
         {
             "memberID": 33974,
@@ -42969,8 +42532,8 @@
             "lastName": "Dean",
             "fullName": "Juliette Dean",
             "email": "juliette.dean@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1004,
             "directoryGroup": "Microbiology, Immunology, and Pathology",
             "primaryGroupID": 209,
@@ -44893,7 +44456,7 @@
             "lastName": "Rawlinson",
             "fullName": "Jennifer Rawlinson",
             "email": "jennifer.rawlinson@colostate.edu",
-            "title": "Assistant Professor, Veterinary Dentistry and Oral Surgery",
+            "title": "Associate Professor, Veterinary Dentistry and Oral Surgery",
             "memberType": "Faculty",
             "directoryGroupID": 1002,
             "directoryGroup": "Clinical Sciences",
@@ -45184,12 +44747,12 @@
                 }
             ],
             "department": "CVMBS Environmental & Radiological Health Sciences Dept",
-            "phone": "970-491-2395",
+            "phone": "210-218-6424",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
                 "Id": 40984,
                 "IsPrimary": true,
-                "PhoneNumber": "970-491-2395"
+                "PhoneNumber": "210-218-6424"
             },
             "addressInfo": " ",
             "address": null,
@@ -45940,40 +45503,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/35066"
-        },
-        {
-            "memberID": 35073,
-            "eName": "kateddy",
-            "firstName": "Kathleen",
-            "lastName": "Eddy",
-            "fullName": "Kathleen Eddy",
-            "email": "kathleen.eddy@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/35073"
         },
         {
             "memberID": 35105,
@@ -47738,6 +47267,45 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/36368"
         },
         {
+            "memberID": 36384,
+            "eName": "jhoule",
+            "firstName": "Jennifer",
+            "lastName": "Kopanke",
+            "fullName": "Jennifer Kopanke",
+            "email": "jennifer.kopanke@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 209,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
+                    "GroupName": "MicrobiologyImmunologyPathology Base",
+                    "Id": 209,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
+                    "GroupName": "MicrobiologyImmunologyPathology",
+                    "Id": 216,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "phone": "970-491-1940",
+            "contactInfo": {
+                "ContactTypeDescription": "Office",
+                "Id": 40721,
+                "IsPrimary": false,
+                "PhoneNumber": "970-491-1940"
+            },
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/36384"
+        },
+        {
             "memberID": 36388,
             "eName": "summstac",
             "firstName": "Stacie",
@@ -49307,6 +48875,18 @@
                     "GroupFriendlyName": "Clinical Sciences - Residents ONLY",
                     "GroupName": "Residents",
                     "Id": 177,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "VTH Dentistry  ",
+                    "GroupName": "VTH Dentistry  ",
+                    "Id": 559,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Call Center - VTH Facility",
+                    "GroupName": "Call Center - VTH Facility",
+                    "Id": 683,
                     "IsPrimaryGroup": false
                 }
             ],
@@ -52550,81 +52130,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37075"
         },
         {
-            "memberID": 37077,
-            "eName": "giova",
-            "firstName": "Giovanni",
-            "lastName": "Tremolada",
-            "fullName": "Giovanni Tremolada",
-            "email": "giovanni.tremolada@colostate.edu",
-            "title": "Post Doctoral",
-            "memberType": "PostDoctoral",
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department",
-                    "GroupName": "ClinicalSciences Base",
-                    "Id": 135,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Clinicians",
-                    "GroupName": "Clinicians",
-                    "Id": 172,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences - Residents ONLY",
-                    "GroupName": "Residents",
-                    "Id": 177,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Small Animal Orthopeadic Surgery",
-                    "GroupName": "VTH Small Animal Orthopeadic Surgery",
-                    "Id": 579,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Small Animal Soft Tissue Surgery",
-                    "GroupName": "VTH Small Animal Soft Tissue Surgery ",
-                    "Id": 580,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "DVM Letter Approver",
-                    "GroupName": "DVM Letter Approver",
-                    "Id": 635,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Call Center - VTH Facility",
-                    "GroupName": "Call Center - VTH Facility",
-                    "Id": 683,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Clinical Sciences Department",
-            "phone": "970-297-5352",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 42584,
-                "IsPrimary": false,
-                "PhoneNumber": "970-297-5352"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37077"
-        },
-        {
             "memberID": 37078,
             "eName": "lpezzani",
             "firstName": "Lynn",
@@ -53517,7 +53022,7 @@
             "lastName": "Cobb",
             "fullName": "Morgan Cobb",
             "email": "morgan.cobb@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
+            "title": "Student Hourly Employee",
             "memberType": "Staff",
             "directoryGroupID": 1007,
             "directoryGroup": "Veterinary Teaching Hospital",
@@ -53534,12 +53039,6 @@
                     "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
                     "GroupName": "Hospital",
                     "Id": 139,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Call Center - VTH Facility",
-                    "GroupName": "Call Center - VTH Facility",
-                    "Id": 683,
                     "IsPrimaryGroup": false
                 }
             ],
@@ -57015,27 +56514,33 @@
             "lastName": "Carranza",
             "fullName": "Kasimir Carranza",
             "email": "kasimir.carranza@colostate.edu",
-            "title": "Student Hourly Employee",
-            "memberType": "Staff",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1008,
+            "directoryGroup": "Center for Environmental Medicine",
+            "primaryGroupID": 674,
             "multipleGroups": true,
             "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
                 {
                     "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
                     "GroupName": "MicrobiologyImmunologyPathology",
                     "Id": 216,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Center for Environmental Medicine Department",
+                    "GroupName": "Center for Environmental Medicine",
+                    "Id": 674,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Center for Environmental Medicine Working Group",
+                    "GroupName": "Center for Environmental Medicine",
+                    "Id": 675,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "department": "Center for Environmental Medicine Department",
             "phone": "970-491-6011",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
@@ -57160,15 +56665,15 @@
             "email": "mikaela.maldonado@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -57176,9 +56681,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -57859,7 +57370,7 @@
             "lastName": "Sullivan",
             "fullName": "Victoria Sullivan",
             "email": "victoria.sullivan@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
+            "title": "Student Hourly Employee",
             "memberType": "Staff",
             "directoryGroupID": 1002,
             "directoryGroup": "Clinical Sciences",
@@ -58415,69 +57926,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37710"
-        },
-        {
-            "memberID": 37711,
-            "eName": "jrc473",
-            "firstName": "Jacob",
-            "lastName": "Cawley",
-            "fullName": "Jacob Cawley",
-            "email": "jacob.cawley@colostate.edu",
-            "title": "Post Doctoral",
-            "memberType": "PostDoctoral",
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department",
-                    "GroupName": "ClinicalSciences Base",
-                    "Id": 135,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Clinicians",
-                    "GroupName": "Clinicians",
-                    "Id": 172,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Faculty",
-                    "GroupName": "Faculty",
-                    "Id": 178,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Oncology",
-                    "GroupName": "VTH Oncology",
-                    "Id": 572,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Call Center - VTH Facility",
-                    "GroupName": "Call Center - VTH Facility",
-                    "Id": 683,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Clinical Sciences Department",
-            "phone": "970-297-5222",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 42222,
-                "IsPrimary": false,
-                "PhoneNumber": "970-297-5222"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37711"
         },
         {
             "memberID": 37714,
@@ -59561,64 +59009,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37775"
         },
         {
-            "memberID": 37776,
-            "eName": "kruckma1",
-            "firstName": "Carolynne",
-            "lastName": "Kruckman-Gatesy",
-            "fullName": "Carolynne Kruckman-Gatesy",
-            "email": "carolynne.kruckman@colostate.edu",
-            "title": "Veterinary Resident",
-            "memberType": "PostDoctoral",
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Clinicians",
-                    "GroupName": "Clinicians",
-                    "Id": 172,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences - Residents ONLY",
-                    "GroupName": "Residents",
-                    "Id": 177,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                    "Id": 208,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences",
-                    "Id": 215,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "VTH Radiation Oncology",
-                    "GroupName": "VTH Radiation Oncology",
-                    "Id": 576,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37776"
-        },
-        {
             "memberID": 37777,
             "eName": "abmeuten",
             "firstName": "Alice",
@@ -59858,11 +59248,17 @@
             "email": "lindsey.burton@colostate.edu",
             "title": "Graduate Assistant",
             "memberType": "GraduateStudents",
-            "directoryGroupID": 1008,
-            "directoryGroup": "Center for Environmental Medicine",
-            "primaryGroupID": 674,
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 209,
             "multipleGroups": true,
             "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
+                    "GroupName": "MicrobiologyImmunologyPathology Base",
+                    "Id": 209,
+                    "IsPrimaryGroup": true
+                },
                 {
                     "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
                     "GroupName": "EnvironmentalRadiologyHealthSciences",
@@ -59870,10 +59266,10 @@
                     "IsPrimaryGroup": false
                 },
                 {
-                    "GroupFriendlyName": "Center for Environmental Medicine Department",
-                    "GroupName": "Center for Environmental Medicine",
-                    "Id": 674,
-                    "IsPrimaryGroup": true
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
+                    "GroupName": "MicrobiologyImmunologyPathology",
+                    "Id": 216,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "Center for Environmental Medicine Working Group",
@@ -59882,7 +59278,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "Center for Environmental Medicine Department",
+            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -60519,6 +59915,40 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37838"
+        },
+        {
+            "memberID": 37839,
+            "eName": "nara0219",
+            "firstName": "Nara",
+            "lastName": "Shin",
+            "fullName": "Nara Shin",
+            "email": "nara.shin@colostate.edu",
+            "title": "Administrative Professional",
+            "memberType": "Staff",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/37839"
         },
         {
             "memberID": 37842,
@@ -62794,40 +62224,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38183"
         },
         {
-            "memberID": 38184,
-            "eName": "ddsouth",
-            "firstName": "David",
-            "lastName": "South",
-            "fullName": "David South",
-            "email": "david.south@rams.colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                    "Id": 208,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences",
-                    "Id": 215,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38184"
-        },
-        {
             "memberID": 38189,
             "eName": "madmax",
             "firstName": "Maxwell",
@@ -63300,6 +62696,40 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38242"
+        },
+        {
+            "memberID": 38249,
+            "eName": "meengsm",
+            "firstName": "Matthew",
+            "lastName": "Meengs",
+            "fullName": "Matthew Meengs",
+            "email": "matt.meengs@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38249"
         },
         {
             "memberID": 38263,
@@ -63918,7 +63348,7 @@
             "firstName": "Marissa",
             "lastName": "Quilici",
             "fullName": "Marissa Quilici",
-            "email": "marissa.quilici@rams.colostate.edu",
+            "email": "marissa.quilici@colostate.edu",
             "title": "Temporary (non-student) Hourly",
             "memberType": "Staff",
             "directoryGroupID": 1004,
@@ -65860,8 +65290,8 @@
             "lastName": "Brown",
             "fullName": "Katelyn Brown",
             "email": "katie.brown@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1003,
             "directoryGroup": "Biomedical Sciences",
             "primaryGroupID": 207,
@@ -66249,46 +65679,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38526"
-        },
-        {
-            "memberID": 38530,
-            "eName": "mpearsn",
-            "firstName": "Morgan",
-            "lastName": "Pearson",
-            "fullName": "Morgan Pearson",
-            "email": "morgan.pearson@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "College Office  Working Group",
-                    "GroupName": "DeanVetMedicine",
-                    "Id": 210,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38530"
         },
         {
             "memberID": 38531,
@@ -66728,8 +66118,8 @@
             "lastName": "Cooper",
             "fullName": "Sarah Cooper",
             "email": "sarah11.cooper@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1004,
             "directoryGroup": "Microbiology, Immunology, and Pathology",
             "primaryGroupID": 209,
@@ -66979,40 +66369,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38575"
         },
         {
-            "memberID": 38576,
-            "eName": "dpierce",
-            "firstName": "Dayton",
-            "lastName": "Pierce",
-            "fullName": "Dayton Pierce",
-            "email": "dayton.pierce@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38576"
-        },
-        {
             "memberID": 38579,
             "eName": "mlschoen",
             "firstName": "Madeleine",
@@ -67052,7 +66408,7 @@
             "firstName": "Lia",
             "lastName": "McCoy",
             "fullName": "Lia McCoy",
-            "email": "lia.mccoy@rams.colostate.edu",
+            "email": "lia.mccoy@colostate.edu",
             "title": "Temporary (non-student) Hourly",
             "memberType": "Staff",
             "directoryGroupID": 1002,
@@ -67135,31 +66491,25 @@
             "email": "chase.gross@colostate.edu",
             "title": "Graduate Assistant",
             "memberType": "GraduateStudents",
-            "directoryGroupID": 1001,
-            "directoryGroup": "College Office",
-            "primaryGroupID": 203,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS College Office",
-                    "GroupName": "DeanVetMedicine Base",
-                    "Id": 203,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
-                    "GroupFriendlyName": "College Office  Working Group",
-                    "GroupName": "DeanVetMedicine",
-                    "Id": 210,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "DVM Class of 2021",
-                    "GroupName": "PVM Juniors",
-                    "Id": 541,
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS College Office",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -67840,40 +67190,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38766"
         },
         {
-            "memberID": 38767,
-            "eName": "clgonz",
-            "firstName": "Carolina",
-            "lastName": "Gonzalez-Berrios",
-            "fullName": "Carolina Gonzalez-Berrios",
-            "email": "carolina.gonzalez-berrios@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38767"
-        },
-        {
             "memberID": 38770,
             "eName": "fhinkle",
             "firstName": "Frances",
@@ -68314,6 +67630,40 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38788"
+        },
+        {
+            "memberID": 38791,
+            "eName": "shagyabb",
+            "firstName": "Katharine",
+            "lastName": "Seiler",
+            "fullName": "Katharine Seiler",
+            "email": "katharine.seiler@rams.colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1003,
+            "directoryGroup": "Biomedical Sciences",
+            "primaryGroupID": 207,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
+                    "GroupName": "BiomedicalSciences Base",
+                    "Id": 207,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
+                    "GroupName": "BiomedicalSciences",
+                    "Id": 214,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Biomedical Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/38791"
         },
         {
             "memberID": 38792,
@@ -69038,25 +68388,25 @@
             "email": "julianna.sun@colostate.edu",
             "title": "Graduate Assistant",
             "memberType": "GraduateStudents",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 205,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology",
+                    "GroupName": "CellMolecularBiology Base",
+                    "Id": 205,
                     "IsPrimaryGroup": true
                 },
                 {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology  Working Group",
+                    "GroupName": "CellMolecularBiology",
+                    "Id": 212,
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Biomedical Sciences Dept",
+            "department": "CVMBS Cell & Molecular Biology",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -69892,45 +69242,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39027"
-        },
-        {
-            "memberID": 39033,
-            "eName": "kmmcclur",
-            "firstName": "Katherine",
-            "lastName": "McClure",
-            "fullName": "Katherine McClure",
-            "email": "katherine.mcclure@colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": "970-492-4455",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 43203,
-                "IsPrimary": false,
-                "PhoneNumber": "970-492-4455"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39033"
         },
         {
             "memberID": 39041,
@@ -70876,8 +70187,8 @@
             "lastName": "Park",
             "fullName": "Haemin Park",
             "email": "haemin.park@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
             "directoryGroupID": 1002,
             "directoryGroup": "Clinical Sciences",
             "primaryGroupID": 135,
@@ -71058,8 +70369,8 @@
             "lastName": "Cruz Castro",
             "fullName": "Stephanie Cruz Castro",
             "email": "stephanie.cruz_castro@colostate.edu",
-            "title": null,
-            "memberType": null,
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
             "directoryGroupID": 1002,
             "directoryGroup": "Clinical Sciences",
             "primaryGroupID": 135,
@@ -71750,8 +71061,8 @@
             "lastName": "Maison",
             "fullName": "Rachel Maison",
             "email": "rachel.maison@colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1003,
             "directoryGroup": "Biomedical Sciences",
             "primaryGroupID": 207,
@@ -72718,8 +72029,8 @@
             "lastName": "Gilfillan",
             "fullName": "Darby Gilfillan",
             "email": "darby.gilfillan@rams.colostate.edu",
-            "title": "Temporary (non-student) Hourly",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1004,
             "directoryGroup": "Microbiology, Immunology, and Pathology",
             "primaryGroupID": 209,
@@ -73285,15 +72596,15 @@
             "email": "rachel.wertheimer@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -73301,9 +72612,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -74385,40 +73702,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39331"
         },
         {
-            "memberID": 39335,
-            "eName": "magcamp",
-            "firstName": "Margaret",
-            "lastName": "Campbell",
-            "fullName": "Margaret Campbell",
-            "email": "margaret.campbell@colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39335"
-        },
-        {
             "memberID": 39337,
             "eName": "kblume10",
             "firstName": "Kristen",
@@ -74529,22 +73812,22 @@
             "email": "sara.wist@colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
                 {
                     "GroupFriendlyName": "Clinical Sciences Department  Working Group",
                     "GroupName": "ClinicalSciences",
                     "Id": 140,
                     "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
                 },
                 {
                     "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
@@ -74553,7 +73836,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -74683,16 +73966,22 @@
             "email": "roxanna.vickery@rams.colostate.edu",
             "title": "Temporary (non-student) Hourly",
             "memberType": "Staff",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
@@ -74701,7 +73990,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Biomedical Sciences Dept",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -76539,15 +75828,15 @@
             "email": "jordan.tarbutton@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -76555,9 +75844,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -77387,51 +76682,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39464"
         },
         {
-            "memberID": 39468,
-            "eName": "asewell",
-            "firstName": "Amy",
-            "lastName": "Sewell",
-            "fullName": "Amy Sewell",
-            "email": "amy.sewell@colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "VTH Medical Records - Read Only",
-                    "GroupName": "Medical Records Read-Only",
-                    "Id": 193,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": "970-491-5095",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 44010,
-                "IsPrimary": false,
-                "PhoneNumber": "970-491-5095"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39468"
-        },
-        {
             "memberID": 39471,
             "eName": "nalombar",
             "firstName": "Natalie",
@@ -77508,15 +76758,15 @@
             "email": "caitlin.erickson@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -77524,9 +76774,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -77600,40 +76856,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39481"
-        },
-        {
-            "memberID": 39482,
-            "eName": "jsheng02",
-            "firstName": "Julietta",
-            "lastName": "Sheng",
-            "fullName": "Julietta Sheng",
-            "email": "julietta.sheng@rams.colostate.edu",
-            "title": "Administrative Professional",
-            "memberType": "Staff",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39482"
         },
         {
             "memberID": 39486,
@@ -78265,21 +77487,27 @@
             "memberID": 39514,
             "eName": "carleyb",
             "firstName": "Carley",
-            "lastName": "Barron",
-            "fullName": "Carley Barron",
+            "lastName": "Dearing",
+            "fullName": "Carley Dearing",
             "email": "carley.barron@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
@@ -78288,7 +77516,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "department": "Clinical Sciences Department",
             "phone": "970-491-7317",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
@@ -78380,8 +77608,8 @@
             "lastName": "Ciepluch",
             "fullName": "Brittany Ciepluch",
             "email": "brittany.ciepluch@colostate.edu",
-            "title": "Post Doctoral",
-            "memberType": "PostDoctoral",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
             "directoryGroupID": 1002,
             "directoryGroup": "Clinical Sciences",
             "primaryGroupID": 135,
@@ -78602,45 +77830,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39523"
-        },
-        {
-            "memberID": 39525,
-            "eName": "ariehay",
-            "firstName": "Arielle",
-            "lastName": "Hay",
-            "fullName": "Arielle Hay",
-            "email": "arielle.hay@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": "970-491-7317",
-            "contactInfo": {
-                "ContactTypeDescription": "Office",
-                "Id": 44093,
-                "IsPrimary": false,
-                "PhoneNumber": "970-491-7317"
-            },
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39525"
         },
         {
             "memberID": 39532,
@@ -79001,18 +78190,24 @@
             "lastName": "Brill",
             "fullName": "Samuel Brill",
             "email": "sam.brill@colostate.edu",
-            "title": "Graduate Assistant",
-            "memberType": "GraduateStudents",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
@@ -79021,7 +78216,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -79244,48 +78439,14 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39550"
         },
         {
-            "memberID": 39559,
-            "eName": "lilley",
-            "firstName": "Carly",
-            "lastName": "Lilley",
-            "fullName": "Carly Lilley",
-            "email": "carly.lilley@colostate.edu",
-            "title": "Associate",
-            "memberType": "AssociateFaculty",
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department",
-                    "GroupName": "ClinicalSciences Base",
-                    "Id": 135,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/39559"
-        },
-        {
             "memberID": 39560,
             "eName": "rjmu224",
             "firstName": "Rebecca",
             "lastName": "Mueller",
             "fullName": "Rebecca Mueller",
             "email": "rebecca.mueller@colostate.edu",
-            "title": "Post Doctoral Trainee",
-            "memberType": "PostDoctoral",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1005,
             "directoryGroup": "Environmental and Radiological Health Sciences",
             "primaryGroupID": 208,
@@ -80489,8 +79650,8 @@
             "lastName": "Daniels",
             "fullName": "Renata Daniels",
             "email": "renata.daniels@colostate.edu",
-            "title": "Associate",
-            "memberType": "AssociateFaculty",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
             "directoryGroupID": 1003,
             "directoryGroup": "Biomedical Sciences",
             "primaryGroupID": 207,
@@ -80983,8 +80144,8 @@
             "lastName": "Terry",
             "fullName": "James Terry",
             "email": "james.terry@colostate.edu",
-            "title": "Student Hourly Employee",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1004,
             "directoryGroup": "Microbiology, Immunology, and Pathology",
             "primaryGroupID": 209,
@@ -81438,15 +80599,15 @@
             "email": "cass.bouse-eaton@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1006,
-            "directoryGroup": "Veterinary Diagnostic Laboratory",
-            "primaryGroupID": 134,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Diagnostic Lab",
-                    "GroupName": "DiagnosticLab Base",
-                    "Id": 134,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -81456,13 +80617,19 @@
                     "IsPrimaryGroup": false
                 },
                 {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
                     "GroupFriendlyName": "Test Group for Ryan",
                     "GroupName": "Test Group for Ryan",
                     "Id": 710,
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Diagnostic Lab",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -81552,15 +80719,15 @@
             "email": "taylor.cohen@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -81568,9 +80735,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -83314,7 +82487,7 @@
             "firstName": "Emma",
             "lastName": "Riley",
             "fullName": "Emma Riley",
-            "email": "emma.riley@rams.colostate.edu",
+            "email": "emma.riley@colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
             "directoryGroupID": 1002,
@@ -83805,16 +82978,22 @@
             "email": "melissa.chromik@colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
@@ -83823,7 +83002,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Biomedical Sciences Dept",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -85312,8 +84491,8 @@
             "lastName": "Lankala",
             "fullName": "Sooraj Reddy Lankala",
             "email": "sooraj.reddy@colostate.edu",
-            "title": "Student Hourly Employee",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1001,
             "directoryGroup": "College Office",
             "primaryGroupID": 203,
@@ -85388,16 +84567,22 @@
             "email": "emily.hokett@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
@@ -85406,7 +84591,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Biomedical Sciences Dept",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -85904,11 +85089,11 @@
             "lastName": "Leleiwi",
             "fullName": "Ikaia Leleiwi",
             "email": "ikaia.leleiwi@colostate.edu",
-            "title": "Student Hourly Employee",
-            "memberType": "Staff",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
             "directoryGroupID": 1004,
             "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
+            "primaryGroupID": 205,
             "multipleGroups": true,
             "groups": [
                 {
@@ -85918,9 +85103,9 @@
                     "IsPrimaryGroup": false
                 },
                 {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology",
+                    "GroupName": "CellMolecularBiology Base",
+                    "Id": 205,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -85930,13 +85115,19 @@
                     "IsPrimaryGroup": false
                 },
                 {
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology  Working Group",
+                    "GroupName": "CellMolecularBiology",
+                    "Id": 212,
+                    "IsPrimaryGroup": false
+                },
+                {
                     "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
                     "GroupName": "MicrobiologyImmunologyPathology",
                     "Id": 216,
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "department": "CVMBS Cell & Molecular Biology",
             "phone": "970-297-1281",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
@@ -86065,15 +85256,15 @@
             "email": "meghan.webster@rams.colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -86081,9 +85272,15 @@
                     "GroupName": "Hospital",
                     "Id": 139,
                     "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Teaching Hospital",
+            "department": "Clinical Sciences Department",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -86620,16 +85817,22 @@
             "email": "taghreed.al_turki@colostate.edu",
             "title": "Graduate Assistant",
             "memberType": "GraduateStudents",
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 205,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                    "Id": 208,
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology",
+                    "GroupName": "CellMolecularBiology Base",
+                    "Id": 205,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology  Working Group",
+                    "GroupName": "CellMolecularBiology",
+                    "Id": 212,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
@@ -86638,7 +85841,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "department": "CVMBS Cell & Molecular Biology",
             "phone": null,
             "contactInfo": null,
             "addressInfo": " ",
@@ -89175,40 +88378,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40071"
         },
         {
-            "memberID": 40072,
-            "eName": "thomasmw",
-            "firstName": "Marshall",
-            "lastName": "Thomas",
-            "fullName": "Marshall Thomas",
-            "email": "marshall.thomas@rams.colostate.edu",
-            "title": "Associate",
-            "memberType": "AssociateFaculty",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40072"
-        },
-        {
             "memberID": 40074,
             "eName": "joyaolan",
             "firstName": "Jo-Yao",
@@ -90304,74 +89473,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40111"
         },
         {
-            "memberID": 40112,
-            "eName": "jessled",
-            "firstName": "Jessica",
-            "lastName": "Lederman",
-            "fullName": "Jessica Lederman",
-            "email": "jess.lederman@colostate.edu",
-            "title": "Temporary (non-student) Hourly",
-            "memberType": "Staff",
-            "directoryGroupID": 1003,
-            "directoryGroup": "Biomedical Sciences",
-            "primaryGroupID": 207,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
-                    "GroupName": "BiomedicalSciences Base",
-                    "Id": 207,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
-                    "GroupName": "BiomedicalSciences",
-                    "Id": 214,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Biomedical Sciences Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40112"
-        },
-        {
-            "memberID": 40113,
-            "eName": "chang24",
-            "firstName": "James",
-            "lastName": "Chang",
-            "fullName": "James Chang",
-            "email": "james.chang@colostate.edu",
-            "title": "Associate",
-            "memberType": "AssociateFaculty",
-            "directoryGroupID": 1004,
-            "directoryGroup": "Microbiology, Immunology, and Pathology",
-            "primaryGroupID": 209,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
-                    "GroupName": "MicrobiologyImmunologyPathology Base",
-                    "Id": 209,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
-                    "GroupName": "MicrobiologyImmunologyPathology",
-                    "Id": 216,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40113"
-        },
-        {
             "memberID": 40114,
             "eName": "secorrad",
             "firstName": "Secorra",
@@ -91186,16 +90287,22 @@
             "email": "erica.sinclair@colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1005,
-            "directoryGroup": "Environmental and Radiological Health Sciences",
-            "primaryGroupID": 208,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
-                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
-                    "Id": 208,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
                 },
                 {
                     "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
@@ -91204,7 +90311,7 @@
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "department": "Clinical Sciences Department",
             "phone": "970-297-1293",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
@@ -97000,15 +96107,15 @@
             "email": "ryan.de_kay@colostate.edu",
             "title": "Student Hourly Employee",
             "memberType": "Staff",
-            "directoryGroupID": 1006,
-            "directoryGroup": "Veterinary Diagnostic Laboratory",
-            "primaryGroupID": 134,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
             "multipleGroups": true,
             "groups": [
                 {
-                    "GroupFriendlyName": "Veterinary Diagnostic Lab",
-                    "GroupName": "DiagnosticLab Base",
-                    "Id": 134,
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
                     "IsPrimaryGroup": true
                 },
                 {
@@ -97018,13 +96125,19 @@
                     "IsPrimaryGroup": false
                 },
                 {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
                     "GroupFriendlyName": "Test Group for Ryan",
                     "GroupName": "Test Group for Ryan",
                     "Id": 710,
                     "IsPrimaryGroup": false
                 }
             ],
-            "department": "Veterinary Diagnostic Lab",
+            "department": "Clinical Sciences Department",
             "phone": "970-297-1234",
             "contactInfo": {
                 "ContactTypeDescription": "Office",
@@ -98458,8 +97571,8 @@
             "memberID": 40346,
             "eName": "megansta",
             "firstName": "Megan",
-            "lastName": "Stadler",
-            "fullName": "Megan Stadler",
+            "lastName": "Guillaumin",
+            "fullName": "Megan Guillaumin",
             "email": "megan.stadler@colostate.edu",
             "title": "Post Doctoral",
             "memberType": "PostDoctoral",
@@ -98557,46 +97670,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40348"
         },
         {
-            "memberID": 40349,
-            "eName": "Mathis",
-            "firstName": "Justin",
-            "lastName": "Mathis",
-            "fullName": "Justin Mathis",
-            "email": "justin.mathis@colostat.edu",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1007,
-            "directoryGroup": "Veterinary Teaching Hospital",
-            "primaryGroupID": 136,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital",
-                    "GroupName": "Hospital Base",
-                    "Id": 136,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
-                    "GroupName": "Hospital",
-                    "Id": 139,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Call Center - VTH Facility",
-                    "GroupName": "Call Center - VTH Facility",
-                    "Id": 683,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Veterinary Teaching Hospital",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40349"
-        },
-        {
             "memberID": 40350,
             "eName": "esertah",
             "firstName": "Serhat",
@@ -98667,9 +97740,9 @@
         {
             "memberID": 40352,
             "eName": "thomsonc",
-            "firstName": "Christopher",
+            "firstName": "Chris",
             "lastName": "Thomson",
-            "fullName": "Christopher Thomson",
+            "fullName": "Chris Thomson",
             "email": "chris.thomson2@colostate.edu",
             "title": "Post Doctoral",
             "memberType": "PostDoctoral",
@@ -98697,40 +97770,6 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40352"
-        },
-        {
-            "memberID": 40353,
-            "eName": "_jschifano",
-            "firstName": "Joe",
-            "lastName": "Schifano",
-            "fullName": "Joe Schifano",
-            "email": "dliptak",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department",
-                    "GroupName": "ClinicalSciences Base",
-                    "Id": 135,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40353"
         },
         {
             "memberID": 40354,
@@ -99152,46 +98191,6 @@
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40365"
         },
         {
-            "memberID": 40366,
-            "eName": "_edupont",
-            "firstName": "Emily",
-            "lastName": "Dupont",
-            "fullName": "Emily Dupont",
-            "email": "dliptak",
-            "title": null,
-            "memberType": null,
-            "directoryGroupID": 1002,
-            "directoryGroup": "Clinical Sciences",
-            "primaryGroupID": 135,
-            "multipleGroups": true,
-            "groups": [
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department",
-                    "GroupName": "ClinicalSciences Base",
-                    "Id": 135,
-                    "IsPrimaryGroup": true
-                },
-                {
-                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
-                    "GroupName": "ClinicalSciences",
-                    "Id": 140,
-                    "IsPrimaryGroup": false
-                },
-                {
-                    "GroupFriendlyName": "Visiting Students",
-                    "GroupName": "Visiting Students",
-                    "Id": 550,
-                    "IsPrimaryGroup": false
-                }
-            ],
-            "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
-            "addressInfo": " ",
-            "address": null,
-            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40366"
-        },
-        {
             "memberID": 40367,
             "eName": "howell",
             "firstName": "Kaitlyn",
@@ -99287,8 +98286,13 @@
                 }
             ],
             "department": "Clinical Sciences Department",
-            "phone": null,
-            "contactInfo": null,
+            "phone": "970-305-6742",
+            "contactInfo": {
+                "ContactTypeDescription": "Office",
+                "Id": 45116,
+                "IsPrimary": false,
+                "PhoneNumber": "970-305-6742"
+            },
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40369"
@@ -99394,6 +98398,1164 @@
             "addressInfo": " ",
             "address": null,
             "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40372"
+        },
+        {
+            "memberID": 40426,
+            "eName": "katiev",
+            "firstName": "Kaitlynn",
+            "lastName": "Valencia",
+            "fullName": "Kaitlynn Valencia",
+            "email": "katie.valencia@rams.colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40426"
+        },
+        {
+            "memberID": 40430,
+            "eName": "kengm",
+            "firstName": "Grace",
+            "lastName": "Kennedy",
+            "fullName": "Grace Kennedy",
+            "email": "grace.kennedy@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1003,
+            "directoryGroup": "Biomedical Sciences",
+            "primaryGroupID": 207,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
+                    "GroupName": "BiomedicalSciences Base",
+                    "Id": 207,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
+                    "GroupName": "BiomedicalSciences",
+                    "Id": 214,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Biomedical Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40430"
+        },
+        {
+            "memberID": 40461,
+            "eName": "ochou06",
+            "firstName": "Kadupe Jean-Philippe",
+            "lastName": "Ochoumare",
+            "fullName": "Kadupe Jean-Philippe Ochoumare",
+            "email": "jean-philippe.ochoumare@colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1007,
+            "directoryGroup": "Veterinary Teaching Hospital",
+            "primaryGroupID": 136,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital",
+                    "GroupName": "Hospital Base",
+                    "Id": 136,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
+                    "GroupName": "Hospital",
+                    "Id": 139,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Veterinary Teaching Hospital",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40461"
+        },
+        {
+            "memberID": 40491,
+            "eName": "nbergum",
+            "firstName": "Nikolas",
+            "lastName": "Bergum",
+            "fullName": "Nikolas Bergum",
+            "email": "nikolas.bergum@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1009,
+            "directoryGroup": "Molecular, Cellular, and Integrative Neurosciences",
+            "primaryGroupID": 206,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Molecular, Cellular & Integrative Neurosciences",
+                    "GroupName": "MolecularCellularIntegrativeNeurosciences Base",
+                    "Id": 206,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Molecular, Cellular & Integrative Neurosciences  Working Group",
+                    "GroupName": "MolecularCellularIntegrativeNeurosciences",
+                    "Id": 213,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Molecular, Cellular & Integrative Neurosciences",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40491"
+        },
+        {
+            "memberID": 40492,
+            "eName": "npettid",
+            "firstName": "Nathan",
+            "lastName": "Pettid",
+            "fullName": "Nathan Pettid",
+            "email": "nathan.pettid@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1009,
+            "directoryGroup": "Molecular, Cellular, and Integrative Neurosciences",
+            "primaryGroupID": 206,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Molecular, Cellular & Integrative Neurosciences",
+                    "GroupName": "MolecularCellularIntegrativeNeurosciences Base",
+                    "Id": 206,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Molecular, Cellular & Integrative Neurosciences  Working Group",
+                    "GroupName": "MolecularCellularIntegrativeNeurosciences",
+                    "Id": 213,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Molecular, Cellular & Integrative Neurosciences",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40492"
+        },
+        {
+            "memberID": 40493,
+            "eName": "odonoghz",
+            "firstName": "Zoe",
+            "lastName": "O'Donoghue",
+            "fullName": "Zoe O'Donoghue",
+            "email": "zoe.odonoghue@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 209,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
+                    "GroupName": "MicrobiologyImmunologyPathology Base",
+                    "Id": 209,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
+                    "GroupName": "MicrobiologyImmunologyPathology",
+                    "Id": 216,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40493"
+        },
+        {
+            "memberID": 40495,
+            "eName": "sere",
+            "firstName": "Sere",
+            "lastName": "Williams",
+            "fullName": "Sere Williams",
+            "email": "sere.williams@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 205,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology",
+                    "GroupName": "CellMolecularBiology Base",
+                    "Id": 205,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Cell & Molecular Biology  Working Group",
+                    "GroupName": "CellMolecularBiology",
+                    "Id": 212,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Cell & Molecular Biology",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40495"
+        },
+        {
+            "memberID": 40497,
+            "eName": "larrylam",
+            "firstName": "Lawrence",
+            "lastName": "Lam",
+            "fullName": "Lawrence Lam",
+            "email": "lawrence.lam@colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40497"
+        },
+        {
+            "memberID": 40498,
+            "eName": "mlhughes",
+            "firstName": "Matthew",
+            "lastName": "Hughes",
+            "fullName": "Matthew Hughes",
+            "email": "matthew.hughes@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40498"
+        },
+        {
+            "memberID": 40499,
+            "eName": "tkinkel",
+            "firstName": "Traci",
+            "lastName": "Kinkel",
+            "fullName": "Traci Kinkel",
+            "email": "traci.kinkel@colostate.edu",
+            "title": "Faculty",
+            "memberType": "Faculty",
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 209,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
+                    "GroupName": "MicrobiologyImmunologyPathology Base",
+                    "Id": 209,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
+                    "GroupName": "MicrobiologyImmunologyPathology",
+                    "Id": 216,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40499"
+        },
+        {
+            "memberID": 40500,
+            "eName": "kncraft",
+            "firstName": "Katelyn",
+            "lastName": "Craft",
+            "fullName": "Katelyn Craft",
+            "email": "katie.craft@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40500"
+        },
+        {
+            "memberID": 40501,
+            "eName": "pkwitter",
+            "firstName": "Paige",
+            "lastName": "Witter",
+            "fullName": "Paige Witter",
+            "email": "paige.witter@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40501"
+        },
+        {
+            "memberID": 40502,
+            "eName": "mschatte",
+            "firstName": "Margaret",
+            "lastName": "Schatte",
+            "fullName": "Margaret Schatte",
+            "email": "margaret.schatte@rams.colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1007,
+            "directoryGroup": "Veterinary Teaching Hospital",
+            "primaryGroupID": 136,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital",
+                    "GroupName": "Hospital Base",
+                    "Id": 136,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
+                    "GroupName": "Hospital",
+                    "Id": 139,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Veterinary Teaching Hospital",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40502"
+        },
+        {
+            "memberID": 40503,
+            "eName": "tiera91",
+            "firstName": "Tiera",
+            "lastName": "McAdam",
+            "fullName": "Tiera McAdam",
+            "email": "tiera.mcadam@colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1007,
+            "directoryGroup": "Veterinary Teaching Hospital",
+            "primaryGroupID": 136,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital",
+                    "GroupName": "Hospital Base",
+                    "Id": 136,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
+                    "GroupName": "Hospital",
+                    "Id": 139,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Veterinary Teaching Hospital",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40503"
+        },
+        {
+            "memberID": 40504,
+            "eName": "amlock",
+            "firstName": "Amelia",
+            "lastName": "Lock",
+            "fullName": "Amelia Lock",
+            "email": "amelia.lock@rams.colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1003,
+            "directoryGroup": "Biomedical Sciences",
+            "primaryGroupID": 207,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
+                    "GroupName": "BiomedicalSciences Base",
+                    "Id": 207,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
+                    "GroupName": "BiomedicalSciences",
+                    "Id": 214,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Biomedical Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40504"
+        },
+        {
+            "memberID": 40505,
+            "eName": "mjruss",
+            "firstName": "Madison",
+            "lastName": "Russell",
+            "fullName": "Madison Russell",
+            "email": "madison.russell@rams.colostate.edu",
+            "title": "Student Hourly Employee",
+            "memberType": "Staff",
+            "directoryGroupID": 1004,
+            "directoryGroup": "Microbiology, Immunology, and Pathology",
+            "primaryGroupID": 209,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept",
+                    "GroupName": "MicrobiologyImmunologyPathology Base",
+                    "Id": 209,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Microbiology, Immunology & Pathology Dept  Working Group",
+                    "GroupName": "MicrobiologyImmunologyPathology",
+                    "Id": 216,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Microbiology, Immunology & Pathology Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40505"
+        },
+        {
+            "memberID": 40506,
+            "eName": "_jbridges",
+            "firstName": "Jenni",
+            "lastName": "Bridges",
+            "fullName": "Jenni Bridges",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40506"
+        },
+        {
+            "memberID": 40507,
+            "eName": "_tchan",
+            "firstName": "Trevor",
+            "lastName": "Chan",
+            "fullName": "Trevor Chan",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40507"
+        },
+        {
+            "memberID": 40508,
+            "eName": "_ccooper",
+            "firstName": "Callan",
+            "lastName": "Cooper",
+            "fullName": "Callan Cooper",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40508"
+        },
+        {
+            "memberID": 40509,
+            "eName": "_cpelzek",
+            "firstName": "Cortney",
+            "lastName": "Pelzek",
+            "fullName": "Cortney Pelzek",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40509"
+        },
+        {
+            "memberID": 40510,
+            "eName": "_mvanhesteren",
+            "firstName": "Matthew",
+            "lastName": "Van Hesteren",
+            "fullName": "Matthew Van Hesteren",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40510"
+        },
+        {
+            "memberID": 40511,
+            "eName": "_jwood",
+            "firstName": "James",
+            "lastName": "Wood",
+            "fullName": "James Wood",
+            "email": "dliptak",
+            "title": null,
+            "memberType": null,
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                },
+                {
+                    "GroupFriendlyName": "Visiting Students",
+                    "GroupName": "Visiting Students",
+                    "Id": 550,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40511"
+        },
+        {
+            "memberID": 40512,
+            "eName": "aharrel",
+            "firstName": "Angela",
+            "lastName": "Harrell",
+            "fullName": "Angela Harrell",
+            "email": "angela.harrell@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40512"
+        },
+        {
+            "memberID": 40513,
+            "eName": "atdeak",
+            "firstName": "Anna",
+            "lastName": "Deak",
+            "fullName": "Anna Deak",
+            "email": "anna.deak@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40513"
+        },
+        {
+            "memberID": 40515,
+            "eName": "kevm",
+            "firstName": "Kevin",
+            "lastName": "Molina",
+            "fullName": "Kevin Molina",
+            "email": "kevin.molina@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40515"
+        },
+        {
+            "memberID": 40516,
+            "eName": "kmsamson",
+            "firstName": "Kevin",
+            "lastName": "Samson",
+            "fullName": "Kevin Samson",
+            "email": "kevin.samson@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40516"
+        },
+        {
+            "memberID": 40517,
+            "eName": "kzukeran",
+            "firstName": "Kekauilani",
+            "lastName": "Zukeran-Kerr",
+            "fullName": "Kekauilani Zukeran-Kerr",
+            "email": "kaui.zukeran-kerr@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1002,
+            "directoryGroup": "Clinical Sciences",
+            "primaryGroupID": 135,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department",
+                    "GroupName": "ClinicalSciences Base",
+                    "Id": 135,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Clinical Sciences Department  Working Group",
+                    "GroupName": "ClinicalSciences",
+                    "Id": 140,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Clinical Sciences Department",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40517"
+        },
+        {
+            "memberID": 40518,
+            "eName": "mbrown42",
+            "firstName": "Morgan",
+            "lastName": "Brown",
+            "fullName": "Morgan Brown",
+            "email": "morgan.lee.brown@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40518"
+        },
+        {
+            "memberID": 40519,
+            "eName": "kyan",
+            "firstName": "Kevin",
+            "lastName": "Yan",
+            "fullName": "Kevin Yan",
+            "email": "kevin.yan@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40519"
+        },
+        {
+            "memberID": 40520,
+            "eName": "lawhitco",
+            "firstName": "Luke",
+            "lastName": "Whitcomb",
+            "fullName": "Luke Whitcomb",
+            "email": "luke.whitcomb@rams.colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1003,
+            "directoryGroup": "Biomedical Sciences",
+            "primaryGroupID": 207,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept",
+                    "GroupName": "BiomedicalSciences Base",
+                    "Id": 207,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Biomedical Sciences Dept  Working Group",
+                    "GroupName": "BiomedicalSciences",
+                    "Id": 214,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Biomedical Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40520"
+        },
+        {
+            "memberID": 40521,
+            "eName": "lnv",
+            "firstName": "Lisa",
+            "lastName": "Vest",
+            "fullName": "Lisa Vest",
+            "email": "lisa.vest@colostate.edu",
+            "title": "State Classified",
+            "memberType": "Staff",
+            "directoryGroupID": 1007,
+            "directoryGroup": "Veterinary Teaching Hospital",
+            "primaryGroupID": 136,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital",
+                    "GroupName": "Hospital Base",
+                    "Id": 136,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
+                    "GroupName": "Hospital",
+                    "Id": 139,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Veterinary Teaching Hospital",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40521"
+        },
+        {
+            "memberID": 40522,
+            "eName": "hbretz",
+            "firstName": "Hazel",
+            "lastName": "Bretz",
+            "fullName": "Hazel Bretz",
+            "email": "hazel.bretz@colostate.edu",
+            "title": "Associate",
+            "memberType": "AssociateFaculty",
+            "directoryGroupID": 1007,
+            "directoryGroup": "Veterinary Teaching Hospital",
+            "primaryGroupID": 136,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital",
+                    "GroupName": "Hospital Base",
+                    "Id": 136,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "Veterinary Teaching Hospital Working Group",
+                    "GroupName": "Hospital",
+                    "Id": 139,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "Veterinary Teaching Hospital",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40522"
+        },
+        {
+            "memberID": 40523,
+            "eName": "zaria",
+            "firstName": "Zaria",
+            "lastName": "Vick",
+            "fullName": "Zaria Vick",
+            "email": "zaria.vick@colostate.edu",
+            "title": "Graduate Assistant",
+            "memberType": "GraduateStudents",
+            "directoryGroupID": 1005,
+            "directoryGroup": "Environmental and Radiological Health Sciences",
+            "primaryGroupID": 208,
+            "multipleGroups": true,
+            "groups": [
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences Base",
+                    "Id": 208,
+                    "IsPrimaryGroup": true
+                },
+                {
+                    "GroupFriendlyName": "CVMBS Environmental & Radiological Health Sciences Dept  Working Group",
+                    "GroupName": "EnvironmentalRadiologyHealthSciences",
+                    "Id": 215,
+                    "IsPrimaryGroup": false
+                }
+            ],
+            "department": "CVMBS Environmental & Radiological Health Sciences Dept",
+            "phone": null,
+            "contactInfo": null,
+            "addressInfo": " ",
+            "address": null,
+            "photo": "https:\/\/www.cvmbs.colostate.edu\/DirectorySearch\/Search\/MemberPhoto\/40523"
         }
     ],
     "departments": {

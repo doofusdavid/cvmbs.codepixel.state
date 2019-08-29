@@ -1,0 +1,85 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/computational-biology.json",
+        "modified": "2019 08 28 22:42:44",
+        "records": 7
+    },
+    "members": [
+        {
+            "memberID": 3203,
+            "eName": "bgeiss",
+            "firstName": "Brian",
+            "lastName": "Geiss",
+            "fullName": "Brian Geiss",
+            "email": "brian.geiss@colostate.edu",
+            "phone": "970-491-6330",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3946,
+            "eName": "slayden",
+            "firstName": "Richard",
+            "lastName": "Slayden",
+            "fullName": "Richard Slayden",
+            "email": "richard.slayden@colostate.edu",
+            "phone": "970-491-2902",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 4022,
+            "eName": "wcb4",
+            "firstName": "William",
+            "lastName": "Black IV",
+            "fullName": "William Black IV",
+            "email": "william.black@colostate.edu",
+            "phone": "970-491-1081",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 33448,
+            "eName": "lyonsm",
+            "firstName": "Michael",
+            "lastName": "Lyons",
+            "fullName": "Michael Lyons",
+            "email": "michael.lyons@colostate.edu",
+            "phone": "970-491-2495",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 36497,
+            "eName": "mdstengl",
+            "firstName": "Mark",
+            "lastName": "Stenglein",
+            "fullName": "Mark Stenglein",
+            "email": "mark.stenglein@colostate.edu",
+            "phone": "970-492-4464",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 36979,
+            "eName": "zabdo",
+            "firstName": "Zaid",
+            "lastName": "Abdo",
+            "fullName": "Zaid Abdo",
+            "email": "zaid.abdo@colostate.edu",
+            "phone": "970-492-4455",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 38342,
+            "eName": "sobral",
+            "firstName": "Bruno",
+            "lastName": "Sobral",
+            "fullName": "Bruno Sobral",
+            "email": "bruno.sobral@colostate.edu",
+            "phone": "970-491-7688",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology"
+    }
+}

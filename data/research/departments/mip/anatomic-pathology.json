@@ -1,0 +1,145 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/anatomic-pathology.json",
+        "modified": "2019 08 29 14:27:31",
+        "records": 12
+    },
+    "members": [
+        {
+            "memberID": 847,
+            "eName": "taboella",
+            "firstName": "Tawfik",
+            "lastName": "Aboellail",
+            "fullName": "Tawfik Aboellail",
+            "email": "tawfik.aboellail@colostate.edu",
+            "phone": "970-297-5126",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 905,
+            "eName": "womack",
+            "firstName": "Gary",
+            "lastName": "Mason",
+            "fullName": "Gary Mason",
+            "email": "gary.l.mason@colostate.edu",
+            "phone": "970-297-5128",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 912,
+            "eName": "tspraker",
+            "firstName": "Terry",
+            "lastName": "Spraker",
+            "fullName": "Terry Spraker",
+            "email": "terry.spraker@colostate.edu",
+            "phone": "970-297-4155",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 931,
+            "eName": "bpodell",
+            "firstName": "Brendan",
+            "lastName": "Podell",
+            "fullName": "Brendan Podell",
+            "email": "brendan.podell@colostate.edu",
+            "phone": "970-491-5746",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 2595,
+            "eName": "cgd132",
+            "firstName": "Colleen",
+            "lastName": "Duncan",
+            "fullName": "Colleen Duncan",
+            "email": "colleen.duncan@colostate.edu",
+            "phone": "970-297-4103",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3182,
+            "eName": "basaraba",
+            "firstName": "Randall",
+            "lastName": "Basaraba",
+            "fullName": "Randall Basaraba",
+            "email": "randall.basaraba@colostate.edu",
+            "phone": "970-491-3313",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3818,
+            "eName": "pas",
+            "firstName": "Paula",
+            "lastName": "Schaffer",
+            "fullName": "Paula Schaffer",
+            "email": "paula.schaffer@colostate.edu",
+            "phone": "970-297-5123",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 4491,
+            "eName": "sushan",
+            "firstName": "Sushan",
+            "lastName": "Han",
+            "fullName": "Sushan Han",
+            "email": "sushan.han@colostate.edu",
+            "phone": "970-297-5125",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 33234,
+            "eName": "danregan",
+            "firstName": "Daniel",
+            "lastName": "Regan",
+            "fullName": "Daniel Regan",
+            "email": "daniel.regan@colostate.edu",
+            "phone": "970-297-4034",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 33575,
+            "eName": "cbfrank",
+            "firstName": "Chad",
+            "lastName": "Frank",
+            "fullName": "Chad Frank",
+            "email": "chad.frank@colostate.edu",
+            "phone": "970-297-5129",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 38824,
+            "eName": "jmunoz",
+            "firstName": "Juan",
+            "lastName": "Munoz Gutierrez",
+            "fullName": "Juan Munoz Gutierrez",
+            "email": "juan.munoz_gutierrez@colostate.edu",
+            "phone": "970-297-5422",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 39105,
+            "eName": "fmagunda",
+            "firstName": "Forgivemore",
+            "lastName": "Magunda",
+            "fullName": "Forgivemore Magunda",
+            "email": "forgivemore.magunda@colostate.edu",
+            "phone": "970-297-3730",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}

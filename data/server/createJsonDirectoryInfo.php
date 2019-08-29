@@ -48,15 +48,6 @@
 
         );
 
-        // filestore metadata
-        $storage[ 'data' ] = array(
-
-            'filestore' => $filestore,
-            'modified'  => date( 'Y m d H:i:s', filemtime( $filestore ) ),
-            'records'   => count( $members ),
-
-        );
-
         // iterate over data
         foreach( $members as $member ) {
 
@@ -199,33 +190,51 @@
             $email = strtolower( $member->EmailAddress );
             $name  = $member->FirstName . ' ' . $member->LastName;
 
-            // push to members array
-            $storage[ 'members' ][] = array(
+            // setup variables
+            if ( strpos( $member->LastName, 'lhr' ) !== false ) {
 
-                'memberID'          => $member->Id,
-                'eName'             => $member->EName,
-                'firstName'         => $member->FirstName,
-                'lastName'          => $member->LastName,
-                'fullName'          => $member->FirstName . ' ' . $member->LastName,
-                'email'             => strtolower( $member->EmailAddress ),
-                'title'             => $member->EmployeeTitle,
-                'memberType'        => $member->EmployeeCategory,
-                'directoryGroupID'  => $directoryGroupId,
-                'directoryGroup'    => $directoryGroupName,
-                'primaryGroupID'    => $primaryGroupId,
-                'multipleGroups'    => $multipleGroups,
-                'groups'            => $memberGroups,
-                'department'        => $department,
-                'phone'             => $phone,
-                'contactInfo'       => $memberContacts,
-                'addressInfo'       => $member->OfficeRoomName . ' ' . $member->OfficeBldgName,
-                // 'addressInfo'       => $member->BusinessAddress1,
-                'address'           => $memberAddress->BusinessAddress1,
-                'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id
+                continue;
 
-            );
+            } else {
+
+                // push to members array
+                $storage[ 'members' ][] = array(
+
+                    'memberID'          => $member->Id,
+                    'eName'             => $member->EName,
+                    'firstName'         => $member->FirstName,
+                    'lastName'          => $member->LastName,
+                    'fullName'          => $member->FirstName . ' ' . $member->LastName,
+                    'email'             => strtolower( $member->EmailAddress ),
+                    'title'             => $member->EmployeeTitle,
+                    'memberType'        => $member->EmployeeCategory,
+                    'directoryGroupID'  => $directoryGroupId,
+                    'directoryGroup'    => $directoryGroupName,
+                    'primaryGroupID'    => $primaryGroupId,
+                    'multipleGroups'    => $multipleGroups,
+                    'groups'            => $memberGroups,
+                    'department'        => $department,
+                    'phone'             => $phone,
+                    'contactInfo'       => $memberContacts,
+                    'addressInfo'       => $member->OfficeRoomName . ' ' . $member->OfficeBldgName,
+                    // 'addressInfo'       => $member->BusinessAddress1,
+                    'address'           => $memberAddress->BusinessAddress1,
+                    'photo'             => 'https://www.cvmbs.colostate.edu/DirectorySearch/Search/MemberPhoto/' . $member->Id
+
+                );
+
+            }
 
         }
+
+        // filestore metadata
+        $storage[ 'data' ] = array(
+
+            'filestore' => $filestore,
+            'modified'  => date( 'Y m d H:i:s', filemtime( $filestore ) ),
+            'records'   => count( $members ),
+
+        );
 
         // departments array
         $storage[ 'departments' ] = array(

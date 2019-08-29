@@ -793,9 +793,10 @@
         // filters
         #directory-filters {
 
-            @include flex-h-c-v-b( false );
+            @include flex-h-e-v-c( false );
 
-            height: 3rem;
+            // height: 3rem;
+            height: 5rem;
 
             border-top: 1px solid transparentize( $app05, 0.825 );
 

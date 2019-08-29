@@ -1,0 +1,141 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/erhs\/radiation-cancer-biology-oncology.json",
+        "modified": "2019 08 29 19:17:11",
+        "records": 11
+    },
+    "members": [
+        {
+            "memberID": 1614,
+            "eName": "slarue",
+            "firstName": "Susan",
+            "lastName": "LaRue",
+            "fullName": "Susan LaRue",
+            "email": "susan.larue@colostate.edu",
+            "phone": "970-297-0334",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 2655,
+            "eName": "epryan",
+            "firstName": "Elizabeth",
+            "lastName": "Ryan",
+            "fullName": "Elizabeth Ryan",
+            "email": "e.p.ryan@colostate.edu",
+            "phone": "970-491-1536",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3483,
+            "eName": "jbedford",
+            "firstName": "Joel",
+            "lastName": "Bedford",
+            "fullName": "Joel Bedford",
+            "email": "joel.bedford@colostate.edu",
+            "phone": "970-491-7492",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3784,
+            "eName": "mweil",
+            "firstName": "Michael",
+            "lastName": "Weil",
+            "fullName": "Michael Weil",
+            "email": "michael.weil@colostate.edu",
+            "phone": "970-491-5902",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3800,
+            "eName": "nickolof",
+            "firstName": "Jac",
+            "lastName": "Nickoloff",
+            "fullName": "Jac Nickoloff",
+            "email": "j.nickoloff@colostate.edu",
+            "phone": "970-491-6674",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3902,
+            "eName": "sbailey",
+            "firstName": "Susan",
+            "lastName": "Bailey",
+            "fullName": "Susan Bailey",
+            "email": "susan.bailey@colostate.edu",
+            "phone": "970-491-2944",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3992,
+            "eName": "tkato",
+            "firstName": "Takamitsu",
+            "lastName": "Kato",
+            "fullName": "Takamitsu Kato",
+            "email": "takamitsu.kato@colostate.edu",
+            "phone": "970-491-1881",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 4104,
+            "eName": "largueso",
+            "firstName": "Juan",
+            "lastName": "Argueso",
+            "fullName": "Juan Argueso",
+            "email": "lucas.argueso@colostate.edu",
+            "phone": "970-491-3681",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 33483,
+            "eName": "tiffanyy",
+            "firstName": "Tiffany",
+            "lastName": "Martin",
+            "fullName": "Tiffany Martin",
+            "email": "tiffany.martin@colostate.edu",
+            "phone": "970-297-4195",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 35110,
+            "eName": "cwiese",
+            "firstName": "Claudia",
+            "lastName": "Wiese",
+            "fullName": "Claudia Wiese",
+            "email": "claudia.wiese@colostate.edu",
+            "phone": "970-491-7618",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 37845,
+            "eName": "mkboss",
+            "firstName": "Mary-Keara",
+            "lastName": "Boss",
+            "fullName": "Mary-Keara Boss",
+            "email": "keara.boss@colostate.edu",
+            "phone": null,
+            "department": "Environmental and Radiological Health Sciences"
+        }
+    ],
+    "topics": {
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}

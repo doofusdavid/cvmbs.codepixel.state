@@ -1,0 +1,77 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/mip\/prion-biology.json",
+        "modified": "2019 08 29 14:17:26",
+        "records": 6
+    },
+    "members": [
+        {
+            "memberID": 3274,
+            "eName": "ckm",
+            "firstName": "Candace",
+            "lastName": "Mathiason",
+            "fullName": "Candace Mathiason",
+            "email": "candace.mathiason@colostate.edu",
+            "phone": "970-491-3975",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3374,
+            "eName": "ehoover",
+            "firstName": "Edward",
+            "lastName": "Hoover",
+            "fullName": "Edward Hoover",
+            "email": "edward.hoover@colostate.edu",
+            "phone": "970-491-7587",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 3787,
+            "eName": "mzabel",
+            "firstName": "Mark",
+            "lastName": "Zabel",
+            "fullName": "Mark Zabel",
+            "email": "mark.zabel@colostate.edu",
+            "phone": "970-491-1455",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 4478,
+            "eName": "gtell2",
+            "firstName": "Glenn",
+            "lastName": "Telling",
+            "fullName": "Glenn Telling",
+            "email": "glenn.telling@colostate.edu",
+            "phone": "970-491-2968",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 33257,
+            "eName": "jbian2",
+            "firstName": "Jifeng",
+            "lastName": "Bian",
+            "fullName": "Jifeng Bian",
+            "email": "jifeng.bian@colostate.edu",
+            "phone": "970-491-5667",
+            "department": "Microbiology, Immunology, and Pathology"
+        },
+        {
+            "memberID": 35242,
+            "eName": "jubuff",
+            "firstName": "Julie",
+            "lastName": "Moreno",
+            "fullName": "Julie Moreno",
+            "email": "julie.moreno@colostate.edu",
+            "phone": "970-491-5410",
+            "department": "Microbiology, Immunology, and Pathology"
+        }
+    ],
+    "topics": {
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology"
+    }
+}

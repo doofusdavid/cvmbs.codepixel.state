@@ -1,0 +1,105 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/erhs\/veterinary-diagnostic-imaging.json",
+        "modified": "2019 08 29 19:17:35",
+        "records": 7
+    },
+    "members": [
+        {
+            "memberID": 1308,
+            "eName": "myra",
+            "firstName": "Myra",
+            "lastName": "Barrett",
+            "fullName": "Myra Barrett",
+            "email": "myra.barrett@colostate.edu",
+            "phone": null,
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 1619,
+            "eName": "amarolf",
+            "firstName": "Angela",
+            "lastName": "Marolf",
+            "fullName": "Angela Marolf",
+            "email": "angela.marolf@colostate.edu",
+            "phone": "970-297-1293",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 2062,
+            "eName": "selberg",
+            "firstName": "Kurt",
+            "lastName": "Selberg",
+            "fullName": "Kurt Selberg",
+            "email": "kurt.selberg@colostate.edu",
+            "phone": "970-297-0350",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3386,
+            "eName": "erandall",
+            "firstName": "Elissa",
+            "lastName": "Randall",
+            "fullName": "Elissa Randall",
+            "email": "elissa.randall@colostate.edu",
+            "phone": "970-297-0318",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3423,
+            "eName": "griffinl",
+            "firstName": "Lynn",
+            "lastName": "Griffin",
+            "fullName": "Lynn Griffin",
+            "email": "lynn.griffin@colostate.edu",
+            "phone": null,
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 37245,
+            "eName": "llang",
+            "firstName": "Linda",
+            "lastName": "Lang",
+            "fullName": "Linda Lang",
+            "email": "linda.gail.lang@colostate.edu",
+            "phone": "970-297-5058",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 39052,
+            "eName": "kawalila",
+            "firstName": "Lukas",
+            "lastName": "Kawalilak",
+            "fullName": "Lukas Kawalilak",
+            "email": "lukas.kawalilak@colostate.edu",
+            "phone": null,
+            "department": "Environmental and Radiological Health Sciences"
+        }
+    ],
+    "topics": {
+        "1": "ERHS",
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "2": "MIP",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology",
+        "3": "BMS",
+        "714": "Cardiovascular Physiology"
+    }
+}

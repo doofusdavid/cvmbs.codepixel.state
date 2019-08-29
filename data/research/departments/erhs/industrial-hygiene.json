@@ -1,0 +1,81 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/erhs\/industrial-hygiene.json",
+        "modified": "2019 08 29 19:16:53",
+        "records": 5
+    },
+    "members": [
+        {
+            "memberID": 3222,
+            "eName": "brazile",
+            "firstName": "William",
+            "lastName": "Brazile",
+            "fullName": "William Brazile",
+            "email": "william.brazile@colostate.edu",
+            "phone": "970-491-4272",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3569,
+            "eName": "jrosey",
+            "firstName": "John",
+            "lastName": "Rosecrance",
+            "fullName": "John Rosecrance",
+            "email": "john.rosecrance@colostate.edu",
+            "phone": "970-491-1405",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3592,
+            "eName": "jwschaef",
+            "firstName": "Joshua",
+            "lastName": "Schaeffer",
+            "fullName": "Joshua Schaeffer",
+            "email": "joshua.schaeffer@colostate.edu",
+            "phone": "970-491-6636",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 3939,
+            "eName": "sjreynol",
+            "firstName": "Stephen",
+            "lastName": "Reynolds",
+            "fullName": "Stephen Reynolds",
+            "email": "stephen.reynolds@colostate.edu",
+            "phone": "970-491-3141",
+            "department": "Environmental and Radiological Health Sciences"
+        },
+        {
+            "memberID": 37274,
+            "eName": "candacet",
+            "firstName": "Su-Jung",
+            "lastName": "Tsai",
+            "fullName": "Su-Jung Tsai",
+            "email": "candace.tsai@colostate.edu",
+            "phone": "970-491-1340",
+            "department": "Environmental and Radiological Health Sciences"
+        }
+    ],
+    "topics": {
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology"
+    }
+}
