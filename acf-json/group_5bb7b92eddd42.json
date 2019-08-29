@@ -283,6 +283,13 @@
                         "operator": "==",
                         "value": "college"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "laboratory"
+                    }
                 ]
             ],
             "wrapper": {
@@ -445,5 +452,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1566240606
+    "modified": 1566858908
 }
