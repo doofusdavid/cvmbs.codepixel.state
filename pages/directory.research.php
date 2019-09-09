@@ -37,6 +37,9 @@
     // get returned data object
     $members = $directory->GetMembersByGroupIdResult->MemberResponse;
 
+    // set global post object
+    global $post;
+
 ?>
 
 <!-- directory -->
@@ -44,6 +47,8 @@
 
     <!-- directory -->
     <div id="directory" class="page-container">
+
+        <?php if ( is_page() && $post->post_parent ) : ?>
 
         <!-- page header -->
         <header class="header">
@@ -62,6 +67,24 @@
 
         </header>
         <!-- END page header -->
+
+        <?php else : ?>
+
+        <!-- page header -->
+        <header class="header">
+
+            <h1>
+
+                research topic directory
+
+            </h1>
+
+        </header>
+        <!-- END page header -->
+
+        <?php endif; ?>
+
+        <?php if ( is_page() && $post->post_parent ) : ?>
 
         <!-- toolbar.DEV -->
         <div id="directory-toolbar" class="toolbar">
@@ -389,6 +412,20 @@
             });
 
         </script>
+
+        <?php else : ?>
+
+        <?php the_content(); ?>
+
+        <!-- menu container -->
+        <div class="research-topic-menu-wrapper">
+
+            <?php research_topic_menu(); ?>
+
+        </div>
+        <!-- END menu container -->
+
+        <?php endif; ?>
 
         <!-- topics menu -->
         <div id="directory-menu" class="reveal research-topic-modal" data-reveal>
