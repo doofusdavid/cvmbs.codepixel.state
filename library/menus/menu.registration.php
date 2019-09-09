@@ -8,7 +8,8 @@
 			'site-menu-panel'       => __( 'Site Main Menu', 'cvmbs' ),
             'footer-menu-left' 	    => __( 'Footer Menu [L]', 'cvmbs' ),
             'footer-menu-center' 	=> __( 'Footer Menu [C]', 'cvmbs' ),
-            'footer-menu-right'     => __( 'Footer Menu [R]', 'cvmbs' )
+            'footer-menu-right'     => __( 'Footer Menu [R]', 'cvmbs' ),
+			'research-topics-menu'  => __( 'Research Topics Menu', 'cvmbs' )
 
 		)
 
@@ -84,6 +85,25 @@
 			'menu' 				=> '',
 			'menu_class' 		=> 'footer-menu right link-list',
 			'theme_location'  	=> 'footer-menu-right',
+			'before' 		  	=> '',
+			'after' 			=> '',
+			'link_before' 		=> '',
+			'link_after' 		=> '',
+			'fallback_cb' 		=> false,
+
+		));
+
+	}
+
+	function research_topic_menu() {
+
+		wp_nav_menu( array(
+
+			'container'		  	=> false,
+			'container_class' 	=> '',
+			'menu' 				=> '',
+			'menu_class' 		=> 'research-topic-menu',
+			'theme_location'  	=> 'research-topics-menu',
 			'before' 		  	=> '',
 			'after' 			=> '',
 			'link_before' 		=> '',

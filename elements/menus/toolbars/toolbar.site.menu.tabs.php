@@ -1,7 +1,15 @@
 <?php
 
     // test for site type
-    $site_type = get_field( 'site_type', 'options' ); ?>
+    $site_type = get_field( 'site_type', 'options' );
+
+    // set global post object
+    global $post;
+
+    // test for page slug
+    $directory_page = $post->post_name;
+
+?>
 
 <!-- site.toolbar -->
 <ul id="site-menu-toolbar" class="tabs" data-tabs>

@@ -1,0 +1,159 @@
+{
+    "data": {
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/bms\/neurobiology.json",
+        "modified": "2019 08 29 21:25:19",
+        "records": 12
+    },
+    "members": [
+        {
+            "memberID": 3204,
+            "eName": "bhanda",
+            "firstName": "Robert",
+            "lastName": "Handa",
+            "fullName": "Robert Handa",
+            "email": "bob.handa@colostate.edu",
+            "phone": "970-491-5388",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3437,
+            "eName": "hentgess",
+            "firstName": "Shane",
+            "lastName": "Hentges",
+            "fullName": "Shane Hentges",
+            "email": "shane.hentges@colostate.edu",
+            "phone": "970-491-5086",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3589,
+            "eName": "jwalrond",
+            "firstName": "John",
+            "lastName": "Walrond",
+            "fullName": "John Walrond",
+            "email": "john.walrond@colostate.edu",
+            "phone": "970-491-5588",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3860,
+            "eName": "reist",
+            "firstName": "Noreen",
+            "lastName": "Reist",
+            "fullName": "Noreen Reist",
+            "email": "noreen.reist@colostate.edu",
+            "phone": "970-491-5882",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3889,
+            "eName": "rwhalen",
+            "firstName": "Lawrence",
+            "lastName": "Whalen",
+            "fullName": "Lawrence Whalen",
+            "email": "lawrence.whalen@colostate.edu",
+            "phone": "970-491-5611",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3968,
+            "eName": "stsunoda",
+            "firstName": "Susan",
+            "lastName": "Tsunoda",
+            "fullName": "Susan Tsunoda",
+            "email": "susan.tsunoda@colostate.edu",
+            "phone": "970-491-3665",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 4002,
+            "eName": "tobets",
+            "firstName": "Stuart",
+            "lastName": "Tobet",
+            "fullName": "Stuart Tobet",
+            "email": "stuart.tobet@colostate.edu",
+            "phone": "970-491-1672",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 33324,
+            "eName": "kiviejr",
+            "firstName": "Kenneth",
+            "lastName": "Ivie Jr",
+            "fullName": "Kenneth Ivie Jr",
+            "email": "kenneth.ivie@colostate.edu",
+            "phone": "970-491-6470",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 36860,
+            "eName": "quirkpl",
+            "firstName": "Phillip",
+            "lastName": "Quirk",
+            "fullName": "Phillip Quirk",
+            "email": "phillip.quirk@colostate.edu",
+            "phone": "970-491-2551",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 37729,
+            "eName": "bpmyers",
+            "firstName": "Brent",
+            "lastName": "Myers",
+            "fullName": "Brent Myers",
+            "email": "brent.myers@colostate.edu",
+            "phone": "970-491-2533",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 37759,
+            "eName": "sunnykim",
+            "firstName": "Seonil",
+            "lastName": "Kim",
+            "fullName": "Seonil Kim",
+            "email": "seonil.kim@colostate.edu",
+            "phone": "970-491-2396",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 37806,
+            "eName": "fhorndli",
+            "firstName": "Frederic",
+            "lastName": "Hoerndli",
+            "fullName": "Frederic Hoerndli",
+            "email": "frederic.hoerndli@colostate.edu",
+            "phone": "970-491-7768",
+            "department": "Biomedical Sciences"
+        }
+    ],
+    "topics": {
+        "618": "================ ERHS ================",
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "683": "================ MIP ================",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology",
+        "713": "================ BMS ================",
+        "714": "Cardiovascular Physiology",
+        "715": "Reproductive Physiology",
+        "716": "Neurobiology",
+        "717": "Neuroendocrinology",
+        "718": "Pedagogy"
+    }
+}

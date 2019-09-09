@@ -3,6 +3,12 @@
     // test for site type
     $site_type = get_field( 'site_type', 'options' );
 
+    // set global post object
+    global $post;
+
+    // test for page slug
+    $directory_page = $post->post_name;
+
     // menu panel placeholder fields
     $events_panel    = get_field( 'events_menu_panel_content', 'options' );
     $resources_panel = get_field( 'resources_menu_panel_content', 'options' );

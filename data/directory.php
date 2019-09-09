@@ -192,6 +192,7 @@
 
             // setup variables
             if ( strpos( $member->LastName, 'lhr' ) !== false ) {
+            // if ( strpos( $member->LastName, 'lhr' ) !== false || strpos( $member->LastName, 'Ebel' ) !== false ) {
 
                 continue;
 
@@ -230,6 +231,7 @@
         // filestore metadata
         $storage[ 'data' ] = array(
 
+            'dataset'   => 'COLLEGE DIRECTORY',
             'filestore' => $filestore,
             'modified'  => date( 'Y m d H:i:s', filemtime( $filestore ) ),
             'records'   => count( $members )

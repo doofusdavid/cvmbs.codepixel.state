@@ -8,28 +8,34 @@
 
 <?php
 
-    // determine directory data source
-    $site_type = get_field( 'site_type', 'options' );
+    // hit database for ID and pass through
+    function get_research_topic_ID ( $topic_ID ) {
 
-    // set slug variable for operators
-    global $post;
-    $page_slug = $post->post_name;
+        // get topicID
+        $topic_ID = get_field( 'research_topic_id' );
 
-    // get site path
-    $siteinfo = get_blog_details();
+        return $topic_ID;
 
-    // parse URL for site path
-    $siteurl = str_replace( '/', '', $siteinfo->path );
+    }
 
-    // create json store
-    $filestore = $_SERVER[ 'DOCUMENT_ROOT' ] . '/wp-content/themes/cvmbsPress/data/research/departments/' . $siteurl . '/' . $page_slug . '.json';
+    // set WSDL service URL
+    $serviceURL = 'http://www.cvmbs.colostate.edu/directoryservice/DirectoryService.svc?wsdl';
 
-    // convert store to data
-    $getdata     = file_get_contents( $filestore );
-    $membersdata = json_decode( $getdata );
+    // instantiate DirectoryService
+    $service = new SoapClient( $serviceURL );
 
-    // setup data object
-    $members = $membersdata->members;
+    // output list of functions
+    $response = $service->__getFunctions();
+
+    // output magic
+    $directory = $service->GetMembersByGroupId(
+
+        array( 'id' => get_research_topic_ID( $topic_ID ) )
+
+    );
+
+    // get returned data object
+    $members = $directory->GetMembersByGroupIdResult->MemberResponse;
 
 ?>
 
@@ -47,6 +53,12 @@
                 <?php echo the_title() . ' faculty'; ?>
 
             </h1>
+
+            <button id="research-topic-menu-button" class="open-modal-button" data-open="directory-menu">
+
+                research topics
+
+            </button>
 
         </header>
         <!-- END page header -->
@@ -117,23 +129,147 @@
 
                 <?php
 
-                    // loop that data
                     foreach ( $members as $member ) {
 
-                        $query      = $member->memberID;
-                        $ename      = $member->eName;
-                        $lastName   = $member->lastName;
-                        $firstName  = $member->firstName;
-                        $tableName  = $lastName . ', ' . $firstName;
-                        $eMail      = strtolower( $member->email );
-                        $phone      = $member->phone;
-                        $department = $member->department;
+                        // setup ID for additional WSDL queries
+                        $memberID = $member->Id;
 
-                        $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $query . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                        // get department groups
+                        $groups = $service->GetGroupsByMemberId( array( 'memberId' => $memberID ) );
+
+                        // get contact info
+                        $contacts = $service->GetMemberContactsByMemberId( array( 'id' => $memberID ) );
+
+                        // get returned data object(s)
+                        $memberGroups   = $groups->GetGroupsByMemberIdResult->GroupResponse;
+                        $memberContacts = $contacts->GetMemberContactsByMemberIdResult->MemberContactResponse;
+
+                        // test for department group data type
+                        if ( is_array( $memberGroups ) ) {
+
+                            $multipleGroups = true;
+
+                            foreach ( $memberGroups as $memberGroup ) {
+
+                                $departmentID = $memberGroup->IsPrimaryGroup;
+
+                                if ( $departmentID ) {
+
+                                    $department     = $memberGroup->GroupFriendlyName;
+                                    $primaryGroupId = $memberGroup->Id;
+
+                                }
+
+                            }
+
+                        } else {
+
+                            $multipleGroups = false;
+
+                            $department     = $memberGroups->GroupFriendlyName;
+                            $primaryGroupId = $memberGroups->Id;
+
+                        }
+
+                        // test for contact info data type
+                        if ( is_array( $memberContacts ) ) {
+
+                            $phone = $memberContacts[0]->PhoneNumber;
+
+                        } else {
+
+                            $phone = $memberContacts->PhoneNumber;
+
+                        }
+
+                        // setup department sorting
+                        switch ( $primaryGroupId ) {
+
+                            case 203 :
+                            case 210 :
+
+                                $directoryGroupId   = 1001;
+                                $directoryGroupName = 'College Office';
+                                break;
+
+                            case 135 :
+                            case 140 :
+                            case 177 :
+
+                                $directoryGroupId   = 1002;
+                                $directoryGroupName = 'Clinical Sciences';
+                                break;
+
+                            case 207 :
+
+                                $directoryGroupId   = 1003;
+                                $directoryGroupName = 'Biomedical Sciences';
+                                break;
+
+                            case 209 :
+                            case 205 :
+
+                                $directoryGroupId   = 1004;
+                                $directoryGroupName = 'Microbiology, Immunology, and Pathology';
+                                break;
+
+                            case 208 :
+                            case 215 :
+
+                                $directoryGroupId   = 1005;
+                                $directoryGroupName = 'Environmental and Radiological Health Sciences';
+                                break;
+
+                            case 134 :
+
+                                $directoryGroupId   = 1006;
+                                $directoryGroupName = 'Veterinary Diagnostic Laboratory';
+                                break;
+
+                            case 136 :
+                            case 139 :
+                            case 176 :
+                            case 182 :
+                            case 188 :
+                            case 193 :
+
+                                $directoryGroupId   = 1007;
+                                $directoryGroupName = 'Veterinary Teaching Hospital';
+                                break;
+
+                            case 674 :
+                            case 539 :
+
+                                $directoryGroupId   = 1008;
+                                $directoryGroupName = 'Center for Environmental Medicine';
+                                break;
+
+                            case 206 :
+
+                                $directoryGroupId   = 1009;
+                                $directoryGroupName = 'Molecular, Cellular, and Integrative Neurosciences';
+                                break;
+
+                            default :
+
+                                $directoryGroupId   = 1010;
+                                $directoryGroupName = 'undefined';
+
+                        }
+
+                        // setup variables
+                        $LastName   = $member->LastName;
+                        $FirstName  = $member->FirstName;
+                        $tableName  = $LastName . ', ' . $FirstName;
+                        $eMail      = strtolower( $member->EmailAddress );
+                        // $phone      = $phone;
+                        $department = $directoryGroupName;
+
+                        $records .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $memberID . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
 
                     }
 
-                    echo $results;
+                    echo $records;
 
                 ?>
 
@@ -158,6 +294,12 @@
 
         </div>
         <!-- END info -->
+
+        <pre class="developer hide">
+
+            <?php print_r( $members ); ?>
+
+        </pre>
 
         <!-- Data Tables -->
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
@@ -247,6 +389,22 @@
             });
 
         </script>
+
+        <!-- topics menu -->
+        <div id="directory-menu" class="reveal research-topic-modal" data-reveal>
+
+            <!-- header -->
+            <header>
+
+                faculty research topics
+
+            </header>
+            <!-- END header -->
+
+            <?php research_topic_menu(); ?>
+
+        </div>
+        <!-- END topics menu -->
 
     </div>
     <!-- END directory -->

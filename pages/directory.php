@@ -85,32 +85,18 @@
 
             </h1>
 
+            <?php if ( $site_type == 'college' ) : ?>
+
+            <button id="directory-menu-button" class="open-modal-button" data-open="directory-menu">
+
+                directory filters
+
+            </button>
+
+            <?php endif; ?>
+
         </header>
         <!-- END page header -->
-
-        <?php if ( $site_type == 'college' ) : ?>
-
-        <!-- filters -->
-        <div id="directory-filters" class="toolbar">
-
-            <span class="filter-label">generate a list by member type</span>
-
-            <a class="filter-link" href="/directory/group/faculty">faculty</a>
-
-            <a class="filter-link" href="/directory/group/staff">staff</a>
-
-            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
-
-            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
-
-            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
-
-            <a class="filter-link" href="/directory/group/associates">associates</a>
-
-        </div>
-        <!-- END filters -->
-
-        <?php endif; ?>
 
         <!-- toolbar.DEV -->
         <div id="directory-toolbar" class="toolbar">
@@ -338,6 +324,38 @@
             });
 
         </script>
+
+        <?php if ( $site_type == 'college' ) : ?>
+
+        <!-- directory filter menu -->
+        <div id="directory-menu" class="reveal directory-filter-modal" data-reveal>
+
+            <!-- header -->
+            <header>
+
+                college directory filters
+
+            </header>
+            <!-- END header -->
+
+            <?php research_topic_menu(); ?>
+
+            <a class="filter-link" href="/directory/group/faculty">faculty</a>
+
+            <a class="filter-link" href="/directory/group/staff">staff</a>
+
+            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
+
+            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
+
+            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
+
+            <a class="filter-link" href="/directory/group/associates">associates</a>
+
+        </div>
+        <!-- END directory filter menu -->
+
+        <?php endif; ?>
 
     </div>
     <!-- END directory -->

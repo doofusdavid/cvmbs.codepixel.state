@@ -453,7 +453,7 @@
         <!-- END listing -->
 
         <!-- output -->
-        <div class="developer ">
+        <div class="developer hide">
 
             <pre>
 

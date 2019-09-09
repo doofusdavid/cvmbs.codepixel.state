@@ -214,6 +214,7 @@
         // filestore metadata
         $storage[ 'data' ] = array(
 
+            'dataset'   => 'RESEARCH TOPIC DIRECTORY',
             'filestore' => $filestore,
             'modified'  => date( 'Y m d H:i:s', filemtime( $filestore ) ),
             'records'   => count( $members )

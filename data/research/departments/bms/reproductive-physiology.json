@@ -1,0 +1,130 @@
+{
+    "data": {
+        "dataset": "RESEARCH TOPIC DIRECTORY",
+        "filestore": "\/var\/www\/html\/wp-content\/themes\/cvmbsPress\/data\/research\/departments\/bms\/reproductive-physiology.json",
+        "modified": "2019 08 30 22:23:52",
+        "records": 9
+    },
+    "members": [
+        {
+            "memberID": 3204,
+            "eName": "bhanda",
+            "firstName": "Robert",
+            "lastName": "Handa",
+            "fullName": "Robert Handa",
+            "email": "bob.handa@colostate.edu",
+            "phone": "970-491-5388",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3416,
+            "eName": "gjbouma",
+            "firstName": "Gerrit",
+            "lastName": "Bouma",
+            "fullName": "Gerrit Bouma",
+            "email": "gerrit.bouma@colostate.edu",
+            "phone": "970-491-8738",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3425,
+            "eName": "gseidel",
+            "firstName": "George",
+            "lastName": "Seidel Jr",
+            "fullName": "George Seidel Jr",
+            "email": "george.seidel@colostate.edu",
+            "phone": "970-491-5287",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3481,
+            "eName": "jbarfiel",
+            "firstName": "Jennifer",
+            "lastName": "Barfield",
+            "fullName": "Jennifer Barfield",
+            "email": "jennifer.barfield@colostate.edu",
+            "phone": "970-491-8934",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3844,
+            "eName": "qwinger",
+            "firstName": "Quinton",
+            "lastName": "Winger",
+            "fullName": "Quinton Winger",
+            "email": "quinton.winger@colostate.edu",
+            "phone": "970-491-7842",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3848,
+            "eName": "ranthony",
+            "firstName": "Russell",
+            "lastName": "Anthony",
+            "fullName": "Russell Anthony",
+            "email": "russ.anthony@colostate.edu",
+            "phone": "970-491-2586",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3849,
+            "eName": "rao",
+            "firstName": "D N Rao",
+            "lastName": "Veeramachaneni",
+            "fullName": "D N Rao Veeramachaneni",
+            "email": "d_n_rao.veeramachaneni@colostate.edu",
+            "phone": "970-491-1769",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3851,
+            "eName": "rbowen",
+            "firstName": "Richard",
+            "lastName": "Bowen",
+            "fullName": "Richard Bowen",
+            "email": "richard.bowen@colostate.edu",
+            "phone": "970-491-5768",
+            "department": "Biomedical Sciences"
+        },
+        {
+            "memberID": 3986,
+            "eName": "thansen",
+            "firstName": "Thomas",
+            "lastName": "Hansen",
+            "fullName": "Thomas Hansen",
+            "email": "thomas.hansen@colostate.edu",
+            "phone": "970-491-5621",
+            "department": "Biomedical Sciences"
+        }
+    ],
+    "topics": {
+        "618": "================ ERHS ================",
+        "619": "Epidemiology",
+        "620": "Health Physics",
+        "621": "Industrial Hygiene",
+        "622": "Radiation Cancer Biology & Oncology",
+        "623": "Toxicology",
+        "624": "Veterinary Diagnostic Imaging",
+        "683": "================ MIP ================",
+        "684": "Anatomic Pathology",
+        "686": "Bacteriology",
+        "687": "Cancer Biology",
+        "688": "Clinical Pathology",
+        "689": "Computational Biology",
+        "690": "Diagnostics",
+        "691": "Immunology",
+        "692": "Parasitology",
+        "693": "Pedagogy",
+        "694": "Prion Biology",
+        "695": "Biosafety",
+        "696": "RNA Biology",
+        "697": "Vector Biology",
+        "698": "Virology",
+        "713": "================ BMS ================",
+        "714": "Cardiovascular Physiology",
+        "715": "Reproductive Physiology",
+        "716": "Neurobiology",
+        "717": "Neuroendocrinology",
+        "718": "Pedagogy"
+    }
+}
