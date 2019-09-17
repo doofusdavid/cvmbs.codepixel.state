@@ -78,7 +78,7 @@
         <!-- .site-identifier -->
         <div class="site-identifier identifier--college">
 
-            <a href="<?php echo esc_url( home_url( '../' ) ); ?>" class="identifier-link"><?php echo $college; ?></a>
+            <a href="https://vetmedbiosci.colostate.edu" class="identifier-link"><?php echo $college; ?></a>
 
         </div>
         <!-- END .site-identifier -->

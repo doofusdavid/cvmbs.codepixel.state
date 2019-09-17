@@ -36,6 +36,7 @@
         h2 {
 
             margin: 0 0 2rem 0;
+            // margin: 0 0 0 0;
 
             @include typo( 1.75rem, auto );
 
@@ -47,7 +48,7 @@
             // item
             &__grid-item {
 
-                margin: 0 0 0 0;
+                // margin: 0 0 0 0;
 
                 // mobile
                 @include breakpoint ( small only ) {
