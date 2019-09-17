@@ -112,7 +112,7 @@
         }
 
         // menu open class
-        &.site-menu-open {
+        &.site-menu-is-open {
 
             @include fill( $nite, 0.000 );
 
@@ -122,8 +122,8 @@
 
             }
 
-            // -webkit-filter: blur( 8px );
-                    // filter: blur( 8px );
+            -webkit-filter: blur( 16px );
+                    filter: blur( 16px );
 
             transition: all 0ms linear 0ms;
 

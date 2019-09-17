@@ -71,6 +71,9 @@ export var menusFX = {
             // trap focus
             // Foundation.Keyboard.trapFocus( menu );
 
+            // generate background contrast w/ blur
+            site.ui.layout.toggleClass( 'site-menu-is-open' );
+
             // toggle menu open state for link background images
             $('#global-menu-list .link-artwork').addClass( 'loaded' );
 
@@ -113,6 +116,9 @@ export var menusFX = {
 
             // release focus
             // Foundation.Keyboard.releaseFocus( menu );
+
+            // generate background contrast w/ blur
+            site.ui.layout.toggleClass( 'site-menu-is-open' );
 
             // test viewport size
             if ( mediaQ == 'medium' || mediaQ == 'large' || mediaQ == 'xlarge' || mediaQ == 'xxlarge' ) {

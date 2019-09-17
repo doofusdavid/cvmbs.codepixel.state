@@ -24,6 +24,9 @@
     // lazyload
     import LazyLoad from 'vanilla-lazyload';
 
+    // datatables
+    import DataTable from 'datatables.net';
+
     // slick.js
     require( 'slick-carousel' );
     import slick from 'slick-carousel';
@@ -169,6 +172,9 @@
         // track focus
         // trackFocus();
 
+        // datatables
+        renderDirectory();
+
         // lazyload
         var lazyLoadFX = new LazyLoad({
 
@@ -209,24 +215,128 @@
 
     });
 
-    // menu variables
-    var globalnav = $('#global-menu-link');
-    var localmenu = $('#menu-department-menu, #menu-dvm-menu');
+// ================================================================================
+// END :: initialize
+// ================================================================================
 
-    // test for local menu
-    if ( localmenu.length > 0 ) {
 
-        // append global menu link
-        $( globalnav ).appendTo( $( localmenu ) );
 
-    } else {
+// ================================================================================
+// START :: initialize
+// ================================================================================
 
-        globalnav.remove();
+
+
+// ================================================================================
+// END :: initialize
+// ================================================================================
+
+
+
+// ================================================================================
+// START :: Data Tables
+// ================================================================================
+
+    // college directory
+    function renderDirectory() {
+
+        // alphabet search
+        var _alphabetSearch = '';
+
+        // push search settings to app
+        $.fn.dataTable.ext.search.push( function ( settings, searchData ) {
+
+            if ( ! _alphabetSearch ) {
+
+                return true;
+
+            }
+
+            if ( searchData[0].charAt(0) === _alphabetSearch ) {
+
+                return true;
+
+            }
+
+            return false;
+
+        });
+
+        // main directory view(s) vars + initialization
+        var controlphabet = $('#directory-alphabet');
+        var controlfields = $('#directory-fields');
+        var directoryinfo = $('#directory-info');
+        var controlpages  = $('#directory-controls');
+        var table         = $('.directory').DataTable( {
+
+            'order'    : [[ 0, 'asc' ]],
+            stateSave  : true,
+            responsive : true
+
+        });
+
+        // test for menu location
+        if ( $(table).is( '.menu-directory' ) ) {
+
+            console.log( 'ball so hard' );
+
+        }
+
+        // menu directory view vars
+        var menucontrolfields  = $('#menu-directory-views');
+        var menudirectoryinfo  = $('#menu-directory-info');
+        var menucontrolpages   = $('#menu-directory-controls');
+
+        // alphabet search
+        var alphabet = $('<div class="alphabet"/>').append( '<span class="alphabet-label">Last Name: </span>' );
+
+        // add clear action to alphabet
+        $('<span class="alphabet-control clear active"/>').data( 'letter', '' ).html( 'None' ).appendTo( alphabet );
+
+        // increment
+        for ( var i = 0 ; i < 26 ; i++ ) {
+
+            var letter = String.fromCharCode( 65 + i );
+
+            $('<span class="alphabet-control letter"/>')
+                .data( 'letter', letter )
+                .html( letter )
+                .appendTo( alphabet );
+
+        }
+
+        // prepend to page content container
+        alphabet.appendTo( controlphabet );
+
+        // rearrange DOM for main directory view(s)
+        $('#directory-records_length').appendTo( controlfields );
+        $('#directory-records_filter').appendTo( controlfields );
+        $('#directory-records_info').appendTo( directoryinfo );
+        $('#directory-records_paginate').appendTo( controlpages );
+
+        // rearrange DOM for main directory view(s)
+        $('#menu-directory-records_filter').appendTo( menucontrolfields );
+        $('#menu-directory-records_length').appendTo( menucontrolfields );
+        $('#menu-directory-records_paginate').appendTo( menucontrolpages );
+        $('#menu-directory-records_info').appendTo( menucontrolpages );
+
+        // toggle classes
+        alphabet.on( 'click', 'span', function () {
+
+            alphabet.find( '.active' ).removeClass( 'active' );
+
+            $(this).addClass( 'active' );
+
+            _alphabetSearch = $(this).data('letter');
+
+            table.draw();
+
+        } );
 
     }
 
 // ================================================================================
-// END :: initialize
+// START :: Data Tables
 // ================================================================================
 
 

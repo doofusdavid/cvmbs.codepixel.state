@@ -38,5 +38,13 @@
     </li>
     <!-- END list item -->
 
+    <!-- list item -->
+    <li class="tabs-title">
+
+        <?php get_template_part( 'elements/menus/buttons/button.directory.tabs' ); ?>
+
+    </li>
+    <!-- END list item -->
+
 </ul>
 <!-- END site.toolbar -->

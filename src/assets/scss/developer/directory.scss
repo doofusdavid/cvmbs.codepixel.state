@@ -348,7 +348,7 @@
         }
 
         // table
-        #directory-records {
+        .directory {
 
             width: 100% !important;
 
@@ -744,7 +744,7 @@
         }
 
         // control directory view(s)
-        #directory-records_length {
+        .dataTables_length {
 
             @include flex-h-j-v-c( true );
 
@@ -801,7 +801,7 @@
         }
 
         // control directory view(s)
-        #directory-records_filter {
+        .dataTables_filter {
 
             // label
             label {
@@ -830,7 +830,7 @@
         }
 
         // directory info
-        #directory-records_info {
+        .dataTables_info {
 
             @include flex-h-c-v-c( false );
 
@@ -858,7 +858,7 @@
             }
 
             // pagination controls
-            #directory-records_paginate {
+            .dataTables_paginate {
 
                 @include flex-h-c-v-c( false );
 
@@ -872,8 +872,8 @@
                 }
 
                 // directions
-                #directory-records_previous,
-                #directory-records_next {
+                .dataTables_previous,
+                .dataTables_next {
 
                     // disabled
                     &.disabled {
@@ -1290,7 +1290,11 @@
                 height: 2rem;
                 padding: 0 0 0 0;
 
+                @include font( $industry, 0.875rem, 700 );
+
                 text-decoration: none;
+
+                @include text( capitalize );
 
                 @include color( white, 0.245 );
 
@@ -1309,6 +1313,8 @@
                     @include fill( white, 0.965 );
 
                 }
+
+
 
             }
 
@@ -1383,7 +1389,11 @@
                         height: 2rem;
                         padding: 0 0 0 0;
 
+                        @include font( $industry, 0.875rem, 700 );
+
                         text-decoration: none;
+
+                        @include text( capitalize );
 
                         @include color( white, 0.245 );
 

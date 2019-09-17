@@ -82,5 +82,7 @@
 
     <?php get_template_part( 'elements/menus/panels/panel.events.tabs' ); ?>
 
+    <?php get_template_part( 'elements/menus/panels/panel.directory.tabs' ); ?>
+
 </div>
 <!-- END wrapper -->

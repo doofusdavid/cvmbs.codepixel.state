@@ -79,8 +79,16 @@
         <!-- panel content -->
         <div class="panel-content">
 
+            <!-- directory views -->
+            <div id="menu-directory-views" class="toolbar-control-group">
+
+
+
+            </div>
+            <!-- END directory views -->
+
             <!-- table -->
-            <table id="directory-records" class="sloaded" width="100%">
+            <table id="menu-directory-records" class="directory menu-directory" width="100%">
 
                 <!-- sortable header -->
                 <thead>
@@ -168,7 +176,7 @@
             <!-- END table -->
 
             <!-- pagination -->
-            <div id="directory-controls" class="toolbar">
+            <div id="menu-directory-controls" class="toolbar">
 
 
 
@@ -176,129 +184,15 @@
             <!-- END pagination -->
 
             <!-- info -->
-            <div id="directory-info" class="toolbar">
+            <div id="menu-directory-info" class="toolbar">
 
 
 
             </div>
             <!-- END info -->
 
-            <!-- toolbar.DEV -->
-            <div id="directory-toolbar" class="toolbar">
-
-                <!-- alphabet -->
-                <div id="directory-alphabet" class="toolbar-control-group">
-
-
-
-                </div>
-                <!-- END alphabet -->
-
-                <!-- fiels -->
-                <div id="directory-fields" class="toolbar-control-group">
-
-
-
-                </div>
-                <!-- END fiels -->
-
-            </div>
-            <!-- END toolbar.DEV -->
-
         </div>
         <!-- END panel content -->
-
-        <!-- Data Tables -->
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
-        <script type="text/javascript">
-
-            // alphabet search
-            var _alphabetSearch = '';
-
-            // push search settings to app
-            $.fn.dataTable.ext.search.push( function ( settings, searchData ) {
-
-                if ( ! _alphabetSearch ) {
-
-                    return true;
-
-                }
-
-                if ( searchData[0].charAt(0) === _alphabetSearch ) {
-
-                    return true;
-
-                }
-
-                return false;
-
-            });
-
-            // ready
-            $(document).ready(function(){
-
-                // initialization
-                var controlphabet = $('#directory-alphabet');
-                var controlfields = $('#directory-fields');
-                var directoryinfo = $('#directory-info');
-                var controlpages  = $('#directory-controls');
-                var table         = $('#directory-records').DataTable( {
-
-                    'order'          : [[ 0, 'asc' ]],
-                    stateSave        : true,
-                    responsive       : true,
-                    // 'lengthChange'   : false,
-                    // 'lengthMenu'     : [ 10 ],
-                    'pageLength'     : 12
-
-                });
-
-                // alphabet search
-                var alphabet = $('<div class="alphabet"/>').append( '<span class="alphabet-label">Last Name: </span>' );
-
-                // add clear action to alphabet
-                $('<span class="alphabet-control clear active"/>')
-                    .data( 'letter', '' )
-                    .html( 'None' )
-                    .appendTo( alphabet );
-
-                // increment
-                for ( var i = 0 ; i < 26 ; i++ ) {
-
-                    var letter = String.fromCharCode( 65 + i );
-
-                    $('<span class="alphabet-control letter"/>')
-                        .data( 'letter', letter )
-                        .html( letter )
-                        .appendTo( alphabet );
-
-                }
-
-                // prepend to page content container
-                // alphabet.insertBefore( table.table().container() );
-                alphabet.appendTo( controlphabet );
-
-                $('#directory-records_length').appendTo( controlfields );
-                $('#directory-records_filter').appendTo( controlfields );
-                $('#directory-records_info').appendTo( directoryinfo );
-                $('#directory-records_paginate').appendTo( controlpages );
-
-                // toggle classes
-                alphabet.on( 'click', 'span', function () {
-
-                    alphabet.find( '.active' ).removeClass( 'active' );
-
-                    $(this).addClass( 'active' );
-
-                    _alphabetSearch = $(this).data('letter');
-
-                    table.draw();
-
-                } );
-
-            });
-
-        </script>
 
     </div>
     <!-- END panel interior -->
