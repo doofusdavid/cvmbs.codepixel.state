@@ -55,6 +55,13 @@
 
             overflow: hidden;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 4rem 0 0 0;
+
+            }
+
             // search form
             .gsc-search-box-tools {
 
@@ -71,10 +78,30 @@
 
                 @include fill( $cvnavy, 0.345 );
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    height: 4rem;
+
+                }
+
                 // input container
                 td.gsc-input {
 
                     padding: 1rem 0 1rem 1rem;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        // padding:
+
+                    }
+
+                }
+
+                table.gsc-search-box {
+
+                    margin: 0;
 
                 }
 
@@ -87,11 +114,27 @@
 
                     @include fill( white, 1.000 );
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: 2rem;
+                        padding: 0 0 0 0;
+
+                    }
+
                     // input container
                     .gsib_a {
 
                         height: 3rem;
                         padding: 0 0 0 0;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            width: 100%;
+                            height: 2rem;
+
+                        }
 
                     }
 
@@ -124,6 +167,14 @@
 
                     @include color( white, 0.000 );
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: 2rem !important;
+                        padding: 0 0 0 0 !important;
+
+                    }
+
                 }
 
                 // form container
@@ -134,6 +185,13 @@
 
                     @include fill( white, 0.965 );
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: 2rem;
+
+                    }
+
                 }
 
                 // button table cell
@@ -141,6 +199,13 @@
 
                     width: 4rem;
                     padding: 1rem 1rem 1rem 0;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 3rem;
+
+                    }
 
                 }
 
@@ -159,6 +224,14 @@
                     @include fill( $blue, 0.365 );
 
                     transition: all 220ms linear 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 2rem;
+                        height: 2rem;
+
+                    }
 
                     // hover state
                     &:hover {
