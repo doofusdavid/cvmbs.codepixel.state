@@ -26,7 +26,7 @@
         // slide
         .ui-slide {
 
-            position: absolute;
+            // position: absolute;
 
             top: 0;
             right: 0;
@@ -39,12 +39,15 @@
 
             display: flex !important;
 
+            min-height: 50vh;
             margin: 0 0 0 0;
 
             // mobile
             @include breakpoint ( small only ) {
 
                 @include flex-v-b-h-st( false );
+
+                min-height: 100vh;
 
             }
 
@@ -101,7 +104,7 @@
                 flex-basis: 50%;
 
                 min-height: 100%;
-                padding: 0 5rem 5rem 5rem;
+                padding: 5rem 5rem 5rem 5rem;
 
                 @include fill( $nite, 0.115 );
 
@@ -187,7 +190,31 @@
 
                 @include fill( white, 0.925 );
 
+                background: {
+
+                    repeat: no-repeat;
+                    size: 1rem 1rem;
+                    position: center center;
+
+                }
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+                // facebook
                 &.facebook {
+
+                    background: {
+
+                        image: url(../img/icons/social/facebook.svg);
+
+                    }
 
                     &:hover,
                     &:focus,
@@ -199,7 +226,83 @@
 
                 }
 
+                // instagram
+                &.instagram {
+
+                    position: relative;
+
+                    background: {
+
+                        image: url(../img/icons/social/instagram_new.svg);
+
+                    }
+
+                    // before
+                    &:before {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: -1;
+
+                        background: {
+
+                            image: url(../img/icons/social/instagram.gradient.png);
+                            repeat: no-repeat;
+                            size: 2rem 2rem;
+
+                        }
+
+                        opacity: 0.000;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        background: {
+
+                            image:
+
+                                url(../img/icons/social/instagram_new.svg),
+                                url(../img/icons/social/instagram.gradient.png)
+
+                            ;
+
+                            size: 1rem 1rem, 2rem 2rem;
+
+                        }
+
+                        // before
+                        &:before {
+
+                            opacity: 1.000;
+
+                            transition: all 220ms linear 0ms;
+
+                        }
+
+                    }
+
+                }
+
+                // twitter
                 &.twitter {
+
+                    background: {
+
+                        image: url(../img/icons/social/twitter.svg);
+
+                    }
 
                     &:hover,
                     &:focus,
@@ -211,7 +314,33 @@
 
                 }
 
+                // youtube
+                &.youtube {
+
+                    background: {
+
+                        image: url(../img/icons/social/youtube.svg);
+
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+
+                        @include fill( $youtube, 0.085 );
+
+                    }
+
+                }
+
+                // linkedin
                 &.linkedin {
+
+                    background: {
+
+                        image: url(../img/icons/social/linkedin.svg);
+
+                    }
 
                     &:hover,
                     &:focus,
