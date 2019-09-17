@@ -100,30 +100,18 @@
 
             </h1>
 
+            <?php if ( $site_type == 'college' ) : ?>
+
+            <button id="directory-menu-button" class="open-modal-button" data-open="directory-menu">
+
+                directory filters
+
+            </button>
+
+            <?php endif; ?>
+
         </header>
         <!-- END page header -->
-
-        <!-- filters -->
-        <div id="directory-filters" class="toolbar">
-
-            <span class="filter-label">generate a list by member type</span>
-
-            <a class="filter-link" href="/directory/group/faculty">faculty</a>
-
-            <a class="filter-link" href="/directory/group/staff">staff</a>
-
-            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
-
-            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
-
-            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
-
-            <a class="filter-link" href="/directory/group/associates">associates</a>
-
-            <a class="filter-link all" href="/directory">all members</a>
-
-        </div>
-        <!-- END filters -->
 
         <!-- toolbar.DEV -->
         <div id="directory-toolbar" class="toolbar">
@@ -148,7 +136,7 @@
         <!-- END toolbar.DEV -->
 
         <!-- table -->
-        <table id="directory-records" class="sloaded">
+        <table id="directory-records" class="directory">
 
             <!-- sortable header -->
             <thead>
@@ -371,94 +359,39 @@
         </div>
         <!-- END info -->
 
-        <!-- Data Tables -->
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/datatables.min.js"></script>
-        <script type="text/javascript">
+        <?php if ( $site_type == 'college' ) : ?>
 
-            // alphabet search
-            var _alphabetSearch = '';
+        <!-- directory filter menu -->
+        <div id="directory-menu" class="reveal directory-filter-modal" data-reveal>
 
-            // push search settings to app
-            $.fn.dataTable.ext.search.push( function ( settings, searchData ) {
+            <!-- header -->
+            <header>
 
-                if ( ! _alphabetSearch ) {
+                college directory filters
 
-                    return true;
+            </header>
+            <!-- END header -->
 
-                }
+            <?php research_topic_menu(); ?>
 
-                if ( searchData[0].charAt(0) === _alphabetSearch ) {
+            <a class="filter-link main" href="/directory">all members</a>
 
-                    return true;
+            <a class="filter-link" href="/directory/group/faculty">faculty</a>
 
-                }
+            <a class="filter-link" href="/directory/group/staff">staff</a>
 
-                return false;
+            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
 
-            });
+            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
 
-            // ready
-            $(document).ready(function(){
+            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
 
-                // initialization
-                var controlphabet = $('#directory-alphabet');
-                var controlfields = $('#directory-fields');
-                var directoryinfo = $('#directory-info');
-                var controlpages  = $('#directory-controls');
-                var table         = $('#directory-records').DataTable( {
+            <a class="filter-link" href="/directory/group/associates">associates</a>
 
-                    'order'    : [[ 0, 'asc' ]],
-                    stateSave  : true,
-                    responsive : true
+        </div>
+        <!-- END directory filter menu -->
 
-                });
-
-                // alphabet search
-                var alphabet = $('<div class="alphabet"/>').append( '<span class="alphabet-label">Last Name: </span>' );
-
-                // add clear action to alphabet
-                $('<span class="alphabet-control clear active"/>')
-                    .data( 'letter', '' )
-                    .html( 'None' )
-                    .appendTo( alphabet );
-
-                // increment
-                for ( var i = 0 ; i < 26 ; i++ ) {
-
-                    var letter = String.fromCharCode( 65 + i );
-
-                    $('<span class="alphabet-control letter"/>')
-                        .data( 'letter', letter )
-                        .html( letter )
-                        .appendTo( alphabet );
-
-                }
-
-                // prepend to page content container
-                // alphabet.insertBefore( table.table().container() );
-                alphabet.appendTo( controlphabet );
-
-                $('#directory-records_length').appendTo( controlfields );
-                $('#directory-records_filter').appendTo( controlfields );
-                $('#directory-records_info').appendTo( directoryinfo );
-                $('#directory-records_paginate').appendTo( controlpages );
-
-                // toggle classes
-                alphabet.on( 'click', 'span', function () {
-
-                    alphabet.find( '.active' ).removeClass( 'active' );
-
-                    $(this).addClass( 'active' );
-
-                    _alphabetSearch = $(this).data('letter');
-
-                    table.draw();
-
-                } );
-
-            });
-
-        </script>
+        <?php endif; ?>
 
     </div>
     <!-- END directory -->
