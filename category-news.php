@@ -1,52 +1,14 @@
-<?php
+<?php get_header(); ?>
 
-    $lab_options = get_field( 'lab_homepage_options' );
+<!-- site.layout -->
+<main id="site-layout" class="off-canvas-content default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);">
 
-    $news_query = array(
+	<!-- content container -->
+	<div class="content-container">
 
-        'category_name'  => 'news',
-        'posts_per_page' => 3
+		<?php while ( have_posts() ) : the_post(); ?>
 
-    );
-
-    $news_articles = new WP_Query( $news_query );
-
-    $news_category = get_cat_ID( 'News' );
-    $news_archive  = get_category_link( $news_category );
-
-?>
-
-<!-- container -->
-<section id="laboratory-news" class="laboratory-content homepage-section">
-
-    <!-- title -->
-    <a class="title-link" href="<?php echo $news_archive; ?>">
-
-        <!-- heading -->
-        <h2 class="section-title">
-
-            news and updates
-
-            <!-- label -->
-            <span class="link-label">
-
-                view all
-
-            </span>
-            <!-- END label -->
-
-        </h2>
-        <!-- END heading -->
-
-    </a>
-    <!-- END title -->
-
-    <!-- link -->
-    <div class="articles">
-
-        <?php while ( $news_articles->have_posts() ) : $news_articles->the_post(); ?>
-
-        <?php
+		<?php
 
             $post_date  = get_the_date();
             $image_test = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
@@ -89,12 +51,14 @@
         </a>
         <!-- END link -->
 
-        <?php endwhile; ?>
+		<?php endwhile; ?>
 
-    <?php wp_reset_postdata(); ?>
+	</div>
+	<!-- END content container -->
 
-    </div>
-    <!-- END stories -->
+	<?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
-</section>
-<!-- END container -->
+</main>
+<!-- site.layout -->
+
+<?php get_footer(); ?>

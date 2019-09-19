@@ -1,0 +1,66 @@
+// stylesheet :: laboratory site archive page styles
+
+    // settings
+    $archive : 1rem;
+    $archive : adjust-color(
+
+        $app05,
+        $hue          : 0%,
+        $saturation : -30%,
+        $lightness  : 35%,
+        $alpha         : -0.000
+
+    );
+
+    // styles
+    #site-layout.labs-archive {
+
+        // container
+        .content-container {
+
+            @include flex-h-s-v-t( false );
+
+            flex-wrap: wrap;
+
+            padding: 10rem 4rem 3rem 4rem;
+
+            @include fill( $archive, 0.000 );
+
+        }
+
+        // links
+        .lab-link {
+
+            @include flex-h-e-v-b( true );
+
+            width: calc( 25% - 2rem );
+            height: 8rem;
+            margin: 0 1rem 2rem 1rem;
+            padding: 0 2rem 1.75rem 2rem;
+
+            @include font( $klavislim, 1rem, 400 );
+
+            @include text( $up, right );
+
+            text-decoration: none;
+
+            @include typo( 1rem, 0.045em );
+
+            @include color( white, 0.000 );
+
+            @include fill( $cvnavy, 0.365 );
+
+            @include shadowbox( 1rem, 3.5rem, black, 0.465 );
+
+            transition: $all220;
+
+            // hover state
+            &:hover {
+
+                @include fill( $roarange, 0.000 );
+
+            }
+
+        }
+
+    }

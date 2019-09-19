@@ -1,0 +1,199 @@
+// stylesheet :: default post template styles
+
+    // settings
+    $default : 1rem;
+
+    // styles
+    .category-news.archive {
+
+        font-size: 1rem;
+
+        @include color( $app05, 0.245 );
+
+        @include fill( $sec_temp_off_white, 0.000 );
+
+        // site layout
+        #site-layout {
+
+            @include fill( white, 1.000 );
+
+            background: {
+
+                image: none;
+
+            }
+
+        }
+
+        // header
+        .post-header {
+
+            padding: 6.25rem 8vw 0 8vw;
+
+            // h1
+            h1 {
+
+                margin: 0 auto 0 auto;
+
+            }
+
+        }
+
+        // content
+        .post-content {
+
+            padding: 0 8vw 4rem 8vw;
+
+        }
+
+        // container
+        .content-container {
+
+            @include flex-h-s-v-t( false );
+
+            flex-wrap: wrap;
+
+            padding: 4rem 4rem 4rem 4rem;
+
+            // article
+            .article {
+
+                @include flex-v-t-h-st( true );
+
+                width: calc( 33.3333333% - 2rem );
+                min-height: 16rem;
+                margin: 1rem 1rem 1rem 1rem;
+
+                @include font( $klavislim, auto, 400 );
+
+                text-decoration: none;
+
+                @include fill( white, 0.000 );
+
+                @include shadowbox( 1.5rem, 3rem, black, 0.465 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 320ms $outex 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: auto;
+
+                }
+
+                // hover state
+                &:hover {
+
+                    @include shadowbox( 1.5rem, 4rem, black, 0.265 );
+
+                    transform: translate3d( 0, -1rem, 0 );
+
+                }
+
+                // header
+                .header {
+
+                    background: no-repeat center center / cover;
+
+                    padding-top: 60%;
+
+                    // image
+                    .image {
+
+                        position: relative;
+
+                        z-index: 10;
+
+                        @include flex-v-b-h-c( false );
+
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+
+                        background: {
+
+                            repeat: no-repeat;
+                            size: cover;
+                            position: center center;
+
+                        }
+
+                        -webkit-filter: grayscale( 0.000 ) opacity( 1.000 );
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                }
+
+                // content
+                .content {
+
+                    flex-grow: 1;
+
+                    padding: 1rem 2rem 2rem 2rem;
+
+                }
+
+            }
+
+            // date
+            .date {
+
+                display: block;
+
+                margin: 0 0 0.25rem 0;
+
+                @include font( $industry, 0.6875rem, 700 );
+
+                @include text( $up );
+
+                @include color( $app05, 0.465 );
+
+            }
+
+            // title
+            .title {
+
+                display: block;
+
+                margin: 0 0 0.75rem 0;
+
+                @include font( $klavislim, 1.25rem, 400 );
+
+                // @include text( $up );
+
+                @include typo( 1.5rem, 0.015em );
+
+                @include color( $g140, 0.000 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include font( $klavislim, 1.25rem, 400 );
+
+                }
+
+            }
+
+            // text
+            .excerpt {
+
+                p {
+
+                    margin: 0 0 0 0;
+
+                    @include font( $industry, 0.875rem, 600 );
+
+                    @include color( $app05, 0.265 );
+
+                }
+
+            }
+
+        }
+
+    }

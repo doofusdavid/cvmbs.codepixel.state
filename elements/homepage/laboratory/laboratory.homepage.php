@@ -3,7 +3,16 @@
     // laboratory homepage options
     $laboratory_options = get_field( 'laboratory_homepage_options' );
 
+    // test for top-level network site
+    $network_site_ID = get_current_blog_id();
+
 ?>
+
+<?php if ( $network_site_ID == 1 ) : ?>
+
+<?php get_template_part( 'elements/homepage/laboratory/laboratory.archive' ); ?>
+
+<?php else : ?>
 
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content laboratory page-template-flexible-page" data-off-canvas-content>
@@ -23,7 +32,7 @@
 
     <?php else : ?>
 
-    <section id="laboratory-billboard" class="laboratory-billboard" tabindex="-1">
+    <section id="laboratory-billboard" class="laboratory-billboard image default" tabindex="-1" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.34.jpg);">
 
     <?php endif; ?>
 
@@ -104,3 +113,5 @@
 
 </main>
 <!-- site.layout -->
+
+<?php endif; ?>

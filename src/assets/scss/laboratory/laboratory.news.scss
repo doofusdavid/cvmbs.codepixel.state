@@ -29,10 +29,80 @@
 
         }
 
-        // title
-        h2 {
+        // links
+        .title-link {
 
-            margin: 0 0 0 1rem;
+            text-decoration: none;
+
+        }
+
+        // title
+        .section-title {
+
+            position: relative;
+
+            @include flex-h-j-v-b( false );
+
+            height: 3rem;
+            margin: 0 0 1rem 1rem;
+            // padding: 0 0 1rem 1rem;
+
+            @include typo( 1.25rem, inherit );
+
+            text-decoration: none;
+
+            @include color( $g135, 0.000 );
+
+            // hover state
+            &:hover,
+            &:focus,
+            &:active {
+
+                cursor: pointer;
+
+                // link
+                .link-label {
+
+                    @include color( $dark, 0.000 );
+
+                    transform: translate3d( -1.5rem, 0, 0 );
+
+                    transition: all 360ms $outex 0ms;
+
+                    // after
+                    &:after {
+
+                        opacity: 1.000;
+
+                        transform: translate3d( 0, 0, 0 );
+
+                        transition: all 360ms $outex 0ms;
+
+                    }
+
+                }
+
+            }
+
+            // link
+            .link-label {
+
+                @include flex-h-e-v-b( true );
+
+                height: 2rem;
+                margin: 0 1rem 0 0;
+
+                @include font( $industry, 0.6875rem, 700 );
+
+                @include typo( 0.5rem, 0.075em );
+
+                @include color( $dark, 0.000 );
+
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 360ms $outex 0ms;
+
+            }
 
         }
 

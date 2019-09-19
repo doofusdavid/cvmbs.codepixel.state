@@ -11,6 +11,9 @@
     $lab_affiliation = get_field( 'laboratory_site_affiliation', 'options' );
     $lab_parent_url  = get_field( 'laboratory_site_parent_url', 'options' );
 
+    // test for top-level network site
+    $network_site_ID = get_current_blog_id();
+
 ?>
 
 <!-- header -->
@@ -57,6 +60,28 @@
         <div class="site-identifier identifier--college">
 
             <a href="<?php echo esc_url( home_url( '../' ) ); ?>" class="identifier-link"><?php echo $college; ?></a>
+
+        </div>
+        <!-- END .site-identifier -->
+
+        <?php elseif ( $site_type == 'laboratory' && $network_site_ID == 1 ) : ?>
+
+        <!-- .site-identifier -->
+        <<?php echo $wrapper; ?> class="site-identifier">
+
+            <a href="https://labs.vetmedbiosci.colostate.edu" class="identifier-link" rel="home">
+
+                research labs
+
+            </a>
+
+        </<?php echo $wrapper; ?>>
+        <!-- END .site-identifier -->
+
+        <!-- .site-identifier -->
+        <div class="site-identifier identifier--college">
+
+            <a href="https://vetmedbiosci.colostate.edu" class="identifier-link"><?php echo $college; ?></a>
 
         </div>
         <!-- END .site-identifier -->
