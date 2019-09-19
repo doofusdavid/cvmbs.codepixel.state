@@ -396,7 +396,7 @@
                 <!-- listing -->
                 <div class="listing-group interests">
 
-                    <h4>Species Interest</h4>
+                    <h4>Research Specialty</h4>
 
                     <?php
 

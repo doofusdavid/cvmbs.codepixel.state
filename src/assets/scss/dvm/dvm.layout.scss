@@ -15,7 +15,13 @@
         width: 100%;
         height: auto;
         margin: 0 0 0 0;
-        padding: 100vh 0 0 0;
+        // padding: 100vh 0 0 0;
+
+        .home & {
+
+            padding: 100vh 0 0 0;
+
+        }
 
         // menu open
         &.site-menu-open {

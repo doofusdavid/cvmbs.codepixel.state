@@ -85,15 +85,11 @@
 
             </h1>
 
-            <?php if ( $site_type == 'college' ) : ?>
-
             <button id="directory-menu-button" class="open-modal-button" data-open="directory-menu">
 
                 directory filters
 
             </button>
-
-            <?php endif; ?>
 
         </header>
         <!-- END page header -->
@@ -236,8 +232,6 @@
         </div>
         <!-- END info -->
 
-        <?php if ( $site_type == 'college' ) : ?>
-
         <!-- directory filter menu -->
         <div id="directory-menu" class="reveal directory-filter-modal" data-reveal>
 
@@ -249,24 +243,22 @@
             </header>
             <!-- END header -->
 
-            <a class="filter-link main" href="/directory">all members</a>
+            <a class="filter-link main" href="<?php echo site_url(); ?>/directory">all members</a>
 
-            <a class="filter-link" href="/directory/group/faculty">faculty</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/faculty">faculty</a>
 
-            <a class="filter-link" href="/directory/group/staff">staff</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/staff">staff</a>
 
-            <a class="filter-link" href="/directory/group/graduate-students">graduate students</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/graduate-students">graduate students</a>
 
-            <a class="filter-link" href="/directory/group/residents-interns">residents/interns</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/residents-interns">residents/interns</a>
 
-            <a class="filter-link" href="/directory/group/post-doctoral">post doctoral</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/post-doctoral">post doctoral</a>
 
-            <a class="filter-link" href="/directory/group/associates">associates</a>
+            <a class="filter-link" href="<?php echo site_url(); ?>/directory/group/associates">associates</a>
 
         </div>
         <!-- END directory filter menu -->
-
-        <?php endif; ?>
 
     </div>
     <!-- END directory -->

@@ -55,7 +55,13 @@
 
             <h1>
 
-                <?php echo the_title() . ' faculty'; ?>
+                <span>
+
+                    <?php echo get_the_title( $post->post_parent ); ?>
+
+                </span>
+
+                <?php echo the_title(); ?>
 
             </h1>
 
@@ -75,7 +81,7 @@
 
             <h1>
 
-                research topic directory
+                <?php echo the_title(); ?>
 
             </h1>
 
