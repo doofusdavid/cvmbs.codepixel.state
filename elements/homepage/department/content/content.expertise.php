@@ -41,7 +41,6 @@
 
         <?php endif; ?>
 
-
         <?php if ( $expertise_content[ 'text' ] ) : ?>
 
         <p class="text">
@@ -75,6 +74,8 @@
                 echo $content;
 
             ?>
+
+            <?php research_topic_menu(); ?>
 
         </div>
 

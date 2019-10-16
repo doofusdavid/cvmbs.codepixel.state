@@ -49,6 +49,8 @@
 
         -webkit-app-region: drag;
 
+        @include shadowbox( 1rem, 3rem, black, 0.485 );
+
         // mobile
         @include breakpoint ( small only ) {
 

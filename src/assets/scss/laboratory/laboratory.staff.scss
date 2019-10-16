@@ -71,6 +71,17 @@
 
                 @include shadowbox( 1.5rem, 3rem, black, 0.465 );
 
+                transform: translate3d( 0, 0, 0 );
+
+                transition: all 160ms $outex 0ms;
+
+                // hover state
+                &:hover {
+
+                    // the emptiness
+
+                }
+
             }
 
         }

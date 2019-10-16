@@ -62,6 +62,10 @@ $block_path = 'elements/blocks/flexible/';
 
 							get_template_part( $block_path . 'video' );
 
+						elseif ( get_row_layout() == 'single_testimonial' ) :
+
+							get_template_part( $block_path . 'testimonial.single' );
+
 						else:
 
 							// no blocks found
