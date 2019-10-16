@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $curriculum_content = $homepage_options[ 'curriculum_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,25 +19,19 @@
 
     <h2>
 
-        program curriculum
+        <?php echo $curriculum_content[ 'title' ]; ?>
 
     </h2>
 
     <p>
 
-        Your curriculum provides education and training that emphasize case-based and hands-on learning during all four years. You will progressively advance in knowledge and application of normal biology, pathophysiology, clinical medicine, surgery, clinical reasoning, and professional skills.
+        <?php echo $curriculum_content[ 'text' ]; ?>
 
     </p>
 
-    <p>
+    <a class="document-link" href="<?php echo $curriculum_content[ 'link' ][ 'url' ]; ?>">
 
-        You’ll spend your first and second years primarily in classrooms; your third and fourth years will be highlighted by clinical rotation at the James L. Voss Veterinary Teaching Hospital
-
-    </p>
-
-    <a class="document-link" href="https://vetmedbiosci.colostate.edu/dvm/wp-content/uploads/sites/6/2019/06/dvm-curriculum.pdf">
-
-        view program curriculum
+        <?php echo $curriculum_content[ 'link' ][ 'title' ]; ?>
 
     </a>
 

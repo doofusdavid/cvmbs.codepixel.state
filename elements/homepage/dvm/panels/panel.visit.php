@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $visit_content = $homepage_options[ 'visit_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,19 +19,19 @@
 
     <h2>
 
-        Visit Our Campus Community
+        <?php echo $visit_content[ 'title' ]; ?>
 
     </h2>
 
     <p>
 
-        Fellow students, a vibrant and welcoming campus community, and the vitality, active lifestyles, and unmatched Rocky Mountain surroundings of Fort Collins all enhance the CSU experience.
+        <?php echo $visit_content[ 'text' ]; ?>
 
     </p>
 
-    <a class="document-link" href="../tours-and-visits">
+    <a class="document-link" href="<?php echo $visit_content[ 'link' ][ 'url' ]; ?>">
 
-        schedule a visit
+        <?php echo $visit_content[ 'link' ][ 'title' ]; ?>
 
     </a>
 

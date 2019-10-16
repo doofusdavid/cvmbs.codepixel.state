@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $video_content = $homepage_options[ 'video_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,7 +19,7 @@
 
     <h2>
 
-        where you make a difference
+        <?php echo $video_content[ 'title' ]; ?>
 
     </h2>
 
@@ -22,10 +29,7 @@
         <!-- embed -->
         <div class="program-video">
 
-            <!-- <iframe src="https://player.vimeo.com/video/135510388?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-
-            <iframe src="https://player.vimeo.com/video/313075453?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/5kEHAZGnzck?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="<?php echo $video_content[ 'video_url' ]; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
         <!-- END embed -->
@@ -35,7 +39,7 @@
 
     <p>
 
-        It's where hands meet heart.  It's where your life's work can save lives. It's where YOU make a difference. 
+        <?php echo $video_content[ 'text' ]; ?>
 
     </p>
 

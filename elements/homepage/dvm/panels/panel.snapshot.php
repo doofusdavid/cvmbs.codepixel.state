@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $student_snapshot_content = $homepage_options[ 'student_snapshot_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,19 +19,19 @@
 
     <h2>
 
-        student snapshot
+        <?php echo $student_snapshot_content[ 'title' ]; ?>
 
     </h2>
 
     <p>
 
-        Our veterinary students represent diversity in age, background, experiences, and more,<br />and all are committed to benefiting the health of pets and people.
+        <?php echo $student_snapshot_content[ 'text' ]; ?>
 
     </p>
 
-    <a class="document-link" href="student-snapshot">
+    <a class="document-link" href="<?php echo $student_snapshot_content[ 'link' ][ 'url' ]; ?>">
 
-        explore student snapshot
+        <?php echo $student_snapshot_content[ 'link' ][ 'title' ]; ?>
 
     </a>
 

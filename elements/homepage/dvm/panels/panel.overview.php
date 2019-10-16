@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $overview_content = $homepage_options[ 'overview_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -15,25 +22,13 @@
 
         <h3>
 
-            a leader in veterinary education
+            <?php echo $overview_content[ 'title' ]; ?>
 
         </h3>
 
         <p>
 
-            Become part of a college that has valued and taught the essential role of veterinary medicine in animal, human, and environmental health for over 100 years.
-
-        </p>
-
-        <p>
-
-            Continually ranked among the best in the country by U.S. News & World Report, our Doctor of Veterinary Medicine Program was the first to teach veterinary ethics, clinical communication skills, and practitioner wellness.
-
-        </p>
-
-        <p>
-
-            Four academic departments contribute faculty expertise to our program, providing in-depth scientific and medical knowledge that sets our program apart from other veterinary schools.
+            <?php echo $overview_content[ 'text' ]; ?>
 
         </p>
 
@@ -43,36 +38,74 @@
     <!-- callouts -->
     <div class="content callouts">
 
+        <?php $statistic_1 = $overview_content[ 'statistic_1' ]; ?>
+
         <!-- callout -->
         <div id="ranking" class="callout-block">
 
-            <span class="number">#3</span>
+            <span class="number">
 
-            <span class="stat-label">veterinary school<br />in the nation</span>
+                <?php echo $statistic_1[ 'value' ]; ?>
 
-            <span class="stat-label source">(u.s. news &amp; world report)</span>
+            </span>
+
+            <span class="stat-label">
+
+                <?php echo $statistic_1[ 'label' ]; ?>
+
+            </span>
+
+            <span class="stat-label source">
+
+                <?php echo $statistic_1[ 'source' ]; ?>
+
+            </span>
 
         </div>
         <!-- END callout -->
+
+        <?php $statistic_2 = $overview_content[ 'statistic_2' ]; ?>
 
         <!-- callout -->
         <div id="specialties" class="callout-block">
 
-            <span class="stat-label">world-class faculty<br />who represent</span>
+            <span class="stat-label">
 
-            <span class="number">28</span>
+                <?php echo $statistic_2[ 'text_top' ]; ?>
 
-            <span class="stat-label">veterinary specialties</span>
+            </span>
+
+            <span class="number">
+
+                <?php echo $statistic_2[ 'value' ]; ?>
+
+            </span>
+
+            <span class="stat-label">
+
+                <?php echo $statistic_2[ 'text_bottom' ]; ?>
+
+            </span>
 
         </div>
         <!-- END callout -->
 
+        <?php $statistic_3 = $overview_content[ 'statistic_3' ]; ?>
+
         <!-- callout -->
         <div id="visits" class="callout-block ">
 
-            <span class="number">42,000</span>
+            <span class="number">
 
-            <span class="stat-label">teaching hospital<br />patient visits per year</span>
+                <?php echo $statistic_3[ 'value' ]; ?>
+
+            </span>
+
+            <span class="stat-label">
+
+                <?php echo $statistic_3[ 'label' ]; ?>
+
+            </span>
 
         </div>
         <!-- END callout -->

@@ -1,9 +1,6 @@
 <?php
 
-    $billboard   = get_field( 'homepage_billboard', 'options' );
-    $billboard_image = $billboard[ 'image' ];
-    $billboard_title = $billboard[ 'headline' ];
-    $billboard_text  = $billboard[ 'text' ];
+    $homepage_options = get_field( 'dvm_homepage_options' );
 
 ?>
 

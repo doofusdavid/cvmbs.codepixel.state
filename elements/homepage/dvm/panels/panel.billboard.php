@@ -1,20 +1,13 @@
 <?php
 
-    $homepage_panels = get_field( 'homepage_panels' );
+    $homepage_options = get_field( 'dvm_homepage_options' );
 
-    $billboard_panel = $homepage_panels[ 'panel_billboard' ];
-
-    $billboard   = get_field( 'site_background', 'options' );
-    $background  = $billboard[ 'image' ][ 'url' ];
-
-    // $background  = $billboard_panel[ 'billboard_image' ][ 'url' ];
-    $headline    = $billboard_panel[ 'headline' ];
-    $subheadline = $billboard_panel[ 'subheadline' ];
+    $billboard_content = $homepage_options[ 'billboard_content' ];
 
 ?>
 
 <!-- special.billboard -->
-<section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $billboard; ?>);">
+<section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $billboard_content[ 'image' ]; ?>);">
 
     <!-- overlay -->
     <div class="billboard-overlay">
@@ -33,13 +26,7 @@
             <!-- headline -->
             <span class="headline">
 
-                <?php
-
-                    // echo $headline;
-
-                ?>
-
-                make a difference
+                <?php echo $billboard_content[ 'headline' ]; ?>
 
             </span>
             <!-- END headline -->
@@ -47,24 +34,10 @@
             <!-- text -->
             <span class="text">
 
-                <?php
-
-                    // echo $subheadline;
-
-                ?>
-
-                more than a century of education, leadership, and innovation in veterinary medicine
+                <?php echo $billboard_content[ 'subheadline' ]; ?>
 
             </span>
             <!-- END text -->
-
-            <!-- button -->
-            <button id="explore-button" class="link" data-panel-link="panel-overview">
-
-                explore our program
-
-            </button>
-            <!-- END button -->
 
         </div>
         <!-- END content -->
@@ -72,13 +45,17 @@
         <!-- buttons -->
         <div id="billboard-buttons">
 
+            <?php $homepage_links = $billboard_content[ 'links' ]; ?>
+
+            <?php foreach( $homepage_links as $homepage_link ) : ?>
+
             <!-- link -->
-            <a id="button-explore" class="button-link" href="apply-to-our-program">
+            <a id="button-explore" class="button-link" href="<?php echo $homepage_link[ 'link' ]; ?>">
 
                 <!-- title -->
                 <span class="button-title">
 
-                    apply to our program
+                    <?php echo $homepage_link[ 'title' ]; ?>
 
                 </span>
                 <!-- END title -->
@@ -86,7 +63,7 @@
                 <!-- text -->
                 <span class="button-text">
 
-                    required materials, application process and timeline, information for transfer students, and additional resources
+                    <?php echo $homepage_link[ 'text' ]; ?>
 
                 </span>
                 <!-- END text -->
@@ -94,49 +71,7 @@
             </a>
             <!-- END link -->
 
-            <!-- link -->
-            <a id="button-admissions" class="button-link" href="admission-requirements">
-
-                <!-- title -->
-                <span class="button-title">
-
-                    admission requirements
-
-                </span>
-                <!-- END title -->
-
-                <!-- text -->
-                <span class="button-text">
-
-                    prerequisites, evaluation factors, and tips for creating a strong application
-
-                </span>
-                <!-- END text -->
-
-            </a>
-            <!-- END link -->
-
-            <!-- link -->
-            <a id="button-contact" class="button-link" href="contact">
-
-                <!-- title -->
-                <span class="button-title">
-
-                    contact us
-
-                </span>
-                <!-- END title -->
-
-                <!-- text -->
-                <span class="button-text">
-
-                    get in touch with our program staff with questions or concerns
-
-                </span>
-                <!-- END text -->
-
-            </a>
-            <!-- END link -->
+            <?php endforeach; ?>
 
         </div>
         <!-- END buttons -->

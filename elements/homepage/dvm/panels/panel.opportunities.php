@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $learning_opportunities_content = $homepage_options[ 'learning_opportunities_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,13 +19,13 @@
 
     <h2>
 
-        learning opportunities
+        <?php echo $learning_opportunities_content[ 'title' ]; ?>
 
     </h2>
 
     <p>
 
-        Experience veterinary medicine in a new context and expand your skillset through regional, national, and international learning experiences and our Veterinary Summer Scholars program.
+        <?php echo $learning_opportunities_content[ 'text' ]; ?>
 
     </p>
 
@@ -26,9 +33,9 @@
     <div class="button-row">
 
         <!-- advising -->
-        <a class="document-link" href="learning-opportunities">
+        <a class="document-link" href="<?php echo $learning_opportunities_content[ 'link' ][ 'url' ]; ?>">
 
-            explore opportunities
+            <?php echo $learning_opportunities_content[ 'link' ][ 'title' ]; ?>
 
         </a>
         <!-- END advising -->

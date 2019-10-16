@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $student_support_content = $homepage_options[ 'student_support_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -10,32 +17,24 @@
 <!-- content -->
 <div class="panel-content">
 
-    <!-- image content -->
-    <div class="content image">
-
-
-
-    </div>
-    <!-- END image content -->
-
     <!-- text content -->
     <div class="content text">
 
         <h2>
 
-            support services
+            <?php echo $student_support_content[ 'title' ]; ?>
 
         </h2>
 
         <p>
 
-            Our D.V.M. Student Services team will help ensure your success, providing you with an array of valuable student services, career counseling, and financial planning.
+            <?php echo $student_support_content[ 'text' ]; ?>
 
         </p>
 
-        <a class="question-link" href="support-services">
+        <a class="question-link" href="<?php echo $student_support_content[ 'link' ][ 'url' ]; ?>">
 
-            what we offer
+            <?php echo $student_support_content[ 'link' ][ 'title' ]; ?>
 
         </a>
 

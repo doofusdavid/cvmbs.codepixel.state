@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $degree_programs_content = $homepage_options[ 'degree_programs_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -12,19 +19,19 @@
 
     <h2>
 
-        special degree programs
+        <?php echo $degree_programs_content[ 'title' ]; ?>
 
     </h2>
 
     <p>
 
-        Enhance your knowledge and customize your degree to align with your career interests. We offer combined programs that let you pursue your D.V.M. in tandem with another degree, as well as additional degree options that address different needs in the veterinary field.
+        <?php echo $degree_programs_content[ 'text' ]; ?>
 
     </p>
 
-    <a class="document-link" href="special-degree-programs">
+    <a class="document-link" href="<?php echo $degree_programs_content[ 'link' ][ 'url' ]; ?>">
 
-        explore program options
+        <?php echo $degree_programs_content[ 'link' ][ 'title' ]; ?>
 
     </a>
 

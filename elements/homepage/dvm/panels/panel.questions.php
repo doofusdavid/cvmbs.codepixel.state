@@ -1,3 +1,10 @@
+<?php
+
+    $homepage_options = get_field( 'dvm_homepage_options' );
+
+    $student_ambassadors_content = $homepage_options[ 'student_ambassadors_content' ];
+
+?>
 
 <!-- overlay -->
 <div class="panel-overlay">
@@ -15,38 +22,31 @@
 
         <h2>
 
-            want to know more<br />about the CSU experience?
+            <!-- want to know more<br />about the CSU experience? -->
+            <?php echo $student_ambassadors_content[ 'title' ]; ?>
 
         </h2>
 
         <p>
 
-            Ask one of our current students a question.
+            <?php echo $student_ambassadors_content[ 'bold_text' ]; ?>
 
         </p>
 
         <p class="smaller">
 
-            Our student ambassador team is made up of highly-motivated and passionate veterinary students, who are here to help you explore opportunities at CSU.
+            <?php echo $student_ambassadors_content[ 'text' ]; ?>
 
         </p>
 
-        <a class="question-link" href="student-ambassadors">
+        <a class="question-link" href="<?php echo $student_ambassadors_content[ 'link' ][ 'url' ]; ?>">
 
-            connect with an ambassador
+            <?php echo $student_ambassadors_content[ 'link' ][ 'title' ]; ?>
 
         </a>
 
     </div>
     <!-- END text content -->
-
-    <!-- image content -->
-    <div class="content image">
-
-
-
-    </div>
-    <!-- END image content -->
 
 </div>
 <!-- END content -->

@@ -372,6 +372,115 @@
 
                     }
 
+                    // explore
+                    &:nth-child( 1 ) {
+
+                        @include gradient(
+
+                            90deg,
+                            lighten( $cvnavy, 3.5% ), 0.215, 0%,
+                            // white, 1.000, 100%
+                            lighten( $cvnavy, 3.5% ), 0.865, 100%
+
+                        );
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( lighten( $cvnavy, 5.5% ), 0.365 );
+
+                            // title
+                            .button-title {
+
+                                // before
+                                &:before {
+
+                                    @include fill( lighten( $cvnavy, 15% ), 0.000 );
+
+                                }
+
+                            }
+
+                        }
+
+                        // title line
+                        .button-title {
+
+                            // before
+                            &:before {
+
+                                @include fill( lighten( $cvnavy, 18% ), 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                    // admissions
+                    &:nth-child( 2 ) {
+
+                        @include gradient(
+
+                            90deg,
+                            $cvellow, 0.565, 0%,
+                            $cvellow, 0.865, 100%
+
+                        );
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $cvellow, 0.565 );
+
+                        }
+
+                        // title line
+                        .button-title {
+
+                            // before
+                            &:before {
+
+                                @include fill( $cvellow, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                    // contact
+                    &:nth-child( 3 ) {
+
+                        @include gradient(
+
+                            90deg,
+                            #FE7727, 0.385, 0%,
+                            #FE7727, 0.915, 100%
+
+                        );
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( #FE7727, 0.385 );
+
+                        }
+
+                        // title line
+                        .button-title {
+
+                            // before
+                            &:before {
+
+                                @include fill( #FE7727, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
                     // title
                     .button-title {
 
@@ -452,115 +561,6 @@
                                 transition: all 360ms $outex 0ms;
 
                             }
-
-                        }
-
-                    }
-
-                }
-
-                // explore
-                #button-explore {
-
-                    @include gradient(
-
-                        90deg,
-                        lighten( $cvnavy, 3.5% ), 0.215, 0%,
-                        // white, 1.000, 100%
-                        lighten( $cvnavy, 3.5% ), 0.865, 100%
-
-                    );
-
-                    // hover state
-                    &:hover {
-
-                        @include fill( lighten( $cvnavy, 5.5% ), 0.365 );
-
-                        // title
-                        .button-title {
-
-                            // before
-                            &:before {
-
-                                @include fill( lighten( $cvnavy, 15% ), 0.000 );
-
-                            }
-
-                        }
-
-                    }
-
-                    // title line
-                    .button-title {
-
-                        // before
-                        &:before {
-
-                            @include fill( lighten( $cvnavy, 18% ), 0.000 );
-
-                        }
-
-                    }
-
-                }
-
-                // admissions
-                #button-admissions {
-
-                    @include gradient(
-
-                        90deg,
-                        $cvellow, 0.565, 0%,
-                        $cvellow, 0.865, 100%
-
-                    );
-
-                    // hover state
-                    &:hover {
-
-                        @include fill( $cvellow, 0.565 );
-
-                    }
-
-                    // title line
-                    .button-title {
-
-                        // before
-                        &:before {
-
-                            @include fill( $cvellow, 0.000 );
-
-                        }
-
-                    }
-
-                }
-
-                // contact
-                #button-contact {
-
-                    @include gradient(
-
-                        90deg,
-                        #FE7727, 0.385, 0%,
-                        #FE7727, 0.915, 100%
-
-                    );
-
-                    // hover state
-                    &:hover {
-
-                        @include fill( #FE7727, 0.385 );
-
-                    }
-
-                    // title line
-                    .button-title {
-
-                        // before
-                        &:before {
-
-                            @include fill( #FE7727, 0.000 );
 
                         }
 
