@@ -87,24 +87,22 @@
 
 					echo '<li class="event">
 
-                        <a class="event-link" href="' . $link . '">
+                        <div class="calendar-icon" aria-hidden="true">
 
-                            <div class="calendar-icon" aria-hidden="true">
+                            <span class="calendar-month month-' . $monthID . '">' . $month . '</span>
+                            <span class="calendar-day">' . $day . '</span>
 
-                                <span class="calendar-month month-' . $monthID . '">' . $month . '</span>
-                                <span class="calendar-day">' . $day . '</span>
+                        </div>
 
-                            </div>
-                            <div class="entry-info">
+                        <div class="entry-info">
 
-                                <span class="entry-date">' . $date . '</span>
-                                <span class="entry-title">' . $title . '</span>
+                            <a class="event-link entry-title" href="' . $link . '">' . $title . '</a>
 
-                                ' . $description . '
+                            <span class="entry-date">' . $date . '</span>
 
-                            </div>
+                            ' . $description . '
 
-                        </a>
+                        </div>
 
 					</li>';
 

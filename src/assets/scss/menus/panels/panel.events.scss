@@ -430,6 +430,14 @@
 
 			.event {
 
+                @include flex-h-j-v-t( false );
+
+                padding: 1rem 1rem 1rem 1rem;
+
+                text-decoration: none;
+
+                @include color( white, 0.000 );
+
 				border-bottom: 1px solid transparentize(white, 0.865);
 
 				background-color: transparentize(white, 1.000);
@@ -481,13 +489,7 @@
 
 				.event-link {
 
-                    @include flex-h-j-v-t( false );
-
-                    padding: 1rem 1rem 1rem 1rem;
-
-					text-decoration: none;
-
-                    @include color( white, 0.000 );
+                    //
 
 				}
 
