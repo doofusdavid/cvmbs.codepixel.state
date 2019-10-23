@@ -40,6 +40,23 @@
     // set global post object
     global $post;
 
+    // get site path
+    $siteinfo = get_blog_details();
+
+    // parse URL for site path
+    $siteurl = str_replace( '/', '', $siteinfo->path );
+
+    // set member bio link URL
+    if ( $siteurl === 'dvm' ) {
+
+        $directoryURL = '//vetmedbiosci.colostate.edu';
+
+    } else {
+
+        $directoryURL = esc_url( home_url() );
+
+    }
+
 ?>
 
 <!-- directory -->
@@ -294,7 +311,7 @@
                         // $phone      = $phone;
                         $department = $directoryGroupName;
 
-                        $records .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $memberID . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
+                        $records .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . $directoryURL . '/directory/member/?id=' . $memberID . '">' . $tableName . '</a></td><td class="link-column"><a class="email-link" href="mailto:' . $eMail . '">' . $eMail . '</a></td><td>' . $phone . '</td><td>' . $department . '</td></tr>';
 
                     }
 
