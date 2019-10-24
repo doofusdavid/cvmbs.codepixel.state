@@ -1,6 +1,6 @@
 
 <!-- testimonial block -->
-<section class="testimonial <?php echo get_sub_field( 'theme' ); ?>" style="background-image:url(<?php echo esc_url( get_sub_field( 'background' ) ); ?>);">
+<div class="template-block testimonial <?php echo get_sub_field( 'theme' ); ?>" style="background-image:url(<?php echo esc_url( get_sub_field( 'background' ) ); ?>);">
 
 	<?php $layout = get_sub_field( 'testimonial_layout' ); ?>
 
@@ -94,5 +94,5 @@
 	</div>
 	<!-- END inner -->
 
-</section>
+</div>
 <!-- END testimonial block -->

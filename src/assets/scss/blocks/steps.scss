@@ -1,0 +1,192 @@
+// stylesheet :: step by step content block styles
+
+    // settings
+    $steps : 1rem;
+
+    // styles
+    .template-block {
+
+        // class hook
+        &.steps {
+
+            // step-by-step
+            .steps {
+
+                // padding: 1rem 0 2rem 0;
+
+            }
+
+            // steps
+            .step-container {
+
+                @include flex-h-s-v-st( false );
+
+                // first
+                &:first-child {
+
+                    // step number
+                    .step-number {
+
+                        // before
+                        &:before {
+
+                            @include hide;
+
+                        }
+
+                    }
+
+                }
+
+                // last child
+                &:last-child {
+
+                    // step number
+                    .step-number {
+
+                        // before
+                        &:before {
+
+                            // height: 1.3125rem;
+
+                        }
+
+                    }
+
+                    // step content
+                    .step-content {
+
+                        // before
+                        &:before {
+
+                            // @include hide;
+
+                            @include fill( $app05, 1.000 );
+
+                            @include gradient(
+
+                                180deg,
+                                $app05, 0.785, 20%,
+                                transparent, 1.000, 100%
+
+                            );
+
+                        }
+
+                    }
+
+                }
+
+                // step number
+                .step-number {
+
+                    position: relative;
+
+                    @include flex-v-t-h-e( false )
+
+                    // flex-grow: 0;
+
+                    width: 5rem;
+                    min-width: 5rem;
+                    margin: 0 0 2rem 0;
+                    padding: 1rem 2rem 0 0;
+
+                    // before
+                    &:before {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: -0.0625rem;
+
+                        width: 0.0625rem;
+                        height: 1.25rem;
+
+                        @include fill( $app05, 0.785 );
+
+                    }
+
+                    // after
+                    &:after {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 1.25rem;
+                        right: 0;
+
+                        width: 1.5rem;
+                        height: 0.0625rem;
+
+                        @include fill( $app05, 0.785 );
+
+                    }
+
+                    // label
+                    .step-label {
+
+                        @include flex-h-e-v-b( false );
+
+                        margin: 0 0 1rem 0;
+
+                        @include font( $industry, 0.75rem, 700 );
+
+                        @include text( $up );
+
+                        @include typo( 0.6875rem, 0.025em );
+
+                        @include color( $app05, 0.465 );
+
+                    }
+
+                    // number
+                    .step-numeral {
+
+                        @include font( $klavislim, 3rem, 700 );
+                        // @include font( $decima, 3rem, 500 );
+
+                        @include typo( 2rem, 0.035em );
+
+                        @include color( $g140, 0.000 );
+
+                    }
+
+                }
+
+                // step content
+                .step-content {
+
+                    position: relative;
+
+                    // flex-grow: 0;
+
+                    // margin: 0 0 2rem 0;
+                    padding: 0.5rem 0 2rem 1rem;
+
+                    // before
+                    &:before {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 1.25rem;
+                        left: 0;
+
+                        width: 0.0625rem;
+                        height: calc( 100% - 1.25rem );
+
+                        @include fill( $app05, 0.785 );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

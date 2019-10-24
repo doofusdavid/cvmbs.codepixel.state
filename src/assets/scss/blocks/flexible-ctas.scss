@@ -2,7 +2,7 @@ $cta_bg: #dadac8;
 $btn_bg: #236670;
 
 .ctas__grid {
-	margin: 2.5em 0;
+	// margin: 2.5em 0;
 
 	@include bpoint(tablet) {
 		display: flex;
@@ -14,16 +14,29 @@ $btn_bg: #236670;
 		display: flex;
 		flex-direction: column;
 		max-width: 25rem;
-		margin: 0 auto 1rem;
+		margin: 0 auto 2rem 0;
+
+		@include shadowbox( 1rem, 3.5rem, black, 0.586 );
+
+		// last child
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
 
 		@include bpoint(tablet) {
-			width: calc(50% - .5rem);
+
+			width: calc(50% - 1rem);
 			max-width: none;
-			margin: 0 0 1rem 1rem;
+			margin: 0 0 0 2rem;
 
 			&:nth-child(odd) {
+
 				margin-left: 0;
+
 			}
+
 		}
 
 		@include bpoint(desktop) {

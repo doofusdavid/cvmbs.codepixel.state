@@ -1,50 +1,95 @@
-.page-template-flexible-page {
-	display: flex;
-	flex-direction: column;
-	background: $sec_temp_off_white;
-	color: $steel;
-	font-size: 1rem;
+// stylesheet :: flexible page template styles
 
-	.content-area {
-		flex-grow: 1;
-	}
+	// settings
+	$pagebase : #E5E7E7;
 
-	.template-block {
-		padding: 0 8vw;
+	// styles
+	.page-template-flexible-page {
 
-		&:last-child() {
-			padding-bottom: 1.25em;
+		display: flex;
+		flex-direction: column;
+		background: $sec_temp_off_white;
+		color: $steel;
+		font-size: 1rem;
+
+		@include fill( $pagebase, 0.000 );
+
+		.content-area {
+
+			flex-grow: 1;
+
 		}
 
-		&__inner {
-			max-width: 75rem;
-			margin: 0 auto;
-		}
-	}
+		// container
+		.flexible-page-content {
 
-	.template-title {
-		margin-bottom: 1.6rem;
-		line-height: 1;
-	}
 
-	.flexible-quote {
-		box-shadow: inset 0 0 1.5em .25em rgba(black, .2);
-		margin: 2.5em 0;
-		background: $sec_temp_grey;
-		padding: 6vw 8vw;
 
-		&:last-child() {
-			margin-bottom: 0;
-		}
-	}
-
-	.contact-group {
-		&:not(:first-child) {
-			margin-top: 2em;
 		}
 
-		&:not(:last-child) {
-			margin-bottom: 2em;
+		.template-block {
+
+			padding: 2rem 8vw 2rem 8vw;
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				padding: 1rem 2rem 1rem 2rem;
+
+			}
+
+			&:last-child {
+
+				// padding-bottom: 1.25em;
+				margin-bottom: 0;
+
+			}
+
+			&__inner {
+
+				max-width: 75rem;
+				margin: 0 auto;
+
+			}
+
 		}
+
+		.template-title {
+
+			margin-bottom: 1.6rem;
+			line-height: 1;
+
+		}
+
+		.flexible-quote {
+
+			box-shadow: inset 0 0 1.5em .25em rgba(black, .2);
+			// margin: 2.5em 0;
+			background: $sec_temp_grey;
+			padding: 6vw 8vw;
+
+			&:last-child() {
+
+				margin-bottom: 0;
+
+			}
+
+		}
+
+		.contact-group {
+
+			&:not(:first-child) {
+
+				margin-top: 2em;
+
+			}
+
+			&:not(:last-child) {
+
+				margin-bottom: 2em;
+
+			}
+
+		}
+
 	}
-}

@@ -1,25 +1,39 @@
 .notification-box {
-	margin: 1.5em auto;
+
+	// margin: 1.5em auto;
 	box-shadow: 0 .125em .5em .125em rgba(black,.1);
+
 	background: white;
 	padding: 1.5em;
 
+	@include shadowbox( 1rem, 3.5rem, black, 0.685 );
+
 	&.box {
+
 		&--date {
-			border-left: .3125em solid $campaign;
+
+			border-left: 0.3125rem solid $campaign;
+
 		}
 
 		&--info {
-			border-left: .3125em solid $blue;
+
+			border-left: 0.3125rem solid $blue;
+
 		}
 
 		&--notice {
-			border-left: .3125em solid $yellow-h;
+
+			border-left: 0.3125rem solid $yellow-h;
+
 		}
 
-		&--warn {
-			border-left: .3125em solid $roarange;
+		&--warning {
+
+			border-left: 0.3125rem solid $roarange;
+
 		}
+
 	}
 
 	&__image {

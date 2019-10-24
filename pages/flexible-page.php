@@ -11,6 +11,7 @@ $block_path = 'elements/blocks/flexible/';
 ?>
 
 <div id="primary" class="content-area">
+
 	<main id="main" class="site-main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -66,6 +67,26 @@ $block_path = 'elements/blocks/flexible/';
 
 							get_template_part( $block_path . 'testimonial.single' );
 
+						elseif ( get_row_layout() == 'image_array' ) :
+
+							get_template_part( $block_path . 'image.array' );
+
+						elseif ( get_row_layout() == 'statistics' ) :
+
+							get_template_part( $block_path . 'statistics' );
+
+						elseif ( get_row_layout() == 'steps' ) :
+
+	                        get_template_part( $block_path . 'steps' );
+
+	                    elseif ( get_row_layout() == 'timeline' ) :
+
+	                        get_template_part( $block_path . 'timeline' );
+
+	                    elseif ( get_row_layout() == 'styled_list' ) :
+
+	                        get_template_part( $block_path . 'styled.list' );
+
 						else:
 
 							// no blocks found
@@ -84,9 +105,9 @@ $block_path = 'elements/blocks/flexible/';
 		<?php endwhile; ?>
 
 	</main><!-- #main -->
+
 </div><!-- #primary -->
 
-<?php
-get_template_part( 'elements/layout/layout.footer' );
+<?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
-get_footer();
+<?php get_footer(); ?>

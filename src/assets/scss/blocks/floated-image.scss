@@ -1,10 +1,16 @@
 %floated-image {
+
 	max-width: 100%;
-	margin-bottom: 1em;
+	margin-bottom: 2rem;
+
+	@include shadowbox( 1rem, 3.5rem, black, 0.565 );
 
 	@include bpoint(desktop) {
+
 		max-width: calc(50% - 1em);
+
 	}
+
 }
 
 .floated-image {
@@ -23,7 +29,7 @@
 
 		@include bpoint(desktop) {
 			float: left;
-			margin-right: 1em;
+			margin-right: 2rem;
 		}
 	}
 
@@ -42,6 +48,17 @@
 		font-style: italic;
 		line-height: 1.2;
 		text-align: center;
+	}
+
+	p {
+
+		// last child
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
+
 	}
 
 	ul, ol {

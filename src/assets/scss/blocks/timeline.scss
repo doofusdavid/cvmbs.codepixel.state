@@ -1,0 +1,227 @@
+// stylesheet :: timeline content bock styles
+
+    // settings
+    $timeline : 1rem;
+
+    // styles
+    .template-block {
+
+        // class hook
+        &.timeline {
+
+            // title
+            .timeline-title {
+
+                //
+
+            }
+
+    		// entries
+    		.timeline-entries {
+
+    			position: relative;
+
+    			// before
+    			&:before {
+
+    				content: '';
+
+    				position: absolute;
+
+    				top: 0;
+    				left: 2.4375rem;
+
+    				z-index: 1;
+
+    				width: 2px;
+    				height: 100%;
+
+    				// @include fill( $app05, 0.765 );
+
+                    @include gradient(
+
+                        180deg,
+                        $app05, 0.765, 80%,
+                        transparent, 1.000, 100%
+
+                    );
+
+    			}
+
+    		}
+
+            // entry
+            .timeline-entry {
+
+    			position: relative;
+
+    			min-height: 6rem;
+    			margin: 0 0 2.5rem 0;
+    			padding: 0 0 0 6rem;
+
+                // default style
+                &.default {
+
+                    padding: 0 0 0 0;
+
+                    // before
+                    &:before {
+
+                        content: '';
+
+                        position: absolute;
+
+        				top: 5.5rem;
+        				left: 2.5625rem;
+
+        				z-index: 1;
+
+                        width: 2rem;
+                        width: 2.4375rem;
+        				height: 0.125rem;
+
+        				@include fill( $app05, 0.765 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            width: 1.5rem;
+
+                        }
+
+                    }
+
+                    // content
+                    .timeline-entry-title,
+                    .timeline-entry-text {
+
+                        display: block;
+
+                        margin-left: 6rem;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            margin-left: 5rem;
+
+                        }
+
+                    }
+
+                }
+
+                // date
+                .timeline-entry-date {
+
+    				@include shadowbox( 0.75rem, 2rem, black, 0.465 );
+
+                }
+
+    			// date
+    			.date {
+
+    				// styled
+    				&__styled {
+
+    					position: absolute;
+
+    					top: 0;
+    					left: 0;
+
+    					z-index: 10;
+
+    					@include flex-v-j-h-st( false );
+
+    					width: 5rem;
+    					height: 6rem;
+
+                        @include fill( white, 0.000 );
+                        @include fill( $g135, 0.000 );
+
+    				}
+
+    				// default
+    				&__default {
+
+                        position: relative;
+
+                        z-index: 20;
+
+                        @include flex-h-c-v-c( true );
+
+                        height: 3rem;
+                        margin: 0 0 2rem 0;
+    					padding: 0.0625rem 1rem 0 1rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+    					@include text( $up );
+
+    					@include color( $g140, 0.000 );
+                        @include color( $gold, 0.000 );
+
+                        @include fill( white, 0.000 );
+                        @include fill( $g135, 0.000 );
+
+    				}
+
+    			}
+
+    			// meta
+    			.entry-meta {
+
+    				// month
+    				&__month {
+
+    					@include flex-h-c-v-c( false );
+
+    					height: 2.5rem;
+    					padding: 0.5rem 0 0 0;
+
+    					@include font( $klavislim, 0.875rem, 400 );
+
+    					@include text( $up );
+
+    					@include color( $g140, 0.000 );
+                        @include color( $gold, 0.000 );
+
+    				}
+
+    				// day
+    				&__day {
+
+    					@include flex-v-t-h-c( false );
+
+    					height: 4rem;
+    					// padding: 0 0 0.5rem 0;
+                        padding: 0.5rem 0 0 0;
+
+    					@include font( $decima, 2rem, 400 );
+                        @include font( $klavislim, 3rem, 500 );
+
+    					@include text( $up );
+
+                        @include typo( 2rem, 0.025em );
+
+                        @include color( white, 0.000 );
+
+
+    				}
+
+    			}
+
+                // title
+                .timeline-entry-title {
+
+                    @include font( $industry, inherit, 700 );
+
+                    @include color( $cvnavy, 0.165 );
+                    @include color( $g140, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

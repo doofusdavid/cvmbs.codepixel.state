@@ -1,0 +1,175 @@
+
+
+	// styles
+	.template-block {
+
+		// testimonial block
+		&.testimonial {
+
+			margin: 2rem 0 2rem 0;
+			padding: 0;
+
+			background: no-repeat center center / cover;
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				margin: 1rem 0 1rem;
+
+			}
+
+		}
+
+	}
+
+	// testimonial
+	.testimonial {
+
+		// inner
+		&__inner {
+
+			padding: 10rem 10rem 10rem 10rem;
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				padding: 6rem 4rem 6rem 4rem;
+
+			}
+
+			// multiple
+			&.multiple {
+
+				@include flex-h-j-v-t( false );
+
+				padding: 10rem 4rem 10rem 4rem;
+
+				// mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    padding: 6rem 4rem 6rem 4rem;
+
+                }
+
+			}
+
+			// dark theme
+			.dark & {
+
+				@include color( white, 0.000 );
+
+				@include fill( $dark-nite, 0.165 );
+
+			}
+
+			// light theme
+			.light & {
+
+				@include color( $cvnavy, 0.165 );
+
+				@include fill( white, 0.165 );
+
+			}
+
+		}
+
+		// testimonial
+		&__content {
+
+			@include flex-h-c-v-c( false );
+
+			margin: 0 0 0 0;
+
+			@include font( $klavika, 2rem, 500 );
+
+			@include text( none, center );
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				@include font( $klavika, 1rem, 500 );
+
+			}
+
+			// multiple
+			.multiple & {
+
+				flex-basis: 33.3333333%;
+
+				margin: 0 1rem 0 1rem;
+
+				@include font( $klavika, 1.25rem, 400 );
+
+				@include typo( 1.75rem, 0.065em );
+
+				// mobile
+				@include breakpoint ( small only ) {
+
+					// flex-basis: 100%;
+
+					margin: 0 0 2rem 0;
+
+					.testimonial__content {
+
+						margin-bottom: 0;
+
+					}
+
+				}
+
+				// last child
+				&:last-child {
+
+					margin-bottom: 0;
+
+				}
+
+			}
+
+		}
+
+		// attribution
+		&__attribution {
+
+			@include flex-h-c-v-c( true );
+
+			margin: 2rem 0 0 0;
+
+			@include font( $klavika, 1.25rem, 700, italic );
+
+			@include typo( 2rem, 0.065em );
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				margin: 0 0 0 0;
+
+				@include font( $klavika, 0.875rem, 700, italic );
+
+			}
+
+		}
+
+		// context
+		&__context {
+
+			@include flex-h-c-v-c( false );
+
+			margin: 0 0 0 0;
+
+			@include font( $klavika, 1.25rem, 400, italic );
+
+			@include typo( 1rem, 0.065em );
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				@include font( $klavika, 0.875rem, 400, italic );
+
+			}
+
+		}
+
+	}

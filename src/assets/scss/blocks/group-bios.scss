@@ -1,4 +1,5 @@
 .group-bios {
+
 	padding: 8vw;
 
 	&__heading {
@@ -40,8 +41,11 @@
 	}
 
 	&__image {
+
 		max-width: 150px;
 		margin-bottom: .5rem;
+
+		@include shadowbox( 1.5rem, 3rem, black, 0.465 );
 
 		@include bpoint(40em) {
 			-ms-grid-row: 1;
@@ -67,11 +71,25 @@
 	}
 
 	&__name {
-		color: $dark;
+
+		display: inline-block;
+
+		color: $g140;
 		font-family: $vitesse;
 		font-size: 1em;
 		font-weight: 400;
 		text-transform: none;
+
+		text-decoration: none;
+
+		transition: all 220ms linear 0ms;
+
+		// hover state
+		&:hover {
+
+			color: $dark;
+
+		}
 
 		@include bpoint(40em) {
 			font-size: 1.125em;
@@ -79,6 +97,9 @@
 	}
 
 	&__desc {
+
+		margin: 0 0 1rem 0;
+
 		font-size: .875em;
 		font-weight: 400;
 	}
@@ -87,6 +108,14 @@
 		font-family: $vitesse;
 		font-size: .9375em;
 		font-weight: 400;
+
+		a {
+
+			text-decoration: none;
+
+			@include color( $g140, 0.000 );
+
+		}
 
 		&-detail {
 			font-weight: 700;

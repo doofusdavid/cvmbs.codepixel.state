@@ -1,0 +1,26 @@
+// stylesheet :: text editor block styles
+
+    // settings
+    $text : 1rem;
+
+    // styles
+    .template-block {
+
+        // class hook
+        &.text-editor {
+
+            // text
+            p {
+
+                // last child
+                &:last-child {
+
+                    margin-bottom: 0;
+
+                }
+
+            }
+
+        }
+
+    }

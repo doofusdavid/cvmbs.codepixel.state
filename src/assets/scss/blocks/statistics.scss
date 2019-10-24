@@ -1,0 +1,150 @@
+// stylesheet :: statistics array styles
+
+    // settings
+    $infostats : 1rem;
+
+    // styles
+    .template-block {
+
+        // class hook
+        &.statistics {
+
+            padding: 3rem 5rem 3rem 5rem;
+
+            // @include fill( $pagebase, 0.000 );
+
+            // thirds
+            .content-row {
+
+                @include flex-h-j-v-c( false );
+
+                padding: 3rem 0 3rem 0;
+
+                // border-top: 1px solid transparentize( $app05, 0.385 );
+                // border-bottom: 1px solid transparentize( $app05, 0.385 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    // padding: 2rem 0 0 0;
+
+                }
+
+            }
+
+            // content blocks
+            .content-block {
+
+                @include flex-v-c-h-c( false );
+
+                @include text( none, center );
+
+                flex-basis: 33.3333333%;
+
+                height: 100%;
+                padding: 2rem 2rem 2rem 2rem;
+
+                border-right: 1px solid grey;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    border-right: none;
+                    // border-bottom: 1px solid transparentize( $app05, 0.385 );
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    padding: 2rem 0 2rem 0;
+
+                }
+
+                // last child
+                &:last-child {
+
+                    border-right: none;
+
+                }
+
+                // second block
+                &:nth-child( 2 ) {
+
+                    // number
+                    .number {
+
+                        @include font( $vitesse, 5.5rem, 600 );
+
+                        @include typo( 4rem, -0.025em );
+
+                        @include color( $g140, 0.000 );
+
+                    }
+
+                    // title
+                    .title {
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                }
+
+            }
+
+            // common
+            span {
+
+                display: block;
+
+            }
+
+            // number
+            .number {
+
+                margin: 0 0 1rem 0;
+
+                @include font( $klavislim, 6rem, 500 );
+
+                @include typo( 4rem, 0.025em );
+
+                @include color( $cvellow, 0.000 );
+
+            }
+
+            // title
+            .title {
+
+                width: 80%;
+                margin: 0 0 1rem 0;
+                padding: 0 0 1rem 0;
+
+                border-bottom: 2px dotted transparentize( $app05, 0.645 );
+
+                @include font( $klavislim, 2.25rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 2.5rem, -0.025em );
+
+                @include color( $g140, 0.000 );
+
+            }
+
+            // caption
+            .caption {
+
+                @include font( $klavislim, 1.5rem, 400 );
+
+                @include typo( 2rem, -0.025em );
+
+                @include color( $app05, 0.565 );
+
+            }
+
+        }
+
+    }

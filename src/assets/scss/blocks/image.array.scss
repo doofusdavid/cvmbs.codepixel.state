@@ -1,0 +1,86 @@
+// stylesheet :: image array content block styles
+
+    // settings
+    $images : auto;
+    $pagebase : #E5E7E7;
+
+    // styles
+    .template-block {
+
+        &.image-array {
+
+            padding: 3rem 5rem 3rem 5rem;
+
+            @include fill( $pagebase, 0.000 );
+
+            // row
+            .content-row {
+
+                // class
+                &.thirds {
+
+                    @include flex-h-j-v-c( false );
+
+                    // blocks
+                    .content-block {
+
+                        @include flex-h-c-v-c( false );
+
+                        flex-basis: 33.3333333%;
+
+                        height: 100%;
+                        padding: 2rem 2rem 2rem 2rem;
+
+                        border-right: 1px solid grey;
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            border-right: none;
+                            border-bottom: 1px solid transparentize( $app05, 0.385 );
+
+                        }
+
+                        // last child
+                        &:last-child {
+
+                            border-right: none;
+
+                        }
+
+                        // images
+                        img {
+
+                            width: 100%;
+
+                        }
+
+                    }
+
+                }
+
+                // halfsies
+                &.halfsies {
+
+                    @include flex-h-j-v-c( false );
+
+                    // padding: 3rem 0 0 0;
+
+                    // border-top: 1px solid transparentize( $app05, 0.385 );
+
+                }
+
+                // full
+                &.full {
+
+                    // padding: 3rem 0 0 0;
+
+                    // border-top: 1px solid transparentize( $app05, 0.385 );
+
+                }
+
+            }
+
+        }
+
+    }

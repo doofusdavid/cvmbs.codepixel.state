@@ -75,7 +75,11 @@
 
             ?>
 
-            <?php research_topic_menu(); ?>
+            <?php
+
+                // research_topic_menu();
+
+            ?>
 
         </div>
 
