@@ -608,7 +608,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
+                            "collapsed": "field_5cabc5f956774",
                             "min": 1,
                             "max": 0,
                             "layout": "row",
@@ -752,6 +752,22 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": ""
+                                },
+                                {
+                                    "key": "field_5db1f584fd51c",
+                                    "label": "Directory Link",
+                                    "name": "directory_link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "https:\/\/vetmedbiosci.colostate.edu\/directory",
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -1802,5 +1818,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1570109748
+    "modified": 1571943977
 }
