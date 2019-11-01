@@ -87,6 +87,10 @@ $block_path = 'elements/blocks/flexible/';
 
 	                        get_template_part( $block_path . 'styled.list' );
 
+						elseif ( get_row_layout() == 'custom_menu' ) :
+
+	                        get_template_part( $block_path . 'custom.menu' );
+
 						else:
 
 							// no blocks found

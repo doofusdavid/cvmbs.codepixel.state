@@ -57,15 +57,16 @@
 
                 foreach( $areas as $area ) {
 
-                    $title  = $area[ 'area' ];
+                    $title = $area[ 'area' ];
+                    $link  = $area[ 'link' ];
 
                     $content .= '
 
-                        <span class="expertise-area">
+                        <a href="' . $link . '" class="expertise-area">
 
                             ' . $title . '
 
-                        </span>
+                        </a>
 
                     ';
 

@@ -13,6 +13,13 @@
 
             @include fill( $pagebase, 0.000 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 1rem 2rem 1rem 2rem;
+
+            }
+
             // row
             .content-row {
 
@@ -20,6 +27,13 @@
                 &.thirds {
 
                     @include flex-h-j-v-c( false );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include flex-v-t-h-st( false );
+
+                    }
 
                     // blocks
                     .content-block {
@@ -36,8 +50,7 @@
                         // mobile
                         @include breakpoint ( small only ) {
 
-                            border-right: none;
-                            border-bottom: 1px solid transparentize( $app05, 0.385 );
+                            border: none;
 
                         }
 
@@ -64,9 +77,12 @@
 
                     @include flex-h-j-v-c( false );
 
-                    // padding: 3rem 0 0 0;
+                    // mobile
+                    @include breakpoint ( small only ) {
 
-                    // border-top: 1px solid transparentize( $app05, 0.385 );
+                        @include flex-v-t-h-st( false );
+
+                    }
 
                 }
 

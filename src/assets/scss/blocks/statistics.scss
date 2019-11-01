@@ -13,6 +13,13 @@
 
             // @include fill( $pagebase, 0.000 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 1rem 2rem 1rem 2rem;
+
+            }
+
             // thirds
             .content-row {
 

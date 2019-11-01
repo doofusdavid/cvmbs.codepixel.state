@@ -2149,6 +2149,46 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5db2218939db6": {
+                    "key": "layout_5db2218939db6",
+                    "name": "custom_menu",
+                    "label": "Custom Menu",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5db225bdc22be",
+                            "label": "Menus",
+                            "name": "menus",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "None",
+                                "18": "About Menu",
+                                "7": "Academic Departments",
+                                "9": "College Resources",
+                                "8": "Quick Links",
+                                "58": "Research Topics Menu",
+                                "6": "Site Menu"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -2175,5 +2215,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571927993
+    "modified": 1571956592
 }
