@@ -45,7 +45,11 @@
 		max-width: 150px;
 		margin-bottom: .5rem;
 
-		@include shadowbox( 1.5rem, 3rem, black, 0.465 );
+		img {
+
+			@include shadowbox( 1.5rem, 3rem, black, 0.465 );
+
+		}
 
 		@include bpoint(40em) {
 			-ms-grid-row: 1;
