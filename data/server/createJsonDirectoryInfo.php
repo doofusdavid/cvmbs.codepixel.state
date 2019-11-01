@@ -136,10 +136,15 @@
                     break;
 
                 case 209 :
-                case 205 :
 
                     $directoryGroupId   = 1004;
                     $directoryGroupName = 'Microbiology, Immunology, and Pathology';
+                    break;
+
+                case 205 :
+
+                    $directoryGroupId   = 1004;
+                    $directoryGroupName = 'Cell and Molecular Biology';
                     break;
 
                 case 208 :
@@ -169,13 +174,15 @@
                 case 674 :
                 case 539 :
 
-                    $directoryGroupId   = 1008;
+                    // $directoryGroupId   = 1008;
+                    $directoryGroupId   = 1005;
                     $directoryGroupName = 'Center for Environmental Medicine';
                     break;
 
                 case 206 :
 
-                    $directoryGroupId   = 1009;
+                    // $directoryGroupId   = 1009;
+                    $directoryGroupId   = 1003;
                     $directoryGroupName = 'Molecular, Cellular, and Integrative Neurosciences';
                     break;
 
@@ -185,7 +192,7 @@
                     $directoryGroupName = 'undefined';
 
             }
-
+            
             // setup variables
             $email = strtolower( $member->EmailAddress );
             $name  = $member->FirstName . ' ' . $member->LastName;
