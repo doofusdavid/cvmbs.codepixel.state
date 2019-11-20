@@ -1,8 +1,11 @@
 <?php
 
-    $labs = get_sites();
+    $args = array(
+        'number' => 999,
+        'public' => 1
+    );
 
-    global $blog_id;
+    $labs = get_sites( $args );
 
 ?>
 
