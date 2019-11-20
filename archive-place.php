@@ -43,7 +43,7 @@
 				while ( have_posts() ) : the_post();
 
 				$place_name  = get_the_title();
-                $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+				$place_image = get_the_post_thumbnail_url( $post->ID, 'fp-small' );
 
 				$place_link_status = get_field( 'place_link' );
 
