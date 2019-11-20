@@ -109,10 +109,10 @@
 	    </section>
 	    <!-- END content -->
 
-        <?php get_template_part( 'elements/layout/layout.footer' ); ?>
-
 	</div>
 	<!-- END container -->
+
+	<?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
 </main>
 <!-- site.layout -->
