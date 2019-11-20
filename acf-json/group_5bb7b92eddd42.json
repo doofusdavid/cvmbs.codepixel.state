@@ -19,7 +19,8 @@
                 "college": "College",
                 "department": "Department",
                 "special": "Special Unit",
-                "laboratory": "Laboratory"
+                "laboratory": "Laboratory",
+                "dvm": "DVM"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -27,47 +28,6 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
-        },
-        {
-            "key": "field_5bb7c9e0a4886",
-            "label": "Site Title",
-            "name": "site_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "department"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "special"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5bb7b9496d2a5",
-                        "operator": "==",
-                        "value": "laboratory"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5c3f576f2256e",
@@ -98,6 +58,54 @@
             "multiple": 1,
             "return_format": "object",
             "ui": 1
+        },
+        {
+            "key": "field_5bb7c9e0a4886",
+            "label": "Site Title",
+            "name": "site_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "laboratory"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "dvm"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5d5aef06e040e",
@@ -177,6 +185,13 @@
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
                         "value": "laboratory"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "dvm"
                     }
                 ]
             ],
@@ -289,6 +304,13 @@
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
                         "value": "laboratory"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
                     }
                 ]
             ],
@@ -551,5 +573,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1568728955
+    "modified": 1573234973
 }

@@ -43,9 +43,6 @@
     // responsive image sizes
     require_once( 'library/responsive-images.php' );
 
-    // protocol relative urls
-    // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
-
     // custom image sizes
     add_image_size( 'x-large', 1920, 1920, false );
 
@@ -77,4 +74,32 @@
         }
 
         return $expired;
+    }
+
+    // determine if an item is expired - date should be passed in using 'Ymd' format
+    function is_this_item_expired_yet( $expiration ) {
+
+        // construct timestamp
+        $timestamp_default = date( 'Ymd-is' );
+        $timestamp_hour    = date( 'H' );
+        $timestamp_offset  = $timestamp_hour - 7;
+        $timestamp_setup   = explode( '-', $timestamp_default );
+
+        $current_timestamp = $timestamp_setup[ 0 ] . $timestamp_offset . $timestamp_setup[ 1 ];
+
+        $expired = true;
+
+        if ( !( $expiration ) ) {
+
+            $expired = false; // if no expiration set, this item cannot expire
+
+        } elseif ( $expiration >= $current_timestamp ) {
+        // } elseif ( $expiration >= date( 'YmdHis' ) ) {
+
+            $expired = false;
+
+        }
+
+        return $expired;
+
     }

@@ -2,7 +2,11 @@
 
 	// template name: Homepage
 
+    // site type
     $site_type = get_field( 'site_type', 'options' );
+
+    // parse URL for site path
+    $siteurl = str_replace( '/', '', $siteinfo->path );
 
 ?>
 
@@ -23,6 +27,10 @@
             get_template_part( 'elements/homepage/laboratory/laboratory.homepage' );
 
         } else if ( $site_type == 'special' ) {
+
+            get_template_part( 'elements/homepage/special/special.homepage' );
+
+        } else if ( $site_type == 'dvm' ) {
 
             get_template_part( 'elements/homepage/dvm/dvm.homepage' );
 

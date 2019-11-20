@@ -1,0 +1,16 @@
+// stylesheet :: global special unit styless
+
+    // settings
+    $special : 1rem;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.special {
+
+            @include color( white, 0.000 );
+
+        }
+
+    }

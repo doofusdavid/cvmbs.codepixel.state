@@ -1,0 +1,167 @@
+// stylesheet :: special unit events styles
+
+    // settings
+    $special : 1rem;
+
+    // styles
+    .events {
+
+        @include flex-h-j-v-s( false )
+
+        padding: 0 0 0 0;
+
+        @include fill( $g135, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            @include flex-v-t-h-st( false );
+
+        }
+
+        // title
+        .section-title {
+
+            @include flex-h-e-v-t( true );
+
+            width: 25vw;
+            // height: 8rem;
+            padding: 2rem 2rem 0 0;
+
+            @include font( $klavislim, 1.5rem, 400 );
+
+            @include text( $up, right );
+
+            @include typo( 0.75rem, 0.045em );
+
+            // @include color( $gold, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-h-s-v-t( true );
+
+                width: 100vw;
+                padding: 3rem 3rem 3rem 3rem;
+
+                text-align: left;
+
+                @include typo( 1rem, 0.045em );
+
+            }
+
+        }
+
+        // list
+        .events-list {
+
+            @include flex-h-j-v-s( true );
+
+            width: 75vw;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                width: 100vw;
+
+            }
+
+            // link
+            .event-link {
+
+                @include flex-v-t-h-s( true );
+
+                flex-basis: 33.3333333%;
+
+                height: 8rem;
+                height: auto;
+                padding: 2rem 2rem 2rem 2rem;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                text-decoration: none;
+
+                @include typo( 0.75rem, 0.035em );
+
+                @include color( white, 0.000 );
+
+                transition: all 220ms linear 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    padding: 3rem 3rem 3rem 3rem;
+
+                }
+
+                &:nth-of-type( 1 ),
+                &:nth-of-type( 2 ),
+                &:nth-of-type( 3 ) {
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( white, 0.965 );
+
+                    }
+
+                }
+
+                // 1
+                &:nth-of-type( 1 ) {
+
+                    // @include fill( $cvnavy, 0.925 );
+                    @include fill( black, 0.925 );
+
+                }
+
+                // 2
+                &:nth-of-type( 2 ) {
+
+                    // @include fill( $cvnavy, 0.825 );
+                    @include fill( black, 0.825 );
+
+                }
+
+                // 3
+                &:nth-of-type( 3 ) {
+
+                    // @include fill( $cvnavy, 0.725 );
+                    @include fill( black, 0.725 );
+
+                }
+
+                // common
+                span {
+
+                    display: block;
+
+                }
+
+                // title
+                .event-title {
+
+                    margin: 0 0 0.5rem 0;
+
+                    @include font( $industry, 0.875rem, 700 );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // text
+                .event-text {
+
+                    @include font( $industry, 0.75rem, 500 );
+
+                    @include typo( 1.25rem, 0.035em );
+
+                }
+
+            }
+
+        }
+
+    }

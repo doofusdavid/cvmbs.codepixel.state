@@ -1,0 +1,174 @@
+// stylesheet :: special unit launchpad styles
+
+    // settings
+    $special : 1rem;
+
+    // styles
+    .launchpads {
+
+        position: relative;
+
+        @include flex-h-s-v-t( false );
+
+        flex-wrap: wrap;
+
+        padding: 4rem 4rem 4rem 4rem;
+
+        @include fill( $dark, 0.000 );
+
+        @include gradient(
+
+            180deg,
+            transparent, 1.000, 0%,
+            // $roarange, 0.105, 100%
+            $beige, 0.105, 100%
+
+        );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            @include flex-v-t-h-st( false );
+
+            padding: 2rem 2rem 2rem 2rem;
+
+        }
+
+        // layout three
+        &.three {
+
+            // launchpad
+            .launchpad {
+
+                width: calc( 33.3333333% - 2rem );
+
+            }
+
+        }
+
+        // layout four
+        &.four {
+
+            // launchpad
+            .launchpad {
+
+                width: calc( 25% - 2rem );
+
+            }
+
+        }
+
+        // layout multiples
+        &.multiples {
+
+            // launchpad
+            .launchpad {
+
+                width: calc( 33.3333333% - 2rem );
+
+            }
+
+        }
+
+        // pattern
+        .pattern-overlay {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            background: {
+
+                image: url(../img/patterns/pattern.horizontal.png);
+                repeat: no-repeat;
+                position: top left;
+
+            }
+
+            // opacity: 0.385;
+
+        }
+
+        // launchpad
+        .launchpad {
+
+            position: relative;
+
+            z-index: 20;
+
+            @include flex-h-e-v-b( true );
+
+            height: 14rem;
+            margin: 1rem 1rem 1rem 1rem;
+            padding: 2rem 2rem 2rem 2rem;
+
+            @include font( $klavislim, 1.125rem, 400 );
+
+            @include text( $up, right );
+
+            @include typo( 1.5rem, 0.045em );
+
+            text-decoration: none;
+
+            @include color( $app05, 0.125 );
+            @include color( white, 0.000 );
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+            @include shadowbox( 1rem, 3rem, black, 0.465 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: calc( 100% - 2rem ) !important;
+
+            }
+
+            // after
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 1;
+
+                @include gradient(
+
+                    180deg,
+                    transparent, 1.000, 0%,
+                    // $cvnavy, 0.105, 100%
+                    $dark, 0.105, 100%
+
+                );
+
+            }
+
+            // title=
+            .title {
+
+                position: relative;
+
+                z-index: 10;
+
+            }
+
+        }
+
+    }

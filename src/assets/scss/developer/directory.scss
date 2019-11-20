@@ -1060,7 +1060,11 @@
         // record
         .directory-listing {
 
-            overflow: hidden;
+            // overflow: hidden;
+
+            // @include flex-h-j-v-t( false );
+
+            min-height: 36rem;
 
             // profile
             .listing-profile {
@@ -1072,6 +1076,13 @@
                 width: 16rem;
 
                 @include text( none, center );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    min-height: 0;
+
+                }
 
                 // mobile
                 @include breakpoint ( medium down ) {
@@ -1108,6 +1119,8 @@
                         position: center center;
 
                     }
+
+                    @include shadowbox( 1rem, 3.5rem, black, 0.465 );
 
                 }
 
@@ -1167,6 +1180,8 @@
                     @include color( white, 0.000 );
 
                     @include fill( $cvnavy, 0.000 );
+
+                    @include shadowbox( 1rem, 2.5rem, black, 0.415 );
 
                     transition: all 220ms linear 0ms;
 
@@ -1252,6 +1267,12 @@
 
         // developer
         .developer {
+
+            position: relative;
+
+            z-index: 200;
+
+            color: white;
 
             // hide
             &.hide {

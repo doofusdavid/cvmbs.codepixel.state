@@ -1,0 +1,59 @@
+// stylesheet :: special unit description block styles
+
+    // settings
+    $special : 1rem;
+
+    // styles
+    .special-description {
+
+        padding: 5rem 5rem 5rem 5rem;
+
+        @include color( $app05, 0.145 );
+
+        @include fill( $beige, 0.000 );
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 3rem 3rem 3rem 3rem;
+
+        }
+
+        // title
+        .description-title {
+
+            margin: 0 0 1rem 0;
+
+            @include typo( 2rem, 0.035em );
+
+            @include color( $g140, 0.000 );
+
+        }
+
+        // text
+        .description-text {
+
+            @include font( $industry, 0.875rem, 500 );
+
+            // paragraph
+            p {
+
+                // last child
+                &:last-child {
+
+                    margin-bottom: 0;
+
+                }
+
+                // bold
+                strong {
+
+                    @include font( $industry, 0.875rem, 700 );
+
+                }
+
+            }
+
+        }
+
+    }

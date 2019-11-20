@@ -29,6 +29,24 @@
 
     }
 
+    // site type
+    $site_type = get_field( 'site_type', 'options' );
+
+    // set contact info heading
+    if ( $site_type == 'laboratory' ) {
+
+        $contact_article = 'the laboratory';
+
+    } else if ( $site_type == 'special' ) {
+
+        $contact_article = 'us';
+
+    } else {
+
+        $contact_article = 'the college';
+
+    }
+
 ?>
 
 <!-- site.footer -->
@@ -109,7 +127,7 @@
                 <h2 class="links-header">
 
                     <!-- get in touch -->
-                    contact the college
+                    contact <?php echo $contact_article; ?>
 
                 </h2>
 

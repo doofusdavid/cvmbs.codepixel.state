@@ -1,0 +1,200 @@
+// stylesheet :: special unit giving styles
+
+    // settings
+    $special : 1rem;
+
+    // styles
+    .giving {
+
+        position: relative;
+
+        @include fill( $dark, 0.000 );
+
+        text-align: center;
+
+        // design
+        .design-layer {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 20;
+
+            width: 100%;
+            height: 100%;
+
+            // common
+            .layer {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+            // image
+            .image {
+
+                z-index: 10;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+            }
+
+            // color
+            .color {
+
+                z-index: 20;
+
+                @include fill( $dark, 0.765 );
+
+            }
+
+        }
+
+        // content
+        .content-layer {
+
+            position: relative;
+
+            z-index: 100;
+
+        }
+
+        // content
+        .content-layer {
+
+            @include flex-v-c-h-c( false );
+
+            width: 100vw;
+            height: 100%;
+            padding: 10rem 10rem 10rem 10rem;
+
+            @include fill( $dark, 0.465 );
+
+            background: {
+
+                image:
+
+                    linear-gradient(
+
+                        0deg,
+                        transparentize( $g140, 0.000 ) 0%,
+                        transparent 80%
+
+                    )
+
+                ;
+
+            }
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+                padding: 4rem 3rem 4rem 3rem;
+
+            }
+
+            // headline
+            .headline {
+
+                margin: 0 0 1rem 0;
+
+                @include font( $klavislim, 2rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 3rem, 0.085em );
+
+                @include color( $gold, 0.000 );
+
+            }
+
+            // text
+            .text {
+
+                margin: 0 0 2rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include text( none );
+
+                @include typo( 1.5rem, 0.035em );
+
+            }
+
+            // button
+            .content-button {
+
+                @include flex-h-c-v-c( false );
+
+                height: 4rem;
+                margin: 0;
+                padding: 0.125rem 1.5rem 0 1.5rem;
+
+                border: 1px solid $campaign;
+
+                @include font( $vitesse, 1.375rem, 700 );
+
+                @include text( $up );
+
+                text-decoration: none;
+
+                @include typo( 0.75rem, 0.065em );
+
+                @include color( white, 0.000 );
+
+                @include fill( white, 0.985 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                transition: all 220ms linear 0ms;
+
+                text-decoration: none;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    height: 5rem;
+
+                    @include typo( 1.5rem, 0.065em );
+
+                }
+
+                // hover state
+                &:hover,
+                &:focus,
+                &:active {
+
+                    // border-color: white;
+
+                    // @include color( $campaign, 0.000 );
+
+                    @include fill( $dark, 0.465 );
+
+                    cursor: pointer;
+
+                }
+
+            }
+
+        }
+
+    }

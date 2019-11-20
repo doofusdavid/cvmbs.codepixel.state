@@ -1,10 +1,10 @@
-// stylesheet :: special unit layout styles
+// stylesheet :: dvm unit layout styles
 
     // settings
     $billboard : 1rem;
 
     // styles
-    #site-layout.special {
+    #site-layout.dvm {
 
         position: relative;
 
@@ -573,7 +573,7 @@
         }
 
         // content
-        #special-content {
+        #dvm-content {
 
             position: relative;
 
@@ -632,7 +632,7 @@
     }
 
     // sections
-    .special-content-section {
+    .dvm-content-section {
 
         position: relative;
 

@@ -5,15 +5,15 @@
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content special" data-off-canvas-content>
+<main id="site-layout" class="off-canvas-content dvm" data-off-canvas-content>
 
     <?php get_template_part( 'elements/homepage/dvm/panels/panel.billboard' ); ?>
 
-    <!-- special content -->
-    <section id="special-content" class="homepage-content">
+    <!-- dvm content -->
+    <section id="dvm-content" class="homepage-content">
 
         <!-- content section -->
-        <div id="panel-overview" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.02.jpg">
+        <div id="panel-overview" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.02.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.overview' ); ?>
 
@@ -21,7 +21,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-video" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.01.jpg">
+        <div id="panel-video" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.01.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.video' ); ?>
 
@@ -29,7 +29,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-snapshot" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.12.jpg">
+        <div id="panel-snapshot" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.12.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.snapshot' ); ?>
 
@@ -37,7 +37,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-curriculum" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.03.jpg">
+        <div id="panel-curriculum" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.03.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.curriculum' ); ?>
 
@@ -45,7 +45,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-degrees" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.01.jpg">
+        <div id="panel-degrees" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.01.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.degrees' ); ?>
 
@@ -53,7 +53,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-support" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/content.background.08.jpg">
+        <div id="panel-support" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/content/dvm/content.background.08.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.support' ); ?>
 
@@ -61,7 +61,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-opportunities" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.21.jpg">
+        <div id="panel-opportunities" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/billboard.21.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.opportunities' ); ?>
 
@@ -69,7 +69,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-questions" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.04.jpg">
+        <div id="panel-questions" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.04.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.questions' ); ?>
 
@@ -77,7 +77,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-highschool" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.05.jpg">
+        <div id="panel-highschool" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.05.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.highschool' ); ?>
 
@@ -85,7 +85,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-visit" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.13.jpg">
+        <div id="panel-visit" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.13.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.visit' ); ?>
 
@@ -93,7 +93,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-application" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/">
+        <div id="panel-application" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.application' ); ?>
 
@@ -101,7 +101,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-admissions" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/">
+        <div id="panel-admissions" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.admissions' ); ?>
 
@@ -109,7 +109,7 @@
         <!-- END content section -->
 
         <!-- content section -->
-        <div id="panel-contact" class="special-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.06.jpg">
+        <div id="panel-contact" class="dvm-content-section lazyload" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif');" data-src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/billboards/dvm/dvm.billboard.06.jpg">
 
             <?php get_template_part( 'elements/homepage/dvm/panels/panel.contact' ); ?>
 
@@ -117,7 +117,7 @@
         <!-- END content section -->
 
     </section>
-    <!-- END special content -->
+    <!-- END dvm content -->
 
     <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 

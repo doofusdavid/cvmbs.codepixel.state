@@ -1,0 +1,375 @@
+// stylesheet :: laboratory billboard styles
+
+    // settings
+    $billboard : 1rem;
+
+    // styles
+    .special-unit-homepage-billboard {
+
+        position: relative;
+
+        @include flex-h-j-v-s( false );
+
+        min-height: 60vh;
+        padding: 5rem 0 0 0;
+
+        overflow: hidden;
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            @include flex-v-t-h-st( false );
+
+            padding: 4rem 0 0 0;
+
+        }
+
+        // billboard content
+        .billboard-content {
+
+            position: relative;
+
+            z-index: 10;
+
+            @include flex-v-b-h-s( false );
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+
+            }
+
+            // announcement
+            &.announcement {
+
+                width: 70vw;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100vw;
+
+                }
+
+            }
+
+            // expired
+            &.expired {
+
+                width: 100vw;
+
+            }
+
+            // custom
+            &.custom {
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    min-height: 50vh;
+                    padding: 5rem 0 0 0;
+
+                }
+
+                // overlay
+                &:before {
+
+                    // content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    // @include gradient( 180deg, transparent, 1.000, 0%, $nite, 0.000, 100% );
+
+                    @include fill( $white, 0.105 );
+                    @include fill( $dark, 0.465 );
+
+                }
+
+                // gradient
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 20;
+
+                    @include gradient(
+
+                        180deg,
+                        transparent, 1.000, 0%,
+                        $dark, 0.365, 100%
+
+                    );
+
+                    background: {
+
+                        image:
+
+                            linear-gradient(
+
+                                180deg,
+                                transparent 0%,
+                                transparentize( $dark, 0.365 ) 100%
+
+                            ),
+
+                            linear-gradient(
+
+                                225deg,
+                                transparent 50%,
+                                transparentize( $g135, 0.365 ) 100%
+
+                            ),
+
+                            linear-gradient(
+
+                                200deg,
+                                transparent 30%,
+                                transparentize( $nite, 0.000 ) 100%
+
+                            )
+
+                        ;
+
+                    }
+
+                }
+
+                // header
+                #homepage-title {
+
+                    position: relative;
+
+                    z-index: 100;
+
+                    @include flex-v-b-h-s( false );
+
+                    padding: 0 0 5rem 5rem;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 0 3rem 3rem 3rem;
+
+                    }
+
+                    // title
+                    .title {
+
+                        @include flex-v-b-h-s( true );
+
+                        // height: 3rem;
+                        margin: 0 0 0 0;
+                        padding: 0.25rem 1rem 0 0;
+
+                        @include font( $klavislim, 4.5rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 2.5rem, 0.035em );
+
+                        @include color( $campaign, 0.000 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include font( $klavislim, 3rem, 400 );
+
+                        }
+
+                    }
+
+                    // text
+                    .text {
+
+                        @include flex-h-s-v-c( false );
+
+                        margin: 1.5rem 0 0 0;
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        @include typo( 1.25rem, 0.045em );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include font( $industry, 0.75rem, 600 );
+
+                            @include typo( 1.125rem, 0.045em );
+
+                            // line break
+                            br {
+
+                                @include hide;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // default
+            &.default {
+
+                // overlay
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    // @include gradient( 180deg, transparent, 1.000, 0%, $nite, 0.000, 100% );
+
+                    @include fill( $white, 0.105 );
+                    @include fill( $dark, 0.765 );
+
+                }
+
+                // gradient
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 20;
+
+                    @include gradient(
+
+                        0deg,
+                        $dark, 0.000, 0%,
+                        transparent, 1.000, 80%
+
+                    );
+
+                }
+
+                // header
+                #homepage-title {
+
+                    position: relative;
+
+                    z-index: 100;
+
+                    @include flex-v-b-h-s( false );
+
+                    padding: 0 0 3rem 5rem;
+
+                    @include font( $klavislim, 2rem, 400 );
+
+                    // @include text( $up );
+
+                    @include typo( 2.5rem, 0.035em );
+
+                    @include color( white, 0.000 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 100%;
+                        max-width: none;
+                        padding: 0 2rem 2rem 2rem;
+
+                    }
+
+                    // title
+                    .title {
+
+                        @include flex-v-b-h-s( true );
+
+                        // height: 3rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0.25rem 1rem 0 0;
+
+                        @include font( $klavislim, 3.5rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 2.5rem, 0.035em );
+
+                        // @include fill( red, 0.675 );
+
+                    }
+
+                    // text
+                    .text {
+
+                        @include flex-h-s-v-c( false );
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        @include typo( 1.25rem, 0.045em );
+
+                    }
+
+                }
+
+            }
+
+            // overlay
+            &:before {
+
+                // content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                // @include gradient( 180deg, transparent, 1.000, 0%, $nite, 0.000, 100% );
+
+                @include fill( $white, 0.105 );
+                @include fill( $dark, 0.465 );
+
+            }
+
+            // gradient
+            &:after {
+
+                // content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 20;
+
+                @include gradient( 200deg, transparent, 1.000, 20%, $cvnavy, 0.105, 100% );
+
+            }
+
+        }
+
+    }
