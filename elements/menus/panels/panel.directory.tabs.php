@@ -60,7 +60,8 @@
 
                 $directory_type = 'department';
 
-            } elseif ( $site_type == 'college' ) {
+            // } elseif ( $site_type == 'college' ) {
+            } else {
 
                 $directory_type = 'college';
 
@@ -120,7 +121,7 @@
                     <?php
 
                         // college data
-                        if ( $site_type == 'college' ) {
+                        if ( $site_type == 'college' || $site_type == 'dvm' || $site_type == 'special' || $site_type == 'laboratory' ) {
 
                             foreach ( $members as $member ) {
 
