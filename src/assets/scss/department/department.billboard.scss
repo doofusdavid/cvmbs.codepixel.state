@@ -11,7 +11,8 @@
         @include flex-v-b-h-s( false );
 
         width: 100vw;
-        padding: 40vw 0 0 0;
+        min-height: 60vh;
+        // padding: 40vw 0 0 0;
 
         background: no-repeat center center / cover;
 

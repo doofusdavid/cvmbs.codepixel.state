@@ -16,6 +16,14 @@
         background: no-repeat center center / cover;
 
         // mobile
+        @include breakpoint ( medium ) {
+
+            min-height: 60vh;
+            // padding: 60vh 0 0 0;
+
+        }
+
+        // mobile
         @include breakpoint ( small only ) {
 
             padding: 30vh 0 0 0;
