@@ -33,24 +33,34 @@ $btn_bg: #236670;
 
 			&:nth-child(odd) {
 
-				margin-left: 0;
+				// margin-left: 0;
 
 			}
 
 		}
 
 		@include bpoint(desktop) {
+
 			.grid--3-columns & {
-				width: calc((100% / 3) - (1rem * 2 / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
 
-				&:nth-child(odd) {
-					margin-left: 1rem;
-				}
+				width: calc((100% / 3) - (2rem * 2 / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
 
-				&:nth-child(3n+1) {
+				&:nth-child( 1 ) {
+
 					margin-left: 0;
+
 				}
+
+				&:nth-child( odd ) {
+					// margin-left: 1rem;
+				}
+
+				&:nth-child( 3n+1 ) {
+					// margin-left: 0;
+				}
+
 			}
+
 		}
 
 		&-image {
