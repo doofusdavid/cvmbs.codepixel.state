@@ -4,12 +4,13 @@
     $directory : 1rem;
 
     // styles
-    #directory {
+    #directory,
+    #directory-member {
 
         position: relative;
 
         min-height: calc( 100vh - 27rem );
-        padding: 10rem 5rem 5rem 5rem;
+        // padding: 10rem 5rem 5rem 5rem;
 
         @include font( $industry, 0.875rem, 600 );
 
@@ -1060,11 +1061,12 @@
         // record
         .directory-listing {
 
-            // overflow: hidden;
+            overflow: hidden;
 
             // @include flex-h-j-v-t( false );
 
-            min-height: 36rem;
+            // min-height: 36rem;
+            padding: 10rem 5rem 5rem 5rem;
 
             // profile
             .listing-profile {
