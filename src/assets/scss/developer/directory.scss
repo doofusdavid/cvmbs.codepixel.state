@@ -4,13 +4,18 @@
     $directory : 1rem;
 
     // styles
+    #directory {
+
+        padding: 10rem 5rem 5rem 5rem;
+
+    }
+
     #directory,
     #directory-member {
 
         position: relative;
 
         min-height: calc( 100vh - 27rem );
-        // padding: 10rem 5rem 5rem 5rem;
 
         @include font( $industry, 0.875rem, 600 );
 
