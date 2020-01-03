@@ -13,7 +13,9 @@
     $events_panel    = get_field( 'events_menu_panel_content', 'options' );
     $resources_panel = get_field( 'resources_menu_panel_content', 'options' );
     $social_panel    = get_field( 'social_menu_panel_content', 'options' );
-    $contact_panel   = get_field( 'contact_menu_panel_content', 'options' ); ?>
+    $contact_panel   = get_field( 'contact_menu_panel_content', 'options' );
+
+?>
 
 <!-- wrapper -->
 <div class="tabs-content" data-tabs-content="site-menu-toolbar">
@@ -80,7 +82,11 @@
 
     <?php get_template_part( 'elements/menus/panels/panel.search.tabs' ); ?>
 
+    <?php if ( $site_type !== 'special' ) : ?>
+
     <?php get_template_part( 'elements/menus/panels/panel.events.tabs' ); ?>
+
+    <?php endif; ?>
 
     <?php get_template_part( 'elements/menus/panels/panel.directory.tabs' ); ?>
 

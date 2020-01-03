@@ -30,6 +30,8 @@
     </li>
     <!-- END list item -->
 
+    <?php if ( $site_type !== 'special' ) : ?>
+
     <!-- list item -->
     <li class="tabs-title">
 
@@ -37,6 +39,8 @@
 
     </li>
     <!-- END list item -->
+
+    <?php endif; ?>
 
     <!-- list item -->
     <li class="tabs-title">
