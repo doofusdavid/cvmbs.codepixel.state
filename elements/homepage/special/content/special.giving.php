@@ -1,5 +1,7 @@
 <?php
 
+    $giving_layout  = get_sub_field( 'giving_option' );
+
     $giving_content = get_sub_field( 'content' );
 
 ?>
@@ -32,7 +34,7 @@
     <!-- content -->
     <div class="content-layer">
 
-        <?php if ( $giving_content[ 'text' ] ) : ?>
+        <?php if ( $giving_layout ) : ?>
 
         <span class="text">
 
