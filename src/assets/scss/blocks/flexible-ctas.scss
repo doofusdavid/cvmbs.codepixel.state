@@ -2,19 +2,28 @@ $cta_bg: #dadac8;
 $btn_bg: #236670;
 
 .ctas__grid {
+
 	// margin: 2.5em 0;
 
-	@include bpoint(tablet) {
+	// tablet
+	@include bpoint( tablet ) {
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		@include flex-h-c-v-st( false );
+
 	}
 
 	&-item {
+
 		display: flex;
 		flex-direction: column;
+
 		max-width: 25rem;
-		margin: 0 auto 2rem 0;
+		// margin: 0 auto 2rem 0;
+		margin: 1rem 1rem 1rem 1rem;
 
 		@include shadowbox( 1rem, 3.5rem, black, 0.586 );
 
@@ -29,7 +38,7 @@ $btn_bg: #236670;
 
 			width: calc(50% - 1rem);
 			max-width: none;
-			margin: 0 0 0 2rem;
+			margin: 1rem 1rem 1rem 1rem;
 
 			&:nth-child(odd) {
 
@@ -43,11 +52,13 @@ $btn_bg: #236670;
 
 			.grid--3-columns & {
 
-				width: calc((100% / 3) - (2rem * 2 / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
+				// width: calc( ( 100% / 3 ) - ( 2rem * 2 / 3 ) - 1px ); // remove 1px to fix IE not calculating percentages the same as real browsers
+				width: calc( 33.3333333% - 2rem );
+				margin: 1rem 1rem 1rem 1rem;
 
 				&:nth-child( 1 ) {
 
-					margin-left: 0;
+					// margin-left: 0;
 
 				}
 
@@ -57,6 +68,23 @@ $btn_bg: #236670;
 
 				&:nth-child( 3n+1 ) {
 					// margin-left: 0;
+				}
+
+			}
+
+			.grid--2-columns & {
+
+				width: calc((100% / 2) - (2rem * 2 / 2) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
+				margin: 1rem 1rem 1rem 1rem;
+
+				&:nth-child( 1 ) {
+
+					// margin-left: 0;
+
+				}
+
+				&:nth-child( odd ) {
+					// margin-left: 1rem;
 				}
 
 			}

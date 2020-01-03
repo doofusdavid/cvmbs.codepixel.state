@@ -89,7 +89,7 @@
 <main id="site-layout" class="off-canvas-content <?php echo $site_type; ?>" data-off-canvas-content>
 
     <!-- directory -->
-    <div id="directory" class="page-container">
+    <div id="directory-member" class="page-container">
 
         <?php
 
@@ -312,7 +312,7 @@
 
                 <?php if ( count( $directory[ 'degrees' ] ) > 0 ) : ?>
 
-                <!-- listing -->
+                <!-- education -->
                 <div class="listing-group cv">
 
                     <h4>Education</h4>
@@ -334,13 +334,13 @@
                     ?>
 
                 </div>
-                <!-- END listing -->
+                <!-- END education -->
 
                 <?php endif; ?>
 
                 <?php if ( count( $directory[ 'certifications' ] ) > 0 ) : ?>
 
-                <!-- listing -->
+                <!-- certifications -->
                 <div class="listing-group cv">
 
                     <h4>Certifications</h4>
@@ -361,13 +361,13 @@
                     ?>
 
                 </div>
-                <!-- END listing -->
+                <!-- END certifications -->
 
                 <?php endif; ?>
 
                 <?php if ( count( $directory[ 'publications' ] ) > 0 ) : ?>
 
-                <!-- listing -->
+                <!-- publications -->
                 <div class="listing-group cv">
 
                     <h4>Publications</h4>
@@ -387,13 +387,13 @@
                     ?>
 
                 </div>
-                <!-- END listing -->
+                <!-- END publications -->
 
                 <?php endif; ?>
 
                 <?php if ( count( $directory[ 'species' ] ) > 0 ) : ?>
 
-                <!-- listing -->
+                <!-- species interest -->
                 <div class="listing-group interests">
 
                     <h4>Research Specialty</h4>
@@ -415,13 +415,13 @@
                     ?>
 
                 </div>
-                <!-- END listing -->
+                <!-- END species interest -->
 
                 <?php endif; ?>
 
                 <?php if ( count( $directory[ 'links' ] ) > 0 ) : ?>
 
-                <!-- listing -->
+                <!-- links -->
                 <div class="listing-group cv">
 
                     <h4>Links</h4>
@@ -442,7 +442,7 @@
                     ?>
 
                 </div>
-                <!-- END listing -->
+                <!-- END links -->
 
                 <?php endif; ?>
 
@@ -453,9 +453,9 @@
         <!-- END listing -->
 
         <!-- output -->
-        <div class="developer hide">
+        <div class="developer">
 
-            <pre>
+            <pre class="developer">
 
                 <?php
 

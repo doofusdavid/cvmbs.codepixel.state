@@ -20,7 +20,8 @@
                 "department": "Department",
                 "special": "Special Unit",
                 "laboratory": "Laboratory",
-                "dvm": "DVM"
+                "dvm": "DVM",
+                "vth": "VTH"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -93,6 +94,13 @@
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
                         "value": "dvm"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "vth"
                     }
                 ]
             ],
@@ -192,6 +200,13 @@
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
                         "value": "dvm"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "vth"
                     }
                 ]
             ],
@@ -311,6 +326,13 @@
                         "field": "field_5bb7b9496d2a5",
                         "operator": "==",
                         "value": "special"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "vth"
                     }
                 ]
             ],
@@ -573,5 +595,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573234973
+    "modified": 1575584886
 }

@@ -19,16 +19,23 @@
             // menu
             .custom-menu-links {
 
-                @include flex-h-s-v-t( false );
+                margin: 0 0 0 0;
 
-                flex-wrap: wrap;
+                // list
+                ul {
 
-                margin: 0 -0.5rem 0 -0.5rem;
+                    @include flex-h-s-v-t( false );
 
-                list-style: none;
+                    flex-wrap: wrap;
+
+                    margin: 0 -0.5rem 0 -0.5rem;
+
+                    list-style: none;
+
+                }
 
                 // menu items
-                .menu-item {
+                li {
 
                     @include flex-h-c-v-c( true );
 

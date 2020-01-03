@@ -1,10 +1,26 @@
 <?php
-$h_level = get_sub_field('h_level');
-$layout = get_sub_field('layout');
+
+	$h_level = get_sub_field('h_level');
+	$layout = get_sub_field('layout');
+
+	// heading options
+	$heading_option  = get_sub_field( 'heading_option' );
+	$heading_content = get_sub_field( 'heading' );
+
 ?>
 
 <div class="template-block ctas-without-image">
 	<div class="template-block__inner">
+
+		<?php if ( $heading_option ) : ?>
+
+            <<?php echo $heading_content[ 'html_tag' ]; ?> class="description-title">
+
+                <?php echo $heading_content[ 'title' ]; ?>
+
+            </<?php echo $heading_content[ 'html_tag' ]; ?>>
+
+        <?php endif; ?>
 
 		<?php if ( have_rows('ctas') ) : ?>
 

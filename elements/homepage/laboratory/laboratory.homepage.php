@@ -88,7 +88,7 @@
         <!-- slideshow block -->
         <?php if ( $lab_options[ 'slideshow_option' ] ) : ?>
 
-        <?php get_template_part( 'elements/homepage/laboratory/content/content.slideshow' ); ?>
+        <?php get_template_part( 'elements/homepage/laboratory/content/content.slideshow.full' ); ?>
 
         <?php endif; ?>
 

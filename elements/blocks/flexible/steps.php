@@ -1,6 +1,24 @@
+<?php
+
+	// heading options
+	$heading_option  = get_sub_field( 'heading_option' );
+	$heading_content = get_sub_field( 'heading' );
+
+?>
+
 <div class="template-block steps">
 
 	<div class="template-block__inner">
+
+		<?php if ( $heading_option ) : ?>
+
+            <<?php echo $heading_content[ 'html_tag' ]; ?> class="description-title">
+
+                <?php echo $heading_content[ 'title' ]; ?>
+
+            </<?php echo $heading_content[ 'html_tag' ]; ?>>
+
+        <?php endif; ?>
 
         <div class="steps">
 

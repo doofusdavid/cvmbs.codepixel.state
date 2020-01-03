@@ -1,18 +1,16 @@
 <?php
 
+    // base group
+    $homepage_options = get_field( 'vth_homepage_options' );
+
     // get data
-    $launchpads = get_sub_field( 'launchpads' );
+    $launchpads = $homepage_options[ 'launchpads' ];
 
     // count items
     $count = count( $launchpads );
 
     // set layout class
     switch ( true ) {
-
-        case $count < 3 :
-
-            $layout = 'two';
-            break;
 
         case $count == 3 :
 
@@ -38,7 +36,7 @@
 ?>
 
 <!-- launchpads -->
-<section class="homepage-section launchpads <?php echo $layout; ?>">
+<section id="vth-homepage-content" class="<?php echo $layout; ?>">
 
     <!-- pattern -->
     <div class="pattern-overlay">

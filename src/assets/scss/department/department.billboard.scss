@@ -26,6 +26,13 @@
             @include gradient( 180deg, red, 1.000, 0%, $cvnavy, 0.000, 100% );
         }
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            min-height: 50vh;
+
+        }
+
         // title
         #homepage-title {
 
@@ -37,6 +44,13 @@
 
             color: white;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 0 0 2rem 3rem;
+
+            }
+
             // title
             .site-title {
 
@@ -46,7 +60,7 @@
                     position: relative;
 
                     margin: 0 0 0 0;
-                    padding: 1rem 0 1rem 0;
+                    padding: 1rem 0 0 0;
 
                     @include font( $klavislim, 2rem, 400 );
 

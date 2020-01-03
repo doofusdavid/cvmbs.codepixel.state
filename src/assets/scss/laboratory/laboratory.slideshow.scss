@@ -8,7 +8,8 @@
 
         position: relative;
 
-        min-height: 50vh;
+        min-height: 60vh;
+        min-height: 40vh;
         padding: 0 0 0 0;
 
         @include color( white, 0.165 );
@@ -18,8 +19,199 @@
         // mobile
         @include breakpoint ( small only ) {
 
-            min-height: 100vh;
+            min-height: 60vh;
             padding: 0 0 0 0 !important;
+
+        }
+
+        // test rebuild
+        &.build {
+
+            // slide
+            .ui-slide {
+
+                // position: absolute;
+
+                @include flex-h-s-v-t( false );
+
+                display: flex !important;
+
+                min-height: 40vh;
+                margin: 0 0 2rem 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    // position: relative;
+
+                    @include flex-v-t-h-st( false );
+
+                    padding: 0 0 0 0;
+                    // min-height: 100vh;
+
+                }
+
+                // last child
+                &:last-child {
+
+                    margin: 0 0 0 0;
+
+                }
+
+                // image
+                .image-container {
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    // left: 0;
+
+                    z-index: 10;
+
+                    flex-basis: 60%;
+
+                    // width: 100vw;
+                    width: 60%;
+                    // min-height: 50vh;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        right: 0;
+                        bottom: 0;
+
+                        flex-basis: 100%;
+
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                    // after
+                    &:after {
+
+                        // content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 10;
+
+                        @include fill( $dark, 0.365 );
+
+                    }
+
+                }
+
+                // content
+                .content-wrapper {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include flex-v-b-h-s( false );
+
+                    // @include hide;
+
+                    flex-basis: 40%;
+
+                    min-height: 40vh;
+                    height: 100%;
+                    padding: 5rem 5rem 5rem 5rem;
+
+                    @include fill( $nite, 0.000 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include flex-v-b-h-st( false );
+
+                        flex-basis: 100%;
+
+                        height: auto;
+                        min-height: 60vh;
+                        padding: 3rem 4rem 3rem 4rem;
+
+                        @include fill( $cvnavy, 1.000 );
+
+                        @include gradient(
+
+                            0deg,
+                            $dark, 0.125, 50%,
+                            transparent, 1.000, 80%
+
+                        );
+
+                    }
+
+                    // common
+                    &:before,
+                    &:after {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                    }
+
+                    // before
+                    &:before {
+
+                        z-index: -1;
+
+                        background: {
+
+                            image: url(../img/patterns/pattern.horizontal.svg);
+                            repeat: no-repeat;
+                            size: 200% 200%;
+                            position: 200% center;
+
+                        }
+
+                        opacity: 0.165;
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include hide;
+
+                        z-index: -1;
+
+                        @include gradient(
+
+                            0deg,
+                            $roarange, 0.000, 0%,
+                            transparent, 1.000, 100%
+
+                        );
+
+                    }
+
+                }
+
+            }
 
         }
 

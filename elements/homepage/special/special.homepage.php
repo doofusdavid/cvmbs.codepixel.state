@@ -44,10 +44,6 @@
 
                         get_template_part( $template_path . 'special.description' );
 
-                    elseif ( get_row_layout() == 'announcements_content' ) :
-
-                        get_template_part( $template_path . 'special.announcements' );
-
                     elseif ( get_row_layout() == 'launchpad_section' ) :
 
                         get_template_part( $template_path . 'special.launchpads' );

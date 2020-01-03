@@ -34,6 +34,10 @@
 
             get_template_part( 'elements/homepage/dvm/dvm.homepage' );
 
+        } else if ( $site_type == 'vth' ) {
+
+            get_template_part( 'elements/homepage/vth/vth.homepage' );
+
         }
 
     ?>

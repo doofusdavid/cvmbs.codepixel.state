@@ -21,11 +21,19 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		max-width: 100%;
-		min-height: 65vh;
+		min-height: 60vh;
 		padding: 5rem 8vw 1.5rem;
 
 		& > * {
 			max-width: 100%;
+		}
+
+		// mobile
+		@include breakpoint ( small only ) {
+
+			min-height: 50vh;
+			padding: 4rem 3rem 2.5rem 3rem;
+
 		}
 	}
 

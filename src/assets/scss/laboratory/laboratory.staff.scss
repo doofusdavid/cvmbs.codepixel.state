@@ -69,6 +69,10 @@
             // image
             &__image {
 
+                position: relative;
+
+                z-index: 1;
+
                 @include shadowbox( 1.5rem, 3rem, black, 0.465 );
 
                 transform: translate3d( 0, 0, 0 );
@@ -83,6 +87,15 @@
                 }
 
             }
+
+        }
+
+        // details
+        .group-bios__details {
+
+            position: relative;
+
+            z-index: 20;
 
         }
 

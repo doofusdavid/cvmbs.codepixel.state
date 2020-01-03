@@ -23,7 +23,7 @@
 		// container
 		.flexible-page-content {
 
-
+			padding: 2rem 0 2rem 0;
 
 		}
 
@@ -87,6 +87,20 @@
 			&:not(:last-child) {
 
 				margin-bottom: 2em;
+
+			}
+
+		}
+
+		// ctas
+		.ctas-with-image {
+
+			padding: 1rem 4rem 1rem 4rem;
+
+			// mobile
+			@include breakpoint ( small only ) {
+
+				padding: 0 2rem 1rem 2rem;
 
 			}
 

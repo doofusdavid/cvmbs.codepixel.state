@@ -34,7 +34,7 @@
         </div>
         <!-- END .csu-signature -->
 
-        <?php if ( $site_type == 'department' || $site_type == 'special' ) : ?>
+        <?php if ( $site_type == 'department' || $site_type == 'special' || $site_type == 'vth' ) : ?>
 
         <!-- .site-identifier -->
         <<?php echo $wrapper; ?> class="site-identifier">

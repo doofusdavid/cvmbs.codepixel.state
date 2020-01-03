@@ -204,7 +204,7 @@
             infinite       : true,
             slidesToShow   : 1,
             slidesToScroll : 1,
-            adaptiveHeight : true,
+            // adaptiveHeight : true,
 
             speed     : 720,
             cssEase   : 'cubic-bezier(0.23, 1, 0.32, 1)',

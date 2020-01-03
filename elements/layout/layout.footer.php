@@ -41,6 +41,10 @@
 
         $contact_article = 'us';
 
+    } else if ( $site_type == 'vth' ) {
+
+        $contact_article = 'the hospital';
+
     } else {
 
         $contact_article = 'the college';
@@ -74,7 +78,15 @@
             <!-- links.column -->
             <section id="footer-center" class="footer__column footer__column--resources links">
 
-                <?php switch_to_blog( 1 ); ?>
+                <?php
+
+                    if ( $site_type !== 'vth' ) {
+
+                        switch_to_blog( 1 );
+
+                    }
+
+                ?>
 
                 <?php
 

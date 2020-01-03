@@ -1,11 +1,8 @@
 <?php
 
-    $args = array(
-        'number' => 999,
-        'public' => 1
-    );
+    $labs = get_sites();
 
-    $labs = get_sites( $args );
+    global $blog_id;
 
 ?>
 
@@ -14,6 +11,25 @@
 
 	<!-- content container -->
 	<div class="content-container">
+
+        <!-- pattern -->
+        <div class="pattern-overlay">
+
+            <!--  -->
+
+        </div>
+        <!-- END pattern -->
+
+        <!-- heading -->
+        <h2 class="index-title">
+
+            Faculty Research Laboratory Index
+
+        </h2>
+        <!-- END heading -->
+
+        <!-- index -->
+        <div id="laboratory-index">
 
         <?php
 
@@ -60,6 +76,9 @@
             echo $labs_index;
 
         ?>
+
+        </div>
+        <!-- END index -->
 
     </div>
     <!-- END content container -->

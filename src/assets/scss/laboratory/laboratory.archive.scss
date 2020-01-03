@@ -15,30 +15,80 @@
     // styles
     #site-layout.labs-archive {
 
+        // pattern
+        .pattern-overlay {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            background: {
+
+                image: url(../img/patterns/pattern.horizontal.png);
+                repeat: no-repeat;
+                position: top left;
+
+            }
+
+            // opacity: 0.385;
+
+        }
+
         // container
         .content-container {
+
+            position: relative;
+
+            min-height: 50vh;
+            padding: 10rem 4.5rem 4rem 4.5rem;
+
+            // @include fill( $archive, 0.000 );
+            @include fill( $cvnavy, 0.000 );
+
+        }
+
+        // index
+        #laboratory-index {
 
             @include flex-h-s-v-t( false );
 
             flex-wrap: wrap;
 
-            padding: 10rem 4rem 3rem 4rem;
+        }
 
-            @include fill( $archive, 0.000 );
+        // heading
+        .index-title {
+
+            position: relative;
+
+            z-index: 20;
+
+            margin: 0 0 1rem 0.5rem;
+
+            @include color( $cvellow, 0.000 );
 
         }
 
         // links
         .lab-link {
 
-            @include flex-h-e-v-b( true );
+            position: relative;
 
-            width: calc( 25% - 2rem );
-            height: 8rem;
-            margin: 0 1rem 2rem 1rem;
-            padding: 0 2rem 1.75rem 2rem;
+            z-index: 20;
 
-            @include font( $klavislim, 1rem, 400 );
+            @include flex-h-c-v-c( true );
+
+            // width: calc( 25% - 2rem );
+            height: 2rem;
+            margin: 0 0.5rem 1rem 0.5rem;
+            padding: 0.0625rem 1rem 0 1rem;
+
+            @include font( $industry, 0.75rem, 700 );
 
             @include text( $up, right );
 
@@ -49,6 +99,7 @@
             @include color( white, 0.000 );
 
             @include fill( $cvnavy, 0.365 );
+            @include fill( white, 0.925 );
 
             @include shadowbox( 1rem, 3.5rem, black, 0.465 );
 
