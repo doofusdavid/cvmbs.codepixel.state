@@ -27,6 +27,8 @@
 
         overflow: hidden;
 
+        -ms-overflow-style: none !important;
+
         @include font( $industry, 0.5625rem, 700 );
 
         @include color( white, 0.000 );
