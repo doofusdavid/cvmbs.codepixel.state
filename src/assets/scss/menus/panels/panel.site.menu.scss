@@ -27,6 +27,8 @@
 
         overflow: scroll;
 
+        -ms-overflow-style: none !important;
+
         @include fill( $app05, 0.185 );
 
         @include gradient( 0deg, $g140, 0.325, 0%, transparent, 1.000, 50% );
