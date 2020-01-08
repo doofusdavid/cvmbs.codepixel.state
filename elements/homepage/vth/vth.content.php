@@ -48,7 +48,7 @@
 
     <?php
 
-        foreach( $launchpads as $launchpad ) {
+        foreach ( $launchpads as $launchpad ) {
 
             echo '<a class="launchpad" href="' . $launchpad[ 'link' ] . '" style="background-image:url(' . $launchpad[ 'image' ] . ')"><span class="title">' . $launchpad[ 'title' ] . '</span></a>';
 

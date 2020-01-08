@@ -455,7 +455,7 @@
         <!-- output -->
         <div class="developer">
 
-            <pre class="developer">
+            <pre class="developer hide">
 
                 <?php
 
