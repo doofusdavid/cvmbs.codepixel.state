@@ -52,9 +52,13 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Deregister the jquery-migrate version bundled with WordPress.
 		wp_deregister_script( 'jquery-migrate' );
 
+		// Enqueue Isotope for Places archive page
+		if ( is_post_type_archive('place') ) {
+			wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/dist/assets/js/interactive/isotope.pkgd.min.js', array(), null, true );
+		}
+
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'cvmbs', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
-
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
