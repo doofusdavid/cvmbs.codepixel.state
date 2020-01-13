@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary places archive" data-off-canvas-content>
+<main id="site-layout" class="off-canvas-content places archive" data-off-canvas-content>
 
 	<!-- container -->
 	<div class="content-container places">

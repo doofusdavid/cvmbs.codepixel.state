@@ -7,7 +7,7 @@
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary places default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);">
+<main id="site-layout" class="off-canvas-content places default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);">
 
 	<!-- content container -->
 	<div class="content-container places">
