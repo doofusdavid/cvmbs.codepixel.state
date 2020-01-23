@@ -7,7 +7,7 @@
     import $ from 'jquery';
     import whatInput from 'what-input';
     import { menusFX } from './components/menus.ui';
-    import { slides } from './interactive/billboard.slides';
+    // import { slides } from './interactive/billboard.slides';
 
     import './library/foundation.explicit';
 
@@ -149,25 +149,25 @@
     $(document).ready(function() {
 
         // billboard
-        slides.init();
+        // slides.init();
 
         // menus
         menusFX.init();
 
         // display content
-        site.ui.layout.velocity( 'fadeIn', {
+        // site.ui.layout.velocity( 'fadeIn', {
 
-            visibility : 'visible',
-            delay      : 800,
-            duration   : 2400,
-            easing     : 'easeOutExpo',
-            complete   : function() {
+            // visibility : 'visible',
+            // delay      : 800,
+            // duration   : 2400,
+            // easing     : 'easeOutExpo',
+            // complete   : function() {
 
                 // site.ui.billboard.focus();
 
-            }
+            // }
 
-        });
+        // });
 
         // track focus
         // trackFocus();
