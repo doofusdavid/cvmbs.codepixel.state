@@ -104,11 +104,89 @@
 
             }
 
-            // setup CV content
-            foreach ( $memberDirectoryInfo as $directoryInfo ) {
+            // check if data is array
+            if ( is_array( $memberDirectoryInfo ) ) {
+
+                // echo 'ball so hard';
+
+            } else {
+
+                // echo 'no data array';
+
+            }
+
+            // check if data is array
+            if ( is_array( $memberDirectoryInfo ) ) {
+
+                // echo 'ball so hard';
+
+                // setup CV content
+                foreach ( $memberDirectoryInfo as $directoryInfo ) {
+
+                    // setup CV content types
+                    $directoryType = $directoryInfo->DirectoryType;
+
+                    if ( $directoryType == 'Certification' ) {
+
+                        $directory[ 'certifications' ][] = array(
+
+                            'certification' => $directoryInfo->DirectoryHeader,
+                            'description'   => $directoryInfo->DirectoryDescription
+
+                        );
+
+                    }
+
+                    if ( $directoryType == 'Degree' ) {
+
+                        $directory[ 'degrees' ][] = array(
+
+                            'degree' => $directoryInfo->DirectoryHeader,
+                            'level'  => $directoryInfo->DirectoryDescription,
+                            'year'   => $directoryInfo->DirectoryYear,
+                            'notes'  => $directoryInfo->DirectoryNotes
+
+                        );
+
+                    }
+
+                    if ( $directoryType == 'Publication' ) {
+
+                        $directory[ 'publications' ][] = $directoryInfo->DirectoryHeader;
+
+                    }
+
+                    if ( $directoryType == 'Species Interest' ) {
+
+                        $directory[ 'species' ][] = array(
+
+                            'title' => $directoryInfo->DirectoryHeader,
+                            'notes' => $directoryInfo->DirectoryNotes,
+                            'entry' => $directoryInfo->DirectoryDescription
+
+                        );
+
+                    }
+
+                    if ( $directoryType == 'Link' ) {
+
+                        $directory[ 'links' ][] = array(
+
+                            'url'   => $directoryInfo->DirectoryDescription,
+                            'title' => $directoryInfo->DirectoryHeader
+
+                        );
+
+                    }
+
+                }
+
+            } else {
+
+                // echo 'no data array';
 
                 // setup CV content types
-                $directoryType = $directoryInfo->DirectoryType;
+                $directoryType = $memberDirectoryInfo->DirectoryType;
 
                 if ( $directoryType == 'Certification' ) {
 
@@ -123,7 +201,7 @@
 
                 if ( $directoryType == 'Degree' ) {
 
-                    $directory[ 'degrees' ][] = array(
+                    $directory[ 'degrees' ] = array(
 
                         'degree' => $directoryInfo->DirectoryHeader,
                         'level'  => $directoryInfo->DirectoryDescription,
@@ -154,10 +232,10 @@
 
                 if ( $directoryType == 'Link' ) {
 
-                    $directory[ 'links' ][] = array(
+                    $directory[ 'links' ] = array(
 
-                        'url'   => $directoryInfo->DirectoryDescription,
-                        'title' => $directoryInfo->DirectoryHeader
+                        'url'   => $memberDirectoryInfo->DirectoryDescription,
+                        'title' => $memberDirectoryInfo->DirectoryHeader
 
                     );
 
@@ -290,7 +368,13 @@
 
                 <pre class="developer hide">
 
-                    <?php print_r( $getMember->GetMemberByIdResult ); ?>
+                    <?php
+
+                        // print_r( $getMember->GetMemberByIdResult );
+
+                        print_r( $directory[ 'links' ] );
+
+                    ?>
 
                 </pre>
 
@@ -428,16 +512,28 @@
 
                     <?php
 
-                        foreach ( $directory[ 'links' ] as $link ) {
+                        // check if data is array
+                        if ( is_array( $memberDirectoryInfo ) ) {
 
-                            $title  = $link[ 'title' ];
-                            $url    = $link[ 'url' ];
+                            foreach ( $directory[ 'links' ] as $link ) {
 
-                            $links .= '<a href="' . $url . '" class="entry">' . $title . '</a>';
+                                $title  = $link[ 'title' ];
+                                $url    = $link[ 'url' ];
+
+                                $links .= '<a href="' . $url . '" class="entry stuff">' . $title . '</a>';
+
+                            }
+
+                            echo $links;
+
+                        } else {
+
+                            $title  = $directory[ 'links' ][ 'title' ];
+                            $url    = $directory[ 'links' ][ 'url' ];
+
+                            echo '<a href="' . $url . '" class="entry stuff">' . $title . '</a>';
 
                         }
-
-                        echo $links;
 
                     ?>
 
@@ -453,20 +549,22 @@
         <!-- END listing -->
 
         <!-- output -->
-        <div class="developer">
+        <div class="developer hide">
 
             <pre class="developer">
 
                 <?php
 
                     echo '<br />';
-                    print_r( $getMember );
+                    // print_r( $memberDirectoryInfo );
+                    echo '<br />';
+                    // print_r( $getMember );
                     echo '<br />';
                     print_r( $getMemberDirectoryInfo );
                     // echo '<br />';
-                    print_r( $response );
+                    // print_r( $response );
                     echo '<br />';
-                    print_r( $getMemberContactInfo );
+                    // print_r( $getMemberContactInfo );
 
                     // profile text
                     foreach ( $getMemberProfileInfo as $memberProfileInfo ) {
