@@ -50,11 +50,11 @@
             <!-- END text -->
 
             <!-- text -->
-            <p>
+            <a href="mailto:<?php echo $email; ?>">
 
                 <?php echo $email; ?>
 
-            </p>
+            </a>
             <!-- END text -->
 
             <?php if ( $social ) : ?>

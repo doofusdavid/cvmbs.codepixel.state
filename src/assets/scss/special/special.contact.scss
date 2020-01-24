@@ -4,7 +4,7 @@
     $special : 1rem;
 
     // styles
-    .contact {
+    .contact-information {
 
         position: relative;
 
@@ -138,6 +138,13 @@
                     );
 
                 }
+
+            }
+
+            // link
+            .email {
+
+                @include color( white, 0.000 );
 
             }
 

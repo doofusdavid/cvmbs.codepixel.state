@@ -27,6 +27,8 @@
 
                 <div class="group-bios__image">
 
+                    <?php if ( $staff_link ) : ?>
+
                     <!-- directory link -->
                     <a href="<?php echo $staff_link; ?>">
 
@@ -35,9 +37,17 @@
                     </a>
                     <!-- END directory link -->
 
+                    <?php else : ?>
+
+                    <img src="<?php echo $staff_photo; ?>" />
+
+                    <?php endif; ?>
+
                 </div>
 
     			<div class="group-bios__details">
+
+                    <?php if ( $staff_link ) : ?>
 
                     <!-- directory link -->
                     <a class="group-bios__name" href="<?php echo $staff_link; ?>">
@@ -46,6 +56,18 @@
 
                     </a>
                     <!-- END directory link -->
+
+                    <?php else : ?>
+
+                    <!-- directory link -->
+                    <span class="group-bios__name" href="<?php echo $staff_link; ?>">
+
+                        <?php echo $staff_name; ?>
+
+                    </span>
+                    <!-- END directory link -->
+
+                    <?php endif; ?>
 
     				<div class="group-bios__desc">
 
