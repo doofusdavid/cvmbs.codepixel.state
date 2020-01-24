@@ -1,10 +1,13 @@
+// stylesheet :: degree programs contact block styles
+
 .program-contact {
-	background: $app30;
+
+	background: $app50;
 	padding: 8vw;
 	color: white;
 
 	// (only if supported by browser)
-	@supports (mix-blend-mode: overlay) {
+	@supports ( mix-blend-mode: overlay ) {
 		position: relative;
 
 		&:before {
@@ -49,17 +52,27 @@
 	}
 
 	&__intro {
+
 		@include bpoint(desktop) {
+
 			flex-grow: 0;
+
 			max-width: 40%;
-			border-right: 1px solid transparentize(white, 0.465);
+
+			border-right: 1px solid transparentize(white, 0.865);
+			border-right: 1px solid transparentize( $beige, 1.000 );
+
 			padding-right: 4vw;
+
 		}
+
 	}
 
 	&__title {
+
 		margin-bottom: 1rem;
-		color: white;
+
+		@include color( $blue, 0.000 );
 
 		@include bpoint(desktop) {
 			margin: 0;
@@ -81,12 +94,18 @@
 		}
 
 		.gform_wrapper {
+
 			margin: 0;
 
 			.gform_body {
+
+				// meh
 				ul {
 					li {
 						&.gfield {
+
+							margin: 2rem 0 0 0;
+
 							&:first-child {
 								margin-top: 0;
 							}
@@ -94,31 +113,136 @@
 					}
 				}
 
+				// required class
 				.gfield_required {
+
 					color: $gold;
+
 				}
+
+				// labels
+				label {
+
+					// class
+					&.gfield_label {
+
+						@include font( $industry, 1rem, 600 );
+
+					}
+
+				}
+
+				// containers
+				.ginput_container {
+
+					margin: 0.75rem 0 0 0;
+
+				}
+
+				// input globals
+				input[ type='text' ],
+				textarea {
+
+					margin: 0 0 0 0;
+					padding: 0 0 0 0;
+
+					border: none;
+
+					@include font( $industry, 1rem, 400, !important );
+
+					font-size: 1rem !important;
+					font-weight: 400 !important;
+
+					@include color( white, 0.000 );
+
+					@include fill( white, 0.925 );
+
+					@include shadowbox( 1rem, 3rem, black, 0.695 );
+
+				}
+
+				// text input
+				input[ type='text' ] {
+
+					height: 3rem;
+					padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+
+				}
+
+				// textarea
+				textarea {
+
+					padding: 1rem 1rem 1rem 1rem !important;
+
+				}
+
 			}
 
 			.gform_footer {
+
+				padding: 1rem 0 0 0;
+
 				input {
+
 					&.button {
-						font-weight: 600;
-						letter-spacing: .135em;
-						text-transform: uppercase;
+
+						@include flex-h-c-v-c( false );
+
+						height: 4rem;
+						margin: 0 0 0 0;
+						padding: 0.0625rem 1.5rem 0 1.5rem;
+
+						@include font( $klavislim, 1.25rem, 400 );
+
+						@include text( $up );
+
+						@include typo( 0.875rem, 0.085em );
+
+						@include fill( $blue, 0.000 );
+
+						@include shadowbox( 1rem, 3rem, black, 0.695 );
+
+						transition: all 220ms linear 0ms;
+
+						// hover state
+						&:hover {
+
+							@include color( $blue, 0.000 );
+
+							@include fill( $cvnavy, 0.000 );
+
+						}
+
 					}
+
 				}
+
 			}
+
 		}
 
 		.gform_confirmation_wrapper {
+
 			font-size: 1rem;
 
 			@include bpoint(desktop) {
-				padding: 4vw 0;
-				text-align: center;
+
+				flex-grow: 1;
+
+				height: 100%;
+				padding: 3rem 3rem 3rem 3rem;
+
+				border: 1px solid $px-green;
+
+				@include fill( white, 0.925 );
+
+				@include shadowbox( 1rem, 3rem, black, 0.695 );
+
 			}
+
 		}
 
+		// generic list selector
 		li {
 			color: white;
 		}
