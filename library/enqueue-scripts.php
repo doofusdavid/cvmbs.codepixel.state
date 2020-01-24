@@ -39,7 +39,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'cvmbs.ui.css' ), array(), '1.0.0', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
-		wp_deregister_script( 'jquery' );
+		// wp_deregister_script( 'jquery' );
 		wp_deregister_script( 'wp-embed' );
 
 		// dequeue Gutenburg bloat
