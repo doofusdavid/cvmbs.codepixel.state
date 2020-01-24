@@ -27,6 +27,8 @@
 
 				<div class="group-bios__image">
 
+					<?php if ( get_sub_field( 'directory_link' ) ) : ?>
+
 					<!-- directory link -->
                     <a href="<?php the_sub_field( 'directory_link' ); ?>">
 
@@ -35,15 +37,33 @@
                     </a>
                     <!-- END directory link -->
 
+					<?php else : ?>
+
+	                <?php echo wp_get_attachment_image( get_sub_field('photo'), 'thumbnail' ); ?>
+
+					<?php endif; ?>
+
 				</div><!-- .group-bios__image -->
 
 				<div class="group-bios__details">
+
+					<?php if ( get_sub_field( 'directory_link' ) ) : ?>
 
 					<a class="group-bios__name" href="<?php the_sub_field( 'directory_link' ); ?>">
 
 						<?php the_sub_field('name'); ?>
 
 					</a>
+
+					<?php else : ?>
+
+					<span class="group-bios__name" href="<?php the_sub_field( 'directory_link' ); ?>">
+
+						<?php the_sub_field('name'); ?>
+
+					</span>
+
+					<?php endif; ?>
 
 					<?php if ( get_sub_field('desc') ) : ?>
 
@@ -82,6 +102,7 @@
 							<a href="mailto:<?php the_sub_field('email'); ?>">
 
 								<?php the_sub_field('email'); ?>
+
 							</a>
 
 						</p>

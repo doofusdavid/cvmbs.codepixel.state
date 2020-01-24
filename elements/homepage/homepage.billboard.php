@@ -2,7 +2,8 @@
 
     $billboard_query = array(
 
-        'post_type' => 'billboard'
+        'post_type'      => 'billboard',
+        'posts_per_page' => 1
 
     );
 
@@ -40,7 +41,7 @@
             <div class="slide-artwork">
 
                 <!-- billboard -->
-                <div class="slide-billboard" data-background="<?php echo $slide_image_url; ?>">
+                <div class="slide-billboard" style="background-image:url(<?php echo $slide_image_url; ?>);">
 
                     <!--  -->
 
