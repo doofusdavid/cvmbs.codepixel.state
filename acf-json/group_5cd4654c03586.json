@@ -794,6 +794,28 @@
             "layout": "row",
             "sub_fields": [
                 {
+                    "key": "field_5e2b6cde74cc8",
+                    "label": "Homepage Billboard",
+                    "name": "homepage_billboard",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "billboard"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
                     "key": "field_5ce1ac9494f4e",
                     "label": "Research Content",
                     "name": "research_content",
@@ -886,6 +908,28 @@
                             "mime_types": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_5e2b6d41886f0",
+                    "label": "Featured Places",
+                    "name": "featured_places",
+                    "type": "post_object",
+                    "instructions": "select 4 places to feature on the homepage",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "place"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
         },
@@ -4335,5 +4379,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1578086671
+    "modified": 1579904743
 }
