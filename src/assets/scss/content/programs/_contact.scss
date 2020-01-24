@@ -72,7 +72,7 @@
 
 		margin-bottom: 1rem;
 
-		@include color( $blue, 0.000 );
+		@include color( $faux-gold, 0.000 );
 
 		@include bpoint(desktop) {
 			margin: 0;
@@ -198,7 +198,7 @@
 
 						@include typo( 0.875rem, 0.085em );
 
-						@include fill( $blue, 0.000 );
+						@include fill( $g140, 0.000 );
 
 						@include shadowbox( 1rem, 3rem, black, 0.695 );
 
@@ -207,9 +207,9 @@
 						// hover state
 						&:hover {
 
-							@include color( $blue, 0.000 );
+							// @include color( $gold, 0.000 );
 
-							@include fill( $cvnavy, 0.000 );
+							// @include fill( white, 0.825 );
 
 						}
 
@@ -232,9 +232,17 @@
 				height: 100%;
 				padding: 3rem 3rem 3rem 3rem;
 
-				border: 1px solid $px-green;
+				border-left: 3px solid $px-green;
 
 				@include fill( white, 0.925 );
+
+				// @include gradient(
+				//
+				// 	180deg,
+				// 	$px-green, 0.625, 0%,
+				// 	$px-green, 0.915, 100%
+				//
+				// );
 
 				@include shadowbox( 1rem, 3rem, black, 0.695 );
 
