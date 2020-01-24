@@ -1,0 +1,61 @@
+.places-archive {
+	&__header {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		background: white url(../img/billboards/billboard.10.jpg) no-repeat center 85% / cover;
+
+		// overlay
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			@include fill( $roarange, 0.345 );
+
+			@include gradient(
+				90deg,
+				red, 1.000, 0%,
+				$cvnavy, 0.215, 100%
+			);
+		}
+
+		&-inner {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			max-width: 100%;
+			padding: 5rem 8vw 1.5rem;
+
+			height: 50vh;
+			max-height: 20rem;
+			max-height: 15rem;
+
+			& > * {
+				max-width: 100%;
+			}
+		}
+
+		&-title {
+			margin: 0;
+			color: $sec_temp_white;
+			font-family: $klavislim;
+			font-size: 2rem;
+			font-weight: 400;
+			letter-spacing: 0.114em;
+			line-height: 1;
+
+			@include bpoint(tablet) {
+				font-size: 2.75rem;
+			}
+
+			@include bpoint(desktop) {
+				font-size: 3rem;
+			}
+		}
+	}
+}

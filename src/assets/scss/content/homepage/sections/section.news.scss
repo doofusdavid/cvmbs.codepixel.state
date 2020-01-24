@@ -167,7 +167,7 @@
                 margin: 0 1rem 2rem 1rem;
 
                 @include bpoint(tablet) {
-                    width: calc((100% / 3) - 2rem - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
+                    width: calc((100% / 3) - 2rem  - .1px); // remove .1px to fix IE not calculating percentages the same as real browsers
                     margin: 0 1rem 0 1rem;
                 }
 

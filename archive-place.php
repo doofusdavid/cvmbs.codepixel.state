@@ -1,120 +1,88 @@
+<?php
+get_header();
 
-<?php get_header(); ?>
+$taxonomy = 'department';
 
-<!-- site.layout -->
-<main id="site-layout" class="off-canvas-content places archive" data-off-canvas-content>
+$args = array(
+	'taxonomy' => $taxonomy
+);
 
-	<!-- container -->
-	<div class="content-container places">
+$departments = get_terms( $args );
+?>
 
-		<!-- overlay -->
-        <div class="places-overlay">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-            <!--  -->
+		<?php if ( have_posts() ) : ?>
 
-        </div>
-        <!-- END overlay -->
+		<header class="places-archive__header">
+			<div class="places-archive__header-inner">
+				<h1 class="places-archive__header-title">
+					<?php _e( 'centers + institutes', 'cvmbsPress' ); ?>
+				</h1><!-- .places-archive__header-title -->
+			</div><!-- .places-archive__header-inner -->
+		</header><!-- .places-archive__header -->
 
-	    <!-- content -->
-	    <section class="places-content">
+		<div class="places-archive__filters">
+			<p class="places-archive__filters-text">filter places</p>
 
-			<!-- title -->
-	        <h2 class="page-title">
+			<div class="places-prse__option">
+				<button class="places-prse__toggle" type="button" id="prse-toggle" aria-pressed="false" aria-label="Program of Research and Scholarly Excellence"><span class="places-prse__toggle-button" aria-hidden></span> PRSE</button>
+			</div><!-- .places-prse__option -->
 
-				centers + institutes
+			<?php if ( ! is_wp_error( $departments ) ) : ?>
+				<div class="places-dept__options">
+					<button class="places-dept__option" type="button" aria-pressed="true">All Departments</button>
 
-			</h2>
-	        <!-- END title -->
+					<?php
+					foreach ( $departments as $dept ) :
+						$slug = $dept->slug;
+						$name = $dept->name;
+					?>
+						<button class="places-dept__option" type="button" aria-pressed="false"><?php echo $name; ?></button>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+		</div><!-- .places-archive__filters -->
 
-			<!-- toolbar -->
-			<div id="places-toolbar">
-
-				<span>
-
-					filter places
-
-				</span>
-
-			</div>
-			<!-- END toolbar -->
-
+		<div class="places-archive__grid">
+			<div class="places-archive__grid-inner">
 			<?php
-
-				while ( have_posts() ) : the_post();
-
-				$place_name  = get_the_title();
-				$place_image = get_the_post_thumbnail_url( $post->ID, 'fp-small' );
-
-				$place_link_status = get_field( 'place_link' );
-
-                if ( $place_link_status ) {
-
-                    $place_link_url = get_field( 'place_website' );
-                    $place_link     = $place_link_url[ 'url' ];
-
-                } else {
-
-                    $place_link  = get_the_permalink();
-
-                }
-
+			while ( have_posts() ) : the_post();
+				$card_bg = 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'fp-small' ) . ');"';
+				$link = ( get_field('place_link') ) ? get_field('place_website')['url'] : get_permalink();
+				$prse = get_post_meta( $post->ID, '_cvmbs_place_prse', true );
+				$dept_array = [];
+				if ( $departments = get_the_terms( $post, 'department' ) ) {
+					foreach ( $departments as $dept ) {
+						$dept_array[] = $dept->slug;
+					}
+				}
+				$dept_string = implode( ' ', $dept_array );
 			?>
 
-			<!-- card -->
-			<a class="place-card" href="<?php echo $place_link; ?>">
-
-				<!-- artwork -->
-                <div class="thumb-artwork" style="background-image:url(<?php echo $place_image; ?>)">
-
-                    <!-- the emptiness -->
-
-                </div>
-                <!-- END artwork -->
-
-                <!-- overlay -->
-                <div class="thumb-overlay">
-
-                    <!-- the emptiness -->
-
-                </div>
-                <!-- END overlay -->
-
-				<!-- header -->
-                <header>
-
-                    <!-- title -->
-                    <span class="place-title">
-
-                        <?php echo $place_name; ?>
-
-                    </span>
-                    <!-- END title -->
-
-					<!-- link -->
-                    <span class="place-link">
-
-                        learn more
-
-                    </span>
-                    <!-- END link -->
-
-                </header>
-                <!-- END header -->
-
-			</a>
-			<!-- END card -->
+				<a class="places-archive__grid-item" href="<?php echo esc_url( $link ); ?>" data-dept="<?php echo $dept_string; ?>" <?php if ( $prse ) { echo 'data-prse="true"'; } ?>>
+					<span class="places-archive__grid-item-bg" <?php echo $card_bg; ?> aria-hidden></span>
+					<span class="places-archive__grid-item-overlay" aria-hidden></span>
+					<div class="places-archive__grid-item-text">
+						<span class="places-archive__grid-item-title">
+							<?php if ( $prse ) { echo '<u><strong>PRSE</strong></u>'; } ?>
+							<?php the_title(); ?>
+						</span>
+						<span class="places-archive__grid-item-link" aria-hidden><?php _e( 'learn more', 'cvmbsPress' ); ?></span>
+					</div>
+				</a>
 
 			<?php endwhile; ?>
+			</div><!-- .places-archive__grid-inner -->
+		</div><!-- .places-archive__grid -->
 
-	    </section>
-	    <!-- END content -->
+		<?php endif; ?>
 
-	</div>
-	<!-- END container -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-	<?php get_template_part( 'elements/layout/layout.footer' ); ?>
+<?php
+get_template_part( 'elements/layout/layout.footer' );
 
-</main>
-<!-- site.layout -->
-
-<?php get_footer(); ?>
+get_footer();

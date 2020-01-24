@@ -271,7 +271,7 @@
                 }
 
                 @include bpoint(desktop) {
-                    width: calc((100% / 3) - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
+                    width: calc((100% / 3)  - .1px); // remove .1px to fix IE not calculating percentages the same as real browsers
                 }
 
                 @include bpoint(widescreen) {

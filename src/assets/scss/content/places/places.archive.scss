@@ -52,13 +52,12 @@
 
                     flex-wrap: wrap;
 
-                    // padding: 9rem 4rem 4rem 4rem;
-                    padding: 4rem 4rem 4rem 4rem;
+                    padding: 4rem 8vw;
 
                     // mobile
                     @include breakpoint ( small only ) {
 
-                        padding: 1rem 1rem 1rem 1rem;
+                        padding: 1rem 8vw;
 
                     }
 
@@ -80,7 +79,7 @@
                     }
 
                     // toolbar
-                    #places-toolbar {
+                    .places-toolbar {
 
                         position: absolute;
 
@@ -95,13 +94,13 @@
                         width: 100%;
                         height: 5rem;
                         margin: 0;
-                        padding: 0 5rem 0 5rem;
+                        padding: 0 calc(8vw + 1rem);
 
                         @include fill( $beige, 0.000 );
 
                         @include shadowbox( 1rem, 3.5rem, black, 0.365 );
 
-                        @include hide;
+                        // @include hide;
 
                         // placeholder
                         span {

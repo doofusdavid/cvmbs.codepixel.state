@@ -54,7 +54,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Enqueue Isotope for Places archive page
 		if ( is_post_type_archive('place') ) {
-			wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/dist/assets/js/interactive/isotope.pkgd.min.js', array(), null, true );
+			wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/dist/assets/js/interactive/' . foundationpress_asset_path( 'isotope.pkgd.min.js' ), array( 'jquery' ), '3.0.6', true );
 		}
 
 		// Enqueue Foundation scripts

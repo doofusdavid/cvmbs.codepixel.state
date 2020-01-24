@@ -68,20 +68,6 @@
 
         }
 
-        // places archive
-        .post-type-archive-place & {
-
-            @include fill( $dark, 0.085 );
-
-        }
-
-        // degree programs
-        .single-degree-program & {
-
-            @include fill( $dark, 0.365 );
-
-        }
-
         // contrast state
         &.ui-contrast {
 

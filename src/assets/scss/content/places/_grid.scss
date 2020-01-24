@@ -1,0 +1,344 @@
+.places-archive {
+	&__filters {
+		margin: 3rem 8vw 1rem;
+		padding: 2rem;
+		border-top: 1px solid $iron;
+		border-bottom: 1px solid $iron;
+		padding: 1.5rem 0;
+
+		&-text {
+			@include font( $industry, 0.6875rem, 700 );
+			@include text( $up );
+			@include typo( 1.5, 0.045em );
+
+			margin: 0;
+			color: $steel;
+		}
+	}
+
+	&__grid {
+		padding: 2rem 8vw;
+
+		&-inner {
+			// account for margin around individual grid items
+			width: calc(100% + 2rem);
+			margin: -1rem;
+
+			@include bpoint(tablet) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+
+		&-item {
+			$block: &;
+			transform: translate3d( 0, 0, 0 );
+			transition: all 240ms $outex 0ms;
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-rows: auto;
+			-ms-grid-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr;
+			overflow: hidden;
+			margin: 1rem;
+			background: white no-repeat center center / cover;
+			@include shadowbox( 1.5rem, 4rem, black, 0.615 );
+			color: white;
+			line-height: 1.2;
+			text-decoration: none;
+
+			@include bpoint(tablet) {
+				width: calc(50% - 2rem);
+			}
+
+			@include bpoint(desktop) {
+				width: calc((100% / 3) - 2rem - .1px); // remove .1px to fix IE not calculating percentages the same as real browsers
+			}
+
+			@include bpoint(widescreen) {
+				width: calc(25% - 2rem);
+			}
+
+			& > * {
+				-ms-grid-row: 1;
+				-ms-grid-column: 1;
+				grid-row: 1;
+				grid-column: 1;
+			}
+
+			&:hover,
+			&:focus {
+				#{ $block }-bg {
+					-webkit-filter:
+						opacity( 0.565 )
+						blur( 0px )
+					;
+
+					filter:
+						opacity( 0.865 )
+						blur( 0px )
+					;
+
+					transform: scale3d( 1.15, 1.15, 1.15 );
+				}
+
+				#{ $block }-overlay {
+					&:before {
+						opacity: 0.000;
+					}
+
+					&:after {
+						opacity: 0.925;
+					}
+				}
+
+				#{ $block }-title {
+					transform: translate3d( 0, -1rem, 0 );
+				}
+
+				#{ $block }-link {
+					transform: translate3d( 0, -1rem, 0 );
+					display: block;
+					visibility: visible;
+					opacity: 1.000;
+				}
+			}
+
+			&-bg {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: no-repeat center center / cover;
+
+				-webkit-filter:
+					opacity( 1.000 )
+					grayscale( 0.000 )
+				;
+
+				filter:
+					opacity( 1.000 )
+					grayscale( 0.000 )
+				;
+
+				transform: scale3d( 1, 1, 1 );
+				transition: all 360ms $outex 0ms;
+			}
+
+			&-overlay {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				transition: all 360ms $outex 0ms;
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					transition: all 360ms $outex 0ms;
+				}
+
+				&:before {
+					@include fill( $roarange, 0.345 );
+					opacity: 0.000;
+				}
+
+				&:after {
+					@include gradient(
+						180deg,
+						transparent, 1.000, 0%,
+						$cvnavy, 0.000, 80%
+					);
+					opacity: 0.925;
+				}
+			}
+
+			&-text {
+				transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1) 3ms;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: flex-end;
+				min-height: 10rem;
+				padding: 30% 2rem 2rem;
+				color: white;
+				text-align: right;
+				text-transform: uppercase;
+
+				@include bpoint(tablet) {
+					min-height: 12.5rem;
+				}
+
+				@include bpoint(desktop) {
+					min-height: 15rem;
+				}
+			}
+
+			&-title {
+				transform: translate3d( 0, 0, 0 );
+				transition: all 360ms $ocirc 0ms;
+				max-width: 100%;
+				color: white;
+				@include font( $klavislim, 1.25rem, 400 );
+				@include typo( 1.125rem, 0.085em );
+			}
+
+			&-link {
+				transform: translate3d( 0, 2rem, 0 );
+				transition: all 360ms $ocirc 0ms;
+				opacity: 0;
+				position: absolute;
+				right: 2rem;
+				bottom: 1rem;
+				max-width: 100%;
+				color: $roarange;
+				@include font( $industry, 0.6875rem, 700 );
+				@include typo( 0.75rem, 0.045em );
+			}
+		}
+	}
+}
+
+
+
+.places-prse {
+	&__toggle {
+		display: block;
+		box-sizing: border-box;
+		border: none;
+		color: inherit;
+		background: none;
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		text-align: left;
+		padding: .4em 0 .4em 4em;
+		position: relative;
+
+		background: #ddd;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			transition: all 0.25s ease;
+		}
+
+		&:before {
+			left: 0;
+			top: 0.2em;
+			height: 1.6em;
+			width: 3em;
+			border: 0.2em solid $jumbo;
+			background: $jumbo;
+			border-radius: 1.1em;
+		}
+
+		&:after {
+			left: 0;
+			top: 0.2em;
+			background-color: #fff;
+			background-position: center center;
+			border-radius: 50%;
+			width: 1.5em;
+			height: 1.5em;
+			border: 0.15em solid $jumbo;
+		}
+
+		&:focus,
+		&:hover {
+			// color: #00f;
+			// outline: none;
+
+			// &:before {
+			// 	box-shadow: 0 0 0.5em #333;
+			// }
+
+			&:after {
+				// background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='rgba(0,0,0,.25)'/%3E%3C/svg%3E");
+				// background-size: 30%;
+				// background-repeat: no-repeat;
+				// background-position: center center;
+			}
+		}
+
+		&[disabled] {
+			&,
+			&:hover {
+				color: #999;
+			}
+
+			&:before {
+				background-color: transparent;
+				border-color: #ddd;
+			}
+
+			&:after {
+				border-color: #ddd;
+			}
+
+			&:hover {
+				color: #999;
+
+				&:before {
+					box-shadow: none;
+				}
+
+				&:after {
+					background-image: none;
+				}
+			}
+		}
+
+		&[aria-pressed=true] {
+			&:after {
+				left: 1.6em;
+				border-color: #36a829;
+				color: #36a829;
+			}
+
+			&:before {
+				background-color: #36a829;
+				border-color: #36a829;
+			}
+		}
+	}
+}
+
+
+
+.places-dept {
+	&__options {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__option {
+		display: block;
+		margin: .5em .5em 0 0;
+		padding: .8125em 1.5em .6875em;
+		border: .0625em solid $jumbo;
+		color: $steel;
+		font-size: .75em;
+		font-weight: 600;
+		letter-spacing: .04em;
+
+		&:hover,
+		&:focus {
+			background: $orange-h;
+			color: $oil;
+		}
+
+		&[aria-pressed=true] {
+			background: $orange;
+			color: $oil;
+		}
+	}
+}

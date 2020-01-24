@@ -124,7 +124,7 @@
 				font-size: 1.25em;
 
 				.grid--small & {
-					width: calc((100% / 3) - 1rem - 1px); // remove 1px to fix IE not calculating percentages the same as real browsers
+					width: calc((100% / 3) - 1rem  - .1px); // remove .1px to fix IE not calculating percentages the same as real browsers
 					font-size: 1.125em;
 
 					&:nth-child(even) {

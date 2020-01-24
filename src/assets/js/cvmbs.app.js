@@ -364,6 +364,39 @@
 
 
 // ================================================================================
+// START :: Places Filters
+// ================================================================================
+
+    if ( $('.places-prse__toggle').length > 0 ) {
+        $('.places-prse__toggle').click(function() {
+            $(this).attr('aria-pressed', function(i, attr) {
+                return attr == 'true' ? 'false' : 'true';
+            });
+        });
+    };
+
+    if ( $('.places-dept__options').length > 0 ) {
+        $('.places-dept__option').click(function() {
+            if ( $(this).attr('aria-pressed') == 'false' ) {
+                $(this).siblings().attr('aria-pressed', 'false');
+                $(this).attr('aria-pressed', 'true');
+            }
+        });
+    };
+
+    if ( $('.places-archive__grid').length > 0 ) {
+        // var grid = $('.places-archive__grid-inner').isotope({
+        //     itemSelector: '.places-archive__grid-item'
+        // });
+    };
+
+// ================================================================================
+// END :: Places Filters
+// ================================================================================
+
+
+
+// ================================================================================
 // START :: track focus
 // ================================================================================
 

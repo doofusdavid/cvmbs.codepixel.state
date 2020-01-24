@@ -4,4 +4,25 @@
     @import 'places.single';
 
     // archive
-    @import 'places.archive';
+    // @import 'places.archive';
+
+
+.post-type-archive-place {
+	display: flex;
+	flex-direction: column;
+	background: $sec_temp_off_white;
+	color: $steel;
+	font-size: 1rem;
+
+	.content-area {
+		flex-grow: 1;
+	}
+}
+
+@import 'header';
+
+// archive
+@import 'grid';
+
+// single
+@import 'content';
