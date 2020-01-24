@@ -35,6 +35,7 @@ PATHS:
     # Javascript
     entries:
         - "src/assets/js/cvmbs.app.js"
+        - "src/assets/js/interactive/isotope.pkgd.min.js"
     # package tasks
     package:
         - "**/*"
