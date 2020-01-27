@@ -256,3 +256,181 @@
 		}
 	}
 }
+
+// general gform styles
+.gform_wrapper {
+
+	margin: 0;
+
+	.gform_body {
+
+		// meh
+		ul {
+			li {
+				&.gfield {
+
+					margin: 2rem 0 0 0;
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		// required class
+		.gfield_required {
+
+			color: $gold;
+
+		}
+
+		// labels
+		label {
+
+			// class
+			&.gfield_label {
+
+				@include font( $industry, 1rem, 600 );
+
+			}
+
+		}
+
+		// containers
+		.ginput_container {
+
+			margin: 0.75rem 0 0 0;
+
+		}
+
+		// input globals
+		input[ type='text' ],
+		textarea {
+
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+
+			border: none;
+
+			@include font( $industry, 1rem, 400, !important );
+
+			font-size: 1rem !important;
+			font-weight: 400 !important;
+
+			@include color( white, 0.000 );
+
+			@include fill( white, 0.925 );
+
+			@include shadowbox( 1rem, 3rem, black, 0.695 );
+
+		}
+
+		// text input
+		input[ type='text' ] {
+
+			height: 3rem;
+			padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+
+		}
+
+		// textarea
+		textarea {
+
+			padding: 1rem 1rem 1rem 1rem !important;
+
+		}
+
+	}
+
+	.gform_footer {
+
+		padding: 1rem 0 0 0;
+
+		input {
+
+			&.button {
+
+				@include flex-h-c-v-c( false );
+
+				height: 4rem;
+				margin: 0 0 0 0;
+				padding: 0.0625rem 1.5rem 0 1.5rem;
+
+				@include font( $klavislim, 1.25rem, 400 );
+
+				@include text( $up );
+
+				@include typo( 0.875rem, 0.085em );
+
+				@include fill( $g140, 0.000 );
+
+				@include shadowbox( 1rem, 3rem, black, 0.695 );
+
+				transition: all 220ms linear 0ms;
+
+				// hover state
+				&:hover {
+
+					// @include color( $gold, 0.000 );
+
+					// @include fill( white, 0.825 );
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.gform_confirmation_wrapper {
+
+	font-size: 1rem;
+
+	@include bpoint(desktop) {
+
+		flex-grow: 1;
+
+		height: 100%;
+		margin: 2rem 0 0 0;
+		padding: 3rem 3rem 3rem 3rem;
+
+		border-left: 3px solid $px-green;
+
+		@include fill( white, 0.645 );
+
+		// @include gradient(
+		//
+		// 	180deg,
+		// 	$px-green, 0.625, 0%,
+		// 	$px-green, 0.915, 100%
+		//
+		// );
+
+		@include shadowbox( 1rem, 3rem, black, 0.695 );
+
+		// random ass blockquote element
+		blockquote {
+
+			margin: 0 0 0 0;
+			padding: 0 0 0 0;
+
+			border: none;
+
+			@include color( #545454, 0.000 );
+
+			// nested strong
+			strong {
+
+				font-weight: inherit;
+
+			}
+
+		}
+
+	}
+
+}
