@@ -41,16 +41,6 @@
         <!-- news.feed -->
         <div id="facilities-carousel" class="places__grid article-cards ui-news">
 
-            <pre class="developer" style="z-index:1000;">
-
-                <?php
-
-                    print_r( $homepage_options );
-
-                ?>
-
-            </pre>
-
             <?php
 
                 foreach( $posts as $post ) : // variable must be called $post (IMPORTANT)
