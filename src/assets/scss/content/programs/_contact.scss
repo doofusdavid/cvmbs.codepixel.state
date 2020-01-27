@@ -282,6 +282,7 @@
 		.gfield_required {
 
 			color: $gold;
+			color: $roarange;
 
 		}
 
@@ -318,7 +319,7 @@
 			font-size: 1rem !important;
 			font-weight: 400 !important;
 
-			@include color( white, 0.000 );
+			// @include color( white, 0.000 );
 
 			@include fill( white, 0.925 );
 
@@ -398,17 +399,9 @@
 		margin: 2rem 0 0 0;
 		padding: 3rem 3rem 3rem 3rem;
 
-		border-left: 3px solid $px-green;
+		border-left: 3px solid #00cc00;
 
 		@include fill( white, 0.645 );
-
-		// @include gradient(
-		//
-		// 	180deg,
-		// 	$px-green, 0.625, 0%,
-		// 	$px-green, 0.915, 100%
-		//
-		// );
 
 		@include shadowbox( 1rem, 3rem, black, 0.695 );
 
