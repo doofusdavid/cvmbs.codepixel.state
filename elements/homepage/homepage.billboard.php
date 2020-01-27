@@ -67,16 +67,6 @@
                 <!-- slide.content -->
                 <div class="slide-content">
 
-                    <pre class="developer hide">
-
-                        <?php
-
-                            print_r( $homepage_billboard );
-
-                        ?>
-
-                    </pre>
-
                     <!-- subheadline -->
                     <span class="line subheadline">
 
