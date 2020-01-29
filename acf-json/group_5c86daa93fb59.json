@@ -2899,7 +2899,6 @@
                             },
                             "choices": {
                                 "": "None",
-                                "18": "About Menu",
                                 "7": "Academic Departments",
                                 "9": "College Resources",
                                 "8": "Quick Links",
@@ -2931,6 +2930,18 @@
                 "operator": "==",
                 "value": "pages\/flexible-page.php"
             }
+        ],
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "standard"
+            },
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:news"
+            }
         ]
     ],
     "menu_order": 0,
@@ -2943,5 +2954,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1574430853
+    "modified": 1580322987
 }
