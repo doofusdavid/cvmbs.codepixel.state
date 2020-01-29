@@ -320,7 +320,6 @@
                 min-height: 60vh;
                 padding: 5rem 5rem 5rem 5rem;
 
-                // @include fill( $cvnavy, 0.265 );
                 @include fill( $cvnavy, 0.000 );
 
                 // mobile
@@ -333,7 +332,7 @@
                     // height: auto;
                     height: 100%;
                     min-height: 100vh;
-                    padding: 3rem 3rem 3rem 3rem;
+                    padding: 3rem 4rem 3rem 4rem;
 
                     @include fill( $cvnavy, 1.000 );
 
