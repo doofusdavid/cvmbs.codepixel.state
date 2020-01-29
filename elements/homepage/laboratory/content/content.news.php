@@ -5,11 +5,35 @@
     $news_query = array(
 
         'category_name'  => 'news',
+        'posts_per_page' => 3,
+        'tax_query'      => array(
+
+            array(
+
+                'taxonomy' => 'post_format',
+                'field'    => 'slug',
+                'terms'    => array(
+
+                    'post-format-link',
+                    'post-format-aside',
+                    'post-format-standard'
+
+                )
+
+            )
+
+        )
+
+    );
+
+    $newsies_query = array(
+
+        'category_name'  => 'news',
         'posts_per_page' => 3
 
     );
 
-    $news_articles = new WP_Query( $news_query );
+    $news_articles = new WP_Query( $newsies_query );
 
     $news_category = get_cat_ID( 'News' );
     $news_archive  = get_category_link( $news_category );
@@ -48,9 +72,31 @@
 
         <?php
 
+            // get post format
+            $post_format = get_post_format();
+
+            // link URL
+            if ( $post_format == 'link' ) {
+
+                $post_link   = get_field( 'news_link' );
+                $post_format = 'link';
+
+            } elseif ( $post_format == 'gallery' ) {
+
+                $post_link   = get_the_permalink();
+                $post_format = 'gallery';
+
+            } else {
+
+                $post_link   = get_the_permalink();
+                $post_format = 'standard';
+
+            }
+
             $post_date  = get_the_date();
             $image_test = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 
+            // set fallback featured image
             if ( $image_test ) {
 
                 $news_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
@@ -64,7 +110,7 @@
         ?>
 
         <!-- link -->
-        <a href="<?php the_permalink(); ?>" class="article">
+        <a href="<?php echo $post_link; ?>" class="article <?php echo $post_format; ?>">
 
             <!-- artwork -->
             <div class="header lazyload" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/utilities/pixel.gif);" data-src="<?php echo $news_image; ?>">

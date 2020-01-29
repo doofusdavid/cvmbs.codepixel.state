@@ -52,7 +52,7 @@ export var menusFX = {
 
         menusFX.access( menu, button, globalmenulink );
 
-        menusFX.panels( menu );
+        // menusFX.panels( menu );
 
     },
 

@@ -226,7 +226,7 @@
 
             display: block;
 
-            margin: 0 0 0.75rem 0;
+            margin: 0 0 0 0;
 
             @include font( $klavislim, 1.25rem, 400 );
 
@@ -250,7 +250,7 @@
 
             p {
 
-                margin: 0 0 0 0;
+                margin: 0.75rem 0 0 0;
 
                 @include font( $industry, 0.875rem, 600 );
 

@@ -1,0 +1,48 @@
+{
+    "key": "group_5e2f6ce18116c",
+    "title": "News Link",
+    "fields": [
+        {
+            "key": "field_5e2f6cebe17c1",
+            "label": "Link URL",
+            "name": "news_link",
+            "type": "url",
+            "instructions": "provide a valid URL for the post",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:news"
+            },
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "link"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "revisions"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1580166665
+}
