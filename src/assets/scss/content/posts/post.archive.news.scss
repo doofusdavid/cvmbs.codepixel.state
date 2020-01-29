@@ -160,7 +160,7 @@
 
                 display: block;
 
-                margin: 0 0 0.75rem 0;
+                margin: 0 0 0 0;
 
                 @include font( $klavislim, 1.25rem, 400 );
 
@@ -184,7 +184,7 @@
 
                 p {
 
-                    margin: 0 0 0 0;
+                    margin: 0.75rem 0 0 0;
 
                     @include font( $industry, 0.875rem, 600 );
 
@@ -203,7 +203,7 @@
 
             width: 100%;
             height: 5rem;
-            margin: 2rem 0 0 0;
+            margin: 2rem 1rem 0 1rem;
 
             border-top: 1px solid transparentize( $app05, 0.825 );
             border-bottom: 1px solid transparentize( $app05, 0.825 );

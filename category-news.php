@@ -87,8 +87,6 @@
 		<!-- pagination -->
 		<div class="pagination-container">
 
-			<?php echo $count . ' : ' . $posts_per_page; ?>
-
 			<!-- pagination controls -->
 			<div class="pagination-controls">
 

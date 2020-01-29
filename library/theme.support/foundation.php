@@ -40,7 +40,7 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 			array(
 
 				// 'aside',
-				'gallery',
+				// 'gallery',
 				'link',
 				// 'image',
 				// 'quote',
