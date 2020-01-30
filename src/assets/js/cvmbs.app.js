@@ -367,27 +367,46 @@
 // START :: Places Filters
 // ================================================================================
 
-    if ( $('.places-prse__toggle').length > 0 ) {
-        $('.places-prse__toggle').click(function() {
-            $(this).attr('aria-pressed', function(i, attr) {
-                return attr == 'true' ? 'false' : 'true';
+    if ( $('.places-archive__grid').length > 0 ) {
+        var prseStatus = false;
+        var prseFilter = '.cvmbs--prse';
+        var deptFilter = '';
+
+        var grid = $('.places-archive__grid-inner').isotope({
+            itemSelector: '.places-archive__grid-item'
+        });
+
+        $('.places-prse__toggle').click(function(e) {
+            var toggle = $(e.currentTarget);
+
+            toggle.attr('aria-pressed', function(i, attr) {
+                prseStatus = (attr == 'true') ? false : true;
+                return prseStatus;
+            });
+
+            var filterValue = prseStatus ? prseFilter + deptFilter : deptFilter;
+
+            grid.isotope({
+                filter: filterValue
             });
         });
-    };
 
-    if ( $('.places-dept__options').length > 0 ) {
-        $('.places-dept__option').click(function() {
-            if ( $(this).attr('aria-pressed') == 'false' ) {
-                $(this).siblings().attr('aria-pressed', 'false');
-                $(this).attr('aria-pressed', 'true');
+        $('.places-dept__option').click(function(e) {
+            var button = $(e.currentTarget);
+
+            if ( button.attr('aria-pressed') == 'false' ) {
+                button.siblings().attr('aria-pressed', 'false');
+                button.attr('aria-pressed', 'true');
+
+                deptFilter = button.attr('data-filter');
             }
-        });
-    };
 
-    if ( $('.places-archive__grid').length > 0 ) {
-        // var grid = $('.places-archive__grid-inner').isotope({
-        //     itemSelector: '.places-archive__grid-item'
-        // });
+            var filterValue = prseStatus ? prseFilter + deptFilter : deptFilter;
+
+            grid.isotope({
+                filter: filterValue
+            });
+        });
     };
 
 // ================================================================================

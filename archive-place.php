@@ -15,34 +15,36 @@ $departments = get_terms( $args );
 
 		<?php if ( have_posts() ) : ?>
 
-		<header class="places-archive__header">
-			<div class="places-archive__header-inner">
-				<h1 class="places-archive__header-title">
+		<header class="places__header">
+			<div class="places__header-inner">
+				<h1 class="places__header-title">
 					<?php _e( 'centers + institutes', 'cvmbsPress' ); ?>
-				</h1><!-- .places-archive__header-title -->
-			</div><!-- .places-archive__header-inner -->
-		</header><!-- .places-archive__header -->
+				</h1><!-- .places__header-title -->
+			</div><!-- .places__header-inner -->
+		</header><!-- .places__header -->
 
 		<div class="places-archive__filters">
-			<p class="places-archive__filters-text">filter places</p>
+			<h2 class="places-archive__filters-text"><?php _e( 'Filter Centers + Institutes', 'cvmbsPress' ); ?></h2>
 
-			<div class="places-prse__option">
-				<button class="places-prse__toggle" type="button" id="prse-toggle" aria-pressed="false" aria-label="Program of Research and Scholarly Excellence"><span class="places-prse__toggle-button" aria-hidden></span> PRSE</button>
-			</div><!-- .places-prse__option -->
+			<div class="places-archive__filters-wrap">
+				<div class="places-prse__option">
+					<button class="places-prse__toggle" type="button" data-filter=".cvmbs--prse" aria-pressed="false" aria-label="Programs of Research and Scholarly Excellence"><?php _e( 'PRSE', 'cvmbsPress' ); ?></button>
+				</div><!-- .places-prse__option -->
 
-			<?php if ( ! is_wp_error( $departments ) ) : ?>
+				<!-- <h3 class="places-archive__filters-text"><?php // _e( 'Filter by Department', 'cvmbsPress' ); ?></h3> -->
+
 				<div class="places-dept__options">
-					<button class="places-dept__option" type="button" aria-pressed="true">All Departments</button>
+					<button class="places-dept__option" type="button" data-filter="" aria-pressed="true"><?php _e( 'All Departments', 'cvmbsPress' ); ?></button>
 
 					<?php
 					foreach ( $departments as $dept ) :
 						$slug = $dept->slug;
 						$name = $dept->name;
 					?>
-						<button class="places-dept__option" type="button" aria-pressed="false"><?php echo $name; ?></button>
+						<button class="places-dept__option" type="button" data-filter=".cvmbs-dept__<?php echo $slug; ?>" aria-pressed="false"><?php echo $name; ?></button>
 					<?php endforeach; ?>
-				</div>
-			<?php endif; ?>
+				</div><!-- .places-dept__options -->
+			</div><!-- .places-archive__filters-wrap -->
 		</div><!-- .places-archive__filters -->
 
 		<div class="places-archive__grid">
@@ -55,18 +57,17 @@ $departments = get_terms( $args );
 				$dept_array = [];
 				if ( $departments = get_the_terms( $post, 'department' ) ) {
 					foreach ( $departments as $dept ) {
-						$dept_array[] = $dept->slug;
+						$dept_array[] = 'cvmbs-dept__' . $dept->slug;
 					}
 				}
 				$dept_string = implode( ' ', $dept_array );
 			?>
 
-				<a class="places-archive__grid-item" href="<?php echo esc_url( $link ); ?>" data-dept="<?php echo $dept_string; ?>" <?php if ( $prse ) { echo 'data-prse="true"'; } ?>>
+				<a class="places-archive__grid-item <?php if ( $prse ) { echo 'cvmbs--prse'; } ?> <?php echo $dept_string; ?>" href="<?php echo esc_url( $link ); ?>">
 					<span class="places-archive__grid-item-bg" <?php echo $card_bg; ?> aria-hidden></span>
 					<span class="places-archive__grid-item-overlay" aria-hidden></span>
 					<div class="places-archive__grid-item-text">
 						<span class="places-archive__grid-item-title">
-							<?php if ( $prse ) { echo '<u><strong>PRSE</strong></u>'; } ?>
 							<?php the_title(); ?>
 						</span>
 						<span class="places-archive__grid-item-link" aria-hidden><?php _e( 'learn more', 'cvmbsPress' ); ?></span>

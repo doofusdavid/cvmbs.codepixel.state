@@ -1,13 +1,14 @@
 // stylesheet :: places stylesheet compiler
 
-    // single
-    @import 'places.single';
+	// single
+	// @import 'places.single';
 
-    // archive
-    // @import 'places.archive';
+	// archive
+	// @import 'places.archive';
 
 
-.post-type-archive-place {
+.post-type-archive-place,
+.single-place {
 	display: flex;
 	flex-direction: column;
 	background: $sec_temp_off_white;
