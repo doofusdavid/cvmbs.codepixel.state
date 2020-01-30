@@ -128,6 +128,12 @@
 
             <?php
 
+                if ( $site_type == 'laboratory' ) {
+
+                    switch_to_blog( $currentsite );
+
+                }
+
                 $giving_link = get_field( 'giving_button_link', 'options' );
                 $footer_contact_info = get_field( 'footer_contact_info', 'options' );
 
@@ -191,7 +197,15 @@
                 </a>
                 <!-- END campaign button -->
 
-                <?php switch_to_blog( $currentsite ); ?>
+                <?php
+
+                    if ( $currentsite !== 1 ) {
+
+                        switch_to_blog( $currentsite );
+
+                    }
+
+                ?>
 
             </section>
             <!-- END links.column -->
