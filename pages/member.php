@@ -107,19 +107,6 @@
             // check if data is array
             if ( is_array( $memberDirectoryInfo ) ) {
 
-                // echo 'ball so hard';
-
-            } else {
-
-                // echo 'no data array';
-
-            }
-
-            // check if data is array
-            if ( is_array( $memberDirectoryInfo ) ) {
-
-                // echo 'ball so hard';
-
                 // setup CV content
                 foreach ( $memberDirectoryInfo as $directoryInfo ) {
 
@@ -182,8 +169,6 @@
                 }
 
             } else {
-
-                // echo 'no data array';
 
                 // setup CV content types
                 $directoryType = $memberDirectoryInfo->DirectoryType;
@@ -365,18 +350,6 @@
 
             <!-- info -->
             <div class="listing-info">
-
-                <pre class="developer hide">
-
-                    <?php
-
-                        // print_r( $getMember->GetMemberByIdResult );
-
-                        print_r( $directory[ 'links' ] );
-
-                    ?>
-
-                </pre>
 
                 <!-- listing group -->
                 <div class="listing-group bio">

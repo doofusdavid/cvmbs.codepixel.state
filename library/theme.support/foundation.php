@@ -34,8 +34,24 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		// RSS thingy
 		add_theme_support( 'automatic-feed-links' );
 
-		// Add post formats support: http://codex.wordpress.org/Post_Formats
-		// add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+		// add post formats
+		add_theme_support( 'post-formats',
+
+			array(
+
+				// 'aside',
+				// 'gallery',
+				'link',
+				// 'image',
+				// 'quote',
+				// 'status',
+				// 'video',
+				// 'audio',
+				// 'chat'
+
+			)
+
+		);
 
 		// Additional theme support for woocommerce 3.0.+
 		add_theme_support( 'wc-product-gallery-zoom' );

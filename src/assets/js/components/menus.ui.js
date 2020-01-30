@@ -42,8 +42,8 @@ export var menusFX = {
         // check in
         console.log(
 
-            '%c[ %cmenusFX %c] %cscript%c.%cinitialized',
-            log.brack, log.activ, log.brack, log.init, log.brack, log.brite
+            // '%c[ %cmenusFX %c] %cscript%c.%cinitialized',
+            // log.brack, log.activ, log.brack, log.init, log.brack, log.brite
 
         );
 
@@ -52,7 +52,7 @@ export var menusFX = {
 
         menusFX.access( menu, button, globalmenulink );
 
-        menusFX.panels( menu );
+        // menusFX.panels( menu );
 
     },
 
@@ -63,7 +63,7 @@ export var menusFX = {
         var mediaQ = Foundation.MediaQuery.current;
         var menuX;
 
-        console.log( mediaQ );
+        // console.log( mediaQ );
 
         // handle ZURB offcanvas event
         $(window).on( 'opened.zf.offcanvas', function( e, target, menuX ) {

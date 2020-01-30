@@ -1,13 +1,7 @@
 <?php
 
-    $billboard_query = array(
-
-        'post_type'      => 'billboard',
-        'posts_per_page' => 1
-
-    );
-
-    $homepage_billboards = new WP_Query( $billboard_query );
+    $billboard_config   = get_field( 'college_homepage_options' );
+    $post = $billboard_config[ 'homepage_billboard' ];
 
     $site_image = get_field( 'site_background', 'options' );
 
@@ -18,7 +12,7 @@
 
     <?php
 
-        while ( $homepage_billboards->have_posts() ) : $homepage_billboards->the_post();
+        // while ( $homepage_billboards->have_posts() ) : $homepage_billboards->the_post();
 
         $slide_name      = $post->post_name;
         $slide_image     = get_field( 'billboard_image' );
@@ -116,8 +110,6 @@
 
     </article>
     <!-- END slide -->
-
-    <?php endwhile; ?>
 
     <?php wp_reset_postdata(); ?>
 

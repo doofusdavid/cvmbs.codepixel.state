@@ -1,6 +1,7 @@
 <?php
 
-    $posts = get_field( 'site_homepage_places', 'options' );
+    $homepage_options = get_field( 'college_homepage_options' );
+    $posts            = $homepage_options[ 'featured_places' ];
 
 ?>
 
@@ -41,11 +42,14 @@
         <div id="facilities-carousel" class="places__grid article-cards ui-news">
 
             <?php
-            foreach( $posts as $post ) : // variable must be called $post (IMPORTANT)
-                setup_postdata( $post );
 
-                $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-                $placelink = ( get_field('place_link') ) ? get_field( 'place_website' )['url'] : get_the_permalink();
+                foreach( $posts as $post ) : // variable must be called $post (IMPORTANT)
+
+                    setup_postdata( $post );
+
+                    $place_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+                    $placelink = ( get_field('place_link') ) ? get_field( 'place_website' )['url'] : get_the_permalink();
+
             ?>
 
             <!-- post -->
