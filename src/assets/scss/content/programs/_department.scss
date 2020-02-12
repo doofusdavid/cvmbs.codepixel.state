@@ -1,0 +1,67 @@
+// stylesheet :: degree program department description styles
+
+    // settings
+    $department : 1rem;
+
+    // styles
+    .department-description {
+
+        // @include flex-h-c-v-t( false );
+
+        padding: 8vw 8vw 8vw 8vw;
+
+        @include color( $app05, 0.145 );
+
+        @include fill( $beige, 0.000 );
+
+        // inner
+        &__inner {
+
+            // @include flex-h-c-v-s( false );
+
+        }
+
+        // heading
+        h2 {
+
+            margin: 0 0 1rem 0;
+            padding: 0 4vw 0 0;
+
+            @include typo( 2rem, 0.035em );
+
+            @include color( $g140, 0.000 );
+
+        }
+
+        // text
+        .description_text {
+
+            @include color( $app05, 0.145 );
+
+            // text
+            p {
+
+                margin: 0 0 0 0;
+
+                @include font( $industry, 1rem, 500 );
+
+                @include typo( 2rem, inherit );
+
+            }
+
+            // label
+            .label {
+
+                display: block;
+
+                @include hide;
+
+                @include font( $industry, 0.875rem, 600 );
+
+                @include text( $up );
+
+            }
+
+        }
+
+    }

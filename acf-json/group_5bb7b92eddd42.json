@@ -531,6 +531,33 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_5e43173e99bbf",
+            "label": "Site Description",
+            "name": "site_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -565,5 +592,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1579905249
+    "modified": 1581455212
 }

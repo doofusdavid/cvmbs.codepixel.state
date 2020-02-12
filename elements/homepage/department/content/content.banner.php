@@ -3,8 +3,25 @@
     // department homepage options
     $department_options = get_field( 'department_homepage_options' );
 
-    // content variable(s)
+    // content variable(s) [ DEPRECATED ]
     $department_intro_text = $department_options[ 'department_intro_text' ];
+
+    // get site path
+    $siteinfo = get_blog_details();
+
+    // parse URL for site path
+    $siteurl = str_replace( '/', '', $siteinfo->path );
+
+    // access custom taxonomy on main site
+    switch_to_blog( 1 );
+
+        // get department taxonomy based on siteurl
+        $department = get_term_by( 'slug', $siteurl, 'department' );
+
+        // get department description
+        $department_description = $department->description;
+
+    restore_current_blog();
 
 ?>
 
@@ -14,46 +31,10 @@
     <!-- introduction -->
     <div class="introduction-text">
 
-        <?php echo $department_intro_text; ?>
+        <?php echo $department_description; ?>
 
     </div>
     <!-- END introduction -->
-
-    <!-- quick links -->
-    <ul class="link-box">
-
-        <li class="link-item">
-
-            <a href="#">degree programs</a>
-
-        </li>
-
-        <li class="link-item">
-
-            <a href="#">centers and institutes</a>
-
-        </li>
-
-        <li class="link-item">
-
-            <a href="#">services and outreach</a>
-
-        </li>
-
-        <li class="link-item">
-
-            <a href="#">about the department</a>
-
-        </li>
-
-        <li class="link-item">
-
-            <a href="#">communications</a>
-
-        </li>
-
-    </ul>
-    <!-- END quick links -->
 
 </section>
 <!-- END homepage.intro -->

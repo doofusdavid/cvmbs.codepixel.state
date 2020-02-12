@@ -117,6 +117,25 @@
         }
 
         // horizontal row -> right -> v + center
+        @mixin flex-h-c-v-s( $inline ) {
+
+            @if $inline {
+
+                display: inline-flex;
+
+            } @else {
+
+                display: flex;
+
+            }
+
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+
+        }
+
+        // horizontal row -> right -> v + center
         @mixin flex-h-e-v-c( $inline ) {
 
             @if $inline {

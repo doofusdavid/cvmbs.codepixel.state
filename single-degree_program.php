@@ -39,6 +39,17 @@ $header_bg = has_post_thumbnail() ? 'style="background-image:url(' . get_the_pos
 
 		get_template_part( $block_path . 'intro' );
 
+		$department_meta = wp_get_post_terms( $post->ID, 'department' );
+		$department_name = $department_meta[ 0 ]->slug;
+
+		// print_r( $department_name );
+
+		if ( $department_name !== 'interdisciplinary' ) {
+
+			get_template_part( $block_path . 'department' );
+
+		}
+
 		if ( have_rows('program_blocks') ) :
 
 			while ( have_rows('program_blocks') ) : the_row();

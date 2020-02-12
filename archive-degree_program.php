@@ -1,22 +1,30 @@
+<?php get_header(); ?>
+
 <?php
-get_header();
 
-// The Query
-$args = array(
-	'post_type'      => 'degree_program',
-	'orderby'        => 'menu_order',
-	'order'          => 'ASC',
-	'posts_per_page' =>  99,
-	'tax_query'      =>  array( array(
-		'taxonomy' => 'degree_type',
-		'operator' => 'EXISTS'
-	) )
-);
+	// the query
+	$args = array(
 
-$programs = new WP_Query( $args );
+		'post_type'      => 'degree_program',
+		'orderby'        => 'menu_order',
+		'order'          => 'ASC',
+		'posts_per_page' =>  99,
+		'tax_query'      =>  array(
+
+			array(
+				'taxonomy' => 'degree_type',
+				'operator' => 'EXISTS'
+			)
+		)
+
+	);
+
+	$programs = new WP_Query( $args );
+
 ?>
 
 <div id="primary" class="content-area">
+
 	<main id="main" class="site-main">
 
 		<header class="deg-progs-header">
@@ -64,9 +72,9 @@ $programs = new WP_Query( $args );
 		<?php endif; ?>
 
 	</main><!-- #main -->
+
 </div><!-- #primary -->
 
-<?php
-get_template_part( 'elements/layout/layout.footer' );
+<?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
-get_footer();
+<?php get_footer(); ?>

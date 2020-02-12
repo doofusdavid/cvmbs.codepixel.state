@@ -14,10 +14,13 @@ if ( have_rows('program_intro') ) :
 ?>
 
 <div class="degree-program-intro program-block">
+
 	<div class="degree-program-intro__content">
 
 		<div class="degree-program-intro__desc">
+
 			<?php the_sub_field('desc'); ?>
+
 		</div><!-- .degree-program-intro__desc -->
 
 		<?php if ( have_rows('buttons') ) : ?>
