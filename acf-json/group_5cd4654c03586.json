@@ -74,22 +74,20 @@
                 },
                 {
                     "key": "field_5cd58f4d09df7",
-                    "label": "Department Intro Text",
-                    "name": "department_intro_text",
-                    "type": "textarea",
-                    "instructions": "provide 2-3 sentences for the introductory text block below the homepage billboard",
-                    "required": 1,
+                    "label": "Department Description",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "br"
+                    "message": "This content is now managed via the College site. Please contact the network administrator to make changes.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
                 },
                 {
                     "key": "field_5cd5a61bee815",
@@ -4379,5 +4377,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1581548277
+    "modified": 1581548999
 }
