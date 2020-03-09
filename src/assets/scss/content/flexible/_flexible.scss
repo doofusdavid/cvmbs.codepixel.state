@@ -8,22 +8,23 @@
 
 		display: flex;
 		flex-direction: column;
-		background: $sec_temp_off_white;
+		// background: $sec_temp_off_white;
 		color: $steel;
 		font-size: 1rem;
-
-		@include fill( $pagebase, 0.000 );
 
 		.content-area {
 
 			flex-grow: 1;
+
+			@include fill( $pagebase, 0.000 );
 
 		}
 
 		// container
 		.flexible-page-content {
 
-			padding: 2rem 0 2rem 0;
+			// padding: 2rem 0 2rem 0;
+			padding: 0 0 2rem 0;
 
 		}
 

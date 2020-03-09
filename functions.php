@@ -10,13 +10,13 @@
     require_once( 'library/foundation.php' );
 
     // menus
-    require_once( 'library/menus/menus.php' );
+    require_once( 'library/menus.php' );
 
     // options pages
     require_once( 'library/options.php' );
 
     // sidebars
-    require_once( 'library/sidebars/sidebars.php' );
+    // require_once( 'library/sidebars/sidebars.php' );
 
     // menu walkers
     require_once( 'library/class-foundationpress-top-bar-walker.php' );

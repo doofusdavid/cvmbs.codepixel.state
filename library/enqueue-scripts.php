@@ -36,7 +36,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
 		// Enqueue the main Stylesheet.
-		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'cvmbs.ui.css' ), array(), '1.0.0', 'all' );
+		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'cvmbs.ui.css' ), array(), '1.0.0', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
 		// wp_deregister_script( 'jquery' );
@@ -54,15 +54,18 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Enqueue Isotope for Places archive page
 		if ( is_post_type_archive('place') ) {
-			wp_enqueue_script( 'isotope', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'isotope.pkgd.min.js' ), array( 'jquery' ), '3.0.6', true );
+
+			wp_enqueue_script( 'isotope', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'isotope.pkgd.min.js' ), array( 'jquery' ), '3.0.6', true );
+
 		}
 
 		// Enqueue Foundation scripts
-		wp_enqueue_script( 'cvmbs', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'cvmbs', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), '1.0.0', true );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 
+	// defer.js
 	function defer_cvmbs_scripts_and_styles( $tag, $handle, $src ) {
 
         if ( 'cvmbs' === $handle ){
@@ -76,8 +79,10 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
     }
 
+	// add filter
 	add_filter( 'script_loader_tag', 'defer_cvmbs_scripts_and_styles', 10, 3 );
 
+	// defer.js
 	function defer_jquery_load( $tag, $handle, $src ) {
 
         if ( 'jquery' === $handle ){
@@ -91,6 +96,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
     }
 
+	// add filter
 	add_filter( 'script_loader_tag', 'defer_jquery_load', 10, 3 );
 
 endif;

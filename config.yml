@@ -13,7 +13,7 @@ COMPATIBILITY:
     - "ios >= 10"
 
 # static asset revisioning
-REVISIONING: true
+REVISIONING: false
 
 # paths for gulp task(s)
 PATHS:

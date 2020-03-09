@@ -21,6 +21,19 @@
 
         }
 
+        // label
+        .label {
+
+            display: block;
+
+            margin: 0 0 0.75rem 0;
+
+            @include font( $industry, 0.875rem, 600 );
+
+            // @include text( $up );
+
+        }
+
         // heading
         h2 {
 
@@ -46,19 +59,6 @@
                 @include font( $industry, 1rem, 500 );
 
                 @include typo( 2rem, inherit );
-
-            }
-
-            // label
-            .label {
-
-                display: block;
-
-                @include hide;
-
-                @include font( $industry, 0.875rem, 600 );
-
-                @include text( $up );
 
             }
 

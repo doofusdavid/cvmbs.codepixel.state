@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);">
+<main id="site-layout" class="off-canvas-content default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);" data-template="parent">
 
 	<!-- content container -->
 	<div class="content-container">

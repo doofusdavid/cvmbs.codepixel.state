@@ -287,12 +287,13 @@
     }
 
     // text
-    @mixin text( $case, $align: inherit ) {
+    @mixin text( $case, $align: inherit, $deco: none ) {
 
         text: {
 
             align: $align;
             transform: $case;
+            decoration: $deco;
 
         }
 

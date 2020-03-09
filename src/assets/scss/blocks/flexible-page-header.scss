@@ -1,89 +1,104 @@
-.flexible-page-header {
-	padding: 6.25rem 8vw 0;
-	font-size: .75rem;
+// stylesheet :: flexible page template styles
 
-	.entry-title {
-		max-width: 75rem;
-		margin: 0 auto;
-	}
+	// settings
+	$flexible : 1rem;
 
-	&--styled {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		// margin-bottom: 2rem;
-		background: transparent no-repeat center center / cover;
+	// styles
+	.flexible-page-header {
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background: rgba($dark-nite, .7);
-		}
+		padding: 6.25rem 8vw 0;
+		padding: 9rem 8vw 0 8vw;
+		font-size: .75rem;
 
-		&__inner {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			max-width: 100%;
-			min-height: 47.5vh;
-			// min-height: 55vh;
-			margin: 0 auto;
-			padding: 8rem 8vw 3rem;
+		// mobile
+		@include breakpoint ( small only ) {
 
-			// mobile
-			@include breakpoint ( medium ) {
+			padding: 6rem 2rem 0 2rem;
 
-				min-height: 60vh;
-
-			}
-
-		}
-
-		&__content {
-			width: 75rem;
-			max-width: 100%;
-			margin: 0 auto;
-			color: $rite-lite;
-
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-
-			p:not([class]) {
-				font-size: .75rem;
-				font-weight: 600;
-				letter-spacing: .045em;
-				line-height: 2;
-			}
 		}
 
 		.entry-title {
-			color: $cvellow;
-			letter-spacing: .065em;
-			line-height: 1.2;
+			max-width: 75rem;
+			margin: 0 auto;
 		}
 
-		.entry-subtitle {
-			margin-bottom: .75rem;
-			font-family: $klavislim;
-			font-size: 1.25rem;
-			font-weight: 400;
-			letter-spacing: .045em;
-			line-height: 1.2;
-			text-transform: uppercase;
+		&--styled {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			// margin-bottom: 2rem;
+			background: transparent no-repeat center center / cover;
 
-			@include bpoint(40em) {
-				font-size: 1.5rem;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba($dark-nite, .7);
 			}
 
-			&:last-child {
-				margin-bottom: 0;
+			&__inner {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				max-width: 100%;
+				min-height: 47.5vh;
+				// min-height: 55vh;
+				margin: 0 auto;
+				padding: 8rem 8vw 3rem;
+
+				// mobile
+				@include breakpoint ( medium ) {
+
+					min-height: 60vh;
+
+				}
+
+			}
+
+			&__content {
+				width: 75rem;
+				max-width: 100%;
+				margin: 0 auto;
+				color: $rite-lite;
+
+				& > *:last-child {
+					margin-bottom: 0;
+				}
+
+				p:not([class]) {
+					font-size: .75rem;
+					font-weight: 600;
+					letter-spacing: .045em;
+					line-height: 2;
+				}
+			}
+
+			.entry-title {
+				color: $cvellow;
+				letter-spacing: .065em;
+				line-height: 1.2;
+			}
+
+			.entry-subtitle {
+				margin-bottom: .75rem;
+				font-family: $klavislim;
+				font-size: 1.25rem;
+				font-weight: 400;
+				letter-spacing: .045em;
+				line-height: 1.2;
+				text-transform: uppercase;
+
+				@include bpoint(40em) {
+					font-size: 1.5rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
-}

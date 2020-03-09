@@ -67,6 +67,13 @@
 
                 width: calc( 25% - 2rem );
 
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    width: calc( 50% - 2rem );
+
+                }
+
             }
 
         }
@@ -120,6 +127,8 @@
             margin: 1rem 1rem 1rem 1rem;
             padding: 2rem 2rem 2rem 2rem;
 
+            overflow: hidden;
+
             @include font( $klavislim, 1.125rem, 400 );
 
             @include text( $up, right );
@@ -148,7 +157,53 @@
 
             }
 
-            // after
+            // hover state
+            &:hover {
+
+                @include color( $campaign, 0.000 );
+
+                // common
+                &:before,
+                &:after {
+
+                    // transition: all 360ms $outex 0ms;
+
+                }
+
+                // before
+                &:before {
+
+                    opacity: 1.000;
+
+                }
+
+                // after
+                &:after {
+
+                    @include gradient(
+
+                        180deg,
+                        transparent, 1.000, 0%,
+                        // $cvnavy, 0.105, 100%
+                        $dark, 0.105, 100%
+
+                    );
+
+                }
+
+                // image
+                .image {
+
+                    transform: scale( 1.375 );
+
+                    transition: all 360ms $outex 0ms;
+
+                }
+
+            }
+
+            // common
+            &:before,
             &:after {
 
                 content: '';
@@ -160,7 +215,25 @@
                 bottom: 0;
                 left: 0;
 
-                z-index: 1;
+                transition: all 360ms $outex 0ms;
+
+            }
+
+            // before
+            &:before {
+
+                z-index: 19;
+
+                @include fill( $dark, 0.365 );
+
+                opacity: 0.000;
+
+            }
+
+            // after
+            &:after {
+
+                z-index: 20;
 
                 @include gradient(
 
@@ -173,12 +246,38 @@
 
             }
 
+            // image
+            .image {
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                transform: scale( 1.125 );
+
+                transition: all 360ms $outex 0ms;
+
+            }
+
             // title=
             .title {
 
                 position: relative;
 
-                z-index: 10;
+                z-index: 30;
 
             }
 

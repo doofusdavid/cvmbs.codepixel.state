@@ -18,9 +18,9 @@
 
 	        <meta name="apple-mobile-web-app-title" content="enterprise"/>
 
-			<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/img/icons/iOS.png"/>
+			<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/img/icons/iOS.png"/>
 
-			<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+			<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
 
 			<?php wp_head(); ?>
 

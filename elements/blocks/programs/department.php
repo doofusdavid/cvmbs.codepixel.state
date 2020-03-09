@@ -12,6 +12,12 @@
     <!-- inner -->
     <div class="department-description__inner">
 
+        <span class="label">
+
+            about the department
+
+        </span>
+
         <h2 class="description_title">
 
             <?php echo $department_name; ?>
@@ -19,12 +25,6 @@
         </h2>
 
         <div class="description_text">
-
-            <span class="label">
-
-                about the department
-
-            </span>
 
             <p>
 
