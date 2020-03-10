@@ -158,7 +158,7 @@
 
                     @include flex-v-b-h-s( false );
 
-                    padding: 0 0 5rem 5rem;
+                    padding: 0 3rem 5rem 5rem;
 
                     // mobile
                     @include breakpoint ( small only ) {

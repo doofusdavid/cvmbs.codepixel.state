@@ -13,7 +13,7 @@
         @include fill( $beige, 0.000 );
 
         // mobile
-        @include breakpoint ( small only ) {
+        @include breakpoint ( medium down ) {
 
             padding: 3rem 3rem 3rem 3rem;
 
@@ -31,24 +31,141 @@
         }
 
         // text
-        .description-text {
+        .description {
 
-            @include font( $industry, 0.875rem, 500 );
+            // prse
+            &.prse {
 
-            // paragraph
-            p {
+                @include flex-h-j-v-t( false );
 
-                // last child
-                &:last-child {
+                // mobile
+                @include breakpoint ( medium down ) {
 
-                    margin-bottom: 0;
+                    @include flex-v-t-h-c( false );
 
                 }
 
-                // bold
-                strong {
+                // unit
+                .unit_description {
 
-                    @include font( $industry, 0.875rem, 700 );
+                    width: 70%;
+                    padding: 0 3rem 0 0;
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        width: 100%;
+                        padding: 0 0 0 0;
+
+                    }
+
+                    // paragraph
+                    p {
+
+                        // last child
+                        &:last-child {
+
+                            margin-bottom: 0;
+
+                        }
+
+                        // bold
+                        strong {
+
+                            @include font( $industry, 0.875rem, 700 );
+
+                        }
+
+                    }
+
+                }
+
+                // prse
+                .prse_description {
+
+                    width: 30%;
+                    padding: 2rem 2rem 2rem 2rem;
+
+                    @include fill( white );
+
+                    @include shadowbox( 1rem, 3.5rem, black, 0.675 );
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        width: 50%;
+                        margin: 3rem 0 0 0;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 100%;
+
+                    }
+
+                    // common
+                    span {
+
+                        display: block;
+
+                    }
+
+                    // title
+                    .title {
+
+                        margin: 0 0 0.75rem 0;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include color( $g140 );
+
+                    }
+
+                    // text
+                    .text {
+
+                        @include font( $industry, 0.75rem, 600 );
+
+                    }
+
+                    // link
+                    a {
+
+                        @include flex-h-c-v-c( false );
+
+                        width: 100%;
+                        height: 3rem;
+                        margin: 1rem 0 0 0;
+                        padding: 0 0 0 0;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include color( white );
+
+                        @include fill( $g140 );
+
+                        @include shadowbox( 1rem, 3rem, black, 0.725 );
+
+                        transition: $all220;
+
+                        // hover state
+                        &:hover {
+
+                            @include color( $gold );
+
+                            @include fill( $g135 );
+
+                        }
+
+                    }
 
                 }
 
