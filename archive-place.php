@@ -1,34 +1,47 @@
 <?php
-get_header();
 
-$taxonomy = 'department';
+	$taxonomy = 'department';
 
-$args = array(
-	'taxonomy' => $taxonomy
-);
+	$args = array(
 
-$departments = get_terms( $args );
+		'taxonomy' => $taxonomy
+
+	);
+
+	$departments = get_terms( $args );
+
 ?>
 
+<?php get_header(); ?>
+
 <div id="primary" class="content-area">
+
 	<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
 		<header class="places__header">
+
 			<div class="places__header-inner">
+
 				<h1 class="places__header-title">
+
 					<?php _e( 'centers + institutes', 'cvmbsPress' ); ?>
+
 				</h1><!-- .places__header-title -->
+
 			</div><!-- .places__header-inner -->
+
 		</header><!-- .places__header -->
 
 		<div class="places-archive__filters">
+
 			<h2 class="places-archive__filters-text"><?php _e( 'Filter Centers + Institutes', 'cvmbsPress' ); ?></h2>
 
 			<div class="places-archive__filters-wrap">
+
 				<div class="places-prse__option">
-					<button class="places-prse__toggle" type="button" data-filter=".cvmbs--prse" aria-pressed="false" aria-label="Programs of Research and Scholarly Excellence"><?php _e( 'PRSE', 'cvmbsPress' ); ?></button>
+					<button class="places-prse__toggle" type="button" data-filter=".cvmbs--prse" aria-pressed="false" aria-label="Programs of Research and Scholarly Excellence"><?php _e( 'Programs of Research and Scholarly Excellence (PRSE)', 'cvmbsPress' ); ?></button>
 				</div><!-- .places-prse__option -->
 
 				<!-- <h3 class="places-archive__filters-text"><?php // _e( 'Filter by Department', 'cvmbsPress' ); ?></h3> -->
@@ -44,7 +57,9 @@ $departments = get_terms( $args );
 						<button class="places-dept__option" type="button" data-filter=".cvmbs-dept__<?php echo $slug; ?>" aria-pressed="false"><?php echo $name; ?></button>
 					<?php endforeach; ?>
 				</div><!-- .places-dept__options -->
+
 			</div><!-- .places-archive__filters-wrap -->
+
 		</div><!-- .places-archive__filters -->
 
 		<div class="places-archive__grid">
@@ -66,6 +81,12 @@ $departments = get_terms( $args );
 				<a class="places-archive__grid-item <?php if ( $prse ) { echo 'cvmbs--prse'; } ?> <?php echo $dept_string; ?>" href="<?php echo esc_url( $link ); ?>">
 					<span class="places-archive__grid-item-bg" <?php echo $card_bg; ?> aria-hidden></span>
 					<span class="places-archive__grid-item-overlay" aria-hidden></span>
+					<?php if ( $prse ) : ?>
+
+					<span class="places-archive__grid-item-prse">PRSE</span>
+
+					<?php endif; ?>
+
 					<div class="places-archive__grid-item-text">
 						<span class="places-archive__grid-item-title">
 							<?php the_title(); ?>

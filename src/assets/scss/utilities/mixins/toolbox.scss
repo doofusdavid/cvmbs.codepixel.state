@@ -218,14 +218,14 @@
     }
 
     // background color
-    @mixin color( $dye, $haze ) {
+    @mixin color( $dye, $haze: 0.000 ) {
 
         color: transparentize( $dye, $haze );
 
     }
 
     // background color
-    @mixin fill( $dye, $haze ) {
+    @mixin fill( $dye, $haze: 0.000 ) {
 
         background: {
 
