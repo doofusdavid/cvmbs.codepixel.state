@@ -10,16 +10,21 @@
 
 	$departments = get_terms( $args );
 
+	$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 ?>
 
 <?php get_header(); ?>
 
+<!-- primary -->
 <div id="primary" class="content-area">
 
+	<!-- main -->
 	<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
+		<!-- header -->
 		<header class="places__header">
 
 			<div class="places__header-inner">
@@ -32,7 +37,8 @@
 
 			</div><!-- .places__header-inner -->
 
-		</header><!-- .places__header -->
+		</header>
+		<!-- END header -->
 
 		<div class="places-archive__filters">
 
@@ -41,21 +47,30 @@
 			<div class="places-archive__filters-wrap">
 
 				<div class="places-prse__option">
-					<button class="places-prse__toggle" type="button" data-filter=".cvmbs--prse" aria-pressed="false" aria-label="Programs of Research and Scholarly Excellence"><?php _e( 'Programs of Research and Scholarly Excellence (PRSE)', 'cvmbsPress' ); ?></button>
+
+					<button class="places-prse__toggle filter_control" type="button" data-filter=".cvmbs--prse" aria-pressed="false" aria-label="Programs of Research and Scholarly Excellence"><?php _e( 'Programs of Research and Scholarly Excellence (PRSE)', 'cvmbsPress' ); ?></button>
+
 				</div><!-- .places-prse__option -->
 
 				<!-- <h3 class="places-archive__filters-text"><?php // _e( 'Filter by Department', 'cvmbsPress' ); ?></h3> -->
 
 				<div class="places-dept__options">
-					<button class="places-dept__option" type="button" data-filter="" aria-pressed="true"><?php _e( 'All Departments', 'cvmbsPress' ); ?></button>
 
-					<?php
-					foreach ( $departments as $dept ) :
+					<button class="places-dept__option filter_control" type="button" data-filter="" aria-pressed="true">
+
+						<?php _e( 'All Departments', 'cvmbsPress' ); ?>
+
+					</button>
+
+					<?php foreach ( $departments as $dept ) :
+
 						$slug = $dept->slug;
-						$name = $dept->name;
-					?>
-						<button class="places-dept__option" type="button" data-filter=".cvmbs-dept__<?php echo $slug; ?>" aria-pressed="false"><?php echo $name; ?></button>
+						$name = $dept->name; ?>
+
+						<button class="places-dept__option filter_control" type="button" data-filter=".cvmbs-dept__<?php echo $slug; ?>" aria-pressed="false"><?php echo $name; ?></button>
+
 					<?php endforeach; ?>
+
 				</div><!-- .places-dept__options -->
 
 			</div><!-- .places-archive__filters-wrap -->
@@ -101,8 +116,11 @@
 
 		<?php endif; ?>
 
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main>
+	<!-- END main -->
+
+</div>
+<!-- END primary -->
 
 <?php
 get_template_part( 'elements/layout/layout.footer' );

@@ -351,45 +351,65 @@
 // ========================================================================================================
 
     if ( $('.places-archive__grid').length > 0 ) {
+
+        var hash = location.hash;
+
+        console.log( hash );
+
         var prseStatus = false;
         var prseFilter = '.cvmbs--prse';
         var deptFilter = '';
 
         var grid = $('.places-archive__grid-inner').isotope({
+
             itemSelector: '.places-archive__grid-item'
+
         });
 
         $('.places-prse__toggle').click(function(e) {
+
             var toggle = $(e.currentTarget);
 
             toggle.attr('aria-pressed', function(i, attr) {
+
                 prseStatus = (attr == 'true') ? false : true;
+
                 return prseStatus;
+
             });
 
             var filterValue = prseStatus ? prseFilter + deptFilter : deptFilter;
 
             grid.isotope({
+
                 filter: filterValue
+
             });
+
         });
 
         $('.places-dept__option').click(function(e) {
-            var button = $(e.currentTarget);
+
+            var button = $( e.currentTarget );
 
             if ( button.attr('aria-pressed') == 'false' ) {
+
                 button.siblings().attr('aria-pressed', 'false');
                 button.attr('aria-pressed', 'true');
 
                 deptFilter = button.attr('data-filter');
+
             }
 
             var filterValue = prseStatus ? prseFilter + deptFilter : deptFilter;
 
             grid.isotope({
+
                 filter: filterValue
             });
+
         });
+
     };
 
 // ========================================================================================================
