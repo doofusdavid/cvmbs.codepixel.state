@@ -128,7 +128,7 @@
 
             <?php
 
-                if ( $site_type == 'laboratory' ) {
+                if ( $site_type == 'laboratory' || $site_type == 'special' ) {
 
                     switch_to_blog( $currentsite );
 
