@@ -7,8 +7,65 @@
 
 ?>
 
+<style media="screen">
+
+@media screen and ( max-width: 63.9375em ) {
+
+    #emergency_alert {
+
+        left: 2rem;
+
+    }
+
+}
+
+#emergency_alert {
+
+    position: fixed;
+
+    top: 7rem;
+    right: 2rem;
+
+    z-index: 200;
+
+    padding: 2rem 2rem 2rem 2rem;
+
+    color: white;
+
+    background-color: rgba( 255, 0, 0, 0.635 );
+
+    box-shadow: 0 1rem 3.5rem 0 rgba( 0, 0, 0, 0.415 );
+
+}
+
+#emergency_alert a {
+
+    color: white;
+
+}
+
+</style>
+
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content department" data-off-canvas-content>
+
+    <!-- emergency alert -->
+    <div id="emergency_alert" class="ui_alert">
+
+        <span class="message">
+
+            CSU is closely monitoring and following COVID-19 [coronavirus] guidance as outlined by public health experts.
+
+        </span>
+
+        <a href="https://safety.colostate.edu/coronavirus">
+
+            more information
+
+        </a>
+
+    </div>
+    <!-- END emergency alert -->
 
     <!-- department.billboard -->
     <section id="department-billboard" class="department-billboard ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">

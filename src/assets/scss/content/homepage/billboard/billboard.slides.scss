@@ -36,6 +36,40 @@
 
 		transition: all 240ms linear 160ms;
 
+		// emergency alert
+		#emergency_alerted {
+
+			position: fixed;
+
+			top: 7rem;
+			right: 2rem;
+
+			z-index: 200;
+
+			padding: 2rem 2rem 2rem 2rem;
+
+			@include color( white );
+
+			@include fill( red, 0.365 );
+
+			@include shadowbox( 1rem, 3.5rem, black, 0.585 );
+
+			// mobile
+			@include breakpoint ( medium down ) {
+
+				left: 2rem;
+
+			}
+
+			// link
+			a {
+
+				@include color( white );
+
+			}
+
+		}
+
 		// menu open class
 		&.site-menu-open {
 
