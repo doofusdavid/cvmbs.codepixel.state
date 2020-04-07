@@ -31,6 +31,47 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_5e8c7ed40b913",
+            "label": "Homepage Alert\/Announcement Option",
+            "name": "homepage_alert_option",
+            "type": "true_false",
+            "instructions": "display homepage alert\/announcement to communicate important information",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cd58e4109df4",
+                        "operator": "==",
+                        "value": "college"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cd58e4109df4",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cd58e4109df4",
+                        "operator": "==",
+                        "value": "vth"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cd58e6b09df5",
             "label": "Department Homepage Options",
             "name": "department_homepage_options",
@@ -3343,7 +3384,7 @@
                             "key": "field_5dc32f3d0fc75",
                             "label": "Content",
                             "name": "content",
-                            "type": "wysiwyg",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3353,10 +3394,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
+                            "placeholder": "",
+                            "maxlength": 400,
+                            "rows": "",
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_5dc32f4c0fc76",
@@ -3553,7 +3594,7 @@
                         }
                     ],
                     "min": "",
-                    "max": ""
+                    "max": "1"
                 },
                 "layout_5dbc7bb9ced4e": {
                     "key": "layout_5dbc7bb9ced4e",
@@ -3637,6 +3678,25 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5e8c74f91f2d2",
+                                    "label": "Sticky?",
+                                    "name": "sticky",
+                                    "type": "true_false",
+                                    "instructions": "should this launchpad stick to the front of the line with highlighted visual style?",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Sticky",
+                                    "ui_off_text": "Default"
                                 }
                             ]
                         }
@@ -4354,6 +4414,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e8c6a3f09d99",
+                            "label": "Sticky?",
+                            "name": "sticky",
+                            "type": "true_false",
+                            "instructions": "should this launchpad stick to the front of the line with highlighted visual style?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Sticky",
+                            "ui_off_text": "Default"
                         }
                     ]
                 }
@@ -4396,5 +4475,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1583854463
+    "modified": 1586265985
 }

@@ -316,7 +316,12 @@
 
             @include fill( $nite, 0.445 );
 
-            padding: 1.5rem 2rem;
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 3rem 3rem 3rem 3rem;
+
+            }
 
             @include bpoint(tablet) {
                 padding: 1.5rem 5rem;
@@ -325,7 +330,7 @@
             // links
             .footer-links {
 
-                margin: .5rem 1rem .5rem 0;
+                // margin: .5rem 1rem .5rem 0;
 
             }
 
@@ -427,9 +432,16 @@
 
                 width: 16rem;
                 height: 2rem;
-                margin: .5rem 0 .5rem auto;
+                // margin: .5rem 0 .5rem auto;
 
                 color: white;
+
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    margin: 1rem 0 0 0;
+
+                }
 
                 // hover
                 &:hover {

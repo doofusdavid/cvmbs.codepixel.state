@@ -8,68 +8,6 @@
 
         position: relative;
 
-        @include flex-h-s-v-t( false );
-
-        flex-wrap: wrap;
-
-        padding: 4rem 4rem 4rem 4rem;
-
-        @include fill( $dark, 0.000 );
-
-        @include gradient(
-
-            180deg,
-            transparent, 1.000, 0%,
-            // $roarange, 0.105, 100%
-            $beige, 0.105, 100%
-
-        );
-
-        // mobile
-        @include breakpoint ( small only ) {
-
-            @include flex-v-t-h-st( false );
-
-            padding: 2rem 2rem 2rem 2rem;
-
-        }
-
-        // layout three
-        &.three {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 33.3333333% - 2rem );
-
-            }
-
-        }
-
-        // layout four
-        &.four {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 25% - 2rem );
-
-            }
-
-        }
-
-        // layout multiples
-        &.multiples {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 33.3333333% - 2rem );
-
-            }
-
-        }
-
         // pattern
         .pattern-overlay {
 
@@ -91,6 +29,73 @@
             }
 
             // opacity: 0.385;
+
+        }
+
+        // launchpads
+        .launchpads {
+
+            @include flex-h-s-v-t( false );
+
+            flex-wrap: wrap;
+
+            padding: 4rem 4rem 4rem 4rem;
+
+            @include fill( $dark, 0.000 );
+
+            @include gradient(
+
+                180deg,
+                transparent, 1.000, 0%,
+                // $roarange, 0.105, 100%
+                $beige, 0.105, 100%
+
+            );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 2rem 2rem 2rem 2rem;
+
+            }
+
+            // layout three
+            &.three {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 33.3333333% - 2rem );
+
+                }
+
+            }
+
+            // layout four
+            &.four {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 25% - 2rem );
+
+                }
+
+            }
+
+            // layout multiples
+            &.multiples {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 33.3333333% - 2rem );
+
+                }
+
+            }
 
         }
 
@@ -140,7 +145,7 @@
             // hover state
             &:hover {
 
-                @include color( $cvellow, 0.000 );
+                @include color( $gold, 0.000 );
                 // @include color( white, 0.000 );
 
                 // after
@@ -150,7 +155,8 @@
 
                         180deg,
                         transparent, 1.000, 0%,
-                        $cvnavy, 0.000, 100%
+                        // $cvnavy, 0.000, 100%
+                        $dark, 0.000, 100%
 
                     );
 
@@ -187,12 +193,50 @@
 
             }
 
+            // sticky
+            &.sticky {
+
+                // hover state
+                &:hover {
+
+                    @include color( $cvellow );
+
+                    // after
+                    &:after {
+
+                        @include gradient(
+
+                            180deg,
+                            transparent, 1.000, 0%,
+                            $cvnavy, 0.000, 100%
+
+                        );
+
+                    }
+
+                }
+
+                // after
+                &:after {
+
+                    @include gradient(
+
+                        180deg,
+                        transparent, 1.000, 0%,
+                        $cvnavy, 0.105, 100%
+
+                    );
+
+                }
+
+            }
+
             // title=
             .title {
 
                 position: relative;
 
-                z-index: 10;
+                z-index: 30;
 
             }
 

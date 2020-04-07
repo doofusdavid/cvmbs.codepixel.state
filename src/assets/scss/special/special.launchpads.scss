@@ -4,91 +4,9 @@
     $special : 1rem;
 
     // styles
-    .launchpads {
+    .homepage-section {
 
         position: relative;
-
-        @include flex-h-s-v-t( false );
-
-        flex-wrap: wrap;
-
-        padding: 4rem 4rem 4rem 4rem;
-
-        @include fill( $dark, 0.000 );
-
-        @include gradient(
-
-            180deg,
-            transparent, 1.000, 0%,
-            // $roarange, 0.105, 100%
-            $beige, 0.105, 100%
-
-        );
-
-        // mobile
-        @include breakpoint ( small only ) {
-
-            @include flex-v-t-h-st( false );
-
-            padding: 2rem 2rem 2rem 2rem;
-
-        }
-
-        // layout two
-        &.two {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 50% - 2rem );
-                height: 20rem;
-
-            }
-
-        }
-
-        // layout three
-        &.three {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 33.3333333% - 2rem );
-
-            }
-
-        }
-
-        // layout four
-        &.four {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 25% - 2rem );
-
-                // mobile
-                @include breakpoint ( medium down ) {
-
-                    width: calc( 50% - 2rem );
-
-                }
-
-            }
-
-        }
-
-        // layout multiples
-        &.multiples {
-
-            // launchpad
-            .launchpad {
-
-                width: calc( 33.3333333% - 2rem );
-
-            }
-
-        }
 
         // pattern
         .pattern-overlay {
@@ -114,71 +32,213 @@
 
         }
 
-        // launchpad
-        .launchpad {
+        // class hook
+        .launchpads {
 
             position: relative;
 
-            z-index: 20;
+            @include flex-h-s-v-t( false );
 
-            @include flex-h-e-v-b( true );
+            flex-wrap: wrap;
 
-            height: 14rem;
-            margin: 1rem 1rem 1rem 1rem;
-            padding: 2rem 2rem 2rem 2rem;
+            padding: 4rem 4rem 4rem 4rem;
 
-            overflow: hidden;
+            @include fill( $dark, 0.000 );
 
-            @include font( $klavislim, 1.125rem, 400 );
+            @include gradient(
 
-            @include text( $up, right );
+                180deg,
+                transparent, 1.000, 0%,
+                // $roarange, 0.105, 100%
+                $beige, 0.105, 100%
 
-            @include typo( 1.5rem, 0.045em );
-
-            text-decoration: none;
-
-            @include color( $app05, 0.125 );
-            @include color( white, 0.000 );
-
-            background: {
-
-                repeat: no-repeat;
-                size: cover;
-                position: center center;
-
-            }
-
-            @include shadowbox( 1rem, 3rem, black, 0.465 );
+            );
 
             // mobile
             @include breakpoint ( small only ) {
 
-                width: calc( 100% - 2rem ) !important;
+                @include flex-v-t-h-st( false );
+
+                padding: 2rem 2rem 2rem 2rem;
 
             }
 
-            // hover state
-            &:hover {
+            // layout two
+            &.two {
 
-                @include color( $campaign, 0.000 );
+                // launchpad
+                .launchpad {
+
+                    width: calc( 50% - 2rem );
+                    height: 20rem;
+
+                }
+
+            }
+
+            // layout three
+            &.three {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 33.3333333% - 2rem );
+
+                }
+
+            }
+
+            // layout four
+            &.four {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 25% - 2rem );
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        width: calc( 50% - 2rem );
+
+                    }
+
+                }
+
+            }
+
+            // layout multiples
+            &.multiples {
+
+                // launchpad
+                .launchpad {
+
+                    width: calc( 33.3333333% - 2rem );
+
+                }
+
+            }
+
+            // launchpad
+            .launchpad {
+
+                position: relative;
+
+                z-index: 20;
+
+                @include flex-h-e-v-b( true );
+
+                height: 14rem;
+                margin: 1rem 1rem 1rem 1rem;
+                padding: 2rem 2rem 2rem 2rem;
+
+                overflow: hidden;
+
+                @include font( $klavislim, 1.125rem, 400 );
+
+                @include text( $up, right );
+
+                @include typo( 1.5rem, 0.045em );
+
+                text-decoration: none;
+
+                @include color( $app05, 0.125 );
+                @include color( white, 0.000 );
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                @include shadowbox( 1rem, 3rem, black, 0.465 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: calc( 100% - 2rem ) !important;
+
+                }
+
+                // hover state
+                &:hover {
+
+                    @include color( $campaign, 0.000 );
+
+                    // common
+                    &:before,
+                    &:after {
+
+                        // transition: all 360ms $outex 0ms;
+
+                    }
+
+                    // before
+                    &:before {
+
+                        opacity: 1.000;
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include gradient(
+
+                            180deg,
+                            transparent, 1.000, 0%,
+                            // $cvnavy, 0.105, 100%
+                            $dark, 0.105, 100%
+
+                        );
+
+                    }
+
+                    // image
+                    .image {
+
+                        transform: scale( 1.375 );
+
+                        transition: all 360ms $outex 0ms;
+
+                    }
+
+                }
 
                 // common
                 &:before,
                 &:after {
 
-                    // transition: all 360ms $outex 0ms;
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    transition: all 360ms $outex 0ms;
 
                 }
 
                 // before
                 &:before {
 
-                    opacity: 1.000;
+                    z-index: 19;
+
+                    @include fill( $dark, 0.365 );
+
+                    opacity: 0.000;
 
                 }
 
                 // after
                 &:after {
+
+                    z-index: 20;
 
                     @include gradient(
 
@@ -191,93 +251,78 @@
 
                 }
 
+                // sticky
+                &.sticky {
+
+                    // hover state
+                    &:hover {
+
+                        @include color( $cvellow );
+
+                        // after
+                        &:after {
+
+                            @include gradient(
+
+                                180deg,
+                                transparent, 1.000, 0%,
+                                $cvnavy, 0.000, 100%
+
+                            );
+
+                        }
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include gradient(
+
+                            180deg,
+                            transparent, 1.000, 0%,
+                            $cvnavy, 0.105, 100%
+
+                        );
+
+                    }
+
+                }
+
                 // image
                 .image {
 
-                    transform: scale( 1.375 );
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    transform: scale( 1.125 );
 
                     transition: all 360ms $outex 0ms;
 
                 }
 
-            }
+                // title=
+                .title {
 
-            // common
-            &:before,
-            &:after {
+                    position: relative;
 
-                content: '';
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                transition: all 360ms $outex 0ms;
-
-            }
-
-            // before
-            &:before {
-
-                z-index: 19;
-
-                @include fill( $dark, 0.365 );
-
-                opacity: 0.000;
-
-            }
-
-            // after
-            &:after {
-
-                z-index: 20;
-
-                @include gradient(
-
-                    180deg,
-                    transparent, 1.000, 0%,
-                    // $cvnavy, 0.105, 100%
-                    $dark, 0.105, 100%
-
-                );
-
-            }
-
-            // image
-            .image {
-
-                position: absolute;
-
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                z-index: 10;
-
-                background: {
-
-                    repeat: no-repeat;
-                    size: cover;
-                    position: center center;
+                    z-index: 30;
 
                 }
-
-                transform: scale( 1.125 );
-
-                transition: all 360ms $outex 0ms;
-
-            }
-
-            // title=
-            .title {
-
-                position: relative;
-
-                z-index: 30;
 
             }
 
