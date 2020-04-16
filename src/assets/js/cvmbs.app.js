@@ -54,6 +54,16 @@
 
     };
 
+    // cookies
+    site.cookie = {
+
+        control : $('.cookie_control'),
+        set     : $('#set_cookie'),
+        delete  : $('#delete_cookie'),
+        show    : $('#show_cookies')
+
+    };
+
     // brand
     site.brand = {
 
@@ -148,6 +158,50 @@
 
     // you know what it is bruh
     $(document).ready(function() {
+
+        console.log( document.cookie );
+
+        // homepage alert
+        var homepage_alert = $('#homepage_alert');
+        var dismiss_alert  = $('#dismiss_alert');
+
+        if ( document.cookie.split( ';' ).some( function( item ) {
+
+            return item.trim().indexOf( 'alert=dismissed' ) == 0
+
+        } ) ) {
+
+            homepage_alert.remove();
+
+        } else {
+
+            homepage_alert.show();
+
+        }
+
+        // set action
+        dismiss_alert.on( 'click', function ( e ) {
+
+            document.cookie = 'alert=dismissed';
+
+            homepage_alert.remove();
+
+        });
+
+        // dismiss action
+        site.cookie.delete.on( 'click', function ( e ) {
+
+            // set cookie
+            document.cookie = 'alert=pending';
+
+        });
+
+        // debug action
+        site.cookie.show.on( 'click', function ( e ) {
+
+            console.log( document.cookie );
+
+        });
 
         // menus
         menusFX.init();

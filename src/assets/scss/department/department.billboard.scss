@@ -33,6 +33,18 @@
 
         }
 
+        // alert class
+        &.has_alert {
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                min-height: 80vh;
+
+            }
+
+        }
+
         // title
         #homepage-title {
 

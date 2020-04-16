@@ -32,9 +32,9 @@
         },
         {
             "key": "field_5e8c7ed40b913",
-            "label": "Homepage Alert\/Announcement Option",
-            "name": "homepage_alert_option",
-            "type": "true_false",
+            "label": "Homepage Alert\/Announcement",
+            "name": "homepage_alert",
+            "type": "group",
             "instructions": "display homepage alert\/announcement to communicate important information",
             "required": 0,
             "conditional_logic": [
@@ -65,11 +65,140 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5e8c98e5274ce",
+                    "label": "Alert\/Announcement Option",
+                    "name": "alert_option",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e8c99716f336",
+                    "label": "Alert Title",
+                    "name": "alert_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e8c98e5274ce",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e8c99826f337",
+                    "label": "Alert Text",
+                    "name": "alert_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e8c98e5274ce",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5e8c99916f338",
+                    "label": "Alert Link",
+                    "name": "alert_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e8c98e5274ce",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5e8c99b76f339",
+                    "label": "Alert Type",
+                    "name": "alert_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e8c98e5274ce",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "info": "Information (Blue)",
+                        "warning": "Warning (Yellow)",
+                        "good": "Good News (Green)",
+                        "alert": "Alert (Red)"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_5cd58e6b09df5",
@@ -4475,5 +4604,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1586265985
+    "modified": 1586276145
 }

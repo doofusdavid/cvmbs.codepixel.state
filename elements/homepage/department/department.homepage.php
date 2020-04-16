@@ -5,70 +5,79 @@
     // department homepage options
     $department_options = get_field( 'department_homepage_options' );
 
+    // homepage alert
+    $homepage_alert   = get_field( 'homepage_alert' );
+
+    // option
+    $alert_option = $homepage_alert[ 'alert_option' ];
+
 ?>
-
-<style media="screen">
-
-@media screen and ( max-width: 63.9375em ) {
-
-    #emergency_alert {
-
-        left: 2rem;
-
-    }
-
-}
-
-#emergency_alert {
-
-    position: fixed;
-
-    top: 7rem;
-    right: 2rem;
-
-    z-index: 200;
-
-    padding: 2rem 2rem 2rem 2rem;
-
-    color: white;
-
-    background-color: rgba( 255, 0, 0, 0.635 );
-
-    box-shadow: 0 1rem 3.5rem 0 rgba( 0, 0, 0, 0.415 );
-
-}
-
-#emergency_alert a {
-
-    color: white;
-
-}
-
-</style>
 
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content department" data-off-canvas-content>
 
+    <?php if ( $alert_option ) : ?>
+
+    <?php $alert_class = 'has_alert'; ?>
+
     <!-- emergency alert -->
-    <div id="emergency_alert" class="ui_alert">
+    <div id="homepage_alert" class="ui_alert <?php echo $homepage_alert[ 'alert_type' ]; ?>">
 
-        <span class="message">
+        <!-- alert text -->
+        <div class="alert_text">
 
-            CSU is closely monitoring and following COVID-19 [coronavirus] guidance as outlined by public health experts.
+            <?php if ( $homepage_alert[ 'alert_title' ] ) : ?>
 
-        </span>
+            <!-- title -->
+            <span class="alert_title">
 
-        <a href="https://safety.colostate.edu/coronavirus">
+                <?php echo $homepage_alert[ 'alert_title' ]; ?>
 
-            more information
+            </span>
+            <!-- END title -->
 
-        </a>
+            <?php endif; ?>
+
+            <!-- message -->
+            <span class="alert_message">
+
+                <?php echo $homepage_alert[ 'alert_text' ]; ?>&nbsp;-&nbsp;
+
+            </span>
+            <!-- END message -->
+
+            <!-- link -->
+            <a class="alert_link" href="<?php echo $homepage_alert[ 'alert_link' ][ 'url' ]; ?>">
+
+                <?php echo $homepage_alert[ 'alert_link' ][ 'title' ]; ?>
+
+            </a>
+            <!-- END link -->
+
+        </div>
+        <!-- END alert text -->
+
+        <!-- dismiss alert -->
+        <button id="dismiss_alert">
+
+            <!-- label -->
+            <span>
+
+                dismiss
+
+            </span>
+            <!-- END label -->
+
+        </button>
+        <!-- END dismiss alert -->
 
     </div>
     <!-- END emergency alert -->
 
+    <?php endif; ?>
+
     <!-- department.billboard -->
-    <section id="department-billboard" class="department-billboard ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">
+    <section id="department-billboard" class="department-billboard ui-billboard pattern <?php echo $alert_class; ?>" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">
 
         <!-- billboard.title -->
         <header id="homepage-title" class="homepage-section">

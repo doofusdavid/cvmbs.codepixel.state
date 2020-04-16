@@ -1,71 +1,76 @@
 <?php
 
-    $billboard_config   = get_field( 'college_homepage_options' );
-    $post = $billboard_config[ 'homepage_billboard' ];
+    // homepage alert
+    $homepage_alert   = get_field( 'homepage_alert' );
 
-    $site_image = get_field( 'site_background', 'options' );
+    // option
+    $alert_option = $homepage_alert[ 'alert_option' ];
+
+    $billboard_config = get_field( 'college_homepage_options' );
+    $post             = $billboard_config[ 'homepage_billboard' ];
 
 ?>
-
-<style media="screen">
-
-@media screen and ( max-width: 63.9375em ) {
-
-    #emergency_alert {
-
-        left: 2rem;
-
-    }
-
-}
-
-#emergency_alert {
-
-    position: fixed;
-
-    top: 7rem;
-    right: 2rem;
-
-    z-index: 200;
-
-    padding: 2rem 2rem 2rem 2rem;
-
-    color: white;
-
-    background-color: rgba( 255, 0, 0, 0.635 );
-
-    box-shadow: 0 1rem 3.5rem 0 rgba( 0, 0, 0, 0.415 );
-
-}
-
-#emergency_alert a {
-
-    color: white;
-
-}
-
-</style>
 
 <!-- billboard.slides -->
 <section id="billboard-slides" class="billboard-slides ui-slides">
 
+    <?php if ( $alert_option ) : ?>
+
     <!-- emergency alert -->
-    <div id="emergency_alert" class="ui_alert">
+    <div id="homepage_alert" class="ui_alert college <?php echo $homepage_alert[ 'alert_type' ]; ?>">
 
-        <span class="message">
+        <!-- alert text -->
+        <div class="alert_text">
 
-            CSU is closely monitoring and following COVID-19 [coronavirus] guidance as outlined by public health experts.
+            <?php if ( $homepage_alert[ 'alert_title' ] ) : ?>
 
-        </span>
+            <!-- title -->
+            <span class="alert_title">
 
-        <a href="https://safety.colostate.edu/coronavirus">
+                <?php echo $homepage_alert[ 'alert_title' ]; ?>
 
-            more information
+            </span>
+            <!-- END title -->
 
-        </a>
+            <?php endif; ?>
+
+            <!-- message -->
+            <span class="alert_message">
+
+                <?php echo $homepage_alert[ 'alert_text' ]; ?>&nbsp;-&nbsp;
+
+            </span>
+            <!-- END message -->
+
+            <!-- link -->
+            <a class="alert_link" href="<?php echo $homepage_alert[ 'alert_link' ][ 'url' ]; ?>">
+
+                <?php echo $homepage_alert[ 'alert_link' ][ 'title' ]; ?>
+
+            </a>
+            <!-- END link -->
+
+        </div>
+        <!-- END alert text -->
+
+        <!-- dismiss alert -->
+        <button id="dismiss_alert">
+
+            <!-- label -->
+            <span>
+
+                dismiss
+
+            </span>
+            <!-- END label -->
+
+        </button>
+        <!-- END dismiss alert -->
 
     </div>
     <!-- END emergency alert -->
+
+    <?php endif; ?>
 
     <?php
 
@@ -168,7 +173,7 @@
     </article>
     <!-- END slide -->
 
-    <?php wp_reset_postdata(); ?>
+    <?php // wp_reset_postdata(); ?>
 
 </section>
 <!-- END billboard.slides -->
