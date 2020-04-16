@@ -10,17 +10,32 @@
 
         @include flex-h-j-v-s( false );
 
-        min-height: 60vh;
+        height: 75vh;
+        min-height: 75vh;
         padding: 5rem 0 0 0;
 
         overflow: hidden;
 
         // mobile
+        @include breakpoint ( xlarge up ) {
+
+            height: 60vh;
+            min-height: 60vh;
+
+        }
+
+        // mobile
         @include breakpoint ( medium down ) {
+
+            height: auto;
 
             @include flex-v-t-h-st( false );
 
-            min-height: 50vh;
+        }
+
+        // mobile
+        @include breakpoint ( small only ) {
+
             padding: 4rem 0 0 0;
 
         }
@@ -42,13 +57,20 @@
 
             }
 
+            // mobile
+            @include breakpoint ( medium down ) {
+
+                height: 75vh;
+
+            }
+
             // announcement
             &.announcement {
 
                 width: 70vw;
 
                 // mobile
-                @include breakpoint ( small only ) {
+                @include breakpoint ( medium down ) {
 
                     width: 100vw;
 
@@ -158,7 +180,7 @@
 
                     @include flex-v-b-h-s( false );
 
-                    padding: 0 3rem 5rem 5rem;
+                    padding: 0 5rem 5rem 5rem;
 
                     // mobile
                     @include breakpoint ( small only ) {
@@ -281,7 +303,7 @@
 
                     @include flex-v-b-h-s( false );
 
-                    padding: 0 0 3rem 5rem;
+                    padding: 0 5rem 5rem 5rem;
 
                     @include font( $klavislim, 2rem, 400 );
 
@@ -290,6 +312,13 @@
                     @include typo( 2.5rem, 0.035em );
 
                     @include color( white, 0.000 );
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        padding: 0 5rem 5rem 5rem;
+
+                    }
 
                     // mobile
                     @include breakpoint ( small only ) {
