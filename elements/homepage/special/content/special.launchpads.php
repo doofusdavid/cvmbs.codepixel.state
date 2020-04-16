@@ -56,10 +56,11 @@
         <?php if ( $launchpad[ 'sticky' ] ) {
 
             $stickiness = 'sticky';
+            $indicator  = '<span class="indicator"></span>';
 
         } else { $stickiness = 'default'; } ?>
 
-        <?php echo '<a class="launchpad ' . $stickiness . '" href="' . $launchpad[ 'link' ] . '" style="background-image:url(' . $launchpad[ 'image' ] . ')"><span class="title">' . $launchpad[ 'title' ] . '</span></a>'; ?>
+        <?php echo '<a class="launchpad ' . $stickiness . '" href="' . $launchpad[ 'link' ] . '" style="background-image:url(' . $launchpad[ 'image' ] . ')">' . $indicator . '<span class="title">' . $launchpad[ 'title' ] . '</span></a>'; ?>
 
     <?php endforeach; ?>
 
