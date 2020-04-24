@@ -14,17 +14,31 @@
 
             }
 
+            $site_type = get_field( 'site_type', 'options' );
+
+            if ( $site_type == 'laboratory' ) {
+
+                $analytics_ID = 'UA-164387974-1';
+
+            } else {
+
+                $analytics_ID = 'UA-138956035-1';
+
+            }
+
+            echo $analytics_ID;
+
         ?>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138956035-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analytics_ID; ?>"></script>
         <script>
 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push( arguments );}
             gtag( 'js', new Date() );
 
-            gtag( 'config', 'UA-138956035-1' );
+            gtag( 'config', '<?php echo $analytics_ID; ?>' );
 
         </script>
 
