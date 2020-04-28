@@ -159,7 +159,7 @@
     // you know what it is bruh
     $(document).ready(function() {
 
-        console.log( document.cookie );
+        // console.log( document.cookie );
 
         // homepage alert
         var homepage_alert = $('#homepage_alert');

@@ -41,22 +41,8 @@
                 [
                     {
                         "field": "field_5cd58e4109df4",
-                        "operator": "==",
-                        "value": "college"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cd58e4109df4",
-                        "operator": "==",
-                        "value": "department"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_5cd58e4109df4",
-                        "operator": "==",
-                        "value": "vth"
+                        "operator": "!=",
+                        "value": "laboratory"
                     }
                 ]
             ],
@@ -4604,5 +4590,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1586276145
+    "modified": 1588091646
 }

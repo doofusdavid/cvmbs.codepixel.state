@@ -28,27 +28,53 @@
     <!-- emergency alert -->
     <div id="homepage_alert" class="ui_alert <?php echo $homepage_alert[ 'alert_type' ]; ?>">
 
-        <?php if ( $homepage_alert[ 'alert_title' ] ) : ?>
+        <!-- alert text -->
+        <div class="alert_text">
 
-        <span class="alert_title">
+            <?php if ( $homepage_alert[ 'alert_title' ] ) : ?>
 
-            <?php echo $homepage_alert[ 'alert_title' ]; ?>
+            <!-- title -->
+            <span class="alert_title">
 
-        </span>
+                <?php echo $homepage_alert[ 'alert_title' ]; ?>
 
-        <?php endif; ?>
+            </span>
+            <!-- END title -->
 
-        <span class="alert_message">
+            <?php endif; ?>
 
-            <?php echo $homepage_alert[ 'alert_text' ]; ?>
+            <!-- message -->
+            <span class="alert_message">
 
-        </span>
+                <?php echo $homepage_alert[ 'alert_text' ]; ?>&nbsp;-&nbsp;
 
-        <a class="alert_link" href="<?php echo $homepage_alert[ 'alert_link' ][ 'url' ]; ?>">
+            </span>
+            <!-- END message -->
 
-            <?php echo $homepage_alert[ 'alert_link' ][ 'title' ]; ?>
+            <!-- link -->
+            <a class="alert_link" href="<?php echo $homepage_alert[ 'alert_link' ][ 'url' ]; ?>">
 
-        </a>
+                <?php echo $homepage_alert[ 'alert_link' ][ 'title' ]; ?>
+
+            </a>
+            <!-- END link -->
+
+        </div>
+        <!-- END alert text -->
+
+        <!-- dismiss alert -->
+        <button id="dismiss_alert">
+
+            <!-- label -->
+            <span>
+
+                dismiss
+
+            </span>
+            <!-- END label -->
+
+        </button>
+        <!-- END dismiss alert -->
 
     </div>
     <!-- END emergency alert -->

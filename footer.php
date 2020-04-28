@@ -26,8 +26,6 @@
 
             }
 
-            echo $analytics_ID;
-
         ?>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
