@@ -2,6 +2,15 @@
 
     $homepage_options = get_field( 'dvm_homepage_options' );
 
+    // homepage alert
+    $homepage_alert   = get_field( 'homepage_alert' );
+
+    // option
+    $alert_option = $homepage_alert[ 'alert_option' ];
+
+    $billboard_config = get_field( 'college_homepage_options' );
+    $post             = $billboard_config[ 'homepage_billboard' ];
+
 ?>
 
 <!-- site.layout -->
