@@ -184,6 +184,32 @@
 
 			}
 
+			// nested images
+			.alignleft,
+			.alignright {
+
+				max-width: 35%;
+
+			}
+
+			// left
+			.alignleft {
+
+				margin: 0 1.75rem 0.75rem 0;
+
+				float: left;
+
+			}
+
+			// right
+			.alignright {
+
+				margin: 0 0 0.75rem 1.75rem;
+
+				float: right;
+
+			}
+
 		}
 
 	}
