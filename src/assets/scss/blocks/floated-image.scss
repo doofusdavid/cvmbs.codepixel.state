@@ -42,6 +42,17 @@
 		}
 	}
 
+	&--left,
+	&--right {
+
+		&.transparent {
+
+			box-shadow: none;
+
+		}
+
+	}
+
 	&__caption {
 		padding: .5rem .5rem 0;
 		font-size: .875em;

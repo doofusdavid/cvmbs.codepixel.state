@@ -717,7 +717,7 @@
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -731,6 +731,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ea9b4bb305dd",
+                            "label": "Image Type",
+                            "name": "image_type",
+                            "type": "true_false",
+                            "instructions": "set to default for a boxed image with a drop shadow background or to transparent if your image is a transparent PNG file",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Transparent",
+                            "ui_off_text": "Default"
                         },
                         {
                             "key": "field_5c8fc0ea3906c",
@@ -2954,5 +2973,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1580322987
+    "modified": 1588180610
 }

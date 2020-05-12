@@ -1,6 +1,7 @@
 <?php
 
 	$img = get_sub_field('img');
+	$png = get_sub_field( 'image_type' );
 	$img_width = $img['width'] . 'px';
 	$img_pos = get_sub_field('img_pos');
 
@@ -24,7 +25,7 @@
 
         <?php endif; ?>
 
-		<figure class="floated-image--<?php echo esc_attr( $img_pos ); ?>" width="<?php echo $img['width']; ?>">
+		<figure class="floated-image--<?php echo esc_attr( $img_pos ); ?> <?php if( $png ) { echo 'transparent'; } ?>" width="<?php echo $img['width']; ?>">
 
 			<?php echo wp_get_attachment_image( $img['ID'], 'large' ); ?>
 
