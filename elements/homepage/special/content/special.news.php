@@ -3,7 +3,8 @@
     // setup REST API request
     $requestURL  = wp_remote_get( 'https://cvmbs.source.colostate.edu/wp-json/wp/v2/posts/?&per_page=3' );
     $data        = wp_remote_retrieve_body( $requestURL );
-    $articles    = json_decode( $data ); ?>
+    $articles    = json_decode( $data );
+    $tagURL      = get_sub_field( 'source_tag' ); ?>
 
 <?php
 
@@ -52,7 +53,7 @@
     <!-- END pattern -->
 
     <!-- title -->
-    <a href="https://cvmbs.source.colostate.edu/">
+    <a href="https://cvmbs.source.colostate.edu/tag/<?php echo $tagURL; ?>">
 
         <!-- heading -->
         <h3 class="section-title">

@@ -8,10 +8,13 @@
 
 ?>
 
+<!-- .notification-block -->
 <div class="template-block notification-block">
 
+	<!-- .notification-box -->
 	<div class="notification-box box--<?php echo esc_attr( $type ); ?>">
 
+		<!-- .notification-box__content -->
 		<div class="notification-box__content">
 
 			<?php if ( get_sub_field('heading') ) : ?>
@@ -22,10 +25,13 @@
 
 			<?php the_sub_field('message'); ?>
 
-		</div><!-- .notification-box__content -->
+		</div>
+		<!-- .notification-box__content -->
 
-	</div><!-- .notification-box -->
+	</div>
+	<!-- .notification-box -->
 
-</div><!-- .notification-block -->
+</div>
+<!-- .notification-block -->
 
 <?php endif; ?>
