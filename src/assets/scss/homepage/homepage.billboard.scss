@@ -1,0 +1,372 @@
+// stylesheet :: department billboard styles
+
+    // settings
+    $billboard : 1rem;
+
+    // styles
+    #department_billboard {
+
+        position: relative;
+
+        @include flex-h-j-v-s( false );
+
+        height: 75vh;
+        min-height: 75vh;
+        padding: 5rem 0 0 0;
+
+        overflow: hidden;
+
+        @include color( white );
+
+        // mobile
+        @include breakpoint ( xlarge up ) {
+
+            height: 60vh;
+            min-height: 60vh;
+
+        }
+
+        // mobile
+        @include breakpoint ( medium down ) {
+
+            height: auto;
+
+            @include flex-v-t-h-st( false );
+
+        }
+
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 4rem 0 0 0;
+
+        }
+
+        // alert class
+        &.has_alert {
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                min-height: 80vh;
+
+            }
+
+        }
+
+        // debug
+        pre {
+
+            @include hide;
+
+            position: relative;
+
+            z-index: 100;
+
+            padding: 0 5rem 0 5rem;
+
+        }
+
+        // content
+        .billboard_content {
+
+            position: relative;
+
+            z-index: 10;
+
+            @include flex-v-b-h-s( false );
+
+            width: 100%;
+
+            background: {
+
+                repeat: no-repeat;
+                size: cover;
+                position: center center;
+                // attachment: fixed;
+
+            }
+
+            // mobile
+            @include breakpoint ( medium down ) {
+
+                height: 75vh;
+
+            }
+
+            // announcement
+            &.has_announcement {
+
+                width: 70vw;
+
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    width: 100vw;
+
+                }
+
+            }
+
+            // expired
+            &.expired {
+
+                width: 100vw;
+
+            }
+
+            // fx
+            &:before,
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+            }
+
+            // before
+            &:before {
+
+                z-index: 10;
+
+                @include gradient( 0deg, $cvnavy, 0.000, 0%, $cvnavy, 0.905, 100% );
+
+            }
+
+            // after
+            &:after {
+
+                z-index: 20;
+
+                @include gradient( -15deg, $g140, 0.000, 0%, transparent, 1.000, 50% );
+
+            }
+
+        }
+
+        // title
+        #homepage_title {
+
+            position: relative;
+
+            z-index: 200;
+
+            @include flex-v-b-h-s( false )
+
+            padding: 2rem 5rem 5rem 5rem;
+
+            color: white;
+
+            // @include fill( red, 0.685 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 0 2rem 2rem 2rem;
+
+            }
+
+            // standalone
+            &.standalone {
+
+                //
+
+            }
+
+            // w/ description
+            &.has_description {
+
+                //
+
+            }
+
+            // common
+            span {
+
+                display: block;
+
+            }
+
+            // title
+            .site_title {
+
+                position: relative;
+
+                @include font( $klavislim, 2rem, 400 );
+
+                @include typo( 2.5rem, 0.085em );
+
+                @include text( $up, left );
+
+                // standalone
+                &.standalone {
+
+                    margin: 0 0 0 0;
+
+                }
+
+                // w/ description
+                &.has_description {
+
+                    margin: 0 0 1rem 0;
+
+                }
+
+                // before
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: -1.5rem;
+                    left: 0;
+
+                    z-index: 10;
+
+                    width: 4rem;
+                    height: 0.125rem;
+
+                    @include fill( $cvellow, 0.000 );
+
+                }
+
+            }
+
+            // text
+            .site_description {
+
+                @include font( $industry, 0.875rem, 500 );
+
+                @include typo( 1.25rem, 0.065em );
+
+                @include color( white, 0.235 );
+
+                // @include fill( red, 0.685 );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 1.125rem, 0.045em );
+
+                }
+
+            }
+
+        }
+
+        // announcment block
+        #billboard_announcement {
+
+            position: relative;
+
+            z-index: 20;
+
+            width: 30vw;
+            height: auto;
+            padding: 3rem 3rem 3rem 3rem;
+
+            @include fill( $cvnavy, 0.125 );
+
+            @include shadowbox( 1rem, 3.5rem, black, 0.465 );
+
+            // mobile
+            @include breakpoint ( medium down ) {
+
+                width: 100vw;
+
+            }
+
+            // common
+            .announcement-content {
+
+                display: block;
+
+            }
+
+            // label
+            .label {
+
+                @include flex-h-c-v-c( true );
+
+                height: 1.25rem;
+                margin: 0 0 1rem 0;
+                padding: 0.1875rem 0.5rem 0 0.5rem;
+
+                @include font( $industry, 0.625rem, 700 );
+
+                @include text( $up );
+
+                @include color( white, 0.000 );
+
+                @include fill( $roarange, 0.165 );
+
+            }
+
+            // title
+            .title {
+
+                margin: 0 0 0.5rem 0;
+
+                @include font( $industry, 0.875rem, 700 );
+
+                @include color( white, 0.000 );
+
+            }
+
+            // text
+            .text {
+
+                @include font( $industry, 0.75rem, 500 );
+
+                @include typo( 1.125rem, 0.045em );
+
+                @include color( white, 0.185 );
+
+            }
+
+            // link
+            .link {
+
+                @include flex-h-c-v-c( true );
+
+                height: 4rem;
+                margin: 0.75rem 0 0 0;
+                padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                @include text( $up );
+
+                @include typo( 0.75rem, 0.045em );
+
+                text-decoration: none;
+
+                @include color( white, 0.000 );
+
+                @include fill( white, 0.965 );
+
+                @include shadowbox( 1rem, 2.75rem, black, 0.565 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( $roarange, 0.185 );
+
+                }
+
+            }
+
+        }
+
+    }

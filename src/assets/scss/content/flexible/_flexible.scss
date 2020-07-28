@@ -10,7 +10,6 @@
 		flex-direction: column;
 		// background: $sec_temp_off_white;
 		color: $steel;
-		font-size: 1rem;
 
 		.content-area {
 
@@ -25,6 +24,8 @@
 
 			// padding: 2rem 0 2rem 0;
 			padding: 0 0 2rem 0;
+
+			font-size: 1rem;
 
 		}
 
@@ -96,7 +97,7 @@
 		// ctas
 		.ctas-with-image {
 
-			padding: 1rem 4rem 1rem 4rem;
+			padding: 2rem 8vw 2rem 8vw;
 
 			// mobile
 			@include breakpoint ( small only ) {

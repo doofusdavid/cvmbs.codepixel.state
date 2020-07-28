@@ -235,7 +235,9 @@
 
                     $memberID   = $member->memberID;
                     $fullName   = $member->fullName;
-                    $firstName  = $member->firstName;
+                    // $firstName  = $member->firstName;
+                    $firstName  = $member->otherName;
+                    $lastName   = $member->lastName;
                     $email      = $member->email;
                     $title      = $member->title;
                     // $department = $member->department;
@@ -277,7 +279,7 @@
                     <!-- name -->
                     <h1 class="name">
 
-                        <?php echo $fullName; ?>
+                        <?php echo $firstName . ' ' . $lastName; ?>
 
                     </h1>
                     <!-- END name -->
@@ -376,11 +378,23 @@
 
                     <?php
 
-                        foreach( $directory[ 'degrees' ] as $degree ) {
+                        if ( is_array( $memberDirectoryInfo ) ) {
 
-                            $school  = $degree[ 'degree' ];
-                            $year    = $degree[ 'year' ];
-                            $level   = $degree[ 'level' ];
+                            foreach( $directory[ 'degrees' ] as $degree ) {
+
+                                $school  = $degree[ 'degree' ];
+                                $year    = $degree[ 'year' ];
+                                $level   = $degree[ 'level' ];
+
+                                $degrees .= '<span class="entry">' . $level . ', ' . $school . ', ' . $year . '</span>';
+
+                            }
+
+                        } else {
+
+                            $school  = $memberDirectoryInfo->DirectoryHeader;
+                            $year    = $memberDirectoryInfo->DirectoryYear;
+                            $level   = $memberDirectoryInfo->DirectoryDescription;
 
                             $degrees .= '<span class="entry">' . $level . ', ' . $school . ', ' . $year . '</span>';
 
@@ -531,9 +545,9 @@
                     echo '<br />';
                     // print_r( $memberDirectoryInfo );
                     echo '<br />';
-                    // print_r( $getMember );
+                    print_r( $getMember );
                     echo '<br />';
-                    print_r( $getMemberDirectoryInfo );
+                    // print_r( $getMemberDirectoryInfo );
                     // echo '<br />';
                     // print_r( $response );
                     echo '<br />';

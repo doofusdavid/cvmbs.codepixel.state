@@ -180,6 +180,13 @@
 
                 transition: all 220ms linear 0ms;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                }
+
                 // hover state
                 &:hover {
 

@@ -33,7 +33,7 @@
 ?>
 
 <!-- special.billboard -->
-<section id="special-billboard" class="special-unit-homepage-billboard">
+<section id="special_unit_billboard" class="ui-billboard special-unit-homepage-billboard">
 
     <!-- content -->
     <div class="billboard-content custom <?php echo $layout_class; ?>" style="background-image:url(<?php echo $billboard_settings[ 'billboard_image' ]; ?>);">

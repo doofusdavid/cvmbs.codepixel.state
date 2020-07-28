@@ -19,18 +19,25 @@
         // mobile
         @include breakpoint ( small only ) {
 
-            padding: 3rem 3rem 3rem 3rem;
+            padding: 2rem 2rem 2rem 2rem;
 
         }
 
         // intro
         .introduction-text {
 
-            padding: 0 2rem 0 0;
-
             @include font( $industry, 0.875rem, 600 );
 
             @include typo( 1.5rem, 0.055em );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include font( $industry, 0.75rem, 600 );
+
+                @include typo( 1.125rem, 0.045em );
+
+            }
 
         }
 

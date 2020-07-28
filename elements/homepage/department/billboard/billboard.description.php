@@ -26,19 +26,15 @@
 ?>
 
 <!-- homepage.intro -->
-<section id="department-banner" class="homepage-section">
+<div id="billboard_description">
 
     <!-- introduction -->
     <div class="introduction-text">
 
-        <p>
-
-            <?php echo $department_description; ?>
-
-        </p>
+        <?php echo $department_description; ?>
 
     </div>
     <!-- END introduction -->
 
-</section>
+</div>
 <!-- END homepage.intro -->

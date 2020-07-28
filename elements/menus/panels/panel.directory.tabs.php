@@ -134,7 +134,7 @@
                                 $phone      = $member->phone;
                                 $department = $member->directoryGroup;
 
-                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="' . esc_url( home_url() ) . '/directory/member/?id=' . $query . '">' . $tableName . '</a></td><td>' . $phone . '</td></tr>';
+                                $results .= '<tr class="record"><td class="link-column"><span class="mobile-toggle"></span><a class="member-link" href="https://vetmedbiosci.colostate.edu/directory/member/?id=' . $query . '">' . $tableName . '</a></td><td>' . $phone . '</td></tr>';
 
                             }
 

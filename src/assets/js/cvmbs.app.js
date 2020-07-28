@@ -159,8 +159,6 @@
     // you know what it is bruh
     $(document).ready(function() {
 
-        // console.log( document.cookie );
-
         // homepage alert
         var homepage_alert = $('#homepage_alert');
         var dismiss_alert  = $('#dismiss_alert');

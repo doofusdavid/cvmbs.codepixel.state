@@ -9,34 +9,41 @@
     $site_line_1 = get_field( 'site_title_line_1', 'options' );
     $site_line_2 = get_field( 'site_title_line_2', 'options' );
 
+
     $site_billboard_text = $department_options[ 'billboard_marketing_text' ];
 
 ?>
 
-<!-- site.title -->
-<span class="site-title description">
+<!-- billboard.title -->
+<header id="homepage-title" class="homepage-section has_description">
 
-    <?php
+    <!-- site.title -->
+    <span class="site-title">
 
-        if ( $title_break[ 0 ] == 'break' ) {
+        <?php
 
-            echo $site_line_1 . '<br />' . $site_line_2;
+            if ( $title_break[ 0 ] == 'break' ) {
 
-        } else {
+                echo $site_line_1 . '<br />' . $site_line_2;
 
-            echo $site_title;
+            } else {
 
-        }
+                echo $site_title;
 
-    ?>
+            }
 
-</span>
-<!-- END site.title -->
+        ?>
 
-<!-- description -->
-<span class="site-description">
+    </span>
+    <!-- END site.title -->
 
-    <?php echo $site_billboard_text; ?>
+    <!-- description -->
+    <span class="site-description">
 
-</span>
-<!-- END description -->
+        <?php echo $site_billboard_text; ?>
+
+    </span>
+    <!-- END description -->
+
+</header>
+<!-- END billboard.title -->

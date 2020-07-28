@@ -32,10 +32,10 @@
         },
         {
             "key": "field_5e8c7ed40b913",
-            "label": "Homepage Alert\/Announcement",
+            "label": "Homepage Alert",
             "name": "homepage_alert",
             "type": "group",
-            "instructions": "display homepage alert\/announcement to communicate important information",
+            "instructions": "display homepage alert to communicate critical information",
             "required": 0,
             "conditional_logic": [
                 [
@@ -55,7 +55,7 @@
             "sub_fields": [
                 {
                     "key": "field_5e8c98e5274ce",
-                    "label": "Alert\/Announcement Option",
+                    "label": "Alert Option",
                     "name": "alert_option",
                     "type": "true_false",
                     "instructions": "",
@@ -210,23 +210,205 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5cd58ee309df6",
-                    "label": "Homepage Billboard Marketing Text",
-                    "name": "billboard_marketing_text",
-                    "type": "textarea",
-                    "instructions": "provide 20-25 words of snappy marketing text to appear next to the department name in the billboard content area",
+                    "key": "field_5ec567afe60c3",
+                    "label": "Billboard Options",
+                    "name": "billboard_options",
+                    "type": "group",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "br"
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ec56d0dcf556",
+                            "label": "Display Marketing Text?",
+                            "name": "marketing_text_option",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5ec56cb0cf555",
+                            "label": "Marketing Text",
+                            "name": "billboard_marketing_text",
+                            "type": "textarea",
+                            "instructions": "provide 20-25 words of snappy copy",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5ec56d0dcf556",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5ec56d4acf557",
+                            "label": "Background Image",
+                            "name": "billboard_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ec56f4d234f4",
+                            "label": "Display Announcement Block?",
+                            "name": "announcement_option",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5ec584e3b073a",
+                            "label": "Announcement",
+                            "name": "announcement",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5ec56f4d234f4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5ec6d082ecc62",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5ec6d08eecc63",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": 400,
+                                    "rows": "",
+                                    "new_lines": "br"
+                                },
+                                {
+                                    "key": "field_5ec6d0a8ecc64",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_5ec6d0b5ecc65",
+                                    "label": "Expiration",
+                                    "name": "expiration",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "F j, Y",
+                                    "return_format": "Ymd",
+                                    "first_day": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "key": "field_5cd58f4d09df7",
@@ -244,30 +426,6 @@
                     "message": "This content is now managed via the College site. Please contact the network administrator to make changes.",
                     "new_lines": "wpautop",
                     "esc_html": 0
-                },
-                {
-                    "key": "field_5cd5a61bee815",
-                    "label": "Homepage Billboard Image",
-                    "name": "homepage_billboard_image",
-                    "type": "image",
-                    "instructions": "upload an optimized image at 16:9 aspect ratio  for display as the homepage billboard background",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "large",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 },
                 {
                     "key": "field_5cd5e82c08aaf",
@@ -4393,7 +4551,7 @@
                         "id": ""
                     },
                     "collapsed": "field_5dea4b4e16e19",
-                    "min": 3,
+                    "min": 2,
                     "max": 3,
                     "layout": "row",
                     "button_label": "Add Service Link",
@@ -4590,5 +4748,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1588091646
+    "modified": 1594144959
 }

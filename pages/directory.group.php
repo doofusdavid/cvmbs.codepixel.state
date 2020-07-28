@@ -213,7 +213,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -239,7 +239,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -265,7 +265,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -291,7 +291,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -317,7 +317,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -343,7 +343,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -374,7 +374,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -400,7 +400,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -426,7 +426,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -452,7 +452,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -478,7 +478,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;
@@ -504,7 +504,7 @@
                                     $query      = $member->memberID;
                                     $ename      = $member->eName;
                                     $lastName   = $member->lastName;
-                                    $firstName  = $member->firstName;
+                                    $firstName  = $member->otherName;
                                     $tableName  = $lastName . ', ' . $firstName;
                                     $eMail      = strtolower( $member->email );
                                     $phone      = $member->phone;

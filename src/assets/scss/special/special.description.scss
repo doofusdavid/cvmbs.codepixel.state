@@ -10,7 +10,7 @@
 
         @include color( $app05, 0.145 );
 
-        @include fill( $beige, 0.000 );
+        @include fill( white, 0.000 );
 
         // mobile
         @include breakpoint ( medium down ) {
@@ -33,7 +33,9 @@
         // text
         .description {
 
-            @include font( $industry, 0.875rem, 500 );
+            @include font( $industry, 0.875rem, 600 );
+
+            @include typo( 1.5rem, 0.055em );
 
             // prse
             &.prse {
@@ -69,7 +71,8 @@
                     width: 30%;
                     padding: 2rem 2rem 2rem 2rem;
 
-                    @include fill( white );
+                    // @include fill( white );
+                    @include fill( $g135, 0.000 );
 
                     @include shadowbox( 1rem, 3.5rem, black, 0.675 );
 
@@ -104,7 +107,8 @@
 
                         @include text( $up );
 
-                        @include color( $cvnavy, 0.125 );
+                        // @include color( $cvnavy, 0.125 );
+                        @include color( $beige );
 
                     }
 
@@ -112,6 +116,8 @@
                     .text {
 
                         @include font( $industry, 0.75rem, 500 );
+
+                        @include color( white );
 
                     }
 
@@ -133,7 +139,7 @@
 
                         @include fill( $g140 );
 
-                        @include fill( $cvnavy, 0.215 );
+                        // @include fill( $cvnavy, 0.215 );
 
                         @include shadowbox( 1rem, 3rem, black, 0.725 );
 

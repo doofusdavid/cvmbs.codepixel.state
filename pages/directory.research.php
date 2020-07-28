@@ -305,7 +305,7 @@
 
                         // setup variables
                         $LastName   = $member->LastName;
-                        $FirstName  = $member->FirstName;
+                        $FirstName  = $member->OtherName;
                         $tableName  = $LastName . ', ' . $FirstName;
                         $eMail      = strtolower( $member->EmailAddress );
                         // $phone      = $phone;

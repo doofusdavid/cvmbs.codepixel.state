@@ -210,6 +210,7 @@
                     'memberID'          => $member->Id,
                     'eName'             => $member->EName,
                     'firstName'         => $member->FirstName,
+                    'otherName'         => $member->OtherName,
                     'lastName'          => $member->LastName,
                     'fullName'          => $member->FirstName . ' ' . $member->LastName,
                     'email'             => strtolower( $member->EmailAddress ),

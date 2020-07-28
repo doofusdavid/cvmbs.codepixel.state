@@ -192,7 +192,7 @@
                     $directoryGroupName = 'undefined';
 
             }
-            
+
             // setup variables
             $email = strtolower( $member->EmailAddress );
             $name  = $member->FirstName . ' ' . $member->LastName;
@@ -211,6 +211,7 @@
                     'memberID'          => $member->Id,
                     'eName'             => $member->EName,
                     'firstName'         => $member->FirstName,
+                    'otherName'         => $member->OtherName,
                     'lastName'          => $member->LastName,
                     'fullName'          => $member->FirstName . ' ' . $member->LastName,
                     'email'             => strtolower( $member->EmailAddress ),

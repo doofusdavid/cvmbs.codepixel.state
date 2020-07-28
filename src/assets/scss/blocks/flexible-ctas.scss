@@ -10,7 +10,7 @@ $btn_bg: #236670;
 		flex-wrap: wrap;
 		justify-content: center;
 
-		@include flex-h-c-v-st( false );
+		@include flex-h-j-v-s( false );
 
 	}
 
@@ -20,7 +20,7 @@ $btn_bg: #236670;
 		flex-direction: column;
 
 		max-width: 25rem;
-		margin: 1rem 1rem 1rem 1rem;
+		// margin: 1rem 1rem 1rem 1rem;
 
 		@include shadowbox( 1rem, 3.5rem, black, 0.586 );
 
@@ -35,7 +35,7 @@ $btn_bg: #236670;
 
 			width: calc(50% - 1rem);
 			max-width: none;
-			margin: 1rem 1rem 1rem 1rem;
+			// margin: 1rem 1rem 1rem 1rem;
 
 		}
 
@@ -44,14 +44,14 @@ $btn_bg: #236670;
 			.grid--3-columns & {
 
 				width: calc( 33.3333333% - 2rem );
-				margin: 1rem 1rem 1rem 1rem;
+				// margin: 1rem 1rem 1rem 1rem;
 
 			}
 
 			.grid--2-columns & {
 
 				width: calc((100% / 2) - (2rem * 2 / 2)  - .1px); // remove .1px to fix IE not calculating percentages the same as real browsers
-				margin: 1rem 1rem 1rem 1rem;
+				// margin: 1rem 1rem 1rem 1rem;
 
 			}
 

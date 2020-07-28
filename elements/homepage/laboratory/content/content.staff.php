@@ -94,7 +94,7 @@
 
     					<p>
 
-                            <a href="mailto:<?php the_sub_field('email'); ?>"><?php echo $staff_email; ?></a>
+                            <a href="mailto:<?php echo $staff_email; ?>"><?php echo $staff_email; ?></a>
 
                         </p>
 

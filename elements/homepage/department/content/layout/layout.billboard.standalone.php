@@ -8,10 +8,16 @@
 
 ?>
 
-<!-- site.title -->
-<span class="site-title standalone">
+<!-- billboard.title -->
+<header id="homepage-title" class="homepage-section">
 
-    <?php echo $site_title; ?>
+    <!-- site.title -->
+    <span class="site-title standalone">
 
-</span>
-<!-- END site.title -->
+        <?php echo $site_title; ?>
+
+    </span>
+    <!-- END site.title -->
+
+</header>
+<!-- END billboard.title -->
