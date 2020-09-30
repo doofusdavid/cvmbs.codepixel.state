@@ -23,6 +23,12 @@
 
         $billboard_option = $lab_options[ 'billboard_option' ];
 
+        // billboard site title
+        $site_title  = get_field( 'site_title', 'options' );
+        $title_break = get_field( 'site_title_line_break', 'options' );
+        $site_line_1 = get_field( 'site_title_line_1', 'options' );
+        $site_line_2 = get_field( 'site_title_line_2', 'options' );
+
     ?>
 
     <?php if ( $billboard_option ) : ?>
@@ -39,7 +45,23 @@
         <!-- billboard.title -->
         <header id="homepage-title" class="homepage-section">
 
-            <?php echo get_field( 'site_title', 'options' ); ?>
+            <?php // echo get_field( 'site_title', 'options' ); ?>
+
+            <?php
+
+                // echo $title_break;
+
+                if ( $title_break ) {
+
+                    echo $site_line_1 . '<br />' . $site_line_2;
+
+                } else {
+
+                    echo $site_title;
+
+                }
+
+            ?>
 
         </header>
         <!-- END billboard.title -->

@@ -198,8 +198,8 @@
             $name  = $member->FirstName . ' ' . $member->LastName;
 
             // setup variables
-            if ( strpos( $member->LastName, 'lhr' ) !== false ) {
             // if ( strpos( $member->LastName, 'lhr' ) !== false || strpos( $member->LastName, 'Ebel' ) !== false ) {
+            if ( strpos( $member->LastName, 'lhr' ) !== false ) {
 
                 continue;
 
