@@ -66,3 +66,5 @@
 
 </section>
 <!-- END launchpads -->
+
+<?php get_template_part( 'elements/homepage/vth/vth.homepage.news' ); ?>
