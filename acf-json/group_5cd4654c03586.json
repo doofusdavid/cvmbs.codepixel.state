@@ -176,7 +176,7 @@
                         "good": "Good News (Green)",
                         "alert": "Alert (Red)"
                     },
-                    "default_value": false,
+                    "default_value": [],
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -1342,7 +1342,7 @@
                     "key": "field_5d3781447ebeb",
                     "label": "Description Text",
                     "name": "description_text",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -1360,10 +1360,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "br"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_5d3785f118109",
@@ -2199,7 +2199,7 @@
                                         "instagram": "Instagram",
                                         "linkedin": "LinkedIn"
                                     },
-                                    "default_value": false,
+                                    "default_value": [],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 1,
@@ -3817,7 +3817,7 @@
                                         "h5": "H5",
                                         "h6": "H6"
                                     },
-                                    "default_value": false,
+                                    "default_value": [],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -4257,7 +4257,7 @@
                                         "instagram": "Instagram",
                                         "linkedin": "LinkedIn"
                                     },
-                                    "default_value": false,
+                                    "default_value": [],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 1,
@@ -4522,42 +4522,6 @@
                     ]
                 },
                 {
-                    "key": "field_5f74a6c668d17",
-                    "label": "Quick Links",
-                    "name": "links",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "row",
-                    "button_label": "Add Quick Link",
-                    "sub_fields": [
-                        {
-                            "key": "field_5f74a6d168d18",
-                            "label": "Quick Link",
-                            "name": "link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
-                        }
-                    ]
-                },
-                {
                     "key": "field_5de984c6682aa",
                     "label": "Info Bar",
                     "name": "info_bar",
@@ -4784,5 +4748,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1601493691
+    "modified": 1602109793
 }
